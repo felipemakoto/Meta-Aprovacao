@@ -1,6 +1,16 @@
 # Preparação ETEC / IF
 
-Plataforma em construção. Etapas 1 e 2: projeto Next.js padrão e fluxo de checkpoints Git. A página de exemplo não é o visual final.
+Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
+
+Até a etapa 3, temos o projeto Next.js padrão, checkpoints Git e documentação de operação. A página de exemplo não é o visual final. Quiz, contas, questões, simulados e Premium são funcionalidades planejadas, ainda não implementadas.
+
+## Por onde começar
+
+1. Leia as instruções de execução abaixo para abrir o projeto no computador.
+2. Consulte [Estado do Projeto](docs/ESTADO-DO-PROJETO.md) para saber o que foi verificado, as pendências e a próxima etapa.
+3. Consulte [Decisões técnicas](docs/DECISIONS.md) para entender as escolhas e suas razões.
+
+O ambiente atual é local, de desenvolvimento. Nenhum serviço foi contratado e não há site publicado. A próxima etapa é definir identidade visual, design system e mockup; a interface final depende da aprovação desse mockup.
 
 ## Tecnologias
 Node.js 24 LTS (24.20.0 verificado), npm 11.19.0, Next.js 16.3.6, React 19.2.8, TypeScript 5, Tailwind CSS 4 e ESLint 9. App Router em src/app. Versões exatas no package-lock.json; preserve esse arquivo e use somente npm.
@@ -50,7 +60,7 @@ git status
 git --no-pager log -3 --oneline
 ```
 
-Depois do fechamento desta etapa, o status deve mostrar `On branch master` e `nothing to commit, working tree clean`. Isso significa que os arquivos estão salvos no Git. O histórico deve começar por `docs: documentar fluxo Git da etapa 2`; o código antes da mensagem identifica o commit.
+Depois de cada checkpoint, o status deve mostrar `On branch master` e `nothing to commit, working tree clean`. Isso significa que não há alterações pendentes nos arquivos acompanhados pelo Git nem arquivos novos não ignorados. O histórico mostra o checkpoint mais recente primeiro; o código antes da mensagem identifica o commit. O exercício da etapa 2 gerou `268318b`; etapas posteriores aparecem acima dele.
 
 ### Exercício real realizado nesta etapa
 
@@ -92,6 +102,8 @@ O primeiro comando deve listar os quatro caminhos, mesmo que os arquivos de ambi
 ## Variáveis
 Nenhuma variável ou credencial necessária. .env* está ignorado pelo Git. Nunca inserir chaves privadas no código, em logs ou na documentação.
 
+Uma variável de ambiente é uma configuração fornecida ao programa fora do código. Quando alguma integração exigir variáveis, registraremos aqui somente seus nomes e instruções de preenchimento local. Não crie chaves ou arquivos de credenciais agora.
+
 ## Arquivos
 - src/app/page.tsx: página inicial, rota /.
 - src/app/layout.tsx: estrutura compartilhada.
@@ -99,6 +111,18 @@ Nenhuma variável ou credencial necessária. .env* está ignorado pelo Git. Nunc
 - public/: imagens públicas do exemplo.
 - docs/DECISIONS.md: decisões técnicas.
 - docs/ESTADO-DO-PROJETO.md: progresso.
+
+## Manutenção da documentação
+
+Ao final de cada etapa, atualize o estado com os resultados realmente verificados. Atualize este README se os comandos, requisitos ou variáveis mudarem. Registre decisões relevantes e suas razões em DECISIONS. Diferencie sempre o que foi implementado do que é apenas planejado.
+
+Para conferir os comandos disponíveis sem executá-los:
+
+```powershell
+npm.cmd run
+```
+
+Devem aparecer `dev`, `build`, `start` e `lint`. Não há comando de testes automatizados configurado. Os resultados de lint e build da etapa 1 estão registrados no Estado do Projeto; mudanças apenas documentais não exigem repetir a compilação.
 
 ## Teste manual e erros
 Abra http://localhost:3000. Deve aparecer Next.js e a instrução em inglês para editar page.tsx. Não é necessário clicar em Deploy Now.
