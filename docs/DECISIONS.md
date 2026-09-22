@@ -60,3 +60,7 @@ Atualizar documentos afetados ao concluir cada etapa. Não marcar funcionalidade
 ## Etapa 4 — proposta ainda não aprovada
 
 Direção proposta: editorial de estudos, fundo claro, verde profundo e marca-texto amarelo. Manter Geist já disponível no projeto e usar ETEC / IF como identificação descritiva provisória. Tokens, componentes e hierarquia estão em DESIGN-SYSTEM.md; referência raster e prompt em design/. Não incorporar a proposta ao CSS da aplicação antes da aprovação. Nenhuma publicação pelo Sites foi feita nesta etapa.
+
+## Revisão visual v2 — feedback do usuário
+
+Remover Seu próximo passo, UM PONTO DE PARTIDA e UM PASSO DE CADA VEZ. Substituir os três indicadores por uma faixa editorial inspirada em caderno de questões, com texto descritivo único. Trocar o fecho motivacional por informação concreta sobre a revisão das respostas. Botão da entrada com raio 6px. Motivo: reduzir repetição de composição e frases genéricas, fortalecendo relação com estudo. Referência atual: design/entrada-mobile-v2.png; v1 preservada somente como histórico. Pesquisa em design/PESQUISA-VISUAL.md. A revisão continua aguardando aprovação antes de React/CSS.

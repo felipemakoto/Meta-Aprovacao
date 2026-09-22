@@ -1,6 +1,6 @@
 # Proposta visual — etapa 4
 
-Status: proposta v1 aguardando aprovação. Não é a interface implementada.
+Status: proposta v2 revisada a partir das marcações do usuário, aguardando aprovação. A v1 foi substituída como referência ativa. Não é a interface implementada.
 
 ## Objetivo e público
 
@@ -32,7 +32,7 @@ Não usar marca-texto para texto claro. Validar contraste do código implementad
 - Título principal mobile: 38px/42px, peso 700; em 320px, 32px/36px. Desktop futuro: máximo 56px/60px.
 - Título de seção: 24px/30px, peso 600. Texto: 16px/24px, peso 400. Rótulos: 14px/20px, peso 600. Apoio: 13px/19px, peso 400.
 - Espaçamento: 4, 8, 12, 16, 24, 32, 48 e 64px. Margem mobile 24px (20px em 320px). Conteúdo da entrada limitado a 480px; adaptação desktop será conferida após aprovação.
-- Cantos: botões e inputs 12px, cards 16px, badges 6px. Sombras ausentes na entrada; elevação futura só quando funcional: 0 4px 16px com tinta a 8%.
+- Cantos: botão principal da entrada 6px; inputs 12px, cards 16px, badges 6px. Sombras ausentes na entrada; elevação futura só quando funcional: 0 4px 16px com tinta a 8%.
 - Tela de referência: 390 x 844 pixels lógicos. A imagem gerada tem resolução própria e serve de referência de proporções, não de medidas exatas.
 
 ## Componentes para reutilização posterior
@@ -48,20 +48,20 @@ Não usar marca-texto para texto claro. Validar contraste do código implementad
 
 ## Hierarquia e conteúdo da entrada
 
-1. Identificação ETEC / IF e assinatura discreta Seu próximo passo.
-2. Eyebrow UM PONTO DE PARTIDA e pergunta Como está sua preparação para a ETEC e os IFs?
+1. Identificação ETEC / IF, sem assinatura adicional.
+2. Pergunta Como está sua preparação para a ETEC e os IFs?, sem frase introdutória decorativa.
 3. Faça um teste rápido e descubra quais conteúdos você precisa revisar.
-4. Linha de informações: 10 questões; Poucos minutos; Na hora / resultado.
+4. Faixa editorial única, entre duas linhas finas, com rótulo monoespaçado CADERNO DE DIAGNÓSTICO; título 10 questões. No seu ritmo.; apoio Um teste curto, com resultado ao terminar. Sem três colunas de indicadores. Usar Geist Mono já disponível no projeto para o rótulo.
 5. CTA Começar teste grátis e apoio Sem cadastro. Sem cartão.
-6. Fecho Responda. Entenda seus erros. Saiba o que revisar. e aviso Diagnóstico inicial, sem promessa de aprovação.
+6. Texto concreto Ao final, veja seus acertos e a explicação de cada questão. e aviso Diagnóstico inicial, sem promessa de aprovação. Removido UM PASSO DE CADA VEZ.
 
 O botão é o único destino de destaque. Sem menu, login, checkout ou pop-up. A quantidade de 10 questões é o alvo planejado para o diagnóstico, ainda não implementado.
 
 ## Referências e aprovação
 
-- Imagem: design/entrada-mobile-v1.png, gerada pela ferramenta integrada de imagens.
-- Prompt completo: design/entrada-mobile-v1-prompt.txt.
-- Amostra interativa no Visualize: permite avaliar cantos e estado desabilitado; não implementa quiz e não substitui a imagem como referência principal.
+- Imagem: design/entrada-mobile-v2.png, gerada pela ferramenta integrada de imagens.
+- Prompt completo: design/entrada-mobile-v2-prompt.txt.
+- A amostra interativa do Visualize pertence à exploração v1 e não é referência de aprovação da v2. A imagem v2 e esta especificação são as referências atuais.
 - A imagem apresenta leve textura de raster e variações de quebras de linha. No código, a intenção é fundo liso e cores sólidas; confirmar isso com a aprovação. Quebras de texto precisam adaptar-se à largura real.
 - Sites foi mencionado nesta etapa, mas nenhuma publicação ou migração de hospedagem foi solicitada. Projeto Next.js existente permanece a base; Vercel segue sendo a hospedagem planejada, a confirmar na etapa de publicação.
 
