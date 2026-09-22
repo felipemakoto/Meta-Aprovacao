@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Preparação ETEC / IF
 
-## Getting Started
+Plataforma em construção. Etapa 1: projeto Next.js padrão. A página de exemplo não é o visual final.
 
-First, run the development server:
+## Tecnologias
+Node.js 24 LTS (24.20.0 verificado), npm 11.19.0, Next.js 16.3.6, React 19.2.8, TypeScript 5, Tailwind CSS 4 e ESLint 9. App Router em src/app. Versões exatas no package-lock.json; preserve esse arquivo e use somente npm.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Instalação no Windows 11
+Node, npm e Git já estão instalados neste computador. Não precisa reinstalar.
+Em outro computador, abra https://nodejs.org/en/download, escolha Node 24 LTS, Windows e o instalador .msi da arquitetura do computador. Abra o arquivo, clique em Next, aceite a licença, mantenha as opções padrão, clique em Install e Finish. Ferramentas nativas adicionais não são necessárias nesta etapa. Reabra o PowerShell.
+
+No menu Iniciar, procure PowerShell e abra. Verifique:
+```powershell
+node --version
+npm.cmd --version
+git --version
 ```
+O Node deve mostrar v24.x.x. npm.cmd é o próprio npm no Windows; evita bloqueio do npm.ps1 sem alterar a política de segurança do PowerShell.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Execução
+No PowerShell:
+```powershell
+Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+npm.cmd ci
+npm.cmd run dev -- --hostname 127.0.0.1
+```
+npm ci instala as versões registradas; não é necessário repetir em cada execução. Quando aparecer Ready, abra http://localhost:3000 no navegador. Mantenha o terminal aberto; Ctrl+C para parar. Se o servidor já estiver ativo, utilize-o.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos importantes
+```powershell
+npm.cmd run lint
+npm.cmd run build
+npm.cmd start -- --hostname 127.0.0.1
+git status
+```
+Lint verifica o código. Build compila para produção. Start executa o build criado. Pare o servidor de desenvolvimento antes de executar build.
+Git status mostra alterações. Git add . prepara arquivos não ignorados para salvar; git commit -m "mensagem" salva um checkpoint local. Revise o status antes. GitHub será abordado depois.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variáveis
+Nenhuma variável ou credencial necessária. .env* está ignorado pelo Git. Nunca inserir chaves privadas no código, em logs ou na documentação.
 
-## Learn More
+## Arquivos
+- src/app/page.tsx: página inicial, rota /.
+- src/app/layout.tsx: estrutura compartilhada.
+- src/app/globals.css: CSS do exemplo oficial; não é o design aprovado do produto.
+- public/: imagens públicas do exemplo.
+- docs/DECISIONS.md: decisões técnicas.
+- docs/ESTADO-DO-PROJETO.md: progresso.
 
-To learn more about Next.js, take a look at the following resources:
+## Teste manual e erros
+Abra http://localhost:3000. Deve aparecer Next.js e a instrução em inglês para editar page.tsx. Não é necessário clicar em Deploy Now.
+Se não abrir, confira Ready no terminal e a porta indicada. Se um comando não for encontrado, reabra o PowerShell. Caso persista, envie a mensagem do erro sem credenciais.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Documentação oficial
+- https://nodejs.org/en/about/previous-releases
+- https://nodejs.org/en/download
+- https://nextjs.org/docs/app/getting-started/installation
+- https://nextjs.org/docs/app/api-reference/cli/create-next-app
