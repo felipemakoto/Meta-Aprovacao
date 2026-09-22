@@ -1,7 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 1 — base criada e verificada; aguardando teste do usuário.
-Etapas concluídas tecnicamente: 1. Nenhuma etapa posterior iniciada.
+Etapa atual: 2 — Git e checkpoints; aguardando teste do usuário ao final.
+Etapas concluídas tecnicamente: 1 e 2. Etapa 3 ainda não iniciada.
+Confirmação da etapa 1: o pedido do usuário para continuar foi aceito como confirmação, conforme o plano aprovado.
 
 ## Versões verificadas
 - Node: 24.20.0 (linha 24 LTS).
@@ -18,13 +19,14 @@ Migrations aplicadas: nenhuma.
 Rotas criadas: / e página interna de não encontrado do Next.js.
 Variáveis de ambiente: nenhuma.
 
-Funcionalidades funcionando: página inicial oficial; servidor local; lint; build com checagem TypeScript.
-Validações: npm run lint passou; npm run build passou; página Create Next App aberta no navegador em http://localhost:3000 com logo e instrução para editar page.tsx. npm informou zero vulnerabilidades na instalação (isso não substitui futura auditoria).
-Funcionalidades em teste: confirmação manual pelo usuário.
-Pendências: teste do usuário; revisar aviso de fim de suporte do ESLint 9 antes de ampliar a implementação. Mantida a versão do gerador oficial nesta etapa; lint e build passaram. npm também informou script de instalação do unrs-resolver não aprovado; não houve aprovação adicional, e os checks passaram.
+Funcionalidades verificadas na etapa 1: página inicial oficial; servidor local; lint; build com checagem TypeScript. Execução atual do servidor não revalidada na etapa 2.
+Validações anteriores: npm run lint e npm run build passaram; página Create Next App aberta no navegador em http://localhost:3000. npm informou zero vulnerabilidades na instalação (isso não substitui futura auditoria). Sem repetição de build nesta etapa exclusivamente documental.
+Validações da etapa 2: .env.local, .env.production, node_modules/ e .next/ ignorados; nenhum .env versionado; branch master preservada; repositório sem remoto. Revisar diff antes do commit e conferir histórico e status após salvar, conforme README.
+Funcionalidades em teste: usuário consultar status e histórico seguindo o README.
+Pendências: teste da etapa 2 pelo usuário; revisar aviso de fim de suporte do ESLint 9 antes de ampliar a implementação. Mantida a versão do gerador oficial; lint e build passaram na etapa 1. npm também informou script de instalação do unrs-resolver não aprovado; não houve aprovação adicional, e os checks passaram.
 
-Último checkpoint Git antes deste registro: 23e0759 — Initial commit from Create Next App.
-Checkpoint de fechamento: commit com mensagem docs: registrar fundacao e estado da etapa 1; consultar git log -1 --oneline para o hash após salvar.
-Próxima etapa: 2 — Git, somente após o usuário testar.
+Último checkpoint Git antes deste registro: f149c31 — docs: registrar fundacao e estado da etapa 1.
+Checkpoint de fechamento desta etapa: docs: documentar fluxo Git da etapa 2. Seu hash é gerado ao salvar; consultar git log -1 --oneline. Este registro faz parte desse checkpoint.
+Próxima etapa: 3 — README e DECISIONS, somente após o usuário testar a etapa 2.
 
 Não foram configurados Supabase, banco, login, quiz, Kiwify, pagamentos nem CSS final da plataforma. O CSS presente é somente o exemplo oficial do create-next-app.
