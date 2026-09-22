@@ -64,3 +64,7 @@ Direção proposta: editorial de estudos, fundo claro, verde profundo e marca-te
 ## Revisão visual v2 — feedback do usuário
 
 Remover Seu próximo passo, UM PONTO DE PARTIDA e UM PASSO DE CADA VEZ. Substituir os três indicadores por uma faixa editorial inspirada em caderno de questões, com texto descritivo único. Trocar o fecho motivacional por informação concreta sobre a revisão das respostas. Botão da entrada com raio 6px. Motivo: reduzir repetição de composição e frases genéricas, fortalecendo relação com estudo. Referência atual: design/entrada-mobile-v2.png; v1 preservada somente como histórico. Pesquisa em design/PESQUISA-VISUAL.md. A revisão continua aguardando aprovação antes de React/CSS.
+
+## Revisão visual v3 — card e tipografia
+
+Por pedido do usuário, substituir toda a faixa de diagnóstico por um card compacto com apenas 10 questões, sem explicação. Títulos passam a serifada editorial com referência Lora 600; corpo e botões permanecem em Geist Sans. A imagem é uma aproximação visual da fonte; conferir a correspondência na implementação. Referência ativa: design/entrada-mobile-v3.png. Versões anteriores preservadas como histórico. Aprovação visual continua pendente; aplicação e dependências não foram alteradas.

@@ -136,4 +136,4 @@ Se não abrir, confira Ready no terminal e a porta indicada. Se um comando não 
 
 ## Proposta visual da etapa 4
 
-O [design system proposto](docs/DESIGN-SYSTEM.md) e o [mockup mobile](docs/design/entrada-mobile-v2.png) estão aguardando aprovação. O site local continua exibindo a página de exemplo. O [prompt completo](docs/design/entrada-mobile-v2-prompt.txt) registra a geração da referência. A implementação visual começa somente após aprovação.
+O [design system proposto](docs/DESIGN-SYSTEM.md) e o [mockup mobile](docs/design/entrada-mobile-v3.png) estão aguardando aprovação. O site local continua exibindo a página de exemplo. O [prompt completo](docs/design/entrada-mobile-v3-prompt.txt) registra a geração da referência. A implementação visual começa somente após aprovação.
