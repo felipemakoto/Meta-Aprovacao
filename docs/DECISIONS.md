@@ -56,3 +56,7 @@ Atualizar documentos afetados ao concluir cada etapa. Não marcar funcionalidade
 - https://nodejs.org/en/about/previous-releases
 - https://nextjs.org/docs/app/getting-started/installation
 - https://nextjs.org/docs/app/api-reference/cli/create-next-app
+
+## Etapa 4 — proposta ainda não aprovada
+
+Direção proposta: editorial de estudos, fundo claro, verde profundo e marca-texto amarelo. Manter Geist já disponível no projeto e usar ETEC / IF como identificação descritiva provisória. Tokens, componentes e hierarquia estão em DESIGN-SYSTEM.md; referência raster e prompt em design/. Não incorporar a proposta ao CSS da aplicação antes da aprovação. Nenhuma publicação pelo Sites foi feita nesta etapa.

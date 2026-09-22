@@ -1,7 +1,7 @@
 # Estado do Projeto
 
-Etapa atual: 3 — README e DECISIONS consolidados; aguardando revisão do usuário.
-Etapas concluídas tecnicamente: 1, 2 e 3. Etapa 4 ainda não iniciada.
+Etapa atual: 4 — proposta de design system e mockup mobile v1; aguardando aprovação visual.
+Etapas concluídas: 1, 2 e 3. Etapa 4 parcial: proposta visual pronta, interface ainda não implementada.
 Confirmação das etapas anteriores: os pedidos do usuário para continuar foram aceitos como confirmação de seus testes.
 
 ## Versões verificadas
@@ -23,11 +23,12 @@ Funcionalidades verificadas na etapa 1: página inicial oficial; servidor local;
 Validações anteriores: npm run lint e npm run build passaram; página Create Next App aberta no navegador em http://localhost:3000. npm informou zero vulnerabilidades na instalação (isso não substitui futura auditoria). Sem repetição de build nesta etapa exclusivamente documental.
 Validações da etapa 2: .env.local, .env.production, node_modules/ e .next/ ignorados; nenhum .env versionado; branch master preservada; repositório sem remoto. Checkpoint 268318b salvo; histórico e status limpo confirmados no encerramento da etapa 2.
 Validações da etapa 3: comandos documentados conferidos com package.json e npm run; links locais e caminhos documentados conferidos; revisão das diferenças e git diff --check. Nenhum código ou dependência alterado.
-Funcionalidades em teste: usuário abrir README e DECISIONS e conferir os comandos disponíveis.
-Pendências: revisão da documentação da etapa 3 pelo usuário; revisar aviso de fim de suporte do ESLint 9 antes de ampliar a implementação. Mantida a versão do gerador oficial; lint e build passaram na etapa 1. npm também informou script de instalação do unrs-resolver não aprovado; não houve aprovação adicional, e os checks passaram.
+Etapa 4: imagem gerada com ferramenta integrada, inspecionada e salva em docs/design/entrada-mobile-v1.png; tokens e estados propostos em docs/DESIGN-SYSTEM.md; amostra visual apresentada no Visualize. Nenhum código da aplicação alterado.
+Funcionalidades em teste: aprovação do mockup, paleta e composição pelo usuário. Comparação entre interface e mockup ocorrerá após a implementação aprovada.
+Pendências: aprovação visual da etapa 4, nome da plataforma ainda indefinido; revisar aviso de fim de suporte do ESLint 9 antes de ampliar a implementação. Mantida a versão do gerador oficial; lint e build passaram na etapa 1. npm também informou script de instalação do unrs-resolver não aprovado; não houve aprovação adicional, e os checks passaram.
 
-Último checkpoint Git antes deste registro: 268318b — docs: documentar fluxo Git da etapa 2.
-Checkpoint de fechamento desta etapa: docs: consolidar documentacao da etapa 3. Seu hash é gerado ao salvar; consultar git log -1 --oneline. Este registro faz parte desse checkpoint.
-Próxima etapa: 4 — identidade visual, design system e primeiro mockup mobile, somente após a revisão do usuário. Mostrar o mockup e aguardar aprovação antes da interface definitiva.
+Último checkpoint Git antes deste registro: 2df0fee — docs: consolidar documentacao da etapa 3.
+Checkpoint da proposta visual: docs: propor design system e mockup da etapa 4. Seu hash é gerado ao salvar; consultar git log -1 --oneline. Este registro faz parte desse checkpoint.
+Próximo passo: aguardar aprovação ou ajustes do mockup v1. Após aprovação, implementar a entrada e comparar com a referência; somente então concluir a etapa 4. Não avançar ao Supabase ainda.
 
 Não foram configurados Supabase, banco, login, quiz, Kiwify, pagamentos nem CSS final da plataforma. O CSS presente é somente o exemplo oficial do create-next-app.

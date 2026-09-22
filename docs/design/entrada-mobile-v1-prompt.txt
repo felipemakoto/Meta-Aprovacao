@@ -1,0 +1,15 @@
+Use case: ui-mockup
+Asset type: approval-only mobile web entry screen for Brazilian ETEC/IF exam preparation.
+Create ONE realistic polished high-fidelity UI screenshot, flat app content only, portrait 390x844 logical pixels. No phone frame, browser chrome, notch, device shadow. Crisp typography and exactly spelled Portuguese copy. Page should be specifically editorial student exam prep, not a generic SaaS hero.
+Design system: light only. Warm paper #F7F6F0 background, ink #172B25, secondary #53645D, forest green #174D38 CTA with white text, subtle highlighter #E6EC88, thin divider #D8DED7. Geist or closely matching clean sans serif. Heading 38px/42, bold, body 16px/24, small 13px/19. Left aligned, 24px side padding. Functional whitespace, no gradients, no blobs, no floating cards, no glass, no invented metrics/testimonials/photos.
+Layout top-to-bottom:
+1 Header at 28px from top: small simple square containing up-right arrow next to text "ETEC / IF". This is descriptive placeholder, not an official logo. Tiny right text "Seu próximo passo".
+2 Thin horizontal divider below header at y86.
+3 At y124 small uppercase eyebrow "UM PONTO DE PARTIDA".
+4 Dominant heading across 4 lines at y159: "Como está sua" / "preparação para" / "a ETEC e os IFs?" (3 lines if exact text fits naturally) highlighter underline only beneath "preparação". Balanced large type.
+5 At y320 body paragraph exactly "Faça um teste rápido e descubra quais conteúdos você precisa revisar." with comfortable 3 line wrap.
+6 At y430 one horizontal information row of three equal columns without surrounding cards, separated by thin vertical rules: "10" over "questões"; "Poucos" over "minutos"; "Na hora" over "resultado".
+7 At y530 wide forest-green rectangular button, 56px high, 12px radius, label "Começar teste grátis" and small right arrow. Below centered text "Sem cadastro. Sem cartão."
+8 At y654 thin divider and compact study-notebook styled footer: small "UM PASSO DE CADA VEZ" and text "Responda. Entenda seus erros. Saiba o que revisar." No illustration needed.
+9 Bottom quiet small text "Diagnóstico inicial, sem promessa de aprovação."
+All text legible with accessible contrast. No navigation menu, login, payments, popups, progress charts, official school seals, fake score, or working quiz content. Only one screen, no extra design board or swatches.
