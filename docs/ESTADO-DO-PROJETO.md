@@ -32,3 +32,7 @@ Checkpoint da proposta visual revisada: docs: simplificar card e revisar tipogra
 Próximo passo: aguardar aprovação ou ajustes do mockup v3. Após aprovação, implementar a entrada e comparar com a referência; somente então concluir a etapa 4. Não avançar ao Supabase ainda.
 
 Não foram configurados Supabase, banco, login, quiz, Kiwify, pagamentos nem CSS final da plataforma. O CSS presente é somente o exemplo oficial do create-next-app.
+
+## Revisão visual v4
+
+Remoção localizada do card 10 questões, conforme máscara enviada pelo usuário. Referência mais recente: docs/design/entrada-mobile-v4.png; detalhes em docs/design/REVISAO-V4.md. Preservadas as posições do restante da composição. Esta revisão substitui a presença do card especificada na v3. Aprovação visual ainda pendente. Último checkpoint anterior: 4a8d35d. Checkpoint desta revisão: docs: registrar remocao do card no mockup v4.
