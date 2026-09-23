@@ -10,7 +10,7 @@ Etapa 4 implementada: entrada responsiva seguindo o mockup v4 aprovado, com tít
 2. Consulte [Estado do Projeto](docs/ESTADO-DO-PROJETO.md) para saber o que foi verificado, as pendências e a próxima etapa.
 3. Consulte [Decisões técnicas](docs/DECISIONS.md) para entender as escolhas e suas razões.
 
-O ambiente atual é local, de desenvolvimento. Nenhum serviço foi contratado e não há site publicado. Aguardamos o teste do usuário nesta interface antes da etapa 5 (Supabase).
+O ambiente atual é local, de desenvolvimento; não há site publicado. O usuário autorizou a etapa 5 (Supabase). A preparação está em [Supabase — etapa 5](docs/SUPABASE.md); a criação remota aguarda login no painel. O site ainda não usa Supabase.
 
 ## Tecnologias
 Node.js 24 LTS (24.20.0 verificado), npm 11.19.0, Next.js 16.3.6, React 19.2.8, TypeScript 5, Tailwind CSS 4 e ESLint 9. App Router em src/app. Versões exatas no package-lock.json; preserve esse arquivo e use somente npm.
@@ -147,4 +147,4 @@ O [design system](docs/DESIGN-SYSTEM.md) e o [mockup v4 aprovado](docs/design/en
 
 A página é construída com HTML/React e CSS. DM Serif Display e Geist são servidas por next/font; a obtenção inicial das fontes no build requer internet. Nenhuma dependência npm nova foi adicionada.
 
-Checkpoint: feat: implementar entrada aprovada da etapa 4. Consulte git log -1 --oneline. Teste a página antes de continuar para a etapa 5; nenhum banco, login, quiz ou pagamento foi configurado.
+Checkpoint da interface: 064e4e9 — feat: implementar entrada aprovada da etapa 4. O pedido para avançar ao Supabase foi aceito como confirmação do teste da interface. A etapa 5 está em preparação; nenhum banco remoto, login do aplicativo, quiz ou pagamento foi configurado.

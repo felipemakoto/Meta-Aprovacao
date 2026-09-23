@@ -1,6 +1,6 @@
 # Estado do Projeto
 
-Etapa atual: 4 — design system e entrada implementados a partir do mockup v4 aprovado pelo usuário (“pode continuar, essa imagem está boa”). Implementação e verificações concluídas; aguardando teste do usuário antes da etapa 5.
+Etapa atual: 5 — preparação do Supabase. O pedido “avance para o supabase” foi aceito como confirmação do teste da etapa 4. Documentação oficial e custos conferidos; painel aberto, redirecionado para login. Criação e verificação do projeto remoto aguardam sessão autenticada do usuário. Etapa 5 ainda não concluída.
 
 Etapas 1, 2 e 3 concluídas. Os pedidos anteriores para continuar foram aceitos como confirmação dos testes dessas etapas.
 
@@ -34,12 +34,12 @@ Servidor local de produção iniciado para revisão em http://localhost:3000 ap�
 
 ## Pendências e limites
 
-O usuário precisa testar a etapa 4. Nome definitivo ainda pendente. Supabase, login, banco, quiz, questões, resultados, simulados, pagamentos e publicação não implementados.
+O usuário precisa entrar no painel Supabase para prosseguir com a etapa 5. Nome definitivo ainda pendente. Supabase remoto não criado/verificado; clientes, login, banco da aplicação, quiz, questões, resultados, simulados, pagamentos e publicação não implementados. Guia em SUPABASE.md. Nenhuma senha ou chave solicitada pelo chat.
 
 Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script de instalação do unrs-resolver não aprovado pelo npm. Não alterados nesta etapa; lint e build passaram. Revisar manutenção antes de ampliar dependências.
 
 ## Checkpoint e próximo passo
 
-Checkpoint anterior: 82bf323 — mockup v4 sem card. Checkpoint desta implementação: feat: implementar entrada aprovada da etapa 4. Para obter o hash deste registro, usar git log -1 --oneline.
+Checkpoint da interface: 064e4e9 — feat: implementar entrada aprovada da etapa 4. Preparação da etapa 5 registrada separadamente; consultar git log -1 --oneline.
 
-Próximo passo: aguardar teste do usuário. Somente após confirmação, iniciar etapa 5 (Supabase), consultando documentação e limites atuais. Não avançar automaticamente.
+Próximo passo: após login, conferir organização Free e projetos existentes, preparar projeto de desenvolvimento e verificar seu provisionamento. O usuário preencherá a senha do banco diretamente no painel. Não iniciar clientes/autenticação da etapa 6 nem migrations da etapa 7 nesta etapa.

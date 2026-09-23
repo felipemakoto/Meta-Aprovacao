@@ -78,3 +78,9 @@ DM Serif Display 400 aproxima o título da imagem; Geist permanece no corpo. nex
 O CTA mantém o texto aprovado, mas informa ao clique que o teste está em preparação. Sem tentativas ou diagnóstico nesta etapa. Heroicons oficiais locais com licença preservada fornecem as setas, sem dependência npm adicional.
 
 Verificação visual em design-qa.md; lint e build aprovados. Nenhuma integração ou publicação. Pausar para teste do usuário antes da etapa 5.
+
+## Etapa 5 — preparação do Supabase
+
+Usuário autorizou avançar após a etapa 4. Escopo: criar e verificar projeto Supabase de desenvolvimento em organização Free. Nome proposto projeto-etec-if-dev; região preferida São Paulo (sa-east-1), sujeita à disponibilidade no painel. Custos e limites conferidos na documentação oficial e registrados em SUPABASE.md.
+
+O painel exige login; o projeto remoto ainda não foi criado ou verificado. Senhas e aceite de termos ficam com o usuário diretamente no painel. Sem chaves administrativas, serviço pago ou descarte de projetos existentes. A etapa 6 implementará clientes e autenticação; a etapa 7 criará tabelas via migrations. Nenhum pacote ou código de integração adicionado agora.
