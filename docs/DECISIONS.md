@@ -68,3 +68,13 @@ Remover Seu próximo passo, UM PONTO DE PARTIDA e UM PASSO DE CADA VEZ. Substitu
 ## Revisão visual v3 — card e tipografia
 
 Por pedido do usuário, substituir toda a faixa de diagnóstico por um card compacto com apenas 10 questões, sem explicação. Títulos passam a serifada editorial com referência Lora 600; corpo e botões permanecem em Geist Sans. A imagem é uma aproximação visual da fonte; conferir a correspondência na implementação. Referência ativa: design/entrada-mobile-v3.png. Versões anteriores preservadas como histórico. Aprovação visual continua pendente; aplicação e dependências não foram alteradas.
+
+## Etapa 4 — aprovação v4 e implementação
+
+Os registros anteriores descrevem a sequência histórica. A referência vigente é design/entrada-mobile-v4.png, aprovada pelo usuário. Removido o card 10 questões, preservando o espaço anterior ao CTA. Página de exemplo substituída pela entrada em React/CSS no projeto Next.js existente.
+
+DM Serif Display 400 aproxima o título da imagem; Geist permanece no corpo. next/font serve as fontes no próprio site. CSS Modules organiza os estilos da tela e globals.css concentra tokens e foco. Apenas o botão usa componente cliente para revelar o aviso; a página continua como componente servidor.
+
+O CTA mantém o texto aprovado, mas informa ao clique que o teste está em preparação. Sem tentativas ou diagnóstico nesta etapa. Heroicons oficiais locais com licença preservada fornecem as setas, sem dependência npm adicional.
+
+Verificação visual em design-qa.md; lint e build aprovados. Nenhuma integração ou publicação. Pausar para teste do usuário antes da etapa 5.

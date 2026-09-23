@@ -2,7 +2,7 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Até a etapa 3, temos o projeto Next.js padrão, checkpoints Git e documentação de operação. A página de exemplo não é o visual final. Quiz, contas, questões, simulados e Premium são funcionalidades planejadas, ainda não implementadas.
+Etapa 4 implementada: entrada responsiva seguindo o mockup v4 aprovado, com título serifado e sem o card removido pelo usuário. Quiz, contas, questões, simulados e Premium são funcionalidades planejadas, ainda não implementadas.
 
 ## Por onde começar
 
@@ -10,7 +10,7 @@ Até a etapa 3, temos o projeto Next.js padrão, checkpoints Git e documentaçã
 2. Consulte [Estado do Projeto](docs/ESTADO-DO-PROJETO.md) para saber o que foi verificado, as pendências e a próxima etapa.
 3. Consulte [Decisões técnicas](docs/DECISIONS.md) para entender as escolhas e suas razões.
 
-O ambiente atual é local, de desenvolvimento. Nenhum serviço foi contratado e não há site publicado. A próxima etapa é definir identidade visual, design system e mockup; a interface final depende da aprovação desse mockup.
+O ambiente atual é local, de desenvolvimento. Nenhum serviço foi contratado e não há site publicado. Aguardamos o teste do usuário nesta interface antes da etapa 5 (Supabase).
 
 ## Tecnologias
 Node.js 24 LTS (24.20.0 verificado), npm 11.19.0, Next.js 16.3.6, React 19.2.8, TypeScript 5, Tailwind CSS 4 e ESLint 9. App Router em src/app. Versões exatas no package-lock.json; preserve esse arquivo e use somente npm.
@@ -107,8 +107,11 @@ Uma variável de ambiente é uma configuração fornecida ao programa fora do c�
 ## Arquivos
 - src/app/page.tsx: página inicial, rota /.
 - src/app/layout.tsx: estrutura compartilhada.
-- src/app/globals.css: CSS do exemplo oficial; não é o design aprovado do produto.
-- public/: imagens públicas do exemplo.
+- src/app/globals.css: tokens visuais, tema claro e foco.
+- src/app/entry.module.css: estilos responsivos da entrada.
+- src/app/start-test-button.tsx: botão e aviso de teste em preparação.
+- public/icons/: setas oficiais Heroicons e licença MIT.
+- design-qa.md: verificação visual e evidências.
 - docs/DECISIONS.md: decisões técnicas.
 - docs/ESTADO-DO-PROJETO.md: progresso.
 
@@ -125,7 +128,11 @@ npm.cmd run
 Devem aparecer `dev`, `build`, `start` e `lint`. Não há comando de testes automatizados configurado. Os resultados de lint e build da etapa 1 estão registrados no Estado do Projeto; mudanças apenas documentais não exigem repetir a compilação.
 
 ## Teste manual e erros
-Abra http://localhost:3000. Deve aparecer Next.js e a instrução em inglês para editar page.tsx. Não é necessário clicar em Deploy Now.
+1. Abra http://localhost:3000. Deve aparecer a entrada ETEC / IF, com título serifado, destaque amarelo e botão verde, sem o card 10 questões.
+2. Redimensione a janela: o texto deve se adaptar sem rolagem horizontal.
+3. Clique em Começar teste grátis. Deve aparecer “O teste está em preparação e ainda não pode ser iniciado.”, uma única vez mesmo com novos cliques.
+4. Atualize a página e pressione Tab: o botão deve receber um contorno visível. Enter deve mostrar o mesmo aviso.
+5. A interface da etapa 4 está pronta para seu teste. O quiz será implementado em etapa futura.
 Se não abrir, confira Ready no terminal e a porta indicada. Se um comando não for encontrado, reabra o PowerShell. Caso persista, envie a mensagem do erro sem credenciais.
 
 ## Documentação oficial
@@ -134,6 +141,10 @@ Se não abrir, confira Ready no terminal e a porta indicada. Se um comando não 
 - https://nextjs.org/docs/app/getting-started/installation
 - https://nextjs.org/docs/app/api-reference/cli/create-next-app
 
-## Proposta visual da etapa 4
+## Visual implementado na etapa 4
 
-O [design system proposto](docs/DESIGN-SYSTEM.md) e o [mockup mobile](docs/design/entrada-mobile-v3.png) estão aguardando aprovação. O site local continua exibindo a página de exemplo. O [prompt completo](docs/design/entrada-mobile-v3-prompt.txt) registra a geração da referência. A implementação visual começa somente após aprovação.
+O [design system](docs/DESIGN-SYSTEM.md) e o [mockup v4 aprovado](docs/design/entrada-mobile-v4.png) orientam a entrada atual. [Comparação e testes](design-qa.md) registram a verificação em 320, 390 e 1280px. Lint e build passaram após a implementação.
+
+A página é construída com HTML/React e CSS. DM Serif Display e Geist são servidas por next/font; a obtenção inicial das fontes no build requer internet. Nenhuma dependência npm nova foi adicionada.
+
+Checkpoint: feat: implementar entrada aprovada da etapa 4. Consulte git log -1 --oneline. Teste a página antes de continuar para a etapa 5; nenhum banco, login, quiz ou pagamento foi configurado.

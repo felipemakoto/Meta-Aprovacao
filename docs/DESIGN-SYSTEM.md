@@ -1,68 +1,48 @@
-# Proposta visual — etapa 4
+# Design system — etapa 4
 
-Status: proposta v3 revisada a partir das marcações do usuário, aguardando aprovação. As versões v1 e v2 foram substituídas como referência ativa. Não é a interface implementada.
+Status: mockup v4 aprovado e entrada implementada. Referência: [entrada-mobile-v4.png](design/entrada-mobile-v4.png). As versões anteriores são histórico.
 
-## Objetivo e público
+## Direção e conteúdo
 
-Entrada mobile para estudantes vindos do link da bio, interessados em ETEC e Institutos Federais. Levar ao diagnóstico gratuito sem cadastro, com linguagem acolhedora e sem prometer aprovação. Nome de marca ainda não definido; ETEC / IF é apenas identificação descritiva provisória, sem vínculo oficial declarado.
+Entrada editorial para estudantes interessados em ETEC e Institutos Federais. ETEC / IF é identificação provisória; nome de marca ainda indefinido. Fundo claro, verde profundo, título serifado e marca-texto amarelo. Tema claro apenas, sem métricas inventadas ou promessas de aprovação.
 
-Direção: página editorial de estudos, com fundo de papel e detalhe de marca-texto. Verde profundo comunica foco; tipografia e espaços organizam o conteúdo. Sem gradientes, ilustrações de preenchimento, dashboards ou métricas inventadas. Tema claro apenas.
+O card “10 questões” foi removido por solicitação do usuário. Preservado o espaço antes do botão conforme a imagem aprovada. Também removidos “Seu próximo passo”, “UM PONTO DE PARTIDA” e “UM PASSO DE CADA VEZ”.
 
-## Tokens propostos
+## Tokens implementados
 
 | Papel | Valor |
 | --- | --- |
 | Fundo | #F7F6F0 |
-| Superfície de cards e inputs | #FFFFFF |
 | Texto principal | #172B25 |
 | Texto secundário | #53645D |
-| Ação principal e sucesso | #174D38 |
-| Hover principal | #113B2B |
-| Marca-texto | #E6EC88, sempre com texto #172B25 |
-| Divisória e fundo desabilitado | #D8DED7 |
-| Erro | #B42318 |
-| Fundo de erro | #FEF3F2 |
-| Foco | #174D38, contorno 3px e afastamento 3px |
+| Ação | #174D38 |
+| Hover | #113B2B |
+| Marca-texto | #E6EC88 |
+| Divisória | #D8DED7 |
+| Texto do botão | #FFFFFF |
+| Foco | contorno #174D38 de 3px, afastamento 4px |
 
-Não usar marca-texto para texto claro. Validar contraste do código implementado e não apenas da imagem gerada. Estados de erro e sucesso terão ícone ou texto além da cor.
+Títulos: DM Serif Display 400, fallback Georgia. Corpo, marca e botão: Geist, fallback Arial. Fontes obtidas por next/font/google e servidas pela aplicação. O build precisa obter os arquivos quando não estão em cache. DM Serif Display substitui a aproximação Lora proposta na v3 por corresponder melhor à referência.
 
-## Tipografia e medidas
+## Composição
 
-- Fontes propostas: títulos e card 10 questões em serifada editorial, referência Lora 600 (fallback Georgia, serif); corpo, identificação e botões em Geist Sans existente (fallback Arial, sans-serif). A imagem aproxima o estilo; a fonte exata será conferida na implementação. Nenhuma fonte nova instalada nesta revisão.
-- Título principal mobile: 38px/42px, peso 600; em 320px, 32px/36px. Desktop futuro: máximo 56px/60px.
-- Título de seção: 24px/30px, peso 600. Texto: 16px/24px, peso 400. Rótulos: 14px/20px, peso 600. Apoio: 13px/19px, peso 400.
-- Espaçamento: 4, 8, 12, 16, 24, 32, 48 e 64px. Margem mobile 24px (20px em 320px). Conteúdo da entrada limitado a 480px; adaptação desktop será conferida após aprovação.
-- Cantos: botão principal da entrada 6px; inputs 12px, cards 16px, badges 6px. Sombras ausentes na entrada; elevação futura só quando funcional: 0 4px 16px com tinta a 8%.
-- Tela de referência: 390 x 844 pixels lógicos. A imagem gerada tem resolução própria e serve de referência de proporções, não de medidas exatas.
+- Largura máxima 560px; margens móveis 23px e 20px abaixo de 360px.
+- Título 36–46px no mobile e 58px a partir de 600px. Quebras naturais, sem imagem de texto.
+- Introdução 22px/28px; em telas estreitas 18px/26px.
+- Botão de largura total, altura mínima 56px e raio 6px. Espaço anterior de 116px no mobile, 88px em telas estreitas e 96px no desktop.
+- Fundo sólido; textura leve da imagem gerada não reproduzida.
+- Ícones oficiais Heroicons v2.2.0 em public/icons, licença MIT preservada. Nenhuma biblioteca npm adicionada.
 
-## Componentes para reutilização posterior
+## Interação e acessibilidade
 
-- Botão principal: verde, texto branco, mínimo 56px de altura na entrada, largura total no celular. Hover verde mais escuro; foco visível; desabilitado em cinza com texto secundário e atributo disabled.
-- Botão secundário: superfície branca, texto verde e borda verde; mesmo alvo mínimo de 44px.
-- Inputs: label persistente acima, texto 16px, altura mínima 48px, borda #53645D; placeholder não substitui label. Erro com borda vermelha e mensagem associada.
-- Cards: fundo branco, sem sombra por padrão; usar somente para conteúdo que realmente precise ser agrupado. A entrada usa somente um card compacto com o texto 10 questões: fundo #EDF0E5, borda 1px #174D38, raio 8px, sem sombra, alinhado à esquerda e dimensionado pelo conteúdo (aproximadamente 170px de largura). Texto serifado 24px/30px; sem subtítulo ou descrição.
-- Badges: compactos, fundo de marca-texto e texto principal; estados terão rótulos explícitos.
-- Progresso futuro: trilho #D8DED7 e preenchimento verde, rótulo de questões respondidas e total; não comunicar domínio de matéria.
-- Gráficos futuros: barras verdes sobre fundo claro, valores e legendas textuais. Cores de sucesso/erro acompanhadas de rótulos; sem gráficos decorativos na entrada.
-- Acessibilidade: HTML semântico, teclado, foco visível, alvos mínimos de 44px, texto legível, redução de movimento e nenhum significado dependente só da cor.
+“Começar teste grátis” revela “O teste está em preparação e ainda não pode ser iniciado.” em região role=status. Cliques repetidos não duplicam o aviso. Sem JavaScript, noscript exibe o aviso. O quiz ainda não existe.
 
-## Hierarquia e conteúdo da entrada
+HTML semântico, idioma pt-BR, um h1, ícones decorativos com alt vazio, foco visível, Tab/Enter e redução de movimento. Texto legível em 320px e 390px; conteúdo centralizado no desktop.
 
-1. Identificação ETEC / IF, sem assinatura adicional.
-2. Pergunta Como está sua preparação para a ETEC e os IFs?, sem frase introdutória decorativa.
-3. Faça um teste rápido e descubra quais conteúdos você precisa revisar.
-4. Card compacto contendo apenas 10 questões. Removidos rótulo CADERNO DE DIAGNÓSTICO, complemento No seu ritmo., frase explicativa e linhas horizontais da antiga faixa. Reduzir a altura do bloco e subir o CTA naturalmente.
-5. CTA Começar teste grátis e apoio Sem cadastro. Sem cartão.
-6. Texto concreto Ao final, veja seus acertos e a explicação de cada questão. e aviso Diagnóstico inicial, sem promessa de aprovação. Removido UM PASSO DE CADA VEZ.
+## Componentes futuros (não implementados)
 
-O botão é o único destino de destaque. Sem menu, login, checkout ou pop-up. A quantidade de 10 questões é o alvo planejado para o diagnóstico, ainda não implementado.
+Inputs com label persistente, mensagens de erro associadas, cards somente para agrupamento necessário e progresso com rótulos textuais. Erros e sucesso nunca dependerão apenas de cor. Concretizar e verificar nas etapas correspondentes.
 
-## Referências e aprovação
+## Verificação
 
-- Imagem: design/entrada-mobile-v3.png, gerada pela ferramenta integrada de imagens.
-- Prompt completo: design/entrada-mobile-v3-prompt.txt.
-- A amostra interativa do Visualize pertence à exploração v1 e não é referência de aprovação da v3. A imagem v3 e esta especificação são as referências atuais.
-- A imagem apresenta leve textura de raster e variações de quebras de linha. No código, a intenção é fundo liso e cores sólidas; confirmar isso com a aprovação. Quebras de texto precisam adaptar-se à largura real.
-- Sites foi mencionado nesta etapa, mas nenhuma publicação ou migração de hospedagem foi solicitada. Projeto Next.js existente permanece a base; Vercel segue sendo a hospedagem planejada, a confirmar na etapa de publicação.
-
-Após aprovação: implementar apenas a entrada com os tokens aceitos e comparar com o mockup em celular e desktop. Como o quiz ainda não existe, não simular um fluxo funcional nem criar tentativas sem a base das etapas seguintes. Se houver mudanças visuais pedidas, revisar primeiro a referência.
+Comparação e evidências em [design-qa.md](../design-qa.md). Pesquisa em [PESQUISA-VISUAL.md](design/PESQUISA-VISUAL.md). A exploração Visualize v1 não é referência atual. Nenhuma publicação feita.

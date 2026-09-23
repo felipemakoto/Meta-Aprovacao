@@ -1,38 +1,45 @@
 # Estado do Projeto
 
-Etapa atual: 4 — proposta de design system e mockup mobile v3; aguardando aprovação visual.
-Etapas concluídas: 1, 2 e 3. Etapa 4 parcial: proposta visual pronta, interface ainda não implementada.
-Confirmação das etapas anteriores: os pedidos do usuário para continuar foram aceitos como confirmação de seus testes.
+Etapa atual: 4 — design system e entrada implementados a partir do mockup v4 aprovado pelo usuário (“pode continuar, essa imagem está boa”). Implementação e verificações concluídas; aguardando teste do usuário antes da etapa 5.
 
-## Versões verificadas
-- Node: 24.20.0 (linha 24 LTS).
-- npm: 11.19.0.
-- Next.js: 16.3.6.
-- React / React DOM: 19.2.8.
-- TypeScript: 5.9.3.
-- Tailwind CSS / @tailwindcss/postcss: 4.3.3.
-- ESLint: 9.39.5; eslint-config-next: 16.3.6.
-- Git: 2.53.0.windows.2.
+Etapas 1, 2 e 3 concluídas. Os pedidos anteriores para continuar foram aceitos como confirmação dos testes dessas etapas.
 
-Banco: não configurado.
-Migrations aplicadas: nenhuma.
-Rotas criadas: / e página interna de não encontrado do Next.js.
-Variáveis de ambiente: nenhuma.
+## Ambiente
 
-Funcionalidades verificadas na etapa 1: página inicial oficial; servidor local; lint; build com checagem TypeScript. Execução atual do servidor não revalidada nesta etapa documental.
-Validações anteriores: npm run lint e npm run build passaram; página Create Next App aberta no navegador em http://localhost:3000. npm informou zero vulnerabilidades na instalação (isso não substitui futura auditoria). Sem repetição de build nesta etapa exclusivamente documental.
-Validações da etapa 2: .env.local, .env.production, node_modules/ e .next/ ignorados; nenhum .env versionado; branch master preservada; repositório sem remoto. Checkpoint 268318b salvo; histórico e status limpo confirmados no encerramento da etapa 2.
-Validações da etapa 3: comandos documentados conferidos com package.json e npm run; links locais e caminhos documentados conferidos; revisão das diferenças e git diff --check. Nenhum código ou dependência alterado.
-Etapa 4: imagem gerada com ferramenta integrada, inspecionada e salva em docs/design/entrada-mobile-v3.png; tokens e estados propostos em docs/DESIGN-SYSTEM.md; v3 revisada: card somente com 10 questões e títulos serifados; removida a faixa explicativa da v2. A amostra Visualize v1 não representa a revisão atual. Pesquisa e fontes em docs/design/PESQUISA-VISUAL.md. Nenhum código da aplicação alterado.
-Funcionalidades em teste: aprovação do mockup, paleta e composição pelo usuário. Comparação entre interface e mockup ocorrerá após a implementação aprovada.
-Pendências: aprovação visual da etapa 4, nome da plataforma ainda indefinido; revisar aviso de fim de suporte do ESLint 9 antes de ampliar a implementação. Mantida a versão do gerador oficial; lint e build passaram na etapa 1. npm também informou script de instalação do unrs-resolver não aprovado; não houve aprovação adicional, e os checks passaram.
+- Node 24.20.0; npm 11.19.0.
+- Next.js 16.3.6; React / React DOM 19.2.8.
+- TypeScript 5.9.3; Tailwind CSS / @tailwindcss/postcss 4.3.3.
+- ESLint 9.39.5; eslint-config-next 16.3.6.
+- Git 2.53.0.windows.2; branch master; identidade preservada; sem remoto.
 
-Último checkpoint Git antes deste registro: 76a2370 — docs: revisar mockup conforme feedback visual.
-Checkpoint da proposta visual revisada: docs: simplificar card e revisar tipografia do mockup. Seu hash é gerado ao salvar; consultar git log -1 --oneline. Este registro faz parte desse checkpoint.
-Próximo passo: aguardar aprovação ou ajustes do mockup v3. Após aprovação, implementar a entrada e comparar com a referência; somente então concluir a etapa 4. Não avançar ao Supabase ainda.
+Nenhuma dependência npm adicionada nesta etapa. Banco, migrations e variáveis de ambiente: nenhum. Rotas: / e página interna de não encontrado do Next.js.
 
-Não foram configurados Supabase, banco, login, quiz, Kiwify, pagamentos nem CSS final da plataforma. O CSS presente é somente o exemplo oficial do create-next-app.
+## O que funciona
 
-## Revisão visual v4
+- Entrada responsiva com título serifado, marca-texto e CTA, seguindo docs/design/entrada-mobile-v4.png.
+- Card “10 questões” removido e posições preservadas conforme aprovação.
+- Botão acessível por teclado mostra aviso de teste em preparação, sem criar tentativa ou simular diagnóstico.
+- Fontes servidas pela aplicação e ícones Heroicons locais com licença.
 
-Remoção localizada do card 10 questões, conforme máscara enviada pelo usuário. Referência mais recente: docs/design/entrada-mobile-v4.png; detalhes em docs/design/REVISAO-V4.md. Preservadas as posições do restante da composição. Esta revisão substitui a presença do card especificada na v3. Aprovação visual ainda pendente. Último checkpoint anterior: 4a8d35d. Checkpoint desta revisão: docs: registrar remocao do card no mockup v4.
+## Verificações da etapa 4
+
+- npm run build: aprovado, incluindo TypeScript e geração estática.
+- npm run lint: aprovado.
+- Navegador em 320, 390 e 1280px: sem overflow horizontal; fontes e ícones carregados.
+- Tab/Enter: foco visível e aviso exibido. Clique repetido não duplica mensagem.
+- Nenhum erro ou aviso no console durante a verificação.
+- Comparação visual com mockup e evidências em design-qa.md.
+
+Servidor local de produção iniciado para revisão em http://localhost:3000 após build. Servidores precisam ser iniciados novamente após fechar a sessão ou reiniciar o computador. Comandos de desenvolvimento no README.
+
+## Pendências e limites
+
+O usuário precisa testar a etapa 4. Nome definitivo ainda pendente. Supabase, login, banco, quiz, questões, resultados, simulados, pagamentos e publicação não implementados.
+
+Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script de instalação do unrs-resolver não aprovado pelo npm. Não alterados nesta etapa; lint e build passaram. Revisar manutenção antes de ampliar dependências.
+
+## Checkpoint e próximo passo
+
+Checkpoint anterior: 82bf323 — mockup v4 sem card. Checkpoint desta implementação: feat: implementar entrada aprovada da etapa 4. Para obter o hash deste registro, usar git log -1 --oneline.
+
+Próximo passo: aguardar teste do usuário. Somente após confirmação, iniciar etapa 5 (Supabase), consultando documentação e limites atuais. Não avançar automaticamente.
