@@ -1,6 +1,6 @@
 # Tentativa anônima — etapa 10
 
-PAUSADA a pedido do usuário, que configurará a chave futuramente. Implementação e migration salvas em checkpoint. Integração privilegiada da aplicação ainda pendente: configurar SUPABASE_SECRET_KEY localmente e executar o teste HTTP correspondente. Não avançar à etapa 11 antes dessa verificação e do teste do usuário.
+Etapa 10 concluída e aguardando teste do usuário. SUPABASE_SECRET_KEY configurada localmente e integração privilegiada verificada: cinco testes HTTP aprovados, nenhum ignorado. Nenhum valor de credencial exibido ou versionado.
 
 ## Fluxo implementado
 
@@ -34,7 +34,7 @@ Os snapshots preservam também a resposta e explicação para a correção futur
 
 Todas as respostas dos handlers usam Cache-Control: private, no-store. POST exige origem permitida e rejeita Sec-Fetch-Site=cross-site, corpo e parâmetros. Não há CORS permissivo. GET também recusa indicação de chamada cross-site. Erros do banco não são enviados ao cliente nem registrados com credenciais.
 
-## Configuração local pendente
+## Configuração local (concluída; referência para reinstalação)
 
 1. Abra o projeto estudos-etec/if no painel Supabase.
 2. Entre em Settings → API Keys → Secret keys. Copie uma chave que começa com sb_secret_.
@@ -68,19 +68,19 @@ npm.cmd run test:guest:http
 
 Resultados já obtidos:
 
-- Oito testes isolados passaram: cookies seguros, retomada, rejeição de token, CSRF, origem de produção, payload indevido, erros sem detalhes e exclusão de campos privados. Usam DAL simulada; não provam conexão administrativa real.
+- Nove testes isolados passaram (incluindo regressão de POST com stream vazio): cookies seguros, retomada, rejeição de token, CSRF, origem de produção, payload indevido, erros sem detalhes e exclusão de campos privados. Usam DAL simulada; não provam conexão administrativa real.
 - Cinco verificações de catálogo passaram: RLS, ausência de acesso direto, RPCs restritas, ausência de policies de liberação e chaves estrangeiras dos snapshots.
 - 26 verificações de comportamento passaram no PostgreSQL remoto: criação, distribuição por matéria, retomada, isolamento, expiração, conclusão, rejeição de hashes inválidos, falha sem conteúdo e preservação de questões/gabaritos.
 - Teste SQL usa uma transação, simula publicação somente dentro dela e termina com ROLLBACK. Não publica o seed para outras conexões nem mantém tentativas de teste.
-- HTTP real: quatro testes passaram; um foi ignorado por ausência de SUPABASE_SECRET_KEY. Após configurar, os cinco devem passar, incluindo a confirmação de quiz_not_ready vinda do Supabase.
+- HTTP real: cinco testes passaram, nenhum ignorado, incluindo quiz_not_ready vindo do Supabase. Na retomada, o teste revelou que Next representa POST vazio como stream não nulo. A validação passou a inspecionar os bytes, sem acumular o corpo; conteúdo não vazio continua rejeitado.
 - Build e lint aprovados. Node emite aviso MODULE_TYPELESS_PACKAGE_JSON ao testar módulos TypeScript diretamente; testes passam sem alterar o tipo de módulo do projeto.
 
-O teste HTTP atual pressupõe lote em rascunho. Depois de publicação autorizada, adaptar esse teste ao novo estado. Criação positiva com cookie foi testada isoladamente e no banco; o percurso positivo completo aplicação → Supabase → navegador aguarda conteúdo aprovado, além da configuração privada.
+O teste HTTP atual pressupõe lote em rascunho. Depois de publicação autorizada, adaptar esse teste ao novo estado. Criação positiva com cookie foi testada isoladamente e no banco; o percurso positivo completo aplicação → Supabase → navegador aguarda conteúdo aprovado. A configuração privada e a comunicação real com as RPCs foram verificadas.
 
 ## Limites e próximo passo
 
 Nenhum recebimento de respostas ou cálculo de nota nesta etapa; correção na etapa 12. Não há associação à conta, limpeza agendada de tentativas ou limitação de frequência para produção ainda. Rate limiting e retenção precisam ser definidos antes de publicar o endpoint. Não liberar este serviço publicamente como está.
 
-Critérios atendidos: estrutura versionada, seleção no servidor, token opaco, expiração, histórico preservado, RLS/GRANTs e testes de permitir/negar. Critério pendente: teste da aplicação com credencial privada. Depois de resolvido e confirmado pelo usuário, etapa 11 — mockup do quiz antes da implementação visual.
+Critérios atendidos: estrutura versionada, seleção no servidor, token opaco, expiração, histórico preservado, RLS/GRANTs e testes de permitir/negar. Teste da aplicação com credencial privada concluído. Após confirmação do usuário, etapa 11 — mockup do quiz antes da implementação visual.
 
 Referências: [Supabase Functions](https://supabase.com/docs/guides/database/functions), [chaves de API](https://supabase.com/docs/guides/getting-started/api-keys) e guias locais do Next.js 16.3.6 sobre Route Handlers e cookies.

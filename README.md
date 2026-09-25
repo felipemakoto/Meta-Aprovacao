@@ -203,7 +203,7 @@ npm.cmd run test:questions
 
 Esperado: cinco passed=true, teste de repetição passed=true e três testes da API aprovados. Instruções em [SEED.md](docs/SEED.md); conteúdo completo para revisão humana em [REVISAO-SEED.md](docs/REVISAO-SEED.md). Etapa 10 aguarda seu teste. A confirmação técnica não publica o lote.
 
-## Etapa 10 — tentativa anônima implementada; configuração pendente
+## Etapa 10 — tentativa anônima concluída
 
 POST/GET /api/quiz/attempt criam e retomam tentativa por cookie HttpOnly, com hash no banco, expiração de 30 minutos e cópia privada das questões/gabaritos. Apenas questões publicadas são selecionadas. O seed permanece draft; a resposta esperada após configurar a conexão é quiz_not_ready.
 
@@ -215,6 +215,6 @@ npx.cmd --no-install supabase db query --linked --file supabase/tests/verify_gue
 npm.cmd run test:guest:http
 ```
 
-O último comando exige o site em modo dev e a chave privada para executar todos os testes. Oito testes isolados, cinco checagens SQL, 26 asserções SQL, build e lint passaram. HTTP: quatro aprovados e um pendente por falta da chave. Não avançar para a etapa 11 antes de concluir a configuração e o teste.
+O último comando exige o site em modo dev e a chave privada para executar todos os testes. Oito testes isolados, cinco checagens SQL, 26 asserções SQL, build e lint passaram. HTTP: cinco aprovados após configuração da chave e correção do POST vazio; nove testes isolados aprovados. Aguardar teste do usuário antes da etapa 11.
 
-Etapa 10 pausada por solicitação do usuário. Retomar pela configuração local da Secret key e pelo teste HTTP; código e migration preservados no checkpoint.
+Etapa 10 retomada: chave configurada somente em .env.local e integração verificada. Nenhuma questão publicada. Próxima etapa, após seu teste: mockup do quiz.

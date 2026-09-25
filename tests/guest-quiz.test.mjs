@@ -40,6 +40,11 @@ test("criação usa cookie HttpOnly, Secure, SameSite e não revela token no JSO
   assert.match(response.headers.get("cache-control"), /private.*no-store/);
 });
 
+test("POST com stream vazio inicia tentativa sem aceitar dados do cliente", async () => {
+  const response = await makeHandlers().POST(request("POST", {}, ""));
+  assert.equal(response.status, 201);
+});
+
 test("retomada mantém tentativa e não reinicia prazo", async () => {
   const headers = { Cookie: `__Host-guest_quiz=${token}` };
   const handlers = makeHandlers();

@@ -136,3 +136,7 @@ Novas tabelas sem acesso direto inclusive de service_role; somente duas RPCs SEC
 Oito testes isolados, 26 verificações SQL, cinco checagens de catálogo, build/lint e quatro testes HTTP passaram. Um teste de integração real ignorado por chave ausente. Testes positivos no banco usam publicação transitória revertida, não uma aprovação editorial. Taxa de requisições, retenção e fluxo visual ficam para etapas posteriores; não publicar o endpoint antes dos controles de produção.
 
 Pausa solicitada pelo usuário na etapa 10: configurar a Secret key futuramente e retomar o teste HTTP. Checkpoint parcial salvo; não considerar a etapa encerrada.
+
+## Conclusão da etapa 10 após retomada
+
+SUPABASE_SECRET_KEY configurada pelo usuário e verificada sem exibição. O teste HTTP detectou rejeição indevida de POST vazio: Next pode fornecer um stream não nulo sem bytes. Validar os bytes e interromper na primeira ocorrência de conteúdo, sem acumular corpo, preserva a recusa de payloads e aceita o POST legítimo. Regressão adicionada: nove testes isolados e cinco HTTP aprovados sem ignorados. Não houve publicação do lote nem alteração de banco. Pausa anterior encerrada; aguardar teste antes do mockup da etapa 11.
