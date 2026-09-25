@@ -116,3 +116,11 @@ As duas tabelas têm RLS sem políticas de liberação e nenhum GRANT para PUBLI
 Não antecipar aprovação administrativa ou imutabilidade de questões usadas: ainda não há tentativas. Antes da etapa 10, definir preservação de id/versão e conteúdo, conforme QUESTOES.md. Status draft por padrão não comprova revisão humana; publicação automatizada de conteúdo gerado por IA permanece proibida.
 
 Verificação no banco remoto de desenvolvimento: 51 asserções SQL com rollback de fixtures e GRANTs temporários, seis checagens de catálogo, teste HTTP da chave pública e lint aprovados. Histórico sincronizado e tabelas vazias após rollback. Papel authenticated testado no PostgreSQL; sessão real ficará para etapas de conta. Pausa para teste do usuário antes do seed da etapa 9.
+
+## Etapa 9 — seed de desenvolvimento
+
+Lote de 10 questões originais de exemplo geradas com auxílio de IA, duas por matéria, em draft e com gabaritos explicados. Revisão humana separada em REVISAO-SEED.md; confirmar testes não autoriza publicação. Não copiar provas oficiais nem usar dados pessoais ou segredos.
+
+Seed somente de dados em supabase/seed.sql, separado das migrations e habilitado na configuração local. Carga remota explícita via CLI no projeto de desenvolvimento, sem reset nem config push. IDs estáveis; inserção atômica com ON CONFLICT DO NOTHING. Gabaritos inseridos apenas junto a questões novas, sem reparar ou sobrescrever registros existentes silenciosamente. Nenhuma nova migration.
+
+Teste de idempotência via Node invoca a CLI instalada, sem shell intermediário. Duas reexecuções comparam todas as linhas e timestamps depois de uma edição simulada; tudo revertido por ROLLBACK. Isso preserva revisões futuras. Cinco checagens do lote, teste de preservação, teste da API e lint aprovados. Seed automático local não testado por ausência de Docker.
