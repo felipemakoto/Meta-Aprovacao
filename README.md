@@ -161,3 +161,18 @@ curl.exe -i http://localhost:3000/api/auth/status
 ```
 
 Esperado: seis testes aprovados no total e HTTP 401 com authenticated false no curl, pois ainda não há usuário logado. O teste de conexão com o Supabase deve passar separadamente; não confundir a rejeição de visitante com falha de integração. A página inicial continua pública. Não há telas de cadastro ou login nesta etapa.
+
+## Etapa 7 — migrations concluídas
+
+A CLI Supabase 2.117.0 foi instalada como dependência de desenvolvimento. A primeira migration, 20260925015139, foi aplicada e verificada no Supabase: schema private restrito e permissões explícitas para futuros objetos. Histórico local/remoto sincronizado; quatro verificações de segurança aprovadas. Procedimento e limites em [MIGRATIONS.md](docs/MIGRATIONS.md).
+
+Para testar, execute um comando por vez no PowerShell, na pasta do projeto:
+
+```powershell
+npx.cmd --no-install supabase migration list --linked
+npx.cmd --no-install supabase db query --linked --file supabase/tests/verify_security_baseline.sql
+git log -1 --oneline
+git status
+```
+
+Esperado: 20260925015139 em local e remote, quatro resultados passed=true e Git sem alterações pendentes. Git guarda os arquivos, não os dados do banco. Não execute db reset no banco remoto. A etapa 8 (questões e gabarito protegido) aguarda confirmação deste teste.

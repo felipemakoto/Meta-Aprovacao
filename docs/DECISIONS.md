@@ -100,3 +100,9 @@ Separados cliente de navegador e cliente de servidor do usuário, ambos com chav
 Proxy renova cookies com getClaims e preserva cabeçalhos contra cache; o matcher cobre apenas /api/auth por enquanto. A rota /api/auth/status verifica novamente a identidade por getUser, retorna apenas authenticated, rejeita ausência/sessão inválida com 401 e falha operacional com 503. Ela não concede acesso a recursos. Novas operações deverão validar identidade, autorização e entradas individualmente.
 
 Cadastro, login/logout e recuperação pertencem às etapas 14–16; não foram criadas telas nem contas de teste nesta fase. Testes de configuração e integração exercitam acesso anônimo, cookie corrompido, sessão forjada, homepage pública e conexão real ao Auth. Renovação de sessão válida e fluxos completos ainda precisam de teste nas etapas de conta. Instruções em AUTH-BASE.md.
+
+## Etapa 7 — fluxo de migrations concluído
+
+CLI oficial Supabase 2.117.0 instalada via npm como devDependency fixa. Arquivos SQL em supabase/migrations são a fonte oficial da estrutura. A migration inicial prepara schema private e defaults de privilégio restritivos para objetos futuros criados por postgres; não antecipa tabelas de questões da etapa 8. Defaults globais e por schema tratados separadamente conforme PostgreSQL.
+
+Aplicação remota via db push, com dry-run e migration list, depois de conferir o projeto existente. Não executar DDL avulso pelo painel nem editar histórico para simular aplicação. A CLI requer login próprio; sessão do painel e chave pública não substituem essa autorização. Usuário concluiu login; projeto vinculado e PostgreSQL 17.6 confirmado. Migration 20260925015139 aplicada; histórico sincronizado e quatro verificações SQL aprovadas. Sem Docker detectado, a stack local não foi iniciada. Configuração local não enviada ao remoto. Etapa 8 aguarda teste do usuário.
