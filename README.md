@@ -125,7 +125,7 @@ Para conferir os comandos disponíveis sem executá-los:
 npm.cmd run
 ```
 
-Devem aparecer `dev`, `build`, `start`, `lint`, `test:config` e `test:auth`. O teste de configuração roda sem servidor. O teste de autenticação exige o site rodando, .env.local preenchido e internet; instruções e resultados em [AUTH-BASE.md](docs/AUTH-BASE.md).
+Devem aparecer `dev`, `build`, `start`, `lint`, `test:config`, `test:auth` e `test:questions`. O teste de configuração roda sem servidor. O teste de autenticação exige o site rodando, .env.local preenchido e internet; instruções e resultados em [AUTH-BASE.md](docs/AUTH-BASE.md). O teste de questões usa diretamente o Supabase e não exige o site rodando.
 
 ## Teste manual e erros
 1. Abra http://localhost:3000. Deve aparecer a entrada ETEC / IF, com título serifado, destaque amarelo e botão verde, sem o card 10 questões.
@@ -175,4 +175,17 @@ git log -1 --oneline
 git status
 ```
 
-Esperado: 20260925015139 em local e remote, quatro resultados passed=true e Git sem alterações pendentes. Git guarda os arquivos, não os dados do banco. Não execute db reset no banco remoto. A etapa 8 (questões e gabarito protegido) aguarda confirmação deste teste.
+Esperado: 20260925015139 em local e remote (mais as migrations de etapas seguintes), quatro resultados passed=true e Git sem alterações pendentes. Git guarda os arquivos, não os dados do banco. Não execute db reset no banco remoto. Teste da etapa 7 confirmado pelo usuário ao continuar.
+
+## Etapa 8 — questões e gabarito protegido
+
+Criadas public.questions e public.question_answers, sem acesso direto de visitantes ou usuários logados. O servidor privilegiado recebe apenas leitura. Migration 20260925085403 aplicada, 51 verificações SQL, seis verificações de segurança e teste HTTP aprovados. As tabelas estão vazias; seed na etapa 9.
+
+```powershell
+Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+npx.cmd --no-install supabase migration list --linked
+npx.cmd --no-install supabase db query --linked --file supabase/tests/verify_questions_security.sql
+npm.cmd run test:questions
+```
+
+Esperado: duas migrations sincronizadas, seis passed=true e três testes Node aprovados. Modelo, limites, testes adicionais e tratamento de erros em [QUESTOES.md](docs/QUESTOES.md). A etapa 9 aguarda confirmação do teste.

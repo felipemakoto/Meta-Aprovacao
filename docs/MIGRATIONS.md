@@ -1,6 +1,6 @@
 # Migrations — etapa 7
 
-Status: etapa 7 concluída. CLI autenticada, projeto vinculado e migration 20260925015139 aplicada e verificada no Supabase. Aguardando teste do usuário antes da etapa 8.
+Status: etapa 7 concluída e teste confirmado pelo usuário. CLI autenticada, projeto vinculado e migration 20260925015139 aplicada e verificada no Supabase. A etapa 8 também adicionou 20260925085403; detalhes e testes em [QUESTOES.md](QUESTOES.md).
 
 ## O que foi preparado
 
@@ -84,4 +84,4 @@ Se houver erro de autorização, concluir o login. Se houver divergência de his
 - [Autenticação da CLI](https://supabase.com/docs/reference/cli/supabase-login)
 - [PostgreSQL: privilégios padrão](https://www.postgresql.org/docs/17/sql-alterdefaultprivileges.html)
 
-Critério de conclusão cumprido: migration versionada, aplicada, histórico sincronizado e quatro verificações aprovadas. Próximo passo: usuário repetir migration list e a consulta de verificação acima. Após sua confirmação, etapa 8 — questões e gabarito protegido.
+Critério de conclusão cumprido: migration versionada, aplicada, histórico sincronizado e quatro verificações aprovadas. Os resultados desta página registram a etapa 7; novas migrations aparecem como linhas adicionais em migration list. Estado atual e próxima etapa em [ESTADO-DO-PROJETO.md](ESTADO-DO-PROJETO.md).

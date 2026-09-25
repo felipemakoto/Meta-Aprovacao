@@ -106,3 +106,13 @@ Cadastro, login/logout e recuperação pertencem às etapas 14–16; não foram 
 CLI oficial Supabase 2.117.0 instalada via npm como devDependency fixa. Arquivos SQL em supabase/migrations são a fonte oficial da estrutura. A migration inicial prepara schema private e defaults de privilégio restritivos para objetos futuros criados por postgres; não antecipa tabelas de questões da etapa 8. Defaults globais e por schema tratados separadamente conforme PostgreSQL.
 
 Aplicação remota via db push, com dry-run e migration list, depois de conferir o projeto existente. Não executar DDL avulso pelo painel nem editar histórico para simular aplicação. A CLI requer login próprio; sessão do painel e chave pública não substituem essa autorização. Usuário concluiu login; projeto vinculado e PostgreSQL 17.6 confirmado. Migration 20260925015139 aplicada; histórico sincronizado e quatro verificações SQL aprovadas. Sem Docker detectado, a stack local não foi iniciada. Configuração local não enviada ao remoto. Etapa 8 aguarda teste do usuário.
+
+## Etapa 8 — questões e gabarito protegido
+
+Teste da etapa 7 confirmado ao continuar. Migration 20260925085403 cria public.questions e public.question_answers conforme o modelo solicitado. Cinco alternativas obrigatórias no formato inicial, campos editoriais validados por CHECK e gabarito único vinculado por chave estrangeira com exclusão restrita. Defaults draft/versão 1; timestamps automáticos por trigger SECURITY INVOKER no schema private.
+
+As duas tabelas têm RLS sem políticas de liberação e nenhum GRANT para PUBLIC, anon ou authenticated. Nem questões publicadas são baixadas diretamente pelo navegador. service_role mantém somente SELECT nessas tabelas; nenhuma chave administrativa adicionada ao aplicativo. Escrita futura requer nova migration. Rotas de tentativa e correção implementarão sua própria autorização antes de retornar dados.
+
+Não antecipar aprovação administrativa ou imutabilidade de questões usadas: ainda não há tentativas. Antes da etapa 10, definir preservação de id/versão e conteúdo, conforme QUESTOES.md. Status draft por padrão não comprova revisão humana; publicação automatizada de conteúdo gerado por IA permanece proibida.
+
+Verificação no banco remoto de desenvolvimento: 51 asserções SQL com rollback de fixtures e GRANTs temporários, seis checagens de catálogo, teste HTTP da chave pública e lint aprovados. Histórico sincronizado e tabelas vazias após rollback. Papel authenticated testado no PostgreSQL; sessão real ficará para etapas de conta. Pausa para teste do usuário antes do seed da etapa 9.
