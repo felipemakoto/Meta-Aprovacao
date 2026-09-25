@@ -1,3 +1,17 @@
+# Verificação visual — etapa 11
+
+Resultado: **passed** para a interface aprovada. Não representa aprovação editorial ou implementação da correção.
+
+[Comparação conjunta](docs/design/quiz-comparison.png): mockup à esquerda e aplicação à direita, ambos normalizados para 390px de largura sem deformação. Referência original: 941 × 1672; captura: 375 × 749; viewport CSS: 390 × 780. A escala do navegador integrado reduz a nitidez da evidência. Aviso de prévia exclusivo de desenvolvimento, fora do questionário.
+
+Evidências: [inicial](docs/design/quiz-implemented-390.png), [seleção](docs/design/quiz-selected-390.png), [320px](docs/design/quiz-320.png), [desktop](docs/design/quiz-desktop.png). Comparação e capturas inspecionadas.
+
+Primeira passagem: título em quatro linhas e margens excessivas deslocavam opções (P2). Ajustados título para 26px, margens de 24px e espaçamento do cabeçalho. Segunda passagem: três linhas, hierarquia e sequência fiéis à referência. Diferenças P3 aceitas: fontes reais, fundo sólido, opções ligeiramente mais altas e barra de rolagem nativa. Nenhuma pendência P0/P1/P2 no escopo visual. Desktop em coluna central de 640px.
+
+Verificados: CTA desabilitado, seleção única por espaço/setas, foco no enunciado, dez posições, retorno preservando escolha, revisão e saída. Sem overflow em 320/390/1280px. Fluxo real mostra falta de questões publicadas; prévia retorna 404 em produção. Console sem erros/avisos capturados. Lint/build e 14 testes aprovados. Rede indisponível e expiração não provocadas manualmente. Pausa para teste do usuário.
+
+---
+
 # Verificação visual — etapa 4
 
 Resultado: **passed**, dentro do escopo da entrada aprovada. Não representa aprovação de um quiz funcional. Teste do usuário ainda pendente.

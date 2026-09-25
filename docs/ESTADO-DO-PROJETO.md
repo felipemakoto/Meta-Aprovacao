@@ -1,8 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 11 — mockup do quiz criado, aguardando aprovação visual. Não foi implementada interface nesta etapa. O lote de questões permanece em draft.
+Etapa atual: 11 — visual aprovado e interface implementada. Pausa para teste do usuário. Questões permanecem draft.
 
-Etapas 1 a 10 concluídas e confirmadas pelo usuário ao continuar. Etapa 11 depende de aprovação do mockup antes de implementar React/CSS.
+Etapas 1 a 10 concluídas e confirmadas pelo usuário ao continuar. Etapa 11 implementada após aprovação “pode ser esse visual”.
 
 ## Ambiente
 
@@ -18,7 +18,7 @@ Dependências adicionadas na etapa 6: @supabase/supabase-js 2.117.1, @supabase/s
 
 - Entrada responsiva com título serifado, marca-texto e CTA, seguindo docs/design/entrada-mobile-v4.png.
 - Card “10 questões” removido e posições preservadas conforme aprovação.
-- Botão acessível por teclado mostra aviso de teste em preparação, sem criar tentativa ou simular diagnóstico.
+- CTA abre /quiz e consulta a API da tentativa; /quiz/preview permite testar o visual somente em desenvolvimento.
 - Fontes servidas pela aplicação e ícones Heroicons locais com licença.
 - Banco de questões e gabarito separados, com RLS e bloqueio de acesso direto para anon/authenticated; leitura privilegiada testada no PostgreSQL.
 
@@ -37,7 +37,7 @@ Servidor local de desenvolvimento iniciado em http://127.0.0.1:3000 para os test
 
 Projeto estudos-etec/if, referência clxnqrkdalimrqcnhegr, organização meta aprovação, plano Free selecionado na criação. Painel verificado em 24/09/2026: Healthy, região São Paulo (sa-east-1), compute Nano; saúde confirmada pela CLI na etapa 7. Migrations registradas: 20260925015139_initialize_database_security, 20260925085403_create_questions_and_protected_answers e 20260925091427_create_guest_quiz_attempts. Nenhum backup criado por estas etapas. Opções de criação conferidas: Data API ativada, exposição automática de novas tabelas desativada e RLS automático ativado. RLS e GRANTs das duas tabelas definidos explicitamente na migration da etapa 8; sem policies de liberação para clientes.
 
-Login da CLI e vínculo remoto funcionando. Retomada em TENTATIVA-ANONIMA.md. Backend da tentativa implementado com snapshots privados de conteúdo e gabarito, token opaco em cookie, hash no banco e expiração de 30 minutos. Não há interface de quiz, recebimento/correção de respostas, cadastro, login/logout, recuperação, simulados, pagamentos ou publicação. Credencial administrativa configurada pelo usuário somente em .env.local, ignorado pelo Git. Fluxo de revisão/publicação e nome definitivo pendentes.
+Login da CLI e vínculo remoto funcionando. Retomada em TENTATIVA-ANONIMA.md. Backend da tentativa implementado com snapshots privados de conteúdo e gabarito, token opaco em cookie, hash no banco e expiração de 30 minutos. Há interface de quiz; não há recebimento/correção de respostas, cadastro, login/logout, recuperação, simulados, pagamentos ou publicação. Credencial administrativa configurada pelo usuário somente em .env.local, ignorado pelo Git. Fluxo de revisão/publicação e nome definitivo pendentes.
 
 Verificação da etapa 6: lint e build aprovados; um teste de configuração e cinco de integração passaram. Auth healthcheck remoto 200; homepage 200; rota de sessão devolve 401 sem sessão, com cookie corrompido e com sessão forjada, sempre sem cache. Homepage conferida no navegador. A navegação do navegador integrado para o endpoint 401 foi bloqueada pelo cliente; resposta conferida por HTTP. Testes reais de login e renovação de sessão válida ainda pendentes para as etapas de conta.
 
@@ -47,7 +47,7 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: aprovar ou ajustar docs/design/quiz-mobile-v1.png. Após aprovação, implementar a tela seguindo docs/design/QUIZ-MOCKUP.md. Aprovação visual não publica o lote de questões.
+Próximo passo: testar a interface conforme QUIZ-INTERFACE.md; depois, etapa 12 de correção segura. Aprovação visual não publica o lote de questões.
 
 ## Conclusão da etapa 7
 
@@ -80,3 +80,9 @@ Chave privada configurada pelo usuário e integração real aprovada, sem exibi�
 ## Etapa 11 — proposta visual
 
 Mockup mobile gerado e salvo em docs/design/quiz-mobile-v1.png. Especificação e prompt em docs/design/QUIZ-MOCKUP.md. Questão por tela, título serifado, progresso e cinco opções com CTA desabilitado até seleção. Imagem conferida; nenhuma mudança na aplicação, no banco ou nas dependências. Testes de código não repetidos porque só foram adicionados artefatos visuais e documentação. Aguardando aprovação antes da implementação.
+
+## Conclusão da etapa 11
+
+Interface aprovada implementada: uma questão por tela, alternativas nativas, seleção por teclado, progresso, retorno e revisão das escolhas. Preview separado e exclusivo de desenvolvimento, 404 confirmado em produção. Nenhum envio ou resultado simulado. Escolhas em memória, perdidas ao sair/recarregar. Falta de questões publicadas verificada no fluxo real.
+
+Lint/build, nove testes isolados e cinco HTTP aprovados. Navegador em 320/390/1280px, navegação pelas dez posições, teclado, foco e retorno conferidos. Sem erros ou avisos capturados no console. Comparação visual em design-qa.md. Nenhuma dependência, migration ou publicação de conteúdo. Checkpoint: feat: implementar interface do quiz aprovada (consultar git log -1 --oneline). Pausa para teste antes da etapa 12.

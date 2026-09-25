@@ -144,3 +144,7 @@ SUPABASE_SECRET_KEY configurada pelo usuário e verificada sem exibição. O tes
 ## Etapa 11 — proposta visual do quiz
 
 Mantida identidade aprovada: fundo claro, verde profundo, enunciado serifado e interface sem slogans. Uma questão por tela, progresso de posição e cinco alternativas. Seleção não revela correção. Mockup e especificação em design/QUIZ-MOCKUP.md; prompt integral registrado. Aprovação visual obrigatória antes de React/CSS, conforme instrução do usuário. Conteúdo ilustrativo não publicado e nenhuma regra de backend alterada.
+
+## Etapa 11 — implementação aprovada
+
+Aprovação “pode ser esse visual” autoriza implementar o mockup. /quiz consome a API existente; /quiz/preview é exclusiva de desenvolvimento e repete uma fixture sem gabarito para testar navegação. Nenhuma publicação de questões. Escolhas apenas em memória, sem envio ou resultado até etapa 12. Sem dependências ou mudanças de banco. Testes e limites em QUIZ-INTERFACE.md.

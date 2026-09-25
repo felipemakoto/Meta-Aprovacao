@@ -1,6 +1,6 @@
 # Quiz — mockup v1, etapa 11
 
-Status: proposta visual, aguardando aprovação. O pedido “continue” confirmou o teste da etapa 10. Nenhuma interface ou regra de aplicação alterada nesta etapa.
+Status: aprovado pelo usuário (“pode ser esse visual”) e implementado na etapa 11. Evidências em ../../design-qa.md.
 
 ## Objetivo e hierarquia
 
@@ -30,7 +30,7 @@ No celular, margens de cerca de 24px, enunciado de aproximadamente 28–32px ada
 
 A imagem usa uma versão abreviada do enunciado da primeira questão de exemplo, somente para avaliar a composição. Na implementação, apresentar o texto retornado pelo servidor sem alterações silenciosas. A aprovação visual não aprova nem publica questões: o lote continua em draft.
 
-A etapa 11 ainda não está concluída: este checkpoint registra apenas mockup e especificação. Próximo passo: usuário aprovar ou pedir ajustes. Somente após aprovação implementar React/CSS e testar responsividade, teclado e estados. Essa pausa segue a instrução explícita do usuário para as etapas visuais.
+Etapa 11 implementada. A especificação acima registra a intenção aprovada; instruções e limites atuais em ../QUIZ-INTERFACE.md. Pausa para teste antes da correção segura.
 
 ## Prompt utilizado
 

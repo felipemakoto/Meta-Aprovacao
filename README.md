@@ -109,7 +109,7 @@ Uma variável de ambiente é uma configuração fornecida ao programa fora do c�
 - src/app/layout.tsx: estrutura compartilhada.
 - src/app/globals.css: tokens visuais, tema claro e foco.
 - src/app/entry.module.css: estilos responsivos da entrada.
-- src/app/start-test-button.tsx: botão e aviso de teste em preparação.
+- src/app/start-test-button.tsx: link de entrada para /quiz.
 - public/icons/: setas oficiais Heroicons e licença MIT.
 - design-qa.md: verificação visual e evidências.
 - docs/DECISIONS.md: decisões técnicas.
@@ -130,9 +130,9 @@ Devem aparecer `dev`, `build`, `start`, `lint`, `test:config`, `test:auth`, `tes
 ## Teste manual e erros
 1. Abra http://localhost:3000. Deve aparecer a entrada ETEC / IF, com título serifado, destaque amarelo e botão verde, sem o card 10 questões.
 2. Redimensione a janela: o texto deve se adaptar sem rolagem horizontal.
-3. Clique em Começar teste grátis. Deve aparecer “O teste está em preparação e ainda não pode ser iniciado.”, uma única vez mesmo com novos cliques.
-4. Atualize a página e pressione Tab: o botão deve receber um contorno visível. Enter deve mostrar o mesmo aviso.
-5. A interface da etapa 4 está pronta para seu teste. O quiz será implementado em etapa futura.
+3. Clique em Começar teste grátis: abre /quiz. Enquanto o lote estiver em draft, aparece “O teste está em preparação.”.
+4. Use Tab e Enter para abrir o quiz pelo teclado.
+5. Para testar seleção e navegação da etapa 11, abra /quiz/preview em desenvolvimento.
 Se não abrir, confira Ready no terminal e a porta indicada. Se um comando não for encontrado, reabra o PowerShell. Caso persista, envie a mensagem do erro sem credenciais.
 
 ## Documentação oficial
@@ -219,6 +219,10 @@ O último comando exige o site em modo dev e a chave privada para executar todos
 
 Etapa 10 retomada: chave configurada somente em .env.local e integração verificada. Nenhuma questão publicada. Próxima etapa, após seu teste: mockup do quiz.
 
-## Etapa 11 — mockup aguardando aprovação
+## Etapa 11 — interface implementada
 
-Proposta do quiz em [quiz-mobile-v1.png](docs/design/quiz-mobile-v1.png), com especificação e prompt em [QUIZ-MOCKUP.md](docs/design/QUIZ-MOCKUP.md). Uma questão por tela, cinco alternativas e progresso. Nenhuma interface implementada nesta etapa; aguardar aprovação visual. O lote permanece em rascunho.
+Visual aprovado e implementado. Teste em http://127.0.0.1:3000/quiz/preview com `npm.cmd run dev`. Essa prévia repete uma questão ilustrativa em dez posições; não usa o banco e retorna 404 em produção.
+
+Selecione uma alternativa, avance, volte e revise suas escolhas. Continuar fica desabilitado antes da seleção. As escolhas ficam somente na memória da tela; sair ou recarregar as perde. Não há envio, pontuação ou correção nesta etapa.
+
+A entrada abre /quiz, integrado à API da etapa 10. O lote continua draft: indisponibilidade é esperada até revisão editorial. Lint, build, nove testes isolados e cinco HTTP aprovados. Procedimento e limites em [QUIZ-INTERFACE.md](docs/QUIZ-INTERFACE.md). Pausa para seu teste antes da etapa 12.

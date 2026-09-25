@@ -46,3 +46,7 @@ Inputs com label persistente, mensagens de erro associadas, cards somente para a
 ## Verificação
 
 Comparação e evidências em [design-qa.md](../design-qa.md). Pesquisa em [PESQUISA-VISUAL.md](design/PESQUISA-VISUAL.md). A exploração Visualize v1 não é referência atual. Nenhuma publicação feita.
+
+## Quiz implementado — etapa 11
+
+CTA da entrada agora é link para /quiz. Quiz com enunciado DM Serif Display (26px mobile, 36px desktop), opções nativas com altura mínima 56px, seleção com borda verde e fundo suave, foco visível e progresso textual. Coluna de até 640px. A prévia aprovada é docs/design/quiz-mobile-v1.png; QA no relatório raiz.
