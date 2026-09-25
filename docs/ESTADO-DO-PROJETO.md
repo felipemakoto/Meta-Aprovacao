@@ -1,8 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 10 — concluída, aguardando teste do usuário. Chave privada configurada localmente; cinco testes HTTP passaram sem ignorados. O lote permanece em draft, com revisão humana pendente.
+Etapa atual: 11 — mockup do quiz criado, aguardando aprovação visual. Não foi implementada interface nesta etapa. O lote de questões permanece em draft.
 
-Etapas 1 a 9 concluídas e confirmadas pelo usuário ao continuar. Etapa 11 aguarda confirmação do teste da etapa 10.
+Etapas 1 a 10 concluídas e confirmadas pelo usuário ao continuar. Etapa 11 depende de aprovação do mockup antes de implementar React/CSS.
 
 ## Ambiente
 
@@ -45,9 +45,9 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 ## Checkpoint e próximo passo
 
-Checkpoint parcial anterior: 9891b47. Conclusão da etapa 10: fix: aceitar POST vazio e concluir etapa 10; consultar git log -1 --oneline. .env.local permanece ignorado. Git não é backup do banco.
+Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: usuário executar npm run test:guest e npm run test:guest:http com o site em dev. Esperado: nove e cinco testes aprovados. Após confirmação, etapa 11 — mockup do quiz antes da implementação visual. Revisão/publicação do conteúdo continua pendente.
+Próximo passo: aprovar ou ajustar docs/design/quiz-mobile-v1.png. Após aprovação, implementar a tela seguindo docs/design/QUIZ-MOCKUP.md. Aprovação visual não publica o lote de questões.
 
 ## Conclusão da etapa 7
 
@@ -76,3 +76,7 @@ Migration aplicada e histórico sincronizado. Oito testes isolados, 26 asserçõ
 ## Retomada e conclusão da etapa 10
 
 Chave privada configurada pelo usuário e integração real aprovada, sem exibição de credenciais. Corrigida rejeição indevida de POST vazio representado por stream no Next. Nove testes isolados e cinco HTTP passaram; nenhum ignorado. Build e lint verificados após a correção. Sem mudança no banco ou publicação de questões. O caminho positivo completo com conteúdo aprovado ainda depende da revisão editorial; testes positivos isolados e no PostgreSQL já foram realizados. A pausa anterior terminou; aguardar teste antes da etapa 11.
+
+## Etapa 11 — proposta visual
+
+Mockup mobile gerado e salvo em docs/design/quiz-mobile-v1.png. Especificação e prompt em docs/design/QUIZ-MOCKUP.md. Questão por tela, título serifado, progresso e cinco opções com CTA desabilitado até seleção. Imagem conferida; nenhuma mudança na aplicação, no banco ou nas dependências. Testes de código não repetidos porque só foram adicionados artefatos visuais e documentação. Aguardando aprovação antes da implementação.

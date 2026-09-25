@@ -140,3 +140,7 @@ Pausa solicitada pelo usuário na etapa 10: configurar a Secret key futuramente 
 ## Conclusão da etapa 10 após retomada
 
 SUPABASE_SECRET_KEY configurada pelo usuário e verificada sem exibição. O teste HTTP detectou rejeição indevida de POST vazio: Next pode fornecer um stream não nulo sem bytes. Validar os bytes e interromper na primeira ocorrência de conteúdo, sem acumular corpo, preserva a recusa de payloads e aceita o POST legítimo. Regressão adicionada: nove testes isolados e cinco HTTP aprovados sem ignorados. Não houve publicação do lote nem alteração de banco. Pausa anterior encerrada; aguardar teste antes do mockup da etapa 11.
+
+## Etapa 11 — proposta visual do quiz
+
+Mantida identidade aprovada: fundo claro, verde profundo, enunciado serifado e interface sem slogans. Uma questão por tela, progresso de posição e cinco alternativas. Seleção não revela correção. Mockup e especificação em design/QUIZ-MOCKUP.md; prompt integral registrado. Aprovação visual obrigatória antes de React/CSS, conforme instrução do usuário. Conteúdo ilustrativo não publicado e nenhuma regra de backend alterada.

@@ -218,3 +218,7 @@ npm.cmd run test:guest:http
 O último comando exige o site em modo dev e a chave privada para executar todos os testes. Oito testes isolados, cinco checagens SQL, 26 asserções SQL, build e lint passaram. HTTP: cinco aprovados após configuração da chave e correção do POST vazio; nove testes isolados aprovados. Aguardar teste do usuário antes da etapa 11.
 
 Etapa 10 retomada: chave configurada somente em .env.local e integração verificada. Nenhuma questão publicada. Próxima etapa, após seu teste: mockup do quiz.
+
+## Etapa 11 — mockup aguardando aprovação
+
+Proposta do quiz em [quiz-mobile-v1.png](docs/design/quiz-mobile-v1.png), com especificação e prompt em [QUIZ-MOCKUP.md](docs/design/QUIZ-MOCKUP.md). Uma questão por tela, cinco alternativas e progresso. Nenhuma interface implementada nesta etapa; aguardar aprovação visual. O lote permanece em rascunho.
