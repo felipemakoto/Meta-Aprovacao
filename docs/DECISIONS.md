@@ -90,3 +90,13 @@ O painel exige login; o projeto remoto ainda não foi criado ou verificado. Senh
 Após o usuário criar a conta e preencher o formulário, preservamos o nome estudos-etec/if e a região São Paulo. Organização meta aprovação no plano Free; referência do projeto clxnqrkdalimrqcnhegr. O painel confirmou Healthy e compute Nano após o provisionamento. A sugestão anterior de nome não foi aplicada, respeitando a escolha preenchida pelo usuário.
 
 Mantida a Data API, desativada a exposição automática de novas tabelas e ativado RLS automático no formulário de criação. Isso exige concessões explícitas de acesso e políticas nas próximas migrations; não substitui os testes de autorização. Nenhuma tabela de exemplo criada e nenhuma chave administrativa obtida. A etapa 6 fará a integração ao Next.js existente; não adicionamos pacotes ou arquivos de ambiente na etapa 5.
+
+## Etapa 6 — clientes e autenticação base (24/09/2026)
+
+Mantido o Next.js 16.3.6. Instalados com versões fixas @supabase/supabase-js 2.117.1, @supabase/ssr 0.12.7 e server-only 0.0.1. Compatibilidade conferida no registro npm e instruções SSR oficiais. Cookies assíncronos e src/proxy.ts seguem os guias da versão local do Next.
+
+Separados cliente de navegador e cliente de servidor do usuário, ambos com chave publishable. Nenhum cliente administrativo criado sem necessidade. URL e chave pública configuradas apenas em .env.local ignorado pelo Git; não foram obtidas chaves privadas.
+
+Proxy renova cookies com getClaims e preserva cabeçalhos contra cache; o matcher cobre apenas /api/auth por enquanto. A rota /api/auth/status verifica novamente a identidade por getUser, retorna apenas authenticated, rejeita ausência/sessão inválida com 401 e falha operacional com 503. Ela não concede acesso a recursos. Novas operações deverão validar identidade, autorização e entradas individualmente.
+
+Cadastro, login/logout e recuperação pertencem às etapas 14–16; não foram criadas telas nem contas de teste nesta fase. Testes de configuração e integração exercitam acesso anônimo, cookie corrompido, sessão forjada, homepage pública e conexão real ao Auth. Renovação de sessão válida e fluxos completos ainda precisam de teste nas etapas de conta. Instruções em AUTH-BASE.md.

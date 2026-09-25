@@ -1,8 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 5 — Supabase criado e verificado, concluída em 24/09/2026. O pedido “avance para o supabase” foi aceito como confirmação do teste da etapa 4. Aguardando teste do usuário antes da etapa 6.
+Etapa atual: 6 — clientes Supabase e autenticação base implementados em 24/09/2026. O pedido “continue” confirmou o teste da etapa 5. Aguardando teste do usuário antes da etapa 7 (migrations).
 
-Etapas 1 a 5 concluídas. Os pedidos anteriores para continuar foram aceitos como confirmação dos testes das etapas anteriores.
+Etapas 1 a 6 implementadas; teste do usuário da etapa 6 pendente. Os pedidos anteriores para continuar foram aceitos como confirmação dos testes das etapas anteriores.
 
 ## Ambiente
 
@@ -12,7 +12,7 @@ Etapas 1 a 5 concluídas. Os pedidos anteriores para continuar foram aceitos com
 - ESLint 9.39.5; eslint-config-next 16.3.6.
 - Git 2.53.0.windows.2; branch master; identidade preservada; sem remoto.
 
-Nenhuma dependência npm adicionada nesta etapa. Banco remoto Supabase provisionado; nenhuma tabela de negócio ou migration criada. Nenhuma variável de ambiente configurada. Rotas: / e página interna de não encontrado do Next.js.
+Dependências adicionadas na etapa 6: @supabase/supabase-js 2.117.1, @supabase/ssr 0.12.7 e server-only 0.0.1. Banco remoto provisionado; nenhuma tabela de negócio ou migration criada. .env.local contém somente NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, obtidas do painel. Arquivo ignorado pelo Git. Rotas: /, /api/auth/status e página interna de não encontrado do Next.js.
 
 ## O que funciona
 
@@ -36,14 +36,14 @@ Servidor local de produção iniciado para revisão em http://localhost:3000 ap�
 
 Projeto estudos-etec/if, referência clxnqrkdalimrqcnhegr, organização meta aprovação, plano Free selecionado na criação. Painel verificado em 24/09/2026: Healthy, região São Paulo (sa-east-1), compute Nano. Nenhuma migration ou backup registrado. Opções de criação conferidas: Data API ativada, exposição automática de novas tabelas desativada e RLS automático ativado. Políticas de acesso reais serão implementadas e testadas na etapa 7.
 
-O usuário precisa conferir o painel para encerrar seu teste da etapa 5. Nome definitivo da plataforma ainda pendente. Clientes Supabase, login do aplicativo, esquema de negócio, quiz, questões, resultados, simulados, pagamentos e publicação não implementados. Guia em SUPABASE.md. Nenhuma senha ou chave solicitada pelo chat ou salva no repositório.
+O usuário precisa testar os comandos da etapa 6, documentados em AUTH-BASE.md. Clientes de navegador/servidor, renovação via Proxy e verificação de identidade no servidor implementados. Cadastro, login/logout, recuperação, esquema de negócio, quiz, simulados, pagamentos e publicação ainda não implementados. Nenhuma chave privada obtida. Nome definitivo da plataforma pendente.
 
-Verificação local da etapa 5: revisão documental, git diff --check e regras de exclusão de arquivos de ambiente. Sem repetição de lint/build: código e dependências não foram modificados; os resultados acima pertencem à etapa 4.
+Verificação da etapa 6: lint e build aprovados; um teste de configuração e cinco de integração passaram. Auth healthcheck remoto 200; homepage 200; rota de sessão devolve 401 sem sessão, com cookie corrompido e com sessão forjada, sempre sem cache. Homepage conferida no navegador. A navegação do navegador integrado para o endpoint 401 foi bloqueada pelo cliente; resposta conferida por HTTP. Testes reais de login e renovação de sessão válida ainda pendentes para as etapas de conta.
 
 Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script de instalação do unrs-resolver não aprovado pelo npm. Não alterados nesta etapa; lint e build passaram. Revisar manutenção antes de ampliar dependências.
 
 ## Checkpoint e próximo passo
 
-Checkpoint da interface: 064e4e9. Preparação da etapa 5: 7d2a675. Conclusão da etapa 5: docs: concluir criacao do projeto Supabase; consultar git log -1 --oneline para seu hash. O commit registra documentação, não um backup do banco remoto.
+Checkpoint da etapa 5: 819962a. Checkpoint da etapa 6: feat: configurar clientes Supabase e autenticacao base; consultar git log -1 --oneline para seu hash. .env.local não integra o commit. O Git não é um backup do banco remoto.
 
-Próximo passo: aguardar teste do usuário no painel. Após confirmação, iniciar etapa 6 (clientes Supabase e autenticação base), consultando a documentação oficial atual. Não iniciar migrations da etapa 7 antecipadamente.
+Próximo passo: aguardar teste do usuário da etapa 6. Após confirmação, iniciar etapa 7 (migrations), consultando documentação oficial atual. Não antecipar telas de conta ou quiz.

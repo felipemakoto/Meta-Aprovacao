@@ -10,7 +10,7 @@ Etapa 4 implementada: entrada responsiva seguindo o mockup v4 aprovado, com tít
 2. Consulte [Estado do Projeto](docs/ESTADO-DO-PROJETO.md) para saber o que foi verificado, as pendências e a próxima etapa.
 3. Consulte [Decisões técnicas](docs/DECISIONS.md) para entender as escolhas e suas razões.
 
-O site roda localmente; não há site publicado. Etapa 5 concluída: projeto Supabase `estudos-etec/if` criado no plano Free, em São Paulo, com status Healthy. Dados e verificação em [Supabase — etapa 5](docs/SUPABASE.md). A conexão do site com esse serviço será implementada na etapa 6.
+O site roda localmente; não há site publicado. Etapa 5 concluída: projeto Supabase `estudos-etec/if` criado no plano Free, em São Paulo, com status Healthy. Dados e verificação em [Supabase — etapa 5](docs/SUPABASE.md). Etapa 6 implementada: clientes Supabase e verificação de sessão no servidor. Consulte [Autenticação base](docs/AUTH-BASE.md) para configurar e testar. Cadastro e login visual permanecem nas etapas 14–16.
 
 ## Tecnologias
 Node.js 24 LTS (24.20.0 verificado), npm 11.19.0, Next.js 16.3.6, React 19.2.8, TypeScript 5, Tailwind CSS 4 e ESLint 9. App Router em src/app. Versões exatas no package-lock.json; preserve esse arquivo e use somente npm.
@@ -100,9 +100,9 @@ O primeiro comando deve listar os quatro caminhos, mesmo que os arquivos de ambi
 - Se o status mostrar alterações inesperadas, envie os nomes dos arquivos e a mensagem, sem valores de credenciais. Não descarte alterações para forçar uma pasta limpa.
 
 ## Variáveis
-Nenhuma variável ou credencial necessária. .env* está ignorado pelo Git. Nunca inserir chaves privadas no código, em logs ou na documentação.
+A etapa 6 usa NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY em .env.local na raiz. O arquivo já foi preenchido localmente com a URL e a chave pública do painel; .env* permanece ignorado pelo Git. Não há chave administrativa. Para outra instalação, seguir [AUTH-BASE.md](docs/AUTH-BASE.md).
 
-Uma variável de ambiente é uma configuração fornecida ao programa fora do código. Quando alguma integração exigir variáveis, registraremos aqui somente seus nomes e instruções de preenchimento local. Não crie chaves ou arquivos de credenciais agora.
+Uma variável de ambiente é uma configuração fornecida ao programa fora do código. Reinicie o servidor após alterar .env.local e gere novo build ao mudar valores públicos para produção. Nunca use secret key ou service_role em NEXT_PUBLIC_.
 
 ## Arquivos
 - src/app/page.tsx: página inicial, rota /.
@@ -125,7 +125,7 @@ Para conferir os comandos disponíveis sem executá-los:
 npm.cmd run
 ```
 
-Devem aparecer `dev`, `build`, `start` e `lint`. Não há comando de testes automatizados configurado. Os resultados de lint e build da etapa 1 estão registrados no Estado do Projeto; mudanças apenas documentais não exigem repetir a compilação.
+Devem aparecer `dev`, `build`, `start`, `lint`, `test:config` e `test:auth`. O teste de configuração roda sem servidor. O teste de autenticação exige o site rodando, .env.local preenchido e internet; instruções e resultados em [AUTH-BASE.md](docs/AUTH-BASE.md).
 
 ## Teste manual e erros
 1. Abra http://localhost:3000. Deve aparecer a entrada ETEC / IF, com título serifado, destaque amarelo e botão verde, sem o card 10 questões.
@@ -148,3 +148,16 @@ O [design system](docs/DESIGN-SYSTEM.md) e o [mockup v4 aprovado](docs/design/en
 A página é construída com HTML/React e CSS. DM Serif Display e Geist são servidas por next/font; a obtenção inicial das fontes no build requer internet. Nenhuma dependência npm nova foi adicionada.
 
 Checkpoint da interface: 064e4e9 — feat: implementar entrada aprovada da etapa 4. O pedido para avançar ao Supabase foi aceito como confirmação do teste da interface. A etapa 5 foi concluída com o banco remoto provisionado. Login do aplicativo, quiz e pagamentos ainda não implementados.
+
+## Teste da etapa 6
+
+Com o site rodando, execute em outro PowerShell:
+
+```powershell
+Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+npm.cmd run test:config
+npm.cmd run test:auth
+curl.exe -i http://localhost:3000/api/auth/status
+```
+
+Esperado: seis testes aprovados no total e HTTP 401 com authenticated false no curl, pois ainda não há usuário logado. O teste de conexão com o Supabase deve passar separadamente; não confundir a rejeição de visitante com falha de integração. A página inicial continua pública. Não há telas de cadastro ou login nesta etapa.

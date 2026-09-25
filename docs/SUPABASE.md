@@ -1,6 +1,6 @@
 # Supabase — etapa 5
 
-Status: etapa 5 concluída. Projeto remoto criado e verificado no painel em 24/09/2026, com status Healthy. Aguardando teste do usuário antes da etapa 6.
+Status: etapa 5 concluída. Projeto remoto criado e verificado no painel em 24/09/2026, com status Healthy. O pedido para continuar confirmou o teste da etapa 5; a base da etapa 6 está em AUTH-BASE.md.
 
 ## Projeto criado
 
@@ -19,7 +19,7 @@ Status: etapa 5 concluída. Projeto remoto criado e verificado no painel em 24/0
 
 Na criação, mantivemos Enable Data API ativado, desativamos Automatically expose new tables e ativamos Enable automatic RLS. As opções foram conferidas antes do envio. Isso prepara padrões mais restritivos; as permissões e políticas de cada tabela ainda serão definidas e testadas nas migrations. Nenhuma senha ou chave foi copiada para o repositório.
 
-O painel confirma ausência de migrations, backups e repositório GitHub conectado. Não criamos tabelas de negócio ou usuários de teste. Nenhum upgrade foi realizado. A integração da aplicação ainda não existe.
+O painel confirma ausência de migrations, backups e repositório GitHub conectado. Não criamos tabelas de negócio ou usuários de teste. Nenhum upgrade foi realizado. A infraestrutura de clientes e verificação de sessão foi implementada na etapa 6; detalhes em [AUTH-BASE.md](AUTH-BASE.md).
 
 ## Escopo
 
@@ -56,15 +56,15 @@ NEXT_PUBLIC_SUPABASE_URL=https://SEU-PROJETO.supabase.co
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_SUBSTITUIR_LOCALMENTE
 ```
 
-Este bloco contém somente placeholders. O arquivo ainda não foi criado e essas configurações ainda não são consumidas pela aplicação. Usar a chave publishable atual; nunca colocar secret key ou service_role em variável NEXT_PUBLIC_. A chave pública não substitui autenticação nem políticas RLS. Nenhuma chave administrativa é necessária nesta etapa.
+Este bloco contém somente placeholders. Na etapa 6, .env.local foi criado e preenchido localmente com a URL e a chave pública do painel; os helpers já consomem essas variáveis. Usar a chave publishable atual; nunca colocar secret key ou service_role em variável NEXT_PUBLIC_. A chave pública não substitui autenticação nem políticas RLS. Nenhuma chave administrativa é necessária nesta etapa.
 
-Continuaremos no projeto Next.js existente, sem instalar template, Docker, CLI ou pacotes de autenticação antecipadamente.
+Mantido o projeto Next.js existente. Na etapa 6 foram adicionados supabase-js, ssr e server-only; não foram instalados template, Docker ou CLI.
 
 ## Como verificar
 
 - Painel mostra organização Free, nome correto, região escolhida e projeto ativo.
 - Nenhuma tabela de negócio, migration ou usuário de teste criado nesta etapa.
-- A aplicação não foi alterada nesta etapa; sua conexão com o banco será testada na etapa 6.
+- A etapa 5 não alterou a aplicação. Na etapa 6, a conexão com o serviço Auth foi testada; consultas ao banco aguardam as tabelas da etapa 7.
 - `git check-ignore .env.local .env.production` lista os dois nomes.
 - `git ls-files '.env*'` não lista arquivos.
 
@@ -78,4 +78,4 @@ Se o login falhar, recuperar o acesso pelo próprio Supabase. Se o provisionamen
 
 ## Critério de conclusão
 
-Critério atendido: projeto remoto criado no plano Free e painel exibindo Healthy, nome e região corretos. Dados não secretos documentados. Conferir o painel e confirmar o teste antes de implementar os clientes e a autenticação base da etapa 6.
+Critério atendido: projeto remoto criado no plano Free e painel exibindo Healthy, nome e região corretos. Dados não secretos documentados. Teste confirmado pelo pedido para continuar. Implementação e verificações da etapa 6 registradas em AUTH-BASE.md.
