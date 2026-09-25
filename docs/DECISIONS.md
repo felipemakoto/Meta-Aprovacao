@@ -124,3 +124,15 @@ Lote de 10 questões originais de exemplo geradas com auxílio de IA, duas por m
 Seed somente de dados em supabase/seed.sql, separado das migrations e habilitado na configuração local. Carga remota explícita via CLI no projeto de desenvolvimento, sem reset nem config push. IDs estáveis; inserção atômica com ON CONFLICT DO NOTHING. Gabaritos inseridos apenas junto a questões novas, sem reparar ou sobrescrever registros existentes silenciosamente. Nenhuma nova migration.
 
 Teste de idempotência via Node invoca a CLI instalada, sem shell intermediário. Duas reexecuções comparam todas as linhas e timestamps depois de uma edição simulada; tudo revertido por ROLLBACK. Isso preserva revisões futuras. Cinco checagens do lote, teste de preservação, teste da API e lint aprovados. Seed automático local não testado por ausência de Docker.
+
+## Etapa 10 — tentativa anônima
+
+Token aleatório de 256 bits criado no servidor e transportado apenas em cookie HttpOnly/SameSite=Strict; Secure e prefixo __Host- em produção. Banco recebe somente SHA-256. Prazo fixo de 30 minutos e retomada sem renovação. ID público não autoriza acesso. POST não aceita corpo, IDs ou parâmetros e valida a origem; APP_ORIGIN HTTPS obrigatório em produção.
+
+Migration 20260925091427 cria tentativas e snapshots privados contendo também gabarito/explicação. Seleção atômica de duas questões publicadas por matéria; indisponibilidade reverte a tentativa. Snapshots preservam conteúdo apesar de edições posteriores. Correção futura deverá usar essa cópia.
+
+Novas tabelas sem acesso direto inclusive de service_role; somente duas RPCs SECURITY DEFINER com search_path vazio e EXECUTE para service_role. DAL server-only usa cliente administrativo sem sessão de usuário. SUPABASE_SECRET_KEY passa a ser necessária somente no servidor, ainda pendente no ambiente local. Lote não publicado automaticamente.
+
+Oito testes isolados, 26 verificações SQL, cinco checagens de catálogo, build/lint e quatro testes HTTP passaram. Um teste de integração real ignorado por chave ausente. Testes positivos no banco usam publicação transitória revertida, não uma aprovação editorial. Taxa de requisições, retenção e fluxo visual ficam para etapas posteriores; não publicar o endpoint antes dos controles de produção.
+
+Pausa solicitada pelo usuário na etapa 10: configurar a Secret key futuramente e retomar o teste HTTP. Checkpoint parcial salvo; não considerar a etapa encerrada.

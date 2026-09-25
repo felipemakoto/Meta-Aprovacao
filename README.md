@@ -202,3 +202,19 @@ npm.cmd run test:questions
 ```
 
 Esperado: cinco passed=true, teste de repetição passed=true e três testes da API aprovados. Instruções em [SEED.md](docs/SEED.md); conteúdo completo para revisão humana em [REVISAO-SEED.md](docs/REVISAO-SEED.md). Etapa 10 aguarda seu teste. A confirmação técnica não publica o lote.
+
+## Etapa 10 — tentativa anônima implementada; configuração pendente
+
+POST/GET /api/quiz/attempt criam e retomam tentativa por cookie HttpOnly, com hash no banco, expiração de 30 minutos e cópia privada das questões/gabaritos. Apenas questões publicadas são selecionadas. O seed permanece draft; a resposta esperada após configurar a conexão é quiz_not_ready.
+
+Configurar SUPABASE_SECRET_KEY somente em .env.local, sem prefixo NEXT_PUBLIC_. Em produção será necessário APP_ORIGIN HTTPS. Passo a passo, arquivos e limites em [TENTATIVA-ANONIMA.md](docs/TENTATIVA-ANONIMA.md).
+
+```powershell
+npm.cmd run test:guest
+npx.cmd --no-install supabase db query --linked --file supabase/tests/verify_guest_quiz.sql
+npm.cmd run test:guest:http
+```
+
+O último comando exige o site em modo dev e a chave privada para executar todos os testes. Oito testes isolados, cinco checagens SQL, 26 asserções SQL, build e lint passaram. HTTP: quatro aprovados e um pendente por falta da chave. Não avançar para a etapa 11 antes de concluir a configuração e o teste.
+
+Etapa 10 pausada por solicitação do usuário. Retomar pela configuração local da Secret key e pelo teste HTTP; código e migration preservados no checkpoint.

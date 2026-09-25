@@ -1,8 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 9 — seed concluído, aguardando teste do usuário. O pedido para fazer a etapa 9 confirmou o teste da etapa 8. Dez questões e dez gabaritos inseridos como rascunho; revisão humana pendente.
+Etapa atual: 10 — implementação salva, PAUSADA a pedido do usuário. Falta configurar SUPABASE_SECRET_KEY e concluir o teste HTTP privilegiado. O usuário informou que fará isso futuramente e pediu checkpoint. Dez questões e dez gabaritos continuam em rascunho; revisão humana pendente.
 
-Etapas 1 a 8 concluídas e confirmadas pelo usuário ao continuar. Os pedidos anteriores para continuar foram aceitos como confirmação dos testes das etapas anteriores.
+Etapas 1 a 9 concluídas e confirmadas pelo usuário ao continuar. Não iniciar etapa 11 antes de concluir a configuração e o teste da etapa 10.
 
 ## Ambiente
 
@@ -12,7 +12,7 @@ Etapas 1 a 8 concluídas e confirmadas pelo usuário ao continuar. Os pedidos an
 - ESLint 9.39.5; eslint-config-next 16.3.6.
 - Git 2.53.0.windows.2; branch master; identidade preservada; sem remoto.
 
-Dependências adicionadas na etapa 6: @supabase/supabase-js 2.117.1, @supabase/ssr 0.12.7 e server-only 0.0.1. Etapa 7: supabase CLI 2.117.0 como devDependency. Nenhuma dependência nova nas etapas 8 e 9. Banco remoto com duas migrations aplicadas, 10 questões e 10 gabaritos de exemplo em draft. .env.local contém somente NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, obtidas do painel. Arquivo ignorado pelo Git. Rotas: /, /api/auth/status e página interna de não encontrado do Next.js.
+Dependências adicionadas na etapa 6: @supabase/supabase-js 2.117.1, @supabase/ssr 0.12.7 e server-only 0.0.1. Etapa 7: supabase CLI 2.117.0 como devDependency. Nenhuma dependência nova nas etapas 8 a 10. Banco remoto com três migrations aplicadas e 10 questões/gabaritos em draft. .env.local contém NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY; SUPABASE_SECRET_KEY ainda ausente. Arquivo ignorado pelo Git. APP_ORIGIN HTTPS será necessário em produção. Rotas: /, /api/auth/status, /api/quiz/attempt e página interna de não encontrado do Next.js.
 
 ## O que funciona
 
@@ -31,13 +31,13 @@ Dependências adicionadas na etapa 6: @supabase/supabase-js 2.117.1, @supabase/s
 - Nenhum erro ou aviso no console durante a verificação.
 - Comparação visual com mockup e evidências em design-qa.md.
 
-Servidor local de produção iniciado para revisão em http://localhost:3000 após build. Servidores precisam ser iniciados novamente após fechar a sessão ou reiniciar o computador. Comandos de desenvolvimento no README.
+Servidor local de desenvolvimento iniciado em http://127.0.0.1:3000 para os testes da etapa 10. Pode precisar ser reiniciado após fechar a sessão ou configurar a chave. Comandos no README.
 
 ## Pendências e limites
 
-Projeto estudos-etec/if, referência clxnqrkdalimrqcnhegr, organização meta aprovação, plano Free selecionado na criação. Painel verificado em 24/09/2026: Healthy, região São Paulo (sa-east-1), compute Nano; saúde confirmada pela CLI na etapa 7. Migrations registradas: 20260925015139_initialize_database_security e 20260925085403_create_questions_and_protected_answers. Nenhum backup criado por estas etapas. Opções de criação conferidas: Data API ativada, exposição automática de novas tabelas desativada e RLS automático ativado. RLS e GRANTs das duas tabelas definidos explicitamente na migration da etapa 8; sem policies de liberação para clientes.
+Projeto estudos-etec/if, referência clxnqrkdalimrqcnhegr, organização meta aprovação, plano Free selecionado na criação. Painel verificado em 24/09/2026: Healthy, região São Paulo (sa-east-1), compute Nano; saúde confirmada pela CLI na etapa 7. Migrations registradas: 20260925015139_initialize_database_security, 20260925085403_create_questions_and_protected_answers e 20260925091427_create_guest_quiz_attempts. Nenhum backup criado por estas etapas. Opções de criação conferidas: Data API ativada, exposição automática de novas tabelas desativada e RLS automático ativado. RLS e GRANTs das duas tabelas definidos explicitamente na migration da etapa 8; sem policies de liberação para clientes.
 
-Login da CLI concluído pelo usuário e vínculo remoto funcionando. Teste atual em SEED.md. Clientes de navegador/servidor, renovação via Proxy e verificação de identidade no servidor implementados. Seed implementado; cadastro, login/logout, recuperação, demais tabelas de negócio, quiz, simulados, pagamentos e publicação ainda não implementados. Antes de salvar tentativas, implementar preservação de versões e conteúdo usado; fluxo de revisão/publicação ainda pendente. Nenhuma chave administrativa da aplicação obtida; autenticação da CLI permanece no armazenamento próprio. Nome definitivo da plataforma pendente.
+Login da CLI e vínculo remoto funcionando. Retomada em TENTATIVA-ANONIMA.md. Backend da tentativa implementado com snapshots privados de conteúdo e gabarito, token opaco em cookie, hash no banco e expiração de 30 minutos. Não há interface de quiz, recebimento/correção de respostas, cadastro, login/logout, recuperação, simulados, pagamentos ou publicação. Nenhuma chave administrativa da aplicação obtida; credencial local pendente. Fluxo de revisão/publicação e nome definitivo pendentes.
 
 Verificação da etapa 6: lint e build aprovados; um teste de configuração e cinco de integração passaram. Auth healthcheck remoto 200; homepage 200; rota de sessão devolve 401 sem sessão, com cookie corrompido e com sessão forjada, sempre sem cache. Homepage conferida no navegador. A navegação do navegador integrado para o endpoint 401 foi bloqueada pelo cliente; resposta conferida por HTTP. Testes reais de login e renovação de sessão válida ainda pendentes para as etapas de conta.
 
@@ -45,9 +45,9 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 ## Checkpoint e próximo passo
 
-Checkpoint da etapa 8: ea39209. Checkpoint da etapa 9: feat: adicionar seed de questoes em rascunho; consultar git log -1 --oneline. .env.local e supabase/.temp ficam ignorados. O Git não é um backup do banco remoto.
+Checkpoint da etapa 9: a4e27b6. Checkpoint parcial da etapa 10: feat: preparar tentativa anonima e registrar pausa; consultar git log -1 --oneline. .env.local e supabase/.temp ficam ignorados. O Git não é um backup do banco remoto.
 
-Próximo passo: usuário executar verify_seed.sql, npm run test:seed e npm run test:questions. Esperado: cinco passed=true, preservação de dados passed=true e três testes Node aprovados. Revisar conteúdo em REVISAO-SEED.md. Após confirmação técnica, etapa 10 — tentativa anônima; conteúdo público ainda depende de revisão humana explícita.
+Próximo passo, quando o usuário retomar: orientar a cópia da Secret key do projeto para SUPABASE_SECRET_KEY em .env.local, reiniciar npm run dev e executar npm run test:guest:http. Esperado: cinco aprovados e nenhum ignorado, incluindo quiz_not_ready porque o lote não foi publicado. Só então concluir etapa 10 e aguardar teste. Etapa 11 começa pelo mockup, sem implementar visual antes da aprovação.
 
 ## Conclusão da etapa 7
 
@@ -68,3 +68,7 @@ supabase/seed.sql carregou 10 questões originais de exemplo, duas por matéria,
 Cinco verificações de conteúdo aprovadas após carga e após teste transacional de duas reexecuções. O teste simulou revisão editorial sem sobrescrita e reverteu suas alterações. Três testes de API com dados presentes e lint aprovados. Implementação do teste usa Node, sem alterar política de execução do Windows. Docker indisponível; carga automática local não testada. Build não repetido; código da aplicação preservado. Nenhuma dependência, variável ou rota nova.
 
 Documentação em SEED.md e revisão integral em REVISAO-SEED.md. Conferência técnica não é aprovação pedagógica: revisão humana pendente, nenhuma questão publicada. Pausa para teste antes da etapa 10.
+
+## Checkpoint parcial da etapa 10
+
+Migration aplicada e histórico sincronizado. Oito testes isolados, 26 asserções SQL, cinco verificações de catálogo, build e lint aprovados. HTTP real: quatro testes aprovados; um ignorado por ausência de SUPABASE_SECRET_KEY. Testes SQL revertidos; nenhuma publicação persistente do seed. Cookie seguro, CSRF e DTO sem campos privados testados com dependências simuladas. Teste positivo completo de aplicação com conteúdo publicado ainda pendente. Nenhuma credencial exposta ou incluída no Git. Pausa solicitada pelo usuário; não avançar automaticamente.

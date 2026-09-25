@@ -10,7 +10,9 @@
     "test:config": "node --test tests/supabase-config.test.mjs",
     "test:auth": "node --env-file=.env.local --test tests/auth-base.test.mjs",
     "test:questions": "node --env-file=.env.local --test tests/questions-api.test.mjs",
-    "test:seed": "node scripts/test-seed.mjs"
+    "test:seed": "node scripts/test-seed.mjs",
+    "test:guest": "node --test tests/guest-quiz.test.mjs",
+    "test:guest:http": "node --env-file=.env.local --test tests/guest-quiz-http.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
