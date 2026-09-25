@@ -84,3 +84,9 @@ Verificação visual em design-qa.md; lint e build aprovados. Nenhuma integraç�
 Usuário autorizou avançar após a etapa 4. Escopo: criar e verificar projeto Supabase de desenvolvimento em organização Free. Nome proposto projeto-etec-if-dev; região preferida São Paulo (sa-east-1), sujeita à disponibilidade no painel. Custos e limites conferidos na documentação oficial e registrados em SUPABASE.md.
 
 O painel exige login; o projeto remoto ainda não foi criado ou verificado. Senhas e aceite de termos ficam com o usuário diretamente no painel. Sem chaves administrativas, serviço pago ou descarte de projetos existentes. A etapa 6 implementará clientes e autenticação; a etapa 7 criará tabelas via migrations. Nenhum pacote ou código de integração adicionado agora.
+
+## Etapa 5 — criação concluída em 24/09/2026
+
+Após o usuário criar a conta e preencher o formulário, preservamos o nome estudos-etec/if e a região São Paulo. Organização meta aprovação no plano Free; referência do projeto clxnqrkdalimrqcnhegr. O painel confirmou Healthy e compute Nano após o provisionamento. A sugestão anterior de nome não foi aplicada, respeitando a escolha preenchida pelo usuário.
+
+Mantida a Data API, desativada a exposição automática de novas tabelas e ativado RLS automático no formulário de criação. Isso exige concessões explícitas de acesso e políticas nas próximas migrations; não substitui os testes de autorização. Nenhuma tabela de exemplo criada e nenhuma chave administrativa obtida. A etapa 6 fará a integração ao Next.js existente; não adicionamos pacotes ou arquivos de ambiente na etapa 5.

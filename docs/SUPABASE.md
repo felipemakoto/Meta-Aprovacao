@@ -1,10 +1,29 @@
 # Supabase — etapa 5
 
-Status: preparação concluída; criação do projeto remoto pendente de login do usuário. O painel foi aberto, mas redirecionou para a tela de autenticação. Nenhum projeto foi criado ou verificado ainda.
+Status: etapa 5 concluída. Projeto remoto criado e verificado no painel em 24/09/2026, com status Healthy. Aguardando teste do usuário antes da etapa 6.
+
+## Projeto criado
+
+| Campo | Valor confirmado |
+| --- | --- |
+| Organização | meta aprovação |
+| Plano selecionado na criação | Free |
+| Nome escolhido pelo usuário | estudos-etec/if |
+| Referência | clxnqrkdalimrqcnhegr |
+| Região | South America (São Paulo), sa-east-1 |
+| Compute | Nano (t4g.nano) |
+| Estado no painel | Healthy |
+| URL pública | https://clxnqrkdalimrqcnhegr.supabase.co |
+
+[Abrir projeto no painel](https://supabase.com/dashboard/project/clxnqrkdalimrqcnhegr).
+
+Na criação, mantivemos Enable Data API ativado, desativamos Automatically expose new tables e ativamos Enable automatic RLS. As opções foram conferidas antes do envio. Isso prepara padrões mais restritivos; as permissões e políticas de cada tabela ainda serão definidas e testadas nas migrations. Nenhuma senha ou chave foi copiada para o repositório.
+
+O painel confirma ausência de migrations, backups e repositório GitHub conectado. Não criamos tabelas de negócio ou usuários de teste. Nenhum upgrade foi realizado. A integração da aplicação ainda não existe.
 
 ## Escopo
 
-Criar o projeto Supabase de desenvolvimento e verificar seu estado no painel. Clientes de navegador/servidor e autenticação base pertencem à etapa 6; tabelas, RLS e migrations à etapa 7. A entrada aprovada continua funcionando sem Supabase.
+Criar o projeto Supabase de desenvolvimento e verificar seu estado no painel. Clientes de navegador/servidor e autenticação base pertencem à etapa 6; tabelas, políticas RLS e migrations à etapa 7. A entrada aprovada continua independente do Supabase.
 
 Supabase fornece PostgreSQL (banco de dados), Auth (autenticação) e APIs. Nesta etapa, preparar o serviço não significa que o site já esteja conectado a ele.
 
@@ -20,13 +39,13 @@ Fonte: [preços oficiais](https://supabase.com/pricing). Conferir novamente ante
 
 1. Abrir [Supabase Dashboard](https://supabase.com/dashboard) e entrar na conta. Se ainda não houver conta, usar Sign up. Senha, código de verificação e aceite dos termos devem ser feitos pelo usuário na página; não enviar pelo chat.
 2. Conferir a organização e seu plano antes de criar o projeto. Usar uma organização Free destinada a este projeto. Se já existir um projeto adequado, verificar antes de duplicar.
-3. Em New project, usar o nome `projeto-etec-if-dev`.
+3. Em New project, usamos o nome `estudos-etec/if`, preenchido pelo usuário, substituindo a sugestão inicial `projeto-etec-if-dev`.
 4. Preencher a senha do banco diretamente no painel e guardá-la em um gerenciador de senhas. Não colocar no código ou na documentação. Essa senha é diferente da senha da conta Supabase.
 5. Preferir a região específica South America (São Paulo), `sa-east-1`, se disponível, pela proximidade do público brasileiro. Se indisponível, registrar e decidir a alternativa antes de criar. A opção geral Americas não garante São Paulo.
 6. Conferir organização, plano Free, nome e região; criar o projeto e aguardar o provisionamento.
 7. Verificar que o projeto está ativo/saudável e registrar apenas nome, região e identificação não secreta. Não criar tabelas de exemplo do quickstart: o esquema será feito pelas migrations do projeto na etapa 7.
 
-A aparência e os rótulos exatos do painel serão conferidos ao acessar a sessão autenticada.
+O procedimento acima está registrado como histórico; não criar um segundo projeto ao retomar. Usar o link do projeto já criado.
 
 ## Preparação para a etapa 6
 
@@ -45,7 +64,7 @@ Continuaremos no projeto Next.js existente, sem instalar template, Docker, CLI o
 
 - Painel mostra organização Free, nome correto, região escolhida e projeto ativo.
 - Nenhuma tabela de negócio, migration ou usuário de teste criado nesta etapa.
-- Site local continua abrindo normalmente.
+- A aplicação não foi alterada nesta etapa; sua conexão com o banco será testada na etapa 6.
 - `git check-ignore .env.local .env.production` lista os dois nomes.
 - `git ls-files '.env*'` não lista arquivos.
 
@@ -59,4 +78,4 @@ Se o login falhar, recuperar o acesso pelo próprio Supabase. Se o provisionamen
 
 ## Critério de conclusão
 
-A etapa 5 só estará concluída após confirmar o projeto remoto ativo no plano escolhido e documentar os dados não secretos. Neste registro, isso continua pendente. Depois, pausar para o teste do usuário antes de implementar a etapa 6.
+Critério atendido: projeto remoto criado no plano Free e painel exibindo Healthy, nome e região corretos. Dados não secretos documentados. Conferir o painel e confirmar o teste antes de implementar os clientes e a autenticação base da etapa 6.

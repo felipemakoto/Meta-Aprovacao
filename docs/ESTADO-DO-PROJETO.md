@@ -1,8 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 5 — preparação do Supabase. O pedido “avance para o supabase” foi aceito como confirmação do teste da etapa 4. Documentação oficial e custos conferidos; painel aberto, redirecionado para login. Criação e verificação do projeto remoto aguardam sessão autenticada do usuário. Etapa 5 ainda não concluída.
+Etapa atual: 5 — Supabase criado e verificado, concluída em 24/09/2026. O pedido “avance para o supabase” foi aceito como confirmação do teste da etapa 4. Aguardando teste do usuário antes da etapa 6.
 
-Etapas 1, 2 e 3 concluídas. Os pedidos anteriores para continuar foram aceitos como confirmação dos testes dessas etapas.
+Etapas 1 a 5 concluídas. Os pedidos anteriores para continuar foram aceitos como confirmação dos testes das etapas anteriores.
 
 ## Ambiente
 
@@ -12,7 +12,7 @@ Etapas 1, 2 e 3 concluídas. Os pedidos anteriores para continuar foram aceitos 
 - ESLint 9.39.5; eslint-config-next 16.3.6.
 - Git 2.53.0.windows.2; branch master; identidade preservada; sem remoto.
 
-Nenhuma dependência npm adicionada nesta etapa. Banco, migrations e variáveis de ambiente: nenhum. Rotas: / e página interna de não encontrado do Next.js.
+Nenhuma dependência npm adicionada nesta etapa. Banco remoto Supabase provisionado; nenhuma tabela de negócio ou migration criada. Nenhuma variável de ambiente configurada. Rotas: / e página interna de não encontrado do Next.js.
 
 ## O que funciona
 
@@ -34,12 +34,16 @@ Servidor local de produção iniciado para revisão em http://localhost:3000 ap�
 
 ## Pendências e limites
 
-O usuário precisa entrar no painel Supabase para prosseguir com a etapa 5. Nome definitivo ainda pendente. Supabase remoto não criado/verificado; clientes, login, banco da aplicação, quiz, questões, resultados, simulados, pagamentos e publicação não implementados. Guia em SUPABASE.md. Nenhuma senha ou chave solicitada pelo chat.
+Projeto estudos-etec/if, referência clxnqrkdalimrqcnhegr, organização meta aprovação, plano Free selecionado na criação. Painel verificado em 24/09/2026: Healthy, região São Paulo (sa-east-1), compute Nano. Nenhuma migration ou backup registrado. Opções de criação conferidas: Data API ativada, exposição automática de novas tabelas desativada e RLS automático ativado. Políticas de acesso reais serão implementadas e testadas na etapa 7.
+
+O usuário precisa conferir o painel para encerrar seu teste da etapa 5. Nome definitivo da plataforma ainda pendente. Clientes Supabase, login do aplicativo, esquema de negócio, quiz, questões, resultados, simulados, pagamentos e publicação não implementados. Guia em SUPABASE.md. Nenhuma senha ou chave solicitada pelo chat ou salva no repositório.
+
+Verificação local da etapa 5: revisão documental, git diff --check e regras de exclusão de arquivos de ambiente. Sem repetição de lint/build: código e dependências não foram modificados; os resultados acima pertencem à etapa 4.
 
 Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script de instalação do unrs-resolver não aprovado pelo npm. Não alterados nesta etapa; lint e build passaram. Revisar manutenção antes de ampliar dependências.
 
 ## Checkpoint e próximo passo
 
-Checkpoint da interface: 064e4e9 — feat: implementar entrada aprovada da etapa 4. Preparação da etapa 5 registrada separadamente; consultar git log -1 --oneline.
+Checkpoint da interface: 064e4e9. Preparação da etapa 5: 7d2a675. Conclusão da etapa 5: docs: concluir criacao do projeto Supabase; consultar git log -1 --oneline para seu hash. O commit registra documentação, não um backup do banco remoto.
 
-Próximo passo: após login, conferir organização Free e projetos existentes, preparar projeto de desenvolvimento e verificar seu provisionamento. O usuário preencherá a senha do banco diretamente no painel. Não iniciar clientes/autenticação da etapa 6 nem migrations da etapa 7 nesta etapa.
+Próximo passo: aguardar teste do usuário no painel. Após confirmação, iniciar etapa 6 (clientes Supabase e autenticação base), consultando a documentação oficial atual. Não iniciar migrations da etapa 7 antecipadamente.
