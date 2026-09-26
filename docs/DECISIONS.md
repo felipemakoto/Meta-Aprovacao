@@ -154,3 +154,9 @@ Aprovação “pode ser esse visual” autoriza implementar o mockup. /quiz cons
 Correção no banco dentro de RPC restrita, usando apenas o snapshot da tentativa. Bloqueio de linha serializa finalizações; respostas canônicas permitem repetição idempotente e recusam alterações após o feedback. Nenhuma pontuação do cliente. Resultado privado, disponível pelo cookie até o prazo original. Nova migration aplicada, nenhuma alteração das migrations antigas.
 
 Backend separado da interface: preservado mockup aprovado do quiz; integração de envio/resultado fica na etapa 13, que requer nova aprovação visual. Questões continuam em draft. Testes positivos no banco em transação com rollback; nenhuma publicação editorial implícita. Contrato e evidências em CORRECAO-SEGURA.md.
+
+## Etapa 13 — seleção e implementação
+
+Escolha explícita: opção 3 é o resumo após concluir; opção 2 revisa somente erros, um a um. Ver todas as respostas também disponível. Não requer gerar outro layout: são dois alvos aprovados para estados distintos. Filtros e contagens derivados do resultado confirmado, sem recalcular gabaritos. Escolhas congeladas após primeira tentativa de envio; retry mantém payload. Consulta de resultado antes de criar tentativa evita sobrescrever cookie concluído.
+
+Novo contrato público compartilhado para não importar Next/server no cliente. Prévia segue exclusiva de desenvolvimento. Build/lint e testes passaram; QA visual bloqueado porque ferramenta de navegador não iniciou. Não encerrar a etapa nem alegar comparação visual até restabelecer a ferramenta.

@@ -27,3 +27,7 @@ Falha de rede e expiração têm tratamento implementado, mas não foram provoca
 ## Atualização da etapa 12
 
 Backend de correção pronto em /api/quiz/result (CORRECAO-SEGURA.md). Esta interface ainda não envia escolhas: a integração será feita junto ao resultado da etapa 13, após aprovação visual. A prévia permanece ilustrativa e sem correção.
+
+## Atualização da etapa 13
+
+A interface agora envia as escolhas ao finalizar o quiz real e abre /quiz/result após confirmação. Os layouts de resumo/revisão foram aprovados. O /quiz/preview abre um resultado fixo claramente ilustrativo, sem envio. Detalhes e pendência de QA visual em RESULTADO.md; orientações anteriores de ausência de envio são históricas.

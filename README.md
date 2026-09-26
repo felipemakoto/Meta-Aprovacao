@@ -236,3 +236,9 @@ Com `npm.cmd run dev` rodando, execute `npm.cmd run test:correction` e `npm.cmd 
 ## Etapa 13 — escolha visual pendente
 
 Teste da etapa 12 confirmado. Três propostas de resultado em [RESULTADO-MOCKUPS.md](docs/design/RESULTADO-MOCKUPS.md). Aguardando escolha antes de implementar a interface. Os números são ilustrativos; nenhuma questão publicada.
+
+## Etapa 13 — implementação com QA visual pendente
+
+Imagem 3 escolhida para resultado e imagem 2 para revisar erros um a um. Implementado envio do quiz e feedback real, com recuperação por cookie. Teste visual local em http://127.0.0.1:3000/quiz/result/preview (dados ilustrativos). Detalhes em [RESULTADO.md](docs/RESULTADO.md).
+
+Build/lint e 30 testes passaram; a ferramenta de navegador não iniciou, então comparação visual e interações ainda não foram conferidas. Checkpoint parcial, etapa não encerrada. Próximo passo é concluir essa verificação.

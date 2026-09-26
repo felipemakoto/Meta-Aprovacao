@@ -3,7 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { toPublicQuiz, type GuestQuiz } from "@/lib/quiz/contract";
+import type { Answers } from "@/lib/quiz/result-contract";
+import { requestResult, ResultRequestError } from "@/lib/quiz/result-client";
 import styles from "./quiz.module.css";
 
 type Failure = "unavailable" | "network" | "expired";
@@ -13,13 +16,18 @@ const subjects: Record<string, string> = { matematica: "Matemática", portugues:
 function hasExpired(expiresAt: string) { return Date.now() >= Date.parse(expiresAt); }
 
 // Compartilha a criação em andamento inclusive na remontagem do Strict Mode.
-let pending: Promise<GuestQuiz> | undefined;
+let pending: Promise<GuestQuiz | null> | undefined;
 function loadQuiz() {
   if (!pending) {
     pending = (async () => {
       const options = { credentials: "same-origin" as const, cache: "no-store" as const, signal: AbortSignal.timeout(15000) };
       let response = await fetch("/api/quiz/attempt", options);
-      if (response.status === 401) response = await fetch("/api/quiz/attempt", { ...options, method: "POST" });
+      if (response.status === 401) {
+        // Não substituir o cookie de uma tentativa concluída ao voltar ao quiz.
+        try { await requestResult(); return null; }
+        catch (error) { if (!(error instanceof ResultRequestError) || error.status !== 401) throw error; }
+        response = await fetch("/api/quiz/attempt", { ...options, method: "POST" });
+      }
       const body = await response.json();
       if (!response.ok) throw new Error(body.error === "quiz_not_ready" ? "unavailable" : "network");
       return toPublicQuiz(body);
@@ -29,18 +37,19 @@ function loadQuiz() {
 }
 
 export default function Quiz({ preview }: { preview?: GuestQuiz }) {
+  const router = useRouter();
   const [screen, setScreen] = useState<Screen>(preview ? { kind: "ready", quiz: preview } : { kind: "loading" });
   const [retry, setRetry] = useState(0);
   useEffect(() => {
     if (preview) return;
     let active = true;
     loadQuiz().then(
-      (quiz) => { if (active) setScreen({ kind: "ready", quiz }); },
+      (quiz) => { if (active) { if (quiz) setScreen({ kind: "ready", quiz }); else router.replace("/quiz/result"); } },
       (error) => { if (active) setScreen({ kind: "error", reason: error.message === "unavailable" ? "unavailable" : "network" }); },
     );
     return () => { active = false; };
-  }, [preview, retry]);
-  function restart() { setScreen({ kind: "loading" }); setRetry((value) => value + 1); }
+  }, [preview, retry, router]);
+  function restart() { if (preview) { window.location.reload(); return; } setScreen({ kind: "loading" }); setRetry((value) => value + 1); }
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -59,7 +68,7 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
             <Link className={styles.returnLink} href="/">Voltar ao início</Link>
           </section>
         )}
-        {screen.kind === "ready" && <QuizSession key={screen.quiz.id} quiz={screen.quiz} onExpire={() => setScreen({ kind: "error", reason: "expired" })} />}
+        {screen.kind === "ready" && <QuizSession key={screen.quiz.id} quiz={screen.quiz} preview={!!preview} onExpire={() => setScreen({ kind: "error", reason: "expired" })} />}
       </main>
       {preview && <p className={styles.previewNotice}>Prévia local de interface. Sem envio de respostas.</p>}
       <noscript><p className={styles.message}>Ative o JavaScript para responder ao quiz.</p></noscript>
@@ -67,10 +76,13 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
   );
 }
 
-function QuizSession({ quiz, onExpire }: { quiz: GuestQuiz; onExpire: () => void }) {
+function QuizSession({ quiz, preview, onExpire }: { quiz: GuestQuiz; preview: boolean; onExpire: () => void }) {
+  const router = useRouter();
   const [index, setIndex] = useState(0);
   const [choices, setChoices] = useState<Record<string, string>>({});
-  const [finished, setFinished] = useState(false);
+  const [submission, setSubmission] = useState<"idle" | "sending" | "failed">("idle");
+  const sending = useRef(false);
+  const submittedAnswers = useRef<Answers | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const question = quiz.questions[index];
   const selected = choices[question.id];
@@ -78,18 +90,36 @@ function QuizSession({ quiz, onExpire }: { quiz: GuestQuiz; onExpire: () => void
     const timer = setTimeout(onExpire, Math.max(0, Date.parse(quiz.expiresAt) - Date.now()));
     return () => clearTimeout(timer);
   }, [quiz.expiresAt, onExpire]);
-  useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [index, finished]);
+  useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [index, submission]);
   function stillActive() { if (hasExpired(quiz.expiresAt)) { onExpire(); return false; } return true; }
+  async function submit() {
+    if (sending.current || !stillActive()) return;
+    if (preview) { router.push("/quiz/result/preview"); return; }
+    if (!submittedAnswers.current) {
+      if (quiz.questions.some(q => !choices[q.id])) return;
+      submittedAnswers.current = quiz.questions.map(q => ({ questionId: q.id, answer: choices[q.id] }));
+    }
+    sending.current = true;
+    setSubmission("sending");
+    try {
+      await requestResult(submittedAnswers.current);
+      router.replace("/quiz/result");
+    } catch (error) {
+      if (error instanceof ResultRequestError && error.status === 401) onExpire();
+      else if (error instanceof ResultRequestError && error.status === 409) router.replace("/quiz/result");
+      else setSubmission("failed");
+    } finally { sending.current = false; }
+  }
   function next() {
     if (!selected || !stillActive()) return;
-    if (index === quiz.questions.length - 1) setFinished(true); else setIndex(index + 1);
+    if (index === quiz.questions.length - 1) void submit(); else setIndex(index + 1);
     window.scrollTo({ top: 0, behavior: "instant" });
   }
-  if (finished) return (
-    <section className={styles.message}>
-      <h1 ref={heading} tabIndex={-1}>Suas escolhas estão prontas.</h1>
-      <p>A correção ainda não está disponível. Nenhuma resposta foi enviada.</p>
-      <button className={styles.continue} onClick={() => { if (stillActive()) { setFinished(false); setIndex(0); } }}>Revisar escolhas</button>
+  if (submission !== "idle") return (
+    <section className={styles.message} role="status" aria-busy={submission === "sending"}>
+      <h1 ref={heading} tabIndex={-1}>{submission === "sending" ? "Finalizando seu teste…" : "Não foi possível confirmar o envio."}</h1>
+      <p>{submission === "sending" ? "Aguarde enquanto suas respostas são corrigidas." : "Tente novamente. Manteremos as mesmas respostas para recuperar seu resultado com segurança."}</p>
+      {submission === "failed" && <button className={styles.continue} onClick={() => void submit()}>Tentar novamente</button>}
       <Link className={styles.returnLink} href="/">Voltar ao início</Link>
     </section>
   );
@@ -110,7 +140,7 @@ function QuizSession({ quiz, onExpire }: { quiz: GuestQuiz; onExpire: () => void
           );
         })}
       </fieldset>
-      <button className={styles.continue} disabled={!selected} onClick={next}>Continuar <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
+      <button className={styles.continue} disabled={!selected} onClick={next}>{index === quiz.questions.length - 1 ? "Finalizar teste" : "Continuar"} <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
       {index > 0 && <button className={styles.back} onClick={() => { if (stillActive()) setIndex(index - 1); }}>Questão anterior</button>}
     </>
   );

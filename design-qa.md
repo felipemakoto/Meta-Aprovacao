@@ -1,3 +1,15 @@
+# Etapa 13 — resultado e revisão
+
+final result: blocked
+
+Alvos explicitamente escolhidos: docs/design/resultado-opcao-3.png como resumo após conclusão; docs/design/resultado-opcao-2.png para revisão de erros um a um. Código implementado preservando fontes, tokens, ícones e aplicação existentes. Não há novos ativos raster necessários.
+
+Não foi possível comparar capturas: cua_repl falhou antes da abertura do navegador com erro de escrita dos arquivos de inicialização (caminho não encontrado), inclusive após reset. Sem captura renderizada, não alegar fidelidade, responsividade ou aprovação de interações/teclado. Reabrir navegador e comparar pares nas mesmas dimensões, fixar P0/P1/P2, registrar evidências e atualizar este status antes de encerrar a etapa.
+
+Lint/build, 30 testes automatizados e bloqueio HTTP da prévia em produção passaram. Esses resultados não substituem QA visual. Roteiro manual em docs/RESULTADO.md. Relatórios anteriores abaixo são históricos e não aprovam a etapa 13.
+
+---
+
 # Verificação visual — etapa 11
 
 Resultado: **passed** para a interface aprovada. Não representa aprovação editorial ou implementação da correção.

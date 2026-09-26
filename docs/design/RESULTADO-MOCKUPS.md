@@ -30,3 +30,7 @@ Roteiro de revisão: O que revisar; score compacto; três linhas numeradas com P
 - Prévia local ilustrativa poderá ser usada para validar interface; manter bloqueio em produção. O seed continua draft até revisão editorial explícita.
 
 Sem testes de código repetidos: apenas imagens e documentação foram adicionadas. Etapa 13 ainda não concluída; aguarda seleção visual.
+
+## Seleção confirmada
+
+Usuário escolheu opção 3 para a tela final e opção 2 para Revisar os N erros, uma questão por vez. Implementadas em conjunto; nenhuma nova aprovação visual necessária. Status de QA e limites em ../RESULTADO.md. Conferência no navegador ainda bloqueada; etapa não encerrada.

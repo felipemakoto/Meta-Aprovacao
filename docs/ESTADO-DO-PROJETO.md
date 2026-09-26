@@ -1,6 +1,6 @@
 # Estado do Projeto
 
-Etapa atual: 13 — três mockups de resultado gerados, aguardando escolha visual. Teste da etapa 12 confirmado. Questões permanecem draft.
+Etapa atual: 13 — imagem 3 para resumo e imagem 2 para revisão aprovadas e implementadas. Checkpoint parcial: QA visual bloqueado por falha da ferramenta de navegador. Questões permanecem draft.
 
 Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 
@@ -96,3 +96,9 @@ Oito testes isolados, quatro HTTP, 35 verificações SQL e cinco checagens de pe
 ## Etapa 13 — proposta visual
 
 Três imagens em docs/design/resultado-opcao-1.png, resultado-opcao-2.png e resultado-opcao-3.png, numeradas na ordem em que foram exibidas. Brief e limites em design/RESULTADO-MOCKUPS.md. Somente imagens e documentação; aplicação e banco preservados. Aguardar escolha antes de implementar envio e resultado.
+
+## Etapa 13 — implementação parcial, visual pendente
+
+Usuário escolheu resumo da imagem 3 e revisão da imagem 2 para ver os erros um a um. Implementadas rotas /quiz/result e prévia exclusiva de desenvolvimento; envio ao finalizar, retry idempotente, recuperação por cookie, filtro dos erros, navegação por questão e revisão de todas. 0/10 e 10/10 previstos. Nada publicado no banco.
+
+Build/lint e 30 testes passaram. Prévia 404 em produção. Sem validação visual: navegador falhou antes de abrir, mesmo após reset. design-qa.md blocked. Instruções em RESULTADO.md. Próximo passo: restabelecer navegador, comparar capturas e testar interações antes de encerrar a etapa. Não pedir nova aprovação dos layouts já escolhidos.
