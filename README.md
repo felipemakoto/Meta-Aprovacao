@@ -232,3 +232,7 @@ A entrada abre /quiz, integrado à API da etapa 10. O lote continua draft: indis
 API POST/GET /api/quiz/result implementada: valida dez respostas, corrige pelo snapshot privado e salva resultado definitivo. Reenvio igual não duplica; alteração posterior é recusada. Questões continuam draft. Interface permanece na etapa 11; envio e resultado visual serão conectados na etapa 13 após aprovação do mockup.
 
 Com `npm.cmd run dev` rodando, execute `npm.cmd run test:correction` e `npm.cmd run test:correction:http`: esperado oito e quatro testes aprovados. SQL de verificação, contrato e limites em [CORRECAO-SEGURA.md](docs/CORRECAO-SEGURA.md). Lint/build e testes de regressão aprovados. Pausa para seu teste antes da etapa 13.
+
+## Etapa 13 — escolha visual pendente
+
+Teste da etapa 12 confirmado. Três propostas de resultado em [RESULTADO-MOCKUPS.md](docs/design/RESULTADO-MOCKUPS.md). Aguardando escolha antes de implementar a interface. Os números são ilustrativos; nenhuma questão publicada.

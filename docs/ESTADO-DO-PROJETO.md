@@ -1,6 +1,6 @@
 # Estado do Projeto
 
-Etapa atual: 12 — backend de correção segura implementado e testado. Pausa para teste do usuário. Questões permanecem draft.
+Etapa atual: 13 — três mockups de resultado gerados, aguardando escolha visual. Teste da etapa 12 confirmado. Questões permanecem draft.
 
 Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 
@@ -92,3 +92,7 @@ Lint/build, nove testes isolados e cinco HTTP aprovados. Navegador em 320/390/12
 Migration 20260926022707 aplicada; quatro versões sincronizadas. POST/GET /api/quiz/result, cookie como identidade, validação de dez respostas, pertinência ao snapshot, correção atômica e feedback persistido. Reenvio igual é idempotente; modificação depois de finalizar recebe 409. Acesso até o prazo original da tentativa. RLS e grants restritos. Interface da etapa 11 preservada até o mockup de resultado da etapa 13.
 
 Oito testes isolados, quatro HTTP, 35 verificações SQL e cinco checagens de permissões aprovados. Regressão da tentativa: nove isolados, cinco HTTP e 26 SQL aprovados. Lint/build aprovados; seed confirmado draft após rollback dos testes. Concorrência real com duas conexões e timeout de leitura não exercitados; limites em CORRECAO-SEGURA.md. Checkpoint: feat: adicionar correcao segura do quiz (git log -1 --oneline). Pausa para teste do usuário.
+
+## Etapa 13 — proposta visual
+
+Três imagens em docs/design/resultado-opcao-1.png, resultado-opcao-2.png e resultado-opcao-3.png, numeradas na ordem em que foram exibidas. Brief e limites em design/RESULTADO-MOCKUPS.md. Somente imagens e documentação; aplicação e banco preservados. Aguardar escolha antes de implementar envio e resultado.
