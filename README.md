@@ -2,7 +2,7 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Etapa 4 implementada: entrada responsiva seguindo o mockup v4 aprovado, com título serifado e sem o card removido pelo usuário. Quiz, contas, questões, simulados e Premium são funcionalidades planejadas, ainda não implementadas.
+Etapa 13 implementada e verificada: entrada, quiz, correção no servidor, resumo e revisão das respostas. As questões reais permanecem em rascunho para revisão editorial; prévias locais permitem testar as interfaces. Contas, simulados e Premium ficam para etapas posteriores.
 
 ## Por onde começar
 
@@ -233,12 +233,12 @@ API POST/GET /api/quiz/result implementada: valida dez respostas, corrige pelo s
 
 Com `npm.cmd run dev` rodando, execute `npm.cmd run test:correction` e `npm.cmd run test:correction:http`: esperado oito e quatro testes aprovados. SQL de verificação, contrato e limites em [CORRECAO-SEGURA.md](docs/CORRECAO-SEGURA.md). Lint/build e testes de regressão aprovados. Pausa para seu teste antes da etapa 13.
 
-## Etapa 13 — escolha visual pendente
+## Etapa 13 — escolha visual
 
-Teste da etapa 12 confirmado. Três propostas de resultado em [RESULTADO-MOCKUPS.md](docs/design/RESULTADO-MOCKUPS.md). Aguardando escolha antes de implementar a interface. Os números são ilustrativos; nenhuma questão publicada.
+Teste da etapa 12 confirmado. Três propostas de resultado em [RESULTADO-MOCKUPS.md](docs/design/RESULTADO-MOCKUPS.md). Usuário escolheu imagem 3 para resumo e imagem 2 para revisão. Os números são ilustrativos; nenhuma questão publicada.
 
-## Etapa 13 — implementação com QA visual pendente
+## Etapa 13 — implementação e verificação concluídas
 
 Imagem 3 escolhida para resultado e imagem 2 para revisar erros um a um. Implementado envio do quiz e feedback real, com recuperação por cookie. Teste visual local em http://127.0.0.1:3000/quiz/result/preview (dados ilustrativos). Detalhes em [RESULTADO.md](docs/RESULTADO.md).
 
-Build/lint e 30 testes passaram; a ferramenta de navegador não iniciou, então comparação visual e interações ainda não foram conferidas. Checkpoint parcial, etapa não encerrada. Próximo passo é concluir essa verificação.
+Build/lint e 30 testes passaram. Conferência no navegador concluída em 26/09/2026: revisão dos erros e de todas as respostas, zero/dez acertos, finalização da prévia, teclado e larguras 320/390/1280. Evidências em [design-qa.md](design-qa.md). Pausa para seu teste antes da etapa 14; nenhuma questão publicada.

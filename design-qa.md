@@ -1,12 +1,20 @@
 # Etapa 13 — resultado e revisão
 
-final result: blocked
+final result: passed
 
 Alvos explicitamente escolhidos: docs/design/resultado-opcao-3.png como resumo após conclusão; docs/design/resultado-opcao-2.png para revisão de erros um a um. Código implementado preservando fontes, tokens, ícones e aplicação existentes. Não há novos ativos raster necessários.
 
-Não foi possível comparar capturas: cua_repl falhou antes da abertura do navegador com erro de escrita dos arquivos de inicialização (caminho não encontrado), inclusive após reset. Sem captura renderizada, não alegar fidelidade, responsividade ou aprovação de interações/teclado. Reabrir navegador e comparar pares nas mesmas dimensões, fixar P0/P1/P2, registrar evidências e atualizar este status antes de encerrar a etapa.
+Verificação concluída em 26/09/2026 após restabelecer o servidor e o navegador. As falhas de inicialização da ferramenta e de conexão da sessão anterior deixaram o checkpoint 189e13d parcial; não persistiram nesta conferência.
 
-Lint/build, 30 testes automatizados e bloqueio HTTP da prévia em produção passaram. Esses resultados não substituem QA visual. Roteiro manual em docs/RESULTADO.md. Relatórios anteriores abaixo são históricos e não aprovam a etapa 13.
+Comparações inspecionadas: [resumo com imagem 3](docs/design/resultado-comparacao.png) e [revisão com imagem 2](docs/design/revisao-comparacao.png). Capturas originais: [resumo 390](docs/design/resultado-final-390.png), [revisão 390](docs/design/revisao-final-390.png), [320](docs/design/resultado-320.png) e [desktop](docs/design/resultado-desktop.png).
+
+Viewport alvo 390 × 844 CSS; capturas de página inteira em 375 × 860 e 375 × 964. O navegador apresenta escala interna aproximada de 5/6. Para comparação, a região superior esquerda de 312px de largura e 5/6 da altura foi ampliada proporcionalmente para 390px; as referências também foram reduzidas proporcionalmente para 390px. Originais preservados; medidas do DOM complementaram a inspeção. Normalização aproximada, sem alegação de equivalência pixel a pixel.
+
+Composição, cores, ordem dos conteúdos e hierarquia correspondem às escolhas. Diferenças P3: título e números menores que no raster, fontes reais, fundo sólido, destaque verde-lima e revisão mais alta com número original da questão e rótulo textual de erro. Rolagem natural, sem sobreposição ou corte de conteúdo. Sem pendências P0/P1/P2 identificadas no escopo conferido. Ícone de ferramentas Next exclusivo de desenvolvimento.
+
+Verificados no navegador: três erros um a um, anterior/próximo/concluir, retorno ao resumo, abertura direta do segundo erro, dez respostas, cenários 0/10 e 10/10, ativação por Enter e foco no título. Dez posições de /quiz/preview respondidas por teclado e Finalizar teste abriu o resumo ilustrativo. O clique automatizado de seleção sofreu desalinhamento de coordenadas nesta sessão; seleção confirmada por Espaço. Sem overflow horizontal em 320, 390 e 1280px. Console sem erros/avisos capturados.
+
+Lint/build, 30 testes automatizados e bloqueio HTTP da prévia em produção passaram no checkpoint de implementação; não repetidos, pois esta retomada altera somente documentação e evidências. Questões continuam draft: percurso positivo real com conteúdo publicado ainda depende da revisão editorial. A prévia não corrige as escolhas e não substitui esse teste. Falhas de rede/expiração não foram provocadas na interface. Roteiro para o usuário em docs/RESULTADO.md. Relatórios abaixo são históricos.
 
 ---
 

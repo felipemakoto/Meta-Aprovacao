@@ -1,6 +1,6 @@
 # Estado do Projeto
 
-Etapa atual: 13 — imagem 3 para resumo e imagem 2 para revisão aprovadas e implementadas. Checkpoint parcial: QA visual bloqueado por falha da ferramenta de navegador. Questões permanecem draft.
+Etapa atual: 13 — imagem 3 para resumo e imagem 2 para revisão aprovadas, implementadas e verificadas no navegador em 26/09/2026. Pronta para teste do usuário antes da etapa 14. Questões permanecem draft.
 
 Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 
@@ -37,7 +37,7 @@ Servidor local de desenvolvimento iniciado em http://127.0.0.1:3000 para os test
 
 Projeto estudos-etec/if, referência clxnqrkdalimrqcnhegr, organização meta aprovação, plano Free selecionado na criação. Painel verificado em 24/09/2026: Healthy, região São Paulo (sa-east-1), compute Nano; saúde confirmada pela CLI na etapa 7. Migrations registradas: 20260925015139_initialize_database_security, 20260925085403_create_questions_and_protected_answers e 20260925091427_create_guest_quiz_attempts. Nenhum backup criado por estas etapas. Opções de criação conferidas: Data API ativada, exposição automática de novas tabelas desativada e RLS automático ativado. RLS e GRANTs das duas tabelas definidos explicitamente na migration da etapa 8; sem policies de liberação para clientes.
 
-Login da CLI e vínculo remoto funcionando. Retomada em TENTATIVA-ANONIMA.md. Backend da tentativa implementado com snapshots privados de conteúdo e gabarito, token opaco em cookie, hash no banco e expiração de 30 minutos. Há interface de quiz e backend de correção; ainda não há integração visual de envio/resultado, cadastro, login/logout, recuperação, simulados, pagamentos ou publicação. Credencial administrativa configurada pelo usuário somente em .env.local, ignorado pelo Git. Fluxo de revisão/publicação e nome definitivo pendentes.
+Login da CLI e vínculo remoto funcionando. Retomada em TENTATIVA-ANONIMA.md. Backend da tentativa implementado com snapshots privados de conteúdo e gabarito, token opaco em cookie, hash no banco e expiração de 30 minutos. Há interface de quiz, backend de correção e integração visual de envio/resultado; ainda não há cadastro, login/logout, recuperação de conta, simulados, pagamentos ou publicação. Credencial administrativa configurada pelo usuário somente em .env.local, ignorado pelo Git. Fluxo de revisão/publicação e nome definitivo pendentes.
 
 Verificação da etapa 6: lint e build aprovados; um teste de configuração e cinco de integração passaram. Auth healthcheck remoto 200; homepage 200; rota de sessão devolve 401 sem sessão, com cookie corrompido e com sessão forjada, sempre sem cache. Homepage conferida no navegador. A navegação do navegador integrado para o endpoint 401 foi bloqueada pelo cliente; resposta conferida por HTTP. Testes reais de login e renovação de sessão válida ainda pendentes para as etapas de conta.
 
@@ -47,7 +47,7 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: testar a etapa 12 conforme CORRECAO-SEGURA.md; depois, mockup de resultado da etapa 13. Aprovação visual não publica o lote de questões.
+Próximo passo: usuário testar resumo e revisão conforme RESULTADO.md; depois continuar para a etapa 14. Implementação da etapa 13 salva em 189e13d; checkpoint de evidências posterior disponível em git log. Aprovação visual não publica o lote de questões.
 
 ## Conclusão da etapa 7
 
@@ -97,8 +97,8 @@ Oito testes isolados, quatro HTTP, 35 verificações SQL e cinco checagens de pe
 
 Três imagens em docs/design/resultado-opcao-1.png, resultado-opcao-2.png e resultado-opcao-3.png, numeradas na ordem em que foram exibidas. Brief e limites em design/RESULTADO-MOCKUPS.md. Somente imagens e documentação; aplicação e banco preservados. Aguardar escolha antes de implementar envio e resultado.
 
-## Etapa 13 — implementação parcial, visual pendente
+## Etapa 13 — implementação e verificação concluídas
 
 Usuário escolheu resumo da imagem 3 e revisão da imagem 2 para ver os erros um a um. Implementadas rotas /quiz/result e prévia exclusiva de desenvolvimento; envio ao finalizar, retry idempotente, recuperação por cookie, filtro dos erros, navegação por questão e revisão de todas. 0/10 e 10/10 previstos. Nada publicado no banco.
 
-Build/lint e 30 testes passaram. Prévia 404 em produção. Sem validação visual: navegador falhou antes de abrir, mesmo após reset. design-qa.md blocked. Instruções em RESULTADO.md. Próximo passo: restabelecer navegador, comparar capturas e testar interações antes de encerrar a etapa. Não pedir nova aprovação dos layouts já escolhidos.
+Build/lint e 30 testes passaram. Prévia 404 em produção. O checkpoint 189e13d ficou inicialmente sem validação visual devido à ferramenta indisponível. Após restabelecer servidor e navegador, foram comparadas capturas com imagens 3 e 2 e testadas revisão dos três erros, todas as dez respostas, abertura direta de erro, retorno ao resumo, zero/dez acertos, finalização da prévia por teclado e foco. Sem overflow em 320/390/1280px; console sem erros/avisos capturados. design-qa.md passed, com diferenças menores e limites registrados. Somente documentação/evidências mudaram nesta retomada. Instruções em RESULTADO.md; pausa para teste do usuário. Nenhuma publicação de questões ou alteração no banco.

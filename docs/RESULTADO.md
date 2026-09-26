@@ -1,6 +1,6 @@
 # Etapa 13 — resultado e revisão
 
-Escolha explícita do usuário: imagem 3 após finalizar; imagem 2 ao abrir Revisar os N erros, uma questão errada por vez. Não é uma nova exploração visual. Aplicação implementada, conferência no navegador pendente por indisponibilidade da ferramenta. Etapa não encerrada.
+Escolha explícita do usuário: imagem 3 após finalizar; imagem 2 ao abrir Revisar os N erros, uma questão errada por vez. Aplicação implementada e conferência visual concluída em 26/09/2026. Etapa 13 pronta para o teste do usuário.
 
 ## Comportamento implementado
 
@@ -14,7 +14,7 @@ Escolha explícita do usuário: imagem 3 após finalizar; imagem 2 ao abrir Revi
 
 DTO extraído para result-contract.ts, compartilhado pelo servidor e cliente sem dependências de Next/server ou credenciais. Importação explícita .ts habilitada no TypeScript com noEmit para execução dos testes nativos do Node. Nenhuma dependência nova.
 
-## Prévia e teste manual pendente
+## Prévia e roteiro para repetir o teste
 
 Com `npm.cmd run dev`, abra http://127.0.0.1:3000/quiz/result/preview. Dados ilustrativos 7/10, três erros em Porcentagem, Ecologia e Brasil Colônia. As outras posições repetem exemplos apenas para exercitar navegação. Não corresponde às escolhas da prévia do quiz.
 
@@ -32,4 +32,4 @@ As duas prévias são bloqueadas em produção. /quiz/result real sem cookie/res
 
 Lint/build passaram. Oito testes de correção, quatro HTTP de correção, nove da tentativa, cinco HTTP da tentativa e quatro do transporte do resultado passaram (30). O teste inicial do transporte identificou sintaxe de parâmetro TypeScript incompatível com Node strip-only; corrigida para propriedade explícita e revalidada. HTTP da prévia 200 em desenvolvimento, 404 em produção; rota real 200 em produção, com leitura posterior por cookie. Sem mudanças de banco, publicação ou dependências.
 
-Navegador automatizado falhou antes de iniciar, inclusive após reset: `failed to write kernel assets`, caminho não encontrado. Não foi possível capturar as telas ou testar as interações reais. design-qa.md: final result blocked. Abrir pela ferramenta do Codex foi solicitado e enfileirado; isso não comprova inspeção visual. Retomar essa validação após restabelecer a ferramenta. Não avançar etapa enquanto a verificação estiver pendente.
+Após restabelecer o servidor e o navegador, foram conferidos resumo, revisão dos três erros, abertura direta de um erro, navegação pelas dez respostas, retorno, zero/dez acertos e finalização das dez posições da prévia. Teclado e foco verificados; larguras 320/390/1280 sem overflow horizontal. Comparações e diferenças visuais registradas em ../design-qa.md, com resultado passed. Nenhuma mudança de código nesta retomada, apenas evidências e documentação. O teste positivo com questões reais publicadas continua condicionado à revisão editorial do lote.
