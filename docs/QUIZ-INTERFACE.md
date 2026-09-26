@@ -23,3 +23,7 @@ As escolhas ficam somente na memória do componente. Sair/recarregar perde escol
 Lint e build aprovados; nove testes de tentativa e cinco HTTP aprovados, sem ignorados. Prévia HTTP 404 em next start, porta temporária 3001. No navegador: estados inicial/selecionado, teclado espaço/setas, foco no enunciado, avanço pelas dez posições, retorno, revisão e saída. Larguras 320, 390 e 1280 sem overflow horizontal. Fluxo real confirmou falta de questões publicadas. Sem erros/avisos capturados no console.
 
 Falha de rede e expiração têm tratamento implementado, mas não foram provocadas no teste manual. O caminho positivo com banco publicado continua dependendo da revisão editorial. Comparação visual e capturas em design-qa.md. Pausa para teste do usuário.
+
+## Atualização da etapa 12
+
+Backend de correção pronto em /api/quiz/result (CORRECAO-SEGURA.md). Esta interface ainda não envia escolhas: a integração será feita junto ao resultado da etapa 13, após aprovação visual. A prévia permanece ilustrativa e sem correção.

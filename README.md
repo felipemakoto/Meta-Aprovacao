@@ -226,3 +226,9 @@ Visual aprovado e implementado. Teste em http://127.0.0.1:3000/quiz/preview com 
 Selecione uma alternativa, avance, volte e revise suas escolhas. Continuar fica desabilitado antes da seleção. As escolhas ficam somente na memória da tela; sair ou recarregar as perde. Não há envio, pontuação ou correção nesta etapa.
 
 A entrada abre /quiz, integrado à API da etapa 10. O lote continua draft: indisponibilidade é esperada até revisão editorial. Lint, build, nove testes isolados e cinco HTTP aprovados. Procedimento e limites em [QUIZ-INTERFACE.md](docs/QUIZ-INTERFACE.md). Pausa para seu teste antes da etapa 12.
+
+## Etapa 12 — correção segura concluída
+
+API POST/GET /api/quiz/result implementada: valida dez respostas, corrige pelo snapshot privado e salva resultado definitivo. Reenvio igual não duplica; alteração posterior é recusada. Questões continuam draft. Interface permanece na etapa 11; envio e resultado visual serão conectados na etapa 13 após aprovação do mockup.
+
+Com `npm.cmd run dev` rodando, execute `npm.cmd run test:correction` e `npm.cmd run test:correction:http`: esperado oito e quatro testes aprovados. SQL de verificação, contrato e limites em [CORRECAO-SEGURA.md](docs/CORRECAO-SEGURA.md). Lint/build e testes de regressão aprovados. Pausa para seu teste antes da etapa 13.

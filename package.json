@@ -12,7 +12,9 @@
     "test:questions": "node --env-file=.env.local --test tests/questions-api.test.mjs",
     "test:seed": "node scripts/test-seed.mjs",
     "test:guest": "node --test tests/guest-quiz.test.mjs",
-    "test:guest:http": "node --env-file=.env.local --test tests/guest-quiz-http.test.mjs"
+    "test:guest:http": "node --env-file=.env.local --test tests/guest-quiz-http.test.mjs",
+    "test:correction": "node --test tests/quiz-correction.test.mjs",
+    "test:correction:http": "node --env-file=.env.local --test tests/quiz-correction-http.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

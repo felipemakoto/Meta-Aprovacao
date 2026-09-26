@@ -148,3 +148,9 @@ Mantida identidade aprovada: fundo claro, verde profundo, enunciado serifado e i
 ## Etapa 11 — implementação aprovada
 
 Aprovação “pode ser esse visual” autoriza implementar o mockup. /quiz consome a API existente; /quiz/preview é exclusiva de desenvolvimento e repete uma fixture sem gabarito para testar navegação. Nenhuma publicação de questões. Escolhas apenas em memória, sem envio ou resultado até etapa 12. Sem dependências ou mudanças de banco. Testes e limites em QUIZ-INTERFACE.md.
+
+## Etapa 12 — finalização atômica
+
+Correção no banco dentro de RPC restrita, usando apenas o snapshot da tentativa. Bloqueio de linha serializa finalizações; respostas canônicas permitem repetição idempotente e recusam alterações após o feedback. Nenhuma pontuação do cliente. Resultado privado, disponível pelo cookie até o prazo original. Nova migration aplicada, nenhuma alteração das migrations antigas.
+
+Backend separado da interface: preservado mockup aprovado do quiz; integração de envio/resultado fica na etapa 13, que requer nova aprovação visual. Questões continuam em draft. Testes positivos no banco em transação com rollback; nenhuma publicação editorial implícita. Contrato e evidências em CORRECAO-SEGURA.md.

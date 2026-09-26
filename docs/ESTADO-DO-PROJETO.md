@@ -1,8 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 11 — visual aprovado e interface implementada. Pausa para teste do usuário. Questões permanecem draft.
+Etapa atual: 12 — backend de correção segura implementado e testado. Pausa para teste do usuário. Questões permanecem draft.
 
-Etapas 1 a 10 concluídas e confirmadas pelo usuário ao continuar. Etapa 11 implementada após aprovação “pode ser esse visual”.
+Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 
 ## Ambiente
 
@@ -12,7 +12,7 @@ Etapas 1 a 10 concluídas e confirmadas pelo usuário ao continuar. Etapa 11 imp
 - ESLint 9.39.5; eslint-config-next 16.3.6.
 - Git 2.53.0.windows.2; branch master; identidade preservada; sem remoto.
 
-Dependências adicionadas na etapa 6: @supabase/supabase-js 2.117.1, @supabase/ssr 0.12.7 e server-only 0.0.1. Etapa 7: supabase CLI 2.117.0 como devDependency. Nenhuma dependência nova nas etapas 8 a 10. Banco remoto com três migrations aplicadas e 10 questões/gabaritos em draft. .env.local contém NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY; SUPABASE_SECRET_KEY configurada localmente e validada, sem exibição do valor. Arquivo ignorado pelo Git. APP_ORIGIN HTTPS será necessário em produção. Rotas: /, /api/auth/status, /api/quiz/attempt e página interna de não encontrado do Next.js.
+Dependências adicionadas na etapa 6: @supabase/supabase-js 2.117.1, @supabase/ssr 0.12.7 e server-only 0.0.1. Etapa 7: supabase CLI 2.117.0 como devDependency. Nenhuma dependência nova nas etapas 8 a 12. Banco remoto com quatro migrations aplicadas e 10 questões/gabaritos em draft. .env.local contém NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY; SUPABASE_SECRET_KEY configurada localmente e validada, sem exibição do valor. Arquivo ignorado pelo Git. APP_ORIGIN HTTPS será necessário em produção. Rotas: /, /api/auth/status, /api/quiz/attempt e página interna de não encontrado do Next.js.
 
 ## O que funciona
 
@@ -37,7 +37,7 @@ Servidor local de desenvolvimento iniciado em http://127.0.0.1:3000 para os test
 
 Projeto estudos-etec/if, referência clxnqrkdalimrqcnhegr, organização meta aprovação, plano Free selecionado na criação. Painel verificado em 24/09/2026: Healthy, região São Paulo (sa-east-1), compute Nano; saúde confirmada pela CLI na etapa 7. Migrations registradas: 20260925015139_initialize_database_security, 20260925085403_create_questions_and_protected_answers e 20260925091427_create_guest_quiz_attempts. Nenhum backup criado por estas etapas. Opções de criação conferidas: Data API ativada, exposição automática de novas tabelas desativada e RLS automático ativado. RLS e GRANTs das duas tabelas definidos explicitamente na migration da etapa 8; sem policies de liberação para clientes.
 
-Login da CLI e vínculo remoto funcionando. Retomada em TENTATIVA-ANONIMA.md. Backend da tentativa implementado com snapshots privados de conteúdo e gabarito, token opaco em cookie, hash no banco e expiração de 30 minutos. Há interface de quiz; não há recebimento/correção de respostas, cadastro, login/logout, recuperação, simulados, pagamentos ou publicação. Credencial administrativa configurada pelo usuário somente em .env.local, ignorado pelo Git. Fluxo de revisão/publicação e nome definitivo pendentes.
+Login da CLI e vínculo remoto funcionando. Retomada em TENTATIVA-ANONIMA.md. Backend da tentativa implementado com snapshots privados de conteúdo e gabarito, token opaco em cookie, hash no banco e expiração de 30 minutos. Há interface de quiz e backend de correção; ainda não há integração visual de envio/resultado, cadastro, login/logout, recuperação, simulados, pagamentos ou publicação. Credencial administrativa configurada pelo usuário somente em .env.local, ignorado pelo Git. Fluxo de revisão/publicação e nome definitivo pendentes.
 
 Verificação da etapa 6: lint e build aprovados; um teste de configuração e cinco de integração passaram. Auth healthcheck remoto 200; homepage 200; rota de sessão devolve 401 sem sessão, com cookie corrompido e com sessão forjada, sempre sem cache. Homepage conferida no navegador. A navegação do navegador integrado para o endpoint 401 foi bloqueada pelo cliente; resposta conferida por HTTP. Testes reais de login e renovação de sessão válida ainda pendentes para as etapas de conta.
 
@@ -47,7 +47,7 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: testar a interface conforme QUIZ-INTERFACE.md; depois, etapa 12 de correção segura. Aprovação visual não publica o lote de questões.
+Próximo passo: testar a etapa 12 conforme CORRECAO-SEGURA.md; depois, mockup de resultado da etapa 13. Aprovação visual não publica o lote de questões.
 
 ## Conclusão da etapa 7
 
@@ -86,3 +86,9 @@ Mockup mobile gerado e salvo em docs/design/quiz-mobile-v1.png. Especificação 
 Interface aprovada implementada: uma questão por tela, alternativas nativas, seleção por teclado, progresso, retorno e revisão das escolhas. Preview separado e exclusivo de desenvolvimento, 404 confirmado em produção. Nenhum envio ou resultado simulado. Escolhas em memória, perdidas ao sair/recarregar. Falta de questões publicadas verificada no fluxo real.
 
 Lint/build, nove testes isolados e cinco HTTP aprovados. Navegador em 320/390/1280px, navegação pelas dez posições, teclado, foco e retorno conferidos. Sem erros ou avisos capturados no console. Comparação visual em design-qa.md. Nenhuma dependência, migration ou publicação de conteúdo. Checkpoint: feat: implementar interface do quiz aprovada (consultar git log -1 --oneline). Pausa para teste antes da etapa 12.
+
+## Conclusão da etapa 12
+
+Migration 20260926022707 aplicada; quatro versões sincronizadas. POST/GET /api/quiz/result, cookie como identidade, validação de dez respostas, pertinência ao snapshot, correção atômica e feedback persistido. Reenvio igual é idempotente; modificação depois de finalizar recebe 409. Acesso até o prazo original da tentativa. RLS e grants restritos. Interface da etapa 11 preservada até o mockup de resultado da etapa 13.
+
+Oito testes isolados, quatro HTTP, 35 verificações SQL e cinco checagens de permissões aprovados. Regressão da tentativa: nove isolados, cinco HTTP e 26 SQL aprovados. Lint/build aprovados; seed confirmado draft após rollback dos testes. Concorrência real com duas conexões e timeout de leitura não exercitados; limites em CORRECAO-SEGURA.md. Checkpoint: feat: adicionar correcao segura do quiz (git log -1 --oneline). Pausa para teste do usuário.
