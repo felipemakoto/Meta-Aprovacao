@@ -1,6 +1,6 @@
 # Estado do Projeto
 
-Etapa atual: 13 — imagem 3 para resumo e imagem 2 para revisão aprovadas, implementadas e verificadas no navegador em 26/09/2026. Pronta para teste do usuário antes da etapa 14. Questões permanecem draft.
+Etapa atual: 14 — cadastro iniciado em 27/09/2026 com três mockups, aguardando escolha visual conforme roteiro original. Etapa 13 confirmada pelo usuário; checkpoint aa0561f. Questões permanecem draft. Cadastro ainda não implementado.
 
 Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 
@@ -47,7 +47,7 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: usuário testar resumo e revisão conforme RESULTADO.md; depois continuar para a etapa 14. Implementação da etapa 13 salva em 189e13d; checkpoint de evidências posterior disponível em git log. Aprovação visual não publica o lote de questões.
+Próximo passo: escolher mockup de cadastro em design/CADASTRO-MOCKUPS.md; depois implementar a etapa 14 no projeto existente. Implementação da etapa 13 salva em 189e13d; evidências em aa0561f. Aprovação visual não publica o lote de questões.
 
 ## Conclusão da etapa 7
 

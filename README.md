@@ -4,6 +4,8 @@ Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de 
 
 Etapa 13 implementada e verificada: entrada, quiz, correção no servidor, resumo e revisão das respostas. As questões reais permanecem em rascunho para revisão editorial; prévias locais permitem testar as interfaces. Contas, simulados e Premium ficam para etapas posteriores.
 
+Etapa 14 iniciada: [três propostas de cadastro](docs/design/CADASTRO-MOCKUPS.md), aguardando escolha antes da implementação. Nenhuma funcionalidade de cadastro adicionada neste checkpoint.
+
 ## Por onde começar
 
 1. Leia as instruções de execução abaixo para abrir o projeto no computador.
