@@ -1,6 +1,8 @@
 # Estado do Projeto
 
-Etapa atual: 14 — cadastro implementado em 27/09/2026 com a opção 2 aprovada. Visual, build/lint e 21 testes passaram; usuário confirmou o sucesso real do cadastro e da confirmação de e-mail em 28/09/2026. Etapa 14 concluída; próxima etapa 15, ainda não iniciada. Roteiro em CADASTRO.md. Etapa 13 confirmada; questões permanecem draft.
+Atualização de 28/09/2026: etapa 15 iniciada com mockup de login derivado da opção 2 do cadastro, aguardando aprovação visual. Plano em LOGIN.md. Login/logout ainda não implementados; a etapa 14 foi concluída e confirmada pelo usuário (cead1fe).
+
+Última etapa concluída: 14 — cadastro implementado em 27/09/2026 com a opção 2 aprovada. Visual, build/lint e 21 testes passaram; usuário confirmou o sucesso real do cadastro e da confirmação de e-mail em 28/09/2026. Roteiro em CADASTRO.md. Etapa 13 confirmada; questões permanecem draft.
 
 Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 

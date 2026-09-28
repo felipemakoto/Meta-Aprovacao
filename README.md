@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Etapa 15 em preparação: [login e logout](docs/LOGIN.md). Mockup aguardando aprovação antes da implementação, seguindo o visual do cadastro.
+
 Etapa 13 implementada e verificada: entrada, quiz, correção no servidor, resumo e revisão das respostas. As questões reais permanecem em rascunho para revisão editorial; prévias locais permitem testar as interfaces. Contas, simulados e Premium ficam para etapas posteriores.
 
 Etapa 14 implementada com a opção 2: cadastro em http://127.0.0.1:3000/cadastro, validação, confirmação por e-mail e integração Supabase. Testes e visual conferidos; recebimento e confirmação real aprovados pelo usuário em 28/09/2026. Use o e-mail da sua conta Supabase enquanto o projeto utiliza o serviço de envio padrão. Roteiro e limites em [CADASTRO.md](docs/CADASTRO.md).
