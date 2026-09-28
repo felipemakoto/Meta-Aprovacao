@@ -74,5 +74,6 @@ function ResultContent({ result }: { result: QuizResult }) {
     </li>)}</ol>}
     <button className={base.continue} onClick={() => setReview({ mode: errors.length ? "errors" : "all", index: 0 })}>{errors.length ? `Revisar ${errors.length === 1 ? "o erro" : `os ${errors.length} erros`}` : "Revisar respostas"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
     {errors.length > 0 && <button className={base.back} onClick={() => setReview({ mode: "all", index: 0 })}>Ver todas as respostas</button>}
+    <Link className={base.returnLink} href="/cadastro">Criar conta</Link>
   </section>;
 }

@@ -15,7 +15,9 @@
     "test:guest:http": "node --env-file=.env.local --test tests/guest-quiz-http.test.mjs",
     "test:correction": "node --test tests/quiz-correction.test.mjs",
     "test:correction:http": "node --env-file=.env.local --test tests/quiz-correction-http.test.mjs",
-    "test:result": "node --test tests/result-client.test.mjs"
+    "test:result": "node --test tests/result-client.test.mjs",
+    "test:signup": "node --test tests/signup.test.mjs",
+    "test:signup:http": "node --test tests/signup-http.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

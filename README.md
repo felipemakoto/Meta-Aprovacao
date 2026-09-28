@@ -4,7 +4,7 @@ Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de 
 
 Etapa 13 implementada e verificada: entrada, quiz, correção no servidor, resumo e revisão das respostas. As questões reais permanecem em rascunho para revisão editorial; prévias locais permitem testar as interfaces. Contas, simulados e Premium ficam para etapas posteriores.
 
-Etapa 14 iniciada: [três propostas de cadastro](docs/design/CADASTRO-MOCKUPS.md), aguardando escolha antes da implementação. Nenhuma funcionalidade de cadastro adicionada neste checkpoint.
+Etapa 14 implementada com a opção 2: cadastro em http://127.0.0.1:3000/cadastro, validação, confirmação por e-mail e integração Supabase. Testes e visual conferidos; recebimento/confirmação real aguardam seu teste. Use o e-mail da sua conta Supabase enquanto o projeto utiliza o serviço de envio padrão. Roteiro e limites em [CADASTRO.md](docs/CADASTRO.md).
 
 ## Por onde começar
 

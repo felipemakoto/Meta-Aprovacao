@@ -1,6 +1,6 @@
 # Estado do Projeto
 
-Etapa atual: 14 — cadastro iniciado em 27/09/2026 com três mockups, aguardando escolha visual conforme roteiro original. Etapa 13 confirmada pelo usuário; checkpoint aa0561f. Questões permanecem draft. Cadastro ainda não implementado.
+Etapa atual: 14 — cadastro implementado em 27/09/2026 com a opção 2 aprovada. Visual, build/lint e 21 testes passaram; recebimento/confirmação real do e-mail aguardam teste do usuário. Roteiro em CADASTRO.md. Etapa 13 confirmada; questões permanecem draft.
 
 Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 
@@ -47,7 +47,7 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: escolher mockup de cadastro em design/CADASTRO-MOCKUPS.md; depois implementar a etapa 14 no projeto existente. Implementação da etapa 13 salva em 189e13d; evidências em aa0561f. Aprovação visual não publica o lote de questões.
+Próximo passo: testar cadastro e link de confirmação conforme CADASTRO.md, usando o e-mail da equipe Supabase enquanto o SMTP padrão estiver ativo. Depois, etapa 15 (login/logout). Implementação da etapa 13 salva em 189e13d; evidências em aa0561f; mockups do cadastro em 8850f23. Aprovação visual não publica o lote de questões.
 
 ## Conclusão da etapa 7
 

@@ -1,6 +1,6 @@
 # Etapa 14 — proposta de cadastro
 
-Iniciada em 27/09/2026. Etapa 13 confirmada pelo usuário; checkpoint anterior aa0561f. Status: três mockups apresentados, aguardando escolha. Não há implementação de cadastro nesta etapa parcial.
+Iniciada em 27/09/2026. Etapa 13 confirmada pelo usuário; checkpoint anterior aa0561f. Mockups salvos em 8850f23. Usuário escolheu explicitamente a opção 2; implementação e verificação em ../CADASTRO.md.
 
 ## Objetivo e referência
 
@@ -14,7 +14,7 @@ Referência visual inspecionada e anexada às três gerações: resultado-opcao-
 2. [cadastro-opcao-2.png](cadastro-opcao-2.png): campos agrupados em um painel com borda, título Criar conta.
 3. [cadastro-opcao-3.png](cadastro-opcao-3.png): separação entre e-mail e definição de senha, título Sua conta.
 
-Números correspondem à ordem em que as imagens foram exibidas, não apenas à ordem planejada. Nenhuma opção selecionada ainda. Imagens não são interfaces funcionais.
+Números correspondem à ordem em que as imagens foram exibidas, não apenas à ordem planejada. Opção 2 selecionada. Imagens são referências; a interface funcional está em /cadastro.
 
 ## Implementação após escolha
 

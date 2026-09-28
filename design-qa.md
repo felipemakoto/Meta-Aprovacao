@@ -1,3 +1,27 @@
+# Etapa 14 — cadastro
+
+final result: passed
+
+Alvo: [opção 2 aprovada](docs/design/cadastro-opcao-2.png). Implementação: /cadastro. Conferência iniciada em 27/09 e encerrada em 28/09/2026. Este resultado aprova o escopo visual e as interações verificadas; recebimento e confirmação real de e-mail continuam pendentes de teste do usuário.
+
+Evidências: [comparação conjunta](docs/design/cadastro-comparacao.png), [390px](docs/design/cadastro-390.png), [320px](docs/design/cadastro-320.png), [desktop](docs/design/cadastro-desktop.png) e [retomada](docs/design/cadastro-retomada.png). Referência à esquerda, aplicação à direita na comparação. Viewport alvo 390 × 844 CSS, captura de 390 × 844 com escala interna aproximada de 0,8 no navegador. Região superior esquerda de 312 × 675 ampliada proporcionalmente a 390px; referência reduzida proporcionalmente. Medidas de DOM complementam a comparação, sem alegação de precisão pixel a pixel. Imagens completas preservadas.
+
+Primeira passagem: título menor e formulário excessivamente alto (P2). Ajustados título móvel até 54px, campos a 48px, labels a 15px, espaçamento e largura do painel. Segunda comparação inspecionada: hierarquia, proporções e conteúdo recuperados. Sem pendências P0/P1/P2 no escopo conferido. Diferenças P3: formulário ligeiramente mais alto para campos legíveis de 16px, fontes reais, fundo sólido e renderização dos ícones. Ícone Next de desenvolvimento não integra o produto final.
+
+| Superfície | Conferência |
+| --- | --- |
+| Tipografia | DM Serif Display regular no título; Geist no corpo; título e labels legíveis nas três larguras |
+| Espaçamento | Cabeçalho, introdução, painel único, campos e CTA na ordem escolhida; coluna central no desktop |
+| Cores | Tokens marfim/verde existentes, fundo do painel claro, borda discreta; sem gradientes |
+| Ativos | Marca existente e ícones Heroicons oficiais; não foi necessário gerar outros ativos |
+| Conteúdo | E-mail, senha, confirmação, orientação, Criar conta e Continuar sem conta preservados |
+
+Comparação integral permite ler todos os campos e controles; nenhum recorte adicional foi necessário. Navegador conferiu formulário vazio/inválido, foco no primeiro erro, revelar senha, navegação por teclado, saída sem conta, callback inválido e acesso pelo resumo do quiz. Sem overflow horizontal em 320/390/1280px e na retomada de 448px. Console sem erros/avisos capturados na verificação inicial. A retomada exigiu reiniciar o servidor e recarregar a aba para eliminar estilos antigos; aparência corrigida após recarga, sem alteração de código.
+
+Build/lint e 21 testes passaram na implementação; 12 testes específicos de cadastro foram repetidos e passaram na retomada. Dados positivos unitários são simulados. Não foram testados no navegador envio real, entrega, sucesso real de confirmação ou falhas de rede. Limites e roteiro em [CADASTRO.md](docs/CADASTRO.md). Checklist concluído: comparação, correção visual, responsividade, estados inválidos, navegação, documentação. Pausa para teste real do usuário; não avançar etapa 15 automaticamente.
+
+---
+
 # Etapa 13 — resultado e revisão
 
 final result: passed
