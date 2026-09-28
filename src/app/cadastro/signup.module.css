@@ -25,6 +25,7 @@
 .fields:disabled { opacity: .7; }
 .fields:disabled button { cursor: wait; }
 .note { font-size: 14px; line-height: 1.5; color: var(--color-text-secondary); margin: 20px 0 0; text-align: center; }
-.skip { display: block; width: fit-content; color: var(--color-action); font-size: 16px; text-underline-offset: 4px; margin: 28px auto 0; padding: 8px; text-align: center; }
+.note a { color: var(--color-action); text-decoration: underline; text-underline-offset: 4px; }
+.skip { display: block; width: fit-content; color: var(--color-action); font-size: 16px; text-decoration: underline; text-underline-offset: 4px; margin: 20px auto 0; padding: 8px; text-align: center; }
 @media (max-width: 359px) { .main { padding-top: 30px; } .panel { padding-inline: 14px; } .subtitle { font-size: 18px; } }
 @media (min-width: 600px) { .main { padding-top: 44px; } .title { font-size: 54px; } .panel { padding: 28px; } }

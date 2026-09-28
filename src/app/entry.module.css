@@ -23,6 +23,7 @@
 }
 
 .whiteIcon { filter: brightness(0) invert(1); }
+.accountLink { margin-left: auto; font-size: 14px; color: var(--color-action); text-underline-offset: 4px; padding-block: 12px; }
 
 .brandName {
   font-size: 20px;

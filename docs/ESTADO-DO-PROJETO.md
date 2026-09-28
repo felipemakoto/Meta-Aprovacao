@@ -1,6 +1,6 @@
 # Estado do Projeto
 
-Atualização de 28/09/2026: etapa 15 iniciada com mockup de login derivado da opção 2 do cadastro, aguardando aprovação visual. Plano em LOGIN.md. Login/logout ainda não implementados; a etapa 14 foi concluída e confirmada pelo usuário (cead1fe).
+Atualização de 28/09/2026: etapa 15 implementada após aprovação do mockup. Login/logout, sessão SSR, estado autenticado e links concluídos; 30 testes, lint, build e QA visual passaram. Sessão existente reconhecida e preservada na recarga. Aguardando teste do usuário de sair e entrar novamente com sua senha. Procedimento e limites em LOGIN.md. Etapa 16 não iniciada.
 
 Última etapa concluída: 14 — cadastro implementado em 27/09/2026 com a opção 2 aprovada. Visual, build/lint e 21 testes passaram; usuário confirmou o sucesso real do cadastro e da confirmação de e-mail em 28/09/2026. Roteiro em CADASTRO.md. Etapa 13 confirmada; questões permanecem draft.
 

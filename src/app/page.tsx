@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import StartTestButton from "./start-test-button";
 import styles from "./entry.module.css";
 
@@ -16,6 +17,7 @@ export default function Home() {
           />
         </span>
         <span className={styles.brandName}>ETEC / IF</span>
+        <Link className={styles.accountLink} href="/login">Minha conta</Link>
       </header>
       <main className={styles.main}>
         <h1 className={styles.title}>

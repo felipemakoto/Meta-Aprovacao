@@ -1,3 +1,27 @@
+# Etapa 15 — login e logout
+
+final result: passed
+
+Alvo: docs/design/login-mobile-v1.png, aprovado pelo usuário antes da implementação. Rota: /login. Verificação em 28/09/2026. Aprovação visual e interações verificadas; teste positivo com senha e logout da sessão do usuário ainda pendentes.
+
+Evidências: [comparação conjunta](docs/design/login-comparacao.png), [390px](docs/design/login-390.png), [320px](docs/design/login-320.png), [desktop](docs/design/login-desktop.png), [erro](docs/design/login-erro.png), [autenticado](docs/design/login-autenticado.png). Referência de 854 × 1844 normalizada para 390 × 844 à esquerda; captura 390 × 844 à direita, viewport CSS 390 × 844. Sem recorte da interface. Conteúdo legível integralmente, sem necessidade de recortes adicionais.
+
+Primeira comparação: links sem sublinhado (P2, indicação de interação inferior ao mockup). Corrigidos Criar conta e Continuar sem conta; reduzido o intervalo do link inferior. Captura renovada e segunda comparação conjunta inspecionada: sem pendências P0/P1/P2.
+
+| Superfície | Resultado |
+| --- | --- |
+| Tipografia | DM Serif Display no título e Geist no corpo, mesmas fontes do cadastro; hierarquia e conteúdo preservados |
+| Espaçamento | Painel único com dois campos, CTA e links na ordem aprovada; coluna limitada a 560px no desktop |
+| Cores | Tokens marfim e verde, painel claro e bordas discretas; fundo sólido sem textura gerada |
+| Ativos | Marca existente e ícones oficiais Heroicons (olho e seta); nenhum ativo novo necessário |
+| Conteúdo | Entrar, e-mail, senha e links idênticos ao alvo; estado autenticado simples no mesmo sistema visual |
+
+Diferenças P3 aceitas: campos reais de 48px e texto de 16px tornam painel cerca de 28px mais alto; diferenças de rasterização, espessura de ícones e fundo sólido. O indicador Next aparece apenas em desenvolvimento. Layout sem overflow em 320/390/1280px; entrada pública também conferida em 320px após adicionar Minha conta.
+
+Interações: validação nativa foca e-mail vazio, mostrar/ocultar senha alterna estado acessível, envio desabilita campos/botão, credenciais fictícias recebem mensagem genérica com foco, links cadastro/login/início funcionam. Sessão real existente reconhecida e preservada ao recarregar 127.0.0.1. Console final sem erros/avisos. Logout com sessão e novo login positivo ficam para teste manual do usuário; testes automatizados cobrem handlers, falhas, origem, payload e logout sem sessão.
+
+Checklist: alvo aprovado; comparação conjunta refeita; links corrigidos; responsividade e estados conferidos; evidências salvas; preview mantido aberto.
+
 # Etapa 14 — cadastro
 
 final result: passed
