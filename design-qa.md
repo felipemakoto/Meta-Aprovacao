@@ -2,7 +2,7 @@
 
 final result: passed
 
-Alvo: [opção 2 aprovada](docs/design/cadastro-opcao-2.png). Implementação: /cadastro. Conferência iniciada em 27/09 e encerrada em 28/09/2026. Este resultado aprova o escopo visual e as interações verificadas; recebimento e confirmação real de e-mail continuam pendentes de teste do usuário.
+Alvo: [opção 2 aprovada](docs/design/cadastro-opcao-2.png). Implementação: /cadastro. Conferência iniciada em 27/09 e encerrada em 28/09/2026. Este resultado aprova o escopo visual e as interações verificadas; o usuário confirmou em 28/09/2026 que o fluxo real chegou à tela E-mail confirmado.
 
 Evidências: [comparação conjunta](docs/design/cadastro-comparacao.png), [390px](docs/design/cadastro-390.png), [320px](docs/design/cadastro-320.png), [desktop](docs/design/cadastro-desktop.png) e [retomada](docs/design/cadastro-retomada.png). Referência à esquerda, aplicação à direita na comparação. Viewport alvo 390 × 844 CSS, captura de 390 × 844 com escala interna aproximada de 0,8 no navegador. Região superior esquerda de 312 × 675 ampliada proporcionalmente a 390px; referência reduzida proporcionalmente. Medidas de DOM complementam a comparação, sem alegação de precisão pixel a pixel. Imagens completas preservadas.
 

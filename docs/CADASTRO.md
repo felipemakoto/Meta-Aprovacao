@@ -1,6 +1,6 @@
 # Etapa 14 — cadastro
 
-Implementada em 27/09/2026 com a opção 2 aprovada: painel com borda, três campos e botão Criar conta. Verificação visual e testes automatizados concluídos; teste real de recebimento/confirmação de e-mail pelo usuário ainda pendente.
+Implementada em 27/09/2026 com a opção 2 aprovada: painel com borda, três campos e botão Criar conta. Verificação visual e testes automatizados concluídos; teste real confirmado pelo usuário em 28/09/2026: a tela E-mail confirmado foi exibida. Etapa 14 concluída; implementação no checkpoint c4ccd8f.
 
 Retomada em 28/09/2026: servidor reiniciado, aba recarregada após estilos antigos e 12 testes específicos do cadastro novamente aprovados. Evidências finais e checkpoint registrados; aplicação pronta para o teste acima, sem criação automática de conta.
 
