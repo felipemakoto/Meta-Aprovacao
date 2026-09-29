@@ -1,6 +1,6 @@
 # Etapa 16 — recuperação de senha
 
-Implementada em 29/09/2026 após aprovação das duas telas pelo usuário. Checkpoint visual: 7dd8eb2. Status: código e verificações concluídos, aguardando teste real do usuário de recebimento do e-mail, troca da senha e novo login. O agente não enviou e-mails, não alterou credenciais nem configurações remotas.
+Concluída em 29/09/2026 após aprovação visual e teste real do usuário. Checkpoint visual: 7dd8eb2; implementação: f439d12; correção: 7835cc5. O usuário confirmou que salvou a nova senha e entrou na conta usando ela. O agente não enviou e-mails, não alterou credenciais nem configurações remotas.
 
 ## Proposta visual
 
@@ -30,7 +30,7 @@ A aprovação visual prevista pelas seções 55–56 do pedido original foi rece
 
 Correção após teste real em 29/09/2026: o computador estava aproximadamente 380 segundos atrás do Supabase. A comparação com Date.now rejeitava o AMR recovery como futuro, e o callback caía indevidamente na confirmação do cadastro. A validação agora recebe o horário do cabeçalho Date da resposta HTTPS do provedor, sem alterar o relógio do computador nem relaxar o prazo de 15 minutos. Recuperação inválida não pode mais cair no sucesso do cadastro. Se o horário do provedor não estiver disponível, o fluxo falha fechado.
 
-Sessão real proveniente do link já aberto foi verificada: /nova-senha passou a exibir o formulário protegido (não a prévia). Evidência: design/nova-senha-recuperacao-real.png. Entrega e troca do código ocorreram no teste do usuário; escolha da nova senha e login continuam pendentes. Teste de regressão reproduz relógio atrasado, sucesso usando horário do provedor e expiração sem redirecionamento para cadastro.
+Sessão real proveniente do link já aberto foi verificada: /nova-senha passou a exibir o formulário protegido (não a prévia). Evidência: design/nova-senha-recuperacao-real.png. Entrega e troca do código ocorreram no teste do usuário; em seguida, ele confirmou sucesso ao salvar a nova senha e fazer login. Teste de regressão reproduz relógio atrasado, sucesso usando horário do provedor e expiração sem redirecionamento para cadastro.
 
 - /recuperar-senha solicita resetPasswordForEmail; /nova-senha verifica recuperação antes de exibir o formulário. /nova-senha/preview é somente desenvolvimento, não envia requisição de atualização e retorna 404 em produção.
 - POST /api/auth/recovery e /api/auth/password aceitam campos exatos, JSON até 2048 bytes, origem autorizada e nenhuma query. APP_ORIGIN HTTPS continua obrigatório em produção.

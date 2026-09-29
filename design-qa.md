@@ -1,6 +1,6 @@
 # Etapa 16 — recuperação de senha
 
-Atualização funcional de 29/09/2026: corrigida validação temporal por diferença entre relógio local e Supabase. Tela protegida /nova-senha conferida com sessão real de recuperação; captura docs/design/nova-senha-recuperacao-real.png. Sem alteração visual. Troca da senha e login ainda serão executados pelo usuário.
+Atualização funcional de 29/09/2026: corrigida validação temporal por diferença entre relógio local e Supabase. Tela protegida /nova-senha conferida com sessão real de recuperação; captura docs/design/nova-senha-recuperacao-real.png. Sem alteração visual. O usuário confirmou sucesso ao salvar a nova senha e entrar na conta usando ela.
 
 final result: passed
 
@@ -20,7 +20,7 @@ Sem P0/P1/P2 visuais na comparação. Diferenças P3 esperadas: mockup com textu
 
 Capturas: recuperacao-390.png, recuperacao-320.png, recuperacao-desktop.png, nova-senha-390.png, nova-senha-320.png e nova-senha-desktop.png em docs/design. Nenhum overflow horizontal observado em 320/390/1280px. Validação de campo obrigatório foca e-mail; prévia confirma senhas divergentes, foco no erro e alternância de visibilidade. Navegação Esqueci minha senha e Voltar para entrar conferida; sessão comum recebe Solicite um novo link. Console final sem erros/avisos. Servidor dev precisou ser iniciado antes da verificação. Viewport restaurado e recuperação mantida aberta para o usuário.
 
-Checklist: visual aprovado; comparação conjunta inspecionada; estados e navegação verificados; prévia bloqueada em produção; teste real de e-mail/troca/login pendente do usuário.
+Checklist: visual aprovado; comparação conjunta inspecionada; estados e navegação verificados; prévia bloqueada em produção; teste real de troca de senha e novo login confirmado pelo usuário em 29/09/2026.
 
 # Etapa 15 — login e logout
 

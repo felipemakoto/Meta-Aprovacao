@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Estado atual em 29/09/2026: etapa 16 concluída. Após a correção 7835cc5, o usuário confirmou: “Sim, os dois funcionaram”, referindo-se a salvar a nova senha e entrar na conta usando ela. Validação manual feita pelo usuário, sem compartilhar credenciais. Escopo da etapa 17 preparado em ASSOCIAR-TENTATIVA.md; implementação não iniciada. Os registros abaixo preservam o histórico das etapas.
+
 Correção da etapa 16 em 29/09/2026: diferença de cerca de 380s entre relógio local e Supabase fazia a recuperação aparecer como confirmação de cadastro. Validação agora usa horário HTTPS do provedor; recuperação inválida não vira sucesso de cadastro. Formulário protegido Nova senha conferido com a sessão real do usuário. Aguardando ele salvar a nova senha e testar login.
 
 Atualização de 29/09/2026: etapa 16 implementada após aprovação visual. Recuperar senha, callback compartilhado que verifica recuperação e Nova senha protegida concluídos. 41 testes, lint, build e verificações de produção passaram. Aguardando teste real do usuário com e-mail, nova senha e login. Instruções e limites em RECUPERACAO-SENHA.md. Nenhuma credencial/configuração remota alterada pelo agente. Etapa 17 não iniciada; etapa 15 concluída e confirmada (b6ecd7b).
@@ -53,7 +55,7 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: etapa 15 (login/logout), quando solicitada. Cadastro e link de confirmação testados e confirmados pelo usuário. SMTP padrão continua restrito aos e-mails da equipe Supabase. Implementação da etapa 13 salva em 189e13d; evidências em aa0561f; mockups do cadastro em 8850f23. Aprovação visual não publica o lote de questões.
+Próximo passo: etapa 17, associar tentativa à conta, conforme ASSOCIAR-TENTATIVA.md. Cadastro, login/logout e recuperação de senha concluídos e confirmados pelo usuário. SMTP padrão continua restrito aos e-mails permitidos pelo Supabase. Aprovação visual não publica o lote de questões.
 
 ## Conclusão da etapa 7
 

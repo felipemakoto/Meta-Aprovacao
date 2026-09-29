@@ -2,7 +2,7 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Etapa 16 implementada: [recuperação de senha](docs/RECUPERACAO-SENHA.md), com visual aprovado. Abra /recuperar-senha ou Esqueci minha senha no login. Aguardando teste real do usuário com e-mail e nova senha.
+Etapa 16 concluída: [recuperação de senha](docs/RECUPERACAO-SENHA.md), com visual aprovado. Em 29/09/2026, o usuário confirmou que salvou a nova senha e entrou com ela. Próxima etapa: [associar tentativa à conta](docs/ASSOCIAR-TENTATIVA.md), com escopo preparado e implementação ainda não iniciada.
 
 Etapa 15 implementada: [login e logout](docs/LOGIN.md), seguindo o mockup aprovado. Abra /login ou Minha conta na entrada. Teste real de sair, entrar novamente e manter a sessão confirmado pelo usuário em 28/09/2026. Etapa 15 concluída.
 
