@@ -1,6 +1,6 @@
 # Etapa 17 — associar tentativa à conta
 
-Implementada em 29/09/2026 após solicitação do usuário. Testes automatizados concluídos; conferência visual e teste real do usuário pendentes. Etapa 16 concluída com confirmação de troca de senha e novo login.
+Implementada em 29/09/2026 após solicitação do usuário. Testes automatizados concluídos; usuário confirmou que os links estão corretos. Essa confirmação cobre os links, não a gravação de um resultado real, que segue pendente até haver questões revisadas/publicadas. Etapa 16 concluída com confirmação de troca de senha e novo login.
 
 ## Entrega e verificações
 

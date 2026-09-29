@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Confirmação do usuário em 29/09/2026: os links da etapa 17 estão corretos. Checkpoint de implementação: c10d4da. Teste de associação de resultado real ainda pendente, pois as questões permanecem em rascunho. Etapa 18 não iniciada.
+
 Atualização da etapa 17 em 29/09/2026: associação implementada com vínculo privado, RPC restrita ao servidor, sessão verificada, trava transacional e leitura do último resultado por proprietário. Migration 20260929120000 aplicada; histórico sincronizado. Testes unitários, HTTP e SQL, lint e build passaram. Reutilizadas as telas aprovadas. Verificação visual não realizada: ferramenta de navegador bloqueou a URL local por política. Teste real do usuário pendente; questões permanecem draft e prévia não pode ser salva. Detalhes e roteiro em ASSOCIAR-TENTATIVA.md. Etapa 18 não iniciada.
 
 Estado atual em 29/09/2026: etapa 16 concluída. Após a correção 7835cc5, o usuário confirmou: “Sim, os dois funcionaram”, referindo-se a salvar a nova senha e entrar na conta usando ela. Validação manual feita pelo usuário, sem compartilhar credenciais. Escopo da etapa 17 preparado em ASSOCIAR-TENTATIVA.md; implementação não iniciada. Os registros abaixo preservam o histórico das etapas.

@@ -1,5 +1,7 @@
 # Etapa 17 — associação do resultado
 
+Confirmação do usuário em 29/09/2026: links corretos. Não representa teste de persistência real nem substitui a inspeção visual automatizada que ficou bloqueada.
+
 Estado: verificação visual pendente. Reutilizadas as telas aprovadas de resultado, login e confirmação; adicionados botão de salvar, mensagens de estado e links. Prévia mantém o botão desabilitado para impedir persistência ilustrativa. Build/lint e HTTP passaram. A ferramenta de navegador bloqueou a abertura da URL local por política em 29/09/2026; não houve contorno nem captura visual. Não se declara aprovação visual desta alteração. Roteiro em docs/ASSOCIAR-TENTATIVA.md.
 
 # Etapa 16 — recuperação de senha
