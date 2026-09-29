@@ -1,6 +1,38 @@
 # Etapa 17 — associar tentativa à conta
 
-Escopo preparado em 29/09/2026. Implementação ainda não iniciada. Etapa 16 concluída com confirmação do usuário de troca de senha e novo login.
+Implementada em 29/09/2026 após solicitação do usuário. Testes automatizados concluídos; conferência visual e teste real do usuário pendentes. Etapa 16 concluída com confirmação de troca de senha e novo login.
+
+## Entrega e verificações
+
+- Migration 20260929120000 aplicada após dry-run; cinco migrations locais/remotas sincronizadas.
+- Tabela privada quiz_result_owners com RLS e sem privilégios diretos. RPCs claim_quiz_result e read_saved_quiz_result executáveis apenas por service_role; API obtém usuário confirmado por getUser, sem aceitar identidade do payload.
+- Associação exige cookie válido, tentativa concluída e ainda no prazo. SELECT FOR UPDATE serializa reivindicações da mesma tentativa; repetição pelo mesmo proprietário é idempotente, outra conta recebe indisponibilidade. A concorrência é protegida pela trava; não houve teste de carga com duas conexões simultâneas.
+- Sucesso encerra o prazo anônimo no banco, bloqueando leitura e reenvio por token visitante. Leitura autenticada independe desse prazo e retorna apenas o resultado mais recentemente salvo pelo proprietário. Histórico completo fica para etapa 20.
+- POST /api/quiz/saved sem corpo/query, origem validada; GET sem IDs e sem cache. Falhas operacionais não são tratadas como sucesso.
+- Resultado ganhou Salvar na minha conta; login autenticado e confirmação de cadastro ganharam link fixo de retorno. A associação ocorre ao clicar em salvar após entrar; não há gravação automática no callback. Minha conta oferece Ver último resultado salvo. Resultado/revisão reutilizam o visual aprovado, sem nova tela de dashboard.
+- 37 testes Node passaram entre associação, HTTP real, correção, cliente de resultado, login e cadastro. SQL de associação confirmou isolamento, idempotência, expiração, tentativa incompleta e privilégios. As 35 verificações SQL anteriores da correção também passaram. Lint sem avisos e build aprovados.
+- Fixtures SQL criadas dentro de transação e revertidas ao final, inclusive usuários fictícios. Nenhuma questão permaneceu publicada e nenhum resultado de exemplo foi associado à conta real.
+- Servidor local estava desligado; foi iniciado novamente na porta 3000 e os testes HTTP passaram. A ferramenta de navegador recusou acesso à URL local por política; não foi contornada. Não há evidência visual nova nesta etapa.
+
+## Como conferir
+
+1. Abra http://localhost:3000/login. Após entrar, confira Ver último resultado salvo e Voltar ao resultado do teste para salvar.
+2. Sem resultado associado, a consulta autenticada deve informar que ainda não há resultado salvo. Sem sessão, deve solicitar login.
+3. http://localhost:3000/quiz/result/preview mostra o botão desabilitado: dados ilustrativos não podem ser salvos.
+4. Quando houver questões revisadas e publicadas, finalize um teste real, clique em Salvar na minha conta; se necessário, entre/crie conta e volte pelo link do resultado. Salve antes de vencerem os 30 minutos da tentativa.
+5. Após salvar, confira Resultado salvo na sua conta, revisão dos erros e acesso por Minha conta mesmo depois do prazo anônimo. Outra conta não deve encontrar esse resultado.
+
+O passo 4 ainda depende da revisão/publicação editorial, fora do escopo desta etapa. Não usar a prévia como se comprovasse uma gravação real.
+
+Comandos de verificação, na pasta do projeto:
+
+```powershell
+npm.cmd run test:claim
+npm.cmd run test:claim:http
+npx.cmd --no-install supabase db query --linked --file supabase/tests/test_quiz_claim.sql
+```
+
+Referência consultada: [funções e privilégios no Supabase](https://supabase.com/docs/guides/database/functions). Guias locais do Next: route handlers e cookies. As seções abaixo preservam o escopo planejado.
 
 ## Resultado esperado
 

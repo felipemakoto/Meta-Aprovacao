@@ -26,6 +26,7 @@
 .continue:disabled { background: #d8ddd6; color: #64736b; cursor: not-allowed; }
 .continue:disabled img { filter: none; opacity: .6; }
 .back, .returnLink { display: block; width: fit-content; margin: 20px auto 0; padding: 6px; color: var(--color-text-secondary); font: inherit; background: none; border: 0; cursor: pointer; }
+.back:disabled { opacity: .6; cursor: not-allowed; text-decoration: none; }
 .message { padding-top: 38px; }
 .message h1 { font-family: var(--font-display), Georgia, serif; font-size: 32px; line-height: 1.2; font-weight: 400; margin: 0; }
 .message p { color: var(--color-text-secondary); font-size: 18px; line-height: 1.5; margin-top: 20px; }

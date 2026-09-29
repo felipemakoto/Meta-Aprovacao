@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Atualização da etapa 17 em 29/09/2026: associação implementada com vínculo privado, RPC restrita ao servidor, sessão verificada, trava transacional e leitura do último resultado por proprietário. Migration 20260929120000 aplicada; histórico sincronizado. Testes unitários, HTTP e SQL, lint e build passaram. Reutilizadas as telas aprovadas. Verificação visual não realizada: ferramenta de navegador bloqueou a URL local por política. Teste real do usuário pendente; questões permanecem draft e prévia não pode ser salva. Detalhes e roteiro em ASSOCIAR-TENTATIVA.md. Etapa 18 não iniciada.
+
 Estado atual em 29/09/2026: etapa 16 concluída. Após a correção 7835cc5, o usuário confirmou: “Sim, os dois funcionaram”, referindo-se a salvar a nova senha e entrar na conta usando ela. Validação manual feita pelo usuário, sem compartilhar credenciais. Escopo da etapa 17 preparado em ASSOCIAR-TENTATIVA.md; implementação não iniciada. Os registros abaixo preservam o histórico das etapas.
 
 Correção da etapa 16 em 29/09/2026: diferença de cerca de 380s entre relógio local e Supabase fazia a recuperação aparecer como confirmação de cadastro. Validação agora usa horário HTTPS do provedor; recuperação inválida não vira sucesso de cadastro. Formulário protegido Nova senha conferido com a sessão real do usuário. Aguardando ele salvar a nova senha e testar login.
@@ -55,7 +57,7 @@ Avisos herdados da instalação: ESLint 9 com aviso de fim de suporte e script d
 
 Checkpoint da etapa 10: cadae2d. Proposta visual da etapa 11: docs: registrar mockup do quiz para aprovacao; consultar git log -1 --oneline. Credenciais continuam fora do Git.
 
-Próximo passo: etapa 17, associar tentativa à conta, conforme ASSOCIAR-TENTATIVA.md. Cadastro, login/logout e recuperação de senha concluídos e confirmados pelo usuário. SMTP padrão continua restrito aos e-mails permitidos pelo Supabase. Aprovação visual não publica o lote de questões.
+Próximo passo: conferir visual e validar a etapa 17 com o usuário, conforme ASSOCIAR-TENTATIVA.md. O fluxo real completo depende de questões revisadas/publicadas; nenhuma foi publicada nesta etapa. Dashboard fica na etapa 18. Cadastro, login/logout e recuperação de senha concluídos e confirmados pelo usuário.
 
 ## Conclusão da etapa 7
 

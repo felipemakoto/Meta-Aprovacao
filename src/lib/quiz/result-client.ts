@@ -4,8 +4,8 @@ export class ResultRequestError extends Error {
   readonly status: number;
   constructor(status: number) { super("result_request_failed"); this.status = status; }
 }
-export async function requestResult(answers?: Answers) {
-  const response = await fetch("/api/quiz/result", {
+export async function requestResult(answers?: Answers, saved = false) {
+  const response = await fetch(saved ? "/api/quiz/saved" : "/api/quiz/result", {
     method: answers ? "POST" : "GET", credentials: "same-origin", cache: "no-store",
     signal: AbortSignal.timeout(15000),
     ...(answers ? { headers: { "Content-Type": "application/json" }, body: JSON.stringify({ answers }) } : {}),

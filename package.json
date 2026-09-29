@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:claim": "node --test tests/quiz-claim.test.mjs",
+    "test:claim:http": "node --test tests/quiz-claim-http.test.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

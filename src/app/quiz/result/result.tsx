@@ -3,23 +3,24 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { QuizResult } from "@/lib/quiz/result-contract";
 import { requestResult, ResultRequestError } from "@/lib/quiz/result-client";
 import base from "../quiz.module.css";
 import styles from "./result.module.css";
 
 const subjects: Record<string,string> = { matematica: "Matemática", portugues: "Português", ciencias: "Ciências", historia: "História", geografia: "Geografia" };
-type Screen = { kind: "loading" } | { kind: "ready"; result: QuizResult } | { kind: "error"; expired: boolean };
-export default function Result({ preview }: { preview?: QuizResult }) {
+type Screen = { kind: "loading" } | { kind: "ready"; result: QuizResult } | { kind: "error"; expired: boolean; login: boolean };
+export default function Result({ preview, saved = false }: { preview?: QuizResult; saved?: boolean }) {
   const [screen, setScreen] = useState<Screen>(preview ? { kind: "ready", result: preview } : { kind: "loading" });
   const [retry, setRetry] = useState(0);
   useEffect(() => {
     if (preview) return;
     let active = true;
-    requestResult().then(result => { if (active) setScreen({ kind: "ready", result }); },
-      error => { if (active) setScreen({ kind: "error", expired: error instanceof ResultRequestError && error.status === 401 }); });
+    requestResult(undefined, saved).then(result => { if (active) setScreen({ kind: "ready", result }); },
+      error => { if (active) setScreen({ kind: "error", expired: error instanceof ResultRequestError && [401,404].includes(error.status), login: saved && error instanceof ResultRequestError && error.status === 401 }); });
     return () => { active = false; };
-  }, [preview, retry]);
+  }, [preview, retry, saved]);
   return <div className={base.page}>
     <header className={base.header}>
       <Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF</Link>
@@ -28,18 +29,19 @@ export default function Result({ preview }: { preview?: QuizResult }) {
     <main>
       {screen.kind === "loading" && <section className={base.message} role="status"><h1>Carregando seu resultado…</h1></section>}
       {screen.kind === "error" && <section className={base.message} role="status">
-        <h1>{screen.expired ? "Resultado indisponível." : "Não foi possível carregar o resultado."}</h1>
-        <p>{screen.expired ? "Esta tentativa não foi finalizada ou o prazo de acesso terminou." : "Confira sua conexão e tente novamente. Suas respostas não serão reenviadas."}</p>
+        <h1>{screen.login ? "Entre para ver seu resultado" : screen.expired ? "Resultado indisponível." : "Não foi possível carregar o resultado."}</h1>
+        <p>{screen.login ? "Use a conta em que você salvou o teste." : screen.expired ? saved ? "Ainda não há um resultado salvo nesta conta." : "Esta tentativa não foi finalizada, já foi salva na conta ou o prazo de acesso terminou." : "Confira sua conexão e tente novamente. Suas respostas não serão reenviadas."}</p>
         {!screen.expired && <button className={base.continue} onClick={() => { setScreen({ kind: "loading" }); setRetry(n => n + 1); }}>Tentar novamente</button>}
         <Link className={base.returnLink} href="/">Voltar ao início</Link>
+        <Link className={base.returnLink} href="/login">Minha conta</Link>
       </section>}
-      {screen.kind === "ready" && <ResultContent result={screen.result} />}
+      {screen.kind === "ready" && <ResultContent result={screen.result} preview={!!preview} saved={saved} />}
     </main>
     {preview && <p className={styles.preview}>Exemplo de resultado. Dados ilustrativos.</p>}
   </div>;
 }
 
-function ResultContent({ result }: { result: QuizResult }) {
+function ResultContent({ result, preview, saved }: { result: QuizResult; preview: boolean; saved: boolean }) {
   const [review, setReview] = useState<{ mode: "errors" | "all"; index: number } | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const errors = result.questions.filter(q => !q.correct);
@@ -74,6 +76,31 @@ function ResultContent({ result }: { result: QuizResult }) {
     </li>)}</ol>}
     <button className={base.continue} onClick={() => setReview({ mode: errors.length ? "errors" : "all", index: 0 })}>{errors.length ? `Revisar ${errors.length === 1 ? "o erro" : `os ${errors.length} erros`}` : "Revisar respostas"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
     {errors.length > 0 && <button className={base.back} onClick={() => setReview({ mode: "all", index: 0 })}>Ver todas as respostas</button>}
-    <Link className={base.returnLink} href="/cadastro">Criar conta</Link>
+    {saved ? <p className={styles.intro}>Resultado salvo na sua conta.</p> : <SaveResult preview={preview} />}
+    <Link className={base.returnLink} href="/login">Minha conta</Link>
   </section>;
+}
+
+function SaveResult({ preview }: { preview: boolean }) {
+  const router = useRouter();
+  const [state, setState] = useState<"idle" | "busy" | "login" | "expired" | "error">("idle");
+  const lock = useRef(false);
+  async function save() {
+    if (preview || lock.current) return;
+    lock.current = true; setState("busy");
+    try {
+      const response = await fetch("/api/quiz/saved", { method: "POST", credentials: "same-origin", cache: "no-store", signal: AbortSignal.timeout(15000) });
+      if (response.ok) { router.push("/quiz/result/saved"); return; }
+      setState(response.status === 401 ? "login" : response.status === 404 ? "expired" : "error");
+    } catch { setState("error"); }
+    finally { lock.current = false; }
+  }
+  return <div>
+    <button className={base.back} disabled={preview || state === "busy"} onClick={save}>{state === "busy" ? "Salvando…" : "Salvar na minha conta"}</button>
+    <div role="status" aria-live="polite">
+      {state === "login" && <p className={styles.intro}><Link href="/login">Entre</Link> ou <Link href="/cadastro">crie uma conta</Link>. Depois, volte ao resultado para salvar. O prazo do teste é de 30 minutos.</p>}
+      {state === "expired" && <p className={styles.intro}>O prazo terminou ou esta tentativa não está disponível para salvar. Confira seu <Link href="/quiz/result/saved">último resultado salvo</Link>.</p>}
+      {state === "error" && <p className={styles.intro}>Não foi possível confirmar. Tente salvar novamente; o resultado não será duplicado.</p>}
+    </div>
+  </div>;
 }

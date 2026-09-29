@@ -1,3 +1,7 @@
+# Etapa 17 — associação do resultado
+
+Estado: verificação visual pendente. Reutilizadas as telas aprovadas de resultado, login e confirmação; adicionados botão de salvar, mensagens de estado e links. Prévia mantém o botão desabilitado para impedir persistência ilustrativa. Build/lint e HTTP passaram. A ferramenta de navegador bloqueou a abertura da URL local por política em 29/09/2026; não houve contorno nem captura visual. Não se declara aprovação visual desta alteração. Roteiro em docs/ASSOCIAR-TENTATIVA.md.
+
 # Etapa 16 — recuperação de senha
 
 Atualização funcional de 29/09/2026: corrigida validação temporal por diferença entre relógio local e Supabase. Tela protegida /nova-senha conferida com sessão real de recuperação; captura docs/design/nova-senha-recuperacao-real.png. Sem alteração visual. O usuário confirmou sucesso ao salvar a nova senha e entrar na conta usando ela.

@@ -4,6 +4,14 @@ import { requestResult, ResultRequestError } from '../src/lib/quiz/result-client
 const answers=Array.from({length:10},(_,i)=>({questionId:`q-${i}`,answer:'A'}));
 const fixture={id:'result',completedAt:'2026-09-26T00:00:00Z',total:10,score:10,
   questions:answers.map((a,i)=>({id:a.questionId,position:i+1,subject:'matematica',topic:'Teste',statement:'Teste',options:['1','2','3','4','5'],answer:'A',correctAnswer:'A',correct:true,explanation:'Explicação'}))};
+test('resultado salvo usa endpoint autenticado sem ID fornecido pelo cliente',async t=>{
+  t.mock.method(globalThis,'fetch',async(url,options)=>{
+    assert.equal(url,'/api/quiz/saved');assert.equal(options.method,'GET');
+    assert.equal(options.body,undefined);assert.equal(options.cache,'no-store');
+    return Response.json(fixture);
+  });
+  assert.deepEqual(await requestResult(undefined,true),fixture);
+});
 test('envio contém somente escolhas; retry mantém o corpo e cookies same-origin',async t=>{
   const calls=[];
   t.mock.method(globalThis,'fetch',async(url,options)=>{calls.push({url,options});return Response.json(fixture);});
