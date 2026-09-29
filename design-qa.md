@@ -1,3 +1,25 @@
+# Etapa 16 — recuperação de senha
+
+final result: passed
+
+Alvo: docs/design/recuperacao-senha-v1.png aprovado em 29/09/2026. Implementação /recuperar-senha e /nova-senha; formulário protegido inspecionado usando /nova-senha/preview, que não realiza mutações e retorna 404 em produção.
+
+Evidência conjunta: [comparação](docs/design/recuperacao-comparacao.png). Prancha original 1536 × 1024 reduzida proporcionalmente no topo; capturas de 390 × 844 CSS lado a lado abaixo. A prancha não delimita viewports móveis de forma exata, portanto não há alegação de comparação pixel a pixel. Estado vazio equivalente, conteúdo integral preservado; quebra de Recuperar senha em duas linhas no celular é a adaptação responsiva registrada antes da aprovação. Desktop conserva título em uma linha.
+
+| Superfície | Resultado |
+| --- | --- |
+| Tipografia | DM Serif Display regular e Geist existentes; título e descrição quebram naturalmente em telas estreitas |
+| Espaçamento | Cabeçalho, painel único e links preservados; campos 48px, CTA 54px, coluna até 560px |
+| Cores | Marfim e verde dos tokens existentes; painel claro, bordas discretas e fundo sólido |
+| Ativos | Marca e ícones oficiais de seta/olho reutilizados; sem imagens adicionais necessárias |
+| Conteúdo | Labels, botões, ajuda de senha e links reproduzidos; nenhuma anotação da prancha entrou no produto |
+
+Sem P0/P1/P2 visuais na comparação. Diferenças P3 esperadas: mockup com textura e ícones rasterizados, aplicação com fundo sólido e SVGs oficiais; proporções ajustadas para campos legíveis de 16px no celular. Todos os textos/controles são legíveis na comparação integral; não foram necessários recortes adicionais.
+
+Capturas: recuperacao-390.png, recuperacao-320.png, recuperacao-desktop.png, nova-senha-390.png, nova-senha-320.png e nova-senha-desktop.png em docs/design. Nenhum overflow horizontal observado em 320/390/1280px. Validação de campo obrigatório foca e-mail; prévia confirma senhas divergentes, foco no erro e alternância de visibilidade. Navegação Esqueci minha senha e Voltar para entrar conferida; sessão comum recebe Solicite um novo link. Console final sem erros/avisos. Servidor dev precisou ser iniciado antes da verificação. Viewport restaurado e recuperação mantida aberta para o usuário.
+
+Checklist: visual aprovado; comparação conjunta inspecionada; estados e navegação verificados; prévia bloqueada em produção; teste real de e-mail/troca/login pendente do usuário.
+
 # Etapa 15 — login e logout
 
 final result: passed

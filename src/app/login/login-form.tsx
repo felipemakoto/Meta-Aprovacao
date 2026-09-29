@@ -52,7 +52,7 @@ export default function LoginForm({ signedIn }: { signedIn: boolean }) {
       </fieldset>
       <noscript>Ative o JavaScript para entrar ou sair da conta.</noscript>
     </form>
-    {!signedIn && <p className={styles.note}>Ainda não tem conta? <Link href="/cadastro">Criar conta</Link></p>}
+    {!signedIn && <><p className={styles.note}><Link href="/recuperar-senha">Esqueci minha senha</Link></p><p className={styles.note}>Ainda não tem conta? <Link href="/cadastro">Criar conta</Link></p></>}
     <Link className={styles.skip} href="/">{signedIn ? "Voltar ao início" : "Continuar sem conta"}</Link>
   </section>;
 }

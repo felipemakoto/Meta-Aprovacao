@@ -7,7 +7,7 @@ type AuthError = { code?: string; status?: number } | null;
 type Dependencies = {
   signedIn: () => Promise<boolean>;
   signup: (input: { email: string; password: string; redirectTo: string }) => Promise<{ error: AuthError; confirmed: boolean }>;
-  exchange: (code: string) => Promise<boolean>;
+  exchange: (code: string) => Promise<boolean | "recovery">;
 };
 
 export function trustedAuthOrigin(value: string | null, settings: Settings): string | null {
@@ -71,11 +71,11 @@ export function createSignupHandlers(deps: Dependencies, settings: Settings) {
     if (!origin) return json({ error: "auth_unavailable" }, 503);
     const params = request.nextUrl.searchParams;
     const codes = params.getAll("code");
-    let ok = false;
+    let ok: boolean | "recovery" = false;
     if (!params.has("error") && codes.length === 1 && /^[a-zA-Z0-9_-]{16,512}$/.test(codes[0])) {
       try { ok = await deps.exchange(codes[0]); } catch { /* Link expired, missing verifier or service unavailable. */ }
     }
-    return NextResponse.redirect(new URL(ok ? "/cadastro/confirmado" : "/cadastro/confirmacao-invalida", origin), { status: 303, headers: authHeaders });
+    return NextResponse.redirect(new URL(ok === "recovery" ? "/nova-senha" : ok ? "/cadastro/confirmado" : "/cadastro/confirmacao-invalida", origin), { status: 303, headers: authHeaders });
   }
   return { POST, GET };
 }
