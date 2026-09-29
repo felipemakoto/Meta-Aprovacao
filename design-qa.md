@@ -2,7 +2,7 @@
 
 final result: blocked
 
-Fonte visual aprovada: docs/design/dashboard-mobile-v1.png, 941 × 1672 pixels, página móvel sem moldura. Implementação: /dashboard/preview com estado ilustrativo 7 de 10. Captura da implementação, viewport medido e comparação conjunta: indisponíveis. A ferramenta de navegador recusou acesso local por política na etapa 17; nenhuma tentativa de contorno foi feita. A aprovação do mockup não equivale à aprovação da implementação.
+Fonte visual aprovada: docs/design/dashboard-mobile-v1.png, 940 × 1672 pixels, página móvel sem moldura. Implementação: /dashboard/preview com estado ilustrativo 7 de 10. Captura da implementação, viewport medido e comparação conjunta: indisponíveis. A ferramenta de navegador recusou acesso local por política na etapa 17; nenhuma tentativa de contorno foi feita. A aprovação do mockup não equivale à aprovação da implementação.
 
 Inventário: marca e setas reutilizam os SVGs Heroicons existentes; não há novo ativo raster necessário. Tipografia, espaçamento, tokens, legibilidade, segmentos, estados e quebra responsiva precisam ser verificados visualmente antes de marcar passed. CSS segue DM Serif Display/Geist, paleta existente e estrutura do mockup; isso é registro de implementação, não evidência de fidelidade. Textura do mockup foi intencionalmente substituída pelo fundo sólido do produto.
 
