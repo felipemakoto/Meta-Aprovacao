@@ -1,6 +1,6 @@
 # Etapa 15 — login e logout
 
-Implementada em 28/09/2026 após aprovação do mockup pelo usuário. Checkpoint visual anterior: 4bf2440. Status: implementação e verificações concluídas; aguardando teste real de sair e entrar com a senha do usuário.
+Implementada em 28/09/2026 após aprovação do mockup pelo usuário. Checkpoint visual anterior: 4bf2440. Status: etapa 15 concluída. Implementação no checkpoint 1d9d853; usuário confirmou em 28/09/2026 que o teste solicitado de sair, entrar novamente e recarregar funcionou.
 
 ## Visual proposto
 
@@ -27,7 +27,7 @@ A aprovação visual exigida pelas seções 55–56 do pedido original foi receb
 - Login limita tentativas conforme resposta do Supabase (429); não há rate limiter adicional da aplicação nesta etapa. Senhas existentes são preservadas literalmente, sem reaplicar regras de força do cadastro.
 - 30 testes passaram: login 6, login HTTP 3, cadastro 9, cadastro HTTP 3, base de autenticação 5 e transporte de resultado 4. Lint e build passaram.
 - Navegador: 320/390/1280px sem overflow, campos obrigatórios e foco, mostrar/ocultar senha, bloqueio durante envio, falha real com credenciais fictícias, links e retorno público. Sessão existente reconhecida em 127.0.0.1 e preservada após recarga. Console final sem erros/avisos. QA visual em design-qa.md.
-- Não foi executado login positivo com a senha do usuário nem logout de sua sessão existente. Renovação após expiração não foi forçada; permanece o mecanismo SSR existente. Estes limites não são apresentados como testes reais concluídos.
+- O agente não utilizou a senha do usuário nem encerrou sua sessão existente; o usuário executou o teste real solicitado e confirmou que funcionou em 28/09/2026. Renovação após expiração não foi forçada; permanece o mecanismo SSR existente. Estes limites não são apresentados como testes reais concluídos.
 
 ## Seu teste
 

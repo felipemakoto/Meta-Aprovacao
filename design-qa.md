@@ -2,7 +2,7 @@
 
 final result: passed
 
-Alvo: docs/design/login-mobile-v1.png, aprovado pelo usuário antes da implementação. Rota: /login. Verificação em 28/09/2026. Aprovação visual e interações verificadas; teste positivo com senha e logout da sessão do usuário ainda pendentes.
+Alvo: docs/design/login-mobile-v1.png, aprovado pelo usuário antes da implementação. Rota: /login. Verificação em 28/09/2026. Aprovação visual e interações verificadas; usuário confirmou em 28/09/2026 que o teste real solicitado de logout, login e recarga funcionou.
 
 Evidências: [comparação conjunta](docs/design/login-comparacao.png), [390px](docs/design/login-390.png), [320px](docs/design/login-320.png), [desktop](docs/design/login-desktop.png), [erro](docs/design/login-erro.png), [autenticado](docs/design/login-autenticado.png). Referência de 854 × 1844 normalizada para 390 × 844 à esquerda; captura 390 × 844 à direita, viewport CSS 390 × 844. Sem recorte da interface. Conteúdo legível integralmente, sem necessidade de recortes adicionais.
 
@@ -18,7 +18,7 @@ Primeira comparação: links sem sublinhado (P2, indicação de interação infe
 
 Diferenças P3 aceitas: campos reais de 48px e texto de 16px tornam painel cerca de 28px mais alto; diferenças de rasterização, espessura de ícones e fundo sólido. O indicador Next aparece apenas em desenvolvimento. Layout sem overflow em 320/390/1280px; entrada pública também conferida em 320px após adicionar Minha conta.
 
-Interações: validação nativa foca e-mail vazio, mostrar/ocultar senha alterna estado acessível, envio desabilita campos/botão, credenciais fictícias recebem mensagem genérica com foco, links cadastro/login/início funcionam. Sessão real existente reconhecida e preservada ao recarregar 127.0.0.1. Console final sem erros/avisos. Logout com sessão e novo login positivo ficam para teste manual do usuário; testes automatizados cobrem handlers, falhas, origem, payload e logout sem sessão.
+Interações: validação nativa foca e-mail vazio, mostrar/ocultar senha alterna estado acessível, envio desabilita campos/botão, credenciais fictícias recebem mensagem genérica com foco, links cadastro/login/início funcionam. Sessão real existente reconhecida e preservada ao recarregar 127.0.0.1. Console final sem erros/avisos. Logout com sessão e novo login positivo confirmados pelo usuário após teste manual; testes automatizados cobrem handlers, falhas, origem, payload e logout sem sessão.
 
 Checklist: alvo aprovado; comparação conjunta refeita; links corrigidos; responsividade e estados conferidos; evidências salvas; preview mantido aberto.
 

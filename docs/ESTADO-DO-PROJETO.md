@@ -1,8 +1,8 @@
 # Estado do Projeto
 
-Atualização de 28/09/2026: etapa 15 implementada após aprovação do mockup. Login/logout, sessão SSR, estado autenticado e links concluídos; 30 testes, lint, build e QA visual passaram. Sessão existente reconhecida e preservada na recarga. Aguardando teste do usuário de sair e entrar novamente com sua senha. Procedimento e limites em LOGIN.md. Etapa 16 não iniciada.
+Atualização de 28/09/2026: etapa 15 implementada após aprovação do mockup. Login/logout, sessão SSR, estado autenticado e links concluídos; 30 testes, lint, build e QA visual passaram. Sessão existente reconhecida e preservada na recarga. Usuário confirmou em 28/09/2026 que o teste de sair, entrar novamente e recarregar funcionou. Etapa 15 concluída (implementação 1d9d853). Procedimento e limites em LOGIN.md. Etapa 16 não iniciada.
 
-Última etapa concluída: 14 — cadastro implementado em 27/09/2026 com a opção 2 aprovada. Visual, build/lint e 21 testes passaram; usuário confirmou o sucesso real do cadastro e da confirmação de e-mail em 28/09/2026. Roteiro em CADASTRO.md. Etapa 13 confirmada; questões permanecem draft.
+Etapa anterior concluída: 14 — cadastro implementado em 27/09/2026 com a opção 2 aprovada. Visual, build/lint e 21 testes passaram; usuário confirmou o sucesso real do cadastro e da confirmação de e-mail em 28/09/2026. Roteiro em CADASTRO.md. Etapa 13 confirmada; questões permanecem draft.
 
 Etapas 1 a 11 concluídas e confirmadas pelo usuário. Etapa 12: API de correção, persistência e recuperação do resultado; integração visual fica para a etapa 13.
 
