@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Correção da etapa 16 em 29/09/2026: diferença de cerca de 380s entre relógio local e Supabase fazia a recuperação aparecer como confirmação de cadastro. Validação agora usa horário HTTPS do provedor; recuperação inválida não vira sucesso de cadastro. Formulário protegido Nova senha conferido com a sessão real do usuário. Aguardando ele salvar a nova senha e testar login.
+
 Atualização de 29/09/2026: etapa 16 implementada após aprovação visual. Recuperar senha, callback compartilhado que verifica recuperação e Nova senha protegida concluídos. 41 testes, lint, build e verificações de produção passaram. Aguardando teste real do usuário com e-mail, nova senha e login. Instruções e limites em RECUPERACAO-SENHA.md. Nenhuma credencial/configuração remota alterada pelo agente. Etapa 17 não iniciada; etapa 15 concluída e confirmada (b6ecd7b).
 
 Atualização de 28/09/2026: etapa 15 implementada após aprovação do mockup. Login/logout, sessão SSR, estado autenticado e links concluídos; 30 testes, lint, build e QA visual passaram. Sessão existente reconhecida e preservada na recarga. Usuário confirmou em 28/09/2026 que o teste de sair, entrar novamente e recarregar funcionou. Etapa 15 concluída (implementação 1d9d853). Procedimento e limites em LOGIN.md. Etapa 16 não iniciada.

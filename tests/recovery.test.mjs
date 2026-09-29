@@ -3,11 +3,18 @@ import assert from 'node:assert/strict';
 import {NextRequest} from 'next/server.js';
 import {createRecoveryHandlers} from '../src/lib/auth/recovery-http.ts';
 import {createSignupHandlers} from '../src/lib/auth/signup-http.ts';
-import {isRecentRecovery,parseNewPassword,parseRecoveryEmail} from '../src/lib/auth/recovery-contract.ts';
+import {isRecentRecovery,classifyConfirmation,parseNewPassword,parseRecoveryEmail} from '../src/lib/auth/recovery-contract.ts';
 const origin='https://estudos.example';
 const password={password:'nova-senha-teste',confirmPassword:'nova-senha-teste'};
 const request=(body,headers={},query='')=>new NextRequest(origin+'/api/auth/recovery'+query,{method:'POST',headers:{origin,'content-type':'application/json',...headers},body:typeof body==='string'?body:JSON.stringify(body)});
 const handlers=(overrides={},settings={secure:true,origin})=>createRecoveryHandlers({request:async()=>({error:null}),authorized:async()=>true,update:async()=>({error:null}),finish:async()=>{},...overrides},settings);
+test('horário do provedor preserva recuperação com computador atrasado; expiração nunca vira cadastro',()=>{
+ const claims={sub:'user',role:'authenticated',session_id:'session',exp:5000,amr:[{method:'recovery',timestamp:1380}]};
+ assert.equal(isRecentRecovery(claims,'user',1000),false);
+ assert.equal(classifyConfirmation(claims,'user',1381),'recovery');
+ assert.equal(classifyConfirmation(claims,'user',2280),false);
+ assert.equal(classifyConfirmation({...claims,amr:[{method:'email/signup',timestamp:1380}]},'user',1381),true);
+});
 test('campos exatos, confirmação e limite em bytes',()=>{
  assert.equal(parseRecoveryEmail({email:' aluno@example.test '}),'aluno@example.test');
  for(const input of [null,[],{email:'invalido'},{email:'a@b.co',next:'/admin'}]) assert.equal(parseRecoveryEmail(input),null);

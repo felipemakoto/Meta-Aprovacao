@@ -28,6 +28,10 @@ A aprovação visual prevista pelas seções 55–56 do pedido original foi rece
 
 ## Fluxo e segurança
 
+Correção após teste real em 29/09/2026: o computador estava aproximadamente 380 segundos atrás do Supabase. A comparação com Date.now rejeitava o AMR recovery como futuro, e o callback caía indevidamente na confirmação do cadastro. A validação agora recebe o horário do cabeçalho Date da resposta HTTPS do provedor, sem alterar o relógio do computador nem relaxar o prazo de 15 minutos. Recuperação inválida não pode mais cair no sucesso do cadastro. Se o horário do provedor não estiver disponível, o fluxo falha fechado.
+
+Sessão real proveniente do link já aberto foi verificada: /nova-senha passou a exibir o formulário protegido (não a prévia). Evidência: design/nova-senha-recuperacao-real.png. Entrega e troca do código ocorreram no teste do usuário; escolha da nova senha e login continuam pendentes. Teste de regressão reproduz relógio atrasado, sucesso usando horário do provedor e expiração sem redirecionamento para cadastro.
+
 - /recuperar-senha solicita resetPasswordForEmail; /nova-senha verifica recuperação antes de exibir o formulário. /nova-senha/preview é somente desenvolvimento, não envia requisição de atualização e retorna 404 em produção.
 - POST /api/auth/recovery e /api/auth/password aceitam campos exatos, JSON até 2048 bytes, origem autorizada e nenhuma query. APP_ORIGIN HTTPS continua obrigatório em produção.
 - Callback /auth/confirm já autorizado no projeto é reutilizado. Após exchangeCodeForSession e getUser, getClaims verifica assinatura do JWT. Somente amr.method recovery recente direciona para /nova-senha. Não se confia em type, next ou redirectType fornecidos pelo navegador.
@@ -39,11 +43,11 @@ A aprovação visual prevista pelas seções 55–56 do pedido original foi rece
 
 ## Verificações
 
-41 testes passaram: recuperação 8 + HTTP 3, login 6 + HTTP 3, cadastro 9 + HTTP 3, autenticação base 5 e transporte do resultado 4. Lint e build passaram. Execução isolada de produção confirmou prévia 404, página protegida private/no-store e rejeição de origem HTTP; processo de verificação encerrado.
+Após a correção temporal, 42 testes passaram: recuperação 9 + HTTP 3, login 6 + HTTP 3, cadastro 9 + HTTP 3, autenticação base 5 e transporte do resultado 4. Lint e build passaram. Execução isolada de produção confirmou prévia 404, página protegida private/no-store e rejeição de origem HTTP; processo de verificação encerrado.
 
 Navegador: validação de e-mail obrigatório, acesso direto com sessão comum recusado, formulário Nova senha conferido em prévia sem mutação, divergência das senhas e mostrar/ocultar, links de ida e volta, telas 320/390/1280px. Console final sem erros/avisos. Evidências e comparação em design-qa.md.
 
-Ainda não verificados com conta real: entrega de e-mail, troca de código de recuperação, persistência da nova senha e novo login. Testes de sucesso e expiração nos handlers usam dependências simuladas e não substituem esse teste real.
+Entrega de e-mail e sessão real de recuperação conferidas após o relato do usuário. Ainda não verificados com conta real: persistência da nova senha e novo login. Testes de sucesso e expiração nos handlers usam dependências simuladas e não substituem esse teste real.
 
 ## Teste do usuário
 

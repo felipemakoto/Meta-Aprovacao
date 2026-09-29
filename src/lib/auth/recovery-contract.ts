@@ -14,7 +14,7 @@ export function parseNewPassword(value: unknown): string | null {
   return Object.keys(errors).length ? null : input.password;
 }
 // Apply only to claims returned by Supabase getClaims (signature verified), never decoded input.
-export function isRecentRecovery(claims: Record<string, unknown>, userId: string, now = Date.now() / 1000): boolean {
+export function isRecentRecovery(claims: Record<string, unknown>, userId: string, now: number): boolean {
   return claims.sub === userId && claims.role === "authenticated" && typeof claims.session_id === "string" &&
     typeof claims.exp === "number" && claims.exp > now && Array.isArray(claims.amr) &&
     claims.amr.some((item: unknown) => {
@@ -22,4 +22,10 @@ export function isRecentRecovery(claims: Record<string, unknown>, userId: string
       const amr = item as Record<string, unknown>;
       return amr.method === "recovery" && typeof amr.timestamp === "number" && amr.timestamp <= now && now - amr.timestamp < 900;
     });
+}
+
+export function classifyConfirmation(claims: Record<string, unknown>, userId: string, serverTime: number): boolean | "recovery" {
+  const recovery = Array.isArray(claims.amr) && claims.amr.some(item => item && typeof item === "object" && item.method === "recovery");
+  // An invalid recovery must never fall through to a successful signup screen.
+  return recovery ? isRecentRecovery(claims,userId,serverTime) ? "recovery" : false : true;
 }

@@ -1,5 +1,7 @@
 # Etapa 16 — recuperação de senha
 
+Atualização funcional de 29/09/2026: corrigida validação temporal por diferença entre relógio local e Supabase. Tela protegida /nova-senha conferida com sessão real de recuperação; captura docs/design/nova-senha-recuperacao-real.png. Sem alteração visual. Troca da senha e login ainda serão executados pelo usuário.
+
 final result: passed
 
 Alvo: docs/design/recuperacao-senha-v1.png aprovado em 29/09/2026. Implementação /recuperar-senha e /nova-senha; formulário protegido inspecionado usando /nova-senha/preview, que não realiza mutações e retorna 404 em produção.

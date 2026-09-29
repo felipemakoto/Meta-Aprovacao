@@ -3,8 +3,8 @@ import "server-only";
 import { isAuthSessionMissingError } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
 
-export async function getVerifiedUser() {
-  const supabase = await createClient();
+export async function getVerifiedUser(client?: Awaited<ReturnType<typeof createClient>>) {
+  const supabase = client ?? await createClient();
   const { data, error } = await supabase.auth.getUser();
 
   if (error) {
