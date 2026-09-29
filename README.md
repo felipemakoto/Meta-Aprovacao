@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Etapa 18 implementada após aprovação visual: [dashboard](docs/DASHBOARD.md) em /dashboard, com totais reais e revisão direta. Prévia em /dashboard/preview somente em desenvolvimento. Testes funcionais aprovados; comparação visual automatizada bloqueada e conferência manual pendente.
+
 Etapa 17 implementada: [associar tentativa à conta](docs/ASSOCIAR-TENTATIVA.md). Resultado real oferece Salvar na minha conta; Minha conta permite abrir o último resultado salvo. Migration aplicada e testes passaram. Usuário confirmou os links em 29/09/2026. Prévia não salva dados; questões continuam em rascunho. Teste de gravação real pelo usuário pendente.
 
 Etapa 16 concluída: [recuperação de senha](docs/RECUPERACAO-SENHA.md), com visual aprovado. Em 29/09/2026, o usuário confirmou que salvou a nova senha e entrou com ela.

@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Etapa 18 em 29/09/2026: dashboard implementado após aprovação do mockup. Página autenticada, agregados reais por proprietário, estados vazio/erro, links e revisão direta concluídos. Migration 20260929140000 aplicada; seis migrations sincronizadas. 18 testes Node, SQL, lint, build e checagens de produção aprovados. QA visual bloqueado pela política de navegador já registrada; aguardando conferência manual. Prévia local disponível. Detalhes em DASHBOARD.md. Etapa 19 não iniciada.
+
 Confirmação do usuário em 29/09/2026: os links da etapa 17 estão corretos. Checkpoint de implementação: c10d4da. Teste de associação de resultado real ainda pendente, pois as questões permanecem em rascunho. Etapa 18 não iniciada.
 
 Atualização da etapa 17 em 29/09/2026: associação implementada com vínculo privado, RPC restrita ao servidor, sessão verificada, trava transacional e leitura do último resultado por proprietário. Migration 20260929120000 aplicada; histórico sincronizado. Testes unitários, HTTP e SQL, lint e build passaram. Reutilizadas as telas aprovadas. Verificação visual não realizada: ferramenta de navegador bloqueou a URL local por política. Teste real do usuário pendente; questões permanecem draft e prévia não pode ser salva. Detalhes e roteiro em ASSOCIAR-TENTATIVA.md. Etapa 18 não iniciada.

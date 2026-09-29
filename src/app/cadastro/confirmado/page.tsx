@@ -13,6 +13,7 @@ export default async function ConfirmedPage() {
     </div>
     <Link className={styles.skip} href="/login">{confirmed ? "Ver minha conta" : "Entrar na conta"}</Link>
     {confirmed && <Link className={styles.skip} href="/quiz/result">Voltar ao resultado do teste para salvar</Link>}
+    {confirmed && <Link className={styles.skip} href="/dashboard">Ver meus estudos</Link>}
     <Link className={styles.skip} href="/">Voltar ao início</Link>
   </section>;
 }

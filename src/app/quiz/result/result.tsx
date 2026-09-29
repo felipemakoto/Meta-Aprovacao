@@ -11,7 +11,7 @@ import styles from "./result.module.css";
 
 const subjects: Record<string,string> = { matematica: "Matemática", portugues: "Português", ciencias: "Ciências", historia: "História", geografia: "Geografia" };
 type Screen = { kind: "loading" } | { kind: "ready"; result: QuizResult } | { kind: "error"; expired: boolean; login: boolean };
-export default function Result({ preview, saved = false }: { preview?: QuizResult; saved?: boolean }) {
+export default function Result({ preview, saved = false, initialReview }: { preview?: QuizResult; saved?: boolean; initialReview?: "errors" | "all" }) {
   const [screen, setScreen] = useState<Screen>(preview ? { kind: "ready", result: preview } : { kind: "loading" });
   const [retry, setRetry] = useState(0);
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Result({ preview, saved = false }: { preview?: QuizResul
   return <div className={base.page}>
     <header className={base.header}>
       <Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF</Link>
-      <Link className={base.exit} href="/">Início</Link>
+      <Link className={base.exit} href={saved ? "/dashboard" : "/"}>{saved ? "Meus estudos" : "Início"}</Link>
     </header>
     <main>
       {screen.kind === "loading" && <section className={base.message} role="status"><h1>Carregando seu resultado…</h1></section>}
@@ -35,14 +35,14 @@ export default function Result({ preview, saved = false }: { preview?: QuizResul
         <Link className={base.returnLink} href="/">Voltar ao início</Link>
         <Link className={base.returnLink} href="/login">Minha conta</Link>
       </section>}
-      {screen.kind === "ready" && <ResultContent result={screen.result} preview={!!preview} saved={saved} />}
+      {screen.kind === "ready" && <ResultContent key={`${screen.result.id}-${initialReview ?? "summary"}`} result={screen.result} preview={!!preview} saved={saved} initialReview={initialReview} />}
     </main>
     {preview && <p className={styles.preview}>Exemplo de resultado. Dados ilustrativos.</p>}
   </div>;
 }
 
-function ResultContent({ result, preview, saved }: { result: QuizResult; preview: boolean; saved: boolean }) {
-  const [review, setReview] = useState<{ mode: "errors" | "all"; index: number } | null>(null);
+function ResultContent({ result, preview, saved, initialReview }: { result: QuizResult; preview: boolean; saved: boolean; initialReview?: "errors" | "all" }) {
+  const [review, setReview] = useState<{ mode: "errors" | "all"; index: number } | null>(initialReview ? { mode: initialReview === "errors" && result.score < result.total ? "errors" : "all", index: 0 } : null);
   const heading = useRef<HTMLHeadingElement>(null);
   const errors = result.questions.filter(q => !q.correct);
   const items = review?.mode === "errors" ? errors : result.questions;

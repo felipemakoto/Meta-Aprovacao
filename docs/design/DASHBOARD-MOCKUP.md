@@ -1,6 +1,6 @@
 # Etapa 18 — proposta de dashboard
 
-Mockup criado em 29/09/2026: dashboard-mobile-v1.png. Aguardando aprovação; nenhuma interface implementada.
+Mockup criado em 29/09/2026: dashboard-mobile-v1.png. Usuário aprovou: “sim, este visual está bom, pode continuar”. Implementação da etapa 18 realizada após essa aprovação; comparação visual com captura ainda bloqueada. Detalhes em ../DASHBOARD.md.
 
 Objetivo: retomar estudos pelo último resultado salvo. Hierarquia: título Seus estudos, último teste com acertos, ação Revisar meus erros, resultado completo e resumo da atividade. Reutiliza marfim, verde, títulos serifados e corpo sans-serif das telas aprovadas. Simulados permanece Em breve, sem ação disponível. Valores e data são ilustrativos.
 
