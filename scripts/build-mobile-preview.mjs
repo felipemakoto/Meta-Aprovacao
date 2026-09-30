@@ -4,8 +4,8 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 const project=process.cwd();
 const screen=process.argv[3]||'questoes';
-if(!['questoes','historico'].includes(screen))throw new Error('Prévia desconhecida.');
-const component=screen==='historico'?'src/app/historico/history.tsx':'src/app/questoes/practice.tsx';
+if(!['questoes','historico','site'].includes(screen))throw new Error('Prévia desconhecida.');
+const component=screen==='site'?'scripts/mobile-site-preview.tsx':screen==='historico'?'src/app/historico/history.tsx':'src/app/questoes/practice.tsx';
 const taskRoot=path.resolve(process.argv[2]||'');
 if(!process.argv[2] || taskRoot===project)throw new Error('Informe uma pasta externa de ferramentas/prévia.');
 const {build}=await import(pathToFileURL(path.join(taskRoot,'node_modules/esbuild/lib/main.js')).href);
@@ -15,6 +15,14 @@ await writeFile(path.join(taskRoot,'link.tsx'),`import React from ${JSON.stringi
 await writeFile(path.join(taskRoot,'image.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))}; export default function Image(props:any){return <img {...props}/>}`);
 await writeFile(path.join(taskRoot,'entry.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))};import {createRoot} from ${JSON.stringify(path.join(project,'node_modules/react-dom/client.js'))};import Preview from ${JSON.stringify(path.join(project,component))};createRoot(document.getElementById('root')!).render(<Preview preview/>);`);
 await writeFile(path.join(taskRoot,'navigation.ts'),`export function useRouter(){return {push(){},replace(){}}}`);
+if(screen==='site'){
+  await writeFile(path.join(taskRoot,'link.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))};
+    export default function Link({children,href,...props}:any){
+      const allowed=typeof href==='string' && (href==='/' || /^\\/(dashboard|historico|questoes|quiz)(\\/|\\?|$)/.test(href));
+      return <a {...props} href="#" aria-disabled={allowed?undefined:true} title={allowed?undefined:"Disponível na aplicação completa"} onClick={e=>{e.preventDefault();if(allowed)window.dispatchEvent(new CustomEvent('etec-preview-navigation',{detail:href}));}}>{children}</a>;
+    }`);
+  await writeFile(path.join(taskRoot,'navigation.ts'),`const navigate=(path:string)=>window.dispatchEvent(new CustomEvent('etec-preview-navigation',{detail:path}));export function useRouter(){return {push:navigate,replace:navigate}}`);
+}
 await build({entryPoints:[path.join(taskRoot,'entry.tsx')],bundle:true,minify:true,platform:'browser',jsx:'automatic',outfile:path.join(output,'app.js'),nodePaths:[path.join(project,'node_modules')],alias:{'next/link':path.join(taskRoot,'link.tsx'),'next/image':path.join(taskRoot,'image.tsx'),'next/navigation':path.join(taskRoot,'navigation.ts'),'@':path.join(project,'src')},define:{'process.env.NODE_ENV':'"production"'},loader:{'.module.css':'local-css'},logLevel:'warning'});
 const chunks=path.join(project,'.next/dev/static/chunks');
 let globalCss='';
@@ -41,5 +49,5 @@ for(const name of ['arrow-up-right.svg','arrow-right.svg']){
   portableJs=portableJs.replaceAll('/icons/'+name,'data:image/svg+xml;base64,'+encoded);
 }
 portableJs=portableJs.replaceAll('</script','<\\/script');
-await writeFile(path.join(taskRoot,screen+'-demonstracao.html'),`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prévia de ${screen==='historico'?'histórico':'questões'} | ETEC / IF</title><style>${portableCss}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a demonstração.</noscript><script>${portableJs}</script></body></html>`);
+await writeFile(path.join(taskRoot,screen+'-demonstracao.html'),`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prévia de ${screen==='site'?'ETEC / IF':screen==='historico'?'histórico':'questões'}</title><style>${portableCss}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a demonstração.</noscript><script>${portableJs}</script></body></html>`);
 console.log('Arquivo HTML portátil gerado, sem depender de localhost.');

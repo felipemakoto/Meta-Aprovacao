@@ -2,7 +2,7 @@
   width: min(100% - 46px, 560px);
   min-height: 100svh;
   margin-inline: auto;
-  padding-block: 50px 64px;
+  padding-block: 28px 40px;
 }
 
 .header {
@@ -32,12 +32,12 @@
   letter-spacing: -0.5px;
 }
 
-.main { padding-top: 40px; }
+.main { padding-top: 32px; }
 
 .title {
   margin: 0;
   font-family: var(--font-display), Georgia, serif;
-  font-size: clamp(36px, 11.8vw, 46px);
+  font-size: clamp(34px, 9.5vw, 40px);
   line-height: 1.09;
   font-weight: 400;
   letter-spacing: -1.35px;
@@ -46,18 +46,17 @@
 .highlight {
   color: inherit;
   background: none;
-  box-shadow: inset 0 -0.28em var(--color-highlight);
 }
 
 .intro {
   margin: 24px 0 0;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 28px;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
   color: var(--color-text-secondary);
 }
 
-.actions { margin-top: 116px; }
+.actions { margin-top: 32px; }
 
 .startButton {
   display: flex;
@@ -73,7 +72,7 @@
   color: #fff;
   font: inherit;
   font-weight: 650;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
   cursor: pointer;
   transition: background-color 140ms ease;
@@ -109,7 +108,7 @@
 
 .explanation {
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 27px;
   letter-spacing: -0.4px;
 }
@@ -123,19 +122,19 @@
 @media (max-width: 359px) {
   .page { width: calc(100% - 40px); padding-top: 32px; }
   .main { padding-top: 32px; }
-  .title { font-size: 36px; letter-spacing: -1px; }
+  .title { font-size: 34px; letter-spacing: -.7px; }
   .intro { font-size: 18px; line-height: 26px; }
-  .actions { margin-top: 88px; }
+  .actions { margin-top: 28px; }
   .startButton { font-size: 17px; }
-  .explanation { font-size: 18px; line-height: 26px; }
+  .explanation { font-size: 16px; line-height: 24px; }
 }
 
 @media (min-width: 600px) {
-  .page { padding-top: 56px; }
-  .main { padding-top: 48px; }
-  .title { font-size: 58px; line-height: 1.12; letter-spacing: -1.6px; }
+  .page { padding-top: 38px; }
+  .main { padding-top: 36px; }
+  .title { font-size: 48px; line-height: 1.15; letter-spacing: -.8px; }
   .intro { max-width: 470px; }
-  .actions { margin-top: 96px; }
+  .actions { margin-top: 32px; }
   .explanation { max-width: 440px; }
 }
 

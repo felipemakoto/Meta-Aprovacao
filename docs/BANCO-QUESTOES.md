@@ -1,5 +1,7 @@
 # Etapa 19 — banco de questões
 
+Simplificação aprovada em 30/09/2026: Matéria/Assunto à vista, Dificuldade/Prova dentro de Mais filtros, ação Buscar questão e explicação após as alternativas. Os quatro filtros e contratos continuam disponíveis. No roteiro abaixo, abra Mais filtros antes de selecionar dificuldade. Demonstrações regeneradas; detalhes em SIMPLIFICACAO-IMPLEMENTADA.md.
+
 Implementado em 30/09/2026 após aprovação explícita do mockup. Verificações funcionais concluídas; demonstração portátil aprovada manualmente pelo usuário no celular. Comparação automatizada por navegador segue bloqueada; teste com conteúdo real depende de revisão/publicação editorial.
 
 ## O que funciona

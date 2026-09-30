@@ -15,9 +15,10 @@ export default function Dashboard({ summary, preview = false }: { summary: Dashb
     </header>
     <main>
       <h1 className={styles.title}>Seus estudos</h1>
-      <p className={styles.subtitle}>{summary?.latest ? "Retome de onde parou." : summary ? "Seu primeiro resultado começa aqui." : "Vamos tentar novamente."}</p>
-      <Link className={styles.secondary} href="/questoes">Praticar questões por conteúdo</Link>
-      <Link className={styles.secondary} href={preview ? "/historico/preview" : "/historico"}>Ver meu histórico</Link>
+      <nav className={styles.navigation} aria-label="Estudos">
+        <Link className={styles.primary} href={preview ? "/questoes/preview" : "/questoes"}>Praticar questões</Link>
+        <Link className={styles.secondary} href={preview ? "/historico/preview" : "/historico"}>Histórico</Link>
+      </nav>
       {summary === null ? <section className={styles.card} aria-labelledby="dashboard-error">
         <h2 id="dashboard-error" className={styles.cardTitle}>Não foi possível carregar seus estudos</h2>
         <p className={styles.message}>Seus resultados continuam salvos. Tente novamente em alguns instantes.</p>
@@ -27,15 +28,12 @@ export default function Dashboard({ summary, preview = false }: { summary: Dashb
           <h2 id="last-test" className={styles.cardTitle}>Último teste</h2>
           <time className={styles.date} dateTime={latest.completedAt}>{date}</time>
           <p className={styles.score}><strong>{latest.score} de {latest.total}</strong> <span>acertos</span></p>
-          <div className={styles.segments} role="img" aria-label={`${latest.score} acertos em ${latest.total} questões`}>
-            {Array.from({ length: latest.total }, (_, i) => <span key={i} className={i < latest.score ? styles.filled : undefined} />)}
-          </div>
           <p className={styles.message}>{latest.score === latest.total ? "Você acertou todas as questões." : `${latest.total - latest.score} ${latest.total - latest.score === 1 ? "questão para revisar." : "questões para revisar."}`}</p>
-          <Link className={styles.primary} href={`${resultPath}?review=${latest.score === latest.total ? "all" : "errors"}${preview ? `&score=${latest.score}` : ""}`}>{latest.score === latest.total ? "Revisar respostas" : "Revisar meus erros"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></Link>
+          <Link className={styles.reviewLink} href={`${resultPath}?review=${latest.score === latest.total ? "all" : "errors"}${preview ? `&score=${latest.score}` : ""}`}>{latest.score === latest.total ? "Revisar respostas" : "Revisar erros"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></Link>
           <Link className={styles.secondary} href={`${resultPath}${preview ? `?score=${latest.score}` : ""}`}>Ver resultado completo</Link>
         </section> : <section className={styles.card} aria-labelledby="first-test">
           <h2 id="first-test" className={styles.cardTitle}>Ainda não há um teste salvo</h2>
-          <p className={styles.message}>Faça o teste gratuito e salve o resultado na sua conta para voltar às explicações quando precisar.</p>
+          <p className={styles.message}>Faça o teste e salve o resultado para revisar depois.</p>
           <Link className={styles.primary} href="/quiz">Fazer o teste gratuito<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></Link>
           <Link className={styles.secondary} href="/quiz/result">Já terminei um teste</Link>
         </section>}
@@ -44,11 +42,10 @@ export default function Dashboard({ summary, preview = false }: { summary: Dashb
           <dl>
             <div><dt>Questões respondidas</dt><dd>{summary.answered.toLocaleString("pt-BR")}</dd></div>
             <div><dt>Acertos</dt><dd>{summary.correct.toLocaleString("pt-BR")}</dd></div>
-            <div><dt>Simulados</dt><dd className={styles.soon}>Em breve</dd></div>
           </dl>
         </section>
       </>}
     </main>
-    <footer className={styles.footer}>{preview ? "Exemplo visual · dados ilustrativos." : "Atividade dos testes salvos na sua conta."}</footer>
+    <footer className={styles.footer}>{preview ? "Dados ilustrativos." : "Resumo dos testes salvos."}</footer>
   </div>;
 }

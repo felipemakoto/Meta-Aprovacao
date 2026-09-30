@@ -1,10 +1,11 @@
-.title { font-family: var(--font-display), Georgia, serif; font-size: clamp(38px,10.5vw,54px); font-weight: 400; letter-spacing: -.7px; line-height: 1.1; margin: 28px 0 12px; }
-.title::after { content: ""; display: block; width: 41px; height: 3px; background: #c3d5ae; margin-top: 8px; }
-.subtitle { font-size: 17px; line-height: 1.5; margin-bottom: 18px; }
+.title { font-family: var(--font-display), Georgia, serif; font-size: clamp(36px,8vw,44px); font-weight: 400; letter-spacing: -.5px; line-height: 1.15; margin: 28px 0 24px; }
 .filters { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px 12px; }
 .field { min-width: 0; font-size: 15px; }
 .field label { display: block; margin-bottom: 6px; }
 .field select { width: 100%; min-width: 0; min-height: 46px; padding: 8px; border: 1px solid #8c9a93; border-radius: 4px; background: transparent; font: inherit; font-size: 16px; color: var(--foreground); }
+.advanced { grid-column: 1/-1; min-width: 0; }
+.advanced summary { min-height: 44px; padding-block: 12px; color: var(--color-action); cursor: pointer; font-size: 15px; }
+.advancedGrid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px; padding: 8px 0 4px; }
 .apply { grid-column: 1/-1; min-height: 46px; padding: 10px; border: 1px solid var(--color-action); border-radius: 4px; font: inherit; color: var(--color-action); background: transparent; cursor: pointer; }
 .apply:hover:not(:disabled) { background: #edf0e6; }
 .content { border-top: 1px solid var(--color-divider); margin-top: 24px; padding-top: 17px; }

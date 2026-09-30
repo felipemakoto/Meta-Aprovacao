@@ -24,13 +24,13 @@ export default function Home() {
           Como está sua <mark className={styles.highlight}>preparação</mark> para a ETEC e os IFs?
         </h1>
         <p className={styles.intro}>
-          Faça um teste rápido e descubra quais conteúdos você precisa revisar.
+          Responda ao teste e descubra o que revisar.
         </p>
         <StartTestButton />
       </main>
       <footer className={styles.footer}>
         <p className={styles.explanation}>
-          Ao final, veja seus acertos e a explicação de cada questão.
+          Resultado com respostas explicadas.
         </p>
         <p className={styles.disclaimer}>
           Diagnóstico inicial, sem promessa de aprovação.

@@ -1,6 +1,6 @@
 # Simplificação visual — proposta
 
-Pedido: “deixe o site mais clean, facil de entender rapidamente”. Proposta criada em 30/09/2026. Aguardando aprovação antes de modificar as telas, conforme o fluxo visual do pedido original. Aplicação permanece no checkpoint cc5cf68.
+Pedido: “deixe o site mais clean, facil de entender rapidamente”. Proposta criada em 30/09/2026. Usuário aprovou: “está bom assim, pode continua”. Direção aplicada; mudanças e limites em ../SIMPLIFICACAO-IMPLEMENTADA.md. Checkpoint da proposta: 9df6856.
 
 ## Direção
 
@@ -38,4 +38,3 @@ Não criar funcionalidades, novas rotas, dependências ou migrations nesta simpl
 Imagem inspecionada: cabeçalho, título, duas opções, dois registros, notas/erros, datas e ações legíveis. Fundo e botão possuem pequenas variações raster; implementação manterá cores sólidas dos tokens. Nenhuma alteração de código; testes não repetidos para imagens/documentação. Após aprovação: implementar, verificar lint/build e fluxos afetados, regenerar demonstrações portáteis e aguardar teste manual. QA por captura continua com o bloqueio já registrado; não alegar comparação visual automática.
 
 A aprovação prévia é exigida pela seção 73 do pedido original: “Espere minha aprovação. Somente após aprovação: crie React/Tailwind/CSS.”
-

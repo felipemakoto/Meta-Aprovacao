@@ -19,7 +19,7 @@ test('página e detalhe reais redirecionam visitante ao login',async()=>{
 test('prévia disponível apenas em desenvolvimento',async()=>{
  const r=await fetch(origin+'/historico/preview');
  assert.equal(r.status,process.env.HISTORY_TEST_PRODUCTION?404:200);
- if(!process.env.HISTORY_TEST_PRODUCTION)assert.match(await r.text(),/Seu histórico/);
+ if(!process.env.HISTORY_TEST_PRODUCTION)assert.match(await r.text(),/Histórico/);
 });
 test('HTML portátil contém fontes, ícones e JS válido sem ativos externos',async()=>{
  const html=await readFile('out/historico-demonstracao.html','utf8');
@@ -27,4 +27,3 @@ test('HTML portátil contém fontes, ícones e JS válido sem ativos externos',a
  assert.doesNotMatch(html,/<(?:script|link)[^>]+(?:src|href)=/);assert.doesNotMatch(html,/sb_secret_/);
  const js=html.match(/<script>([\s\S]*)<\/script>/)?.[1];assert.ok(js);assert.doesNotThrow(()=>new Function(js));
 });
-

@@ -64,9 +64,9 @@ function ResultContent({ result, preview, saved, initialReview }: { result: Quiz
     <button className={styles.secondary} onClick={() => setReview(null)}>Ver resumo</button>
   </section>;
   return <section className={styles.summary}>
-    <h1 className={styles.title} ref={heading} tabIndex={-1}>{errors.length ? <>O que <mark>revisar</mark></> : "Seu resultado"}</h1>
+    <h1 className={styles.title} ref={heading} tabIndex={-1}>Seu resultado</h1>
     <p className={styles.score}>{score}</p>
-    <p className={styles.intro}>{errors.length ? `Você errou ${errors.length} ${errors.length === 1 ? "questão" : "questões"}. ${errors.length === 1 ? "Comece por este conteúdo." : "Comece por estes conteúdos."}` : "Você acertou todas as questões deste teste. Veja as explicações para revisar os conteúdos."}</p>
+    <p className={styles.intro}>{errors.length ? "Conteúdos para revisar:" : "Você acertou todas. Revise as explicações."}</p>
     {errors.length > 0 && <ol className={styles.topics}>{errors.map((q, index) => <li key={q.id}>
       <button onClick={() => setReview({ mode: "errors", index })} aria-label={`Revisar erro ${index + 1}: ${subjects[q.subject] ?? q.subject}, ${q.topic}`}>
         <span className={styles.number} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>

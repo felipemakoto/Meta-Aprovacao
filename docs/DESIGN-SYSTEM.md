@@ -1,5 +1,7 @@
 # Design system — etapa 4
 
+Atualização de 30/09/2026: direção clean aprovada em design/historico-mobile-v2-clean.png e aplicada às telas existentes. Títulos principais de 34–44px no celular; notas/subtítulos em Geist, divisórias leves, menos molduras e frases repetidas. Entrada com descrição de 18px, apoio de 16px e espaço de 28–32px antes do botão, sem marca-texto. Cores, ícones e foco preservados. Os valores históricos abaixo descrevem a implementação anterior; estado atual em SIMPLIFICACAO-IMPLEMENTADA.md. QA visual novo ainda pendente.
+
 Status: mockup v4 aprovado e entrada implementada. Referência: [entrada-mobile-v4.png](design/entrada-mobile-v4.png). As versões anteriores são histórico.
 
 ## Direção e conteúdo

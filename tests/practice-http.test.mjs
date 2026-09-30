@@ -12,6 +12,6 @@ test('origem e payload malformado bloqueados',async()=>{
 });
 test('prévia mostra filtros, cinco alternativas e seleção sem correção antecipada',async()=>{
  const r=await fetch(origin+'/questoes/preview');assert.equal(r.status,200);const html=await r.text();
- for(const text of ['Matéria','Assunto','Dificuldade','Prova alvo','Conferir resposta','questão ilustrativa'])assert.ok(html.includes(text));
+ for(const text of ['Matéria','Assunto','Mais filtros','Dificuldade','Prova','Buscar questão','Conferir resposta','Dados ilustrativos'])assert.ok(html.includes(text));
  assert.equal((html.match(/type="radio"/g)||[]).length,5);assert.equal(html.includes('Você acertou'),false);assert.equal(html.includes('Snapshot'),false);
 });

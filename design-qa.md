@@ -1,5 +1,7 @@
 # Etapa 20 — histórico
 
+Atualização de 30/09/2026: usuário aprovou historico-mobile-v2-clean.png e autorizou a direção clean nas telas existentes. Código simplificado, demonstração combinada out/site-demonstracao.html e prévias individuais regeneradas. Lint/build/TypeScript, 46 testes de regressão e sete HTTP/arquivo em desenvolvimento passaram. Não houve nova captura ou comparação visual; final result: blocked continua para QA automatizado. Conferência pelo usuário ainda pendente. Registro em docs/SIMPLIFICACAO-IMPLEMENTADA.md.
+
 final result: blocked
 
 Alvo aprovado: docs/design/historico-mobile-v1.png, inspecionado nesta implementação. Rotas /historico e /historico/preview; demonstração portátil out/historico-demonstracao.html. Mantidos tokens, fontes e ícones existentes. Não há nova captura nem comparação visual: política de navegador registrada na etapa 17 continua impedindo inspeção, sem tentativa de contorno. Interação, console, teclado e overflow em dispositivos ainda dependem da conferência manual. Não alegar equivalência visual com base no código.

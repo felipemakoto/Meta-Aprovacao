@@ -1,5 +1,7 @@
 # Prévia demonstrativa para celular fora da rede
 
+Simplificação aprovada: out/site-demonstracao.html reúne seis telas com seletor e navegação local (entrada, estudos, histórico, questões, teste e resultado). Compila scripts/mobile-site-preview.tsx com os componentes reais em modo demonstrativo; nenhuma sessão ou servidor incluído. Link/router adaptados enviam eventos locais somente para rotas de estudo. Conta e salvamento desabilitados. Resultado do teste ilustrativo é fixture, não correção das escolhas. Prévia HTML individual de histórico/questões também atualizada. Arquivo e instruções em SIMPLIFICACAO-IMPLEMENTADA.md; conferência visual pelo celular pendente.
+
 Etapa 20: gerada demonstração portátil adicional out/historico-demonstracao.html a partir do componente History real com preview=true. Script aceita historico como terceiro argumento e adapta next/navigation, além de links e imagens. Troca de listas, carregar mais e revisão usam dados locais ilustrativos; navegação para páginas da aplicação completa desabilitada. Aguardando conferência do usuário; não houve nova tentativa de túnel.
 
 Confirmação posterior em 30/09/2026: após as instruções sobre JavaScript, o usuário informou “está certinho, pode continuar”. Demonstração aprovada manualmente no contexto do acesso pelo celular. Isso não comprova persistência no Supabase ou cada passo do roteiro funcional, nem remove o bloqueio da inspeção automatizada por navegador.

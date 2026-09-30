@@ -61,7 +61,6 @@ export default function SignupForm() {
   </section>;
   return <section>
     <h1 className={styles.title}>Criar conta</h1>
-    <p className={styles.subtitle}>Cadastre-se com seu e-mail.</p>
     <form className={styles.panel} onSubmit={submit} noValidate aria-busy={busy}>
       <fieldset disabled={busy} className={styles.fields}>
         <div className={styles.field}>

@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Simplificação visual aprovada — 30/09/2026
+
+Aplicar historico-mobile-v2-clean.png e a direção aprovada às telas existentes. Serifada para títulos principais, sans para notas e detalhes; retirar frases redundantes, ornamentos e recursos futuros não disponíveis. Preservar informação necessária para agir (labels, estados, confirmação, recuperação e explicações). Filtros adicionais nativos em details conservam contratos/IDs. Feedback da prática fica após as alternativas, com foco e região de status. Datas do histórico incluem ano para distinguir registros. Demonstração combinada é ferramenta local, não rota ou publicação; exemplos nunca são fallback de produção. Documentação em SIMPLIFICACAO-IMPLEMENTADA.md.
+
 ## Etapa 20 — histórico privado por conclusão
 
 Histórico separa testes diagnósticos associados à conta de questões individuais respondidas. Reutiliza snapshots existentes, sem copiar dados para tabela pública ou consultar gabarito vivo. Duas RPCs de leitura restritas ao servidor verificam conta confirmada e propriedade; service_role continua sem SELECT direto nas tabelas privadas. Paginação por completed_at e UUID desc preserva microssegundos, com 20 registros por página; consulta adicional decide a próxima página. Lista não inclui gabaritos ou explicações. Detalhe só retorna resposta concluída da própria conta. Migração nova preserva todas as anteriores.

@@ -1,5 +1,7 @@
 # Etapa 20 — histórico
 
+Visual atualizado após aprovação de historico-mobile-v2-clean.png: abas agora Testes e Questões, registros compactos com data curta e ano, nota em sans e ação de revisão junto ao número de erros. Para testar todas as telas simplificadas em um único arquivo, use out/site-demonstracao.html. Detalhes em SIMPLIFICACAO-IMPLEMENTADA.md; roteiro abaixo usa os nomes anteriores das abas.
+
 Implementação autorizada em 30/09/2026 após aprovação de design/historico-mobile-v1.png. Testes técnicos concluídos; conferência visual e interação manual aguardam o usuário.
 
 ## Objetivo e resultado
@@ -61,4 +63,3 @@ Copy-Item -LiteralPath 'C:\Users\felip\.codex\previews\etec-if-stage19\historico
 ## Estado e próximo passo
 
 Implementação e verificações disponíveis concluídas. Pausa para teste do usuário da etapa 20. Etapa 21 (simulados) não iniciada. Não publicar conteúdo, abrir túnel ou avançar antes desse teste.
-

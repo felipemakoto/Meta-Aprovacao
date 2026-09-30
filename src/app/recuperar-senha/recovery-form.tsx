@@ -44,7 +44,7 @@ export default function RecoveryForm({update=false,preview=false}:{update?:boole
   </section>;
   return <section>
     <h1 className={styles.title}>{update ? "Nova senha" : "Recuperar senha"}</h1>
-    <p className={styles.subtitle}>{update ? "Escolha sua nova senha." : "Receba um link para criar uma nova senha."}</p>
+    {!update && <p className={styles.subtitle}>Receba um link por e-mail.</p>}
     <form className={styles.panel} onSubmit={submit} aria-busy={busy}>
       <fieldset className={styles.fields} disabled={busy}>
         {update ? <><PasswordField name="password" label="Nova senha" placeholder="Crie uma senha" /><PasswordField name="confirmPassword" label="Confirmar senha" placeholder="Repita a senha" /></> : <div className={styles.field}><label htmlFor="recovery-email">E-mail</label><input id="recovery-email" name="email" type="email" required maxLength={254} autoComplete="email" autoCapitalize="none" inputMode="email" spellCheck={false} placeholder="voce@exemplo.com" /></div>}

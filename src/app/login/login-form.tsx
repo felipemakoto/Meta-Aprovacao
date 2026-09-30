@@ -37,7 +37,7 @@ export default function LoginForm({ signedIn }: { signedIn: boolean }) {
   }
   return <section>
     <h1 className={styles.title}>{signedIn ? "Você está na sua conta" : "Entrar"}</h1>
-    <p className={styles.subtitle}>{signedIn ? "Sua sessão está ativa neste navegador." : "Use seu e-mail e sua senha."}</p>
+    {signedIn && <p className={styles.subtitle}>Sua sessão está ativa neste navegador.</p>}
     <form className={styles.panel} onSubmit={submit} aria-busy={busy}>
       <fieldset className={styles.fields} disabled={busy}>
         {!signedIn && <>
@@ -53,7 +53,7 @@ export default function LoginForm({ signedIn }: { signedIn: boolean }) {
       <noscript>Ative o JavaScript para entrar ou sair da conta.</noscript>
     </form>
     {!signedIn && <><p className={styles.note}><Link href="/recuperar-senha">Esqueci minha senha</Link></p><p className={styles.note}>Ainda não tem conta? <Link href="/cadastro">Criar conta</Link></p></>}
-    {signedIn && <><Link className={styles.skip} href="/dashboard">Ver meus estudos</Link><Link className={styles.skip} href="/quiz/result/saved">Ver último resultado salvo</Link><Link className={styles.skip} href="/quiz/result">Voltar ao resultado do teste para salvar</Link></>}
+    {signedIn && <><Link className={styles.skip} href="/dashboard">Meus estudos</Link><Link className={styles.skip} href="/quiz/result">Salvar teste concluído</Link></>}
     <Link className={styles.skip} href="/">{signedIn ? "Voltar ao início" : "Continuar sem conta"}</Link>
   </section>;
 }
