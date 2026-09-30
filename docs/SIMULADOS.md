@@ -1,5 +1,7 @@
 # Etapa 21 — simulados
 
+Usuário aprovou manualmente a demonstração em 30/09/2026: “está bom, pode continuar”. Checkpoint 1f8a0f7. Próxima etapa: proposta visual das estatísticas. Conferência da demonstração não comprova persistência real pelo usuário nem substitui as limitações de QA registradas abaixo.
+
 Implementada em 30/09/2026 após aprovação de design/simulados-mobile-v1.png: “pode usar esse visual e seguir”. Catálogo em /simulados, acesso pelo dashboard, tentativa em /simulados/[id] e categoria Simulados no histórico. Prévia ilustrativa em /simulados/preview somente em desenvolvimento.
 
 ## Comportamento

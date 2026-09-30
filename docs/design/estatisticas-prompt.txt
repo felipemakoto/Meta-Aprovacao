@@ -1,0 +1,18 @@
+Generate ONE mobile website mockup for the new "Estatísticas" page of ETEC / IF, an existing Portuguese study app. Use attached approved Simulados screenshot only as visual language reference. Preserve ivory solid #F7F6F0, deep green #172B25, secondary text #53645D, forest green #174D38, thin #D8DED7 dividers, modest 5px radii, moderate DM Serif Display main title and Geist sans-serif body. Flat portrait app screenshot, no phone frame, no device chrome, no texture, no gradients, no decorative shapes, no illustrations, no KPI card grid, no huge numbers, no bar charts. Natural mobile column designed for 390x844 CSS px, about 24px horizontal padding, min44px tap areas; allow full-page portrait approximately 1000x1700 if required to fit all sections. All text exact Brazilian Portuguese, comfortable body 16px. One uncluttered layout using text and rules.
+Header: existing square forest-green northeast arrow brand mark and ETEC / IF on left; "Meus estudos" right; fine bottom divider.
+Main title "Estatísticas" 36px serif, one line.
+Compact full-width native select below, label "Período", value "Todo o período", simple downward caret.
+A plain typographic summary below, NO card: "42 de 60 acertos" at 24px sans semibold. Small secondary line "18 erros · 2 simulados".
+Section heading "Por matéria", 19px sans semibold, separated by subtle thin rules. Five short list rows, material left, fractions and modest percentage right, values:
+"Matemática" — "18 de 30 · 60%"
+"Português" — "9 de 12 · 75%"
+"Ciências" — "5 de 6 · 83%"
+"História" — "4 de 6 · 67%"
+"Geografia" — "6 de 6 · 100%"
+Keep columns readable at mobile size, no strength/weakness labels, badges or trophy icons.
+Section heading "Simulados recentes", 19px sans semibold, then two compact rows:
+"Matemática" with small date "30 set." and "12 de 20 acertos".
+"Simulado rápido" with small date "28 set." and "7 de 10 acertos".
+These are two individual results, not a trend claim. No upward trend arrow or growth narrative.
+Finally a text link with simple left arrow before text, aligned LEFT, "Ver histórico". Footer tiny muted "Dados ilustrativos."
+All numbers illustrative, no real user data. Totals consistent: 60 answered, 42 correct, 18 wrong; subject counts sum to 60 and correct counts to42. Latest simulations represent only part of total activity. Make hierarchy quick to understand. Use no paragraph explaining statistical internals. Do not promise passing an exam or mastery. This is a SINGLE approved-style proposal, not a collage or multiple variants.
