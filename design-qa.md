@@ -1,3 +1,11 @@
+# Etapa 19 — banco de questões
+
+final result: blocked
+
+Fonte aprovada: docs/design/questoes-mobile-v1.png. Implementação: /questoes/preview, com Matemática/Porcentagem, todas as dificuldades e B selecionada. Marca, ícones e estilos do quiz reutilizados; filtros e título reproduzem a hierarquia aprovada. Textura rasterizada do mockup não entra no fundo sólido do produto. Nenhum novo ativo raster necessário.
+
+Captura/viewport/comparação conjunta indisponíveis devido à recusa de política de navegador anterior; não houve contorno. Não se declara fidelidade visual aprovada. Tipografia, espaçamentos, tokens, controles, quebras em 320/390/desktop, teclado e console ainda precisam de inspeção renderizada. Verificações disponíveis: 10 testes Node, SQL de filtros/isolamento/snapshot/expiração/idempotência/limite, lint/build e proteção de produção. Roteiro manual em docs/BANCO-QUESTOES.md.
+
 # Etapa 18 — dashboard
 
 Em 30/09/2026, o usuário aprovou manualmente o visual exibido em /dashboard/preview. A confirmação não inclui todos os estados, revisão por teclado ou consulta a resultados reais. O resultado abaixo se refere especificamente à comparação automatizada bloqueada.

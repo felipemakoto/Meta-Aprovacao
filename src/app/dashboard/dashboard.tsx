@@ -16,6 +16,7 @@ export default function Dashboard({ summary, preview = false }: { summary: Dashb
     <main>
       <h1 className={styles.title}>Seus estudos</h1>
       <p className={styles.subtitle}>{summary?.latest ? "Retome de onde parou." : summary ? "Seu primeiro resultado começa aqui." : "Vamos tentar novamente."}</p>
+      <Link className={styles.secondary} href="/questoes">Praticar questões por conteúdo</Link>
       {summary === null ? <section className={styles.card} aria-labelledby="dashboard-error">
         <h2 id="dashboard-error" className={styles.cardTitle}>Não foi possível carregar seus estudos</h2>
         <p className={styles.message}>Seus resultados continuam salvos. Tente novamente em alguns instantes.</p>

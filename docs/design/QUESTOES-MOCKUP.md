@@ -1,6 +1,6 @@
 # Etapa 19 — banco de questões
 
-Proposta visual criada em 30/09/2026, após aprovação manual do dashboard. Imagem: questoes-mobile-v1.png. Aguardando aprovação para implementação; nenhuma alteração na aplicação ou no banco nesta preparação.
+Proposta visual criada em 30/09/2026, após aprovação manual do dashboard. Imagem: questoes-mobile-v1.png. Usuário aprovou: “sim, pode continuar”. Implementação após aprovação registrada em ../BANCO-QUESTOES.md.
 
 ## Objetivo e hierarquia
 

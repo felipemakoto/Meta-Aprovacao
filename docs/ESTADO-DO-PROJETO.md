@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Etapa 19 em 30/09/2026: mockup aprovado e banco de questões implementado. Filtros, questão individual, snapshot por conta, correção e explicação no servidor, estados e prévia dev concluídos. Migration 20260930120000 aplicada; 10 testes Node, SQL, lint/build e verificação de produção aprovados. QA visual por captura continua bloqueado, teste manual pendente. Nenhuma questão real publicada. Detalhes em BANCO-QUESTOES.md. Etapa 20 não iniciada.
+
 Atualização de 30/09/2026: usuário aprovou manualmente o dashboard na prévia: “Está bom pode continuar”. Checkpoint anterior: 1eb47a4. Aprovação visual manual registrada; QA por captura e persistência real ainda têm os limites descritos em DASHBOARD.md. Etapa 19 iniciada pela proposta visual do banco de questões, em design/questoes-mobile-v1.png. Implementação aguardará aprovação conforme o fluxo original. Nenhuma questão publicada.
 
 Etapa 18 em 29/09/2026: dashboard implementado após aprovação do mockup. Página autenticada, agregados reais por proprietário, estados vazio/erro, links e revisão direta concluídos. Migration 20260929140000 aplicada; seis migrations sincronizadas. 18 testes Node, SQL, lint, build e checagens de produção aprovados. QA visual bloqueado pela política de navegador já registrada; aguardando conferência manual. Prévia local disponível. Detalhes em DASHBOARD.md. Etapa 19 não iniciada.

@@ -1,0 +1,22 @@
+.title { font-family: var(--font-display), Georgia, serif; font-size: clamp(38px,10.5vw,54px); font-weight: 400; letter-spacing: -.7px; line-height: 1.1; margin: 28px 0 12px; }
+.title::after { content: ""; display: block; width: 41px; height: 3px; background: #c3d5ae; margin-top: 8px; }
+.subtitle { font-size: 17px; line-height: 1.5; margin-bottom: 18px; }
+.filters { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px 12px; }
+.field { min-width: 0; font-size: 15px; }
+.field label { display: block; margin-bottom: 6px; }
+.field select { width: 100%; min-width: 0; min-height: 46px; padding: 8px; border: 1px solid #8c9a93; border-radius: 4px; background: transparent; font: inherit; font-size: 16px; color: var(--foreground); }
+.apply { grid-column: 1/-1; min-height: 46px; padding: 10px; border: 1px solid var(--color-action); border-radius: 4px; font: inherit; color: var(--color-action); background: transparent; cursor: pointer; }
+.apply:hover:not(:disabled) { background: #edf0e6; }
+.content { border-top: 1px solid var(--color-divider); margin-top: 24px; padding-top: 17px; }
+.metadata { color: var(--color-text-secondary); font-size: 14px; margin: 0; }
+.question { margin: 12px 0 18px; }
+.options { border: 0; padding: 0; margin: 0; }
+.help { text-align: center; font-size: 13px; color: var(--color-text-secondary); margin: 12px 0 0; }
+.feedback { border-left: 3px solid var(--color-action); padding: 4px 0 4px 14px; margin-top: 22px; font-size: 16px; line-height: 1.55; }
+.feedback h3 { font-size: 20px; margin: 0 0 10px; }
+.feedback p { margin: 8px 0; }
+.notice { font-size: 16px; line-height: 1.5; margin-top: 20px; color: var(--color-text-secondary); }
+.footer { border-top: 1px solid var(--color-divider); margin-top: 20px; padding-top: 14px; font-size: 12px; line-height: 1.5; color: var(--color-text-secondary); }
+.apply:disabled { opacity: .6; cursor: not-allowed; }
+@media(min-width:600px){.title{margin-top:36px;}.filters{gap:20px;}.content{margin-top:30px;}}
+@media(max-width:359px){.filters{gap:12px 8px;}.field select{padding-inline:5px;}}

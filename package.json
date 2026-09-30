@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:practice": "node --test tests/practice.test.mjs",
+    "test:practice:http": "node --test tests/practice-http.test.mjs",
     "test:dashboard": "node --test tests/dashboard.test.mjs",
     "test:dashboard:http": "node --test tests/dashboard-http.test.mjs",
     "test:claim": "node --test tests/quiz-claim.test.mjs",
