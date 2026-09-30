@@ -1,0 +1,13 @@
+# Prévia demonstrativa para celular fora da rede
+
+Preparada em 30/09/2026 após o usuário informar que usa Codex Remote no celular fora da rede do computador. localhost não é acessível nesse cenário.
+
+A demonstração compila o componente real Practice com preview=true. Adapta next/link e next/image para elementos HTML simples, mantendo os estilos e fontes locais. Links de navegação da aplicação ficam desabilitados; filtros e correção ilustrativa usam a lógica do componente. Nenhuma API, credencial, sessão, configuração Supabase ou arquivo de servidor é incluído.
+
+scripts/build-mobile-preview.mjs gera arquivos estáticos em uma pasta externa usando esbuild instalado somente nessa pasta, sem alterar dependências do projeto. scripts/serve-mobile-preview.mjs carrega uma lista restrita de assets em memória e escuta apenas em 127.0.0.1:4175. Sem cookies, POST, diretório público genérico ou proxy de rotas. CSP bloqueia conexões externas e formulários. Servidor encerra após 12 horas.
+
+Assets gerados em C:/Users/felip/.codex/previews/etec-if-stage19/public. Binário cloudflared obtido da release oficial cloudflare/cloudflared no GitHub e hash conferido contra o digest da release. Dois testes locais de assets/fontes/isolamento passaram. Não há inspeção visual por navegador nesta rodada.
+
+Publicação externa ainda não realizada: a revisão automática rejeitou o comando combinado que iniciaria servidor e túnel, com mensagem blocked by policy e sem motivo adicional. Servidor estático local foi iniciado separadamente, como alternativa sem exposição externa. Solicitada autorização explícita para disponibilizar apenas esta demonstração em link público temporário pelo Cloudflare. Não publicar a aplicação Next, APIs ou conteúdo de conta por meio desse túnel.
+
+Não afirmar que o usuário acessou a prévia ou que existe link externo antes da verificação. Túnel e assets são uma demonstração temporária, não deploy do produto.
