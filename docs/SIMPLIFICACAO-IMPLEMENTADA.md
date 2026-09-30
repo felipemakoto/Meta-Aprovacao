@@ -1,5 +1,7 @@
 # Simplificação visual implementada
 
+Ajuste posterior pedido pelo usuário: Voltar ao histórico alinhado à esquerda da coluna, com seta para a esquerda antes do texto. Aplicado à prévia, detalhe real e erro; arquivos site/histórico regenerados. Lint, TypeScript e quatro verificações HTTP/arquivo passaram; interação visual aguarda conferência manual.
+
 Usuário aprovou historico-mobile-v2-clean.png: “está bom assim, pode continua”. Implementação aplicada em 30/09/2026 à entrada, dashboard, histórico, prática, resultado, login/cadastro e recuperação. Estilo mantém cores marfim/verde, fonte Geist e títulos DM Serif Display.
 
 ## Mudanças
@@ -42,4 +44,3 @@ Lint, build e TypeScript aprovados. 46 testes de regressão de histórico/dashbo
 QA visual automatizado segue bloqueado pela política de navegador já registrada; não houve contorno, captura nova ou alegação de equivalência visual. Teclado/interações e dimensões no aparelho aguardam teste manual. Execução HTTP de produção permanece pendente pelo bloqueio anterior do servidor temporário; não foi repetida nesta revisão. Build não substitui essas verificações. Nenhum túnel ou deploy.
 
 Pausa para teste desta simplificação. Etapa 21 não iniciada.
-

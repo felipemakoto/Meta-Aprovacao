@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Ajuste solicitado após simplificação: Voltar ao histórico alinhado à esquerda da coluna de conteúdo, com seta antes do texto, na demonstração, no detalhe real e no estado de erro. Reutilizado ícone oficial existente com rotação. Demonstrações site/histórico regeneradas; lint, TypeScript e quatro testes HTTP/arquivo aprovados. Conferência visual manual pendente; bloqueio anterior de captura preservado. Checkpoint anterior: 1614b2f.
+
 Simplificação visual implementada em 30/09/2026 após aprovação de design/historico-mobile-v2-clean.png. Entrada, dashboard, histórico, prática, resultado e conta com menos texto repetido, títulos menores e ações agrupadas. Demonstração combinada out/site-demonstracao.html e prévias individuais regeneradas. Lint/build/TypeScript, 46 testes de regressão, quatro HTTP/arquivo de histórico e três HTTP de prática aprovados. QA visual e HTTP de produção mantêm limitações anteriores; teste manual pendente. Banco, dependências e regras de autenticação/correção preservados. Detalhes em SIMPLIFICACAO-IMPLEMENTADA.md. Último checkpoint: consultar git log -1 --oneline; anterior: 9df6856. Etapa 21 não iniciada.
 
 Pedido de simplificação visual em 30/09/2026: proposta do histórico mais compacto em design/historico-mobile-v2-clean.png e direção para as demais telas em design/SIMPLIFICACAO-VISUAL.md. Aguardando aprovação do novo visual conforme fluxo original antes de alterar React/CSS. Aplicação permanece no checkpoint cc5cf68; banco e dependências preservados. Etapa 21 não iniciada.

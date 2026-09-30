@@ -43,7 +43,7 @@ export default function History({preview=false,unavailable=false,initialKind="te
   finally{clearTimeout(timeout);if(controller.current===ac){lock.current=false;setBusy(false);}}
  }
  function change(next:HistoryKind){if(next===kind||unavailable)return;controller.current?.abort();controller.current=null;lock.current=false;setDetail(null);setError("");setBusy(!preview);setKind(next);setPage(preview?{items:next==="tests"?demoTests.slice(0,2):[demoReview],next:next==="tests"?demoTests[1]:null}:{items:[],next:null});}
- if(preview&&detail)return <div><button className={base.back} onClick={()=>setDetail(null)}>Voltar ao histórico</button>{kind==="tests"?<Result preview={demoResult(detail)} saved/>:<div className={base.page}><PracticeReview review={demoReview}/><p className={styles.footer}>Exemplo visual · dados ilustrativos.</p></div>}</div>;
+ if(preview&&detail)return <div><div className={styles.backRow}><button className={styles.backLink} onClick={()=>setDetail(null)}><Image className={styles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</button></div>{kind==="tests"?<Result preview={demoResult(detail)} saved/>:<div className={base.page}><PracticeReview review={demoReview}/><p className={styles.footer}>Exemplo visual · dados ilustrativos.</p></div>}</div>;
  return <div className={base.page}>
  <header className={base.header}><Link href="/" className={base.brand}><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt=""/></span>ETEC / IF</Link><Link href="/dashboard" className={base.exit}>Meus estudos</Link></header>
  <main><h1 className={styles.title}>Histórico</h1>
