@@ -2,9 +2,9 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Etapa 19 implementada: [banco de questões](docs/BANCO-QUESTOES.md) em /questoes, com filtros e correção protegida. Prévia /questoes/preview somente em desenvolvimento. Testes funcionais aprovados; conferir visual e interação manualmente. Questões reais continuam em rascunho.
+Etapa 19 implementada: [banco de questões](docs/BANCO-QUESTOES.md) em /questoes, com filtros e correção protegida. Demonstração portátil aprovada pelo usuário no celular. Prévia /questoes/preview somente em desenvolvimento. Testes funcionais aprovados; questões reais continuam em rascunho.
 
-Etapa 18 implementada: [dashboard](docs/DASHBOARD.md) em /dashboard, com totais reais e revisão direta. Usuário aprovou o visual da prévia em 30/09/2026. Testes funcionais aprovados; comparação visual automatizada segue bloqueada. Etapa 19: [mockup do banco de questões](docs/design/QUESTOES-MOCKUP.md) preparado, aguardando aprovação antes de implementar.
+Etapa 18 implementada: [dashboard](docs/DASHBOARD.md) em /dashboard, com totais reais e revisão direta. Usuário aprovou o visual da prévia em 30/09/2026. Testes funcionais aprovados; comparação visual automatizada segue bloqueada.
 
 Etapa 17 implementada: [associar tentativa à conta](docs/ASSOCIAR-TENTATIVA.md). Resultado real oferece Salvar na minha conta; Minha conta permite abrir o último resultado salvo. Migration aplicada e testes passaram. Usuário confirmou os links em 29/09/2026. Prévia não salva dados; questões continuam em rascunho. Teste de gravação real pelo usuário pendente.
 

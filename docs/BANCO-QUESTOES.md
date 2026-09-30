@@ -1,6 +1,6 @@
 # Etapa 19 — banco de questões
 
-Implementado em 30/09/2026 após aprovação explícita do mockup. Verificações funcionais concluídas; comparação visual por navegador e teste manual do usuário pendentes.
+Implementado em 30/09/2026 após aprovação explícita do mockup. Verificações funcionais concluídas; demonstração portátil aprovada manualmente pelo usuário no celular. Comparação automatizada por navegador segue bloqueada; teste com conteúdo real depende de revisão/publicação editorial.
 
 ## O que funciona
 

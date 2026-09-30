@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Confirmação em 30/09/2026: usuário aprovou a demonstração portátil da etapa 19 após acesso pelo celular (“está certinho, pode continuar”). Checkpoint de geração: a135253. Conteúdo real permanece em rascunho; teste de persistência pelo usuário depende da revisão editorial. Próxima etapa: 20 — proposta visual do histórico, antes de React/CSS.
+
 Etapa 19 em 30/09/2026: mockup aprovado e banco de questões implementado. Filtros, questão individual, snapshot por conta, correção e explicação no servidor, estados e prévia dev concluídos. Migration 20260930120000 aplicada; 10 testes Node, SQL, lint/build e verificação de produção aprovados. QA visual por captura continua bloqueado, teste manual pendente. Nenhuma questão real publicada. Detalhes em BANCO-QUESTOES.md. Etapa 20 não iniciada.
 
 Atualização de 30/09/2026: usuário aprovou manualmente o dashboard na prévia: “Está bom pode continuar”. Checkpoint anterior: 1eb47a4. Aprovação visual manual registrada; QA por captura e persistência real ainda têm os limites descritos em DASHBOARD.md. Etapa 19 iniciada pela proposta visual do banco de questões, em design/questoes-mobile-v1.png. Implementação aguardará aprovação conforme o fluxo original. Nenhuma questão publicada.

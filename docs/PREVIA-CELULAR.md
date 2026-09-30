@@ -1,5 +1,7 @@
 # Prévia demonstrativa para celular fora da rede
 
+Confirmação posterior em 30/09/2026: após as instruções sobre JavaScript, o usuário informou “está certinho, pode continuar”. Demonstração aprovada manualmente no contexto do acesso pelo celular. Isso não comprova persistência no Supabase ou cada passo do roteiro funcional, nem remove o bloqueio da inspeção automatizada por navegador.
+
 Preparada em 30/09/2026 após o usuário informar que usa Codex Remote no celular fora da rede do computador. localhost não é acessível nesse cenário.
 
 A demonstração compila o componente real Practice com preview=true. Adapta next/link e next/image para elementos HTML simples, mantendo os estilos e fontes locais. Links de navegação da aplicação ficam desabilitados; filtros e correção ilustrativa usam a lógica do componente. Nenhuma API, credencial, sessão, configuração Supabase ou arquivo de servidor é incluído.
