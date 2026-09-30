@@ -1,0 +1,19 @@
+.title{font-family:var(--font-display),Georgia,serif;font-weight:400;font-size:clamp(36px,7vw,54px);line-height:1.15;margin:32px 0 18px}
+.subtitle{font-size:20px;line-height:1.5;margin-bottom:26px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tabs button,.more{font:inherit;border:1px solid var(--color-action);border-radius:5px;min-height:52px;background:transparent;color:var(--color-text);padding:10px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--color-action);color:white}
+.list{list-style:none;padding:0;margin:0}
+.item{padding:28px 0;border-bottom:1px solid var(--color-divider)}
+.date{display:block;font-weight:600;font-size:20px;margin-bottom:20px}
+.label,.message{color:var(--color-text-secondary);line-height:1.5;margin:12px 0}
+.score{font-family:var(--font-display),Georgia,serif;font-size:clamp(32px,6vw,44px);font-weight:400;margin:8px 0;overflow-wrap:anywhere}
+.action{display:flex;align-items:center;gap:12px;color:var(--color-action);min-height:44px;width:fit-content;margin-top:14px;border:0;background:transparent;font:inherit;cursor:pointer;padding:0}
+.more{width:100%;margin:24px 0 0}
+.more:disabled{cursor:wait;opacity:.6}
+.footer{border-top:1px solid var(--color-divider);color:var(--color-text-secondary);font-size:12px;margin-top:24px;padding-top:20px}
+.detail{margin-top:24px}
+.options{padding-left:28px;line-height:1.5}
+.options li{padding:8px}
+.explanation{border-top:1px solid var(--color-divider);margin-top:24px;padding-top:20px;line-height:1.6;white-space:pre-line}
+@media(max-width:359px){.tabs button{font-size:14px}.subtitle{font-size:18px}}

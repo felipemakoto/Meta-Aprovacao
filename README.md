@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Etapa 20 implementada: [histórico](docs/HISTORICO.md) em /historico, separando testes salvos e questões praticadas, com paginação e revisão privada. Demonstração portátil em out/historico-demonstracao.html. Testes técnicos aprovados; conferência manual pendente. QA visual e teste HTTP de produção bloqueados.
+
 Etapa 19 implementada: [banco de questões](docs/BANCO-QUESTOES.md) em /questoes, com filtros e correção protegida. Demonstração portátil aprovada pelo usuário no celular. Prévia /questoes/preview somente em desenvolvimento. Testes funcionais aprovados; questões reais continuam em rascunho.
 
 Etapa 18 implementada: [dashboard](docs/DASHBOARD.md) em /dashboard, com totais reais e revisão direta. Usuário aprovou o visual da prévia em 30/09/2026. Testes funcionais aprovados; comparação visual automatizada segue bloqueada.

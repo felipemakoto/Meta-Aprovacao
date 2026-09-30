@@ -1,3 +1,13 @@
+# Etapa 20 — histórico
+
+final result: blocked
+
+Alvo aprovado: docs/design/historico-mobile-v1.png, inspecionado nesta implementação. Rotas /historico e /historico/preview; demonstração portátil out/historico-demonstracao.html. Mantidos tokens, fontes e ícones existentes. Não há nova captura nem comparação visual: política de navegador registrada na etapa 17 continua impedindo inspeção, sem tentativa de contorno. Interação, console, teclado e overflow em dispositivos ainda dependem da conferência manual. Não alegar equivalência visual com base no código.
+
+Build/lint, 22 testes Node, quatro HTTP/arquivo em desenvolvimento e SQL passaram. São verificações técnicas e não substituem QA visual. Revisão automática também bloqueou o comando do servidor de produção temporário com blocked by policy; HTTP de produção não executado. Nenhum servidor temporário foi iniciado por esse comando.
+
+O usuário já autorizou implementação e aprovou o caminho de demonstração portátil na etapa 19. A entrega para seu teste manual segue esse escopo; a verificação visual desta etapa continua pendente.
+
 # Etapa 19 — banco de questões
 
 final result: blocked

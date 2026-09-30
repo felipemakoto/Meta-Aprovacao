@@ -11,16 +11,16 @@ import styles from "./result.module.css";
 
 const subjects: Record<string,string> = { matematica: "Matemática", portugues: "Português", ciencias: "Ciências", historia: "História", geografia: "Geografia" };
 type Screen = { kind: "loading" } | { kind: "ready"; result: QuizResult } | { kind: "error"; expired: boolean; login: boolean };
-export default function Result({ preview, saved = false, initialReview }: { preview?: QuizResult; saved?: boolean; initialReview?: "errors" | "all" }) {
-  const [screen, setScreen] = useState<Screen>(preview ? { kind: "ready", result: preview } : { kind: "loading" });
+export default function Result({ preview, initialResult, saved = false, initialReview }: { preview?: QuizResult; initialResult?: QuizResult; saved?: boolean; initialReview?: "errors" | "all" }) {
+  const [screen, setScreen] = useState<Screen>(preview || initialResult ? { kind: "ready", result: (preview ?? initialResult)! } : { kind: "loading" });
   const [retry, setRetry] = useState(0);
   useEffect(() => {
-    if (preview) return;
+    if (preview || initialResult) return;
     let active = true;
     requestResult(undefined, saved).then(result => { if (active) setScreen({ kind: "ready", result }); },
       error => { if (active) setScreen({ kind: "error", expired: error instanceof ResultRequestError && [401,404].includes(error.status), login: saved && error instanceof ResultRequestError && error.status === 401 }); });
     return () => { active = false; };
-  }, [preview, retry, saved]);
+  }, [preview, initialResult, retry, saved]);
   return <div className={base.page}>
     <header className={base.header}>
       <Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF</Link>

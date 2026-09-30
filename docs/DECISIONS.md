@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 20 — histórico privado por conclusão
+
+Histórico separa testes diagnósticos associados à conta de questões individuais respondidas. Reutiliza snapshots existentes, sem copiar dados para tabela pública ou consultar gabarito vivo. Duas RPCs de leitura restritas ao servidor verificam conta confirmada e propriedade; service_role continua sem SELECT direto nas tabelas privadas. Paginação por completed_at e UUID desc preserva microssegundos, com 20 registros por página; consulta adicional decide a próxima página. Lista não inclui gabaritos ou explicações. Detalhe só retorna resposta concluída da própria conta. Migração nova preserva todas as anteriores.
+
+Página de resultado aceita initialResult validado no servidor para revisar qualquer teste salvo, mantendo o fluxo anterior de último resultado. Demo portátil usa o componente real com dados ilustrativos locais, sem Supabase ou publicação externa. Limites de verificação em HISTORICO.md: QA visual e execução HTTP de produção bloqueados; aguardando teste manual antes de simulados.
+
 Este documento registra escolhas, razões e consequências. O estado operacional e as versões verificadas ficam em ESTADO-DO-PROJETO.md. As decisões abaixo não significam que funcionalidades futuras já estejam implementadas.
 
 ## Base adotada na etapa 1

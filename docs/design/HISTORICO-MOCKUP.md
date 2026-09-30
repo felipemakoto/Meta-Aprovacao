@@ -1,6 +1,6 @@
 # Etapa 20 — proposta visual do histórico
 
-Proposta criada em 30/09/2026 após aprovação da demonstração portátil da etapa 19. Referência: historico-mobile-v1.png. Aguardando aprovação antes de implementar React/CSS, rotas ou migrations.
+Proposta criada em 30/09/2026 após aprovação da demonstração portátil da etapa 19. Referência: historico-mobile-v1.png. Usuário autorizou: “pode implementar”. Implementação e limites em ../HISTORICO.md.
 
 ## Objetivo, hierarquia e estrutura
 
@@ -28,4 +28,3 @@ Fundo marfim, texto verde profundo, divisórias finas, títulos DM Serif Display
 Ferramenta integrada image_gen, com dashboard-mobile-v1.png como referência de estilo. Prompt integral em historico-prompt.txt. Imagem inspecionada: títulos, abas, datas, notas, contagem de erros e ações coerentes; 7/10 corresponde a 3 erros e 6/10 a 4. Nenhuma alteração na aplicação, dependências ou banco. Não há testes de código nesta proposta exclusivamente visual.
 
 A pausa para aprovação segue a seção 73 do pedido original: mostrar o mockup, esperar aprovação e somente depois criar React/Tailwind/CSS.
-

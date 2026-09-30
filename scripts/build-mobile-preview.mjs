@@ -1,8 +1,11 @@
-// Gera apenas a demonstração do banco de questões; nenhuma rota ou variável de servidor.
+// Gera demonstrações locais de componentes em preview; nenhuma rota ou variável de servidor.
 import { readFile, writeFile, mkdir, readdir, copyFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 const project=process.cwd();
+const screen=process.argv[3]||'questoes';
+if(!['questoes','historico'].includes(screen))throw new Error('Prévia desconhecida.');
+const component=screen==='historico'?'src/app/historico/history.tsx':'src/app/questoes/practice.tsx';
 const taskRoot=path.resolve(process.argv[2]||'');
 if(!process.argv[2] || taskRoot===project)throw new Error('Informe uma pasta externa de ferramentas/prévia.');
 const {build}=await import(pathToFileURL(path.join(taskRoot,'node_modules/esbuild/lib/main.js')).href);
@@ -10,8 +13,9 @@ const output=path.join(taskRoot,'public');await mkdir(output,{recursive:true});
 await mkdir(path.join(output,'icons'),{recursive:true});await mkdir(path.join(output,'fonts'),{recursive:true});
 await writeFile(path.join(taskRoot,'link.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))}; export default function Link({children,...props}:any){return <a {...props} href="#" aria-disabled="true" title="Navegação disponível na aplicação completa" onClick={e=>e.preventDefault()}>{children}</a>}`);
 await writeFile(path.join(taskRoot,'image.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))}; export default function Image(props:any){return <img {...props}/>}`);
-await writeFile(path.join(taskRoot,'entry.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))};import {createRoot} from ${JSON.stringify(path.join(project,'node_modules/react-dom/client.js'))};import Practice from ${JSON.stringify(path.join(project,'src/app/questoes/practice.tsx'))};createRoot(document.getElementById('root')!).render(<Practice preview/>);`);
-await build({entryPoints:[path.join(taskRoot,'entry.tsx')],bundle:true,minify:true,platform:'browser',jsx:'automatic',outfile:path.join(output,'app.js'),nodePaths:[path.join(project,'node_modules')],alias:{'next/link':path.join(taskRoot,'link.tsx'),'next/image':path.join(taskRoot,'image.tsx'),'@':path.join(project,'src')},define:{'process.env.NODE_ENV':'"production"'},loader:{'.module.css':'local-css'},logLevel:'warning'});
+await writeFile(path.join(taskRoot,'entry.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))};import {createRoot} from ${JSON.stringify(path.join(project,'node_modules/react-dom/client.js'))};import Preview from ${JSON.stringify(path.join(project,component))};createRoot(document.getElementById('root')!).render(<Preview preview/>);`);
+await writeFile(path.join(taskRoot,'navigation.ts'),`export function useRouter(){return {push(){},replace(){}}}`);
+await build({entryPoints:[path.join(taskRoot,'entry.tsx')],bundle:true,minify:true,platform:'browser',jsx:'automatic',outfile:path.join(output,'app.js'),nodePaths:[path.join(project,'node_modules')],alias:{'next/link':path.join(taskRoot,'link.tsx'),'next/image':path.join(taskRoot,'image.tsx'),'next/navigation':path.join(taskRoot,'navigation.ts'),'@':path.join(project,'src')},define:{'process.env.NODE_ENV':'"production"'},loader:{'.module.css':'local-css'},logLevel:'warning'});
 const chunks=path.join(project,'.next/dev/static/chunks');
 let globalCss='';
 for(const file of await readdir(chunks)){if(!file.endsWith('.css'))continue;const css=await readFile(path.join(chunks,file),'utf8');if(css.includes('--color-action:')&&css.includes('font-family: DM Serif Display')){globalCss=css;break;}}
@@ -37,5 +41,5 @@ for(const name of ['arrow-up-right.svg','arrow-right.svg']){
   portableJs=portableJs.replaceAll('/icons/'+name,'data:image/svg+xml;base64,'+encoded);
 }
 portableJs=portableJs.replaceAll('</script','<\\/script');
-await writeFile(path.join(taskRoot,'questoes-demonstracao.html'),`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prévia de questões | ETEC / IF</title><style>${portableCss}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a demonstração.</noscript><script>${portableJs}</script></body></html>`);
+await writeFile(path.join(taskRoot,screen+'-demonstracao.html'),`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prévia de ${screen==='historico'?'histórico':'questões'} | ETEC / IF</title><style>${portableCss}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a demonstração.</noscript><script>${portableJs}</script></body></html>`);
 console.log('Arquivo HTML portátil gerado, sem depender de localhost.');
