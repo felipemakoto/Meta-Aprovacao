@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Etapa 20 iniciada em 30/09/2026 somente pela proposta visual do histórico. Mockup em design/historico-mobile-v1.png e especificação em design/HISTORICO-MOCKUP.md. Testes salvos e questões praticadas separados; dados ilustrativos. Aguardar aprovação antes de implementar. Nenhuma mudança de aplicação, dependências ou banco. Checkpoint anterior: 9de6e0b (aprovação manual da etapa 19).
+
 Confirmação em 30/09/2026: usuário aprovou a demonstração portátil da etapa 19 após acesso pelo celular (“está certinho, pode continuar”). Checkpoint de geração: a135253. Conteúdo real permanece em rascunho; teste de persistência pelo usuário depende da revisão editorial. Próxima etapa: 20 — proposta visual do histórico, antes de React/CSS.
 
 Etapa 19 em 30/09/2026: mockup aprovado e banco de questões implementado. Filtros, questão individual, snapshot por conta, correção e explicação no servidor, estados e prévia dev concluídos. Migration 20260930120000 aplicada; 10 testes Node, SQL, lint/build e verificação de produção aprovados. QA visual por captura continua bloqueado, teste manual pendente. Nenhuma questão real publicada. Detalhes em BANCO-QUESTOES.md. Etapa 20 não iniciada.
