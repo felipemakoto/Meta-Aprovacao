@@ -1,5 +1,7 @@
 # Etapa 18 — dashboard
 
+Em 30/09/2026, o usuário aprovou manualmente o visual exibido em /dashboard/preview. A confirmação não inclui todos os estados, revisão por teclado ou consulta a resultados reais. O resultado abaixo se refere especificamente à comparação automatizada bloqueada.
+
 final result: blocked
 
 Fonte visual aprovada: docs/design/dashboard-mobile-v1.png, 940 × 1672 pixels, página móvel sem moldura. Implementação: /dashboard/preview com estado ilustrativo 7 de 10. Captura da implementação, viewport medido e comparação conjunta: indisponíveis. A ferramenta de navegador recusou acesso local por política na etapa 17; nenhuma tentativa de contorno foi feita. A aprovação do mockup não equivale à aprovação da implementação.

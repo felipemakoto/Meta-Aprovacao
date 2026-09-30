@@ -1,6 +1,6 @@
 # Etapa 18 — dashboard
 
-Implementação após aprovação explícita de design/dashboard-mobile-v1.png. Código e verificações funcionais concluídos; QA visual e teste manual do usuário pendentes.
+Implementação após aprovação explícita de design/dashboard-mobile-v1.png. Código e verificações funcionais concluídos. Em 30/09/2026, o usuário conferiu /dashboard/preview e afirmou: “Está bom pode continuar”. Aprovação manual do visual registrada. Comparação automatizada por captura continua bloqueada; esta confirmação não comprova gravação/leitura de resultado real nem todos os estados e interações.
 
 ## Entrega
 

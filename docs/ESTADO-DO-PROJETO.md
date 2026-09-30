@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Atualização de 30/09/2026: usuário aprovou manualmente o dashboard na prévia: “Está bom pode continuar”. Checkpoint anterior: 1eb47a4. Aprovação visual manual registrada; QA por captura e persistência real ainda têm os limites descritos em DASHBOARD.md. Etapa 19 iniciada pela proposta visual do banco de questões, em design/questoes-mobile-v1.png. Implementação aguardará aprovação conforme o fluxo original. Nenhuma questão publicada.
+
 Etapa 18 em 29/09/2026: dashboard implementado após aprovação do mockup. Página autenticada, agregados reais por proprietário, estados vazio/erro, links e revisão direta concluídos. Migration 20260929140000 aplicada; seis migrations sincronizadas. 18 testes Node, SQL, lint, build e checagens de produção aprovados. QA visual bloqueado pela política de navegador já registrada; aguardando conferência manual. Prévia local disponível. Detalhes em DASHBOARD.md. Etapa 19 não iniciada.
 
 Confirmação do usuário em 29/09/2026: os links da etapa 17 estão corretos. Checkpoint de implementação: c10d4da. Teste de associação de resultado real ainda pendente, pois as questões permanecem em rascunho. Etapa 18 não iniciada.
