@@ -1,5 +1,7 @@
 # Etapa 21 — proposta visual dos simulados
 
+Usuário aprovou esta imagem: “pode usar esse visual e seguir”. Implementação e verificações disponíveis concluídas; limites e roteiro em ../SIMULADOS.md. O restante registra a proposta anterior à implementação.
+
 Proposta criada em 30/09/2026 após confirmação do ajuste de Voltar ao histórico: “está certo agora, pode continuar”. Essa confirmação refere-se ao ajuste visual; não substitui testes de persistência real. Mockup: [simulados-mobile-v1.png](simulados-mobile-v1.png). Implementação ainda não iniciada.
 
 ## Tela e visual

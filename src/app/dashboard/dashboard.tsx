@@ -4,7 +4,7 @@ import type { DashboardSummary } from "@/lib/quiz/dashboard-contract";
 import base from "../quiz/quiz.module.css";
 import styles from "./dashboard.module.css";
 
-export default function Dashboard({ summary, preview = false }: { summary: DashboardSummary | null; preview?: boolean }) {
+export default function Dashboard({ summary, preview = false, simulations = null }: { summary: DashboardSummary | null; preview?: boolean; simulations?:number|null }) {
   const latest = summary?.latest;
   const resultPath = preview ? "/quiz/result/preview" : "/quiz/result/saved";
   const date = latest ? new Intl.DateTimeFormat("pt-BR", { day: "numeric", month: "long", timeZone: "America/Sao_Paulo" }).format(new Date(latest.completedAt)) : "";
@@ -18,6 +18,7 @@ export default function Dashboard({ summary, preview = false }: { summary: Dashb
       <nav className={styles.navigation} aria-label="Estudos">
         <Link className={styles.primary} href={preview ? "/questoes/preview" : "/questoes"}>Praticar questões</Link>
         <Link className={styles.secondary} href={preview ? "/historico/preview" : "/historico"}>Histórico</Link>
+        <Link className={styles.secondary} href={preview ? "/simulados/preview" : "/simulados"}>Simulados</Link>
       </nav>
       {summary === null ? <section className={styles.card} aria-labelledby="dashboard-error">
         <h2 id="dashboard-error" className={styles.cardTitle}>Não foi possível carregar seus estudos</h2>
@@ -42,10 +43,11 @@ export default function Dashboard({ summary, preview = false }: { summary: Dashb
           <dl>
             <div><dt>Questões respondidas</dt><dd>{summary.answered.toLocaleString("pt-BR")}</dd></div>
             <div><dt>Acertos</dt><dd>{summary.correct.toLocaleString("pt-BR")}</dd></div>
+            <div><dt>Simulados concluídos</dt><dd>{simulations===null?"Indisponível":simulations.toLocaleString("pt-BR")}</dd></div>
           </dl>
         </section>
       </>}
     </main>
-    <footer className={styles.footer}>{preview ? "Dados ilustrativos." : "Resumo dos testes salvos."}</footer>
+    <footer className={styles.footer}>{preview ? "Dados ilustrativos." : "Questões e acertos dos testes salvos; simulados contados separadamente."}</footer>
   </div>;
 }

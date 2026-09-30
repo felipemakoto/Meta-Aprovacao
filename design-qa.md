@@ -1,3 +1,11 @@
+# Etapa 21 — simulados
+
+final result: blocked
+
+Alvo aprovado: docs/design/simulados-mobile-v1.png, aberto e inspecionado. Implementação: /simulados/preview e demonstrações out/simulados-demonstracao.html e out/site-demonstracao.html. Fontes/tokens e SVGs Heroicons existentes reutilizados; sem novo ativo raster. Textura da imagem foi substituída por fundo sólido, conforme proposta documentada.
+
+Não houve captura da implementação ou comparação conjunta: recusa de política de navegador registrada nas etapas anteriores permanece, sem contorno. Responsividade renderizada em 320/390px/desktop, foco/teclado e console ainda dependem de inspeção manual. Não se declara fidelidade visual verificada. Build, lint, contratos, HTTP, SQL e concorrência aprovados são evidência técnica, não QA visual. HTTP de produção continua pendente pelo bloqueio de servidor temporário registrado anteriormente. Roteiro manual em docs/SIMULADOS.md; usuário autorizado a testar demonstração portátil pelo celular.
+
 # Etapa 20 — histórico
 
 Atualização de 30/09/2026: usuário aprovou historico-mobile-v2-clean.png e autorizou a direção clean nas telas existentes. Código simplificado, demonstração combinada out/site-demonstracao.html e prévias individuais regeneradas. Lint/build/TypeScript, 46 testes de regressão e sete HTTP/arquivo em desenvolvimento passaram. Não houve nova captura ou comparação visual; final result: blocked continua para QA automatizado. Conferência pelo usuário ainda pendente. Registro em docs/SIMPLIFICACAO-IMPLEMENTADA.md.

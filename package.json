@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:simulations": "node --test tests/simulations.test.mjs",
+    "test:simulations:http": "node --test tests/simulations-http.test.mjs",
+    "test:simulations:concurrency": "node --env-file=.env.local scripts/test-simulation-concurrency.mjs",
     "test:history": "node --test tests/history.test.mjs",
     "test:history:http": "node --test tests/history-http.test.mjs",
     "test:practice": "node --test tests/practice.test.mjs",

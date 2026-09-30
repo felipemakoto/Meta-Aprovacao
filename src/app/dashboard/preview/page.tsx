@@ -6,7 +6,7 @@ export default async function DashboardPreview({ searchParams }: { searchParams:
   if (process.env.NODE_ENV !== "development") notFound();
   const { state, score } = await searchParams;
   const correct = score === "10" ? 10 : score === "0" ? 0 : 7;
-  return <Dashboard preview summary={state === "error" ? null : state === "empty" ? { answered: 0, correct: 0, latest: null } : {
+  return <Dashboard preview simulations={state === "empty" ? 0 : 1} summary={state === "error" ? null : state === "empty" ? { answered: 0, correct: 0, latest: null } : {
     answered: 10, correct, latest: { id: "00000000-0000-4000-8000-000000000018", completedAt: "2026-09-29T12:00:00Z", total: 10, score: correct },
   }} />;
 }

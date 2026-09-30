@@ -76,10 +76,11 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
   );
 }
 
-function QuizSession({ quiz, preview, onExpire }: { quiz: GuestQuiz; preview: boolean; onExpire: () => void }) {
+export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = false }: { quiz: GuestQuiz; preview: boolean; onExpire: () => void; onFinish?: (answers:Answers)=>Promise<void>; simulation?:boolean }) {
   const router = useRouter();
   const [index, setIndex] = useState(0);
   const [choices, setChoices] = useState<Record<string, string>>({});
+  const [confirm, setConfirm] = useState(false);
   const [submission, setSubmission] = useState<"idle" | "sending" | "failed">("idle");
   const sending = useRef(false);
   const submittedAnswers = useRef<Answers | null>(null);
@@ -87,14 +88,29 @@ function QuizSession({ quiz, preview, onExpire }: { quiz: GuestQuiz; preview: bo
   const question = quiz.questions[index];
   const selected = choices[question.id];
   useEffect(() => {
+    if (!simulation || preview) return;
+    try {
+      const draft = JSON.parse(sessionStorage.getItem("simulation-" + quiz.id) ?? "{}");
+      const safe:Record<string,string> = {};
+      for (const q of quiz.questions) if (typeof draft[q.id] === "string" && /^[A-E]$/.test(draft[q.id])) safe[q.id] = draft[q.id];
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Restaurar rascunho local após hidratação, sem incluir dados de sessão no HTML.
+      setChoices(safe);
+    } catch {}
+  }, [simulation, preview, quiz]);
+  function choose(answer:string) {
+    const next = {...choices,[question.id]:answer}; setChoices(next);
+    if(simulation&&!preview)try{sessionStorage.setItem("simulation-"+quiz.id,JSON.stringify(next));}catch{}
+  }
+  useEffect(() => {
+    if(simulation)return;
     const timer = setTimeout(onExpire, Math.max(0, Date.parse(quiz.expiresAt) - Date.now()));
     return () => clearTimeout(timer);
-  }, [quiz.expiresAt, onExpire]);
-  useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [index, submission]);
-  function stillActive() { if (hasExpired(quiz.expiresAt)) { onExpire(); return false; } return true; }
+  }, [quiz.expiresAt, onExpire, simulation]);
+  useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [index, submission, confirm]);
+  function stillActive() { if (!simulation && hasExpired(quiz.expiresAt)) { onExpire(); return false; } return true; }
   async function submit() {
     if (sending.current || !stillActive()) return;
-    if (preview) { router.push("/quiz/result/preview"); return; }
+    if (preview && !onFinish) { router.push("/quiz/result/preview"); return; }
     if (!submittedAnswers.current) {
       if (quiz.questions.some(q => !choices[q.id])) return;
       submittedAnswers.current = quiz.questions.map(q => ({ questionId: q.id, answer: choices[q.id] }));
@@ -102,6 +118,7 @@ function QuizSession({ quiz, preview, onExpire }: { quiz: GuestQuiz; preview: bo
     sending.current = true;
     setSubmission("sending");
     try {
+      if (onFinish) { await onFinish(submittedAnswers.current); if(!preview)try{sessionStorage.removeItem("simulation-"+quiz.id);}catch{} return; }
       await requestResult(submittedAnswers.current);
       router.replace("/quiz/result");
     } catch (error) {
@@ -112,7 +129,7 @@ function QuizSession({ quiz, preview, onExpire }: { quiz: GuestQuiz; preview: bo
   }
   function next() {
     if (!selected || !stillActive()) return;
-    if (index === quiz.questions.length - 1) void submit(); else setIndex(index + 1);
+    if (index === quiz.questions.length - 1) { if(simulation)setConfirm(true);else void submit(); } else setIndex(index + 1);
     window.scrollTo({ top: 0, behavior: "instant" });
   }
   if (submission !== "idle") return (
@@ -123,6 +140,13 @@ function QuizSession({ quiz, preview, onExpire }: { quiz: GuestQuiz; preview: bo
       <Link className={styles.returnLink} href="/">Voltar ao início</Link>
     </section>
   );
+  if(confirm)return <section className={styles.message}>
+    <h1 ref={heading} tabIndex={-1}>Conferir respostas</h1>
+    <p>A correção aparece após o envio. Escolha uma questão para alterar sua resposta.</p>
+    <div className={styles.reviewChoices}>{quiz.questions.map((q,i)=><button className={styles.back} key={q.id} onClick={()=>{setIndex(i);setConfirm(false);}} aria-label={`Questão ${i+1}, alternativa ${choices[q.id]??"não respondida"}`}>{i+1}: {choices[q.id]??"—"}</button>)}</div>
+    <button className={styles.continue} disabled={quiz.questions.some(q=>!choices[q.id])} onClick={()=>void submit()}>Enviar e ver resultado<Image src="/icons/arrow-right.svg" width={23} height={23} alt=""/></button>
+    <p>O envio é definitivo.</p>
+  </section>;
   return (
     <>
       <div className={styles.progressHeading}><span aria-live="polite">Questão {index + 1} de {quiz.questions.length}</span><span>{subjects[question.subject] ?? question.subject}</span></div>
@@ -134,13 +158,13 @@ function QuizSession({ quiz, preview, onExpire }: { quiz: GuestQuiz; preview: bo
           const letter = "ABCDE"[position];
           return (
             <label className={styles.option} key={`${question.id}-${letter}`}>
-              <input type="radio" name={question.id} value={letter} checked={selected === letter} onChange={() => { if (stillActive()) setChoices({ ...choices, [question.id]: letter }); }} />
+              <input type="radio" name={question.id} value={letter} checked={selected === letter} onChange={() => { if (stillActive()) choose(letter); }} />
               <span className={styles.letter} aria-hidden="true">{letter}</span><span className={styles.srOnly}>Alternativa {letter}: </span><span>{option}</span>
             </label>
           );
         })}
       </fieldset>
-      <button className={styles.continue} disabled={!selected} onClick={next}>{index === quiz.questions.length - 1 ? "Finalizar teste" : "Continuar"} <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
+      <button className={styles.continue} disabled={!selected} onClick={next}>{index === quiz.questions.length - 1 ? simulation ? "Conferir respostas" : "Finalizar teste" : "Continuar"} <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
       {index > 0 && <button className={styles.back} onClick={() => { if (stillActive()) setIndex(index - 1); }}>Questão anterior</button>}
     </>
   );

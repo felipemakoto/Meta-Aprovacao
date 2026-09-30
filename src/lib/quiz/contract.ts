@@ -23,15 +23,15 @@ function integer(value: unknown): number {
 }
 
 // Lista explícita de campos; nunca devolver o resultado bruto de uma consulta.
-export function toPublicQuiz(value: unknown): GuestQuiz {
+export function toPublicQuiz(value: unknown, count = 10): GuestQuiz {
   const row = record(value);
-  if (!Array.isArray(row.questions) || row.questions.length !== 10 || row.questionCount !== 10) {
+  if (!Number.isInteger(count) || count < 5 || count > 100 || !Array.isArray(row.questions) || row.questions.length !== count || row.questionCount !== count) {
     throw new Error("Incomplete quiz");
   }
   const expiresAt = text(row.expiresAt);
   if (!Number.isFinite(Date.parse(expiresAt))) throw new Error("Invalid expiry");
   return {
-    id: text(row.id), startedAt: text(row.startedAt), expiresAt, questionCount: 10,
+    id: text(row.id), startedAt: text(row.startedAt), expiresAt, questionCount: count,
     questions: row.questions.map((value) => {
       const q = record(value);
       if (!Array.isArray(q.options) || q.options.length !== 5) throw new Error("Invalid options");
@@ -43,4 +43,3 @@ export function toPublicQuiz(value: unknown): GuestQuiz {
     }),
   };
 }
-

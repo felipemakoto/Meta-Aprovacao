@@ -28,10 +28,10 @@ export function parseAnswers(value: unknown): Answers {
 }
 
 // Allowlist de feedback: somente usado depois de a RPC confirmar a finalizaÃ§Ã£o.
-export function toQuizResult(value: unknown): QuizResult {
+export function toQuizResult(value: unknown, count = 10): QuizResult {
   const r = object(value);
-  if (r.total !== 10 || !Number.isInteger(r.score) || Number(r.score) < 0 || Number(r.score) > 10 ||
-      !Array.isArray(r.questions) || r.questions.length !== 10) throw new Error("invalid_result");
+  if (!Number.isInteger(count) || count < 5 || count > 100 || r.total !== count || !Number.isInteger(r.score) || Number(r.score) < 0 || Number(r.score) > count ||
+      !Array.isArray(r.questions) || r.questions.length !== count) throw new Error("invalid_result");
   const completedAt = text(r.completedAt);
   if (!Number.isFinite(Date.parse(completedAt))) throw new Error("invalid_result");
   const questions = r.questions.map((value, index) => {
@@ -43,7 +43,7 @@ export function toQuizResult(value: unknown): QuizResult {
       statement: text(q.statement), options: q.options.map(text), answer: text(q.answer),
       correctAnswer: text(q.correctAnswer), correct: q.correct, explanation: text(q.explanation) };
   });
-  if (questions.filter((q) => q.correct).length !== r.score || new Set(questions.map((q) => q.id)).size !== 10) throw new Error("invalid_result");
-  return { id: text(r.id), completedAt, total: 10, score: Number(r.score), questions };
+  if (questions.filter((q) => q.correct).length !== r.score || new Set(questions.map((q) => q.id)).size !== count) throw new Error("invalid_result");
+  return { id: text(r.id), completedAt, total: count, score: Number(r.score), questions };
 }
 

@@ -1,5 +1,13 @@
 # Decisões técnicas
 
+## Etapa 21 — simulados privados
+
+Catálogo editorial em private com publicação explícita e verificação de quantidade de conteúdo publicado; exemplos em rascunho não viram fallback. Tentativas preservam snapshots e título, pertencem à conta confirmada e duram até 24 horas antes de finalizar. É prazo técnico, sem tempo oficial de prova. Criação serializada por usuário retoma a tentativa ativa da mesma opção e limita criação a cinco por minuto.
+
+Correção apenas após conferir e enviar todas as escolhas; lock de linha, normalização de respostas, resultado imutável e conflito em reenvio diferente. Histórico ampliado com categoria e metadados, mantendo leitura anterior em função auxiliar sem EXECUTE público/service_role; wrapper restrito ao servidor. Dashboard conta simulados à parte para preservar o significado dos agregados anteriores. Por matéria exige cinco questões no resultado; estatísticas consolidadas ficam para etapa 22.
+
+Rascunho de respostas em sessionStorage na aba, sem cookies de gabarito ou persistência na conta antes de finalizar. Servidor continua responsável por prazo, conteúdo, identidade, nota e duração. Demonstração portátil usa correção de fixture local com aviso explícito. Detalhes e limites em SIMULADOS.md.
+
 ## Simplificação visual aprovada — 30/09/2026
 
 Aplicar historico-mobile-v2-clean.png e a direção aprovada às telas existentes. Serifada para títulos principais, sans para notas e detalhes; retirar frases redundantes, ornamentos e recursos futuros não disponíveis. Preservar informação necessária para agir (labels, estados, confirmação, recuperação e explicações). Filtros adicionais nativos em details conservam contratos/IDs. Feedback da prática fica após as alternativas, com foco e região de status. Datas do histórico incluem ano para distinguir registros. Demonstração combinada é ferramenta local, não rota ou publicação; exemplos nunca são fallback de produção. Documentação em SIMPLIFICACAO-IMPLEMENTADA.md.
