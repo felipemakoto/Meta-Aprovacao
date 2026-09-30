@@ -11,3 +11,7 @@ Assets gerados em C:/Users/felip/.codex/previews/etec-if-stage19/public. Binári
 Publicação externa ainda não realizada: a revisão automática rejeitou o comando combinado que iniciaria servidor e túnel, com mensagem blocked by policy e sem motivo adicional. Servidor estático local foi iniciado separadamente, como alternativa sem exposição externa. Solicitada autorização explícita para disponibilizar apenas esta demonstração em link público temporário pelo Cloudflare. Não publicar a aplicação Next, APIs ou conteúdo de conta por meio desse túnel.
 
 Não afirmar que o usuário acessou a prévia ou que existe link externo antes da verificação. Túnel e assets são uma demonstração temporária, não deploy do produto.
+
+O usuário autorizou explicitamente o link temporário. Mesmo assim, nova tentativa isolada de iniciar cloudflared foi rejeitada pela revisão automática com blocked by policy. A autorização não removeu a restrição do ambiente; nenhum túnel público foi iniciado.
+
+Alternativa preparada: out/questoes-demonstracao.html, arquivo único com React, componente Practice em modo preview, estilos, fontes e ícones incorporados. Não depende de localhost, APIs ou login. Gerado também na pasta externa da prévia. Pasta out ignorada pelo Git. Sintaxe JavaScript e inclusão dos assets verificadas; abertura/renderização no navegador do celular ainda não conferida. A possibilidade de baixar o arquivo pelo Codex Remote e abri-lo como HTML depende do cliente/navegador do usuário; não afirmar que foi acessível antes da confirmação.

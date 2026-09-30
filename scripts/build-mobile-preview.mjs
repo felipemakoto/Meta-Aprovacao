@@ -22,3 +22,20 @@ for(const file of await readdir(path.join(project,'.next/dev/static/media'))){if
 for(const file of ['arrow-up-right.svg','arrow-right.svg'])await copyFile(path.join(project,'public/icons',file),path.join(output,'icons',file));
 await writeFile(path.join(output,'index.html'),'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Prévia de questões | ETEC / IF</title><link rel="stylesheet" href="/base.css"><link rel="stylesheet" href="/app.css"><script src="/app.js" defer></script></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a demonstração.</noscript></body></html>');
 console.log('Demonstração gerada a partir do componente real, com preview=true.');
+
+// Alternativa portátil: inclui fontes, CSS, React e ícones no mesmo HTML.
+let portableCss=await readFile(path.join(output,'base.css'),'utf8');
+portableCss+='\n'+await readFile(path.join(output,'app.css'),'utf8');
+for(const name of await readdir(path.join(output,'fonts'))){
+  const encoded=(await readFile(path.join(output,'fonts',name))).toString('base64');
+  portableCss=portableCss.replaceAll('/fonts/'+name,'data:font/woff2;base64,'+encoded);
+}
+portableCss=portableCss.replace(/\/\*# sourceMappingURL=.*?\*\//g,'');
+let portableJs=await readFile(path.join(output,'app.js'),'utf8');
+for(const name of ['arrow-up-right.svg','arrow-right.svg']){
+  const encoded=(await readFile(path.join(output,'icons',name))).toString('base64');
+  portableJs=portableJs.replaceAll('/icons/'+name,'data:image/svg+xml;base64,'+encoded);
+}
+portableJs=portableJs.replaceAll('</script','<\\/script');
+await writeFile(path.join(taskRoot,'questoes-demonstracao.html'),`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prévia de questões | ETEC / IF</title><style>${portableCss}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a demonstração.</noscript><script>${portableJs}</script></body></html>`);
+console.log('Arquivo HTML portátil gerado, sem depender de localhost.');
