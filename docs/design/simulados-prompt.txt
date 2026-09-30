@@ -1,0 +1,9 @@
+Create a new mobile website mockup of the "Simulados" selection page for the ETEC / IF study app, using the attached clean history screen ONLY as style reference. Flat portrait screenshot, no phone frame. Compact 390px CSS viewport composition, ivory solid #F7F6F0 background, deep green #172B25 text, forest green #174D38 main button, thin #D8DED7 dividers. Match the clean approved style: moderate DM Serif Display heading, Geist sans everything else, 24px horizontal padding, readable 16px body, generous but not wasteful spacing, minimum44px tap areas. No gradients, decoration, big statistics, texture, rounded-card grid, illustrations, charts or marketing phrases.
+Header: familiar square green northeast arrow mark, ETEC / IF left, Meus estudos right, subtle bottom rule.
+Title "Simulados" in moderate serif36px.
+One short explanatory line below title: "A correção aparece ao finalizar."
+Below, two compact selectable list rows, with small square radio style control on left. First selected with modest dark green border/background indication, no massive card. Title "Simulado rápido", subtitle "10 questões · 5 matérias". Second unselected, title "Matemática", subtitle "20 questões · Matemática". These are illustrative demo options, not real available catalog.
+Under selection, a fine separator and a plain paragraph: "Você pode revisar suas escolhas antes de enviar." Small16px, muted, no extra heading.
+Full width green primary button "Iniciar simulado" with a simple right arrow at end.
+Below button quiet text link "Ver meu histórico", generous min44px touch space.
+Bottom tiny muted footer "Dados ilustrativos." Ensure all Brazilian Portuguese accents/text are exact. Show one main choice and clear action hierarchy. Mobile column fills a natural compact page, avoid excessive empty whitespace. Entire mockup in portrait approximately 900x1350. DO NOT show running quiz, countdown or results on this screen. NO promise of official exam content or acceptance.

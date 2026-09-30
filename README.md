@@ -2,7 +2,9 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Visual simplificado após aprovação: [mudanças e teste pelo celular](docs/SIMPLIFICACAO-IMPLEMENTADA.md). Demonstração combinada em out/site-demonstracao.html, com seletor de telas. Aguardando conferência manual.
+Etapa atual: 21 — [proposta visual dos simulados](docs/design/SIMULADOS-MOCKUP.md), aguardando aprovação antes de implementar. Catálogo e quantidades do mockup são ilustrativos.
+
+Visual simplificado após aprovação: [mudanças e teste pelo celular](docs/SIMPLIFICACAO-IMPLEMENTADA.md). Demonstração combinada em out/site-demonstracao.html, com seletor de telas. Ajuste do retorno ao histórico confirmado pelo usuário; testes reais pendentes continuam registrados no Estado do Projeto.
 
 Etapa 20 implementada: [histórico](docs/HISTORICO.md) em /historico, separando testes salvos e questões praticadas, com paginação e revisão privada. Demonstração portátil em out/historico-demonstracao.html. Testes técnicos aprovados; conferência manual pendente. QA visual e teste HTTP de produção bloqueados.
 

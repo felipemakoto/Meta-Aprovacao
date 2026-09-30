@@ -1,5 +1,7 @@
 # Simplificação visual implementada
 
+Confirmação posterior em 30/09/2026: usuário aprovou o ajuste do retorno ao histórico (“está certo agora, pode continuar”), checkpoint a1495c6. Confirmação visual desse ajuste; demais pendências de teste real permanecem registradas no Estado do Projeto.
+
 Ajuste posterior pedido pelo usuário: Voltar ao histórico alinhado à esquerda da coluna, com seta para a esquerda antes do texto. Aplicado à prévia, detalhe real e erro; arquivos site/histórico regenerados. Lint, TypeScript e quatro verificações HTTP/arquivo passaram; interação visual aguarda conferência manual.
 
 Usuário aprovou historico-mobile-v2-clean.png: “está bom assim, pode continua”. Implementação aplicada em 30/09/2026 à entrada, dashboard, histórico, prática, resultado, login/cadastro e recuperação. Estilo mantém cores marfim/verde, fonte Geist e títulos DM Serif Display.
