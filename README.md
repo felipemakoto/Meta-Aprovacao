@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Etapa 24 concluída: [pesquisa oficial Kiwify](docs/KIWIFY.md), com contratos de vendas/checkout/webhooks, atualização Pix Automático e pendências para validação de pagamento. Somente documentação; próximo passo é a etapa 25 — subscriptions, após autorização para avançar.
+
 Etapa 23 implementada: [limites gratuitos](docs/LIMITES-GRATUITOS.md) de 10 novas questões e 1 simulado rápido por dia, renovados à meia-noite de São Paulo e conferidos no servidor. Prévias locais /questoes/preview e /simulados/preview; acrescente ?limit=1 para testar o aviso de esgotamento. Testes técnicos aprovados; pausa para teste no PC antes da etapa 24.
 
 Etapa 22 implementada: [estatísticas](docs/ESTATISTICAS.md) com períodos, atividade consolidada, contagens por matéria e simulados recentes. Visual aprovado sem Meus estudos no cabeçalho. Prévia local /estatisticas/preview; demonstração portátil em out/estatisticas-demonstracao.html. Testes técnicos aprovados; aguardando conferência manual.

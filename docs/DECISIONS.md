@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 24 — contrato Kiwify antes do modelo de assinaturas
+
+Pesquisa oficial em KIWIFY.md. Usar API Pública de vendas, OAuth no servidor e consulta de ordem como evidência independente. Referência aleatória opaca em sck é candidata ao vínculo com checkout, com teste real obrigatório; não enviar dados pessoais/UUID interno na URL nem associar compra automaticamente pelo e-mail. Nomes de triggers configurados e campos de evento recebido não serão confundidos.
+
+Token de webhook existe na configuração documentada, mas o contrato de assinatura da entrega ainda precisa de confirmação oficial. Não inventar protocolo criptográfico. Não conceder Premium a partir de retorno de checkout, payload não validado ou campo premium do cliente. Modelar assinatura privada e direito local separado do estado do provedor na etapa 25, sem ativação paga antecipada. Consulta de período recorrente/access_until, fuso e política de atraso seguem pendentes. Documento atual de Pix Automático de agosto/2026 impede generalizar o artigo antigo de Pix manual. Cancelamento conserva período pago aplicável; idempotência e reconciliação serão implementadas nas etapas específicas.
+
 ## Etapa 23 — limites diários confirmados
 
 Usuário escolheu 10 novas práticas e 1 simulado rápido de dez questões por dia, com virada de data em São Paulo. Criação bem-sucedida de tentativa representa consumo, inclusive abandono/repetição; diagnóstico e revisão ficam disponíveis. Contar tentativas existentes do dia, sem reset artificial na implantação. Não depender de parâmetros de plano ou relógio do navegador.
