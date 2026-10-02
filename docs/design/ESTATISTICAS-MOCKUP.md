@@ -1,5 +1,7 @@
 # Etapa 22 — proposta visual das estatísticas
 
+Revisão em 02/10/2026: a pedido do usuário, removido Meus estudos do canto superior direito do cabeçalho. Referência atual: [estatisticas-mobile-v2.png](estatisticas-mobile-v2.png). Edição inspecionada visualmente; restante do mockup preservado. Prompt de edição em estatisticas-header-edit-prompt.txt. A página ainda não foi implementada; solicitação limitada ao ajuste da proposta.
+
 Iniciada em 30/09/2026 após aprovação da demonstração dos simulados: “está bom, pode continuar”. Checkpoint de implementação da etapa 21: 1f8a0f7. Essa aprovação é manual e refere-se à demonstração; persistência real pelo usuário continua dependendo de conteúdo revisado/publicado. Implementação da etapa 22 aguardará aprovação do mockup, conforme seção 73 do pedido original.
 
 ## Objetivo da página
@@ -8,7 +10,7 @@ Mostrar a atividade concluída da própria conta e orientar a revisão: quantas 
 
 ## Hierarquia
 
-1. Cabeçalho ETEC / IF e retorno Meus estudos.
+1. Cabeçalho somente com ETEC / IF.
 2. Título Estatísticas e seletor Período, com Todo o período e Últimos 30 dias.
 3. Resumo compacto de acertos sobre respostas, erros e simulados concluídos.
 4. Por matéria: fração de acertos/respostas; porcentagem somente com pelo menos cinco respostas naquela matéria no período.
