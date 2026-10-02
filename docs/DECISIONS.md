@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 23 — limites diários confirmados
+
+Usuário escolheu 10 novas práticas e 1 simulado rápido de dez questões por dia, com virada de data em São Paulo. Criação bem-sucedida de tentativa representa consumo, inclusive abandono/repetição; diagnóstico e revisão ficam disponíveis. Contar tentativas existentes do dia, sem reset artificial na implantação. Não depender de parâmetros de plano ou relógio do navegador.
+
+Conferir e criar sob o mesmo lock transacional no banco. Implementadores anteriores ficam privados e sem EXECUTE da API; wrappers novos restringem todos os pontos de início. UUID de busca mantém uma única criação no retry de conexão da prática, ligado à conta e aos filtros. Simulado retoma tentativa ativa da mesma opção antes de aplicar a cota; snapshots e resultados antigos permanecem legíveis. Novos simulados gratuitos exigem catálogo free_access e formato rápido equilibrado de dez questões. Sem assinatura Premium antecipada. Saldo é informativo no cliente; tentativas reais sempre passam pela verificação do servidor. Detalhes em LIMITES-GRATUITOS.md.
+
 ## Etapa 22 — estatísticas de respostas concluídas
 
 Agregar no servidor diagnósticos associados, práticas corrigidas e simulados finalizados. Unidade é resposta em uma tentativa, não questão única. Preservar snapshots; não recalcular por conteúdo editável. Períodos all/30d usam conclusão e relógio do banco, incluindo limite inicial da janela e excluindo datas futuras. Associação tardia não altera a data de conclusão.

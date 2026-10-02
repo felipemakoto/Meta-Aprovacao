@@ -5,7 +5,7 @@ export function createPracticeHandlers(deps: { user:()=>Promise<string|null>; to
   const json=(body:unknown,status=200)=>NextResponse.json(body,{status,headers:{"Cache-Control":"private, no-store, max-age=0",Pragma:"no-cache"}});
   const fail=(e:unknown)=>{
     const name=e instanceof Error?e.message:"";
-    const status:Record<string,number>={attempt_unavailable:404,already_answered:409,rate_limited:429,login_required:401};
+    const status:Record<string,number>={attempt_unavailable:404,already_answered:409,rate_limited:429,login_required:401,daily_practice_limit:403};
     return json({error:status[name]?name:"practice_unavailable"},status[name]??503);
   };
   async function GET(r:NextRequest) {

@@ -2,7 +2,7 @@ import { parseCatalog,parseSimulationInput,parseSimulationResult,parseSimulation
 import { isHistoryId } from "./history-contract.ts";
 export function simulationHandlers(deps:{user:()=>Promise<string|null>;catalog:(user:string)=>Promise<unknown>;read:(user:string,id:string)=>Promise<unknown>;run:(user:string,input:SimulationInput)=>Promise<unknown>},settings:{secure:boolean;origin?:string}){
  const json=(v:unknown,status=200)=>Response.json(v,{status,headers:{"Cache-Control":"private, no-store, max-age=0","X-Content-Type-Options":"nosniff"}});
- const failure=(e:unknown)=>{const name=e instanceof Error?e.message:"";const codes:Record<string,number>={login_required:401,attempt_unavailable:404,simulation_unavailable:404,already_submitted:409,invalid_answers:400,rate_limited:429};return json({error:codes[name]?name:"simulation_unavailable"},codes[name]??503);};
+ const failure=(e:unknown)=>{const name=e instanceof Error?e.message:"";const codes:Record<string,number>={login_required:401,attempt_unavailable:404,simulation_unavailable:404,already_submitted:409,invalid_answers:400,rate_limited:429,daily_simulation_limit:403};return json({error:codes[name]?name:"simulation_unavailable"},codes[name]??503);};
  async function GET(r:Request){
   if(r.headers.get("sec-fetch-site")==="cross-site")return json({error:"invalid_origin"},403);
   try{const user=await deps.user();if(!user)return json({error:"login_required"},401);

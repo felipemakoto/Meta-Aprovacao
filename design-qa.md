@@ -1,3 +1,11 @@
+# Etapa 23 — limites gratuitos nas telas existentes
+
+final result: blocked
+
+Reutilizadas as interfaces aprovadas de prática e simulados, com uma linha de saldo e renovação e mensagens de esgotamento. Prévias /questoes/preview?limit=1 e /simulados/preview?limit=1 ilustram o limite; não fazem chamadas de quota nem gravam dados. Nenhuma nova página ou mockup criado. O usuário autorizou avançar da prévia de Estatísticas para esta etapa; isso não comprova os novos estados.
+
+22 testes Node, oito HTTP/HTML/arquivo, SQL, concorrência real, lint/TypeScript/build aprovados. Captura visual, teclado, console e responsividade renderizada continuam pendentes pelo bloqueio de navegador anteriormente registrado, sem contorno. Testes técnicos não são comparação visual. Solicitação de abrir a prévia no painel retornou queued. HTTP de produção segue pendente pelo bloqueio anterior. Roteiro manual em docs/LIMITES-GRATUITOS.md; pausa para teste no PC.
+
 # Etapa 22 — estatísticas
 
 final result: blocked

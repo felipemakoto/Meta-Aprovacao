@@ -37,7 +37,7 @@ begin
     select u,qid,'{}'::jsonb from generate_series(1,30);
   set local role service_role;
   denied:=false;
-  begin perform public.start_question_practice(u,'matematica','__fixture_stage19__','easy','etec',null);exception when raise_exception then denied:=sqlerrm='rate_limited';end;
+  begin perform public.start_question_practice(u,'matematica','__fixture_stage19__','easy','etec',null);exception when raise_exception then denied:=sqlerrm='daily_practice_limit';end;
   if not denied then raise exception 'rate limit ignored';end if;
   reset role;
   if has_function_privilege('anon','public.start_question_practice(uuid,text,text,text,text,uuid)','execute') or has_function_privilege('authenticated','public.answer_question_practice(uuid,uuid,text)','execute') or has_table_privilege('service_role','private.practice_attempts','select') then raise exception 'unexpected privilege';end if;

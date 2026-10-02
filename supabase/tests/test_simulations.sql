@@ -7,6 +7,7 @@ begin
  -- Isolar fixtures do conteúdo real; todas as alterações são revertidas.
  update public.questions set status='draft' where status='published';
  insert into private.simulations(id,title,question_count,subject,published) values(math_id,'Fixture matemática',20,'matematica',true),(quick_id,'Fixture rápido',10,null,true);
+ update private.simulations set free_access=true where id=quick_id;
  foreach s in array array['matematica','portugues','ciencias','historia','geografia'] loop
   for i in 1..case when s='matematica' then 20 else 2 end loop
    qid:=gen_random_uuid();
@@ -16,8 +17,13 @@ begin
   end loop;
  end loop;
  set local role service_role;
- if jsonb_array_length(public.simulation_catalog(u))<>2 then raise exception 'catalog readiness';end if;
- state:=public.start_simulation(u,math_id);attempt:=(state->'quiz'->>'id')::uuid;
+ if jsonb_array_length(public.simulation_catalog(u))<>1 then raise exception 'catalog readiness';end if;
+ reset role;
+ -- Representar tentativa de 20 questões iniciada antes da política gratuita.
+ state:=private.start_simulation(u,math_id);attempt:=(state->'quiz'->>'id')::uuid;
+ update private.simulation_attempts set started_at=now()-interval '1 day' where id=attempt;
+ set local role service_role;
+ state:=public.read_simulation(u,attempt);
  if jsonb_array_length(state->'quiz'->'questions')<>20 or state::text like '%correctAnswer%' or state::text like '%explanation%' then raise exception 'attempt count or leakage';end if;
  if public.start_simulation(u,math_id)<>state then raise exception 'start idempotency';end if;
  if public.read_simulation(other_u,attempt) is not null then raise exception 'cross owner read';end if;
@@ -50,7 +56,8 @@ begin
  update private.simulation_attempts set started_at=now()-interval '2 days',expires_at=now()-interval '1 day' where id=attempt;
  set local role service_role;
  if public.submit_simulation(u,attempt,answers)<>result or public.read_simulation(u,attempt)->'result'<>result then raise exception 'completed result expiry';end if;
- state:=public.start_simulation(other_u,math_id);other_attempt:=(state->'quiz'->>'id')::uuid;
+ reset role;
+ state:=private.start_simulation(other_u,math_id);other_attempt:=(state->'quiz'->>'id')::uuid;
  select jsonb_agg(jsonb_build_object('questionId',q->>'id','answer','B')) into other_answers from jsonb_array_elements(state->'quiz'->'questions') q;
  reset role;
  update private.simulation_attempts set started_at=now()-interval '2 days',expires_at=now()-interval '1 day' where id=other_attempt;

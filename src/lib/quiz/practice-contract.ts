@@ -7,10 +7,11 @@ function obj(v: unknown): Record<string, unknown> { if (!v || typeof v !== "obje
 export function parsePracticeInput(v: unknown) {
   const b = obj(v);
   if (b.action === "answer" && Object.keys(b).sort().join() === "action,answer,id" && typeof b.id === "string" && uuid.test(b.id) && typeof b.answer === "string" && /^[A-E]$/.test(b.answer)) return { action: "answer" as const, id: b.id, answer: b.answer };
-  if (b.action === "next" && Object.keys(b).sort().join() === "action,filters,previous") {
+  if (b.action === "next" && ["action,filters,previous","action,filters,previous,requestId"].includes(Object.keys(b).sort().join())) {
+    if(b.requestId!==undefined && (typeof b.requestId!=="string"||!uuid.test(b.requestId)))throw new Error("invalid_input");
     const f = obj(b.filters);
     if (Object.keys(f).sort().join() !== "difficulty,exam,subject,topic" || typeof f.subject !== "string" || !Object.hasOwn(subjects,f.subject) || typeof f.topic !== "string" || f.topic.length>160 || typeof f.difficulty !== "string" || !["all","easy","medium","hard"].includes(f.difficulty) || typeof f.exam !== "string" || !["all","etec","if"].includes(f.exam) || !(b.previous===null || typeof b.previous === "string" && uuid.test(b.previous))) throw new Error("invalid_input");
-    return { action: "next" as const, filters: f as Filters, previous: b.previous as string | null };
+    return { action: "next" as const, filters: f as Filters, previous: b.previous as string | null,...(b.requestId!==undefined?{requestId:b.requestId as string}:{}) };
   }
   throw new Error("invalid_input");
 }
