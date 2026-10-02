@@ -1,5 +1,7 @@
 # Etapa 22 — proposta visual das estatísticas
 
+Usuário aprovou a versão v2 em 02/10/2026: “está bom pode continuar”. Implementação e verificações disponíveis concluídas; detalhes e roteiro em ../ESTATISTICAS.md. O restante registra a proposta anterior.
+
 Revisão em 02/10/2026: a pedido do usuário, removido Meus estudos do canto superior direito do cabeçalho. Referência atual: [estatisticas-mobile-v2.png](estatisticas-mobile-v2.png). Edição inspecionada visualmente; restante do mockup preservado. Prompt de edição em estatisticas-header-edit-prompt.txt. A página ainda não foi implementada; solicitação limitada ao ajuste da proposta.
 
 Iniciada em 30/09/2026 após aprovação da demonstração dos simulados: “está bom, pode continuar”. Checkpoint de implementação da etapa 21: 1f8a0f7. Essa aprovação é manual e refere-se à demonstração; persistência real pelo usuário continua dependendo de conteúdo revisado/publicado. Implementação da etapa 22 aguardará aprovação do mockup, conforme seção 73 do pedido original.

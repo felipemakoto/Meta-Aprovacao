@@ -1,3 +1,11 @@
+# Etapa 22 — estatísticas
+
+final result: blocked
+
+Alvo aprovado: docs/design/estatisticas-mobile-v2.png, sem Meus estudos no cabeçalho. Implementação: /estatisticas/preview e out/estatisticas-demonstracao.html. Fontes, tokens, fundo sólido e SVGs Heroicons existentes reutilizados. Datas incluem ano, conforme proposta. Fonte já inspecionada na revisão do mockup.
+
+Não houve nova captura/comparação conjunta da implementação, inspeção de console/teclado ou medição de larguras: bloqueio de política de navegador anterior preservado, sem contorno. Navegação solicitada no painel Codex não comprova que a página foi inspecionada. Não alegar equivalência visual com base no código/HTML. Lint/build, contratos, HTTP em desenvolvimento e SQL aprovados são evidência técnica. Verificação HTTP de produção permanece pendente pelo bloqueio anterior de servidor temporário. Roteiro manual em docs/ESTATISTICAS.md; usuário agora está no PC e pode acessar a prévia local.
+
 # Etapa 21 — simulados
 
 final result: blocked

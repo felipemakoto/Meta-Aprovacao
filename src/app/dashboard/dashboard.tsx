@@ -4,7 +4,7 @@ import type { DashboardSummary } from "@/lib/quiz/dashboard-contract";
 import base from "../quiz/quiz.module.css";
 import styles from "./dashboard.module.css";
 
-export default function Dashboard({ summary, preview = false, simulations = null }: { summary: DashboardSummary | null; preview?: boolean; simulations?:number|null }) {
+export default function Dashboard({ summary, preview = false, activity = null }: { summary: DashboardSummary | null; preview?: boolean; activity?:{answered:number;correct:number;simulations:number}|null }) {
   const latest = summary?.latest;
   const resultPath = preview ? "/quiz/result/preview" : "/quiz/result/saved";
   const date = latest ? new Intl.DateTimeFormat("pt-BR", { day: "numeric", month: "long", timeZone: "America/Sao_Paulo" }).format(new Date(latest.completedAt)) : "";
@@ -19,6 +19,7 @@ export default function Dashboard({ summary, preview = false, simulations = null
         <Link className={styles.primary} href={preview ? "/questoes/preview" : "/questoes"}>Praticar questões</Link>
         <Link className={styles.secondary} href={preview ? "/historico/preview" : "/historico"}>Histórico</Link>
         <Link className={styles.secondary} href={preview ? "/simulados/preview" : "/simulados"}>Simulados</Link>
+        <Link className={styles.secondary} href={preview ? "/estatisticas/preview" : "/estatisticas"}>Estatísticas</Link>
       </nav>
       {summary === null ? <section className={styles.card} aria-labelledby="dashboard-error">
         <h2 id="dashboard-error" className={styles.cardTitle}>Não foi possível carregar seus estudos</h2>
@@ -41,13 +42,13 @@ export default function Dashboard({ summary, preview = false, simulations = null
         <section className={styles.activity} aria-labelledby="activity-title">
           <h2 id="activity-title">Sua atividade</h2>
           <dl>
-            <div><dt>Questões respondidas</dt><dd>{summary.answered.toLocaleString("pt-BR")}</dd></div>
-            <div><dt>Acertos</dt><dd>{summary.correct.toLocaleString("pt-BR")}</dd></div>
-            <div><dt>Simulados concluídos</dt><dd>{simulations===null?"Indisponível":simulations.toLocaleString("pt-BR")}</dd></div>
+            <div><dt>Respostas registradas</dt><dd>{activity?.answered.toLocaleString("pt-BR")??"Indisponível"}</dd></div>
+            <div><dt>Acertos</dt><dd>{activity?.correct.toLocaleString("pt-BR")??"Indisponível"}</dd></div>
+            <div><dt>Simulados concluídos</dt><dd>{activity?.simulations.toLocaleString("pt-BR")??"Indisponível"}</dd></div>
           </dl>
         </section>
       </>}
     </main>
-    <footer className={styles.footer}>{preview ? "Dados ilustrativos." : "Questões e acertos dos testes salvos; simulados contados separadamente."}</footer>
+    <footer className={styles.footer}>{preview ? "Dados ilustrativos." : "Testes salvos, questões praticadas e simulados concluídos."}</footer>
   </div>;
 }

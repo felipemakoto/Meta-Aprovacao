@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 22 — estatísticas de respostas concluídas
+
+Agregar no servidor diagnósticos associados, práticas corrigidas e simulados finalizados. Unidade é resposta em uma tentativa, não questão única. Preservar snapshots; não recalcular por conteúdo editável. Períodos all/30d usam conclusão e relógio do banco, incluindo limite inicial da janela e excluindo datas futuras. Associação tardia não altera a data de conclusão.
+
+RPC restrita ao servidor, conta confirmada e propriedade em cada fonte. API retorna apenas agregados e cinco metadados recentes; valida somas/contagens e nunca transforma falha em zero. Porcentagem exige cinco respostas por matéria, sem rótulo de domínio ou previsão de aprovação. Dashboard consolida a mesma atividade e mantém último diagnóstico com identidade própria. Mockup v2 aprovado sem retorno Meus estudos no cabeçalho; retorno ao histórico preservado com seta e alinhamento esquerdo. Detalhes em ESTATISTICAS.md.
+
 ## Etapa 21 — simulados privados
 
 Catálogo editorial em private com publicação explícita e verificação de quantidade de conteúdo publicado; exemplos em rascunho não viram fallback. Tentativas preservam snapshots e título, pertencem à conta confirmada e duram até 24 horas antes de finalizar. É prazo técnico, sem tempo oficial de prova. Criação serializada por usuário retoma a tentativa ativa da mesma opção e limita criação a cinco por minuto.

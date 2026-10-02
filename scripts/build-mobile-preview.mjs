@@ -4,8 +4,8 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 const project=process.cwd();
 const screen=process.argv[3]||'questoes';
-if(!['questoes','historico','site','simulados'].includes(screen))throw new Error('Prévia desconhecida.');
-const component=screen==='site'?'scripts/mobile-site-preview.tsx':screen==='simulados'?'src/app/simulados/simulations.tsx':screen==='historico'?'src/app/historico/history.tsx':'src/app/questoes/practice.tsx';
+if(!['questoes','historico','site','simulados','estatisticas'].includes(screen))throw new Error('Prévia desconhecida.');
+const component=screen==='site'?'scripts/mobile-site-preview.tsx':screen==='estatisticas'?'src/app/estatisticas/statistics.tsx':screen==='simulados'?'src/app/simulados/simulations.tsx':screen==='historico'?'src/app/historico/history.tsx':'src/app/questoes/practice.tsx';
 const taskRoot=path.resolve(process.argv[2]||'');
 if(!process.argv[2] || taskRoot===project)throw new Error('Informe uma pasta externa de ferramentas/prévia.');
 const {build}=await import(pathToFileURL(path.join(taskRoot,'node_modules/esbuild/lib/main.js')).href);
@@ -18,7 +18,7 @@ await writeFile(path.join(taskRoot,'navigation.ts'),`export function useRouter()
 if(screen==='site'){
   await writeFile(path.join(taskRoot,'link.tsx'),`import React from ${JSON.stringify(path.join(project,'node_modules/react/index.js'))};
     export default function Link({children,href,...props}:any){
-      const allowed=typeof href==='string' && (href==='/' || /^\\/(dashboard|historico|questoes|quiz|simulados)(\\/|\\?|$)/.test(href));
+      const allowed=typeof href==='string' && (href==='/' || /^\\/(dashboard|historico|questoes|quiz|simulados|estatisticas)(\\/|\\?|$)/.test(href));
       return <a {...props} href="#" aria-disabled={allowed?undefined:true} title={allowed?undefined:"Disponível na aplicação completa"} onClick={e=>{e.preventDefault();if(allowed)window.dispatchEvent(new CustomEvent('etec-preview-navigation',{detail:href}));}}>{children}</a>;
     }`);
   await writeFile(path.join(taskRoot,'navigation.ts'),`const navigate=(path:string)=>window.dispatchEvent(new CustomEvent('etec-preview-navigation',{detail:path}));export function useRouter(){return {push:navigate,replace:navigate}}`);

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:statistics": "node --test tests/statistics.test.mjs",
+    "test:statistics:http": "node --test tests/statistics-http.test.mjs",
     "test:simulations": "node --test tests/simulations.test.mjs",
     "test:simulations:http": "node --test tests/simulations-http.test.mjs",
     "test:simulations:concurrency": "node --env-file=.env.local scripts/test-simulation-concurrency.mjs",

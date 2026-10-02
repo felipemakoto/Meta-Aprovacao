@@ -3,7 +3,7 @@ import { getVerifiedUser } from "@/lib/auth/user";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { loadDashboard } from "@/lib/quiz/dashboard-contract";
 import Dashboard from "./dashboard";
-import { simulationRpc } from "@/lib/data/simulations";
+import { statistics } from "@/lib/data/statistics";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Seus estudos | ETEC / IF", robots: { index: false, follow: false } };
@@ -18,8 +18,8 @@ export default async function DashboardPage() {
     },
   });
   if (state.kind === "login") redirect("/login");
-  let simulations:number|null=null;
+  let activity=null;
   const verifiedId=await identity.catch(()=>null);
-  if(verifiedId)try{const value=await simulationRpc("simulation_summary",{p_user_id:verifiedId});if(Number.isSafeInteger(value)&&value>=0)simulations=value;}catch{}
-  return <Dashboard summary={state.kind === "ready" ? state.summary : null} simulations={simulations}/>;
+  if(verifiedId)try{const value=await statistics(verifiedId,"all");activity={answered:value.answered,correct:value.correct,simulations:value.simulations};}catch{}
+  return <Dashboard summary={state.kind === "ready" ? state.summary : null} activity={activity}/>;
 }

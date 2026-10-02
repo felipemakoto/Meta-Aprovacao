@@ -7,10 +7,11 @@ import Practice from "../src/app/questoes/practice";
 import Quiz from "../src/app/quiz/quiz";
 import Result from "../src/app/quiz/result/result";
 import Simulations from "../src/app/simulados/simulations";
+import Statistics from "../src/app/estatisticas/statistics";
 import { demoTests,demoResult,demoReview } from "../src/app/historico/history-preview";
 import type { GuestQuiz } from "../src/lib/quiz/contract";
-type View="entrada"|"estudos"|"historico"|"questoes"|"quiz"|"resultado"|"simulados";
-const labels:Record<View,string>={entrada:"Início",estudos:"Meus estudos",historico:"Histórico",questoes:"Questões",quiz:"Teste",resultado:"Resultado",simulados:"Simulados"};
+type View="entrada"|"estudos"|"historico"|"questoes"|"quiz"|"resultado"|"simulados"|"estatisticas";
+const labels:Record<View,string>={entrada:"Início",estudos:"Meus estudos",historico:"Histórico",questoes:"Questões",quiz:"Teste",resultado:"Resultado",simulados:"Simulados",estatisticas:"Estatísticas"};
 function route(path:string):View|null {
  const p=new URL(path,"http://preview.local").pathname;
  if(p==="/")return "entrada";
@@ -20,11 +21,12 @@ function route(path:string):View|null {
  if(p.startsWith("/historico"))return "historico";
  if(p.startsWith("/questoes"))return "questoes";
  if(p.startsWith("/simulados"))return "simulados";
+ if(p.startsWith("/estatisticas"))return "estatisticas";
  return null;
 }
 const quiz:GuestQuiz={id:"demo-clean",startedAt:"2026-01-01T00:00:00Z",expiresAt:"2099-01-01T00:00:00Z",questionCount:10,questions:Array.from({length:10},(_,i)=>({id:"preview-"+i,position:i+1,version:1,subject:demoReview.subject,topic:demoReview.topic,statement:demoReview.statement,options:demoReview.options}))};
 export default function MobileSitePreview(){
- const [state,setState]=useState<{view:View;path:string}>({view:"simulados",path:"/simulados"});
+ const [state,setState]=useState<{view:View;path:string}>({view:"estatisticas",path:"/estatisticas"});
  useEffect(()=>{
   const listen=(e:Event)=>{const path=(e as CustomEvent<string>).detail;const view=route(path);if(view){setState({view,path});window.scrollTo({top:0,behavior:"instant"});}};
   window.addEventListener("etec-preview-navigation",listen);
@@ -41,7 +43,8 @@ export default function MobileSitePreview(){
    </select>
   </aside>
   {state.view==="entrada"&&<Home/>}
-  {state.view==="estudos"&&<Dashboard preview simulations={1} summary={{answered:10,correct:7,latest:{id:demoTests[0].id,completedAt:demoTests[0].at,total:10,score:7}}}/>}
+  {state.view==="estudos"&&<Dashboard preview activity={{answered:60,correct:42,simulations:2}} summary={{answered:10,correct:7,latest:{id:demoTests[0].id,completedAt:demoTests[0].at,total:10,score:7}}}/>}
+  {state.view==="estatisticas"&&<Statistics preview/>}
   {state.view==="historico"&&<History key={state.path} preview initialKind={p.get("kind")==="simulations"?"simulations":"tests"}/>}
   {state.view==="simulados"&&<Simulations preview/>}
   {state.view==="questoes"&&<Practice preview/>}

@@ -2,7 +2,7 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Etapa atual: 22 — [proposta visual das estatísticas](docs/design/ESTATISTICAS-MOCKUP.md), aguardando aprovação antes da implementação.
+Etapa 22 implementada: [estatísticas](docs/ESTATISTICAS.md) com períodos, atividade consolidada, contagens por matéria e simulados recentes. Visual aprovado sem Meus estudos no cabeçalho. Prévia local /estatisticas/preview; demonstração portátil em out/estatisticas-demonstracao.html. Testes técnicos aprovados; aguardando conferência manual.
 
 Etapa 21 implementada: [simulados](docs/SIMULADOS.md) com visual aprovado, correção ao finalizar, revisão e histórico privado. Demonstração para celular em out/simulados-demonstracao.html; demonstração combinada atualizada em out/site-demonstracao.html. Testes técnicos aprovados; aguarda conferência manual. Conteúdo real permanece em rascunho.
 
