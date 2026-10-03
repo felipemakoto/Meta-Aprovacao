@@ -1,5 +1,7 @@
 # Etapa 26 — página Premium
 
+Provedor atual em 03/10/2026: [Cakto](CAKTO.md), por escolha do usuário. Visual e preços aprovados preservados. Checkout preparado e indisponível enquanto faltarem produto/oferta, integração de validação e entrega dos benefícios.
+
 Atualização 03/10/2026: visual confirmado pelo usuário. Infraestrutura do checkout preparada na [etapa 27](CHECKOUT.md), com configuração comercial ainda pendente e contratação bloqueada. A página, seu visual e benefícios permanecem como aprovados; nenhum pagamento ou acesso foi ativado.
 
 ## Implementação após aprovação

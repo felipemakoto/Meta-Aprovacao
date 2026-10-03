@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Provedor atual: [Cakto](docs/CAKTO.md), escolhida em 03/10/2026 para substituir a Kiwify. Preparação da etapa 27 adaptada, visual preservado e contratação bloqueada. Usuário já tem cadastro, mas precisa criar oferta mensal de R$20 e cupom de 50% somente na primeira cobrança. Testes Node/HTTP, SQL, lint e build aprovados. Registros abaixo documentam o histórico anterior.
+
 Etapa 27 preparada: [checkout Kiwify](docs/CHECKOUT.md) com intenção privada, referência opaca, conta verificada, destino restrito e trava de lançamento. Migration aplicada; 15 testes Node/HTTP, SQL, lint e build aprovados. Produto/oferta ainda não criados pelo usuário; confirmar R$10 somente na primeira mensalidade e R$20 nas renovações. Nenhuma cobrança ou acesso Premium habilitado. Visual aprovado preservado.
 
 Etapa 26 implementada após aprovação do mockup v6: [página Premium](docs/PREMIUM.md), privada, com estados da conta e campanha de outubro de R$10 na primeira mensalidade, seguida de R$20/mês. Prévia local /premium/preview; contratação indisponível até a integração Kiwify. Sete testes, lint/build e QA visual aprovados. Pausa para conferência no PC antes da etapa 27.

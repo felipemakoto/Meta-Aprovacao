@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Troca para Cakto — 03/10/2026
+
+Usuário escolheu Cakto, já tem cadastro e ainda precisa criar produto/oferta. Adaptar preparação da etapa 27; preservar visual/preços e histórico das decisões Kiwify abaixo. Schema incremental aceita identidades antigas sem relabeling e novas assinaturas Cakto; checkout cria somente Cakto. Sem fallback de host/variáveis/provedor Kiwify. Usar oferta documentada, não pressupor plano Kiwify. Cupom oficial Cakto somente da primeira cobrança atende R$10 inicial/R$20 recorrente; conferir taxa repassada, validade/fuso e retorno de sck. Documentação de API/webhook Kiwify não vale para Cakto: reavaliar contratos completos antes das etapas 28–31. enabled:false preservado; não cobrar antes de garantir verificação e entrega.
+
 ## Etapa 27 — checkout preparado, contratação bloqueada
 
 Conta confirmada e verificada no servidor; POST sem payload nem parâmetros. Oferta/URL/produto/plano vêm apenas da configuração do servidor. Destino HTTPS exato pay.kiwify.com.br, cupom opcional e referência aleatória de 32 bytes em sck. Intenção privada imutável antes do redirect 303; lock por conta, reutilização de 15 minutos, expiração em uma hora/fim da campanha e limite de quatro criações/hora. RPC service_role sem acesso direto à tabela, sem concessão de assinatura.

@@ -3,31 +3,33 @@ import assert from 'node:assert/strict';
 import { checkoutUrl, configuredCheckout, checkoutDestination } from '../src/lib/subscriptions/checkout-contract.ts';
 import { checkoutHandler } from '../src/lib/subscriptions/checkout-http.ts';
 const now = new Date('2026-10-03T12:00:00-03:00');
-const env = { KIWIFY_PRODUCT_ID:'product', KIWIFY_OCTOBER_PLAN_ID:'monthly', KIWIFY_REGULAR_PLAN_ID:'regular',
- KIWIFY_OCTOBER_CHECKOUT_URL:'https://pay.kiwify.com.br/fixture?coupon=OUTUBRO', KIWIFY_REGULAR_CHECKOUT_URL:'https://pay.kiwify.com.br/regular' };
+const env = { CAKTO_PRODUCT_ID:'product', CAKTO_OCTOBER_OFFER_ID:'monthly', CAKTO_REGULAR_OFFER_ID:'regular',
+ CAKTO_OCTOBER_CHECKOUT_URL:'https://pay.cakto.com.br/fixture?coupon=OUTUBRO', CAKTO_REGULAR_CHECKOUT_URL:'https://pay.cakto.com.br/regular' };
 const offer = configuredCheckout(env, now);
-const intent = { reference:'a'.repeat(64), expiresAt:'2026-10-03T16:00:00Z', checkoutUrl:offer.url,
- productId:offer.productId, planId:offer.planId, firstPriceCents:1000, monthlyPriceCents:2000 };
+const intent = { provider:'cakto', reference:'a'.repeat(64), expiresAt:'2026-10-03T16:00:00Z', checkoutUrl:offer.url,
+ productId:offer.productId, offerId:offer.offerId, firstPriceCents:1000, monthlyPriceCents:2000 };
 const request = (opts={}) => new Request('http://localhost:3000/api/premium/checkout'+(opts.query??''),{
  method:'POST', headers:{origin:'http://localhost:3000', ...opts.headers}, ...(opts.body ? {body:opts.body}:{}),
 });
 const deps = { user:async()=>'verified-user', access:async()=>({hasPremium:false,accessUntil:null}), offer:()=>offer,
  create:async(user, o)=>{assert.equal(user,'verified-user');assert.deepEqual(o,offer);return intent;}, now:()=>now };
 const handler = (overrides={}, settings={})=>checkoutHandler({...deps,...overrides},{secure:false,enabled:true,...settings});
-test('URL permite apenas HTTPS Kiwify e cupom; rejeita dados pessoais e redirects',()=>{
- assert.equal(checkoutUrl(offer.url).hostname,'pay.kiwify.com.br');
- for(const url of ['http://pay.kiwify.com.br/a','https://pay.kiwify.com.br.evil.com/a','https://user:pw@pay.kiwify.com.br/a','https://pay.kiwify.com.br:444/a','https://pay.kiwify.com.br/a#x','https://pay.kiwify.com.br/a?email=x','https://pay.kiwify.com.br/a?sck=x','https://pay.kiwify.com.br/a?coupon=x&coupon=y','https://pay.kiwify.com.br/a?redirect=https://evil.com'])assert.throws(()=>checkoutUrl(url));
+test('URL permite apenas HTTPS Cakto e cupom; rejeita dados pessoais e redirects',()=>{
+ assert.equal(checkoutUrl(offer.url).hostname,'pay.cakto.com.br');
+ for(const url of ['http://pay.cakto.com.br/a','https://pay.cakto.com.br.evil.com/a','https://user:pw@pay.cakto.com.br/a','https://pay.cakto.com.br:444/a','https://pay.cakto.com.br/a#x','https://pay.cakto.com.br/a?email=x','https://pay.cakto.com.br/a?sck=x','https://pay.cakto.com.br/a?coupon=x&coupon=y','https://pay.cakto.com.br/a?redirect=https://evil.com'])assert.throws(()=>checkoutUrl(url));
 });
 test('campanha seleciona oferta servidor, sem fallback de outubro para preço errado',()=>{
  assert.equal(offer.firstPriceCents,1000);
  assert.equal(configuredCheckout(env,new Date('2026-11-01T03:00:00Z')).firstPriceCents,2000);
- assert.throws(()=>configuredCheckout({...env,KIWIFY_OCTOBER_CHECKOUT_URL:undefined},now));
- assert.throws(()=>configuredCheckout({...env,KIWIFY_PRODUCT_ID:'user@email'},now));
+ assert.throws(()=>configuredCheckout({...env,CAKTO_OCTOBER_CHECKOUT_URL:undefined},now));
+ assert.throws(()=>configuredCheckout({...env,CAKTO_PRODUCT_ID:'user@email'},now));
+ assert.throws(()=>configuredCheckout({KIWIFY_PRODUCT_ID:'old',KIWIFY_OCTOBER_PLAN_ID:'old',KIWIFY_OCTOBER_CHECKOUT_URL:'https://pay.kiwify.com.br/old'},now));
+ assert.throws(()=>checkoutUrl('https://pay.kiwify.com.br/old'));
 });
 test('destino inclui só cupom e referência opaca persistida, contrato exige oferta e prazo',()=>{
  const url=new URL(checkoutDestination(intent,offer,now));assert.equal(url.searchParams.get('sck'),intent.reference);
  assert.deepEqual([...url.searchParams.keys()],['coupon','sck']);assert.ok(!url.href.includes('verified-user'));
- for(const patch of [{reference:'uuid'},{expiresAt:now.toISOString()},{expiresAt:'infinity'},{checkoutUrl:'https://evil.example'},{planId:'wrong'},{productId:'wrong'},{firstPriceCents:2000},{monthlyPriceCents:1000}])assert.throws(()=>checkoutDestination({...intent,...patch},offer,now));
+ for(const patch of [{provider:'kiwify'},{provider:undefined},{reference:'uuid'},{expiresAt:now.toISOString()},{expiresAt:'infinity'},{checkoutUrl:'https://evil.example'},{offerId:'wrong'},{productId:'wrong'},{firstPriceCents:2000},{monthlyPriceCents:1000}])assert.throws(()=>checkoutDestination({...intent,...patch},offer,now));
 });
 test('CSRF, payload e parâmetros do cliente rejeitados antes de criar intenção',async()=>{
  const h=handler({create:async()=>assert.fail('must not persist')});

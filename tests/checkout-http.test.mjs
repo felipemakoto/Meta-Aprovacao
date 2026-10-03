@@ -12,5 +12,5 @@ test('checkout real exige sessão, recusa destino do cliente e não oferece GET'
 test('Premium permanece com contratação indisponível e prévia não inicia cobrança',async()=>{
  const response=await fetch(base+'/premium/preview');assert.equal(response.status,200);
  const html=await response.text();assert.match(html,/disabled=""/);assert.match(html,/Contratação em breve/);
- assert.ok(!html.includes('https://pay.kiwify.com.br/'));assert.ok(!html.includes('action="/api/premium/checkout"'));
+ assert.ok(!html.includes('https://pay.cakto.com.br/'));assert.ok(!html.includes('action="/api/premium/checkout"'));
 });
