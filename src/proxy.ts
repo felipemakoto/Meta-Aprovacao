@@ -14,5 +14,5 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   // Ampliar quando novas rotas passarem a consumir a sessão do usuário.
-  matcher: ["/api/auth/:path*", "/api/quiz/saved", "/api/practice", "/api/history", "/api/simulations", "/api/statistics", "/api/limits", "/estatisticas/:path*", "/simulados/:path*", "/historico/:path*", "/questoes", "/dashboard", "/cadastro/confirmado", "/login", "/nova-senha"],
+  matcher: ["/api/auth/:path*", "/api/quiz/saved", "/api/practice", "/api/history", "/api/simulations", "/api/statistics", "/api/limits", "/premium", "/estatisticas/:path*", "/simulados/:path*", "/historico/:path*", "/questoes", "/dashboard", "/cadastro/confirmado", "/login", "/nova-senha"],
 };

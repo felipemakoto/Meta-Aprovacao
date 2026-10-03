@@ -1,0 +1,28 @@
+.page {width:min(100% - 48px,520px);padding-block:20px 40px;}
+.page>header {padding-bottom:10px;}
+.title {font:400 clamp(36px,8vw,44px)/1.1 var(--font-display),Georgia,serif;margin:20px 0 8px;}
+.promotion {font-size:clamp(10.5px,3vw,13px);line-height:1.2;white-space:nowrap;color:var(--color-action);margin:0;}
+.price {font-size:clamp(64px,20vw,84px);font-weight:750;line-height:1;letter-spacing:-3px;color:var(--color-action);margin:24px 0 0;}
+.qualifier {display:block;font-size:20px;line-height:1.1;font-weight:500;letter-spacing:-.3px;margin-top:-1px;color:var(--foreground);}
+.renewal {margin:14px 0 6px;font-size:16px;line-height:1.4;color:var(--color-text-secondary);}
+.deadline {font-size:12px;line-height:1.4;color:var(--color-text-secondary);margin:0;}
+.benefits {list-style:none;padding:0;margin:8px 0 0;border-top:1px solid var(--color-divider);}
+.benefits li {font-size:15px;font-weight:400;line-height:1.4;padding:5px 0;border-bottom:1px solid var(--color-divider);}
+.comparison {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin:0;padding:12px 0;border-bottom:1px solid var(--color-divider);}
+.comparison div {min-width:0;}
+.comparison div+div {border-left:1px solid var(--color-divider);padding-left:14px;}
+.comparison dt {font-size:14px;color:var(--color-text-secondary);line-height:1.4;}
+.comparison dd {font-size:15px;line-height:1.3;font-weight:650;margin:2px 6px 0 0;overflow-wrap:normal;}
+.comparison div+div dt,.comparison div+div dd {color:var(--color-action);}
+.primary {position:relative;display:flex;justify-content:center;align-items:center;width:100%;min-height:52px;border:0;border-radius:5px;padding:12px 44px;background:var(--color-action);color:white;font:inherit;font-size:18px;font-weight:650;margin-top:8px;text-decoration:none;}
+.primary img {position:absolute;right:16px;filter:brightness(0) invert(1);flex-shrink:0;}
+.primary:disabled {cursor:not-allowed;}
+a.primary:hover {background:var(--color-action-hover);}
+.note {font-size:13px;line-height:1.4;color:var(--color-text-secondary);margin:8px 0 0;}
+.unavailable {font-size:12px;line-height:1.4;color:var(--color-text-secondary);margin:8px 0 0;}
+.back {margin-top:14px;}
+.footer {border-top:1px solid var(--color-divider);padding-top:10px;margin-top:8px;font-size:12px;line-height:1.4;color:var(--color-text-secondary);}
+.footer p {margin:8px 0 0;}
+.status {margin:20px 0;line-height:1.5;}
+.status p {margin:0 0 8px;}
+@media(max-width:359px) {.page {width:calc(100% - 40px);}.comparison div+div {padding-left:10px;}.comparison dd {margin-right:6px;}}

@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 26 — implementação do visual aprovado
+
+Alvo selecionado premium-opcao-1-v6.png. Server Component protegido por getUser e confirmação do e-mail; RPC apenas de leitura da etapa 25, contrato allowlist sem IDs comerciais. Falha operacional é estado distinto do gratuito. Campanha pelo servidor com America/Sao_Paulo e ano/mês explícitos, sem parâmetros do cliente na rota real. Prévia dev isolada com estados ilustrativos e guard de produção.
+
+CTA desabilitado preserva visual verde e comunica contratação/benefícios indisponíveis até a integração. Não conceder acesso, remover quota ou publicar conteúdo por aprovação de um mockup. Sem nova API HTTP, migration ou dependência; somente proxy ampliado para renovar sessão na rota /premium. Fontes/ícones/tokens existentes, CSS da página isolado. Navegador integrado funcionou nesta etapa, permitindo QA próprio do Premium; limites anteriores permanecem históricos.
+
 ## Etapa 26 — oferta mensal e proposta visual
 
 Preço definido pelo usuário: R$20/mês, promoção de 50% em outubro. Mockups adotam primeira mensalidade de R$10 para novas assinaturas entre 01 e 31/10/2026 (America/Sao_Paulo), depois R$20; interpretação explicitada, sujeita a ajuste na aprovação. Oferta real da Kiwify precisa cumprir primeiro pagamento, renovação e término da campanha; não basta trocar texto da página. Não aplicar desconto permanente por engano.

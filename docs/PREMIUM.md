@@ -1,4 +1,27 @@
-# Etapa 26 — proposta da página Premium
+# Etapa 26 — página Premium
+
+## Implementação após aprovação
+
+Usuário aprovou premium-opcao-1-v6.png com “pode ser assim”. Página implementada em 02/10/2026 a partir desse alvo (checkpoint visual 1043e5f). /premium exige conta confirmada; identidade vem de getUser no servidor, nunca da URL. RPC da etapa 25 consultada no servidor com contrato mínimo hasPremium/accessUntil. Erros de sessão, banco ou contrato exibem falha de consulta, sem transformar falha em plano gratuito. Estado ativo mostra prazo e retorno aos estudos; nenhuma assinatura real foi criada.
+
+/premium/preview existe somente em desenvolvimento: padrão mostra a oferta, ?state=active mostra plano ativo ilustrativo, ?state=error mostra falha e ?offer=regular simula o término da promoção. Parâmetros de prévia não alteram o plano na rota real. Campanha calculada pelo servidor no fuso de São Paulo, limitada a outubro de 2026: R$10 na primeira mensalidade, depois R$20. Fora do período aparece somente R$20/mês. Não altera ofertas da Kiwify.
+
+CTA mantém o botão verde aprovado, porém desabilitado e acompanhado de informação de contratação em breve. Benefícios ainda indisponíveis são explicitados. Checkout permanece na etapa 27, sem link fictício nem simulação de cobrança. Não há remoção de cotas ou catálogo novo nesta etapa. Links de marca e retorno funcionam; não foram alterados os visuais das demais páginas.
+
+Verificações: quatro testes Node de campanha/contrato/identidade/falhas e três HTTP de proteção/prévia/estados aprovados; lint, TypeScript e build aprovados. Primeira execução HTTP ocorreu sem servidor e falhou por conexão recusada; após iniciar dev, foram corrigidas duas expectativas do teste (comentários SSR no preço e cache-control de desenvolvimento) e as sete verificações passaram. Build confirma rotas dinâmicas; teste HTTP de servidor de produção não repetido devido ao bloqueio anterior registrado. Guard de prévia em produção verificado no código/build, sem afirmar teste HTTP de produção.
+
+Navegador integrado acessível nesta etapa: capturas e comparação visual conjunta realizadas, sem reutilizar o bloqueio anterior como resultado atual. Larguras 320, 360, 390 e 1280px sem overflow, promoção em uma linha, coluna desktop de 520px centralizada. Foco de teclado visível, retorno ao dashboard verificado e nenhum warn/error capturado. Evidências locais em out/premium-320.png, premium-360.png, premium-390.png e premium-comparison.png. Relatório em ../design-qa.md. Alterações finais reduziram espaçamento dos benefícios e tipografia da comparação para aproximar o alvo.
+
+Para testar no PC, abra http://127.0.0.1:3000/premium/preview. Confira promoção, preço, comparação e retorno em 320–390px. Para testar a leitura real, entre em sua conta no mesmo host e abra /premium; sem assinatura deve exibir contratação em breve. Dados reais autenticados ainda aguardam teste manual do usuário. Não usar a prévia como comprovação de acesso pago.
+
+```powershell
+Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+node --test tests/premium.test.mjs tests/premium-http.test.mjs
+```
+
+Servidor dev precisa estar rodando na porta 3000 para os testes HTTP. Checkpoint anterior 1043e5f; checkpoint de implementação consultar git log -1 --oneline. Pausa para teste do usuário antes da etapa 27.
+
+## Registro da proposta inicial
 
 Proposta criada em **02/10/2026**, após o checkpoint 2b524d2 da etapa 25. O usuário definiu R$20 por mês e promoção de 50% em outubro, confirmou os benefícios propostos e autorizou incrementar o plano. **Aguardando escolha visual antes de implementar a página.**
 

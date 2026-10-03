@@ -1,3 +1,21 @@
+# Etapa 26 — Premium
+
+final result: passed
+
+Escopo: prévia em desenvolvimento da página Premium após aprovação de docs/design/premium-opcao-1-v6.png. QA desta página; não altera resultados históricos abaixo nem comprova integração financeira ou leitura autenticada de conta real.
+
+Fonte inspecionada e comparação conjunta normalizada em out/premium-comparison.png: mockup redimensionado proporcionalmente à largura real da captura (375px), sem modificar o original. Captura browser full-page out/premium-390.png; viewport CSS 390x844, barra de rolagem resulta em bitmap de 375px. Fonte normalizada 375x628; página inclui mensagens de indisponibilidade/prévia e áreas de toque, portanto tem maior altura. Regiões preço, promoção, benefícios, comparação e CTA comparadas no mesmo estado gratuito promocional.
+
+- Tipografia: DM Serif Display no título, Geist nos demais textos, preço como maior destaque, qualificador próximo; benefícios com peso uniforme. Promoção em uma linha nas quatro larguras. Comparação ajustada para 15px e não compete com preço/CTA. Pequenas diferenças de métricas raster são P3 aceitáveis.
+- Espaçamento: header e benefícios compactados após a primeira comparação, retorno alinhado à esquerda, preço/qualificador agrupados, separação de duas colunas com linha fina. Em 320/360/390/1280px, DOM medido sem overflow e desktop com coluna 520px centralizada. Valor Premium pode quebrar em tela estreita; não corta conteúdo.
+- Cores: tokens existentes sólidos, off-white e verde escuro, sem reproduzir textura/gradiente raster incidental. Botão verde com texto branco preservado mesmo desabilitado; aviso explica indisponibilidade, sem falso checkout.
+- Ativos: SVGs Heroicons já fornecidos para marca e setas, fontes locais gerenciadas por Next/font; sem novas imagens decorativas nem placeholders. Capturas incluem indicador Next DevTools, artefato do desenvolvimento.
+- Conteúdo: preços/renovação/término, quatro benefícios, comparação, cancelamento, retorno e continuidade do gratuito conferidos. Duas notas adicionais são diferenças intencionais: contratação ainda indisponível e prévia ilustrativa. A imagem não representa checkout já funcional.
+
+Foco de teclado: Tab da marca chega ao retorno, outline solid visível; botão de contratação desabilitado não recebe foco. Retorno navega ao dashboard/preview com confirmação de URL e DOM; prévia Premium restaurada. Console capturado sem warn/error. Quatro contratos Node, três HTTP, lint/TypeScript/build aprovados. Teste de produção HTTP e sessão real pelo usuário não fazem parte deste passe visual e continuam pendentes. Nenhum P0/P1/P2 visual aberto; P3: pequenas diferenças de métricas e símbolo DevTools somente em dev.
+
+Checklist concluído: identidade visual, cópia, tamanhos estreitos, comparação, link de retorno, foco, console e comparação conjunta. Prévia local mantida aberta; aguardar conferência manual antes de checkout.
+
 # Etapa 23 — limites gratuitos nas telas existentes
 
 final result: blocked
