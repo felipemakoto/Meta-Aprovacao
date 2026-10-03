@@ -1,5 +1,13 @@
 # Cakto — provedor escolhido em 03/10/2026
 
+## Consulta real concluída em 03/10/2026
+
+Nova aba do checkout conferida após falha da aba antiga: nome corrigido e base R$20/mês. Cupom primeiracompra aplicado automaticamente após carregamento, com desconto somente na primeira cobrança. Pix Automático ainda repassa taxa de serviço R$0,99: total **R$10,99 inicial e R$20,99/mês nas próximas cobranças**. Portanto, a oferta ainda diverge dos R$10/R$20 anunciados; usuário precisa ajustar o repasse de taxa na Cakto. Nenhum formulário de comprador preenchido ou pagamento efetuado. Outros métodos e validade/fuso do cupom ainda não conferidos.
+
+Após o usuário salvar as credenciais no ambiente local, a autenticação e listagem oficial funcionaram. A API retornou uma única oferta do produto configurado: ID `8wweqjo`, nome Meta Aprovação - Plataforma de Aprendizagem, preço 20 reais, status active, type subscription, recurrence_period 30 e quantity_recurrences -1. `intervalType` retorna lifetime; esse campo não foi usado para conceder acesso nem como prova de mensalidade. A recorrência mensal também aparece no painel enviado pelo usuário. O script agora inclui o período de recorrência na saída comercial.
+
+CAKTO_REGULAR_OFFER_ID e CAKTO_OCTOBER_OFFER_ID configurados no .env.local ignorado com o ID confirmado pela API. Mesma oferta, com cupom apenas na URL promocional. Nenhuma credencial/token impresso ou versionado, nenhuma cobrança criada. Restam conferir valores finais/taxas no checkout atualizado, desconto apenas inicial, prazo/fuso do cupom e vínculo de rastreamento/pagamento. Contratação segue desabilitada. Os registros abaixo são históricos.
+
 ## Estado atual: consulta do ID da oferta
 
 As capturas mais recentes mostram nome corrigido, oferta R$20, recorrência mensal e renovação até cancelamento. O texto auxiliar de uma captura ainda exibe produto R$19,99; o checkout atualizado e eventual repasse de taxa precisam ser reconferidos. O ID da oferta não aparece nas capturas e não foi deduzido do link. Os registros anteriores abaixo descrevem a conferência inicial.

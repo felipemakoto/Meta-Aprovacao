@@ -7,7 +7,7 @@ const result = (body) => ({ ok: true, json: async () => body });
 test('consulta filtra produto, mantém endpoints fixos e descarta campos privados', async () => {
   const calls = [];
   const responses = [result({ access_token: 'fake-token', token_type: 'Bearer' }),
-    result({ next: 'https://outro-host.invalid/', results: [{ id: 'offer-test', name: 'Mensal', price: 20, product: env.CAKTO_PRODUCT_ID, privateField: 'omit' }] }),
+    result({ next: 'https://outro-host.invalid/', results: [{ id: 'offer-test', name: 'Mensal', price: 20, recurrence_period: 30, product: env.CAKTO_PRODUCT_ID, privateField: 'omit' }] }),
     result({ next: null, results: [] })];
   const offers = await listOffers(env, async (url, options) => { calls.push({ url, options }); return responses.shift(); });
   assert.equal(calls.length, 3);
@@ -19,6 +19,7 @@ test('consulta filtra produto, mantém endpoints fixos e descarta campos privado
   assert.equal(new URL(calls[1].url).searchParams.get('product'), env.CAKTO_PRODUCT_ID);
   assert.equal(offers[0].id, 'offer-test');
   assert.equal(offers[0].precoReais, 20);
+  assert.equal(offers[0].periodoRecorrencia, 30);
   assert.equal(JSON.stringify(offers).includes('omit'), false);
 });
 test('sem credenciais não faz chamadas; erros de rede não expõem segredo', async () => {

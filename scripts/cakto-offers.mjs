@@ -38,7 +38,8 @@ export async function listOffers(env, request = fetch) {
       // Somente campos comerciais: nunca imprimir token ou resposta completa.
       offers.push({ id: offer.id, nome: offer.name, precoReais: offer.price,
         status: offer.status, tipo: offer.type, intervalo: offer.intervalType,
-        quantidadeIntervalos: offer.interval, renovacoes: offer.quantity_recurrences });
+        quantidadeIntervalos: offer.interval, periodoRecorrencia: offer.recurrence_period,
+        renovacoes: offer.quantity_recurrences });
     }
     if (!data.next) return offers;
     // Não seguir URLs de paginação recebidas com o Bearer; reconstruir endpoint fixo.
