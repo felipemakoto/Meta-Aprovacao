@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Etapa 26 iniciada pela [proposta Premium](docs/PREMIUM.md): três mockups, plano de R$20/mês e campanha de outubro com primeira mensalidade de R$10, seguida de R$20. Benefícios e condições registrados; aguardando escolha visual antes da implementação. Nenhuma cobrança ativada.
+
 Etapa 25 concluída: [modelo privado de assinaturas](docs/ASSINATURAS.md), mantendo a Kiwify por escolha do usuário. Tabela protegida, período de acesso separado do estado do provedor e consulta restrita ao servidor; migration e testes SQL aprovados. Nenhum pagamento ou Premium ativado. Próxima etapa: 26 — mockup da página Premium.
 
 Etapa 24 concluída: [pesquisa oficial Kiwify](docs/KIWIFY.md), com contratos de vendas/checkout/webhooks, atualização Pix Automático e pendências para validação de pagamento. Somente documentação; próximo passo é a etapa 25 — subscriptions, após autorização para avançar.

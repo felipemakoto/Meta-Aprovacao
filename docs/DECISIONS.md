@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 26 — oferta mensal e proposta visual
+
+Preço definido pelo usuário: R$20/mês, promoção de 50% em outubro. Mockups adotam primeira mensalidade de R$10 para novas assinaturas entre 01 e 31/10/2026 (America/Sao_Paulo), depois R$20; interpretação explicitada, sujeita a ajuste na aprovação. Oferta real da Kiwify precisa cumprir primeiro pagamento, renovação e término da campanha; não basta trocar texto da página. Não aplicar desconto permanente por engano.
+
+Plano proposto: questões/simulados sem limite diário comercial e simulados por matéria do catálogo publicado. Limites técnicos mantidos; histórico, estatísticas e revisão seguem gratuitos. Não vender conteúdo em rascunho nem prometer novos fluxos inexistentes. Três mockups preservam o visual clean aprovado. Implementação aguarda escolha do usuário conforme o fluxo original; pagamento segue reservado às etapas de integração/validação. Detalhes em PREMIUM.md.
+
 ## Etapa 25 — Kiwify mantida e assinaturas privadas
 
 Usuário escolheu manter a Kiwify após comparar alternativas, pois já tem cadastro. Schema privado sem escrita pela API; serviço tem somente EXECUTE de leitura, jamais acesso direto à tabela. RPC exige conta confirmada e o servidor futuro deverá fornecer o UUID da sessão verificada. Interface e quotas não consomem esse direito nesta etapa.
