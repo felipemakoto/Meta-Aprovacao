@@ -1,5 +1,7 @@
 # Etapa 24 — pesquisa da integração Kiwify
 
+Atualização de **02/10/2026**: usuário decidiu manter a Kiwify após a comparação de alternativas. Etapa 25 concluída com [modelo privado de assinaturas](ASSINATURAS.md); contratos de webhook/consulta recorrente e demais pendências abaixo continuam necessários antes de ativar pagamentos.
+
 Documentação oficial consultada em **02/10/2026**. O usuário autorizou avançar após os limites gratuitos (checkpoint ab31177). Esta etapa entrega o contrato de integração e suas pendências; não cria produto, credencial, cobrança, webhook ou tabela. Próxima etapa: 25 — subscriptions. Os limites gratuitos continuam vigentes.
 
 ## Caminho da integração

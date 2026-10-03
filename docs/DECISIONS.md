@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 25 — Kiwify mantida e assinaturas privadas
+
+Usuário escolheu manter a Kiwify após comparar alternativas, pois já tem cadastro. Schema privado sem escrita pela API; serviço tem somente EXECUTE de leitura, jamais acesso direto à tabela. RPC exige conta confirmada e o servidor futuro deverá fornecer o UUID da sessão verificada. Interface e quotas não consomem esse direito nesta etapa.
+
+Separar provider_status observado de access_state local e intervalo verificado. Acesso negado por padrão; granted/revoked exigem ordem, datas e intervalo finito. Expiração pelo relógio do banco, sem status active isolado nem tolerância inventada. Cancelamento não descarta automaticamente período pago. Produto/proprietário/identidade imutáveis, assinatura externa única e última ordem única; histórico completo de eventos/idempotência e validação oficial ficam para as próximas etapas. Múltiplas assinaturas da mesma conta permitidas, sem somar duração por entrega. Plano externo opcional até contrato real confirmado. Detalhes e testes em ASSINATURAS.md.
+
 ## Etapa 24 — contrato Kiwify antes do modelo de assinaturas
 
 Pesquisa oficial em KIWIFY.md. Usar API Pública de vendas, OAuth no servidor e consulta de ordem como evidência independente. Referência aleatória opaca em sck é candidata ao vínculo com checkout, com teste real obrigatório; não enviar dados pessoais/UUID interno na URL nem associar compra automaticamente pelo e-mail. Nomes de triggers configurados e campos de evento recebido não serão confundidos.
