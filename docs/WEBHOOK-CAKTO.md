@@ -1,5 +1,7 @@
 # Etapa 28 — contrato conferido, implementação pendente
 
+Atualização comercial: usuário confirmou validade do cupom até 31/10/2026. Horário/fuso ainda não informado; confirmar antes do lançamento. Isso não impede preparar e testar o receptor local sem aceitar pagamentos.
+
 Fontes oficiais consultadas em 03/10/2026: [guia de webhooks](https://docs.cakto.com.br/conceitos/webhooks), [criação de webhook](https://docs.cakto.com.br/api-reference/webhooks/create).
 
 ## Contrato do provedor

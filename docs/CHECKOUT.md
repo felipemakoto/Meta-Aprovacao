@@ -1,5 +1,7 @@
 # Etapa 27 — preparação do checkout Cakto
 
+Usuário confirmou em 03/10/2026 validade de primeiracompra até 31/10/2026. Horário/fuso ainda não informado; reconferir antes de habilitar contratação. Próxima implementação é o receptor da etapa 28, sem conceder Premium só pelo recebimento de evento. Condições de lançamento e trava permanecem.
+
 Conferência posterior à alteração pelo usuário: API e checkout confirmam R$22,99 base e totais R$12,49 inicial/R$23,98 recorrente em Pix Automático, cartão e Pix. Arredondamento corresponde ao site. Sem pagamento; validade/fuso do cupom e etapas de webhook/verificação permanecem pendentes. Proposta do receptor em WEBHOOK-CAKTO.md.
 
 Novo preço aprovado em 03/10/2026: base R$22,99, inicial promocional arredondada R$11,50; taxa Cakto R$0,99 por cobrança informada separadamente na tela (totais R$12,49 e R$23,98). Contrato e RPC de novas intenções esperam base 1150/2299 e renovação 2299 centavos, via migration incremental 20261003180000. Intenções antigas mantêm valores imutáveis. Oferta remota ainda precisa ser atualizada pelo usuário e reconferida, inclusive arredondamento e validade do cupom. enabled:false preservado.

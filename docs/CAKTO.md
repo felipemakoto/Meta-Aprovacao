@@ -1,5 +1,9 @@
 # Cakto — provedor escolhido em 03/10/2026
 
+## Validade confirmada pelo usuário
+
+Em 03/10/2026 o usuário confirmou que primeiracompra vence em 31/10/2026. Horário/fuso não informados; não presumir equivalência exata com meia-noite de São Paulo na aplicação. Reconferir esse detalhe antes do lançamento. A data deixa de estar pendente de resposta; os registros abaixo refletem o estado anterior. Nenhuma configuração remota ou cobrança alterada nesta confirmação.
+
 ## Preço e arredondamento reconferidos
 
 Em 03/10/2026, após aprovação da tela pelo usuário, consulta real da API confirmou oferta 8wweqjo active/subscription, base 22.99, intervalType month, interval 1, recurrence_period 30 e quantity_recurrences -1. Checkout novo confirmou cupom primeiracompra: desconto 11.49, primeira base 11.50, taxa 0.99, total 12.49 e próximas cobranças 23.98/mês. Valores correspondem à tela do site. Conferidos visualmente em Pix Automático, cartão e Pix sem preencher dados nem gerar cobrança. Isso confirma apresentação comercial, não teste de pagamento. Validade/fuso do cupom continua aguardando informação do usuário.
