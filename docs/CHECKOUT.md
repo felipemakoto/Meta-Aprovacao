@@ -1,5 +1,7 @@
 # Etapa 27 — preparação do checkout Cakto
 
+Novo preço aprovado em 03/10/2026: base R$22,99, inicial promocional arredondada R$11,50; taxa Cakto R$0,99 por cobrança informada separadamente na tela (totais R$12,49 e R$23,98). Contrato e RPC de novas intenções esperam base 1150/2299 e renovação 2299 centavos, via migration incremental 20261003180000. Intenções antigas mantêm valores imutáveis. Oferta remota ainda precisa ser atualizada pelo usuário e reconferida, inclusive arredondamento e validade do cupom. enabled:false preservado.
+
 Atualização 03/10/2026: autenticação e consulta real de ofertas concluídas após usuário salvar credenciais. ID confirmado `8wweqjo`, R$20, assinatura com recurrence_period 30; produto conferido pelo filtro da API. IDs regular e promocional configurados no ambiente local ignorado. Cupom diferencia a URL promocional da mesma oferta. Valores finais/taxas e vigência do cupom continuam pendentes; trava enabled:false preservada. Registros anteriores abaixo são históricos.
 
 Link/cupom fornecidos pelo usuário e conferidos em 03/10/2026, com divergências de preço, taxa e nome pendentes. URLs salvas apenas no servidor local; não ativam contratação. Detalhes e próximos ajustes em [CAKTO.md](CAKTO.md). IDs do produto/oferta continuam necessários. O formato real do link exige migration incremental 20261003170000, sem reescrever o histórico.

@@ -2,7 +2,7 @@ import { premiumOffer } from "./contract.ts";
 
 export type CheckoutOffer = {
   url: string; productId: string; offerId: string;
-  firstPriceCents: number; monthlyPriceCents: 2000;
+  firstPriceCents: number; monthlyPriceCents: 2299;
 };
 type Environment = Record<string, string | undefined>;
 export function checkoutUrl(value: string): URL {
@@ -22,7 +22,7 @@ export function configuredCheckout(env: Environment, at: Date): CheckoutOffer {
   const productId = env.CAKTO_PRODUCT_ID ?? "";
   const offerId = env[`${prefix}_OFFER_ID`] ?? "";
   if (![productId, offerId].every(id => /^[A-Za-z0-9_-]{1,200}$/.test(id))) throw Error("checkout_not_configured");
-  return { url, productId, offerId, firstPriceCents: promotional ? 1000 : 2000, monthlyPriceCents: 2000 };
+  return { url, productId, offerId, firstPriceCents: promotional ? 1150 : 2299, monthlyPriceCents: 2299 };
 }
 export function checkoutDestination(value: unknown, offer: CheckoutOffer, at: Date): string {
   if (!value || typeof value !== "object" || Array.isArray(value)) throw Error("invalid_checkout_intent");
@@ -31,7 +31,7 @@ export function checkoutDestination(value: unknown, offer: CheckoutOffer, at: Da
       typeof r.expiresAt !== "string" || !Number.isFinite(Date.parse(r.expiresAt)) ||
       Date.parse(r.expiresAt) <= at.getTime() || r.checkoutUrl !== offer.url ||
       r.productId !== offer.productId || r.offerId !== offer.offerId ||
-      r.firstPriceCents !== offer.firstPriceCents || r.monthlyPriceCents !== 2000) throw Error("invalid_checkout_intent");
+      r.firstPriceCents !== offer.firstPriceCents || r.monthlyPriceCents !== offer.monthlyPriceCents) throw Error("invalid_checkout_intent");
   const url = checkoutUrl(offer.url);
   url.searchParams.set("sck", r.reference);
   return url.href;

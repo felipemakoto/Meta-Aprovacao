@@ -7,7 +7,7 @@ const env = { CAKTO_PRODUCT_ID:'product', CAKTO_OCTOBER_OFFER_ID:'monthly', CAKT
  CAKTO_OCTOBER_CHECKOUT_URL:'https://pay.cakto.com.br/fixture?coupon=OUTUBRO', CAKTO_REGULAR_CHECKOUT_URL:'https://pay.cakto.com.br/regular' };
 const offer = configuredCheckout(env, now);
 const intent = { provider:'cakto', reference:'a'.repeat(64), expiresAt:'2026-10-03T16:00:00Z', checkoutUrl:offer.url,
- productId:offer.productId, offerId:offer.offerId, firstPriceCents:1000, monthlyPriceCents:2000 };
+ productId:offer.productId, offerId:offer.offerId, firstPriceCents:1150, monthlyPriceCents:2299 };
 const request = (opts={}) => new Request('http://localhost:3000/api/premium/checkout'+(opts.query??''),{
  method:'POST', headers:{origin:'http://localhost:3000', ...opts.headers}, ...(opts.body ? {body:opts.body}:{}),
 });
@@ -21,8 +21,8 @@ test('URL permite apenas HTTPS Cakto e cupom; rejeita dados pessoais e redirects
  for(const url of ['http://pay.cakto.com.br/a','https://pay.cakto.com.br.evil.com/a','https://user:pw@pay.cakto.com.br/a','https://pay.cakto.com.br:444/a','https://pay.cakto.com.br/a#x','https://pay.cakto.com.br/a?email=x','https://pay.cakto.com.br/a?sck=x','https://pay.cakto.com.br/a?coupon=x&coupon=y','https://pay.cakto.com.br/a?redirect=https://evil.com'])assert.throws(()=>checkoutUrl(url));
 });
 test('campanha seleciona oferta servidor, sem fallback de outubro para preço errado',()=>{
- assert.equal(offer.firstPriceCents,1000);
- assert.equal(configuredCheckout(env,new Date('2026-11-01T03:00:00Z')).firstPriceCents,2000);
+ assert.equal(offer.firstPriceCents,1150);
+ assert.equal(configuredCheckout(env,new Date('2026-11-01T03:00:00Z')).firstPriceCents,2299);
  assert.throws(()=>configuredCheckout({...env,CAKTO_OCTOBER_CHECKOUT_URL:undefined},now));
  assert.throws(()=>configuredCheckout({...env,CAKTO_PRODUCT_ID:'user@email'},now));
  assert.throws(()=>configuredCheckout({KIWIFY_PRODUCT_ID:'old',KIWIFY_OCTOBER_PLAN_ID:'old',KIWIFY_OCTOBER_CHECKOUT_URL:'https://pay.kiwify.com.br/old'},now));
@@ -31,7 +31,7 @@ test('campanha seleciona oferta servidor, sem fallback de outubro para preço er
 test('destino inclui só cupom e referência opaca persistida, contrato exige oferta e prazo',()=>{
  const url=new URL(checkoutDestination(intent,offer,now));assert.equal(url.searchParams.get('sck'),intent.reference);
  assert.deepEqual([...url.searchParams.keys()],['coupon','sck']);assert.ok(!url.href.includes('verified-user'));
- for(const patch of [{provider:'kiwify'},{provider:undefined},{reference:'uuid'},{expiresAt:now.toISOString()},{expiresAt:'infinity'},{checkoutUrl:'https://evil.example'},{offerId:'wrong'},{productId:'wrong'},{firstPriceCents:2000},{monthlyPriceCents:1000}])assert.throws(()=>checkoutDestination({...intent,...patch},offer,now));
+ for(const patch of [{provider:'kiwify'},{provider:undefined},{reference:'uuid'},{expiresAt:now.toISOString()},{expiresAt:'infinity'},{checkoutUrl:'https://evil.example'},{offerId:'wrong'},{productId:'wrong'},{firstPriceCents:2299},{monthlyPriceCents:1150}])assert.throws(()=>checkoutDestination({...intent,...patch},offer,now));
 });
 test('CSRF, payload e parâmetros do cliente rejeitados antes de criar intenção',async()=>{
  const h=handler({create:async()=>assert.fail('must not persist')});

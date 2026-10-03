@@ -1,5 +1,11 @@
 # Cakto — provedor escolhido em 03/10/2026
 
+## Preço solicitado: R$22,99 + taxa
+
+Usuário trouxe resposta do suporte: taxa de serviço R$0,99 não pode ser assumida/removida manualmente, inclusive nas renovações; negociação dependeria do Time Comercial. Usuário decidiu aumentar a base para R$22,99, sem incluir a taxa. Tela Premium agora separa base, taxa e total: renovação R$23,98. Campanha de outubro permanece 50% somente inicial; cálculo local em centavos arredonda base para R$11,50 e total R$12,49. Arredondamento real precisa ser confirmado no checkout após usuário alterar produto e oferta na Cakto, que na última consulta ainda custavam R$20. Nenhuma alteração comercial remota executada pelo agente.
+
+Contratos e migration incremental 20261003180000_cakto_price_2299.sql atualizam somente os preços base esperados de novas intenções; histórico de R$10/R$20 preservado sem updates. Taxa não é receita/base do produto nem concedida como acesso. Lançamento continua bloqueado até conferência do provedor e validação de pagamentos. Dez testes isolados, cinco HTTP, lint/build aprovados. Migration ensaiada com rollback/testes e dry-run antes da aplicação; conferência mobile 320px sem overflow.
+
 ## Consulta real concluída em 03/10/2026
 
 Nova aba do checkout conferida após falha da aba antiga: nome corrigido e base R$20/mês. Cupom primeiracompra aplicado automaticamente após carregamento, com desconto somente na primeira cobrança. Pix Automático ainda repassa taxa de serviço R$0,99: total **R$10,99 inicial e R$20,99/mês nas próximas cobranças**. Portanto, a oferta ainda diverge dos R$10/R$20 anunciados; usuário precisa ajustar o repasse de taxa na Cakto. Nenhum formulário de comprador preenchido ou pagamento efetuado. Outros métodos e validade/fuso do cupom ainda não conferidos.

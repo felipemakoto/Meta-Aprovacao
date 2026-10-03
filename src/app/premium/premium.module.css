@@ -2,7 +2,8 @@
 .page>header {padding-bottom:10px;}
 .title {font:400 clamp(36px,8vw,44px)/1.1 var(--font-display),Georgia,serif;margin:20px 0 8px;}
 .promotion {font-size:clamp(10.5px,3vw,13px);line-height:1.2;white-space:nowrap;color:var(--color-action);margin:0;}
-.price {font-size:clamp(64px,20vw,84px);font-weight:750;line-height:1;letter-spacing:-3px;color:var(--color-action);margin:24px 0 0;}
+.price {font-size:clamp(48px,15vw,78px);font-weight:750;line-height:1;letter-spacing:-2px;color:var(--color-action);margin:24px 0 0;}
+.total {font-size:14px;line-height:1.5;font-weight:600;margin:4px 0 8px;color:var(--foreground);}
 .qualifier {display:block;font-size:20px;line-height:1.1;font-weight:500;letter-spacing:-.3px;margin-top:-1px;color:var(--foreground);}
 .renewal {margin:14px 0 6px;font-size:16px;line-height:1.4;color:var(--color-text-secondary);}
 .deadline {font-size:12px;line-height:1.4;color:var(--color-text-secondary);margin:0;}

@@ -20,5 +20,5 @@ export function premiumOffer(at: Date) {
   if (!Number.isFinite(at.getTime())) throw Error("invalid_offer_date");
   const parts = new Intl.DateTimeFormat("en", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit" }).formatToParts(at);
   const promotional = parts.find(p => p.type === "year")?.value === "2026" && parts.find(p => p.type === "month")?.value === "10";
-  return { promotional, firstPrice: promotional ? 10 : 20, monthlyPrice: 20 };
+  return { promotional, firstPrice: promotional ? 11.50 : 22.99, monthlyPrice: 22.99 };
 }

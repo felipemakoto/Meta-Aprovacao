@@ -4,9 +4,10 @@ declare u uuid:=gen_random_uuid(); v uuid:=gen_random_uuid(); n uuid:=gen_random
  price integer; r jsonb; other_r jsonb; denied boolean; role_name text; i integer;
 begin
  insert into auth.users(id,email_confirmed_at) values(u,t),(v,t),(n,null);
- price:=case when t>=timestamptz '2026-10-01 00:00:00-03' and t<timestamptz '2026-11-01 00:00:00-03' then 1000 else 2000 end;
+ price:=case when t>=timestamptz '2026-10-01 00:00:00-03' and t<timestamptz '2026-11-01 00:00:00-03' then 1150 else 2299 end;
  set local role service_role;
  r:=public.create_checkout_intent(u,'fixture-product','fixture-plan','https://pay.cakto.com.br/fixture',price);
+ if (r->>'monthlyPriceCents')::integer<>2299 or (r->>'firstPriceCents')::integer<>price then raise exception 'wrong base prices';end if;
  if r->>'provider'<>'cakto' or r->>'offerId'<>'fixture-plan' then raise exception 'wrong provider or offer';end if;
  if r->>'reference' !~ '^[a-f0-9]{64}$' or (r->>'expiresAt')::timestamptz<=t then raise exception 'invalid reference or expiry';end if;
  if r<>public.create_checkout_intent(u,'fixture-product','fixture-plan','https://pay.cakto.com.br/fixture',price) then raise exception 'retry not idempotent';end if;
@@ -20,8 +21,12 @@ begin
  if not denied then raise exception 'foreign checkout accepted';end if;
  denied:=false;begin perform public.create_checkout_intent(u,'p','p','https://pay.kiwify.com.br/fixture',price);exception when raise_exception then denied:=sqlerrm='invalid_checkout_offer';end;
  if not denied then raise exception 'legacy provider accepted in new checkout';end if;
- denied:=false;begin perform public.create_checkout_intent(u,'p','p','https://pay.cakto.com.br/fixture',case when price=1000 then 2000 else 1000 end);exception when raise_exception then denied:=sqlerrm='invalid_checkout_offer';end;
+ denied:=false;begin perform public.create_checkout_intent(u,'p','p','https://pay.cakto.com.br/fixture',case when price=1150 then 2299 else 1150 end);exception when raise_exception then denied:=sqlerrm='invalid_checkout_offer';end;
  if not denied then raise exception 'wrong campaign price accepted';end if;
+ for i in select unnest(array[1000,2000,1249,2398]) loop
+  denied:=false;begin perform public.create_checkout_intent(u,'p','p','https://pay.cakto.com.br/fixture',i);exception when raise_exception then denied:=sqlerrm='invalid_checkout_offer';end;
+  if not denied then raise exception 'old price or buyer total accepted as base';end if;
+ end loop;
  for i in 1..3 loop perform public.create_checkout_intent(u,'p','plan-'||i,'https://pay.cakto.com.br/fixture',price);end loop;
  denied:=false;begin perform public.create_checkout_intent(u,'p','fifth','https://pay.cakto.com.br/fixture',price);exception when raise_exception then denied:=sqlerrm='checkout_rate_limited';end;
  if not denied then raise exception 'rate limit missing';end if;

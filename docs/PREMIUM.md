@@ -70,3 +70,6 @@ Página /premium e prévia de desenvolvimento usando a opção escolhida; adapta
 Antes do checkout real, a página deverá identificar a indisponibilidade de contratação e manter a ação de pagamento indisponível; demonstrações serão explicitamente ilustrativas. Não colocar link fictício, credencial ou um botão que concede Premium. A integração de checkout fica na etapa 27 e validação/cotas pagas nas etapas próprias. A aprovação do visual não libera pagamentos automaticamente.
 
 A pausa segue a seção 73 do pedido original: “Espere minha aprovação. Somente após aprovação: crie React/Tailwind/CSS.” Não foi escrito código de aplicação, alterado banco, configurada oferta nem repetido lint/build para imagens/documentação. Esta é a proposta da etapa 26, não a implementação concluída.
+# Atualização de preço em 03/10/2026
+
+Usuário definiu R$22,99/mês de base, com taxa Cakto R$0,99 adicional ao comprador conforme resposta do suporte. Tela informa total recorrente R$23,98. Campanha continua 50% inicial em outubro: base arredondada localmente R$11,50 + taxa = R$12,49; aguardando conferência do arredondamento no checkout atualizado. Preço anterior nos registros abaixo é histórico. Benefícios e trava de contratação preservados; não aceitar pagamentos enquanto oferta e entrega não forem verificadas.

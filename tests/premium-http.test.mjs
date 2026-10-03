@@ -11,7 +11,7 @@ test('pagina privada ignora tentativa de forjar conta/plano pela URL e cookie',a
 test('previa promocional deixa renovacao clara e nao aceita pagamento',async()=>{
  const r=await fetch(origin+'/premium/preview');assert.equal(r.status,process.env.PREMIUM_TEST_PRODUCTION?404:200);if(process.env.PREMIUM_TEST_PRODUCTION)return;
  const html=(await r.text()).replaceAll('<!-- -->','');
- for(const text of ['Outubro · 50% na primeira mensalidade','R$10','Depois, R$20 por mês.','10 questões/dia','Questões ilimitadas','Contratação em breve.'])assert.ok(html.includes(text),text);
+ for(const text of ['Outubro · 50% na primeira mensalidade','R$11,50','Depois, R$22,99 por mês.','Taxa Cakto de R$0,99 por cobrança.','Total: R$12,49 no primeiro mês; depois, R$23,98/mês.','10 questões/dia','Questões ilimitadas','Contratação em breve.'])assert.ok(html.includes(text),text);
  assert.match(html,/<button[^>]*disabled[^>]*>Escolher Premium/);
  assert.ok(html.indexOf('10 questões/dia')<html.indexOf('Escolher Premium'));
  assert.doesNotMatch(html,/https:\/\/pay\.kiwify|sb_secret_/);
@@ -20,5 +20,5 @@ test('estados distintos ativo, erro e fim da promocao',async()=>{
  if(process.env.PREMIUM_TEST_PRODUCTION)return;
  const active=await (await fetch(origin+'/premium/preview?state=active')).text();assert.match(active,/Seu Premium está ativo/);assert.match(active,/Continuar estudando/);assert.doesNotMatch(active,/50% na primeira mensalidade/);
  const error=await (await fetch(origin+'/premium/preview?state=error')).text();assert.match(error,/Não foi possível consultar seu plano/);assert.doesNotMatch(error,/Escolher Premium|R\$10/);
- const regular=(await (await fetch(origin+'/premium/preview?offer=regular')).text()).replaceAll('<!-- -->','');assert.match(regular,/R\$20/);assert.doesNotMatch(regular,/50% na primeira mensalidade|Oferta até/);
+ const regular=(await (await fetch(origin+'/premium/preview?offer=regular')).text()).replaceAll('<!-- -->','');assert.match(regular,/R\$22,99/);assert.match(regular,/Total: R\$23,98\/mês/);assert.doesNotMatch(regular,/50% na primeira mensalidade|Oferta até/);
 });

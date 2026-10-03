@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { premiumOffer, parseSubscriptionAccess, loadPremium } from '../src/lib/subscriptions/contract.ts';
 test('campanha apenas em outubro de 2026 em Sao Paulo, primeira parcela e renovacao distintas',()=>{
- for(const at of ['2026-09-30T23:59:59-03:00','2026-11-01T00:00:00-03:00','2027-10-02T12:00:00-03:00'])assert.deepEqual(premiumOffer(new Date(at)),{promotional:false,firstPrice:20,monthlyPrice:20});
- for(const at of ['2026-10-01T00:00:00-03:00','2026-10-31T23:59:59-03:00'])assert.deepEqual(premiumOffer(new Date(at)),{promotional:true,firstPrice:10,monthlyPrice:20});
+ for(const at of ['2026-09-30T23:59:59-03:00','2026-11-01T00:00:00-03:00','2027-10-02T12:00:00-03:00'])assert.deepEqual(premiumOffer(new Date(at)),{promotional:false,firstPrice:22.99,monthlyPrice:22.99});
+ for(const at of ['2026-10-01T00:00:00-03:00','2026-10-31T23:59:59-03:00'])assert.deepEqual(premiumOffer(new Date(at)),{promotional:true,firstPrice:11.50,monthlyPrice:22.99});
  assert.throws(()=>premiumOffer(new Date('invalid')));
 });
 test('contrato falha fechado, sem status do provedor conceder Premium e sem expor campos privados',()=>{
