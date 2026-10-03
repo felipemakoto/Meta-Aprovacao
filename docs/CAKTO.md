@@ -2,6 +2,8 @@
 
 ## Checkout informado e conferido em 03/10/2026
 
+Atualização após screenshot do painel: usuário informou ter corrigido o nome. Campo ID do produto mostra `89be91ab-b7a4-4f17-8e23-8db46f8c2261`, registrado em CAKTO_PRODUCT_ID no ambiente local ignorado. Tela também confirma recorrência Mensal e renovação até o cliente cancelar; valor ainda R$19,99. ID da oferta continua pendente: menu Ofertas visível no painel, solicitar a próxima tela. Sem alteração de preço/repasse na conta pelo agente, sem contratação habilitada.
+
 Usuário forneceu URL pública https://pay.cakto.com.br/8wweqjo_1168765 e cupom `primeiracompra`. Links regular/promocional salvos em .env.local ignorado, sem alterar credenciais ou preencher IDs fictícios. Identificadores de produto/oferta ainda pendentes; o sufixo do link não foi tratado como ID da API.
 
 Conferência read-only no navegador, sem dados do comprador nem pagamento: cupom na URL foi aplicado depois do carregamento; Pix Automático mostrou desconto somente na primeira cobrança. Entretanto, base R$19,99/mês, primeira cobrança base R$10,00 e taxa de serviço ao comprador R$0,99 resultam em **R$10,99 agora e R$20,98 nas renovações**. Nome exibido inclui também a descrição longa. Corrigir na Cakto nome do produto, base R$20/mês e repasse da taxa antes de aprovar comercialmente. Prazo/fuso do cupom, métodos restantes e vínculo de pedido/sck não verificados. Não considerar oferta pronta só porque o cupom funciona. Captura de conferência em out/cakto-checkout-promocao.png, sem dados pessoais de comprador.
