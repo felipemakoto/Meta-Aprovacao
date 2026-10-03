@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:webhook": "node --test tests/webhook.test.mjs",
+    "test:webhook:http": "node --test tests/webhook-http.test.mjs",
     "test:limits": "node --test tests/limits.test.mjs",
     "test:limits:http": "node --test tests/limits-http.test.mjs",
     "test:limits:concurrency": "node --env-file=.env.local scripts/test-limits-concurrency.mjs",

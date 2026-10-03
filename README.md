@@ -274,3 +274,6 @@ Teste da etapa 12 confirmado. Três propostas de resultado em [RESULTADO-MOCKUPS
 Imagem 3 escolhida para resultado e imagem 2 para revisar erros um a um. Implementado envio do quiz e feedback real, com recuperação por cookie. Teste visual local em http://127.0.0.1:3000/quiz/result/preview (dados ilustrativos). Detalhes em [RESULTADO.md](docs/RESULTADO.md).
 
 Build/lint e 30 testes passaram. Conferência no navegador concluída em 26/09/2026: revisão dos erros e de todas as respostas, zero/dez acertos, finalização da prévia, teclado e larguras 320/390/1280. Evidências em [design-qa.md](design-qa.md). Pausa para seu teste antes da etapa 14; nenhuma questão publicada.
+# Etapa 28 — receptor Cakto
+
+Receptor local implementado em `POST /api/webhooks/cakto`, com assinatura HMAC, inbox privada e deduplicação. [Configuração, testes e limites](docs/WEBHOOK-CAKTO.md). Entrega real depende de URL HTTPS pública e segredo próprio do webhook; pagamentos e concessão de Premium continuam bloqueados até verificação das próximas etapas.
