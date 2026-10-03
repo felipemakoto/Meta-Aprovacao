@@ -1,5 +1,20 @@
 # Cakto — provedor escolhido em 03/10/2026
 
+## Estado atual: consulta do ID da oferta
+
+As capturas mais recentes mostram nome corrigido, oferta R$20, recorrência mensal e renovação até cancelamento. O texto auxiliar de uma captura ainda exibe produto R$19,99; o checkout atualizado e eventual repasse de taxa precisam ser reconferidos. O ID da oferta não aparece nas capturas e não foi deduzido do link. Os registros anteriores abaixo descrevem a conferência inicial.
+
+Foi preparada consulta administrativa local somente de leitura em `scripts/cakto-offers.mjs`. Autentica no endpoint oficial e lista ofertas filtradas pelo produto configurado, imprimindo apenas campos comerciais. Não grava IDs automaticamente, não cria cobranças, não consulta compradores e não ativa Premium. Paginação usa domínio fixo, sem seguir URLs recebidas com credenciais; erros não imprimem tokens ou corpo do provedor.
+
+Para configurar:
+
+1. No painel Cakto, abrir **Integrações → Cakto API → Criar Chave de API**.
+2. Nome sugerido: **Meta Aprovação — consulta de ofertas**. Selecionar apenas escopos **read** e **offers**, sem write.
+3. Guardar client_id e client_secret em `.env.local`, com nomes `CAKTO_CLIENT_ID` e `CAKTO_CLIENT_SECRET`. Não enviar no chat nem usar prefixo NEXT_PUBLIC. O segredo é mostrado somente na criação.
+4. Na pasta do projeto, executar `node --env-file=.env.local scripts/cakto-offers.mjs`.
+
+Fontes: [autenticação e permissões](https://docs.cakto.com.br/authentication), [consulta de ofertas](https://docs.cakto.com.br/api-reference/offers/list). Credenciais ainda não configuradas: nenhuma consulta real à API executada. Três testes isolados e ESLint dos arquivos aprovados. Identificar a oferta não conclui verificação de cupom, valores finais, vigência ou entrega do Premium; contratação permanece bloqueada.
+
 ## Checkout informado e conferido em 03/10/2026
 
 Atualização após screenshot do painel: usuário informou ter corrigido o nome. Campo ID do produto mostra `89be91ab-b7a4-4f17-8e23-8db46f8c2261`, registrado em CAKTO_PRODUCT_ID no ambiente local ignorado. Tela também confirma recorrência Mensal e renovação até o cliente cancelar; valor ainda R$19,99. ID da oferta continua pendente: menu Ofertas visível no painel, solicitar a próxima tela. Sem alteração de preço/repasse na conta pelo agente, sem contratação habilitada.
