@@ -1,5 +1,11 @@
 # Cakto — provedor escolhido em 03/10/2026
 
+## Preço e arredondamento reconferidos
+
+Em 03/10/2026, após aprovação da tela pelo usuário, consulta real da API confirmou oferta 8wweqjo active/subscription, base 22.99, intervalType month, interval 1, recurrence_period 30 e quantity_recurrences -1. Checkout novo confirmou cupom primeiracompra: desconto 11.49, primeira base 11.50, taxa 0.99, total 12.49 e próximas cobranças 23.98/mês. Valores correspondem à tela do site. Conferidos visualmente em Pix Automático, cartão e Pix sem preencher dados nem gerar cobrança. Isso confirma apresentação comercial, não teste de pagamento. Validade/fuso do cupom continua aguardando informação do usuário.
+
+Guia integral de webhooks finalmente acessível pelo navegador, embora ferramenta de leitura web não tenha aberto a página: [contrato oficial](https://docs.cakto.com.br/conceitos/webhooks). Substitui a pendência de documentação de autenticidade; implementação ainda não iniciada. Plano técnico em WEBHOOK-CAKTO.md. Credenciais atuais permanecem somente read + offers; não houve ampliação de acesso ou registro remoto de webhook.
+
 ## Preço solicitado: R$22,99 + taxa
 
 Usuário trouxe resposta do suporte: taxa de serviço R$0,99 não pode ser assumida/removida manualmente, inclusive nas renovações; negociação dependeria do Time Comercial. Usuário decidiu aumentar a base para R$22,99, sem incluir a taxa. Tela Premium agora separa base, taxa e total: renovação R$23,98. Campanha de outubro permanece 50% somente inicial; cálculo local em centavos arredonda base para R$11,50 e total R$12,49. Arredondamento real precisa ser confirmado no checkout após usuário alterar produto e oferta na Cakto, que na última consulta ainda custavam R$20. Nenhuma alteração comercial remota executada pelo agente.
