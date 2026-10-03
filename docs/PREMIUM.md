@@ -1,5 +1,7 @@
 # Etapa 26 — página Premium
 
+Atualização 03/10/2026: visual confirmado pelo usuário. Infraestrutura do checkout preparada na [etapa 27](CHECKOUT.md), com configuração comercial ainda pendente e contratação bloqueada. A página, seu visual e benefícios permanecem como aprovados; nenhum pagamento ou acesso foi ativado.
+
 ## Implementação após aprovação
 
 Usuário aprovou premium-opcao-1-v6.png com “pode ser assim”. Página implementada em 02/10/2026 a partir desse alvo (checkpoint visual 1043e5f). /premium exige conta confirmada; identidade vem de getUser no servidor, nunca da URL. RPC da etapa 25 consultada no servidor com contrato mínimo hasPremium/accessUntil. Erros de sessão, banco ou contrato exibem falha de consulta, sem transformar falha em plano gratuito. Estado ativo mostra prazo e retorno aos estudos; nenhuma assinatura real foi criada.

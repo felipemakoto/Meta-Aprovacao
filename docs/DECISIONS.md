@@ -1,5 +1,11 @@
 # Decisões técnicas
 
+## Etapa 27 — checkout preparado, contratação bloqueada
+
+Conta confirmada e verificada no servidor; POST sem payload nem parâmetros. Oferta/URL/produto/plano vêm apenas da configuração do servidor. Destino HTTPS exato pay.kiwify.com.br, cupom opcional e referência aleatória de 32 bytes em sck. Intenção privada imutável antes do redirect 303; lock por conta, reutilização de 15 minutos, expiração em uma hora/fim da campanha e limite de quatro criações/hora. RPC service_role sem acesso direto à tabela, sem concessão de assinatura.
+
+Usuário ainda não criou produto/oferta. Trava literal enabled:false na rota, sem flag de ambiente que permita ativação acidental. Não habilitar botão nem aceitar pagamentos antes de confirmar preço/renovação, vínculo sck, verificação e entrega. Documentação oficial de cupom recorrente não prova desconto apenas da primeira mensalidade; não improvisar plano permanente de R$10. Valores em centavos e campanha também conferidos pelo relógio do banco. Sem alteração de visual, cotas ou dependências. Etapa preparada não equivale a checkout comercial pronto.
+
 ## Etapa 26 — implementação do visual aprovado
 
 Alvo selecionado premium-opcao-1-v6.png. Server Component protegido por getUser e confirmação do e-mail; RPC apenas de leitura da etapa 25, contrato allowlist sem IDs comerciais. Falha operacional é estado distinto do gratuito. Campanha pelo servidor com America/Sao_Paulo e ano/mês explícitos, sem parâmetros do cliente na rota real. Prévia dev isolada com estados ilustrativos e guard de produção.
