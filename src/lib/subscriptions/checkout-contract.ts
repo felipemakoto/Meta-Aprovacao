@@ -8,7 +8,7 @@ type Environment = Record<string, string | undefined>;
 export function checkoutUrl(value: string): URL {
   const url = new URL(value);
   if (url.protocol !== "https:" || url.hostname !== "pay.cakto.com.br" || url.port ||
-      url.username || url.password || url.hash || !/^\/[A-Za-z0-9]+$/.test(url.pathname)) throw Error("invalid_checkout_url");
+      url.username || url.password || url.hash || !/^\/[A-Za-z0-9_-]+$/.test(url.pathname)) throw Error("invalid_checkout_url");
   const keys = [...url.searchParams.keys()];
   // Nenhum dado pessoal, referência prévia ou redirecionamento entra na configuração.
   if (keys.some(k => k !== "coupon") || keys.length > 1 ||

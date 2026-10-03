@@ -10,6 +10,8 @@ begin
  if r->>'provider'<>'cakto' or r->>'offerId'<>'fixture-plan' then raise exception 'wrong provider or offer';end if;
  if r->>'reference' !~ '^[a-f0-9]{64}$' or (r->>'expiresAt')::timestamptz<=t then raise exception 'invalid reference or expiry';end if;
  if r<>public.create_checkout_intent(u,'fixture-product','fixture-plan','https://pay.cakto.com.br/fixture',price) then raise exception 'retry not idempotent';end if;
+ other_r:=public.create_checkout_intent(v,'fixture-product','fixture-plan','https://pay.cakto.com.br/fixture_slug-123?coupon=primeiracompra',price);
+ if other_r->>'checkoutUrl'<>'https://pay.cakto.com.br/fixture_slug-123?coupon=primeiracompra' then raise exception 'valid slug rejected';end if;
  other_r:=public.create_checkout_intent(v,'fixture-product','fixture-plan','https://pay.cakto.com.br/fixture',price);
  if r->>'reference'=other_r->>'reference' then raise exception 'reference reused by other account';end if;
  denied:=false;begin perform public.create_checkout_intent(n,'p','p','https://pay.cakto.com.br/fixture',price);exception when raise_exception then denied:=sqlerrm='login_required';end;

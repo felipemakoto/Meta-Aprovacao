@@ -16,6 +16,8 @@ const deps = { user:async()=>'verified-user', access:async()=>({hasPremium:false
 const handler = (overrides={}, settings={})=>checkoutHandler({...deps,...overrides},{secure:false,enabled:true,...settings});
 test('URL permite apenas HTTPS Cakto e cupom; rejeita dados pessoais e redirects',()=>{
  assert.equal(checkoutUrl(offer.url).hostname,'pay.cakto.com.br');
+ assert.equal(checkoutUrl('https://pay.cakto.com.br/8wweqjo_1168765?coupon=primeiracompra').pathname,'/8wweqjo_1168765');
+ for(const path of ['/a/b','/a%2Fb','/a%3Fb','/a.'])assert.throws(()=>checkoutUrl('https://pay.cakto.com.br'+path));
  for(const url of ['http://pay.cakto.com.br/a','https://pay.cakto.com.br.evil.com/a','https://user:pw@pay.cakto.com.br/a','https://pay.cakto.com.br:444/a','https://pay.cakto.com.br/a#x','https://pay.cakto.com.br/a?email=x','https://pay.cakto.com.br/a?sck=x','https://pay.cakto.com.br/a?coupon=x&coupon=y','https://pay.cakto.com.br/a?redirect=https://evil.com'])assert.throws(()=>checkoutUrl(url));
 });
 test('campanha seleciona oferta servidor, sem fallback de outubro para preço errado',()=>{

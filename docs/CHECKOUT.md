@@ -1,5 +1,7 @@
 # Etapa 27 — preparação do checkout Cakto
 
+Link/cupom fornecidos pelo usuário e conferidos em 03/10/2026, com divergências de preço, taxa e nome pendentes. URLs salvas apenas no servidor local; não ativam contratação. Detalhes e próximos ajustes em [CAKTO.md](CAKTO.md). IDs do produto/oferta continuam necessários. O formato real do link exige migration incremental 20261003170000, sem reescrever o histórico.
+
 Em 03/10/2026 o usuário confirmou a página Premium, autorizou esta etapa e depois escolheu trocar Kiwify por Cakto. Já tem cadastro Cakto, mas ainda não criou produto/oferta. A infraestrutura foi adaptada; **a configuração comercial e a conferência no provedor permanecem pendentes**. Histórico Kiwify está preservado no Git. Veja [contrato atual e roteiro Cakto](CAKTO.md).
 
 ## Implementação

@@ -1,5 +1,15 @@
 # Cakto — provedor escolhido em 03/10/2026
 
+## Checkout informado e conferido em 03/10/2026
+
+Usuário forneceu URL pública https://pay.cakto.com.br/8wweqjo_1168765 e cupom `primeiracompra`. Links regular/promocional salvos em .env.local ignorado, sem alterar credenciais ou preencher IDs fictícios. Identificadores de produto/oferta ainda pendentes; o sufixo do link não foi tratado como ID da API.
+
+Conferência read-only no navegador, sem dados do comprador nem pagamento: cupom na URL foi aplicado depois do carregamento; Pix Automático mostrou desconto somente na primeira cobrança. Entretanto, base R$19,99/mês, primeira cobrança base R$10,00 e taxa de serviço ao comprador R$0,99 resultam em **R$10,99 agora e R$20,98 nas renovações**. Nome exibido inclui também a descrição longa. Corrigir na Cakto nome do produto, base R$20/mês e repasse da taxa antes de aprovar comercialmente. Prazo/fuso do cupom, métodos restantes e vínculo de pedido/sck não verificados. Não considerar oferta pronta só porque o cupom funciona. Captura de conferência em out/cakto-checkout-promocao.png, sem dados pessoais de comprador.
+
+Formato do checkout contém underscore. Parser e migration incremental `20261003170000_cakto_checkout_slug.sql` passam a aceitar caracteres alfanuméricos, underscore e hífen no único segmento do caminho Cakto. Domínio HTTPS, ausência de credenciais/hash/porta, cupom único e veto a outros parâmetros preservados. Migrações anteriores não reescritas. Contratação continua bloqueada; nenhuma condição comercial do provedor foi alterada por esta etapa.
+
+Ensaio da migration com rollback e dry-run aprovados; migration aplicada e suíte SQL repetida com sucesso. Quinze testes Node/HTTP, lint, TypeScript e build aprovados. Usuário perguntou onde localizar os IDs; solicitar tela/endereço do produto no painel antes de afirmar quais códigos visíveis correspondem à API. Não criar credencial nesta etapa apenas para localizar IDs.
+
 Usuário pediu a troca da Kiwify pela Cakto, confirmou que já tem cadastro e informou que ainda não criou produto/oferta. Preço e visual aprovados permanecem: R$20/mês, R$10 somente na primeira mensalidade para novas contratações em outubro de 2026. Nenhuma contratação real foi ativada.
 
 ## Evidência oficial e configuração
