@@ -1,5 +1,24 @@
 # Etapa 28 — receptor implementado, entrega real pendente
 
+## Retomada e integração local em 05/10/2026
+
+Usuário confirmou que o site ainda está somente no computador. Nenhuma URL pública, túnel, deploy ou webhook no painel criado nesta retomada. Entrega real permanece pendente; implementação local pode ser exercitada sem expor o servidor.
+
+Teste `scripts/test-webhook-integration.mjs` aprovado usando aplicação Next com `next start` em loopback 127.0.0.1:3101, build existente e segredo aleatório efêmero somente no ambiente do processo filho. IDs de produto/oferta de fixture sobrescrevem apenas esse processo; `.env.local` e dev server da porta 3000 preservados. Tráfego atravessou rota real, DAL e RPC no Supabase ligado, com fixtures removidas no finally. Segredo não gravado nem impresso.
+
+Confirmados HTTP 200 após persistência real, duas requisições simultâneas idênticas com uma entrada, reembolso posterior como segunda entrada, rejeição 401 de adulteração/timestamp antigo, rejeição 400 de lote V2 com produto estrangeiro sem gravação parcial e ausência de dados pessoais/segredo nos registros pending. Script e lint aprovados; processo de teste encerrado e fixtures removidas. Isso resolve os limites anteriores de HTTP positivo integrado e concorrência entre requisições, mas não prova entrega originada na Cakto nem compatibilidade de uma venda real.
+
+Para repetir a partir da pasta do projeto:
+
+```powershell
+npm.cmd run build
+npm.cmd run test:webhook:integration
+```
+
+Requer porta 3101 livre, `.env.local` configurado e CLI Supabase autenticada. Teste insere somente eventos sintéticos com IDs aleatórios, confere diretamente o banco por Management API e exclui exclusivamente essas fixtures. Não concede acesso nem cria cobranças. Se a limpeza falhar, o script termina com erro e conserva o arquivo SQL da fixture em `supabase/.temp`; não declarar teste concluído nesse caso.
+
+Próxima etapa local prevista: 29 — verificação independente do pagamento. Teste do provedor será retomado depois de URL HTTPS pública e segredo do webhook, mantendo contratação desabilitada até o lançamento.
+
 ## Implementação de 03/10/2026
 
 Endpoint `POST /api/webhooks/cakto` em Node, com corpo de até 256 KiB e leitura limitada a três segundos. Assinatura HMAC dos bytes originais, comparação em tempo constante e tolerância de cinco minutos em ambos os sentidos. Headers ausentes/assinatura errada recebem 401; configuração ausente 503; formatos/eventos/produto/oferta rejeitados antes de persistir. Não usa login/cookies como autenticidade do provedor, nem fallback no secret do corpo. Valores recebidos não liberam plano ou alteram cotas.
