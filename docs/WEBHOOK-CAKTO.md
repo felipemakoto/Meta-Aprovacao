@@ -1,5 +1,13 @@
 # Etapa 28 — receptor implementado, entrega real pendente
 
+## Diagnóstico seguro em 06/10/2026
+
+Site publicado pelo usuário em https://meta-aprovacao.vercel.app; login confirmado por imagem. Webhook cadastrado manualmente com disparo individual. Teste da Cakto recebeu 401; painel exibe Headers vazio e produto/oferta fictícios, o que não comprova ausência de headers no transporte. Segredo permanece fora da documentação.
+
+Rota agora escreve uma linha `cakto_webhook_diagnostic` por POST nos logs do servidor. Inclui status, motivo fixo e, quando verificada, presença/formato dos dois headers, validade do horário (tolerância de cinco minutos) e resultado booleano da assinatura. Não registra valores de headers, horário original, segredo, corpo, IDs, dados pessoais ou mensagens de exceção. Resposta pública e critérios de autenticação preservados; falha no logger não afeta a resposta.
+
+Após publicar esta alteração, abrir Vercel → Logs e enviar Compra aprovada pelo botão Testar da Cakto. Procurar `cakto_webhook_diagnostic`. Motivos: `missing_signature_headers` (um header ausente), `invalid_signature_format` (formato incompatível), `timestamp_outside_tolerance` (horário inválido), `signature_mismatch` (HMAC não coincide; não identifica sozinho chave vs bytes), `product_or_offer_rejected` (assinatura válida, IDs não permitidos), `configuration_missing`, `processing_failed` ou `persisted`. Não flexibilizar autenticação nem permitir produto de fixture. Teste do provedor ainda pendente.
+
 ## Retomada e integração local em 05/10/2026
 
 Usuário confirmou que o site ainda está somente no computador. Nenhuma URL pública, túnel, deploy ou webhook no painel criado nesta retomada. Entrega real permanece pendente; implementação local pode ser exercitada sem expor o servidor.

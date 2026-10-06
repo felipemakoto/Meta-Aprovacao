@@ -10,6 +10,27 @@ function request(body=JSON.stringify(payload), overrides={}) {
  return new Request('http://localhost/api/webhooks/cakto',{method:'POST',body,headers:{'content-type':'application/json','x-cakto-timestamp':timestamp,'x-cakto-signature':signature,...overrides}});
 }
 const config=()=>({secret,product:'product',offers:['offer']});
+test('diagnóstico distingue rejeições sem expor valores e não altera respostas',async()=>{
+ const logs=[];
+ const handler=webhookHandler({config,now:()=>now,save:async()=>{},diagnose:d=>logs.push(d)});
+ const missing=request();missing.headers.delete('x-cakto-signature');
+ assert.equal((await handler(missing)).status,401);
+ assert.equal(logs.at(-1).reason,'missing_signature_headers');
+ assert.equal(logs.at(-1).signature.signaturePresent,false);
+ await handler(request(undefined,{'x-cakto-signature':'secret-private-malformed'}));
+ assert.equal(logs.at(-1).reason,'invalid_signature_format');
+ await handler(request(undefined,{'x-cakto-signature':'v1='+'0'.repeat(64)}));
+ assert.equal(logs.at(-1).reason,'signature_mismatch');
+ const stale=webhookHandler({config,now:()=>now+301000,save:async()=>{},diagnose:d=>logs.push(d)});
+ await stale(request());assert.equal(logs.at(-1).reason,'timestamp_outside_tolerance');
+ assert.equal(logs.at(-1).signature.clockWithinTolerance,false);
+ await handler(request(JSON.stringify({...payload,data:{...data,product:{id:'other'}}})));
+ assert.equal(logs.at(-1).reason,'product_or_offer_rejected');
+ await handler(request());assert.equal(logs.at(-1).reason,'persisted');
+ assert.doesNotMatch(JSON.stringify(logs),/fixture-secret|private|1791039600|order-1|@|v1=|customer|card/);
+ const brokenLogger=webhookHandler({config,now:()=>now,save:async()=>{},diagnose:()=>{throw Error(secret);}});
+ assert.equal((await brokenLogger(request())).status,200);
+});
 test('assinatura usa bytes originais e timestamp, sem fallback no corpo',()=>{
  const r=request(),raw=Buffer.from(JSON.stringify(payload));
  assert.equal(signatureValid(raw,r.headers,secret,now),true);

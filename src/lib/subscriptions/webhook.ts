@@ -15,12 +15,23 @@ function date(value: unknown): string | null {
   if (typeof value !== "string" || value.length > 64 || !Number.isFinite(Date.parse(value))) throw Error("invalid_payload");
   return new Date(value).toISOString();
 }
-export function signatureValid(raw: Uint8Array, headers: Headers, secret: string, now: number): boolean {
+export function signatureDiagnostic(raw: Uint8Array, headers: Headers, secret: string, now: number) {
   const timestamp = headers.get("x-cakto-timestamp") ?? "";
-  if (!/^\d{10}$/.test(timestamp) || !Number.isFinite(now) || Math.abs(now / 1000 - Number(timestamp)) > 300) return false;
   const signatures = (headers.get("x-cakto-signature") ?? "").split(",").map(s => s.trim());
+  const timestampPresent = headers.has("x-cakto-timestamp"), signaturePresent = headers.has("x-cakto-signature");
+  const timestampFormatValid = /^\d{10}$/.test(timestamp);
+  const signatureFormatValid = signatures.some(s => /^v1=[a-fA-F0-9]{64}$/.test(s));
+  const clockWithinTolerance = timestampFormatValid && Number.isFinite(now) ? Math.abs(now / 1000 - Number(timestamp)) <= 300 : null;
+  const details = { timestampPresent, signaturePresent, timestampFormatValid, signatureFormatValid, clockWithinTolerance };
+  if (!timestampPresent || !signaturePresent) return { ...details, reason: "missing_signature_headers", valid: false };
+  if (!timestampFormatValid || !signatureFormatValid) return { ...details, reason: "invalid_signature_format", valid: false };
+  if (!clockWithinTolerance) return { ...details, reason: "timestamp_outside_tolerance", valid: false };
   const expected = createHmac("sha256", secret).update(`${timestamp}.`).update(raw).digest();
-  return signatures.some(s => /^v1=[a-fA-F0-9]{64}$/.test(s) && timingSafeEqual(expected, Buffer.from(s.slice(3), "hex")));
+  const valid = signatures.some(s => /^v1=[a-fA-F0-9]{64}$/.test(s) && timingSafeEqual(expected, Buffer.from(s.slice(3), "hex")));
+  return { ...details, reason: valid ? "signature_verified" : "signature_mismatch", valid };
+}
+export function signatureValid(raw: Uint8Array, headers: Headers, secret: string, now: number): boolean {
+  return signatureDiagnostic(raw, headers, secret, now).valid;
 }
 export function inboxEvents(value: unknown, product: string, offers: string[]): InboxEvent[] {
   const envelope = object(value);
@@ -60,23 +71,30 @@ async function readBody(request: Request): Promise<Uint8Array> {
     })(), new Promise<never>((_, reject) => { timer = setTimeout(() => reject(new HttpError(408)), 3000); }) ]);
   } finally { clearTimeout(timer); void reader.cancel().catch(() => {}); }
 }
-export function webhookHandler(deps: { config: () => { secret: string; product: string; offers: string[] }; now: () => number; save: (events: InboxEvent[]) => Promise<void> }) {
+export type WebhookDiagnostic = { status: number; reason: string; signature?: ReturnType<typeof signatureDiagnostic> };
+export function webhookHandler(deps: { config: () => { secret: string; product: string; offers: string[] }; now: () => number; save: (events: InboxEvent[]) => Promise<void>; diagnose?: (diagnostic: WebhookDiagnostic) => void }) {
   return async (request: Request) => {
-    const reply = (status: number) => Response.json({ received: status === 200 }, { status, headers: { "Cache-Control": "no-store" } });
+    let signature: ReturnType<typeof signatureDiagnostic> | undefined;
+    const reply = (status: number, reason: string) => {
+      // Only fixed reasons and booleans reach logs; never headers, payloads or errors.
+      try { deps.diagnose?.({ status, reason, ...(signature ? { signature } : {}) }); } catch { /* Logging must not change delivery handling. */ }
+      return Response.json({ received: status === 200 }, { status, headers: { "Cache-Control": "no-store" } });
+    };
     try {
       const config = deps.config();
-      if (!config.secret || !config.product || !config.offers.length || config.offers.some(o => !o)) return reply(503);
-      if (new URL(request.url).search) return reply(400);
-      if (request.headers.get("content-type")?.split(";")[0].trim().toLowerCase() !== "application/json") return reply(415);
-      if (request.headers.has("content-encoding")) return reply(415);
+      if (!config.secret || !config.product || !config.offers.length || config.offers.some(o => !o)) return reply(503, "configuration_missing");
+      if (new URL(request.url).search) return reply(400, "query_rejected");
+      if (request.headers.get("content-type")?.split(";")[0].trim().toLowerCase() !== "application/json") return reply(415, "content_type_rejected");
+      if (request.headers.has("content-encoding")) return reply(415, "content_encoding_rejected");
       const raw = await readBody(request);
-      if (!signatureValid(raw, request.headers, config.secret, deps.now())) return reply(401);
+      signature = signatureDiagnostic(raw, request.headers, config.secret, deps.now());
+      if (!signature.valid) return reply(401, signature.reason);
       let parsed: unknown;
-      try { parsed = JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(raw)); } catch { return reply(400); }
+      try { parsed = JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(raw)); } catch { return reply(400, "invalid_json"); }
       let records: InboxEvent[];
-      try { records = inboxEvents(parsed, config.product, config.offers); } catch { return reply(400); }
+      try { records = inboxEvents(parsed, config.product, config.offers); } catch (error) { return reply(400, error instanceof Error && error.message === "foreign_offer" ? "product_or_offer_rejected" : "payload_rejected"); }
       await deps.save(records);
-      return reply(200);
-    } catch (error) { return reply(error instanceof HttpError ? error.status : 503); }
+      return reply(200, "persisted");
+    } catch (error) { return reply(error instanceof HttpError ? error.status : 503, error instanceof HttpError ? "body_rejected" : "processing_failed"); }
   };
 }
