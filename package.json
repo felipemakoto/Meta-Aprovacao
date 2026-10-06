@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:payment": "node --test tests/payment-verification.test.mjs",
+    "cakto:payment": "node --env-file=.env.local scripts/cakto-payment.mjs",
     "test:webhook": "node --test tests/webhook.test.mjs",
     "test:webhook:http": "node --test tests/webhook-http.test.mjs",
     "test:webhook:integration": "node --env-file=.env.local scripts/test-webhook-integration.mjs",
