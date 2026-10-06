@@ -1,5 +1,11 @@
 # Etapa 28 — receptor implementado, entrega real pendente
 
+## Entrega de teste autenticada em 06/10/2026
+
+Captura do usuário confirma requisição CaktoBot/1.0 no domínio de produção após commit 2bcd2d7, status 400 e diagnóstico `product_or_offer_rejected`. Esse motivo só ocorre depois de assinatura e timestamp válidos. Confirmadas conectividade do provedor e autenticação dessa entrega. O teste usa produto/oferta fictícios, diferentes dos IDs permitidos, e foi corretamente rejeitado antes de persistir. O erro 401 anterior permanece sem causa determinada; não atribuir retroativamente ausência de assinatura. Headers vazio no painel não prova ausência no transporte.
+
+Não liberar produto fictício nem trocar autenticação por secret no corpo. Persistência de evento real do produto, vínculo à conta e concessão de Premium permanecem pendentes. Segredo não registrado em documentação. Etapa 29 retomada: consultar pedido diretamente na API, sem confiar no status do webhook.
+
 ## Diagnóstico seguro em 06/10/2026
 
 Site publicado pelo usuário em https://meta-aprovacao.vercel.app; login confirmado por imagem. Webhook cadastrado manualmente com disparo individual. Teste da Cakto recebeu 401; painel exibe Headers vazio e produto/oferta fictícios, o que não comprova ausência de headers no transporte. Segredo permanece fora da documentação.
