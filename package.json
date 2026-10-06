@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "cakto:reconcile": "node --env-file=.env.local scripts/reconcile-cakto.mjs",
+    "test:reconciliation": "node --test tests/reconciliation.test.mjs",
     "test:payment:integration": "node --env-file=.env.local scripts/test-payment-integration.mjs",
     "cakto:process": "node --env-file=.env.local scripts/process-cakto-payment.mjs",
     "test:payment": "node --test tests/payment-verification.test.mjs tests/payment-processing.test.mjs",

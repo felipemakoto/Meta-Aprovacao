@@ -43,16 +43,24 @@ try {
  const review=await paymentProcessor({...deps,provider:async()=>({order:{...data,currency:undefined},subscription:sub})})(eventId);
  assert.equal(review.reason,'currency_unconfirmed');
  const access=await rpc('read_subscription_access',{p_user_id:user});assert.equal(access.hasPremium,false);
+ // Real separate HTTP/RPC calls race for a single fixture reservation.
+ const leases=await Promise.all([rpc('lease_cakto_payment_job',{p_product_id:'fixture-product',p_offer_ids:['fixture-offer']}),rpc('lease_cakto_payment_job',{p_product_id:'fixture-product',p_offer_ids:['fixture-offer']})]);
+ assert.equal(leases.filter(Boolean).length,1,'Only one worker may reserve the signal');
+ const lease=leases.find(Boolean);assert.equal(lease.eventId,eventId);
+ await rpc('finish_cakto_payment_job',{p_event_id:eventId,p_lease_token:lease.leaseToken,p_result:repeated[0]});
+ await assert.rejects(rpc('finish_cakto_payment_job',{p_event_id:eventId,p_lease_token:lease.leaseToken,p_result:repeated[0]}));
+ const queue=await rpc('cakto_payment_job_summary',{p_product_id:'fixture-product'});assert.equal(queue.verified,1);
+ assert.equal(await rpc('enqueue_cakto_api_order',{p_order_id:order,p_subscription_id:subscription,p_product_id:'fixture-product',p_offer_id:'fixture-offer',p_reference:reference}),true);
  query(`do $$begin
  if (select count(*) from private.cakto_payment_checks where event_id=${eventId} and outcome='verified')<>1 then raise exception 'concurrent proof duplicate';end if;
  if (select count(*) from private.cakto_payment_checks where event_id=${eventId} and outcome='review')<>1 then raise exception 'review lost';end if;
  if exists(select 1 from private.cakto_payment_checks where event_id=${eventId} and outcome='verified' and intent_reference<>'${reference}') then raise exception 'wrong intent';end if;
  if exists(select 1 from private.subscriptions where user_id='${user}') then raise exception 'unexpected entitlement';end if;
  end$$;`);
- console.log('Integração aprovada: intenção privada, evidência persistida, concorrência deduplicada e moeda ausente enviada para revisão. Premium não concedido.');
+ console.log('Integração aprovada: intenção/evidência, concorrência, reserva única entre workers, rejeição de conclusão repetida e descoberta pela API. Premium não concedido.');
 } finally {
- query(`begin;delete from private.cakto_event_inbox where id=${eventId} and order_id='${order}';delete from auth.users where id='${user}';
- do $$begin if exists(select 1 from private.cakto_event_inbox where id=${eventId} and order_id='${order}') or exists(select 1 from private.cakto_payment_checks where event_id=${eventId}) or exists(select 1 from private.checkout_intents where reference='${reference}') then raise exception 'fixture cleanup failed';end if;end$$;commit;`);
+ query(`begin;delete from private.cakto_event_inbox where order_id='${order}';delete from auth.users where id='${user}';
+ do $$begin if exists(select 1 from private.cakto_event_inbox where order_id='${order}') or exists(select 1 from private.cakto_payment_checks where event_id=${eventId}) or exists(select 1 from private.cakto_payment_jobs where event_id=${eventId}) or exists(select 1 from private.checkout_intents where reference='${reference}') then raise exception 'fixture cleanup failed';end if;end$$;commit;`);
  rmSync(file,{force:true});
  console.log('Fixtures removidas. Nenhuma consulta ou cobrança real na Cakto.');
 }

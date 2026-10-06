@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Estado atual em 06/10/2026: site publicado em [meta-aprovacao.vercel.app](https://meta-aprovacao.vercel.app). Etapa 30 implementada: [reconciliação manual Cakto](docs/RECONCILIACAO-CAKTO.md) com recuperação de falhas e busca limitada de primeiras mensalidades sem webhook. Testes técnicos e consulta real com fila vazia aprovados. Ainda faltam validação comercial, ciclo de assinatura e concessão de acesso; contratação/Premium permanecem bloqueados. Os registros abaixo são históricos; preços/configuração atuais estão no Estado do Projeto.
+
 Provedor atual: [Cakto](docs/CAKTO.md), escolhida em 03/10/2026 para substituir a Kiwify. Preparação da etapa 27 adaptada, visual preservado e contratação bloqueada. Usuário já tem cadastro, mas precisa criar oferta mensal de R$20 e cupom de 50% somente na primeira cobrança. Testes Node/HTTP, SQL, lint e build aprovados. Registros abaixo documentam o histórico anterior.
 
 Etapa 27 preparada: [checkout Kiwify](docs/CHECKOUT.md) com intenção privada, referência opaca, conta verificada, destino restrito e trava de lançamento. Migration aplicada; 15 testes Node/HTTP, SQL, lint e build aprovados. Produto/oferta ainda não criados pelo usuário; confirmar R$10 somente na primeira mensalidade e R$20 nas renovações. Nenhuma cobrança ou acesso Premium habilitado. Visual aprovado preservado.
@@ -42,7 +44,7 @@ Etapa 14 implementada com a opção 2: cadastro em http://127.0.0.1:3000/cadastr
 2. Consulte [Estado do Projeto](docs/ESTADO-DO-PROJETO.md) para saber o que foi verificado, as pendências e a próxima etapa.
 3. Consulte [Decisões técnicas](docs/DECISIONS.md) para entender as escolhas e suas razões.
 
-O site roda localmente; não há site publicado. Etapa 5 concluída: projeto Supabase `estudos-etec/if` criado no plano Free, em São Paulo, com status Healthy. Dados e verificação em [Supabase — etapa 5](docs/SUPABASE.md). Etapa 6 implementada: clientes Supabase e verificação de sessão no servidor. Consulte [Autenticação base](docs/AUTH-BASE.md) para configurar e testar. Cadastro e login visual permanecem nas etapas 14–16.
+O projeto também roda localmente. Etapa 5: projeto Supabase `estudos-etec/if` criado no plano Free, em São Paulo. Dados e verificação histórica em [Supabase — etapa 5](docs/SUPABASE.md). Clientes e configuração Supabase em [Autenticação base](docs/AUTH-BASE.md). Cadastro/login já implementados; veja o Estado do Projeto para confirmações e pendências atuais.
 
 ## Tecnologias
 Node.js 24 LTS (24.20.0 verificado), npm 11.19.0, Next.js 16.3.6, React 19.2.8, TypeScript 5, Tailwind CSS 4 e ESLint 9. App Router em src/app. Versões exatas no package-lock.json; preserve esse arquivo e use somente npm.

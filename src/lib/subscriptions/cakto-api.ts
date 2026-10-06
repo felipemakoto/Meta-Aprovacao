@@ -52,6 +52,21 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
     return result.access_token;
   }
   return {
+    async recentOrderIds(product:string,since:string,until:string,page=1) {
+      if (!/^[A-Za-z0-9_-]{1,200}$/.test(product) || !Number.isInteger(page) || page<1 || page>100 ||
+        !Number.isFinite(Date.parse(since)) || !Number.isFinite(Date.parse(until)) || Date.parse(until)<=Date.parse(since)) throw new CaktoReadError("invalid_id");
+      const accessToken=await token();
+      const params=new URLSearchParams({product,createdAt__gte:since,createdAt__lt:until,status:"paid",type:"subscription",offer_type:"main",ordering:"-createdAt",limit:"5",page:String(page)});
+      const result=await json(`orders/?${params}`,{method:"GET",headers:{Authorization:`Bearer ${accessToken}`}},1024*1024);
+      if (!Array.isArray(result.results) || result.results.length>5) throw new CaktoReadError("invalid_response");
+      const orderIds=result.results.map(value=>{
+        const r=record(value);
+        if(record(r.product).id!==product || typeof r.id!=="string") throw new CaktoReadError("invalid_response");
+        return orderUuid(r.id);
+      });
+      // Never follow provider pagination URLs with a bearer token.
+      return {orderIds:[...new Set(orderIds)],hasMore:!!result.next};
+    },
     async orderAndSubscription(id: string) {
       orderUuid(id); // Validate before credentials or network access.
       const accessToken = await token();
