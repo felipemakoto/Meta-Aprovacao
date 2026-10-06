@@ -2,6 +2,8 @@
 
 Implementação administrativa em 06/10/2026. Recupera processamentos interrompidos e procura primeiras mensalidades pagas sem webhook recebido. Consulta a API novamente e usa o verificador da etapa 29; não concede Premium. Contratação permanece bloqueada.
 
+Atualização da etapa 31: eventos adicionais de ciclo também são consumidos pela fila, com observações/revogação separadas da prova de pagamento. Regras e limitações em [CICLO-CAKTO.md](CICLO-CAKTO.md). O registro abaixo descreve a entrega inicial da etapa 30.
+
 ## Execução local
 
 No PowerShell, na pasta do projeto, com as credenciais já guardadas no `.env.local` ignorado:

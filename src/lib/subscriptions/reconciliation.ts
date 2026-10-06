@@ -1,7 +1,6 @@
 import { record, orderUuid } from "./cakto-api.ts";
-import type { PaymentCheck } from "./payment-processing.ts";
 export type PaymentLease={eventId:number;leaseToken:string;attempt:number};
-export async function reconcileJobs(deps:{lease:()=>Promise<PaymentLease|null>;process:(lease:PaymentLease)=>Promise<PaymentCheck>;recover:(lease:PaymentLease)=>Promise<void>},limit=5) {
+export async function reconcileJobs(deps:{lease:()=>Promise<PaymentLease|null>;process:(lease:PaymentLease)=>Promise<{outcome:"verified"|"review"|"retry"}>;recover:(lease:PaymentLease)=>Promise<void>},limit=5) {
   if(!Number.isInteger(limit)||limit<1||limit>10)throw Error("invalid_reconciliation_limit");
   const summary={processed:0,verified:0,review:0,retry:0,failed:0};
   for(let n=0;n<limit;n++) {

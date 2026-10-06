@@ -2,7 +2,7 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Estado atual em 06/10/2026: site publicado em [meta-aprovacao.vercel.app](https://meta-aprovacao.vercel.app). Etapa 30 implementada: [reconciliação manual Cakto](docs/RECONCILIACAO-CAKTO.md) com recuperação de falhas e busca limitada de primeiras mensalidades sem webhook. Testes técnicos e consulta real com fila vazia aprovados. Ainda faltam validação comercial, ciclo de assinatura e concessão de acesso; contratação/Premium permanecem bloqueados. Os registros abaixo são históricos; preços/configuração atuais estão no Estado do Projeto.
+Estado atual em 06/10/2026: site publicado em [meta-aprovacao.vercel.app](https://meta-aprovacao.vercel.app). Etapa 31: [ciclo Cakto](docs/CICLO-CAKTO.md) conectado à [reconciliação manual](docs/RECONCILIACAO-CAKTO.md), preservando período pago em cancelamentos e tratando reversões confirmadas. Testes técnicos aprovados. Renovações ainda exigem comprovação de moeda/valor/período; concessão de acesso e agendamento pendentes. Contratação/Premium permanecem bloqueados. Os registros abaixo são históricos; preços/configuração atuais estão no Estado do Projeto.
 
 Provedor atual: [Cakto](docs/CAKTO.md), escolhida em 03/10/2026 para substituir a Kiwify. Preparação da etapa 27 adaptada, visual preservado e contratação bloqueada. Usuário já tem cadastro, mas precisa criar oferta mensal de R$20 e cupom de 50% somente na primeira cobrança. Testes Node/HTTP, SQL, lint e build aprovados. Registros abaixo documentam o histórico anterior.
 
