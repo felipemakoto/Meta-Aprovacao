@@ -33,7 +33,7 @@ export function firstPaymentDecision(orderValue: unknown, subscriptionValue: unk
     if (base !== 2299 || discount !== expectedDiscount || total !== expected.firstPriceCents + 99 || monthly !== 2299 ||
       (expectedDiscount > 0 ? order.couponCode !== "primeiracompra" : order.couponCode !== null)) return reject("amount_or_coupon_mismatch");
     return {verified:true as const, reason:"payment_verified", evidence:{orderId:expected.orderId, subscriptionId:sub.id as string,
-      productId:expected.productId, offerId:expected.offerId, paidAt:new Date(paidAt).toISOString(), paidPriceCents:expected.firstPriceCents, currency:"BRL" as const}};
+      productId:expected.productId, offerId:expected.offerId, orderCreatedAt:new Date(orderedAt).toISOString(), paidAt:new Date(paidAt).toISOString(), paidPriceCents:expected.firstPriceCents, currency:"BRL" as const}};
   } catch { return reject("incomplete_provider_response"); }
 }
 function instant(value: unknown): number | null {

@@ -1,5 +1,17 @@
 # Etapa 29 — verificação independente do pagamento
 
+## Intenção e evidência integradas em 06/10/2026
+
+`payment-processing.ts` processa administrativamente um evento durável permitido, consulta pedido/assinatura, resolve a intenção privada exclusivamente pelo sck da resposta da API e executa o verificador. Não usa status, referência ou identidade do cliente do webhook como prova. Pedidos/eventos não permitidos recebem review; falhas de transporte/limite/credenciais recebem retry. Resolução ou gravação indisponível termina com erro sem alegar sucesso.
+
+DAL server-only `src/lib/data/payments.ts` e comando local `npm.cmd run cakto:process -- ID-DO-EVENTO` disponíveis. Não há rota pública, cron ou consumo automático da inbox; agendamento, repetição e reconciliação pertencem à etapa 30. O receptor do webhook mantém resposta somente após persistir sinal, sem aguardar chamadas lentas à Cakto.
+
+Migration `20261006180000_cakto_payment_checks.sql` ensaiada com rollback/teste SQL, dry-run conferido e aplicada ao projeto ligado. Teste SQL repetido após aplicação. Nova tabela privada de verificações, RLS sem policies/acesso direto para clientes ou service_role. RPCs exclusivamente service_role leem sinal comercial, resolvem intenção sem expor proprietário e salvam campos fixos mínimos. Nenhum JSON de payload bruto ou dados pessoais. Checks conferem IDs, preço, período da intenção, data paga e conta confirmada novamente dentro da transação. Evidência verificada tem unicidade de pedido/intenção/assinatura; tentativas distintas de revisão preservadas e duplicatas exatas ignoradas. Registros são históricos, não direitos de acesso; eventos posteriores de reversão devem ser tratados na etapa 31.
+
+Sete testes Node passaram. Lint e build/TypeScript aprovados. Integração adicional `npm.cmd run test:payment:integration` usa API de provedor simulada e RPC/banco reais: duas verificações concorrentes produziram uma evidência, resposta sem currency ficou em revisão, usuário não ganhou acesso nem registro em subscriptions. Fixtures randômicas de usuário/intenção/inbox/verificação removidas no finally. Chaves/configuração real não alteradas, nenhuma compra realizada. Teste não prova resposta real da Cakto.
+
+Etapa 29 segue com validação externa pendente: moeda explícita não consta do contrato de Obter Pedido, preços/amount/assinatura/sck de pedido real ainda não conferidos, concessão não implementada enquanto contrato estiver indefinido. Não substituir moeda ausente por BRL presumido, não liberar botão de compra, nem recomendar pagamento real para esse teste. Reconciliação pode ser preparada independentemente desses requisitos. Registros abaixo preservam a evolução.
+
 ## Implementação inicial em 06/10/2026
 
 Usuário adicionou Pedidos e Assinaturas à chave existente. Consultas autenticadas de listagem dos dois recursos retornaram HTTP 200, sem impressão de token ou respostas completas. Listagem de pedidos com filtro do produto retornou count=0/results vazio; não há pedido disponível para conferir resposta real de detalhe. Nenhuma cobrança criada.
