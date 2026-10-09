@@ -1,5 +1,7 @@
 # Ciclo da assinatura Cakto — etapa 31
 
+Atualização de 09/10/2026 — etapa 32: duração definida pelo produto, trinta dias por mensalidade confirmada. Concessão/renovação e revogação por período conectadas às transações; a data estimada de cobrança continua sem uso para acesso. Descrição atual em [ACESSO-PAGO-CAKTO.md](ACESSO-PAGO-CAKTO.md); registros abaixo descrevem a etapa 31.
+
 Tratamento administrativo implementado em 06/10/2026 e conectado ao comando `npm.cmd run cakto:reconcile`. Não altera telas, não habilita contratação e não cria acesso Premium. O processamento continua manual, com as reservas, limites e novas tentativas da etapa 30.
 
 ## Regras implementadas

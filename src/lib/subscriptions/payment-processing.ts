@@ -10,7 +10,7 @@ type Dependencies = {
   save: (id:number, result:PaymentCheck) => Promise<void>;
   product:string; offers:string[]; now:()=>number;
 };
-// An administrative job processes one durable signal. No entitlement is granted here.
+// The administrative processor delegates atomic evidence and access persistence to its server dependency.
 export function paymentProcessor(deps:Dependencies) {
   return async (eventId:number):Promise<PaymentCheck> => {
     if (!Number.isSafeInteger(eventId) || eventId < 1) throw Error("invalid_event_id");

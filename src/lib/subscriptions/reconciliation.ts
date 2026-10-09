@@ -18,9 +18,11 @@ export async function discoverOrders(deps:{ids:()=>Promise<{orderIds:string[];ha
   for(const id of page.orderIds) {
     orderUuid(id);
     const {order,subscription:sub}=await deps.provider(id);
-    if(order.id!==id || record(order.product).id!==deps.product || !sub || order.subscription!==sub.id || sub.product!==deps.product || typeof sub.offer!=="string" || !deps.offers.includes(sub.offer) || !Array.isArray(sub.orders) || !sub.orders.includes(id) || sub.parent_order!==id || order.status!=="paid" || order.type!=="subscription" || order.subscription_period!==1 || typeof order.sck!=="string" || !/^[a-f0-9]{64}$/.test(order.sck) || typeof sub.id!=="string") {ignored++;continue;}
+    if(order.id!==id || record(order.product).id!==deps.product || !sub || order.subscription!==sub.id || sub.product!==deps.product || typeof sub.offer!=="string" || !deps.offers.includes(sub.offer) || !Array.isArray(sub.orders) || !sub.orders.includes(id) || order.status!=="paid" || order.type!=="subscription" || typeof order.subscription_period!=="number" || !Number.isInteger(order.subscription_period) || order.subscription_period<1 || order.subscription_period>10000 || typeof sub.id!=="string") {ignored++;continue;}
+    const first=order.subscription_period===1;
+    if(first?(sub.parent_order!==id || typeof order.sck!=="string" || !/^[a-f0-9]{64}$/.test(order.sck)):(typeof sub.parent_order!=="string" || sub.parent_order===id || !sub.orders.includes(sub.parent_order))) {ignored++;continue;}
     orderUuid(sub.id);
-    if(await deps.enqueue({orderId:id,subscriptionId:sub.id,productId:deps.product,offerId:sub.offer,reference:order.sck}))matched++;else ignored++;
+    if(await deps.enqueue({orderId:id,subscriptionId:sub.id,productId:deps.product,offerId:sub.offer,reference:first?order.sck as string:""}))matched++;else ignored++;
   }
   return {matched,ignored,hasMore:page.hasMore};
 }

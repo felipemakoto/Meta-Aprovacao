@@ -22,7 +22,7 @@ begin
  result_value:=jsonb_build_object('outcome','verified','reason','payment_verified','reference',ref,'evidence',jsonb_build_object('orderId',order_value::text,'subscriptionId',sub_value::text,'productId','fixture-product','offerId','fixture-offer','orderCreatedAt',t-interval '30 seconds','paidAt',t-interval '20 seconds','paidPriceCents',1150,'currency','BRL'));
  perform public.record_cakto_payment_check(event_value,result_value);
  perform public.record_cakto_payment_check(event_value,result_value);
- if public.read_subscription_access(u)->>'hasPremium'<>'false' then raise exception 'payment check granted rights';end if;
+ if public.read_subscription_access(u)->>'hasPremium'<>'true' then raise exception 'verified payment did not grant rights';end if;
  denied:=false;begin perform public.record_cakto_payment_check(event_value,result_value||'{"customer":{"email":"private"}}'::jsonb);exception when raise_exception then denied:=true;end;
  if not denied then raise exception 'private field accepted';end if;
  denied:=false;begin perform public.record_cakto_payment_check(event_value,jsonb_set(result_value,'{evidence,paidPriceCents}','2299'));exception when raise_exception then denied:=true;end;
@@ -34,7 +34,7 @@ begin
  reset role;
  if (select count(*) from private.cakto_payment_checks)<>before_count+2 then raise exception 'dedup failed';end if;
  if exists(select 1 from private.cakto_payment_checks where event_id=event_value and outcome='verified' and intent_reference<>ref) then raise exception 'wrong owner';end if;
- if exists(select 1 from private.subscriptions where user_id=u) then raise exception 'subscription created by evidence';end if;
+ if (select count(*) from private.cakto_access_periods p join private.subscriptions s on s.id=p.subscription_id where s.user_id=u)<>1 then raise exception 'period duplicated';end if;
  foreach role_name in array array['anon','authenticated','service_role'] loop
   if has_table_privilege(role_name,'private.cakto_payment_checks','select,insert,update,delete') then raise exception 'direct check access';end if;
  end loop;

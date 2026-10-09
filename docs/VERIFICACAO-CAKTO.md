@@ -1,5 +1,7 @@
 # Etapa 29 — verificação independente do pagamento
 
+Atualização de 09/10/2026: [etapa 32](ACESSO-PAGO-CAKTO.md) conecta a evidência verificada à concessão atômica de trinta dias e trata renovação pela primeira prova. A duração é regra do produto; data final do provedor deixou de ser pré-requisito. Moeda/formato real continuam pendentes para lançamento; testes simulados não comprovam produção. Registros abaixo são históricos.
+
 ## Intenção e evidência integradas em 06/10/2026
 
 `payment-processing.ts` processa administrativamente um evento durável permitido, consulta pedido/assinatura, resolve a intenção privada exclusivamente pelo sck da resposta da API e executa o verificador. Não usa status, referência ou identidade do cliente do webhook como prova. Pedidos/eventos não permitidos recebem review; falhas de transporte/limite/credenciais recebem retry. Resolução ou gravação indisponível termina com erro sem alegar sucesso.

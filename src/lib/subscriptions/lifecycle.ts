@@ -2,15 +2,16 @@ import { CaktoReadError, orderUuid, record } from "./cakto-api.ts";
 import { cents } from "./payment-verification.ts";
 
 export const lifecycleEvents = ["purchase_refused", "refund", "refund_requested", "chargeback", "subscription_canceled", "subscription_renewed", "subscription_renewal_refused", "subscription_paused", "subscription_resumed", "subscription_late", "subscription_late_recovered"];
-export type LifecycleBinding = {subscriptionId:string; originOrderId:string; productId:string; offerId:string};
+export type LifecycleBinding = {subscriptionId:string; originOrderId:string; productId:string; offerId:string; expectedPeriod?:number};
+export type RenewalEvidence = {orderId:string;period:number;orderCreatedAt:string;paidAt:string;paidPriceCents:2299;currency:"BRL"};
 export type LifecycleSnapshot = LifecycleBinding & {providerStatus:string; providerUpdatedAt:string; orderStatus:string; action:"preserve"|"revoke"; occurredAt:string|null};
-export type LifecycleCheck = {outcome:"verified"|"review"|"retry";reason:string;snapshot?:LifecycleSnapshot};
+export type LifecycleCheck = {outcome:"verified"|"review"|"retry";reason:string;snapshot?:LifecycleSnapshot;renewal?:RenewalEvidence};
 const statuses = ["active", "inactive", "canceled", "expired", "paused", "late", "trial"];
 const orders = ["processing", "authorized", "paid", "refund_requested", "in_settlement", "acquirer_error", "refunded", "waiting_payment", "refused", "blocked", "chargedback", "canceled", "in_protest", "partially_paid", "prechargeback", "scheduled", "retrying", "MED"];
 function instant(value:unknown) {
   return typeof value==="string" && value.length<=64 && /^\d{4}-\d{2}-\d{2}T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value) && Number.isFinite(Date.parse(value)) ? Date.parse(value) : null;
 }
-// Observations never grant or extend access. Billing estimates are not paid periods.
+// An independently paid renewal may acquire the app's fixed 30-day period; billing estimates are unused.
 export function lifecycleDecision(orderValue:unknown,subValue:unknown,binding:LifecycleBinding,now:number):LifecycleCheck {
   const review=(reason:string):LifecycleCheck=>({outcome:"review",reason});
   try {
@@ -24,22 +25,24 @@ export function lifecycleDecision(orderValue:unknown,subValue:unknown,binding:Li
     if(updated===null || updated>now || typeof sub.status!=="string" || !statuses.includes(sub.status) || typeof order.status!=="string" || !orders.includes(order.status)) return review("lifecycle_response_incomplete");
     const canceled=instant(sub.canceledAt);
     if((sub.status==="canceled" && (canceled===null || canceled>updated)) || (sub.status!=="canceled" && sub.canceledAt!==null)) return review("lifecycle_response_incomplete");
-    let action:"preserve"|"revoke"="preserve",occurredAt:string|null=null;
+    let action:"preserve"|"revoke"="preserve",occurredAt:string|null=null,renewal:RenewalEvidence|undefined;
     if(order.status==="refunded" || order.status==="chargedback") {
       const at=instant(order.status==="refunded"?order.refundedAt:order.chargedbackAt),paid=instant(order.paidAt);
       if(at===null || paid===null || at<paid || at>now) return review("reversal_unconfirmed");
       action="revoke";occurredAt=new Date(at).toISOString();
     } else {
       if(order.refundedAt!==null || order.chargedbackAt!==null) return review("reversal_unconfirmed");
-      if(order.status==="paid" && (typeof order.subscription_period!=="number" || !Number.isInteger(order.subscription_period) || order.subscription_period<1))return review("lifecycle_response_incomplete");
+      if(order.status==="paid" && (typeof order.subscription_period!=="number" || !Number.isInteger(order.subscription_period) || order.subscription_period<1 || order.subscription_period>10000))return review("lifecycle_response_incomplete");
       if(order.status==="paid" && typeof order.subscription_period==="number" && Number.isInteger(order.subscription_period) && order.subscription_period>1) {
         if(order.currency!=="BRL")return review("currency_unconfirmed");
         if(cents(order.baseAmount)!==2299 || cents(order.discount)!==0 || cents(order.amount)!==2398 || cents(sub.amount)!==2299 || order.couponCode!==null) return review("amount_or_coupon_mismatch");
-        // next_payment_date is explicitly estimated by the provider. No inferred renewal end.
-        return review("paid_period_unconfirmed");
+        const created=instant(order.createdAt),paid=instant(order.paidAt);
+        if(created===null || paid===null || paid<created || paid>now || order.canceledAt!==null || sub.status!=="active" || sub.recurrence_period!==30 || sub.quantity_recurrences!==-1) return review("lifecycle_response_incomplete");
+        if(binding.expectedPeriod!==order.subscription_period)return review("subscription_binding_missing");
+        renewal={orderId:order.id,period:order.subscription_period,orderCreatedAt:new Date(created).toISOString(),paidAt:new Date(paid).toISOString(),paidPriceCents:2299,currency:"BRL"};
       }
     }
-    return {outcome:"verified",reason:"lifecycle_observed",snapshot:{subscriptionId:binding.subscriptionId,originOrderId:binding.originOrderId,productId:binding.productId,offerId:binding.offerId,providerStatus:sub.status,providerUpdatedAt:new Date(updated).toISOString(),orderStatus:order.status,action,occurredAt}};
+    return {outcome:"verified",reason:"lifecycle_observed",snapshot:{subscriptionId:binding.subscriptionId,originOrderId:binding.originOrderId,productId:binding.productId,offerId:binding.offerId,providerStatus:sub.status,providerUpdatedAt:new Date(updated).toISOString(),orderStatus:order.status,action,occurredAt},...(renewal?{renewal}:{})};
   } catch {return review("lifecycle_response_incomplete");}
 }
 type Signal={orderId:string;productId:string;offerId:string;event:string};

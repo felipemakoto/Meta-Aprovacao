@@ -29,6 +29,6 @@ try {
   },
  });
  const queue=await rpc('cakto_payment_job_summary',{p_product_id:product});
- console.log(JSON.stringify({discovery,page,jobs:result,queue,premiumGranted:false}));
+ console.log(JSON.stringify({discovery,page,jobs:result,queue,accessPolicy:'30_days_per_verified_payment',checkoutEnabled:false}));
  if(discovery.failed||result.failed)process.exitCode=1;
-} catch {console.error('Reconciliação não concluída. Confira configuração e migrations; nenhum acesso concedido.');process.exitCode=1;}
+} catch {console.error('Reconciliação interrompida. Confira configuração, migrations e estado da fila.');process.exitCode=1;}

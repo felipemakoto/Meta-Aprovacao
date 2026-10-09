@@ -17,7 +17,10 @@ test('descoberta não confia na listagem e exige produto, assinatura e referênc
  const subscription={id:subId,product:'product',offer:'offer',orders:[orderId],parent_order:orderId};let saved;
  const deps={ids:async()=>({orderIds:[orderId],hasMore:true}),provider:async()=>({order,subscription}),enqueue:async input=>{saved=input;return true;},product:'product',offers:['offer']};
  assert.deepEqual(await discoverOrders(deps),{matched:1,ignored:0,hasMore:true});assert.equal(saved.reference,order.sck);assert.equal(saved.subscriptionId,subId);
- for(const change of [{product:{id:'foreign'}},{sck:null},{status:'refunded'},{subscription_period:2}])assert.equal((await discoverOrders({...deps,provider:async()=>({order:{...order,...change},subscription}),enqueue:()=>assert.fail()})).ignored,1);
+ for(const change of [{product:{id:'foreign'}},{sck:null},{status:'refunded'},{subscription_period:0}])assert.equal((await discoverOrders({...deps,provider:async()=>({order:{...order,...change},subscription}),enqueue:()=>assert.fail()})).ignored,1);
+ const origin='cccccccc-cccc-cccc-cccc-cccccccccccc';
+ assert.equal((await discoverOrders({...deps,provider:async()=>({order:{...order,subscription_period:2,sck:null},subscription:{...subscription,parent_order:origin,orders:[origin,orderId]}})})).matched,1);
+ assert.equal(saved.reference,'');
  assert.equal((await discoverOrders({...deps,provider:async()=>({order,subscription:{...subscription,offer:'foreign'}}),enqueue:()=>assert.fail()})).ignored,1);
 });
 test('paginação reconstruída, janela e host fixos, listagem privada reduzida a IDs',async()=>{

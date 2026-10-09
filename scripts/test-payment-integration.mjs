@@ -13,7 +13,7 @@ if(url.protocol!=='https:' || !url.hostname.endsWith('.supabase.co') || url.user
 const admin=createClient(url.origin,process.env.SUPABASE_SECRET_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
 const require=createRequire(import.meta.url), pkg=require.resolve('supabase/package.json');
 const cli=path.resolve(path.dirname(pkg),JSON.parse(readFileSync(pkg,'utf8')).bin.supabase);
-const user=randomUUID(), order=randomUUID(), subscription=randomUUID(), reference=randomBytes(32).toString('hex'), eventId=randomInt(1000000000,2000000000);
+const user=randomUUID(), order=randomUUID(), renewalOrder=randomUUID(), subscription=randomUUID(), reference=randomBytes(32).toString('hex'), eventId=randomInt(1000000000,2000000000);
 const dir=path.resolve('supabase/.temp');mkdirSync(dir,{recursive:true});
 const file=path.join(dir,`payment-integration-${user}.sql`);
 function query(sql) {
@@ -43,7 +43,8 @@ try {
  repeated.forEach(result=>assert.equal(result.outcome,'verified'));
  const review=await paymentProcessor({...deps,provider:async()=>({order:{...data,currency:undefined},subscription:sub})})(eventId);
  assert.equal(review.reason,'currency_unconfirmed');
- const access=await rpc('read_subscription_access',{p_user_id:user});assert.equal(access.hasPremium,false);
+ const access=await rpc('read_subscription_access',{p_user_id:user});assert.equal(access.hasPremium,true);
+ assert.equal(Date.parse(access.accessUntil)-Date.parse(paidAt),30*24*60*60*1000);
  // Real separate HTTP/RPC calls race for a single fixture reservation.
  const leases=await Promise.all([rpc('lease_cakto_payment_job',{p_product_id:'fixture-product',p_offer_ids:['fixture-offer']}),rpc('lease_cakto_payment_job',{p_product_id:'fixture-product',p_offer_ids:['fixture-offer']})]);
  assert.equal(leases.filter(Boolean).length,1,'Only one worker may reserve the signal');
@@ -52,15 +53,19 @@ try {
  await assert.rejects(rpc('finish_cakto_payment_job',{p_event_id:eventId,p_lease_token:lease.leaseToken,p_result:repeated[0]}));
  const queue=await rpc('cakto_payment_job_summary',{p_product_id:'fixture-product'});assert.equal(queue.verified,1);
  assert.equal(await rpc('enqueue_cakto_api_order',{p_order_id:order,p_subscription_id:subscription,p_product_id:'fixture-product',p_offer_id:'fixture-offer',p_reference:reference}),true);
- // A temporary entitlement exists only for this random fixture, never for a customer.
+ // The implementation acquires real test periods for this random fixture, using a mocked provider.
  const lifecycleId=eventId+1;
  query(`begin;
  insert into private.cakto_event_inbox(id,fingerprint,event,order_id,product_id,offer_id,details) overriding system value
  values(${lifecycleId},encode(extensions.digest('${order}-lifecycle','sha256'),'hex'),'subscription_canceled','${order}','fixture-product','fixture-offer','{}');
- insert into private.subscriptions(user_id,provider,external_subscription_id,external_product_id,external_plan_id,provider_status,access_state,access_from,access_until,last_verified_order_id,last_verified_at,last_synced_at)
- values('${user}','cakto','${subscription}','fixture-product','fixture-offer','active','granted',clock_timestamp()-interval '1 minute',clock_timestamp()+interval '29 days','${order}',clock_timestamp()-interval '1 minute',clock_timestamp());commit;`);
+ insert into private.cakto_event_inbox(id,fingerprint,event,order_id,product_id,offer_id,details) overriding system value
+ values(${eventId+2},encode(extensions.digest('${renewalOrder}','sha256'),'hex'),'subscription_renewed','${renewalOrder}','fixture-product','fixture-offer','{}');commit;`);
  const updatedAt=new Date(Date.parse(expected.createdAt)+30000).toISOString();
  const lifecycleDeps={...deps,signal:id=>rpc('read_cakto_payment_signal',{p_event_id:id}),provider:async()=>({order:data,subscription:{...sub,status:'canceled',canceledAt:updatedAt,updatedAt}}),binding:(id,subscriptionId,originOrderId)=>rpc('resolve_cakto_lifecycle_binding',{p_event_id:id,p_subscription_id:subscriptionId,p_origin_order_id:originOrderId}),save:async(id,result)=>{await rpc('record_cakto_lifecycle_check',{p_event_id:id,p_result:result});}};
+ const renew=lifecycleProcessor({...lifecycleDeps,provider:async()=>({order:{...data,id:renewalOrder,subscription_period:2,createdAt:paidAt,paidAt:updatedAt,sck:null,discount:'0.00',amount:'23.98',couponCode:null},subscription:{...sub,orders:[order,renewalOrder],updatedAt}})});
+ const renewalChecks=await Promise.all([renew(eventId+2),renew(eventId+2)]);
+ renewalChecks.forEach(check=>assert.equal(check.renewal.period,2));
+ assert.equal(Date.parse((await rpc('read_subscription_access',{p_user_id:user})).accessUntil)-Date.parse(paidAt),60*24*60*60*1000);
  assert.equal((await lifecycleProcessor(lifecycleDeps)(lifecycleId)).snapshot.action,'preserve');
  assert.equal((await rpc('read_subscription_access',{p_user_id:user})).hasPremium,true);
  assert.equal((await lifecycleProcessor({...lifecycleDeps,provider:async()=>({order:{...data,status:'refunded',refundedAt:updatedAt},subscription:{...sub,updatedAt}})})(lifecycleId)).snapshot.action,'revoke');
@@ -71,12 +76,12 @@ try {
  if (select count(*) from private.cakto_payment_checks where event_id=${eventId} and outcome='verified')<>1 then raise exception 'concurrent proof duplicate';end if;
  if (select count(*) from private.cakto_payment_checks where event_id=${eventId} and outcome='review')<>1 then raise exception 'review lost';end if;
  if exists(select 1 from private.cakto_payment_checks where event_id=${eventId} and outcome='verified' and intent_reference<>'${reference}') then raise exception 'wrong intent';end if;
- if exists(select 1 from private.subscriptions where user_id='${user}' and access_state='granted') then raise exception 'unexpected entitlement';end if;
+ if (public.read_subscription_access('${user}')->>'hasPremium')::boolean then raise exception 'unexpected entitlement';end if;
  end$$;`);
- console.log('Integração aprovada: evidência, concorrência, fila, descoberta e ciclo. Acesso sintético temporário preservado no cancelamento, revogado no reembolso e não restaurado por replay. Nenhuma concessão comercial.');
+ console.log('Integração aprovada: primeira concessão de 30 dias, renovação antecipada até 60 dias sem duplicação concorrente, cancelamento preservado e reembolso sem restauração por replay. Apenas conta de teste/provedor simulado, nenhuma concessão comercial.');
 } finally {
- query(`begin;delete from private.cakto_event_inbox where order_id='${order}';delete from auth.users where id='${user}';
- do $$begin if exists(select 1 from private.cakto_event_inbox where order_id='${order}') or exists(select 1 from private.cakto_payment_checks where event_id=${eventId}) or exists(select 1 from private.cakto_payment_jobs where event_id=${eventId}) or exists(select 1 from private.checkout_intents where reference='${reference}') then raise exception 'fixture cleanup failed';end if;end$$;commit;`);
+ query(`begin;delete from private.cakto_event_inbox where order_id in('${order}','${renewalOrder}');delete from auth.users where id='${user}';
+ do $$begin if exists(select 1 from private.cakto_event_inbox where order_id in('${order}','${renewalOrder}')) or exists(select 1 from private.cakto_payment_checks where event_id=${eventId}) or exists(select 1 from private.cakto_payment_jobs where event_id=${eventId}) or exists(select 1 from private.checkout_intents where reference='${reference}') or exists(select 1 from private.cakto_access_periods where order_id in('${order}','${renewalOrder}')) or exists(select 1 from private.cakto_renewal_payments where order_id='${renewalOrder}') then raise exception 'fixture cleanup failed';end if;end$$;commit;`);
  rmSync(file,{force:true});
  console.log('Fixtures removidas. Nenhuma consulta ou cobrança real na Cakto.');
 }

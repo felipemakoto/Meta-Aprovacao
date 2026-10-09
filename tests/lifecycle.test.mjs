@@ -22,9 +22,12 @@ test('reversão exige status e data autoritativos; solicitação e aviso não re
  }
  for(const status of ['refund_requested','prechargeback','in_settlement','refused','partially_paid'])assert.equal(lifecycleDecision({...order,status},sub,binding,now).snapshot.action,'preserve');
 });
-test('renovação exige moeda e preço, mas vencimento estimado não estende período',()=>{
- const renewal={...order,subscription_period:2,currency:'BRL',baseAmount:'22.99',discount:'0.00',amount:'23.98',couponCode:null};
- assert.equal(lifecycleDecision(renewal,{...sub,next_payment_date:'2026-11-05T12:00:00Z'},binding,now).reason,'paid_period_unconfirmed');
+test('renovação confere moeda, preço, datas e sequência; estimativa de cobrança é ignorada',()=>{
+ const renewal={...order,subscription_period:2,currency:'BRL',baseAmount:'22.99',discount:'0.00',amount:'23.98',couponCode:null,createdAt:'2026-10-01T11:00:00Z',canceledAt:null};
+ const expected={...binding,expectedPeriod:2},monthly={...sub,recurrence_period:30,quantity_recurrences:-1};
+ const decision=lifecycleDecision(renewal,{...monthly,next_payment_date:'2030-11-05T12:00:00Z'},expected,now);
+ assert.equal(decision.renewal.period,2);assert.doesNotMatch(JSON.stringify(decision),/2030/);
+ assert.equal(lifecycleDecision(renewal,monthly,{...binding,expectedPeriod:3},now).reason,'subscription_binding_missing');
  assert.equal(lifecycleDecision({...renewal,currency:undefined},sub,binding,now).reason,'currency_unconfirmed');
  assert.equal(lifecycleDecision({...renewal,amount:'12.49'},sub,binding,now).reason,'amount_or_coupon_mismatch');
  for(const change of [{product:'foreign'},{parent_order:'cccccccc-cccc-cccc-cccc-cccccccccccc'},{orders:[]},{offer:'foreign'}])assert.equal(lifecycleDecision(order,{...sub,...change},binding,now).outcome,'review');

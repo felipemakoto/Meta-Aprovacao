@@ -16,5 +16,5 @@ try {
   product:process.env.CAKTO_PRODUCT_ID ?? '',offers:[...new Set([process.env.CAKTO_REGULAR_OFFER_ID ?? '',process.env.CAKTO_OCTOBER_OFFER_ID ?? ''])],now:()=>Date.now(),
  })(Number(process.argv[2]));
  // Only fixed outcomes/reasons: no reference, evidence, IDs or buyer data printed.
- console.log(JSON.stringify({outcome:result.outcome,reason:result.reason,premiumGranted:false}));
-} catch {console.error('Processamento não concluído. Confira o ID do evento, configuração e migrations; nenhuma concessão de acesso.');process.exitCode=1;}
+ console.log(JSON.stringify({outcome:result.outcome,reason:result.reason,accessPolicy:'30_days_per_verified_payment',checkoutEnabled:false}));
+} catch {console.error('Processamento interrompido. Confira o ID do evento, configuração, migrations e estado persistido.');process.exitCode=1;}
