@@ -31,6 +31,6 @@ SQL de benefícios testa concessão pelo RPC de pagamento, mais de dez questões
 
 Integração concorrente com RPCs reais: a última vaga gratuita aceita uma chamada; concessão sintética permite ultrapassar cotas, duas solicitações diferentes são aceitas e a mesma solicitação/simulado é deduplicada. Expiração bloqueia novas questões gratuitas esgotadas e permite retomar o simulado aberto. Usuário, evidência, períodos, tentativas, questões de teste e função temporária removidos. Nenhuma chamada de cobrança à Cakto.
 
-Antes da comercialização, ainda é necessário validar o contrato externo de pagamentos (especialmente moeda), organizar/publicar conteúdo revisado e conectar o processamento agendado. Esta etapa comprova benefícios técnicos, sem alegar uma compra real aprovada de ponta a ponta.
+Atualização da etapa 34: [processamento agendado](AUTOMACAO-CAKTO.md) ativo no Supabase. Antes da comercialização, ainda é necessário validar o contrato externo de pagamentos (especialmente moeda) e organizar/publicar conteúdo revisado. Os testes técnicos não comprovam uma compra real aprovada de ponta a ponta.
 
 Auditoria final: inbox, provas de pagamento/ciclo, fila, assinaturas, períodos e provas de renovação em zero após limpeza. Questões e modelos publicados também em zero, preservando a revisão editorial pendente.

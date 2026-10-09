@@ -1,5 +1,7 @@
 # Acesso pago Cakto — etapa 32
 
+Atualização em 09/10/2026 — etapa 34: [processamento agendado](AUTOMACAO-CAKTO.md) publicado e ativo no Supabase. A pendência de agendamento mencionada no registro histórico abaixo foi resolvida; validação comercial externa e contratação continuam pendentes.
+
 Atualização de 09/10/2026 — etapa 33: [benefícios Premium](BENEFICIOS-PREMIUM.md) conectados aos períodos atuais; a pendência de cotas/benefícios mencionada abaixo foi resolvida tecnicamente. Contratação e validação comercial externa continuam pendentes. O restante registra a etapa 32.
 
 Implementação em 09/10/2026, após o usuário autorizar continuar com duração calculada pela plataforma. Projeto localizado no caminho atual `C:\Users\felip\OneDrive\Documentos\cakto\projeto_etec-if`; checkout e telas preservados.

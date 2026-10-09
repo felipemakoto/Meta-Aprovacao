@@ -2,7 +2,7 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Estado atual em 09/10/2026: site publicado em [meta-aprovacao.vercel.app](https://meta-aprovacao.vercel.app). Etapa 33: [benefícios Premium](docs/BENEFICIOS-PREMIUM.md) conectados ao [acesso pago por trinta dias](docs/ACESSO-PAGO-CAKTO.md): questões/simulados sem limite diário, catálogo publicado e simulados por matéria, retorno automático ao gratuito quando o período termina. Testes técnicos sem cobrança aprovados. Contrato externo, conteúdo revisado e agendamento ainda pendentes; contratação bloqueada. Os registros abaixo são históricos; preços/configuração atuais estão no Estado do Projeto.
+Estado atual em 09/10/2026: site publicado em [meta-aprovacao.vercel.app](https://meta-aprovacao.vercel.app). Etapa 34: [processamento automático Cakto](docs/AUTOMACAO-CAKTO.md) ativo no Supabase, com fila, retomada e busca independente de pedidos. Primeira execução automática aprovada, sem pedidos ou cobrança. [Benefícios Premium](docs/BENEFICIOS-PREMIUM.md) conectados ao [acesso pago por trinta dias](docs/ACESSO-PAGO-CAKTO.md). Contrato externo e conteúdo revisado ainda pendentes; contratação bloqueada. Os registros abaixo são históricos; preços/configuração atuais estão no Estado do Projeto.
 
 Provedor atual: [Cakto](docs/CAKTO.md), escolhida em 03/10/2026 para substituir a Kiwify. Preparação da etapa 27 adaptada, visual preservado e contratação bloqueada. Usuário já tem cadastro, mas precisa criar oferta mensal de R$20 e cupom de 50% somente na primeira cobrança. Testes Node/HTTP, SQL, lint e build aprovados. Registros abaixo documentam o histórico anterior.
 
@@ -64,7 +64,7 @@ O Node deve mostrar v24.x.x. npm.cmd é o próprio npm no Windows; evita bloquei
 ## Execução
 No PowerShell:
 ```powershell
-Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+Set-Location 'C:\Users\felip\OneDrive\Documentos\cakto\projeto_etec-if'
 npm.cmd ci
 npm.cmd run dev -- --hostname 127.0.0.1
 ```
@@ -89,7 +89,7 @@ Git registra versões dos arquivos. Cada commit é um checkpoint que permite con
 Abra o menu Iniciar, digite PowerShell e abra o programa. Se o servidor estiver ocupando um terminal, abra uma segunda janela. Copie e execute:
 
 ```powershell
-Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+Set-Location 'C:\Users\felip\OneDrive\Documentos\cakto\projeto_etec-if'
 git status
 git --no-pager log -3 --oneline
 ```
@@ -188,7 +188,7 @@ Checkpoint da interface: 064e4e9 — feat: implementar entrada aprovada da etapa
 Com o site rodando, execute em outro PowerShell:
 
 ```powershell
-Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+Set-Location 'C:\Users\felip\OneDrive\Documentos\cakto\projeto_etec-if'
 npm.cmd run test:config
 npm.cmd run test:auth
 curl.exe -i http://localhost:3000/api/auth/status
@@ -216,7 +216,7 @@ Esperado: 20260925015139 em local e remote (mais as migrations de etapas seguint
 Criadas public.questions e public.question_answers, sem acesso direto de visitantes ou usuários logados. O servidor privilegiado recebe apenas leitura. Migration 20260925085403 aplicada, 51 verificações SQL, seis verificações de segurança e teste HTTP aprovados. As tabelas estavam vazias ao encerrar a etapa 8; a etapa 9 adicionou o lote abaixo.
 
 ```powershell
-Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+Set-Location 'C:\Users\felip\OneDrive\Documentos\cakto\projeto_etec-if'
 npx.cmd --no-install supabase migration list --linked
 npx.cmd --no-install supabase db query --linked --file supabase/tests/verify_questions_security.sql
 npm.cmd run test:questions
@@ -229,7 +229,7 @@ Esperado: duas migrations sincronizadas, seis passed=true e três testes Node ap
 Carregadas 10 questões de exemplo e seus gabaritos, duas por matéria, todas em draft. Seed idempotente: repetir não duplica nem sobrescreve conteúdo. Nenhuma nova migration ou publicação de questões.
 
 ```powershell
-Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
+Set-Location 'C:\Users\felip\OneDrive\Documentos\cakto\projeto_etec-if'
 npx.cmd --no-install supabase db query --linked --file supabase/tests/verify_seed.sql
 npm.cmd run test:seed
 npm.cmd run test:questions

@@ -1,4 +1,5 @@
 // Server transport shared with local administrative scripts. No client imports.
+import {Buffer} from "node:buffer";
 export class CaktoReadError extends Error {
   constructor(reason: "configuration_missing" | "invalid_id" | "unavailable" | "unauthorized" | "not_found" | "rate_limited" | "invalid_response") { super(reason); }
 }

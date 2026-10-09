@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:automation": "node --test tests/automation.test.mjs",
+    "test:automation:integration": "node --env-file=.env.local scripts/test-automation-integration.mjs",
+    "cakto:automation:status": "node --env-file=.env.local scripts/configure-cakto-automation.mjs status",
+    "cakto:automation:pause": "node --env-file=.env.local scripts/configure-cakto-automation.mjs pause",
     "test:lifecycle": "node --test tests/lifecycle.test.mjs",
     "cakto:reconcile": "node --env-file=.env.local scripts/reconcile-cakto.mjs",
     "test:reconciliation": "node --test tests/reconciliation.test.mjs",

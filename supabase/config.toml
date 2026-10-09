@@ -4,6 +4,10 @@
 # working directory name when running `supabase init`.
 project_id = "projeto_etec-if"
 
+# Autenticação própria com segredo exclusivo do agendamento; nunca aceita JWT de usuário como autorização.
+[functions.cakto-reconcile]
+verify_jwt = false
+
 [api]
 enabled = true
 # Port to use for the API URL.
