@@ -6,6 +6,7 @@ import { subjects,publicQuestion,publicFeedback,type Filters,type PracticeQuesti
 import base from "../quiz/quiz.module.css";
 import styles from "./practice.module.css";
 import {useDailyLimits} from "@/lib/quiz/use-daily-limits";
+import {dailyLimitMessage} from "@/lib/quiz/limits-contract";
 const initial:Filters={subject:"matematica",topic:"",difficulty:"all",exam:"all"};
 const sample:PracticeQuestion={id:"00000000-0000-4000-8000-000000000019",questionId:"00000000-0000-4000-8000-000000000001",expiresAt:"2030-01-01T00:00:00Z",subject:"matematica",topic:"Porcentagem",statement:"Uma mochila custa R$ 80,00. Com 15% de desconto, qual é o preço final?",options:["R$ 12,00","R$ 68,00","R$ 65,00","R$ 72,00","R$ 92,00"]};
 const messages:Record<string,string>={login_required:"Entre na sua conta para continuar.",attempt_unavailable:"O prazo desta questão terminou. Aplique os filtros para começar outra.",already_answered:"Esta questão já foi respondida. Continue com uma nova questão.",rate_limited:"Muitas solicitações. Aguarde um minuto antes de tentar novamente.",daily_practice_limit:"Você usou as 10 questões de hoje. Novas questões ficam disponíveis à meia-noite de São Paulo. Você ainda pode conferir a questão aberta e revisar seu histórico."};
@@ -51,7 +52,7 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
   return <div className={base.page}>
     <header className={base.header}><Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF</Link><Link className={base.exit} href="/dashboard">Meus estudos</Link></header>
     <main><h1 className={styles.title}>Questões</h1>
-      <p className={styles.notice}>{preview?`${limitReached?0:10} de 10 novas questões disponíveis hoje. Renova à meia-noite de São Paulo.`:quota.limits?`${quota.limits.practice.remaining} de 10 novas questões disponíveis hoje. Renova à meia-noite de São Paulo.`:quota.failed?"Não foi possível consultar seu saldo. Tente buscar uma questão para verificar a disponibilidade.":"Consultando o saldo de hoje…"}</p>
+      <p className={styles.notice}>{preview?`${limitReached?0:10} de 10 novas questões disponíveis hoje. Renova à meia-noite de São Paulo.`:quota.limits?dailyLimitMessage(quota.limits,"practice"):quota.failed?"Não foi possível consultar seu saldo. Tente buscar uma questão para verificar a disponibilidade.":"Consultando o saldo de hoje…"}</p>
       <form onSubmit={e=>{e.preventDefault();void run("next");}}><fieldset className={styles.filters} disabled={busy||unavailable}>
         <div className={styles.field}><label htmlFor="subject">Matéria</label><select id="subject" value={filters.subject} onChange={e=>change("subject",e.target.value)}>{Object.entries(subjects).map(([v,label])=><option key={v} value={v}>{label}</option>)}</select></div>
         <div className={styles.field}><label htmlFor="topic">Assunto</label><select id="topic" value={filters.topic} onChange={e=>change("topic",e.target.value)}><option value="">Todos</option>{topics.map(t=><option key={t}>{t}</option>)}</select></div>

@@ -27,7 +27,7 @@ export default function Premium({ state, offer, preview = false }: { state: Excl
         {active ? <Link className={styles.primary} href={preview ? "/dashboard/preview" : "/dashboard"}>Continuar estudando<Image src="/icons/arrow-right.svg" width={22} height={22} alt="" /></Link> : <>
           <button className={styles.primary} type="button" disabled aria-describedby="premium-unavailable">Escolher Premium<Image src="/icons/arrow-right.svg" width={22} height={22} alt="" /></button>
           <p className={styles.note}>Assinatura mensal. Cancele quando quiser.</p>
-          <p className={styles.unavailable} id="premium-unavailable">Contratação em breve. Os benefícios Premium ainda não estão disponíveis.</p>
+          <p className={styles.unavailable} id="premium-unavailable">Contratação em breve.</p>
         </>}
       </>}
       <div className={styles.back}><Link className={history.backLink} href={preview ? "/dashboard/preview" : "/dashboard"}><Image className={history.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt="" />Voltar aos estudos</Link></div>

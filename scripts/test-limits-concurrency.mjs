@@ -1,7 +1,7 @@
 // Fixture isolada. As questões ficam draft em todo estado confirmado no banco.
 // A função temporária publica somente dentro da transação da chamada, restaurando
 // draft antes do commit. Isso permite testar os RPCs reais sem expor conteúdo.
-import {randomUUID} from 'node:crypto';
+import {randomUUID,randomBytes} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {createRequire} from 'node:module';
 import {mkdirSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
@@ -14,6 +14,7 @@ const require=createRequire(import.meta.url),pkg=require.resolve('supabase/packa
 const entry=path.resolve(path.dirname(pkg),JSON.parse(readFileSync(pkg,'utf8')).bin.supabase);
 const dir=path.resolve('supabase/.temp');mkdirSync(dir,{recursive:true});
 const user=randomUUID(),simIds=[randomUUID(),randomUUID()],qIds=Array.from({length:10},()=>randomUUID());
+const paidOrder=randomUUID(),paidSub=randomUUID(),reference=randomBytes(32).toString('hex');
 const fn='test_limits_'+user.replaceAll('-',''),topic='__'+fn+'__';
 const file=path.join(dir,fn+'.sql');
 function query(sql){
@@ -69,17 +70,35 @@ try{
  const resumes=await Promise.all([rpc('start_simulation',{p_user_id:user,p_simulation_id:winner}),rpc('start_simulation',{p_user_id:user,p_simulation_id:winner})]);
  resumes.forEach(r=>{assert.equal(r.error,null);assert.deepEqual(r.data,state);});
  const usage=await rpc('read_daily_limits',{p_user_id:user});assert.equal(usage.error,null);assert.equal(usage.data.simulations.used,1);
+ // Concessão sintética pelo mesmo RPC transacional da aplicação; não consulta nem cobra a Cakto.
+ query(`do $$declare paid timestamptz:=clock_timestamp()-interval '1 minute';event_value bigint;begin
+ insert into private.checkout_intents(reference,user_id,provider,product_id,offer_id,checkout_url,first_price_cents,monthly_price_cents,created_at,expires_at)
+ values('${reference}','${user}','cakto','concurrency-fixture','offer','https://pay.cakto.com.br/fixture',1150,2299,paid-interval '1 minute',paid+interval '59 minutes');
+ insert into private.cakto_event_inbox(fingerprint,event,order_id,product_id,offer_id,details)
+ values(encode(extensions.digest('${reference}','sha256'),'hex'),'purchase_approved','${paidOrder}','concurrency-fixture','offer','{}') returning id into event_value;
+ perform public.record_cakto_payment_check(event_value,jsonb_build_object('outcome','verified','reason','payment_verified','reference','${reference}','evidence',jsonb_build_object('orderId','${paidOrder}','subscriptionId','${paidSub}','productId','concurrency-fixture','offerId','offer','orderCreatedAt',paid-interval '30 seconds','paidAt',paid,'paidPriceCents',1150,'currency','BRL')));
+ end$$;`);
+ const paidTrials=await Promise.all([rpc(fn,{p_nonce:randomUUID()}),rpc(fn,{p_nonce:randomUUID()})]);paidTrials.forEach(r=>assert.equal(r.error,null));
+ const sameNonce=randomUUID(),duplicates=await Promise.all([rpc(fn,{p_nonce:sameNonce}),rpc(fn,{p_nonce:sameNonce})]);duplicates.forEach(r=>assert.equal(r.error,null));assert.deepEqual(duplicates[0].data,duplicates[1].data);
+ const otherTemplate=simIds.find(id=>id!==winner),paidSims=await Promise.all([rpc(fn,{p_nonce:randomUUID(),p_simulation:otherTemplate}),rpc(fn,{p_nonce:randomUUID(),p_simulation:otherTemplate})]);
+ paidSims.forEach(r=>assert.equal(r.error,null));assert.deepEqual(paidSims[0].data,paidSims[1].data);
+ const premium=await rpc('read_daily_limits',{p_user_id:user});assert.equal(premium.error,null);assert.equal(premium.data.hasPremium,true);assert.equal(premium.data.practice.used,13);assert.equal(premium.data.practice.limit,null);assert.equal(premium.data.simulations.used,2);assert.equal(premium.data.simulations.remaining,null);
+ query(`with t as(select clock_timestamp() at) update private.cakto_access_periods set paid_at=t.at-interval '31 days',access_from=t.at-interval '31 days',access_until=t.at-interval '1 day' from t where order_id='${paidOrder}';`);
+ const expired=await rpc('read_daily_limits',{p_user_id:user});assert.equal(expired.error,null);assert.equal(expired.data.hasPremium,false);assert.equal(expired.data.practice.remaining,0);assert.equal(expired.data.simulations.remaining,0);
+ const deniedAfterExpiry=await rpc(fn,{p_nonce:randomUUID()});assert.equal(deniedAfterExpiry.error?.message,'daily_practice_limit');
+ const resumeAfterExpiry=await rpc('start_simulation',{p_user_id:user,p_simulation_id:otherTemplate});assert.equal(resumeAfterExpiry.error,null);assert.deepEqual(resumeAfterExpiry.data,paidSims[0].data);
  query(`do $$begin if exists(select 1 from public.questions where id in (${ids}) and status<>'draft') then raise exception 'fixture published';end if;end$$;`);
- console.log('Concorrência aprovada: somente uma chamada usa a última questão e somente um novo simulado é criado. Retomar não gasta outra vaga.');
+ console.log('Concorrência aprovada: gratuito respeita a última vaga; Premium passa das cotas, deduplica a mesma solicitação e retoma sem duplicar. Expiração volta ao gratuito preservando tentativas abertas.');
 }finally{
  // Limpeza também se a configuração parcial falhar; o setup é transacional.
  query(`begin;
  drop function if exists public.${fn}(uuid,uuid);
+ delete from private.cakto_event_inbox where order_id='${paidOrder}';
  delete from auth.users where id='${user}';
  delete from private.simulations where id in ('${simIds[0]}','${simIds[1]}');
  delete from public.question_answers where question_id in (${ids});
  delete from public.questions where id in (${ids});
- do $$begin if exists(select 1 from auth.users where id='${user}') or exists(select 1 from public.questions where id in (${ids})) then raise exception 'cleanup failed';end if;end$$;
+ do $$begin if exists(select 1 from auth.users where id='${user}') or exists(select 1 from public.questions where id in (${ids})) or exists(select 1 from private.cakto_event_inbox where order_id='${paidOrder}') or exists(select 1 from private.cakto_access_periods where order_id='${paidOrder}') then raise exception 'cleanup failed';end if;end$$;
  notify pgrst,'reload schema';commit;`);
  rmSync(file,{force:true});
  console.log(created?'Usuário, tentativas, questões draft, modelos e função temporária removidos.':'Setup revertido e limpeza conferida.');

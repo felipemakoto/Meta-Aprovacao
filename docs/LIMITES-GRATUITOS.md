@@ -1,5 +1,7 @@
 # Etapa 23 — limites gratuitos
 
+Atualização de 09/10/2026 — [etapa 33](BENEFICIOS-PREMIUM.md): os limites abaixo valem para contas sem período Premium atual. Premium válido usa cotas nulas e catálogo completo publicado; expiração devolve o gratuito sem apagar tentativas/revisões. O restante registra a implementação original.
+
 Em 02/10/2026, o usuário autorizou avançar após a prévia de Estatísticas e confirmou os limites: **10 novas questões de prática e 1 novo simulado rápido de 10 questões por dia**, renovados à meia-noite de America/Sao_Paulo. Diagnóstico gratuito e revisão de resultados continuam disponíveis. Etapa 24 não iniciada.
 
 ## O que consome uma vaga

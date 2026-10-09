@@ -1,6 +1,6 @@
 "use client";
 import {useCallback,useEffect,useRef,useState} from "react";
-import {parseDailyLimits,type DailyLimits} from "./limits-contract";
+import {parseDailyLimits,nextLimitsRefresh,type DailyLimits} from "./limits-contract";
 export function useDailyLimits(preview:boolean,unavailable:boolean){
  const [limits,setLimits]=useState<DailyLimits|null>(null),[failed,setFailed]=useState(false);
  const active=useRef<AbortController|null>(null);
@@ -19,9 +19,9 @@ export function useDailyLimits(preview:boolean,unavailable:boolean){
   document.addEventListener("visibilitychange",visible);
   return()=>{clearTimeout(initial);active.current?.abort();active.current=null;document.removeEventListener("visibilitychange",visible);};
  },[refresh]);
- // Atualizar na virada do dia; o horário fornecido pelo servidor é apenas informativo no cliente.
- useEffect(()=>{if(!limits)return;const delay=Math.max(1000,Date.parse(limits.resetsAt)-Date.now()+1000);
-  const timer=setTimeout(()=>void refresh(),Math.min(delay,86400000));return()=>clearTimeout(timer);
+ // Atualizar também ao vencer o período pago; o banco continua decidindo cada nova tentativa.
+ useEffect(()=>{if(!limits)return;
+  const timer=setTimeout(()=>void refresh(),nextLimitsRefresh(limits,Date.now()));return()=>clearTimeout(timer);
  },[limits,refresh]);
  return {limits,failed,refresh};
 }
