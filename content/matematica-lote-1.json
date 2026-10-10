@@ -1,0 +1,146 @@
+[
+  {
+    "topic": "Frações",
+    "difficulty": "easy",
+    "statement": "Uma garrafa continha 3/4 de litro de água. Depois de beber 1/3 de litro, quantos litros de água restaram na garrafa?",
+    "options": ["1/4 de litro", "1/2 de litro", "5/12 de litro", "2/3 de litro", "7/12 de litro"],
+    "correctAnswer": "C",
+    "explanation": "Usando o denominador comum 12: 3/4 − 1/3 = 9/12 − 4/12 = 5/12 de litro."
+  },
+  {
+    "topic": "Números inteiros",
+    "difficulty": "easy",
+    "statement": "Às 6 horas, a temperatura era de −3 °C. Até o meio-dia, ela aumentou 8 °C e, depois, diminuiu 4 °C. Qual foi a temperatura após essa diminuição?",
+    "options": ["−15 °C", "−1 °C", "5 °C", "9 °C", "1 °C"],
+    "correctAnswer": "E",
+    "explanation": "A temperatura passou de −3 °C para −3 + 8 = 5 °C. Após cair 4 °C, ficou em 5 − 4 = 1 °C."
+  },
+  {
+    "topic": "Potências e operações",
+    "difficulty": "medium",
+    "statement": "Qual é o valor da expressão 2³ + 3 × (5 − 1)?",
+    "options": ["20", "44", "32", "14", "24"],
+    "correctAnswer": "A",
+    "explanation": "Primeiro, 2³ = 8 e 5 − 1 = 4. Em seguida, 3 × 4 = 12. Por fim, 8 + 12 = 20."
+  },
+  {
+    "topic": "Equação do primeiro grau",
+    "difficulty": "easy",
+    "statement": "Uma papelaria vende três canetas de mesmo preço e um caderno de R$ 7,00 por um total de R$ 22,00. Qual é o preço de cada caneta?",
+    "options": ["R$ 3,00", "R$ 7,00", "R$ 15,00", "R$ 5,00", "R$ 9,00"],
+    "correctAnswer": "D",
+    "explanation": "Se x é o preço de cada caneta, 3x + 7 = 22. Assim, 3x = 15 e x = 5. Cada caneta custa R$ 5,00."
+  },
+  {
+    "topic": "Sistema de equações",
+    "difficulty": "medium",
+    "statement": "Em uma sessão de cinema, o ingresso inteiro custa R$ 20,00 e a meia-entrada custa R$ 10,00. Foram vendidos 12 ingressos, totalizando R$ 190,00. Quantos ingressos inteiros foram vendidos?",
+    "options": ["5", "7", "8", "9", "10"],
+    "correctAnswer": "B",
+    "explanation": "Se i é a quantidade de ingressos inteiros, há 12 − i meias-entradas. Logo, 20i + 10(12 − i) = 190, ou 10i = 70. Portanto, i = 7."
+  },
+  {
+    "topic": "Variações percentuais sucessivas",
+    "difficulty": "medium",
+    "statement": "Um produto custa R$ 200,00. Seu preço aumenta 10% e, em seguida, recebe um desconto de 10% sobre o preço já aumentado. Qual é o preço final?",
+    "options": ["R$ 180,00", "R$ 200,00", "R$ 198,00", "R$ 202,00", "R$ 220,00"],
+    "correctAnswer": "C",
+    "explanation": "Após o aumento, o preço é 200 × 1,10 = R$ 220,00. O desconto seguinte é de 10% de 220, isto é, R$ 22,00. O preço final é R$ 198,00. As duas porcentagens usam bases diferentes."
+  },
+  {
+    "topic": "Divisão proporcional",
+    "difficulty": "medium",
+    "statement": "Um prêmio de R$ 450,00 será dividido entre Ana e Bruno na razão 2:3, respectivamente. Quanto Bruno receberá?",
+    "options": ["R$ 150,00", "R$ 180,00", "R$ 225,00", "R$ 300,00", "R$ 270,00"],
+    "correctAnswer": "E",
+    "explanation": "A divisão tem 2 + 3 = 5 partes iguais. Cada parte vale 450 ÷ 5 = R$ 90,00. Bruno recebe três partes: 3 × 90 = R$ 270,00."
+  },
+  {
+    "topic": "Proporcionalidade inversa",
+    "difficulty": "medium",
+    "statement": "Quatro máquinas iguais, trabalhando no mesmo ritmo, produzem um lote em 6 horas. Sem interrupções, quanto tempo seis dessas máquinas levam para produzir o mesmo lote?",
+    "options": ["4 horas", "9 horas", "3 horas", "6 horas", "8 horas"],
+    "correctAnswer": "A",
+    "explanation": "O trabalho exige 4 × 6 = 24 máquina-horas. Com seis máquinas iguais, o tempo é 24 ÷ 6 = 4 horas."
+  },
+  {
+    "topic": "Perímetro do retângulo",
+    "difficulty": "easy",
+    "statement": "Um jardim retangular mede 8 m de comprimento e 5 m de largura. Qual é o comprimento de uma cerca que contorna todo o jardim, sem abertura para portão?",
+    "options": ["13 m", "40 m", "20 m", "26 m", "80 m"],
+    "correctAnswer": "D",
+    "explanation": "O perímetro soma os quatro lados: 8 + 5 + 8 + 5 = 26 m, ou 2 × (8 + 5). A área de 40 m² não mede o comprimento da cerca."
+  },
+  {
+    "topic": "Área do triângulo",
+    "difficulty": "easy",
+    "statement": "Uma placa triangular tem base de 12 cm e altura perpendicular a essa base de 7 cm. Qual é a área da placa?",
+    "options": ["84 cm²", "42 cm²", "19 cm²", "38 cm²", "21 cm²"],
+    "correctAnswer": "B",
+    "explanation": "A área de um triângulo é base × altura ÷ 2. Assim, 12 × 7 ÷ 2 = 42 cm²."
+  },
+  {
+    "topic": "Comprimento da circunferência",
+    "difficulty": "medium",
+    "statement": "Uma pista tem formato de circunferência com raio de 10 m. Usando π = 3,14 e C = 2πr, qual é a distância de uma volta completa?",
+    "options": ["31,4 m", "314 m", "62,8 m", "20 m", "628 m"],
+    "correctAnswer": "C",
+    "explanation": "Substituindo o raio na fórmula fornecida: C = 2 × 3,14 × 10 = 62,8 m. O diâmetro é 20 m, mas não representa uma volta completa."
+  },
+  {
+    "topic": "Volume e capacidade",
+    "difficulty": "medium",
+    "statement": "Uma caixa retangular tem dimensões internas de 40 cm, 25 cm e 20 cm. Sabendo que 1 litro corresponde a 1.000 cm³, qual é a capacidade total da caixa?",
+    "options": ["2 litros", "10 litros", "85 litros", "200 litros", "20 litros"],
+    "correctAnswer": "E",
+    "explanation": "O volume interno é 40 × 25 × 20 = 20.000 cm³. Dividindo por 1.000, obtemos a capacidade de 20 litros."
+  },
+  {
+    "topic": "Teorema de Pitágoras",
+    "difficulty": "medium",
+    "statement": "Uma escada reta de 5 m está apoiada em uma parede vertical, sobre um chão horizontal. A base da escada fica a 3 m da parede. A que altura do chão está a extremidade superior da escada?",
+    "options": ["4 m", "2 m", "8 m", "√34 m", "3 m"],
+    "correctAnswer": "A",
+    "explanation": "Parede e chão formam um ângulo reto. A escada é a hipotenusa: h² + 3² = 5². Logo, h² = 25 − 9 = 16 e a altura positiva é h = 4 m."
+  },
+  {
+    "topic": "Média aritmética",
+    "difficulty": "medium",
+    "statement": "As notas de uma estudante em quatro atividades com o mesmo peso foram 6, 7, 8 e 9. Qual nota ela precisa obter na quinta atividade, também com o mesmo peso, para ficar com média 8 nas cinco atividades?",
+    "options": ["8", "9", "7", "10", "6"],
+    "correctAnswer": "D",
+    "explanation": "Para média 8 em cinco atividades, a soma deve ser 5 × 8 = 40. As quatro notas somam 30. Portanto, a quinta nota deve ser 40 − 30 = 10."
+  },
+  {
+    "topic": "Mediana",
+    "difficulty": "medium",
+    "statement": "Cinco estudantes levaram 18, 12, 20, 15 e 15 minutos para concluir uma tarefa. Qual é a mediana desses tempos?",
+    "options": ["16 minutos", "15 minutos", "18 minutos", "12 minutos", "20 minutos"],
+    "correctAnswer": "B",
+    "explanation": "Ordenando os tempos, temos 12, 15, 15, 18 e 20. Como há cinco valores, a mediana é o terceiro valor: 15 minutos."
+  },
+  {
+    "topic": "Probabilidade",
+    "difficulty": "medium",
+    "statement": "Em uma caixa há 3 bolas vermelhas, 2 azuis e 5 verdes, de mesmo tamanho e indistinguíveis pelo toque. Ao retirar uma única bola ao acaso, qual é a probabilidade de ela ser azul?",
+    "options": ["1/2", "2/5", "1/5", "3/10", "4/5"],
+    "correctAnswer": "C",
+    "explanation": "Há 3 + 2 + 5 = 10 bolas, das quais duas são azuis. A probabilidade é 2/10 = 1/5. A retirada ao acaso dá a cada bola a mesma chance."
+  },
+  {
+    "topic": "Função afim",
+    "difficulty": "medium",
+    "statement": "O preço de uma corrida é calculado por uma taxa fixa de R$ 6,00 mais R$ 2,50 por quilômetro percorrido, sem outros acréscimos. Quanto custa uma corrida de 8 km?",
+    "options": ["R$ 20,00", "R$ 14,00", "R$ 22,00", "R$ 28,00", "R$ 26,00"],
+    "correctAnswer": "E",
+    "explanation": "A função do preço é P(x) = 6 + 2,50x. Para 8 km: P(8) = 6 + 2,50 × 8 = 6 + 20 = R$ 26,00."
+  },
+  {
+    "topic": "Velocidade média",
+    "difficulty": "medium",
+    "statement": "Uma ciclista percorreu 18 km em 45 minutos. Qual foi sua velocidade média, em quilômetros por hora, nesse percurso?",
+    "options": ["18 km/h", "24 km/h", "13,5 km/h", "40 km/h", "30 km/h"],
+    "correctAnswer": "B",
+    "explanation": "45 minutos equivalem a 45/60 = 0,75 hora. A velocidade média é distância ÷ tempo: 18 ÷ 0,75 = 24 km/h."
+  }
+]

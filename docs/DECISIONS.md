@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Etapa 37 — lote original de Matemática
+
+Preparar dezoito questões adicionais para completar a quantidade de vinte do modelo de Matemática existente, sem converter quantidade em aprovação pedagógica/comercial. Dados separados de migrations/seed inicial, JSON fonte única e revisão interna gerados em conjunto; nenhuma exposição de gabaritos na aplicação. Inserção atômica em draft e IDs estáveis preservam revisões, timestamps e gabaritos existentes, incluindo ausência que exige correção explícita. Ensaio com rollback antes/depois e hash de preservação da carga real aprovados. Nenhum modelo/conteúdo publicado; aprovação humana por questão continua necessária. O comando de teste pressupõe rascunhos; usar banco isolado depois da publicação. Guia CONTEUDO-MATEMATICA.md.
+
 ## Prontidão de lançamento — 10/10/2026
 
 Consolidar verificações em uma leitura administrativa, sem endpoint público ou botão de liberar vendas. Contar somente questões publicadas com gabarito e modelos publicados com cobertura suficiente; status de revisão não equivale a publicação. Separar configuração local, indicadores técnicos e evidência comercial/humana não verificada. Centralizar a trava false do checkout no código usado pela API e pela checagem; nunca inferir uma compra comercial a partir de prova sintética ou aprovar publicação editorial por um “continue”. Inventário de retenção somente agregado, sem excluir registros. Guia PRONTIDAO-LANCAMENTO.md.

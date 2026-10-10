@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "content:math:build": "node scripts/build-math-content.mjs",
+    "content:math:check": "node scripts/build-math-content.mjs --check",
+    "test:content:math": "node scripts/test-math-content.mjs",
     "cakto:launch-check": "node --env-file=.env.local scripts/cakto-launch-check.mjs",
     "test:readiness": "node --test tests/readiness.test.mjs",
     "test:readiness:integration": "node --env-file=.env.local scripts/test-readiness-integration.mjs",
