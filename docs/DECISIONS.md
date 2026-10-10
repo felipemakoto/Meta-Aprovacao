@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Etapa 39 — lotes de Ciências, História e Geografia
+
+Completar vinte rascunhos por matéria com dezoito questões adicionais e um modelo Premium privado para cada uma das três matérias. Questões originais auxiliadas por IA, apoiadas por referências institucionais com tipo de acesso documentado; exemplos fictícios identificados. Quantidade e conferência do assistente não aprovam conteúdo, dificuldade ou cobertura de edital. JSONs geram SQL/revisões internas; IDs estáveis e conflitos preservados, sem reparo silencioso de gabaritos. Cada lote é uma instrução atômica; carga conjunta aplicada dentro de BEGIN/COMMIT, com hash dos registros anteriores preservado. Ensaio transacional com rollback verifica completude e preservação de alterações editoriais/modelos e ausências na reexecução. Cem questões e seis modelos permanecem não publicados. Próxima etapa é revisão humana identificada; configuração/contrato comercial continuam pendentes. Guia CONTEUDO-ETAPA-39.md.
+
 ## Etapa 38 — lote original e modelo de Português
 
 Dezoito questões adicionais e modelo de vinte questões em rascunho para Português, sem publicação editorial ou liberação comercial. JSON fonte única gera revisão interna e SQL; instrução atômica insere modelo privado, questões e gabaritos, preservando conflitos por ID. Teste transacional com rollback verifica completude e preservação de revisões do modelo/conteúdo e de gabarito ausente em reexecução. Carga real preservou hash dos registros anteriores. Modelos por matéria continuam Premium e indisponíveis enquanto não publicados/com cobertura publicada suficiente. Conteúdo original auxiliado por IA; revisão do assistente não substitui humano nem calibra dificuldade. Guia CONTEUDO-PORTUGUES.md.

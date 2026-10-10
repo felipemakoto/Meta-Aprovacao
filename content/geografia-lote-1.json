@@ -1,0 +1,282 @@
+[
+  {
+    "topic": "Coordenadas e hemisférios",
+    "difficulty": "easy",
+    "statement": "Um ponto está localizado a 15° de latitude sul e 45° de longitude oeste. Em quais hemisférios ele se encontra?",
+    "options": [
+      "Norte e Leste",
+      "Sul e Leste",
+      "Sul e Oeste",
+      "Norte e Oeste",
+      "Norte e Sul simultaneamente"
+    ],
+    "correctAnswer": "C",
+    "explanation": "A latitude sul indica posição ao sul da linha do Equador. A longitude oeste indica posição a oeste do meridiano de Greenwich. Portanto, o ponto fica nos hemisférios Sul e Oeste.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Meridiano de referência",
+    "difficulty": "easy",
+    "statement": "No sistema usual de coordenadas geográficas, as longitudes são medidas para leste ou oeste a partir de qual referência de 0°?",
+    "options": [
+      "Trópico de Câncer",
+      "Círculo Polar Antártico",
+      "Trópico de Capricórnio",
+      "Linha do Equador",
+      "Meridiano de Greenwich"
+    ],
+    "correctAnswer": "E",
+    "explanation": "O meridiano de Greenwich é a referência de longitude 0°. A linha do Equador é a referência para latitude, e não para longitude.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Fusos teóricos",
+    "difficulty": "medium",
+    "statement": "Em um modelo simplificado de fusos horários, cada 15° de longitude corresponde a uma hora, com horários mais adiantados a leste. Se são 10h no meridiano de 0°, que horas são no meridiano de 30° leste nesse modelo?",
+    "options": [
+      "12h",
+      "8h",
+      "10h",
+      "11h",
+      "14h"
+    ],
+    "correctAnswer": "A",
+    "explanation": "A diferença é de 30 ÷ 15 = 2 horas. Como o ponto está a leste, somam-se duas horas: 12h. O exercício usa fusos teóricos, sem fronteiras oficiais ou horário de verão.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Legenda cartográfica",
+    "difficulty": "easy",
+    "statement": "Em um mapa fictício de uso do solo, a legenda indica verde para floresta, amarelo para agricultura e cinza para área construída. O que representa uma área amarela nesse mapa?",
+    "options": [
+      "Floresta",
+      "Área construída",
+      "Um rio necessariamente",
+      "Agricultura",
+      "Uma fronteira internacional necessariamente"
+    ],
+    "correctAnswer": "D",
+    "explanation": "A legenda fornecida associa amarelo à agricultura. Cores e símbolos precisam ser interpretados pela legenda do mapa específico, sem supor que tenham sempre o mesmo significado em todos os mapas.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Curvas de nível",
+    "difficulty": "medium",
+    "statement": "Um mapa representa curvas de nível, cada uma ligando pontos de mesma altitude, com intervalo de 20 m entre curvas consecutivas. Na mesma escala, em qual trecho a encosta tende a ser mais íngreme?",
+    "options": [
+      "Onde as curvas estão mais afastadas.",
+      "Onde as curvas estão mais próximas.",
+      "Onde não existe mudança de altitude.",
+      "Onde todas as curvas têm exatamente a mesma altitude.",
+      "Em qualquer trecho, pois a distância entre as curvas não importa."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Com intervalo de altitude e escala iguais, curvas próximas indicam a mesma variação vertical em menor distância horizontal. Isso corresponde a maior declividade da encosta.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Escala e conversão de distância",
+    "difficulty": "medium",
+    "statement": "Em um mapa de escala 1:50.000, a distância em linha reta entre dois pontos mede 4 cm. Qual é a distância real correspondente?",
+    "options": [
+      "20 km",
+      "200 km",
+      "2 km",
+      "200 m",
+      "20 m"
+    ],
+    "correctAnswer": "C",
+    "explanation": "A distância real é 4 × 50.000 = 200.000 cm. Como 100.000 cm correspondem a 1 km, o resultado é 2 km.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Densidade demográfica",
+    "difficulty": "medium",
+    "statement": "Um município fictício tem 90.000 habitantes distribuídos em uma área de 300 km². Usando densidade demográfica = população ÷ área, qual é sua densidade média?",
+    "options": [
+      "30 hab./km²",
+      "3 hab./km²",
+      "900 hab./km²",
+      "3.000 hab./km²",
+      "300 hab./km²"
+    ],
+    "correctAnswer": "E",
+    "explanation": "Dividindo 90.000 habitantes por 300 km², obtemos 300 hab./km². É uma média do território e não significa que cada quilômetro quadrado tenha exatamente esse número de moradores.",
+    "sourceKeys": [
+      "density"
+    ]
+  },
+  {
+    "topic": "Proporção da população urbana",
+    "difficulty": "medium",
+    "statement": "Em uma região fictícia, a proporção da população residente em áreas urbanas passou de 60% para 80% entre duas pesquisas. Qual foi o aumento, em pontos percentuais?",
+    "options": [
+      "20 pontos percentuais",
+      "80 pontos percentuais",
+      "60 pontos percentuais",
+      "33 pontos percentuais",
+      "140 pontos percentuais"
+    ],
+    "correctAnswer": "A",
+    "explanation": "A diferença entre as proporções é 80 − 60 = 20 pontos percentuais. Esse indicador não é o mesmo que o aumento percentual relativo de aproximadamente 33,3% sobre o valor inicial.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Êxodo rural",
+    "difficulty": "easy",
+    "statement": "Uma família muda permanentemente de uma área rural para uma cidade em busca de trabalho. Qual tipo de deslocamento está exemplificado?",
+    "options": [
+      "Turismo de férias",
+      "Migração pendular diária",
+      "Viagem de retorno no mesmo dia",
+      "Êxodo rural",
+      "Deslocamento de um bairro urbano para outro"
+    ],
+    "correctAnswer": "D",
+    "explanation": "O êxodo rural é o deslocamento de pessoas do campo para a cidade. No exemplo, há mudança de residência, e não apenas uma viagem diária ou temporária.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Deslocamento pendular",
+    "difficulty": "easy",
+    "statement": "Uma pessoa mora em um município, vai diariamente a outro para trabalhar e retorna à sua residência ao fim do dia. Como esse movimento é geralmente denominado?",
+    "options": [
+      "Mudança definitiva de país",
+      "Deslocamento pendular",
+      "Êxodo rural necessariamente",
+      "Emigração permanente",
+      "Turismo internacional"
+    ],
+    "correctAnswer": "B",
+    "explanation": "O deslocamento pendular envolve trajetos regulares de ida e volta, como os realizados para trabalhar ou estudar. A pessoa mantém sua residência, sem mudança definitiva no exemplo.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Setores da economia",
+    "difficulty": "easy",
+    "statement": "Uma indústria transforma algodão em tecido. Na divisão tradicional da economia em setores primário, secundário e terciário, essa atividade industrial pertence a qual setor?",
+    "options": [
+      "Primário, por envolver qualquer produto de origem vegetal.",
+      "Terciário, por ser necessariamente comércio varejista.",
+      "Secundário, por transformar matéria-prima.",
+      "Primário, por extrair tecido pronto da natureza.",
+      "Terciário, por prestar exclusivamente serviços de transporte."
+    ],
+    "correctAnswer": "C",
+    "explanation": "A transformação industrial da matéria-prima em tecido pertence ao setor secundário. O cultivo do algodão pertence ao primário; a venda e o transporte são exemplos de atividades do terciário.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Impermeabilização e escoamento",
+    "difficulty": "medium",
+    "statement": "Uma área de solo exposto e vegetação é coberta por asfalto impermeável. Mantidas as demais condições, qual efeito tende a ocorrer durante uma chuva?",
+    "options": [
+      "A água passa a infiltrar mais facilmente pelo asfalto.",
+      "Toda a água deixa de circular no ambiente.",
+      "A chuva se transforma diretamente em neve.",
+      "A água desaparece sem escoar ou evaporar.",
+      "A infiltração no trecho diminui e o escoamento superficial tende a aumentar."
+    ],
+    "correctAnswer": "E",
+    "explanation": "Superfícies impermeáveis dificultam a entrada da água no solo e favorecem o escoamento superficial. A intensidade do efeito também depende de chuva, relevo e drenagem.",
+    "sourceKeys": [
+      "runoff"
+    ]
+  },
+  {
+    "topic": "Bacia hidrográfica",
+    "difficulty": "medium",
+    "statement": "Como se denomina a área cujas águas superficiais são drenadas por um rio principal e seus afluentes para uma saída comum?",
+    "options": [
+      "Bacia hidrográfica",
+      "Meridiano",
+      "Fuso horário",
+      "Paralelo",
+      "Limite de uma região política necessariamente"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Uma bacia hidrográfica é uma área de drenagem integrada por um rio e seus afluentes. Seus limites acompanham divisores de águas e não precisam coincidir com fronteiras políticas.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Tempo atmosférico e clima",
+    "difficulty": "medium",
+    "statement": "Uma notícia informa que choveu em uma cidade na manhã de terça-feira. Essa informação, sozinha, descreve principalmente:",
+    "options": [
+      "o clima completo da cidade durante vários séculos",
+      "a latitude exata da cidade",
+      "o bioma de todo o país",
+      "uma condição do tempo atmosférico naquele momento",
+      "a quantidade total de rios da região"
+    ],
+    "correctAnswer": "D",
+    "explanation": "O tempo atmosférico corresponde às condições observadas em um momento ou intervalo curto. O clima se refere a padrões e variabilidade analisados ao longo de períodos extensos; uma manhã não é suficiente para caracterizá-lo.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Caatinga",
+    "difficulty": "easy",
+    "statement": "Qual bioma brasileiro é associado ao semiárido e apresenta vegetação com diversas adaptações a períodos de pouca disponibilidade de água?",
+    "options": [
+      "Pampa",
+      "Caatinga",
+      "Floresta amazônica",
+      "Manguezal exclusivamente",
+      "Floresta temperada europeia"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A Caatinga está associada ao semiárido brasileiro. Sua vegetação apresenta diferentes adaptações às condições de disponibilidade de água, sem que todas as plantas tenham exatamente a mesma estratégia.",
+    "sourceKeys": [
+      "biomes",
+      "caatinga"
+    ]
+  },
+  {
+    "topic": "Pampa",
+    "difficulty": "easy",
+    "statement": "Qual bioma brasileiro, restrito ao Rio Grande do Sul, apresenta extensas formações campestres?",
+    "options": [
+      "Caatinga",
+      "Pantanal",
+      "Pampa",
+      "Amazônia",
+      "Cerrado"
+    ],
+    "correctAnswer": "C",
+    "explanation": "O Pampa brasileiro situa-se no Rio Grande do Sul e possui formações campestres características. Campos não são necessariamente áreas sem biodiversidade ou sem relevância ambiental.",
+    "sourceKeys": [
+      "biomes",
+      "pampa"
+    ]
+  },
+  {
+    "topic": "Fontes renováveis de energia",
+    "difficulty": "easy",
+    "statement": "Considerando renovável uma fonte reposta por processos naturais em escala compatível com seu uso, qual opção é uma fonte renovável de energia?",
+    "options": [
+      "Carvão mineral",
+      "Petróleo",
+      "Gás natural fóssil",
+      "Urânio extraído de jazidas",
+      "Vento usado na geração eólica"
+    ],
+    "correctAnswer": "E",
+    "explanation": "O vento é reposto por processos atmosféricos e pode ser utilizado na geração eólica. Ser renovável não significa produzir energia continuamente nem ter impacto ambiental inexistente.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Mapas temáticos",
+    "difficulty": "easy",
+    "statement": "Um mapa apresenta a distribuição da quantidade média de chuva por áreas de uma região, usando cores e uma legenda com valores. Qual é sua finalidade principal?",
+    "options": [
+      "Representar espacialmente um fenômeno específico: a distribuição da chuva.",
+      "Mostrar apenas nomes de governantes.",
+      "Substituir toda observação meteorológica futura.",
+      "Comprovar que todas as áreas recebem a mesma quantidade de chuva.",
+      "Representar necessariamente somente fronteiras internacionais."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Um mapa temático destaca a distribuição espacial de um fenômeno selecionado. Nesse caso, cores e legenda permitem comparar quantidades de chuva entre áreas, conforme os dados usados no mapa.",
+    "sourceKeys": []
+  }
+]

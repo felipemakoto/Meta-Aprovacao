@@ -1,0 +1,122 @@
+{
+  "photosynthesis": {
+    "title": "OpenStax — Fotossíntese",
+    "url": "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis",
+    "access": "Trecho indexado consultado"
+  },
+  "ecosystems": {
+    "title": "OpenStax — Fluxo de energia nos ecossistemas",
+    "url": "https://openstax.org/books/biology-2e/pages/46-2-energy-flow-through-ecosystems",
+    "access": "Trecho indexado consultado"
+  },
+  "respiration": {
+    "title": "OpenStax — Energia nos sistemas vivos",
+    "url": "https://openstax.org/books/biology-2e/pages/7-1-energy-in-living-systems",
+    "access": "Trecho indexado consultado"
+  },
+  "evaporation": {
+    "title": "USGS — Evaporação e ciclo da água",
+    "url": "https://www.usgs.gov/water-science-school/science/evaporation-and-water-cycle",
+    "access": "Trecho indexado consultado"
+  },
+  "mixtures": {
+    "title": "OpenStax — Classificação da matéria",
+    "url": "https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter",
+    "access": "Trecho indexado consultado"
+  },
+  "heat": {
+    "title": "OpenStax — Transferência de calor",
+    "url": "https://openstax.org/books/physics/pages/11-2-heat-specific-heat-and-heat-transfer",
+    "access": "Página acessada"
+  },
+  "circuits": {
+    "title": "OpenStax — Circuitos em série",
+    "url": "https://openstax.org/books/physics/pages/19-2-series-circuits",
+    "access": "Trecho indexado consultado; caminho elétrico completo também é premissa do exemplo"
+  },
+  "moon": {
+    "title": "NASA — Fases da Lua",
+    "url": "https://moon.nasa.gov/resources/54/phases-of-the-moon/",
+    "access": "Texto indexado consultado"
+  },
+  "seasons": {
+    "title": "NASA — Estações na Terra",
+    "url": "https://science.nasa.gov/helio-and-you-seasons-on-earth-mars-and-beyond/",
+    "access": "Texto indexado consultado"
+  },
+  "ports": {
+    "title": "Arquivo Nacional — 1808",
+    "url": "https://mapa.an.gov.br/index.php/mapa/centrais-de-conteudo/producao/cronologias/85-periodo-joanino/1386-1808",
+    "access": "Trecho indexado consultado"
+  },
+  "court": {
+    "title": "Arquivo Nacional — Caderno MAPA 7, página 10",
+    "url": "https://mapa.arquivonacional.gov.br/images/publicacoes/CadernoMAPA7/files/assets/basic-html/page-10.html",
+    "access": "Trecho indexado consultado"
+  },
+  "abolition": {
+    "title": "Câmara dos Deputados — Lei Áurea",
+    "url": "https://www2.camara.leg.br/a-camara/visiteacamara/arquivo/abolicao-da-escravatura-completa-125-anos-visita-ao-congresso-e-oportunidade-para-aprender-um-pouco-da-historia",
+    "access": "Texto indexado e índice da coleção de leis de 1888 consultados; página individual da lei indisponível na ferramenta"
+  },
+  "freeWomb": {
+    "title": "Câmara dos Deputados — Lei 2.040 de 1871",
+    "url": "https://www2.camara.leg.br/legin/fed/leimp/1824-1899/lei-2040-28-setembro-1871-538828-publicacaooriginal-35591-pl.html",
+    "access": "Página acessada"
+  },
+  "republic": {
+    "title": "Arquivo Nacional — Proclamação da República",
+    "url": "https://mapa.arquivonacional.gov.br/index.php/ultimas-noticias/1728-proclamacao-da-republica",
+    "access": "Texto indexado consultado"
+  },
+  "constitution1891": {
+    "title": "Planalto — Constituição de 1891",
+    "url": "https://planalto.gov.br/ccivil_03/constituicao/constituicao91.htm",
+    "access": "Página acessada; artigos 1º, 2º e 70"
+  },
+  "declaration1789": {
+    "title": "Légifrance — Declaração de 1789",
+    "url": "https://www.legifrance.gouv.fr/Droit-francais/Constitution/Declaration-des-Droits-de-l-Homme-et-du-Citoyen-de-1789",
+    "access": "Texto indexado consultado; artigo 1º"
+  },
+  "cuneiform": {
+    "title": "Metropolitan Museum — Tabuleta de distribuição de utensílios de cobre",
+    "url": "https://www.metmuseum.org/art/collection/search/325500",
+    "access": "Trecho indexado consultado; interpretação didática do registro, sem transcrição de inscrição"
+  },
+  "indigenous": {
+    "title": "Funai — Diversidade dos povos indígenas",
+    "url": "https://sii.funai.gov.br/funai_sii/informacoes_indigenas/visao/visao_povos_indigenas.wsp",
+    "access": "Texto indexado consultado"
+  },
+  "heritage": {
+    "title": "Iphan — Patrimônio imaterial",
+    "url": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial",
+    "access": "Trecho indexado e catálogo de saberes/celebrações consultados"
+  },
+  "density": {
+    "title": "IBGE Educa — Densidade populacional",
+    "url": "https://educa.ibge.gov.br/professores/educa-atividades/20814-densidade-populacional.html",
+    "access": "Texto indexado consultado; dados numéricos do exercício são fictícios"
+  },
+  "runoff": {
+    "title": "USGS — Escoamento superficial",
+    "url": "https://www.usgs.gov/water-science-school/science/surface-runoff-and-water-cycle?qt-science_center_objects=0",
+    "access": "Trecho indexado consultado"
+  },
+  "biomes": {
+    "title": "IBGE Educa — Biomas",
+    "url": "https://educa.ibge.gov.br/jovens/conheca-o-brasil/territorio/19635-ecossistemas.html",
+    "access": "Trechos indexados consultados; acesso direto retornou 403 na ferramenta"
+  },
+  "caatinga": {
+    "title": "IBGE Educa — Caatinga",
+    "url": "https://educa.ibge.gov.br/criancas/voce-sabia/22549-caatinga.html",
+    "access": "Trecho indexado consultado; associação ao semiárido"
+  },
+  "pampa": {
+    "title": "ICMBio — Pampa",
+    "url": "https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/pampa/pampa",
+    "access": "Trecho indexado consultado; localização e campos temperados"
+  }
+}

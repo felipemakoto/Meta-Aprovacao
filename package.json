@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "content:subjects:build": "node scripts/build-subject-content.mjs",
+    "content:subjects:check": "node scripts/build-subject-content.mjs --check",
+    "test:content:subjects": "node scripts/test-subject-content.mjs",
     "content:portuguese:build": "node scripts/build-portuguese-content.mjs",
     "content:portuguese:check": "node scripts/build-portuguese-content.mjs --check",
     "test:content:portuguese": "node scripts/test-portuguese-content.mjs",
