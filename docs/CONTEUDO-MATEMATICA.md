@@ -1,5 +1,7 @@
 # Ampliação de Matemática — etapa 37
 
+Registro histórico. As correções e versões atuais do lote estão em [Etapa 41](CORRECOES-ETAPA-41.md); o documento de revisão e SQL gerados acompanham a fonte atualizada.
+
 Em 10/10/2026, preparado e carregado um lote de 18 questões originais em rascunho, complementando as duas questões de Matemática já existentes. O banco tem agora 28 questões: vinte de Matemática e duas em cada uma das outras quatro matérias. Nenhuma questão revisada ou publicada; os dois modelos de simulado continuam em rascunho. Contratação bloqueada.
 
 ## Conferência editorial

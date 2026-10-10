@@ -1,5 +1,7 @@
 # Ampliação de Português — etapa 38
 
+Registro histórico. As correções e versões atuais do lote estão em [Etapa 41](CORRECOES-ETAPA-41.md); o documento de revisão e SQL gerados acompanham a fonte atualizada.
+
 Em 10/10/2026, preparado e carregado um lote de 18 questões originais com gabaritos e explicações, além de um modelo de simulado de Português com vinte questões. Todos em rascunho, com revisão humana pendente. Banco com 46 questões: vinte de Matemática, vinte de Português e duas em Ciências, História e Geografia. Três modelos de simulado em rascunho; nenhum conteúdo publicado ou contratação liberada.
 
 ## Revisão editorial

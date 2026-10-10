@@ -4,6 +4,7 @@ import { spawnSync } from "node:child_process";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import { contentVersion } from "./lib/content-versions.mjs";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const require = createRequire(import.meta.url);
 const packagePath = require.resolve("supabase/package.json");
@@ -16,7 +17,7 @@ const snapshot = `md5(coalesce((select jsonb_agg(to_jsonb(q) order by id)::text 
 const checks = definitions.map(([subject, q, s]) => {
   const ids = `select ('${q}-0000-4000-8000-'||lpad(n::text,12,'0'))::uuid from generate_series(1,18)n`;
   return `do $$ begin
- if (select count(*) from public.questions where id in(${ids}) and subject='${subject}' and target_exam='both' and version=1 and status='draft')<>18 then raise exception 'Lote ${subject} incompleto ou fora de rascunho';end if;
+ if (select count(*) from public.questions where id in(${ids}) and subject='${subject}' and target_exam='both' and version=${contentVersion(q+"-0000-4000-8000-000000000001")} and status='draft')<>18 then raise exception 'Lote ${subject} incompleto ou fora de rascunho';end if;
  if (select count(*) from public.question_answers where question_id in(${ids}))<>18 then raise exception 'Gabaritos incompletos';end if;
  if exists(select 1 from public.questions q where id in(${ids}) and (select count(distinct btrim(o)) from unnest(array[q.option_a,q.option_b,q.option_c,q.option_d,q.option_e])o)<>5) then raise exception 'Alternativas repetidas';end if;
  if not exists(select 1 from private.simulations where id='${s}-0000-4000-8000-000000000001' and subject='${subject}' and question_count=20 and not published and not free_access) then raise exception 'Modelo inesperado';end if;

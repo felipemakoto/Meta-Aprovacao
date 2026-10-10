@@ -2,12 +2,15 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import assert from "node:assert/strict";
+import { contentVersion } from "./lib/content-versions.mjs";
 
 const root = new URL("../", import.meta.url);
 const letters = ["A", "B", "C", "D", "E"];
 const rows = JSON.parse(readFileSync(new URL("content/portugues-lote-1.json", root), "utf8"));
 assert.equal(rows.length, 18);
 const ids = rows.map((_, i) => `d1380000-0000-4000-8000-${String(i + 1).padStart(12, "0")}`);
+const version = contentVersion(ids[0]);
+assert.ok(ids.every(id => contentVersion(id) === version));
 for (const row of rows) {
   assert.deepEqual(Object.keys(row).sort(), ["topic", "difficulty", "statement", "options", "correctAnswer", "explanation"].sort());
   for (const [key, max] of [["topic", 160], ["statement", 20000], ["explanation", 20000]]) {
@@ -25,6 +28,7 @@ const quote = value => `'${value.replaceAll("'", "''")}'`;
 const values = rows.map((r, i) => `  (${[ids[i], r.statement, ...r.options, r.topic, r.difficulty, r.correctAnswer, r.explanation].map(quote).join(", ")})`).join(",\n");
 const sql = `-- Etapa 38: 18 questões originais de Português; geradas com auxílio de IA.
 -- Revisão humana pendente. Gerado por scripts/build-portuguese-content.mjs.
+-- Fonte atual: revisão da etapa 41, versão ${version}; INSERT não atualiza linhas existentes.
 -- Apenas INSERT atômico em draft; reexecução preserva conteúdo, status e gabaritos.
 -- Não reparar um gabarito de questão existente silenciosamente.
 with source_data (id, statement, option_a, option_b, option_c, option_d, option_e,
@@ -40,7 +44,7 @@ ${values}
   insert into public.questions (id, statement, option_a, option_b, option_c, option_d, option_e,
                                subject, topic, difficulty, target_exam, status, version)
   select id::uuid, statement, option_a, option_b, option_c, option_d, option_e,
-         'portugues', topic, difficulty, 'both', 'draft', 1 from source_data
+         'portugues', topic, difficulty, 'both', 'draft', ${version} from source_data
   on conflict (id) do nothing
   returning id
 )
@@ -52,7 +56,7 @@ const doc = `# Revisão de Português — etapa 38
 
 18 questões originais, geradas com auxílio de IA, para complementar as duas questões de Português do [lote inicial](REVISAO-SEED.md). Não são questões oficiais nem uma validação do programa de uma prova específica. Dificuldade estimada; adequação pedagógica e revisão humana pendentes.
 
-Material interno com gabaritos. Fonte: content/portugues-lote-1.json; SQL: supabase/content/portugues-lote-1.sql. Não colocar estes arquivos em public nem servir como página do aluno. Todos os registros novos são draft, versão 1 e destino both. O modelo de Português com vinte questões também permanece em rascunho.
+Material interno com gabaritos. Fonte: content/portugues-lote-1.json; SQL: supabase/content/portugues-lote-1.sql. Não colocar estes arquivos em public nem servir como página do aluno. Fonte atual com ajustes da etapa 41: registros draft, versão ${version} e destino both. O manifesto antes/depois está em content/revisao-etapa-41.json; o INSERT não aplica correções a linhas existentes. O modelo de Português com vinte questões também permanece em rascunho.
 
 ## Como revisar
 

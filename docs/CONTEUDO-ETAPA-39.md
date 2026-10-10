@@ -1,5 +1,7 @@
 # Conteúdo de Ciências, História e Geografia — etapa 39
 
+Registro histórico. As correções e versões atuais desses lotes estão em [Etapa 41](CORRECOES-ETAPA-41.md); os documentos de revisão e SQLs gerados acompanham a fonte atualizada.
+
 Em 10/10/2026, preparados e carregados 54 exercícios originais com cinco alternativas, gabaritos e explicações: dezoito novos por matéria. Foram acrescentados três modelos de simulado com vinte questões cada. O banco agora contém cem questões em rascunho e seis modelos não publicados. Nenhuma revisão humana ou publicação foi registrada nesta etapa.
 
 ## Revisão das cinco matérias

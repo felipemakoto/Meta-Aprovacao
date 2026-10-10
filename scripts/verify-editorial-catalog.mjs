@@ -29,4 +29,4 @@ for (const q of catalog.questions) {
   assert.deepEqual(row, { id, statement, subject, topic, difficulty, status, version, target_exam, correct_answer, explanation,
     option_a: options[0], option_b: options[1], option_c: options[2], option_d: options[3], option_e: options[4] }, `Catálogo desatualizado: ${q.label}; regenerar/corrigir explicitamente, sem sobrescrever o banco.`);
 }
-console.log("Cem questões/gabaritos sincronizados com o banco, todas draft, versão 1; consulta somente leitura.");
+console.log("Cem questões/gabaritos sincronizados com o banco, todas draft, nas versões editoriais esperadas; consulta somente leitura.");

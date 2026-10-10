@@ -1,6 +1,7 @@
 // Etapa 39: gera apenas arquivos internos; não se conecta ao banco nem publica.
 import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
+import { contentVersion } from "./lib/content-versions.mjs";
 
 const root = new URL("../", import.meta.url);
 const definitions = [
@@ -25,6 +26,8 @@ for (const d of definitions) {
   const rows = JSON.parse(readFileSync(new URL(`content/${d.subject}-lote-1.json`, root), "utf8"));
   assert.equal(rows.length, 18);
   const ids = rows.map((_, i) => `${d.questions}-0000-4000-8000-${String(i + 1).padStart(12, "0")}`);
+  const version = contentVersion(ids[0]);
+  assert.ok(ids.every(id => contentVersion(id) === version));
   for (const r of rows) {
     assert.deepEqual(Object.keys(r).sort(), ["topic", "difficulty", "statement", "options", "correctAnswer", "explanation", "sourceKeys"].sort());
     for (const [key, max] of [["topic", 160], ["statement", 20000], ["explanation", 20000]]) assert.ok(typeof r[key] === "string" && r[key].trim().length > 0 && r[key].length <= max);
@@ -40,6 +43,7 @@ for (const d of definitions) {
   const values = rows.map((r, i) => `  (${[ids[i], r.statement, ...r.options, r.topic, r.difficulty, r.correctAnswer, r.explanation].map(quote).join(", ")})`).join(",\n");
   const sql = `-- Etapa 39: ${d.name}; originais geradas com auxílio de IA, revisão humana pendente.
 -- Gerado por scripts/build-subject-content.mjs. Uma instrução atômica por lote.
+-- Fonte atual: revisão da etapa 41, versão ${version}; INSERT não atualiza linhas existentes.
 -- Conflitos de ID preservam conteúdo/modelos/gabaritos; sem reparo silencioso.
 with source_data (id, statement, option_a, option_b, option_c, option_d, option_e,
                   topic, difficulty, correct_answer, explanation) as (
@@ -53,7 +57,7 @@ ${values}
   insert into public.questions(id,statement,option_a,option_b,option_c,option_d,option_e,
                                subject,topic,difficulty,target_exam,status,version)
   select id::uuid,statement,option_a,option_b,option_c,option_d,option_e,
-         ${quote(d.subject)},topic,difficulty,'both','draft',1 from source_data
+         ${quote(d.subject)},topic,difficulty,'both','draft',${version} from source_data
   on conflict(id) do nothing returning id
 )
 insert into public.question_answers(question_id,correct_answer,explanation)
@@ -64,7 +68,7 @@ from inserted_questions q join source_data s on s.id::uuid=q.id;
   artifacts.push([`supabase/content/${d.subject}-lote-1.sql`, sql]);
   const doc = `# Revisão de ${d.name} — etapa 39
 
-18 questões originais geradas com auxílio de IA, complementando as duas do [lote inicial](REVISAO-SEED.md), entradas ${d.initial}. As iniciais correspondem a ${d.label}01/${d.label}02; as novas a ${d.label}03–${d.label}20. Todas as novas questões são draft, versão 1, destino both. Modelo de vinte questões da matéria também em rascunho, sem acesso gratuito.
+18 questões originais geradas com auxílio de IA, complementando as duas do [lote inicial](REVISAO-SEED.md), entradas ${d.initial}. As iniciais correspondem a ${d.label}01/${d.label}02; as novas a ${d.label}03–${d.label}20. Fonte atual com ajustes da etapa 41: questões draft, versão ${version}, destino both. Manifesto antes/depois em content/revisao-etapa-41.json; o INSERT não aplica correções a linhas existentes. Modelo de vinte questões da matéria também em rascunho, sem acesso gratuito.
 
 Material interno com gabaritos: não colocar em public nem servir como página do aluno. Fonte: content/${d.subject}-lote-1.json. Revisão humana, adequação pedagógica e dificuldade estimada ainda pendentes; não são questões oficiais, não certificam cobertura de edital ou variedade suficiente para vender estudo ilimitado.
 

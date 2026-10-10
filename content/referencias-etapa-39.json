@@ -118,5 +118,15 @@
     "title": "ICMBio — Pampa",
     "url": "https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/pampa/pampa",
     "access": "Trecho indexado consultado; localização e campos temperados"
+  },
+  "joanino": {
+    "title": "Arquivo Nacional — Cronologia do período joanino",
+    "url": "https://mapa.arquivonacional.gov.br/index.php/assuntos/79-producao/80-cronologia/508-periodo-joanino-1808-a-1822",
+    "access": "Trechos indexados consultados em 10/10/2026"
+  },
+  "revoltas": {
+    "title": "Arquivo Nacional — Revoltas de 1817 e mudanças da década de 1820",
+    "url": "https://www.gov.br/arquivonacional/pt-br/sites_eventos/sites-tematicos-1/brasil-oitocentista/especial-bicentenario-da-independencia/constitucionalismos-revoltas-e-festas-no-recife-entre-a-revolucao-de-1817-e-o-reconhecimento-da-independencia",
+    "access": "Trechos indexados consultados em 10/10/2026; leitura direta posterior teve timeout"
   }
 }

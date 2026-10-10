@@ -7,44 +7,36 @@ assert.ok(process.argv.slice(2).every(a => a === "--check"));
 const catalog = loadCatalog();
 const template = readFileSync(new URL("review/editorial-template.html", root), "utf8").replaceAll("\r\n", "\n");
 assert.equal(template.split("__CATALOG_JSON__").length, 2);
-// JSON embutido não pode encerrar o elemento script, mesmo com texto malicioso.
+// JSON embutido não pode encerrar script, mesmo com texto malicioso.
 const payload = JSON.stringify(catalog).replaceAll("<", "\\u003c").replaceAll("\u2028", "\\u2028").replaceAll("\u2029", "\\u2029");
 const html = template.replace("__CATALOG_JSON__", () => payload);
-const report = `# Conferência preliminar de conteúdo — etapa 40
+const report = `# Conferência editorial atual — etapa 41
 
-Catálogo local de cem questões conferido em 10/10/2026. Originais auxiliadas por IA; esta análise do assistente não registra revisão pedagógica humana nem publica conteúdo. A versão desta conferência tem SHA-256 \`${catalog.catalogHash}\`.
+Catálogo corrigido em 10/10/2026: cem questões originais auxiliadas por IA, todas em rascunho, sem revisão humana atribuída. Noventa adicionais na versão 2 e dez do lote inicial preservadas na versão 1. Hash do catálogo: \`${catalog.catalogHash}\`.
+
+## Ajustes realizados
+
+Alternativas das noventa questões adicionais reorganizadas por permutação independente e reproduzível por ID, com atualização da letra correta. P04 reformulada para pedir uma inferência provável a partir das pistas do texto. Alternativas incorretas de C16, C19 e H09 substituídas por opções mais próximas do tema; H09 também ganhou explicação cronológica e referências de apoio. Esses ajustes do assistente continuam sujeitos à revisão humana.
+
+O [relatório da etapa 40](CONFERENCIA-EDITORIAL-ETAPA-40.md) preserva os apontamentos e a identificação do catálogo anterior. Detalhes, manifesto antes/depois e ensaio do banco em [CORRECOES-ETAPA-41.md](CORRECOES-ETAPA-41.md).
 
 ## Conferência estrutural
 
-Cem IDs e enunciados distintos; cinco alternativas distintas, uma letra de gabarito válida e explicação em cada questão. Vinte questões por matéria. A conferência de sincronização com o banco é separada, somente leitura, pelo comando \`content:review:verify\`.
+Cem IDs e enunciados distintos, cinco alternativas distintas e gabarito/explicação em cada questão. Consulta somente leitura confirmou correspondência com o banco. As letras abaixo seguem a ordem dos documentos, não a ordem de apresentação de uma tentativa.
 
-| Matéria | Questões | Fácil estimada | Média estimada | Difícil estimada | Letras do lote 03–20 | Repetição do bloco inicial de 5 |
+| Matéria | Questões | Fácil estimada | Média estimada | Difícil estimada | Letras do lote 03–20 | Coincidências com repetição do bloco inicial de 5 |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
-${summarize(catalog).map(s => `| ${s.name} | ${s.count} | ${s.easy} | ${s.medium} | ${s.hard} | ${s.letters} | ${s.pattern}: ${s.repeats}/18 |`).join("\n")}
+${summarize(catalog).map(s => `| ${s.name} | ${s.count} | ${s.easy} | ${s.medium} | ${s.hard} | ${s.letters} | ${s.repeats}/18 |`).join("\n")}
 
-As letras estão na ordem editorial dos documentos, não na ordem aleatória de uma tentativa do estudante. A análise de repetição compara cada posição ao bloco inicial de cinco letras; não certifica nem reprova um gabarito.
-
-## Ajustes recomendados antes de publicar
-
-1. **Variar a posição da resposta correta.** Os cinco lotes adicionais seguem, integralmente ou quase, um ciclo de cinco letras. Matemática e Português têm a mesma sequência de dezoito letras. Isso merece ajuste editorial preservando a relação entre alternativa correta e explicação; distribuição equilibrada sozinha não comprova qualidade. Não foi aplicada uma troca automática ao banco.
-2. **Reavaliar P04.** A alternativa correta informa apenas que o guarda-chuva está molhado, algo praticamente explícito nas gotas e na ação de secar. A classificação como inferência/dificuldade média merece revisão: pode ser leitura de pistas simples ou exigir reformulação para uma inferência menos direta.
-3. **Melhorar alternativas incorretas pouco plausíveis.** Exemplos C16 (fotossíntese/condução na colher), C19 (Sol apagado) e H09 (Brasília/Segunda Guerra no contexto de 1808). São fáceis de eliminar sem dominar o conceito. Ajustar ao nível pretendido sem criar uma segunda resposta correta.
-4. **Conferir referência e público.** História/Geografia/Ciências incluem referências com acesso limitado a trechos indexados. Conferir os documentos primários, a contextualização histórica e os conceitos. Estimativas de dificuldade ainda não foram calibradas; não há questão classificada como difícil no catálogo atual.
-5. **Avaliar os seis modelos.** O simulado rápido prevê dez questões; cada modelo Premium por matéria prevê vinte. Os vinte registros disponíveis por matéria apenas atendem essa quantidade após aprovação/publicação e deixam pouca variedade. Esta contagem não valida edital, experiência de estudo ilimitado ou promessa comercial.
-
-A leitura preliminar não apontou um gabarito numérico divergente nos exercícios de cálculo; isso não substitui revisão humana das cem questões, dos distratores e das explicações. As contas já conferidas nas etapas 37/39 permanecem documentadas nos respectivos guias. Demais questões exigem conferência contextual; ausência de erro apontado não é aprovação.
-
-## Verificação da ferramenta em 10/10/2026
-
-Consulta somente leitura confirmou correspondência de IDs, versões, matérias, enunciados, alternativas, gabaritos e explicações das cem questões com o banco, todas em draft. Lint dos scripts aprovado. Teste em navegador isolado aprovou filtros, respostas inicialmente ocultas, nome obrigatório na marcação de conferência, persistência ao recarregar, exportação/importação, recusa de catálogo antigo e texto tratado como texto. Edição da nota desfaz a marcação de conferida; falha do armazenamento avisa e mantém a exportação disponível. Sem chamadas externas durante o teste; layout sem transbordamento em 320, 360 e 1100 pixels.
+Os lotes não repetem mais o ciclo de cinco letras da versão anterior, e as sequências das matérias são distintas. Esta conferência não certifica dificuldade, cobertura de edital, equilíbrio psicométrico ou qualidade pedagógica. Não há questões classificadas como difíceis; as demais classificações ainda são estimativas.
 
 ## Revisão prática
 
-Gerar com \`npm.cmd run content:review:build\` e abrir \`out/revisao-editorial.html\`. Funciona localmente, sem login ou comunicação com o site. Filtre por matéria/status, leia a questão, abra o gabarito e registre uma nota. “Conferida neste arquivo” exige nome do revisor e registra a data da marcação, mas não altera o estado editorial do banco.
+Gerar com \`npm.cmd run content:review:build\` e abrir \`out/revisao-editorial.html\`. Filtre por matéria, número ou marcação, abra o gabarito, registre ajustes e exporte as anotações. O arquivo funciona localmente; marcação de conferência exige nome do revisor e não publica conteúdo. Editar a nota desfaz essa marcação. As referências têm seus tipos/limitações de acesso indicados nos documentos por matéria e na ferramenta.
 
-As anotações ficam no armazenamento desse navegador, quando disponível. Exporte o JSON para manter uma cópia; é possível importá-lo no mesmo catálogo. Arquivos de versões diferentes são recusados. Mudanças de origem/navegador ou limpeza de dados podem remover o armazenamento local; a exportação é a cópia durável. Anotações/revisor não devem ser adicionados ao GitHub. Não colocar esse HTML em \`public\`, pois contém gabaritos.
+As anotações ficam no armazenamento desse navegador, quando disponível. Exportar o JSON mantém uma cópia durável. A importação exige o mesmo catálogo; anotações anteriores não são transferidas nem aprovadas automaticamente para questões corrigidas. Quando encontra anotações do catálogo anterior nesse navegador/origem, a ferramenta oferece exportação separada. Caso contrário, use o HTML anterior e o JSON já exportado. O ZIP anterior e \`out/revisao-editorial-v1.html\` foram preservados para consultar a revisão antiga. Pacote atualizado: \`out/revisao-editorial-meta-aprovacao-v2.zip\`. Não colocar HTML/anotações em public; contém gabaritos e identificação do revisor.
 
-Próximo passo: corrigir os pontos editoriais e obter revisão humana identificada. Publicação das questões/modelos e ativação comercial continuam etapas separadas, com as pendências em [PRONTIDAO-LANCAMENTO.md](PRONTIDAO-LANCAMENTO.md).
+Próximo passo: revisão humana identificada de todas as questões e dos seis modelos. Ainda há pouca variedade por matéria; a quantidade não valida uma promessa de estudo ilimitado. Nenhum modelo/conteúdo publicado ou venda liberada. Demais condições em [PRONTIDAO-LANCAMENTO.md](PRONTIDAO-LANCAMENTO.md).
 `;
 mkdirSync(new URL("out/", root), { recursive: true });
 for (const [relative, expected] of [["out/revisao-editorial.html", html], ["docs/CONFERENCIA-EDITORIAL.md", report]]) {
@@ -52,4 +44,4 @@ for (const [relative, expected] of [["out/revisao-editorial.html", html], ["docs
   if (process.argv.includes("--check")) assert.equal(readFileSync(file, "utf8").replaceAll("\r\n", "\n"), expected, `${relative} divergente`);
   else writeFileSync(file, expected);
 }
-console.log("Revisão local das cem questões preparada; nenhuma aprovação ou publicação no banco.");
+console.log("Revisão local das cem questões atualizada; nenhuma aprovação ou publicação no banco.");

@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Etapa 41 — correção versionada de rascunhos
+
+Corrigir os pontos encontrados na etapa 40 em uma carga explícita, separada das inserções e migrations. Registrar antes/depois por ID, atualizar alternativas e gabaritos juntos e elevar os noventa registros afetados para versão 2. Exigir correspondência exata com conteúdo anterior/corrigido e ausência de uso; recusar revisões humanas, publicação, divergências e gabaritos ausentes. Validar todos os registros antes das alterações e preservar timestamps na repetição. Manter questões iniciais, modelos e tentativas existentes, com hashes conferidos na carga real. Anotações da ferramenta pertencem ao catálogo revisado: preservar HTML/ZIP anteriores e permitir exportação separada quando o armazenamento antigo estiver disponível, sem transferir marcações como aprovação das correções. Revisão humana identificada permanece necessária. Guia CORRECOES-ETAPA-41.md.
+
 ## Etapa 40 — revisão local, separada de publicação
 
 Reunir as cem questões em HTML interno gerado, fora de public e sem imports na aplicação, a partir das fontes existentes. Consulta vinculada somente leitura verifica correspondência com os rascunhos do banco. Marcação de conferência exige revisor, usa armazenamento do navegador e é desfeita ao editar a nota; exportação/importação validam IDs, versões e hash do catálogo, recusando arquivos incompatíveis sem sobrescrever notas. Não atribuir revisão humana ao usuário, mudar status editorial ou disponibilizar gabaritos por essas marcações. Conteúdo/limites comerciais mantidos em rascunho; apontamentos sobre padrões de letras e qualidade dos distratores exigem correção separada. Guia CONFERENCIA-EDITORIAL.md.

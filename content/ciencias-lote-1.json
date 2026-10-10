@@ -1,20 +1,296 @@
 [
-  {"topic":"Fotossíntese","difficulty":"easy","statement":"Na fotossíntese realizada por uma planta verde, qual é a principal fonte de energia usada para produzir matéria orgânica?","options":["A luz do Sol","O oxigênio do solo","O calor liberado pelos animais","O sal da água","A matéria orgânica pronta das raízes"],"correctAnswer":"A","explanation":"A planta utiliza energia luminosa para produzir matéria orgânica a partir de substâncias como água e dióxido de carbono. A luz é fonte de energia, não um nutriente retirado do solo.","sourceKeys":["photosynthesis"]},
-  {"topic":"Cloroplastos","difficulty":"medium","statement":"Em uma célula de folha de uma planta verde, qual organela está diretamente relacionada à realização da fotossíntese?","options":["Lisossomo","Mitocôndria","Ribossomo","Cloroplasto","Núcleo"],"correctAnswer":"D","explanation":"Em plantas, a fotossíntese ocorre nos cloroplastos, que contêm pigmentos capazes de captar luz. A mitocôndria participa de processos da respiração celular.","sourceKeys":["photosynthesis"]},
-  {"topic":"Decomposição","difficulty":"easy","statement":"Folhas caídas em uma floresta são degradadas por fungos e bactérias decompositoras. Qual é a importância desse processo para o ambiente?","options":["Eliminar definitivamente os elementos químicos","Devolver nutrientes à circulação no ecossistema","Impedir qualquer crescimento de plantas","Transformar toda a matéria em luz","Parar a circulação de água"],"correctAnswer":"B","explanation":"A decomposição transforma a matéria orgânica e contribui para devolver nutrientes ao ambiente. Ela participa da ciclagem da matéria, sem fazer os elementos químicos desaparecerem.","sourceKeys":["ecosystems"]},
-  {"topic":"Respiração celular","difficulty":"medium","statement":"Nas células animais, qual organela participa de etapas da respiração celular aeróbia associadas à produção de ATP?","options":["Cloroplasto","Parede celular","Vacúolo central vegetal","Cromossomo","Mitocôndria"],"correctAnswer":"E","explanation":"A mitocôndria participa de etapas da respiração celular aeróbia que produzem ATP, uma molécula usada nas atividades celulares. Nem todas as etapas da respiração ocorrem dentro dessa organela.","sourceKeys":["respiration"]},
-  {"topic":"Membrana celular","difficulty":"easy","statement":"Uma célula precisa trocar substâncias com seu meio e controlar parte do que entra e sai. Qual estrutura atua como esse limite seletivo da célula?","options":["Cromossomo","Ribossomo","Membrana plasmática","Nucléolo","Centríolo"],"correctAnswer":"C","explanation":"A membrana plasmática delimita a célula e apresenta permeabilidade seletiva. Ela participa do controle das trocas de substâncias entre o interior celular e o ambiente.","sourceKeys":[]},
-  {"topic":"Níveis tróficos","difficulty":"medium","statement":"Considere a cadeia: algas → pequenos crustáceos → peixes → garças. As setas apontam do alimento para quem o consome. Qual componente é consumidor secundário nessa cadeia?","options":["Peixes","Algas","Garças","Pequenos crustáceos","Todos os componentes"],"correctAnswer":"A","explanation":"Os crustáceos consomem as algas produtoras e são consumidores primários. Os peixes que comem esses crustáceos são consumidores secundários. As garças ocupam o nível seguinte na cadeia apresentada.","sourceKeys":["ecosystems"]},
-  {"topic":"Evaporação","difficulty":"easy","statement":"Uma pequena poça diminui ao longo de uma tarde sem chuva, sem escoar e sem infiltrar no solo. A água passa gradualmente para a atmosfera. Qual processo explica essa passagem?","options":["Solidificação","Fusão","Condensação","Evaporação","Precipitação"],"correctAnswer":"D","explanation":"Na evaporação, a água líquida passa ao estado gasoso. Esse processo pode acontecer na superfície da água sem que ela esteja fervendo.","sourceKeys":["evaporation"]},
-  {"topic":"Condensação","difficulty":"easy","statement":"Gotas aparecem na parte externa de um copo fechado com água gelada, colocado em ambiente úmido. Considerando que o copo não vaza, de onde vêm essas gotas?","options":["Do vidro, que se transforma em água","Do vapor de água do ar que se condensa","Do gelo que atravessa o vidro","Da criação de água sem matéria anterior","Do sal dissolvido que sai do copo"],"correctAnswer":"B","explanation":"O vapor de água presente no ar perde energia ao entrar em contato com a superfície fria e passa ao estado líquido. Essa condensação forma as gotas externas.","sourceKeys":["evaporation"]},
-  {"topic":"Separação de misturas","difficulty":"easy","statement":"Uma mistura contém água e areia insolúvel, cujos grãos são maiores que os poros de um filtro. Qual procedimento pode reter a areia e deixar a água atravessar?","options":["Dissolução completa da areia","Fusão do recipiente","Magnetização da água","Congelamento sem separação","Filtração"],"correctAnswer":"E","explanation":"O filtro retém os grãos sólidos maiores que seus poros, enquanto a água atravessa. A filtração separa, nesse caso, um sólido insolúvel de um líquido; não torna a água necessariamente potável.","sourceKeys":[]},
-  {"topic":"Soluções","difficulty":"easy","statement":"Uma pequena quantidade de sal se dissolve completamente em água, formando uma mistura uniforme. Nessa solução, como o sal é classificado?","options":["Solvente","Filtro","Soluto","Precipitado sólido presente","Recipiente"],"correctAnswer":"C","explanation":"O sal é o soluto, isto é, a substância dissolvida. A água atua como solvente. A dissolução completa nas condições descritas resulta em uma solução uniforme.","sourceKeys":["mixtures"]},
-  {"topic":"Densidade","difficulty":"medium","statement":"Um bloco homogêneo tem massa de 200 g e volume de 100 cm³. Usando densidade = massa ÷ volume, qual é sua densidade?","options":["2 g/cm³","0,5 g/cm³","20 g/cm³","100 g/cm³","300 g/cm³"],"correctAnswer":"A","explanation":"A densidade é 200 ÷ 100 = 2 g/cm³. A unidade relaciona a massa em gramas ao volume em centímetros cúbicos.","sourceKeys":[]},
-  {"topic":"Força e aceleração","difficulty":"medium","statement":"Uma força resultante de 20 N atua sobre um carrinho de massa 4 kg. Usando F = m × a, qual é a aceleração do carrinho?","options":["80 m/s²","16 m/s²","4 m/s²","5 m/s²","0,2 m/s²"],"correctAnswer":"D","explanation":"Pela relação fornecida, a = F ÷ m = 20 ÷ 4 = 5 m/s². O valor usado é o da força resultante, que já reúne as forças que atuam no carrinho.","sourceKeys":[]},
-  {"topic":"Velocidade média","difficulty":"medium","statement":"Um veículo percorre 24 km em 2 horas. Qual é sua velocidade média, considerando todo esse intervalo?","options":["48 km/h","12 km/h","26 km/h","22 km/h","6 km/h"],"correctAnswer":"B","explanation":"A velocidade média é a distância percorrida dividida pelo tempo total: 24 ÷ 2 = 12 km/h. Isso não exige que a velocidade tenha sido constante durante o percurso.","sourceKeys":[]},
-  {"topic":"Condução térmica","difficulty":"medium","statement":"Uma ponta de uma colher de metal fica em contato com um líquido quente. Depois de algum tempo, a outra ponta também aquece. Qual mecanismo explica principalmente a transferência de energia ao longo do metal?","options":["Evaporação do metal","Fotossíntese","Solidificação do ar","Convecção do metal sólido","Condução térmica"],"correctAnswer":"E","explanation":"A condução transfere energia térmica através do material, da região mais quente para a mais fria, sem exigir deslocamento do metal como um todo.","sourceKeys":["heat"]},
-  {"topic":"Circuito elétrico simples","difficulty":"medium","statement":"Um circuito simples tem pilha carregada, fios, lâmpada compatível e interruptor, todos em bom estado. O interruptor aberto interrompe o caminho elétrico. O que deve ocorrer para a lâmpada acender nesse circuito?","options":["Retirar a pilha","Cortar outro fio","Fechar o interruptor e completar o caminho elétrico","Separar os dois terminais da lâmpada dos fios","Retirar a lâmpada do circuito"],"correctAnswer":"C","explanation":"Um caminho elétrico completo permite a circulação de corrente no circuito descrito. Fechar o interruptor restabelece esse caminho; abrir ou cortar conexões o interrompe.","sourceKeys":["circuits"]},
-  {"topic":"Luz da Lua","difficulty":"easy","statement":"Ao observar a Lua iluminada no céu, qual é a principal origem da luz que vemos em sua superfície?","options":["Luz do Sol refletida pela Lua","Luz produzida por combustão na Lua","Luz emitida por oceanos lunares","Luz gerada pelo som na atmosfera terrestre","Luz produzida pela sombra da Terra"],"correctAnswer":"A","explanation":"A Lua não produz luz visível como uma estrela. Sua superfície reflete parte da luz solar, e a porção iluminada que observamos varia conforme a posição relativa entre Sol, Terra e Lua.","sourceKeys":["moon"]},
-  {"topic":"Estações do ano","difficulty":"medium","statement":"Qual combinação explica principalmente as estações do ano na Terra?","options":["A Lua produzir calor e a Terra parar de girar","O Sol ficar apagado durante metade do ano","A mudança diária de distância entre cidades","A inclinação do eixo terrestre e a translação ao redor do Sol","A existência de nuvens apenas no inverno"],"correctAnswer":"D","explanation":"Com o eixo inclinado, a translação faz variar a incidência de luz e a duração dos dias em cada hemisfério ao longo do ano. A causa principal não é simplesmente a Terra estar mais perto ou mais longe do Sol.","sourceKeys":["seasons"]},
-  {"topic":"Controle de variáveis","difficulty":"medium","statement":"Uma turma quer investigar o efeito da quantidade de água no crescimento de plantas. Usa plantas semelhantes, vasos e solo iguais. Qual planejamento permite comparar principalmente o efeito da água?","options":["Variar água, luz e tipo de solo ao mesmo tempo","Variar a água e manter semelhantes as demais condições","Trocar a espécie de planta em cada quantidade de água","Colocar cada vaso em uma temperatura diferente","Mudar o solo e manter a quantidade de água igual"],"correctAnswer":"B","explanation":"Variar a quantidade de água e manter as demais condições semelhantes reduz a influência de outros fatores na comparação. Repetições e registros também ajudam; um único resultado não prova uma regra universal.","sourceKeys":[]}
+  {
+    "topic": "Fotossíntese",
+    "difficulty": "easy",
+    "statement": "Na fotossíntese realizada por uma planta verde, qual é a principal fonte de energia usada para produzir matéria orgânica?",
+    "options": [
+      "A matéria orgânica pronta das raízes",
+      "O calor liberado pelos animais",
+      "O sal da água",
+      "O oxigênio do solo",
+      "A luz do Sol"
+    ],
+    "correctAnswer": "E",
+    "explanation": "A planta utiliza energia luminosa para produzir matéria orgânica a partir de substâncias como água e dióxido de carbono. A luz é fonte de energia, não um nutriente retirado do solo.",
+    "sourceKeys": [
+      "photosynthesis"
+    ]
+  },
+  {
+    "topic": "Cloroplastos",
+    "difficulty": "medium",
+    "statement": "Em uma célula de folha de uma planta verde, qual organela está diretamente relacionada à realização da fotossíntese?",
+    "options": [
+      "Cloroplasto",
+      "Núcleo",
+      "Lisossomo",
+      "Mitocôndria",
+      "Ribossomo"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Em plantas, a fotossíntese ocorre nos cloroplastos, que contêm pigmentos capazes de captar luz. A mitocôndria participa de processos da respiração celular.",
+    "sourceKeys": [
+      "photosynthesis"
+    ]
+  },
+  {
+    "topic": "Decomposição",
+    "difficulty": "easy",
+    "statement": "Folhas caídas em uma floresta são degradadas por fungos e bactérias decompositoras. Qual é a importância desse processo para o ambiente?",
+    "options": [
+      "Impedir qualquer crescimento de plantas",
+      "Devolver nutrientes à circulação no ecossistema",
+      "Transformar toda a matéria em luz",
+      "Eliminar definitivamente os elementos químicos",
+      "Parar a circulação de água"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A decomposição transforma a matéria orgânica e contribui para devolver nutrientes ao ambiente. Ela participa da ciclagem da matéria, sem fazer os elementos químicos desaparecerem.",
+    "sourceKeys": [
+      "ecosystems"
+    ]
+  },
+  {
+    "topic": "Respiração celular",
+    "difficulty": "medium",
+    "statement": "Nas células animais, qual organela participa de etapas da respiração celular aeróbia associadas à produção de ATP?",
+    "options": [
+      "Cromossomo",
+      "Vacúolo central vegetal",
+      "Mitocôndria",
+      "Cloroplasto",
+      "Parede celular"
+    ],
+    "correctAnswer": "C",
+    "explanation": "A mitocôndria participa de etapas da respiração celular aeróbia que produzem ATP, uma molécula usada nas atividades celulares. Nem todas as etapas da respiração ocorrem dentro dessa organela.",
+    "sourceKeys": [
+      "respiration"
+    ]
+  },
+  {
+    "topic": "Membrana celular",
+    "difficulty": "easy",
+    "statement": "Uma célula precisa trocar substâncias com seu meio e controlar parte do que entra e sai. Qual estrutura atua como esse limite seletivo da célula?",
+    "options": [
+      "Membrana plasmática",
+      "Ribossomo",
+      "Nucléolo",
+      "Cromossomo",
+      "Centríolo"
+    ],
+    "correctAnswer": "A",
+    "explanation": "A membrana plasmática delimita a célula e apresenta permeabilidade seletiva. Ela participa do controle das trocas de substâncias entre o interior celular e o ambiente.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Níveis tróficos",
+    "difficulty": "medium",
+    "statement": "Considere a cadeia: algas → pequenos crustáceos → peixes → garças. As setas apontam do alimento para quem o consome. Qual componente é consumidor secundário nessa cadeia?",
+    "options": [
+      "Algas",
+      "Peixes",
+      "Garças",
+      "Pequenos crustáceos",
+      "Todos os componentes"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Os crustáceos consomem as algas produtoras e são consumidores primários. Os peixes que comem esses crustáceos são consumidores secundários. As garças ocupam o nível seguinte na cadeia apresentada.",
+    "sourceKeys": [
+      "ecosystems"
+    ]
+  },
+  {
+    "topic": "Evaporação",
+    "difficulty": "easy",
+    "statement": "Uma pequena poça diminui ao longo de uma tarde sem chuva, sem escoar e sem infiltrar no solo. A água passa gradualmente para a atmosfera. Qual processo explica essa passagem?",
+    "options": [
+      "Fusão",
+      "Precipitação",
+      "Condensação",
+      "Solidificação",
+      "Evaporação"
+    ],
+    "correctAnswer": "E",
+    "explanation": "Na evaporação, a água líquida passa ao estado gasoso. Esse processo pode acontecer na superfície da água sem que ela esteja fervendo.",
+    "sourceKeys": [
+      "evaporation"
+    ]
+  },
+  {
+    "topic": "Condensação",
+    "difficulty": "easy",
+    "statement": "Gotas aparecem na parte externa de um copo fechado com água gelada, colocado em ambiente úmido. Considerando que o copo não vaza, de onde vêm essas gotas?",
+    "options": [
+      "Da criação de água sem matéria anterior",
+      "Do vidro, que se transforma em água",
+      "Do sal dissolvido que sai do copo",
+      "Do vapor de água do ar que se condensa",
+      "Do gelo que atravessa o vidro"
+    ],
+    "correctAnswer": "D",
+    "explanation": "O vapor de água presente no ar perde energia ao entrar em contato com a superfície fria e passa ao estado líquido. Essa condensação forma as gotas externas.",
+    "sourceKeys": [
+      "evaporation"
+    ]
+  },
+  {
+    "topic": "Separação de misturas",
+    "difficulty": "easy",
+    "statement": "Uma mistura contém água e areia insolúvel, cujos grãos são maiores que os poros de um filtro. Qual procedimento pode reter a areia e deixar a água atravessar?",
+    "options": [
+      "Filtração",
+      "Dissolução completa da areia",
+      "Fusão do recipiente",
+      "Magnetização da água",
+      "Congelamento sem separação"
+    ],
+    "correctAnswer": "A",
+    "explanation": "O filtro retém os grãos sólidos maiores que seus poros, enquanto a água atravessa. A filtração separa, nesse caso, um sólido insolúvel de um líquido; não torna a água necessariamente potável.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Soluções",
+    "difficulty": "easy",
+    "statement": "Uma pequena quantidade de sal se dissolve completamente em água, formando uma mistura uniforme. Nessa solução, como o sal é classificado?",
+    "options": [
+      "Precipitado sólido presente",
+      "Filtro",
+      "Recipiente",
+      "Soluto",
+      "Solvente"
+    ],
+    "correctAnswer": "D",
+    "explanation": "O sal é o soluto, isto é, a substância dissolvida. A água atua como solvente. A dissolução completa nas condições descritas resulta em uma solução uniforme.",
+    "sourceKeys": [
+      "mixtures"
+    ]
+  },
+  {
+    "topic": "Densidade",
+    "difficulty": "medium",
+    "statement": "Um bloco homogêneo tem massa de 200 g e volume de 100 cm³. Usando densidade = massa ÷ volume, qual é sua densidade?",
+    "options": [
+      "100 g/cm³",
+      "20 g/cm³",
+      "0,5 g/cm³",
+      "300 g/cm³",
+      "2 g/cm³"
+    ],
+    "correctAnswer": "E",
+    "explanation": "A densidade é 200 ÷ 100 = 2 g/cm³. A unidade relaciona a massa em gramas ao volume em centímetros cúbicos.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Força e aceleração",
+    "difficulty": "medium",
+    "statement": "Uma força resultante de 20 N atua sobre um carrinho de massa 4 kg. Usando F = m × a, qual é a aceleração do carrinho?",
+    "options": [
+      "5 m/s²",
+      "16 m/s²",
+      "80 m/s²",
+      "0,2 m/s²",
+      "4 m/s²"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Pela relação fornecida, a = F ÷ m = 20 ÷ 4 = 5 m/s². O valor usado é o da força resultante, que já reúne as forças que atuam no carrinho.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Velocidade média",
+    "difficulty": "medium",
+    "statement": "Um veículo percorre 24 km em 2 horas. Qual é sua velocidade média, considerando todo esse intervalo?",
+    "options": [
+      "48 km/h",
+      "22 km/h",
+      "6 km/h",
+      "12 km/h",
+      "26 km/h"
+    ],
+    "correctAnswer": "D",
+    "explanation": "A velocidade média é a distância percorrida dividida pelo tempo total: 24 ÷ 2 = 12 km/h. Isso não exige que a velocidade tenha sido constante durante o percurso.",
+    "sourceKeys": []
+  },
+  {
+    "topic": "Condução térmica",
+    "difficulty": "medium",
+    "statement": "Uma ponta de uma colher de metal fica em contato com um líquido quente. Depois de algum tempo, a outra ponta também aquece. Qual mecanismo explica principalmente a transferência de energia ao longo do metal?",
+    "options": [
+      "Convecção térmica",
+      "Condução térmica",
+      "Radiação térmica",
+      "Dilatação térmica",
+      "Evaporação do líquido"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A condução transfere energia térmica através do material, da região mais quente para a mais fria, sem exigir deslocamento do metal como um todo.",
+    "sourceKeys": [
+      "heat"
+    ]
+  },
+  {
+    "topic": "Circuito elétrico simples",
+    "difficulty": "medium",
+    "statement": "Um circuito simples tem pilha carregada, fios, lâmpada compatível e interruptor, todos em bom estado. O interruptor aberto interrompe o caminho elétrico. O que deve ocorrer para a lâmpada acender nesse circuito?",
+    "options": [
+      "Cortar outro fio",
+      "Separar os dois terminais da lâmpada dos fios",
+      "Retirar a pilha",
+      "Retirar a lâmpada do circuito",
+      "Fechar o interruptor e completar o caminho elétrico"
+    ],
+    "correctAnswer": "E",
+    "explanation": "Um caminho elétrico completo permite a circulação de corrente no circuito descrito. Fechar o interruptor restabelece esse caminho; abrir ou cortar conexões o interrompe.",
+    "sourceKeys": [
+      "circuits"
+    ]
+  },
+  {
+    "topic": "Luz da Lua",
+    "difficulty": "easy",
+    "statement": "Ao observar a Lua iluminada no céu, qual é a principal origem da luz que vemos em sua superfície?",
+    "options": [
+      "Luz produzida pela sombra da Terra",
+      "Luz produzida por combustão na Lua",
+      "Luz gerada pelo som na atmosfera terrestre",
+      "Luz do Sol refletida pela Lua",
+      "Luz emitida por oceanos lunares"
+    ],
+    "correctAnswer": "D",
+    "explanation": "A Lua não produz luz visível como uma estrela. Sua superfície reflete parte da luz solar, e a porção iluminada que observamos varia conforme a posição relativa entre Sol, Terra e Lua.",
+    "sourceKeys": [
+      "moon"
+    ]
+  },
+  {
+    "topic": "Estações do ano",
+    "difficulty": "medium",
+    "statement": "Qual combinação explica principalmente as estações do ano na Terra?",
+    "options": [
+      "As fases da Lua e a duração do ciclo lunar",
+      "A variação da distância entre a Terra e o Sol ao longo da órbita",
+      "A inclinação do eixo terrestre e a translação ao redor do Sol",
+      "A variação da atividade solar ao longo de seu ciclo",
+      "A rotação da Terra ao longo de cada dia"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Com o eixo inclinado, a translação faz variar a incidência de luz e a duração dos dias em cada hemisfério ao longo do ano. A causa principal não é simplesmente a Terra estar mais perto ou mais longe do Sol.",
+    "sourceKeys": [
+      "seasons"
+    ]
+  },
+  {
+    "topic": "Controle de variáveis",
+    "difficulty": "medium",
+    "statement": "Uma turma quer investigar o efeito da quantidade de água no crescimento de plantas. Usa plantas semelhantes, vasos e solo iguais. Qual planejamento permite comparar principalmente o efeito da água?",
+    "options": [
+      "Variar água, luz e tipo de solo ao mesmo tempo",
+      "Trocar a espécie de planta em cada quantidade de água",
+      "Mudar o solo e manter a quantidade de água igual",
+      "Colocar cada vaso em uma temperatura diferente",
+      "Variar a água e manter semelhantes as demais condições"
+    ],
+    "correctAnswer": "E",
+    "explanation": "Variar a quantidade de água e manter as demais condições semelhantes reduz a influência de outros fatores na comparação. Repetições e registros também ajudam; um único resultado não prova uma regra universal.",
+    "sourceKeys": []
+  }
 ]

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { contentVersion, revision } from "./content-versions.mjs";
 
 export const root = new URL("../../", import.meta.url);
 export const subjects = [
@@ -36,7 +37,7 @@ export function loadCatalog() {
     }) }))].map((q, i) => {
       const { sourceKeys: _sourceKeys, ...data } = q;
       void _sourceKeys;
-      const row = { ...data, subject, subjectName: name, label: label + String(i + 1).padStart(2, "0"), status: "draft", version: 1, targetExam: "both" };
+      const row = { ...data, subject, subjectName: name, label: label + String(i + 1).padStart(2, "0"), status: "draft", version: contentVersion(data.id), targetExam: "both" };
       assert.match(row.id, /^[a-f0-9-]{36}$/);
       assert.equal(row.options.length, 5);
       assert.equal(new Set(row.options).size, 5);
@@ -47,7 +48,7 @@ export function loadCatalog() {
   });
   assert.equal(new Set(questions.map(q => q.id)).size, 100);
   assert.equal(new Set(questions.map(q => q.statement.trim())).size, 100);
-  return { schema: 1, questions, catalogHash: hash(questions) };
+  return { schema: 1, questions, catalogHash: hash(questions), previousCatalogHash: revision.previousCatalogHash ?? null };
 }
 
 export function summarize(catalog) {

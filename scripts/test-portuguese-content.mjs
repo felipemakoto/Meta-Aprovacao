@@ -4,6 +4,7 @@ import { spawnSync } from "node:child_process";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import { contentVersion } from "./lib/content-versions.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const require = createRequire(import.meta.url);
@@ -19,7 +20,7 @@ set local statement_timeout = '15s';
 ${seed}
 do $$ begin
  if (select count(*) from public.questions where id in (${batch})) <> 18 then raise exception 'Lote incompleto'; end if;
- if (select count(*) from public.questions where id in (${batch}) and subject='portugues' and target_exam='both' and version=1 and status='draft') <> 18 then raise exception 'Metadados inesperados'; end if;
+ if (select count(*) from public.questions where id in (${batch}) and subject='portugues' and target_exam='both' and version=${contentVersion("d1380000-0000-4000-8000-000000000001")} and status='draft') <> 18 then raise exception 'Metadados inesperados'; end if;
  if (select count(*) from public.question_answers where question_id in (${batch})) <> 18 then raise exception 'Gabaritos incompletos'; end if;
  if exists (select 1 from public.questions q where id in (${batch}) and (select count(distinct btrim(o)) from unnest(array[q.option_a,q.option_b,q.option_c,q.option_d,q.option_e]) o) <> 5) then raise exception 'Alternativas repetidas'; end if;
  if not exists(select 1 from private.simulations where id='d1381000-0000-4000-8000-000000000001' and subject='portugues' and question_count=20 and not published and not free_access) then raise exception 'Modelo inesperado'; end if;

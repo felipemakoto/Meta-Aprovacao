@@ -10,14 +10,15 @@
 <main>
 <header><small>Meta Aprovação · Material interno</small><h1>Revisão das questões</h1>
 <p>Leia, confira a resposta e registre ajustes. As marcações ficam neste navegador e não publicam questões no site.</p>
-<p class="muted">Antes de publicar: variar a sequência de letras dos gabaritos, rever P04 e melhorar alternativas incorretas muito fáceis de eliminar.</p></header>
+<p class="muted">Catálogo atualizado: alternativas reorganizadas e ajustes em P04, C16, C19 e H09. A revisão humana de todas as questões continua pendente.</p>
+<p class="muted">Anotações da versão anterior devem ser consultadas no arquivo anterior; não são importadas automaticamente nesta revisão.</p></header>
 <section class="tools" aria-label="Filtros e revisor">
 <label>Matéria<select id="subject"><option value="">Todas as matérias</option></select></label>
 <label>Marcação<select id="filter"><option value="">Todas</option><option value="pending">Pendentes</option><option value="correction">Com ajustes</option><option value="checked">Conferidas neste arquivo</option></select></label>
 <label class="wide">Buscar por número, tema ou texto<input id="search" type="search" placeholder="Ex.: M03, fotossíntese, mapas"></label>
 <label class="wide">Nome do revisor<input id="reviewer" maxlength="120" autocomplete="off" placeholder="Preencha antes de marcar uma questão como conferida"></label>
 </section>
-<div class="actions"><button id="export">Exportar anotações</button><button class="secondary" id="import">Importar anotações</button><button class="secondary" id="print">Imprimir seleção</button><input id="file" type="file" accept=".json,application/json" hidden></div>
+<div class="actions"><button id="export">Exportar anotações</button><button class="secondary" id="import">Importar anotações</button><button class="secondary" id="print">Imprimir seleção</button><button class="secondary" id="export-old" hidden>Exportar anotações anteriores</button><input id="file" type="file" accept=".json,application/json" hidden></div>
 <p id="message" role="status" aria-live="polite"></p>
 <label class="no-print"><input id="answers" type="checkbox">Mostrar todas as respostas</label>
 <p id="count" aria-live="polite"></p><div id="questions"></div><p id="empty" hidden>Nenhuma questão encontrada. Ajuste os filtros.</p>
@@ -32,10 +33,10 @@ const key="meta-editorial-"+catalog.catalogHash;
 const $=id=>document.getElementById(id);
 let entries={},reviewer="";
 const states=["pending","correction","checked"];
-function validate(data){
- if(!data||data.schema!==1||data.catalogHash!==catalog.catalogHash||typeof data.reviewer!=="string"||data.reviewer.length>120||!Array.isArray(data.entries)||data.entries.length>100)throw Error("Catálogo diferente ou arquivo inválido. Nenhuma anotação foi substituída.");
+function validate(data,legacy=false){
+ if(!data||data.schema!==1||data.catalogHash!==(legacy?catalog.previousCatalogHash:catalog.catalogHash)||typeof data.reviewer!=="string"||data.reviewer.length>120||!Array.isArray(data.entries)||data.entries.length>100)throw Error("Catálogo diferente ou arquivo inválido. Nenhuma anotação foi substituída.");
  const ids=new Set();
- for(const e of data.entries){const q=byId.get(e.id);if(!q||ids.has(e.id)||e.version!==q.version||!states.includes(e.status)||typeof e.note!=="string"||e.note.length>8000||typeof e.by!=="string"||e.by.length>120||typeof e.at!=="string"||(e.status==="checked"&&(!e.by.trim()||!/^\d{4}-\d{2}-\d{2}T/.test(e.at)||!Number.isFinite(Date.parse(e.at)))))throw Error("Anotações inválidas. Nenhuma anotação foi substituída.");ids.add(e.id);}
+ for(const e of data.entries){const q=byId.get(e.id);if(!q||ids.has(e.id)||e.version!==(legacy?1:q.version)||!states.includes(e.status)||typeof e.note!=="string"||e.note.length>8000||typeof e.by!=="string"||e.by.length>120||typeof e.at!=="string"||(e.status==="checked"&&(!e.by.trim()||!/^\d{4}-\d{2}-\d{2}T/.test(e.at)||!Number.isFinite(Date.parse(e.at)))))throw Error("Anotações inválidas. Nenhuma anotação foi substituída.");ids.add(e.id);}
  return data;
 }
 function packageNotes(){return {schema:1,catalogHash:catalog.catalogHash,exportedAt:new Date().toISOString(),reviewer,entries:Object.values(entries)};}
@@ -65,7 +66,11 @@ function filter(){let visible=0;const search=$("search").value.trim().toLocaleLo
 for(const id of ["subject","filter","search"])$(id).addEventListener("input",filter);
 $("reviewer").addEventListener("input",()=>{reviewer=$("reviewer").value;save();});
 $("answers").addEventListener("change",()=>{for(const d of document.querySelectorAll("article details"))d.open=$("answers").checked;});
-$("export").addEventListener("click",()=>{const blob=new Blob([JSON.stringify(packageNotes(),null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const link=node("a");link.href=url;link.download="revisao-meta-aprovacao.json";link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify("Anotações exportadas. Guarde o arquivo para continuar a revisão.");});
+function exportNotes(data,filename){const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const link=node("a");link.href=url;link.download=filename;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$("export").addEventListener("click",()=>{exportNotes(packageNotes(),"revisao-meta-aprovacao.json");notify("Anotações exportadas. Guarde o arquivo para continuar a revisão.");});
+let legacyNotes=null;
+try{if(catalog.previousCatalogHash){const raw=localStorage.getItem("meta-editorial-"+catalog.previousCatalogHash);if(raw){const data=validate(JSON.parse(raw),true);if(data.entries.length||data.reviewer.trim()){legacyNotes=data;$("export-old").hidden=false;}}}}catch{/* Não alterar dados antigos nem importar silenciosamente. */}
+$("export-old").addEventListener("click",()=>{if(legacyNotes){exportNotes(legacyNotes,"revisao-meta-aprovacao-anterior.json");notify("Anotações anteriores exportadas para consulta no catálogo anterior. A revisão atual permanece separada.");}});
 $("import").addEventListener("click",()=>$("file").click());
 $("file").addEventListener("change",async()=>{try{const file=$("file").files[0];if(!file)return;if(file.size>1200000)throw Error("Arquivo muito grande. Nenhuma anotação foi substituída.");const data=validate(JSON.parse(await file.text()));const existing=Object.keys(entries).length>0||reviewer.trim();if(existing&&!confirm("A importação substituirá as anotações deste navegador. Exporte antes se quiser guardar as atuais. Continuar?"))return;entries=Object.fromEntries(data.entries.map(e=>[e.id,e]));reviewer=data.reviewer;$("reviewer").value=reviewer;render();save();}catch(error){notify(error instanceof SyntaxError?"Arquivo JSON inválido. Nenhuma anotação foi substituída.":error.message);}finally{$("file").value="";}});
 $("print").addEventListener("click",()=>window.print());
