@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Etapa 40 — revisão local, separada de publicação
+
+Reunir as cem questões em HTML interno gerado, fora de public e sem imports na aplicação, a partir das fontes existentes. Consulta vinculada somente leitura verifica correspondência com os rascunhos do banco. Marcação de conferência exige revisor, usa armazenamento do navegador e é desfeita ao editar a nota; exportação/importação validam IDs, versões e hash do catálogo, recusando arquivos incompatíveis sem sobrescrever notas. Não atribuir revisão humana ao usuário, mudar status editorial ou disponibilizar gabaritos por essas marcações. Conteúdo/limites comerciais mantidos em rascunho; apontamentos sobre padrões de letras e qualidade dos distratores exigem correção separada. Guia CONFERENCIA-EDITORIAL.md.
+
 ## Etapa 39 — lotes de Ciências, História e Geografia
 
 Completar vinte rascunhos por matéria com dezoito questões adicionais e um modelo Premium privado para cada uma das três matérias. Questões originais auxiliadas por IA, apoiadas por referências institucionais com tipo de acesso documentado; exemplos fictícios identificados. Quantidade e conferência do assistente não aprovam conteúdo, dificuldade ou cobertura de edital. JSONs geram SQL/revisões internas; IDs estáveis e conflitos preservados, sem reparo silencioso de gabaritos. Cada lote é uma instrução atômica; carga conjunta aplicada dentro de BEGIN/COMMIT, com hash dos registros anteriores preservado. Ensaio transacional com rollback verifica completude e preservação de alterações editoriais/modelos e ausências na reexecução. Cem questões e seis modelos permanecem não publicados. Próxima etapa é revisão humana identificada; configuração/contrato comercial continuam pendentes. Guia CONTEUDO-ETAPA-39.md.

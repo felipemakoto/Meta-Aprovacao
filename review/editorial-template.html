@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisão interna · Meta Aprovação</title>
+<style>
+[hidden]{display:none!important}
+:root{color-scheme:light;--green:#194c39;--ink:#20372e;--muted:#596b62;--line:#cbd5cd}*{box-sizing:border-box}body{margin:0;background:#f8f7f0;color:var(--ink);font:16px/1.55 system-ui,sans-serif}main{max-width:820px;margin:auto;padding:32px 24px}h1{font:clamp(30px,6vw,44px)/1.15 Georgia,serif;margin:20px 0 14px}h2{font:26px/1.2 Georgia,serif;margin:0 0 12px}p{margin:10px 0}header{border-bottom:1px solid var(--line);padding-bottom:24px}.muted,small{color:var(--muted)}.tools{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}label{display:block;font-size:14px}.wide{grid-column:1/-1}input,select,textarea,button{font:inherit;max-width:100%}input,select,textarea{display:block;width:100%;margin:5px 0;padding:10px;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:4px}textarea{min-height:95px;resize:vertical}button{background:var(--green);color:white;border:1px solid var(--green);border-radius:4px;padding:10px 15px;cursor:pointer}.secondary{background:transparent;color:var(--green)}.actions{display:flex;flex-wrap:wrap;gap:10px}.actions input{width:100%;margin:0}input[type=checkbox]{display:inline;width:auto;margin:0 7px 0 0}.question{padding:28px 0;border-top:1px solid var(--line)}.question[hidden]{display:none}.statement{white-space:pre-wrap}.options{list-style:none;padding:0}.options li{margin:8px 0;display:flex;gap:12px}.options strong{min-width:22px}details{margin:20px 0}summary{color:var(--green);cursor:pointer;text-decoration:underline;text-underline-offset:4px}.answer{padding:12px 0}.refs{font-size:14px;overflow-wrap:anywhere}.reviewer-line{font-size:13px;color:var(--muted)}a{color:var(--green)}:focus-visible{outline:3px solid #567f64;outline-offset:3px}#message{min-height:24px;color:var(--green);overflow-wrap:anywhere}#count{margin:20px 0;font-size:14px}#empty{padding:20px 0}footer{padding:24px 0;border-top:1px solid var(--line);font-size:14px}@media(max-width:400px){main{padding:22px 16px}.tools{grid-template-columns:1fr}.wide{grid-column:auto}.actions button{flex:1;font-size:14px;padding:10px}}@media print{body{background:white;color:black}main{max-width:none;padding:0}.tools,.actions,.no-print,#message{display:none}.question{break-inside:avoid}textarea{height:100px}.muted,small{color:#333}a{color:black}}
+</style>
+<main>
+<header><small>Meta Aprovação · Material interno</small><h1>Revisão das questões</h1>
+<p>Leia, confira a resposta e registre ajustes. As marcações ficam neste navegador e não publicam questões no site.</p>
+<p class="muted">Antes de publicar: variar a sequência de letras dos gabaritos, rever P04 e melhorar alternativas incorretas muito fáceis de eliminar.</p></header>
+<section class="tools" aria-label="Filtros e revisor">
+<label>Matéria<select id="subject"><option value="">Todas as matérias</option></select></label>
+<label>Marcação<select id="filter"><option value="">Todas</option><option value="pending">Pendentes</option><option value="correction">Com ajustes</option><option value="checked">Conferidas neste arquivo</option></select></label>
+<label class="wide">Buscar por número, tema ou texto<input id="search" type="search" placeholder="Ex.: M03, fotossíntese, mapas"></label>
+<label class="wide">Nome do revisor<input id="reviewer" maxlength="120" autocomplete="off" placeholder="Preencha antes de marcar uma questão como conferida"></label>
+</section>
+<div class="actions"><button id="export">Exportar anotações</button><button class="secondary" id="import">Importar anotações</button><button class="secondary" id="print">Imprimir seleção</button><input id="file" type="file" accept=".json,application/json" hidden></div>
+<p id="message" role="status" aria-live="polite"></p>
+<label class="no-print"><input id="answers" type="checkbox">Mostrar todas as respostas</label>
+<p id="count" aria-live="polite"></p><div id="questions"></div><p id="empty" hidden>Nenhuma questão encontrada. Ajuste os filtros.</p>
+<footer>As anotações podem desaparecer ao limpar os dados ou trocar de navegador. Exporte para manter uma cópia. Este material contém gabaritos; não publique como página do site.</footer>
+</main>
+<script type="application/json" id="catalog">__CATALOG_JSON__</script>
+<script>
+"use strict";
+const catalog=JSON.parse(document.getElementById("catalog").textContent);
+const byId=new Map(catalog.questions.map(q=>[q.id,q]));
+const key="meta-editorial-"+catalog.catalogHash;
+const $=id=>document.getElementById(id);
+let entries={},reviewer="";
+const states=["pending","correction","checked"];
+function validate(data){
+ if(!data||data.schema!==1||data.catalogHash!==catalog.catalogHash||typeof data.reviewer!=="string"||data.reviewer.length>120||!Array.isArray(data.entries)||data.entries.length>100)throw Error("Catálogo diferente ou arquivo inválido. Nenhuma anotação foi substituída.");
+ const ids=new Set();
+ for(const e of data.entries){const q=byId.get(e.id);if(!q||ids.has(e.id)||e.version!==q.version||!states.includes(e.status)||typeof e.note!=="string"||e.note.length>8000||typeof e.by!=="string"||e.by.length>120||typeof e.at!=="string"||(e.status==="checked"&&(!e.by.trim()||!/^\d{4}-\d{2}-\d{2}T/.test(e.at)||!Number.isFinite(Date.parse(e.at)))))throw Error("Anotações inválidas. Nenhuma anotação foi substituída.");ids.add(e.id);}
+ return data;
+}
+function packageNotes(){return {schema:1,catalogHash:catalog.catalogHash,exportedAt:new Date().toISOString(),reviewer,entries:Object.values(entries)};}
+function notify(text){$("message").textContent=text;}
+function save(){try{localStorage.setItem(key,JSON.stringify(packageNotes()));notify("Anotações salvas neste navegador. Exporte para manter uma cópia.");}catch{notify("Este navegador não salvou as anotações. Exporte antes de fechar.");}}
+try{const raw=localStorage.getItem(key);if(raw){const data=validate(JSON.parse(raw));entries=Object.fromEntries(data.entries.map(e=>[e.id,e]));reviewer=data.reviewer;}}catch{notify("Não foi possível recuperar anotações locais. Importe uma cópia ou exporte as novas antes de fechar.");}
+$("reviewer").value=reviewer;
+function node(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;}
+const subjects=new Map(catalog.questions.map(q=>[q.subject,q.subjectName]));
+for(const [value,name]of subjects){const option=node("option",name);option.value=value;$("subject").append(option);}
+function render(){
+ $("questions").replaceChildren();
+ for(const q of catalog.questions){
+  const article=node("article",undefined,"question");article.dataset.id=q.id;article.id=q.label;
+  article.append(node("small",q.subjectName+" · "+q.label+" · v"+q.version),node("h2",q.topic),node("p",q.statement,"statement"));
+  const list=node("ul",undefined,"options");q.options.forEach((o,i)=>{const li=node("li");li.append(node("strong","ABCDE"[i]+")"),node("span",o));list.append(li);});article.append(list);
+  const details=node("details");details.open=$("answers").checked;details.append(node("summary","Conferir gabarito e explicação"));const answer=node("div",undefined,"answer");answer.append(node("strong","Resposta "+q.correctAnswer+" · "+q.options["ABCDE".indexOf(q.correctAnswer)]),node("p",q.explanation));
+  for(const r of q.references){const p=node("p",undefined,"refs");const a=node("a",r.title);const url=new URL(r.url);if(url.protocol!=="https:")continue;a.href=url.href;a.target="_blank";a.rel="noopener noreferrer";p.append(a,node("span"," — "+r.access));answer.append(p);}details.append(answer);article.append(details);
+  const label=node("label","Sua marcação para "+q.label);const select=node("select");select.setAttribute("aria-label","Marcação de "+q.label);["Pendente","Precisa de ajustes","Conferida neste arquivo"].forEach((s,i)=>{const o=node("option",s);o.value=states[i];select.append(o);});select.value=entries[q.id]?.status??"pending";label.append(select);
+  const noteLabel=node("label","Anotações para "+q.label);const note=node("textarea");note.maxLength=8000;note.setAttribute("aria-label","Anotações de "+q.label);note.value=entries[q.id]?.note??"";noteLabel.append(note);
+  const signed=node("p",undefined,"reviewer-line");function signature(){const e=entries[q.id];signed.textContent=e?.status==="checked"?"Conferida por "+e.by+" em "+new Date(e.at).toLocaleString("pt-BR")+". Marcação local; publicação pendente.":"Revisão humana no banco: pendente.";}signature();
+  function update(){if(select.value==="checked"&&!reviewer.trim()){select.value=entries[q.id]?.status??"pending";notify("Preencha o nome do revisor antes de marcar como conferida.");$("reviewer").focus();return;}entries[q.id]={id:q.id,version:q.version,status:select.value,note:note.value,by:select.value==="checked"?reviewer.trim():"",at:select.value==="checked"?new Date().toISOString():""};signature();save();filter();}
+  select.addEventListener("change",update);note.addEventListener("input",()=>{if(select.value==="checked")select.value="pending";update();});article.append(label,noteLabel,signed);$("questions").append(article);
+ }filter();
+}
+function filter(){let visible=0;const search=$("search").value.trim().toLocaleLowerCase("pt-BR");for(const article of $("questions").children){const q=byId.get(article.dataset.id);const status=entries[q.id]?.status??"pending";article.hidden=Boolean(($("subject").value&&q.subject!==$("subject").value)||($("filter").value&&status!==$("filter").value)||(search&&![q.label,q.topic,q.statement,...q.options].join(" ").toLocaleLowerCase("pt-BR").includes(search)));if(!article.hidden)visible++;}const checked=Object.values(entries).filter(e=>e.status==="checked").length;$("count").textContent=visible+" de 100 questões · "+checked+" conferidas neste arquivo";$("empty").hidden=visible!==0;}
+for(const id of ["subject","filter","search"])$(id).addEventListener("input",filter);
+$("reviewer").addEventListener("input",()=>{reviewer=$("reviewer").value;save();});
+$("answers").addEventListener("change",()=>{for(const d of document.querySelectorAll("article details"))d.open=$("answers").checked;});
+$("export").addEventListener("click",()=>{const blob=new Blob([JSON.stringify(packageNotes(),null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const link=node("a");link.href=url;link.download="revisao-meta-aprovacao.json";link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify("Anotações exportadas. Guarde o arquivo para continuar a revisão.");});
+$("import").addEventListener("click",()=>$("file").click());
+$("file").addEventListener("change",async()=>{try{const file=$("file").files[0];if(!file)return;if(file.size>1200000)throw Error("Arquivo muito grande. Nenhuma anotação foi substituída.");const data=validate(JSON.parse(await file.text()));const existing=Object.keys(entries).length>0||reviewer.trim();if(existing&&!confirm("A importação substituirá as anotações deste navegador. Exporte antes se quiser guardar as atuais. Continuar?"))return;entries=Object.fromEntries(data.entries.map(e=>[e.id,e]));reviewer=data.reviewer;$("reviewer").value=reviewer;render();save();}catch(error){notify(error instanceof SyntaxError?"Arquivo JSON inválido. Nenhuma anotação foi substituída.":error.message);}finally{$("file").value="";}});
+$("print").addEventListener("click",()=>window.print());
+render();
+</script>
+</html>

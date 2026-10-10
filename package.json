@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "content:review:build": "node scripts/build-editorial-review.mjs",
+    "content:review:check": "node scripts/build-editorial-review.mjs --check",
+    "content:review:verify": "node scripts/verify-editorial-catalog.mjs",
     "content:subjects:build": "node scripts/build-subject-content.mjs",
     "content:subjects:check": "node scripts/build-subject-content.mjs --check",
     "test:content:subjects": "node scripts/test-subject-content.mjs",
