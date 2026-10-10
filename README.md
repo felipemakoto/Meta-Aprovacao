@@ -2,7 +2,7 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
-Estado atual em 09/10/2026: site publicado em [meta-aprovacao.vercel.app](https://meta-aprovacao.vercel.app). Etapa 34: [processamento automático Cakto](docs/AUTOMACAO-CAKTO.md) ativo no Supabase, com fila, retomada e busca independente de pedidos. Primeira execução automática aprovada, sem pedidos ou cobrança. [Benefícios Premium](docs/BENEFICIOS-PREMIUM.md) conectados ao [acesso pago por trinta dias](docs/ACESSO-PAGO-CAKTO.md). Contrato externo e conteúdo revisado ainda pendentes; contratação bloqueada. Os registros abaixo são históricos; preços/configuração atuais estão no Estado do Projeto.
+Estado atual em 10/10/2026: site publicado em [meta-aprovacao.vercel.app](https://meta-aprovacao.vercel.app). Etapa 35: [diagnóstico e monitoramento Cakto](docs/MONITORAMENTO-CAKTO.md) ativos no Supabase, com identificação de falhas/fila parada e registro privado de incidentes. [Processamento automático](docs/AUTOMACAO-CAKTO.md) funcionando com fila vazia, sem cobrança. [Benefícios Premium](docs/BENEFICIOS-PREMIUM.md) conectados ao [acesso pago por trinta dias](docs/ACESSO-PAGO-CAKTO.md). Contrato externo e conteúdo revisado ainda pendentes; contratação bloqueada. Os registros abaixo são históricos; preços/configuração atuais estão no Estado do Projeto.
 
 Provedor atual: [Cakto](docs/CAKTO.md), escolhida em 03/10/2026 para substituir a Kiwify. Preparação da etapa 27 adaptada, visual preservado e contratação bloqueada. Usuário já tem cadastro, mas precisa criar oferta mensal de R$20 e cupom de 50% somente na primeira cobrança. Testes Node/HTTP, SQL, lint e build aprovados. Registros abaixo documentam o histórico anterior.
 

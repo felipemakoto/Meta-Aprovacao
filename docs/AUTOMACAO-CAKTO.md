@@ -1,5 +1,7 @@
 # Automação Cakto — etapa 34
 
+Atualização em 10/10/2026 — etapa 35: [diagnóstico e monitoramento](MONITORAMENTO-CAKTO.md) ativos no banco, com registro privado de condições e comando `cakto:health`. A ausência de monitor mencionada no relato inicial abaixo foi resolvida para consulta/registro interno; não há envio de alertas externos.
+
 Implementada e ativada em 09/10/2026 no Supabase. O computador e o servidor local não precisam ficar ligados. Nenhuma página, preço, cobrança ou configuração de checkout foi alterada. A contratação continua desabilitada enquanto o contrato externo de pagamento e o conteúdo revisado não forem validados.
 
 ## Funcionamento

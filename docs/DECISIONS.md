@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Monitoramento Cakto — 10/10/2026
+
+Diagnóstico e registro de condições separados do worker de pagamentos: Cron interno consulta o banco a cada minuto, sem credenciais no comando, sem invocações HTTP e sem alterar direitos ou reprocessar pagamentos. Agregados restritos ao servidor; script administrativo valida a resposta e mostra texto em português. No máximo seis condições persistidas com resolução/recorrência, sem histórico crescente a cada tick. Atraso usa elegibilidade real da fila, preservando backoff e pausas intencionais. Retenção financeira e notificações externas não foram presumidas nem ativadas; detalhes em MONITORAMENTO-CAKTO.md.
+
 ## Troca para Cakto — 03/10/2026
 
 Usuário escolheu Cakto, já tem cadastro e ainda precisa criar produto/oferta. Adaptar preparação da etapa 27; preservar visual/preços e histórico das decisões Kiwify abaixo. Schema incremental aceita identidades antigas sem relabeling e novas assinaturas Cakto; checkout cria somente Cakto. Sem fallback de host/variáveis/provedor Kiwify. Usar oferta documentada, não pressupor plano Kiwify. Cupom oficial Cakto somente da primeira cobrança atende R$10 inicial/R$20 recorrente; conferir taxa repassada, validade/fuso e retorno de sck. Documentação de API/webhook Kiwify não vale para Cakto: reavaliar contratos completos antes das etapas 28–31. enabled:false preservado; não cobrar antes de garantir verificação e entrega.
