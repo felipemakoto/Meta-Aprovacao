@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Etapa 38 — lote original e modelo de Português
+
+Dezoito questões adicionais e modelo de vinte questões em rascunho para Português, sem publicação editorial ou liberação comercial. JSON fonte única gera revisão interna e SQL; instrução atômica insere modelo privado, questões e gabaritos, preservando conflitos por ID. Teste transacional com rollback verifica completude e preservação de revisões do modelo/conteúdo e de gabarito ausente em reexecução. Carga real preservou hash dos registros anteriores. Modelos por matéria continuam Premium e indisponíveis enquanto não publicados/com cobertura publicada suficiente. Conteúdo original auxiliado por IA; revisão do assistente não substitui humano nem calibra dificuldade. Guia CONTEUDO-PORTUGUES.md.
+
 ## Etapa 37 — lote original de Matemática
 
 Preparar dezoito questões adicionais para completar a quantidade de vinte do modelo de Matemática existente, sem converter quantidade em aprovação pedagógica/comercial. Dados separados de migrations/seed inicial, JSON fonte única e revisão interna gerados em conjunto; nenhuma exposição de gabaritos na aplicação. Inserção atômica em draft e IDs estáveis preservam revisões, timestamps e gabaritos existentes, incluindo ausência que exige correção explícita. Ensaio com rollback antes/depois e hash de preservação da carga real aprovados. Nenhum modelo/conteúdo publicado; aprovação humana por questão continua necessária. O comando de teste pressupõe rascunhos; usar banco isolado depois da publicação. Guia CONTEUDO-MATEMATICA.md.

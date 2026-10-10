@@ -1,0 +1,146 @@
+[
+  {
+    "topic": "Informação explícita",
+    "difficulty": "easy",
+    "statement": "Leia: “A biblioteca do bairro funciona de terça a sábado, das 9h às 17h. Às quartas-feiras, recebe livros doados até as 15h.” Segundo o aviso, em qual dia a biblioteca recebe doações de livros?",
+    "options": ["Terça-feira", "Sábado", "Quarta-feira", "Domingo", "Segunda-feira"],
+    "correctAnswer": "C",
+    "explanation": "O aviso informa expressamente que as doações são recebidas às quartas-feiras. Os dias gerais de funcionamento não devem ser confundidos com o dia indicado para receber livros doados."
+  },
+  {
+    "topic": "Inferência textual",
+    "difficulty": "medium",
+    "statement": "Leia: “Ao chegar à sala, Luana viu gotas escorrendo do guarda-chuva de Pedro. Ele colocou o objeto aberto perto da porta para secar.” Qual conclusão é mais bem sustentada pelas pistas do trecho?",
+    "options": ["Pedro havia comprado o guarda-chuva naquele dia.", "Luana havia molhado o chão de propósito.", "A sala não possuía janelas.", "Pedro costumava esquecer seus objetos.", "O guarda-chuva de Pedro estava molhado."],
+    "correctAnswer": "E",
+    "explanation": "As gotas e a ação de colocar o guarda-chuva para secar sustentam a conclusão de que ele estava molhado. As outras alternativas acrescentam informações que o trecho não fornece."
+  },
+  {
+    "topic": "Tema central",
+    "difficulty": "easy",
+    "statement": "Leia: “No recreio, estudantes separaram cascas de frutas e folhas secas. O material foi levado à composteira da escola e, semanas depois, ajudou a adubar a horta.” Qual é o tema central do trecho?",
+    "options": ["O aproveitamento de resíduos orgânicos na escola.", "A mudança do horário do recreio.", "A venda de frutas no comércio do bairro.", "A construção de novas salas de aula.", "O transporte de estudantes até a escola."],
+    "correctAnswer": "A",
+    "explanation": "O trecho acompanha o uso de cascas e folhas na compostagem e sua aplicação na horta. Essa sequência trata do aproveitamento de resíduos orgânicos; os outros assuntos não são desenvolvidos."
+  },
+  {
+    "topic": "Finalidade de um aviso",
+    "difficulty": "easy",
+    "statement": "Leia o aviso: “Devido à manutenção, a quadra permanecerá fechada nesta sexta-feira. As atividades esportivas ocorrerão no pátio.” Qual é a finalidade principal desse aviso?",
+    "options": ["Narrar uma competição que já terminou.", "Convencer os estudantes a comprar equipamentos.", "Ensinar as regras de um esporte.", "Informar uma alteração no local das atividades.", "Avaliar o desempenho dos atletas."],
+    "correctAnswer": "D",
+    "explanation": "O aviso comunica que a quadra estará fechada e indica o pátio como local das atividades. Sua finalidade principal é informar essa alteração, não narrar, vender, ensinar regras ou avaliar atletas."
+  },
+  {
+    "topic": "Relação de causa",
+    "difficulty": "easy",
+    "statement": "Leia: “A turma mudou a apresentação para a sala porque começou a chover.” A parte iniciada por “porque” apresenta:",
+    "options": ["uma condição para chover", "a causa da mudança de local", "uma comparação entre duas salas", "uma finalidade da apresentação", "uma oposição à mudança de local"],
+    "correctAnswer": "B",
+    "explanation": "O início da chuva explica por que a apresentação foi transferida. Nesse contexto, a oração introduzida por “porque” apresenta a causa da mudança."
+  },
+  {
+    "topic": "Relação de consequência",
+    "difficulty": "easy",
+    "statement": "Leia: “O ônibus chegou depois do horário previsto; por isso, a visita começou mais tarde.” A expressão “por isso” estabelece, nesse contexto, uma relação de:",
+    "options": ["alternância", "comparação", "consequência", "concessão", "condição"],
+    "correctAnswer": "C",
+    "explanation": "A visita ter começado mais tarde é apresentada como consequência do atraso do ônibus. A expressão “por isso” conecta o atraso a esse resultado."
+  },
+  {
+    "topic": "Relação de condição",
+    "difficulty": "easy",
+    "statement": "Leia: “Se o tempo estiver firme, faremos a atividade no jardim.” A palavra “se” introduz:",
+    "options": ["a causa comprovada da atividade", "a conclusão de uma atividade passada", "uma comparação com outro jardim", "uma oposição ao tempo firme", "uma condição para realizar a atividade no jardim"],
+    "correctAnswer": "E",
+    "explanation": "A realização da atividade no jardim depende da condição de o tempo estar firme. O enunciado não afirma que essa condição já se cumpriu."
+  },
+  {
+    "topic": "Relação de concessão",
+    "difficulty": "medium",
+    "statement": "Leia: “Embora estivesse cansada, Marina terminou a leitura.” A palavra “embora” introduz uma circunstância que:",
+    "options": ["poderia dificultar a ação, mas não impediu sua realização", "é apresentada como finalidade da leitura", "garante que a leitura será feita no futuro", "mostra que Marina não terminou a leitura", "compara dois livros de mesmo tamanho"],
+    "correctAnswer": "A",
+    "explanation": "O cansaço poderia dificultar a leitura, mas Marina a terminou. Essa relação de concessão apresenta uma circunstância contrária à expectativa sem impedir a ação da oração principal."
+  },
+  {
+    "topic": "Referência pronominal",
+    "difficulty": "easy",
+    "statement": "Leia: “Os cartazes foram entregues à professora. Ela os colocou no mural.” No segundo período, o pronome “os” retoma:",
+    "options": ["a professora", "o mural", "os estudantes", "os cartazes", "a entrega"],
+    "correctAnswer": "D",
+    "explanation": "O pronome “os” retoma “os cartazes”, que foram colocados no mural. Já “Ela” retoma a professora. Os estudantes não são mencionados no trecho."
+  },
+  {
+    "topic": "Coesão por substituição",
+    "difficulty": "medium",
+    "statement": "Leia: “O laboratório recebeu um microscópio novo. O aparelho será usado nas aulas de Ciências.” Qual expressão do segundo período retoma o microscópio mencionado no primeiro?",
+    "options": ["nas aulas", "O aparelho", "de Ciências", "será usado", "O laboratório"],
+    "correctAnswer": "B",
+    "explanation": "A expressão “O aparelho” retoma o microscópio por uma denominação mais geral. Essa substituição mantém a referência e evita repetir o nome do equipamento."
+  },
+  {
+    "topic": "Sentido figurado",
+    "difficulty": "medium",
+    "statement": "Leia: “Durante a reunião, ninguém falava. Uma pergunta de Joana quebrou o silêncio.” Nesse contexto, “quebrou o silêncio” significa que a pergunta:",
+    "options": ["danificou um objeto da sala", "encerrou definitivamente a reunião", "interrompeu a ausência de fala", "foi feita sem produzir som", "impediu Joana de falar"],
+    "correctAnswer": "C",
+    "explanation": "“Quebrar o silêncio” tem sentido figurado: interromper um período em que ninguém fala. O trecho não descreve a quebra física de um objeto."
+  },
+  {
+    "topic": "Fato e opinião",
+    "difficulty": "medium",
+    "statement": "Qual frase expressa uma opinião, marcada por uma avaliação pessoal?",
+    "options": ["A oficina começou às 14h.", "A sala tem vinte cadeiras.", "O formulário pede nome e telefone.", "A exposição ocupa duas salas.", "A exposição é a mais interessante da cidade."],
+    "correctAnswer": "E",
+    "explanation": "Chamar a exposição de “a mais interessante” expressa um julgamento de valor. As demais frases apresentam informações que podem ser verificadas, embora sua veracidade dependa de conferência."
+  },
+  {
+    "topic": "Pontuação e vocativo",
+    "difficulty": "medium",
+    "statement": "Leia: “Rafael, guarde os livros na estante.” Qual é a função da vírgula nessa frase?",
+    "options": ["Separar o nome da pessoa a quem a ordem é dirigida.", "Separar o sujeito de seu predicado.", "Indicar uma lista de três objetos.", "Marcar o término de uma pergunta.", "Indicar a omissão da palavra “livros”."],
+    "correctAnswer": "A",
+    "explanation": "“Rafael” funciona como vocativo, pois chama a pessoa a quem se dirige a ordem. A vírgula separa esse chamamento do restante da frase. Não se trata de separar sujeito e predicado."
+  },
+  {
+    "topic": "Ambiguidade referencial",
+    "difficulty": "medium",
+    "statement": "Leia a frase isolada: “Paula avisou a Renata que sua inscrição estava confirmada.” Sem informações adicionais, por que a expressão “sua inscrição” pode ser ambígua?",
+    "options": ["Porque a frase informa duas datas diferentes.", "Porque não se sabe se a inscrição foi confirmada.", "Porque a palavra “inscrição” é um verbo.", "Porque pode se referir à inscrição de Paula ou à de Renata.", "Porque Paula e Renata são necessariamente a mesma pessoa."],
+    "correctAnswer": "D",
+    "explanation": "O possessivo “sua”, sem contexto adicional, permite associar a inscrição a Paula ou a Renata. Nomear a pessoa responsável pela inscrição elimina essa dúvida de referência."
+  },
+  {
+    "topic": "Concordância verbal",
+    "difficulty": "medium",
+    "statement": "Qual frase apresenta concordância entre o sujeito e o verbo de acordo com a norma-padrão?",
+    "options": ["As alunas chegou cedo.", "As alunas chegaram cedo.", "As alunas chega cedo.", "As alunas chegamos cedo.", "As alunas cheguei cedo."],
+    "correctAnswer": "B",
+    "explanation": "“As alunas” é um sujeito na terceira pessoa do plural. A forma verbal “chegaram” concorda com essa pessoa e esse número; as demais formas não concordam com o sujeito apresentado."
+  },
+  {
+    "topic": "Tempo verbal em contexto",
+    "difficulty": "easy",
+    "statement": "Leia: “Amanhã visitaremos o museu com a turma.” A forma verbal “visitaremos” apresenta a visita como uma ação:",
+    "options": ["concluída antes do momento da fala", "habitual no passado", "prevista para depois do momento da fala", "que ocorre enquanto a frase é dita", "cujo sujeito não pode ser identificado"],
+    "correctAnswer": "C",
+    "explanation": "“Visitaremos” está no futuro do presente e indica uma ação posterior ao momento da fala. O advérbio “amanhã” reforça essa localização temporal."
+  },
+  {
+    "topic": "Ordenação de instruções",
+    "difficulty": "easy",
+    "statement": "Considere as instruções: I. Depois de preencher o formulário, confira os dados. II. Por fim, envie o formulário conferido. III. Primeiro, preencha o formulário. Qual ordem organiza essas instruções de maneira coerente?",
+    "options": ["I – II – III", "II – III – I", "III – II – I", "I – III – II", "III – I – II"],
+    "correctAnswer": "E",
+    "explanation": "A sequência é preencher, conferir e enviar. Os marcadores “Primeiro”, “Depois de preencher” e “Por fim” indicam, respectivamente, III, I e II."
+  },
+  {
+    "topic": "Vocabulário em contexto",
+    "difficulty": "medium",
+    "statement": "Leia: “Como o tempo para a tarefa era escasso, o grupo definiu prioridades.” Qual palavra pode substituir “escasso” nesse contexto, preservando o sentido?",
+    "options": ["abundante", "limitado", "infinito", "inesgotável", "prolongado"],
+    "correctAnswer": "B",
+    "explanation": "“Escasso” indica pouca disponibilidade de tempo. “Limitado” preserva esse sentido no contexto; as outras opções sugerem tempo amplo ou longo."
+  }
+]

@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "content:portuguese:build": "node scripts/build-portuguese-content.mjs",
+    "content:portuguese:check": "node scripts/build-portuguese-content.mjs --check",
+    "test:content:portuguese": "node scripts/test-portuguese-content.mjs",
     "content:math:build": "node scripts/build-math-content.mjs",
     "content:math:check": "node scripts/build-math-content.mjs --check",
     "test:content:math": "node scripts/test-math-content.mjs",
