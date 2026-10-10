@@ -3,6 +3,7 @@ import { readSubscriptionAccess } from "@/lib/data/subscriptions";
 import { createCheckoutIntent } from "@/lib/data/checkout";
 import { configuredCheckout } from "@/lib/subscriptions/checkout-contract";
 import { checkoutHandler } from "@/lib/subscriptions/checkout-http";
+import { checkoutEnabled } from "@/lib/subscriptions/checkout-launch";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -14,4 +15,4 @@ export const POST = checkoutHandler({
   offer: at => configuredCheckout(process.env, at),
   create: createCheckoutIntent,
   now: () => new Date(),
-}, { secure: process.env.NODE_ENV === "production", origin: process.env.APP_ORIGIN, enabled: false });
+}, { secure: process.env.NODE_ENV === "production", origin: process.env.APP_ORIGIN, enabled: checkoutEnabled });

@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "cakto:launch-check": "node --env-file=.env.local scripts/cakto-launch-check.mjs",
+    "test:readiness": "node --test tests/readiness.test.mjs",
+    "test:readiness:integration": "node --env-file=.env.local scripts/test-readiness-integration.mjs",
     "cakto:health": "node --env-file=.env.local scripts/cakto-health.mjs",
     "test:health": "node --test tests/health.test.mjs",
     "test:health:integration": "node --env-file=.env.local scripts/test-health-integration.mjs",

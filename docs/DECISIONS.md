@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Prontidão de lançamento — 10/10/2026
+
+Consolidar verificações em uma leitura administrativa, sem endpoint público ou botão de liberar vendas. Contar somente questões publicadas com gabarito e modelos publicados com cobertura suficiente; status de revisão não equivale a publicação. Separar configuração local, indicadores técnicos e evidência comercial/humana não verificada. Centralizar a trava false do checkout no código usado pela API e pela checagem; nunca inferir uma compra comercial a partir de prova sintética ou aprovar publicação editorial por um “continue”. Inventário de retenção somente agregado, sem excluir registros. Guia PRONTIDAO-LANCAMENTO.md.
+
 ## Monitoramento Cakto — 10/10/2026
 
 Diagnóstico e registro de condições separados do worker de pagamentos: Cron interno consulta o banco a cada minuto, sem credenciais no comando, sem invocações HTTP e sem alterar direitos ou reprocessar pagamentos. Agregados restritos ao servidor; script administrativo valida a resposta e mostra texto em português. No máximo seis condições persistidas com resolução/recorrência, sem histórico crescente a cada tick. Atraso usa elegibilidade real da fila, preservando backoff e pausas intencionais. Retenção financeira e notificações externas não foram presumidas nem ativadas; detalhes em MONITORAMENTO-CAKTO.md.
