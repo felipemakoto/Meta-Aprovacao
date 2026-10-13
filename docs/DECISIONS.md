@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Etapa 42 — retorno editorial sem publicação automática
+
+Receber o JSON exportado como declaração do revisor, validar hash/versões/IDs e assinatura das conferidas e gerar relatório local separado, preservando o original. Ausências contam como pendentes; comentários permanecem visíveis mesmo em conferidas. Dados recebidos são texto, sem interpretação de HTML/instruções. Não autenticar pessoa, unir versões/revisores silenciosamente ou converter marcação local em status editorial do banco. Revisão dos modelos é separada. Sete testes de formato, compatibilidade, conteúdo e comando aprovados. Guia RECEBIMENTO-REVISAO.md.
+
 ## Etapa 41 — correção versionada de rascunhos
 
 Corrigir os pontos encontrados na etapa 40 em uma carga explícita, separada das inserções e migrations. Registrar antes/depois por ID, atualizar alternativas e gabaritos juntos e elevar os noventa registros afetados para versão 2. Exigir correspondência exata com conteúdo anterior/corrigido e ausência de uso; recusar revisões humanas, publicação, divergências e gabaritos ausentes. Validar todos os registros antes das alterações e preservar timestamps na repetição. Manter questões iniciais, modelos e tentativas existentes, com hashes conferidos na carga real. Anotações da ferramenta pertencem ao catálogo revisado: preservar HTML/ZIP anteriores e permitir exportação separada quando o armazenamento antigo estiver disponível, sem transferir marcações como aprovação das correções. Revisão humana identificada permanece necessária. Guia CORRECOES-ETAPA-41.md.

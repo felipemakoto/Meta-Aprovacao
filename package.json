@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "content:review:report": "node scripts/receive-editorial-notes.mjs",
+    "test:editorial:notes": "node --test tests/editorial-notes.test.mjs",
     "content:correction:build": "node scripts/build-editorial-correction.mjs",
     "content:correction:check": "node scripts/build-editorial-correction.mjs --check",
     "test:content:correction": "node scripts/test-editorial-correction.mjs",
