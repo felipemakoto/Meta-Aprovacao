@@ -1,13 +1,13 @@
-# Revisão atual — Português — etapa 43
+# Revisão atual — Português — etapa 44
 
 Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
 ## P01 — Leitura crítica de dados
 
-ID: d1090000-0000-4000-8000-000000000003. Versão: 2. Dificuldade estimada: hard. Família: P1.
+ID: d1090000-0000-4000-8000-000000000003. Versão: 3. Dificuldade estimada: hard. Família: P1.
 
 Texto autoral para esta atividade:
-A biblioteca ampliou o horário de funcionamento. O número de empréstimos subiu, mas a quantidade de usuários distintos permaneceu estável. A direção comemorou a maior circulação dos livros; o conselho pediu cautela: empréstimos adicionais podem ter sido feitos pelas mesmas pessoas. Embora a mudança pareça útil, ainda não se sabe se ela alcançou novos leitores.
+A biblioteca ampliou o horário. Em dois meses comparáveis, os empréstimos passaram de 800 para 1.100, mas o número de usuários distintos permaneceu em 200. A direção comemorou a circulação maior; o conselho solicitou os registros de novos cadastros. Embora o relatório destaque o crescimento, não informa quem fez os empréstimos adicionais.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -23,10 +23,10 @@ Revisor/data: pendentes.
 
 ## P02 — Argumentação e causalidade
 
-ID: d1090000-0000-4000-8000-000000000004. Versão: 2. Dificuldade estimada: hard. Família: P2.
+ID: d1090000-0000-4000-8000-000000000004. Versão: 3. Dificuldade estimada: hard. Família: P2.
 
 Texto autoral para esta atividade:
-Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Os lojistas atribuem o resultado à ciclovia. O pesquisador não descarta essa hipótese, porém observa que mudanças simultâneas impedem atribuir o crescimento a uma causa isolada.
+Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Um lojista declarou: Foi a ciclovia que trouxe o crescimento. O levantamento apresenta os totais anteriores e posteriores, porém não compara ruas com condições semelhantes.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -42,10 +42,10 @@ Revisor/data: pendentes.
 
 ## P03 — Ironia e crítica social
 
-ID: d1380000-0000-4000-8000-000000000001. Versão: 3. Dificuldade estimada: hard. Família: P3.
+ID: d1380000-0000-4000-8000-000000000001. Versão: 4. Dificuldade estimada: hard. Família: P3.
 
 Texto autoral para esta atividade:
-O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto; quando o ônibus atrasou, recebeu seis notificações explicando que o horário era apenas estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Seu comentário foi recebido com risos, mas apontava uma tensão entre a promessa e o uso efetivo da tecnologia.
+O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto. Quando o ônibus atrasou, recebeu seis notificações de que o horário era estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Os colegas riram, mas continuaram na fila esperando o veículo.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -61,10 +61,10 @@ Revisor/data: pendentes.
 
 ## P04 — Modalização e certeza
 
-ID: d1380000-0000-4000-8000-000000000002. Versão: 3. Dificuldade estimada: hard. Família: P4.
+ID: d1380000-0000-4000-8000-000000000002. Versão: 4. Dificuldade estimada: hard. Família: P4.
 
 Texto autoral para esta atividade:
-Um estudo acompanhou pequenas hortas em três escolas. As turmas participantes relataram maior interesse por alimentação. Os autores afirmam que a atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia transformou a conclusão em: Hortas garantem mudança alimentar. Ao retirar as ressalvas, o título ampliou a força da afirmação além do que os dados permitiam.
+Um estudo acompanhou hortas em três escolas e registrou relatos de maior interesse por alimentação. Os autores escreveram: A atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia foi publicada com o título Hortas garantem mudança alimentar. O texto da reportagem não acrescentava observações sobre os hábitos alimentares posteriores.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -80,10 +80,10 @@ Revisor/data: pendentes.
 
 ## P05 — Pressupostos e escolhas lexicais
 
-ID: d1380000-0000-4000-8000-000000000003. Versão: 3. Dificuldade estimada: hard. Família: P5.
+ID: d1380000-0000-4000-8000-000000000003. Versão: 4. Dificuldade estimada: hard. Família: P5.
 
 Texto autoral para esta atividade:
-No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante destacou que voltar sugere uma escuta anterior interrompida; outro perguntou se essa escuta havia sido ampla ou apenas formal. A discussão mostrou que a escolha de um verbo pode carregar uma informação não apresentada como afirmação principal.
+No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante perguntou quando havia ocorrido a escuta anterior; outra perguntou se ela havia sido ampla ou apenas formal. O registro da reunião não traz resposta a essas perguntas.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -99,10 +99,10 @@ Revisor/data: pendentes.
 
 ## P06 — Coesão e referência
 
-ID: d1380000-0000-4000-8000-000000000004. Versão: 3. Dificuldade estimada: hard. Família: P6.
+ID: d1380000-0000-4000-8000-000000000004. Versão: 4. Dificuldade estimada: hard. Família: P6.
 
 Texto autoral para esta atividade:
-A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Essa divisão evitou que visitantes precisassem receber um mapa para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
+A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Visitantes consultavam os painéis para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -118,10 +118,10 @@ Revisor/data: pendentes.
 
 ## P07 — Comparação de argumentos
 
-ID: d1380000-0000-4000-8000-000000000005. Versão: 3. Dificuldade estimada: hard. Família: P7.
+ID: d1380000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: hard. Família: P7.
 
 Texto autoral para esta atividade:
-O texto de um fabricante destaca que uma embalagem usa menos plástico. O relatório de uma cooperativa observa que ela combina materiais difíceis de separar. As duas informações podem ser verdadeiras: reduzir massa não equivale a facilitar reciclagem. Uma avaliação ambiental precisa considerar etapas diferentes, sem escolher um único indicador como resposta completa.
+Um fabricante informou que sua embalagem usava 20% menos plástico. Uma cooperativa observou que ela combinava materiais difíceis de separar nos equipamentos disponíveis. O relatório final pediu uma avaliação da produção e da destinação, sem apresentar um único indicador como resposta para todas as etapas.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -137,10 +137,10 @@ Revisor/data: pendentes.
 
 ## P08 — Conectivos e estrutura lógica
 
-ID: d1380000-0000-4000-8000-000000000006. Versão: 3. Dificuldade estimada: hard. Família: P8.
+ID: d1380000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: hard. Família: P8.
 
 Texto autoral para esta atividade:
-O conselho não se opôs à reforma porque rejeitasse a acessibilidade. Contestou o projeto porque a obra retiraria a única rota de passagem antes de criar uma alternativa. Para os conselheiros, a mesma finalidade pode exigir outra sequência de execução. Confundir a crítica ao procedimento com oposição ao objetivo reduz o debate a uma falsa escolha.
+O conselho apoiou a finalidade de ampliar a acessibilidade, mas contestou a sequência proposta para a reforma: a única passagem seria fechada antes de a alternativa ficar pronta. Para os conselheiros, o plano deveria manter uma rota durante toda a obra. A empresa respondeu que reorganizaria as etapas.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -156,10 +156,10 @@ Revisor/data: pendentes.
 
 ## P09 — Narrador e inferência
 
-ID: d1380000-0000-4000-8000-000000000007. Versão: 3. Dificuldade estimada: hard. Família: P9.
+ID: d1380000-0000-4000-8000-000000000007. Versão: 4. Dificuldade estimada: hard. Família: P9.
 
 Texto autoral para esta atividade:
-Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia em nenhuma fotografia. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O narrador não informa o que ele pensou; a sequência de ações permite uma leitura sobre reconhecimento, sem transformar essa leitura em certeza sobre suas intenções.
+Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia nas fotografias. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O relato encerra-se com essa ação, sem registrar fala ou pensamento do porteiro.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -175,10 +175,10 @@ Revisor/data: pendentes.
 
 ## P10 — Generalização e amostragem
 
-ID: d1380000-0000-4000-8000-000000000008. Versão: 3. Dificuldade estimada: hard. Família: P10.
+ID: d1380000-0000-4000-8000-000000000008. Versão: 4. Dificuldade estimada: hard. Família: P10.
 
 Texto autoral para esta atividade:
-Uma enquete divulgada apenas no perfil de um clube mostrou apoio majoritário a ampliar sua sede. O anúncio dizia que a cidade aprovara a proposta. Uma leitora observou que participar do perfil e responder à enquete não são escolhas aleatórias. O resultado descreve os respondentes, mas não autoriza estendê-lo automaticamente à população inteira.
+Uma enquete foi divulgada apenas no perfil de um clube. Entre as 300 respostas, 240 apoiavam ampliar sua sede. O anúncio dizia: A cidade aprova o projeto. A cidade tinha 40 mil moradores, mas o relatório não informou como os seguidores do perfil se distribuíam entre bairros nem quem decidiu responder.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -194,10 +194,10 @@ Revisor/data: pendentes.
 
 ## P11 — Polissemia e contexto
 
-ID: d1380000-0000-4000-8000-000000000009. Versão: 3. Dificuldade estimada: hard. Família: P11.
+ID: d1380000-0000-4000-8000-000000000009. Versão: 4. Dificuldade estimada: hard. Família: P11.
 
 Texto autoral para esta atividade:
-No relatório financeiro, a comissão pediu que a proposta fosse revista. No relato do passeio, uma aluna disse que queria rever a cidade. As duas formas pertencem ao mesmo verbo, mas os complementos e a situação de uso orientam sentidos diferentes. Um leitor que substitua as duas por corrigir preserva melhor a primeira intenção que a segunda.
+A comissão pediu que a proposta financeira fosse revista. Ao comentar um passeio, uma aluna disse que queria rever a cidade. Um colega sugeriu empregar corrigir nas duas frases, mas a editora pediu que ele considerasse o complemento e a situação de cada ocorrência.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -213,10 +213,10 @@ Revisor/data: pendentes.
 
 ## P12 — Pontuação e abrangência
 
-ID: d1380000-0000-4000-8000-000000000010. Versão: 3. Dificuldade estimada: hard. Família: P12.
+ID: d1380000-0000-4000-8000-000000000010. Versão: 4. Dificuldade estimada: hard. Família: P12.
 
 Texto autoral para esta atividade:
-Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Uma segunda versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras são as mesmas, porém as vírgulas mudam o alcance da informação: na primeira versão, a solicitação delimita um grupo; na segunda, aparece como explicação associada ao conjunto mencionado.
+Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Outra versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras eram as mesmas, porém a equipe precisava decidir se o aviso se referia apenas aos solicitantes ou ao conjunto dos moradores mencionado no documento.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -232,10 +232,10 @@ Revisor/data: pendentes.
 
 ## P13 — Voz verbal e responsabilidade
 
-ID: d1380000-0000-4000-8000-000000000011. Versão: 3. Dificuldade estimada: hard. Família: P13.
+ID: d1380000-0000-4000-8000-000000000011. Versão: 4. Dificuldade estimada: hard. Família: P13.
 
 Texto autoral para esta atividade:
-A nota dizia: Foram eliminados os registros duplicados. O relatório posterior informou: A equipe de cadastro eliminou os registros duplicados. Ambos descrevem a ação, mas a primeira formulação deixa o agente sem identificação; a segunda o explicita. Em um pedido de prestação de contas, essa diferença pode ser relevante, embora não demonstre, sozinha, intenção de esconder responsabilidade.
+A nota dizia: Foram eliminados os registros duplicados. O relatório posterior dizia: A equipe de cadastro eliminou os registros duplicados. Embora os documentos tratassem da mesma ação, uma solicitação de prestação de contas pedia também a identificação de quem a executou.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -251,10 +251,10 @@ Revisor/data: pendentes.
 
 ## P14 — Concordância e norma-padrão
 
-ID: d1380000-0000-4000-8000-000000000012. Versão: 3. Dificuldade estimada: hard. Família: P14.
+ID: d1380000-0000-4000-8000-000000000012. Versão: 4. Dificuldade estimada: hard. Família: P14.
 
 Texto autoral para esta atividade:
-Na revisão de um relatório, apareceram duas frases: Fazem três meses que o projeto começou e Houveram alterações no cronograma. A editora explicou que fazer indicando tempo decorrido e haver com sentido de existir são impessoais. A correção deve considerar a função de cada verbo no contexto, e não a aparência plural das expressões que o acompanham.
+Uma editora encontrou no relatório: Fazem três meses que o projeto começou. Na página seguinte, leu: Houveram alterações no cronograma. Ela pediu a revisão das formas verbais, e não apenas a troca dos termos meses e alterações por palavras no singular.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -270,10 +270,10 @@ Revisor/data: pendentes.
 
 ## P15 — Regência e mudança de sentido
 
-ID: d1380000-0000-4000-8000-000000000013. Versão: 3. Dificuldade estimada: hard. Família: P15.
+ID: d1380000-0000-4000-8000-000000000013. Versão: 4. Dificuldade estimada: hard. Família: P15.
 
 Texto autoral para esta atividade:
-A revisora encontrou: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. Na norma-padrão, assistir no sentido de ver pede a preposição a; no sentido de prestar assistência, pode ter complemento direto. Corrigir automaticamente as duas frases da mesma maneira apagaria a diferença de sentido e regência apresentada pelo contexto.
+No relatório, constavam: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. A primeira frase tratava da exibição de um filme; a segunda, da ajuda prestada no laboratório. A revisora avaliou a regência de assistir no sentido de cada ação descrita.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -289,10 +289,10 @@ Revisor/data: pendentes.
 
 ## P16 — Crase e comparação de construções
 
-ID: d1380000-0000-4000-8000-000000000014. Versão: 3. Dificuldade estimada: hard. Família: P16.
+ID: d1380000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: hard. Família: P16.
 
 Texto autoral para esta atividade:
-Em uma ficha de viagem, a editora comparou: Entregou o documento à diretora e Entregou o documento a uma diretora. Na primeira, a preposição exigida por entregar encontra o artigo feminino definido; na segunda, uma é artigo indefinido. A marca de crase não se decide apenas pela presença de palavra feminina, mas pela combinação das formas gramaticais.
+A ficha registrava: Entregou o documento à diretora. Outra registrava: Entregou o documento a uma diretora. Uma estudante propôs pôr acento grave nas duas, mas a editora pediu que ela comparasse os artigos e a preposição exigida pelo verbo.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -308,10 +308,10 @@ Revisor/data: pendentes.
 
 ## P17 — Ambiguidade sintática
 
-ID: d1380000-0000-4000-8000-000000000015. Versão: 3. Dificuldade estimada: hard. Família: P17.
+ID: d1380000-0000-4000-8000-000000000015. Versão: 4. Dificuldade estimada: hard. Família: P17.
 
 Texto autoral para esta atividade:
-O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou a quem se referia sua. O redator decidiu substituir a expressão por a inscrição da aluna. A mudança manteve a informação pretendida e reduziu uma ambiguidade que não poderia ser resolvida apenas pela forma do pronome possessivo.
+O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou de quem era a inscrição. O redator a substituiu por a inscrição da aluna e manteve o restante da informação. A alteração passou a constar na edição seguinte.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -327,10 +327,10 @@ Revisor/data: pendentes.
 
 ## P18 — Metáfora e argumentação
 
-ID: d1380000-0000-4000-8000-000000000016. Versão: 3. Dificuldade estimada: hard. Família: P18.
+ID: d1380000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: hard. Família: P18.
 
 Texto autoral para esta atividade:
-O editorial chamou a falta de planejamento de um buraco no orçamento. Não descrevia uma abertura física: relacionava a insuficiência de recursos a uma imagem de ausência. A metáfora tornou o problema mais concreto para o leitor, mas não substituiu os números necessários para dimensioná-lo. A expressividade da frase e sua capacidade de provar uma conclusão são aspectos diferentes.
+O editorial chamou a falta de planejamento de um buraco no orçamento. Na sequência, apresentou receitas e despesas para dimensionar o problema. Um leitor destacou a imagem expressiva, mas outro pediu que a avaliação se baseasse também nos valores documentados.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -346,10 +346,10 @@ Revisor/data: pendentes.
 
 ## P19 — Discurso e atribuição de informação
 
-ID: d1380000-0000-4000-8000-000000000017. Versão: 3. Dificuldade estimada: hard. Família: P19.
+ID: d1380000-0000-4000-8000-000000000017. Versão: 4. Dificuldade estimada: hard. Família: P19.
 
 Texto autoral para esta atividade:
-A notícia informou: Segundo a pesquisadora, o novo material pode reduzir perdas. Na edição seguinte, apareceu: O novo material reduz perdas. A retirada da fonte e do verbo modal aproximou a segunda frase de uma afirmação assumida pelo veículo. Não se trata apenas de encurtar o período: muda-se a maneira de apresentar a responsabilidade e o grau de certeza da informação.
+A notícia dizia: Segundo a pesquisadora, o material pode reduzir perdas. Na edição seguinte, apareceu: O material reduz perdas. A mudança retirou palavras da frase, sem acrescentar dados ou resultados ao conteúdo publicado.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -365,10 +365,10 @@ Revisor/data: pendentes.
 
 ## P20 — Condição necessária e conclusão
 
-ID: d1380000-0000-4000-8000-000000000018. Versão: 3. Dificuldade estimada: hard. Família: P20.
+ID: d1380000-0000-4000-8000-000000000018. Versão: 4. Dificuldade estimada: hard. Família: P20.
 
 Texto autoral para esta atividade:
-O regulamento informa: A inscrição será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. O uso de e reúne requisitos; cumprir apenas um deles não satisfaz a condição descrita. Interpretar a frase como se trouxesse ou alteraria os critérios do regulamento.
+O regulamento dizia: A inscrição só será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. Uma colega sugeriu que ele relesse os dois requisitos antes de reclamar.
 
 Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?
 
@@ -384,10 +384,10 @@ Revisor/data: pendentes.
 
 ## P21 — Leitura crítica de dados
 
-ID: d1431000-0000-4000-8000-000000000021. Versão: 1. Dificuldade estimada: medium. Família: P1.
+ID: d1431000-0000-4000-8000-000000000021. Versão: 2. Dificuldade estimada: medium. Família: P1.
 
 Texto autoral para esta atividade:
-A biblioteca ampliou o horário de funcionamento. O número de empréstimos subiu, mas a quantidade de usuários distintos permaneceu estável. A direção comemorou a maior circulação dos livros; o conselho pediu cautela: empréstimos adicionais podem ter sido feitos pelas mesmas pessoas. Embora a mudança pareça útil, ainda não se sabe se ela alcançou novos leitores.
+A biblioteca ampliou o horário. Em dois meses comparáveis, os empréstimos passaram de 800 para 1.100, mas o número de usuários distintos permaneceu em 200. A direção comemorou a circulação maior; o conselho solicitou os registros de novos cadastros. Embora o relatório destaque o crescimento, não informa quem fez os empréstimos adicionais.
 
 Na passagem que emprega “Embora”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -403,10 +403,10 @@ Revisor/data: pendentes.
 
 ## P22 — Argumentação e causalidade
 
-ID: d1431000-0000-4000-8000-000000000022. Versão: 1. Dificuldade estimada: medium. Família: P2.
+ID: d1431000-0000-4000-8000-000000000022. Versão: 2. Dificuldade estimada: medium. Família: P2.
 
 Texto autoral para esta atividade:
-Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Os lojistas atribuem o resultado à ciclovia. O pesquisador não descarta essa hipótese, porém observa que mudanças simultâneas impedem atribuir o crescimento a uma causa isolada.
+Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Um lojista declarou: Foi a ciclovia que trouxe o crescimento. O levantamento apresenta os totais anteriores e posteriores, porém não compara ruas com condições semelhantes.
 
 Na passagem que emprega “porém”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -422,10 +422,10 @@ Revisor/data: pendentes.
 
 ## P23 — Ironia e crítica social
 
-ID: d1431000-0000-4000-8000-000000000023. Versão: 1. Dificuldade estimada: medium. Família: P3.
+ID: d1431000-0000-4000-8000-000000000023. Versão: 2. Dificuldade estimada: medium. Família: P3.
 
 Texto autoral para esta atividade:
-O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto; quando o ônibus atrasou, recebeu seis notificações explicando que o horário era apenas estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Seu comentário foi recebido com risos, mas apontava uma tensão entre a promessa e o uso efetivo da tecnologia.
+O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto. Quando o ônibus atrasou, recebeu seis notificações de que o horário era estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Os colegas riram, mas continuaram na fila esperando o veículo.
 
 Na passagem que emprega “mas”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -441,10 +441,10 @@ Revisor/data: pendentes.
 
 ## P24 — Modalização e certeza
 
-ID: d1431000-0000-4000-8000-000000000024. Versão: 1. Dificuldade estimada: medium. Família: P4.
+ID: d1431000-0000-4000-8000-000000000024. Versão: 2. Dificuldade estimada: medium. Família: P4.
 
 Texto autoral para esta atividade:
-Um estudo acompanhou pequenas hortas em três escolas. As turmas participantes relataram maior interesse por alimentação. Os autores afirmam que a atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia transformou a conclusão em: Hortas garantem mudança alimentar. Ao retirar as ressalvas, o título ampliou a força da afirmação além do que os dados permitiam.
+Um estudo acompanhou hortas em três escolas e registrou relatos de maior interesse por alimentação. Os autores escreveram: A atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia foi publicada com o título Hortas garantem mudança alimentar. O texto da reportagem não acrescentava observações sobre os hábitos alimentares posteriores.
 
 Na passagem que emprega “embora”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -460,10 +460,10 @@ Revisor/data: pendentes.
 
 ## P25 — Pressupostos e escolhas lexicais
 
-ID: d1431000-0000-4000-8000-000000000025. Versão: 1. Dificuldade estimada: medium. Família: P5.
+ID: d1431000-0000-4000-8000-000000000025. Versão: 2. Dificuldade estimada: medium. Família: P5.
 
 Texto autoral para esta atividade:
-No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante destacou que voltar sugere uma escuta anterior interrompida; outro perguntou se essa escuta havia sido ampla ou apenas formal. A discussão mostrou que a escolha de um verbo pode carregar uma informação não apresentada como afirmação principal.
+No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante perguntou quando havia ocorrido a escuta anterior; outra perguntou se ela havia sido ampla ou apenas formal. O registro da reunião não traz resposta a essas perguntas.
 
 Na passagem que emprega “se”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -479,10 +479,10 @@ Revisor/data: pendentes.
 
 ## P26 — Coesão e referência
 
-ID: d1431000-0000-4000-8000-000000000026. Versão: 1. Dificuldade estimada: medium. Família: P6.
+ID: d1431000-0000-4000-8000-000000000026. Versão: 2. Dificuldade estimada: medium. Família: P6.
 
 Texto autoral para esta atividade:
-A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Essa divisão evitou que visitantes precisassem receber um mapa para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
+A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Visitantes consultavam os painéis para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
 
 Na passagem que emprega “pois”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -498,10 +498,10 @@ Revisor/data: pendentes.
 
 ## P27 — Comparação de argumentos
 
-ID: d1431000-0000-4000-8000-000000000027. Versão: 1. Dificuldade estimada: medium. Família: P7.
+ID: d1431000-0000-4000-8000-000000000027. Versão: 2. Dificuldade estimada: medium. Família: P7.
 
 Texto autoral para esta atividade:
-O texto de um fabricante destaca que uma embalagem usa menos plástico. O relatório de uma cooperativa observa que ela combina materiais difíceis de separar. As duas informações podem ser verdadeiras: reduzir massa não equivale a facilitar reciclagem. Uma avaliação ambiental precisa considerar etapas diferentes, sem escolher um único indicador como resposta completa.
+Um fabricante informou que sua embalagem usava 20% menos plástico. Uma cooperativa observou que ela combinava materiais difíceis de separar nos equipamentos disponíveis. O relatório final pediu uma avaliação da produção e da destinação, sem apresentar um único indicador como resposta para todas as etapas.
 
 Na passagem que emprega “sem”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -517,10 +517,10 @@ Revisor/data: pendentes.
 
 ## P28 — Conectivos e estrutura lógica
 
-ID: d1431000-0000-4000-8000-000000000028. Versão: 1. Dificuldade estimada: medium. Família: P8.
+ID: d1431000-0000-4000-8000-000000000028. Versão: 2. Dificuldade estimada: medium. Família: P8.
 
 Texto autoral para esta atividade:
-O conselho não se opôs à reforma porque rejeitasse a acessibilidade. Contestou o projeto porque a obra retiraria a única rota de passagem antes de criar uma alternativa. Para os conselheiros, a mesma finalidade pode exigir outra sequência de execução. Confundir a crítica ao procedimento com oposição ao objetivo reduz o debate a uma falsa escolha.
+O conselho apoiou a finalidade de ampliar a acessibilidade, mas contestou a sequência proposta para a reforma: a única passagem seria fechada antes de a alternativa ficar pronta. Para os conselheiros, o plano deveria manter uma rota durante toda a obra. A empresa respondeu que reorganizaria as etapas.
 
 Na passagem que emprega “Para”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -536,10 +536,10 @@ Revisor/data: pendentes.
 
 ## P29 — Narrador e inferência
 
-ID: d1431000-0000-4000-8000-000000000029. Versão: 1. Dificuldade estimada: medium. Família: P9.
+ID: d1431000-0000-4000-8000-000000000029. Versão: 2. Dificuldade estimada: medium. Família: P9.
 
 Texto autoral para esta atividade:
-Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia em nenhuma fotografia. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O narrador não informa o que ele pensou; a sequência de ações permite uma leitura sobre reconhecimento, sem transformar essa leitura em certeza sobre suas intenções.
+Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia nas fotografias. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O relato encerra-se com essa ação, sem registrar fala ou pensamento do porteiro.
 
 Na passagem que emprega “mas”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -555,10 +555,10 @@ Revisor/data: pendentes.
 
 ## P30 — Generalização e amostragem
 
-ID: d1431000-0000-4000-8000-000000000030. Versão: 1. Dificuldade estimada: medium. Família: P10.
+ID: d1431000-0000-4000-8000-000000000030. Versão: 2. Dificuldade estimada: medium. Família: P10.
 
 Texto autoral para esta atividade:
-Uma enquete divulgada apenas no perfil de um clube mostrou apoio majoritário a ampliar sua sede. O anúncio dizia que a cidade aprovara a proposta. Uma leitora observou que participar do perfil e responder à enquete não são escolhas aleatórias. O resultado descreve os respondentes, mas não autoriza estendê-lo automaticamente à população inteira.
+Uma enquete foi divulgada apenas no perfil de um clube. Entre as 300 respostas, 240 apoiavam ampliar sua sede. O anúncio dizia: A cidade aprova o projeto. A cidade tinha 40 mil moradores, mas o relatório não informou como os seguidores do perfil se distribuíam entre bairros nem quem decidiu responder.
 
 Na passagem que emprega “mas”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -574,10 +574,10 @@ Revisor/data: pendentes.
 
 ## P31 — Polissemia e contexto
 
-ID: d1431000-0000-4000-8000-000000000031. Versão: 1. Dificuldade estimada: medium. Família: P11.
+ID: d1431000-0000-4000-8000-000000000031. Versão: 2. Dificuldade estimada: medium. Família: P11.
 
 Texto autoral para esta atividade:
-No relatório financeiro, a comissão pediu que a proposta fosse revista. No relato do passeio, uma aluna disse que queria rever a cidade. As duas formas pertencem ao mesmo verbo, mas os complementos e a situação de uso orientam sentidos diferentes. Um leitor que substitua as duas por corrigir preserva melhor a primeira intenção que a segunda.
+A comissão pediu que a proposta financeira fosse revista. Ao comentar um passeio, uma aluna disse que queria rever a cidade. Um colega sugeriu empregar corrigir nas duas frases, mas a editora pediu que ele considerasse o complemento e a situação de cada ocorrência.
 
 Na passagem que emprega “mas”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -593,10 +593,10 @@ Revisor/data: pendentes.
 
 ## P32 — Pontuação e abrangência
 
-ID: d1431000-0000-4000-8000-000000000032. Versão: 1. Dificuldade estimada: medium. Família: P12.
+ID: d1431000-0000-4000-8000-000000000032. Versão: 2. Dificuldade estimada: medium. Família: P12.
 
 Texto autoral para esta atividade:
-Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Uma segunda versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras são as mesmas, porém as vírgulas mudam o alcance da informação: na primeira versão, a solicitação delimita um grupo; na segunda, aparece como explicação associada ao conjunto mencionado.
+Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Outra versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras eram as mesmas, porém a equipe precisava decidir se o aviso se referia apenas aos solicitantes ou ao conjunto dos moradores mencionado no documento.
 
 Na passagem que emprega “porém”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -612,10 +612,10 @@ Revisor/data: pendentes.
 
 ## P33 — Voz verbal e responsabilidade
 
-ID: d1431000-0000-4000-8000-000000000033. Versão: 1. Dificuldade estimada: medium. Família: P13.
+ID: d1431000-0000-4000-8000-000000000033. Versão: 2. Dificuldade estimada: medium. Família: P13.
 
 Texto autoral para esta atividade:
-A nota dizia: Foram eliminados os registros duplicados. O relatório posterior informou: A equipe de cadastro eliminou os registros duplicados. Ambos descrevem a ação, mas a primeira formulação deixa o agente sem identificação; a segunda o explicita. Em um pedido de prestação de contas, essa diferença pode ser relevante, embora não demonstre, sozinha, intenção de esconder responsabilidade.
+A nota dizia: Foram eliminados os registros duplicados. O relatório posterior dizia: A equipe de cadastro eliminou os registros duplicados. Embora os documentos tratassem da mesma ação, uma solicitação de prestação de contas pedia também a identificação de quem a executou.
 
 Na passagem que emprega “embora”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -631,10 +631,10 @@ Revisor/data: pendentes.
 
 ## P34 — Concordância e norma-padrão
 
-ID: d1431000-0000-4000-8000-000000000034. Versão: 1. Dificuldade estimada: medium. Família: P14.
+ID: d1431000-0000-4000-8000-000000000034. Versão: 2. Dificuldade estimada: medium. Família: P14.
 
 Texto autoral para esta atividade:
-Na revisão de um relatório, apareceram duas frases: Fazem três meses que o projeto começou e Houveram alterações no cronograma. A editora explicou que fazer indicando tempo decorrido e haver com sentido de existir são impessoais. A correção deve considerar a função de cada verbo no contexto, e não a aparência plural das expressões que o acompanham.
+Uma editora encontrou no relatório: Fazem três meses que o projeto começou. Na página seguinte, leu: Houveram alterações no cronograma. Ela pediu a revisão das formas verbais, e não apenas a troca dos termos meses e alterações por palavras no singular.
 
 Na passagem que emprega “e não”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -650,10 +650,10 @@ Revisor/data: pendentes.
 
 ## P35 — Regência e mudança de sentido
 
-ID: d1431000-0000-4000-8000-000000000035. Versão: 1. Dificuldade estimada: medium. Família: P15.
+ID: d1431000-0000-4000-8000-000000000035. Versão: 2. Dificuldade estimada: medium. Família: P15.
 
 Texto autoral para esta atividade:
-A revisora encontrou: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. Na norma-padrão, assistir no sentido de ver pede a preposição a; no sentido de prestar assistência, pode ter complemento direto. Corrigir automaticamente as duas frases da mesma maneira apagaria a diferença de sentido e regência apresentada pelo contexto.
+No relatório, constavam: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. A primeira frase tratava da exibição de um filme; a segunda, da ajuda prestada no laboratório. A revisora avaliou a regência de assistir no sentido de cada ação descrita.
 
 Na passagem que emprega “no sentido de”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -669,10 +669,10 @@ Revisor/data: pendentes.
 
 ## P36 — Crase e comparação de construções
 
-ID: d1431000-0000-4000-8000-000000000036. Versão: 1. Dificuldade estimada: medium. Família: P16.
+ID: d1431000-0000-4000-8000-000000000036. Versão: 2. Dificuldade estimada: medium. Família: P16.
 
 Texto autoral para esta atividade:
-Em uma ficha de viagem, a editora comparou: Entregou o documento à diretora e Entregou o documento a uma diretora. Na primeira, a preposição exigida por entregar encontra o artigo feminino definido; na segunda, uma é artigo indefinido. A marca de crase não se decide apenas pela presença de palavra feminina, mas pela combinação das formas gramaticais.
+A ficha registrava: Entregou o documento à diretora. Outra registrava: Entregou o documento a uma diretora. Uma estudante propôs pôr acento grave nas duas, mas a editora pediu que ela comparasse os artigos e a preposição exigida pelo verbo.
 
 Na passagem que emprega “mas”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -688,10 +688,10 @@ Revisor/data: pendentes.
 
 ## P37 — Ambiguidade sintática
 
-ID: d1431000-0000-4000-8000-000000000037. Versão: 1. Dificuldade estimada: medium. Família: P17.
+ID: d1431000-0000-4000-8000-000000000037. Versão: 2. Dificuldade estimada: medium. Família: P17.
 
 Texto autoral para esta atividade:
-O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou a quem se referia sua. O redator decidiu substituir a expressão por a inscrição da aluna. A mudança manteve a informação pretendida e reduziu uma ambiguidade que não poderia ser resolvida apenas pela forma do pronome possessivo.
+O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou de quem era a inscrição. O redator a substituiu por a inscrição da aluna e manteve o restante da informação. A alteração passou a constar na edição seguinte.
 
 Na passagem que emprega “e”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -707,10 +707,10 @@ Revisor/data: pendentes.
 
 ## P38 — Metáfora e argumentação
 
-ID: d1431000-0000-4000-8000-000000000038. Versão: 1. Dificuldade estimada: medium. Família: P18.
+ID: d1431000-0000-4000-8000-000000000038. Versão: 2. Dificuldade estimada: medium. Família: P18.
 
 Texto autoral para esta atividade:
-O editorial chamou a falta de planejamento de um buraco no orçamento. Não descrevia uma abertura física: relacionava a insuficiência de recursos a uma imagem de ausência. A metáfora tornou o problema mais concreto para o leitor, mas não substituiu os números necessários para dimensioná-lo. A expressividade da frase e sua capacidade de provar uma conclusão são aspectos diferentes.
+O editorial chamou a falta de planejamento de um buraco no orçamento. Na sequência, apresentou receitas e despesas para dimensionar o problema. Um leitor destacou a imagem expressiva, mas outro pediu que a avaliação se baseasse também nos valores documentados.
 
 Na passagem que emprega “mas”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -726,10 +726,10 @@ Revisor/data: pendentes.
 
 ## P39 — Discurso e atribuição de informação
 
-ID: d1431000-0000-4000-8000-000000000039. Versão: 1. Dificuldade estimada: medium. Família: P19.
+ID: d1431000-0000-4000-8000-000000000039. Versão: 2. Dificuldade estimada: medium. Família: P19.
 
 Texto autoral para esta atividade:
-A notícia informou: Segundo a pesquisadora, o novo material pode reduzir perdas. Na edição seguinte, apareceu: O novo material reduz perdas. A retirada da fonte e do verbo modal aproximou a segunda frase de uma afirmação assumida pelo veículo. Não se trata apenas de encurtar o período: muda-se a maneira de apresentar a responsabilidade e o grau de certeza da informação.
+A notícia dizia: Segundo a pesquisadora, o material pode reduzir perdas. Na edição seguinte, apareceu: O material reduz perdas. A mudança retirou palavras da frase, sem acrescentar dados ou resultados ao conteúdo publicado.
 
 Na passagem que emprega “Segundo”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -745,10 +745,10 @@ Revisor/data: pendentes.
 
 ## P40 — Condição necessária e conclusão
 
-ID: d1431000-0000-4000-8000-000000000040. Versão: 1. Dificuldade estimada: medium. Família: P20.
+ID: d1431000-0000-4000-8000-000000000040. Versão: 2. Dificuldade estimada: medium. Família: P20.
 
 Texto autoral para esta atividade:
-O regulamento informa: A inscrição será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. O uso de e reúne requisitos; cumprir apenas um deles não satisfaz a condição descrita. Interpretar a frase como se trouxesse ou alteraria os critérios do regulamento.
+O regulamento dizia: A inscrição só será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. Uma colega sugeriu que ele relesse os dois requisitos antes de reclamar.
 
 Na passagem que emprega “se”, qual análise do papel dessa expressão é compatível com a organização do argumento?
 
@@ -764,770 +764,770 @@ Revisor/data: pendentes.
 
 ## P41 — Leitura crítica de dados
 
-ID: d1431000-0000-4000-8000-000000000041. Versão: 1. Dificuldade estimada: medium. Família: P1.
+ID: d1431000-0000-4000-8000-000000000041. Versão: 2. Dificuldade estimada: medium. Família: P1.
 
 Texto autoral para esta atividade:
-A biblioteca ampliou o horário de funcionamento. O número de empréstimos subiu, mas a quantidade de usuários distintos permaneceu estável. A direção comemorou a maior circulação dos livros; o conselho pediu cautela: empréstimos adicionais podem ter sido feitos pelas mesmas pessoas. Embora a mudança pareça útil, ainda não se sabe se ela alcançou novos leitores.
+A biblioteca ampliou o horário. Em dois meses comparáveis, os empréstimos passaram de 800 para 1.100, mas o número de usuários distintos permaneceu em 200. A direção comemorou a circulação maior; o conselho solicitou os registros de novos cadastros. Embora o relatório destaque o crescimento, não informa quem fez os empréstimos adicionais.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** O número de novos leitores cresceu na mesma proporção dos empréstimos.
-- **B)** Cada usuário passou a tomar exatamente um livro a mais.
-- **C)** A ampliação do horário não produziu mudança no uso dos livros.
+- **A)** Horário ampliado atrai novos leitores à biblioteca
+- **B)** Mais empréstimos apesar da redução de usuários
+- **C)** Acervo maior explica aumento dos empréstimos
 - **D)** Empréstimos crescem; alcance permanece em investigação
-- **E)** A estabilidade dos usuários invalida qualquer benefício da mudança.
+- **E)** Empréstimos estáveis e novos cadastros em alta
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Empréstimos crescem; alcance permanece em investigação” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Empréstimos crescem; alcance permanece em investigação” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P42 — Argumentação e causalidade
 
-ID: d1431000-0000-4000-8000-000000000042. Versão: 1. Dificuldade estimada: medium. Família: P2.
+ID: d1431000-0000-4000-8000-000000000042. Versão: 2. Dificuldade estimada: medium. Família: P2.
 
 Texto autoral para esta atividade:
-Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Os lojistas atribuem o resultado à ciclovia. O pesquisador não descarta essa hipótese, porém observa que mudanças simultâneas impedem atribuir o crescimento a uma causa isolada.
+Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Um lojista declarou: Foi a ciclovia que trouxe o crescimento. O levantamento apresenta os totais anteriores e posteriores, porém não compara ruas com condições semelhantes.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A sequência temporal demonstra que a ciclovia foi a única causa das vendas.
+- **A)** Nova estação reduz procura pelas lojas da rua
 - **B)** Vendas em alta, causas ainda a distinguir
-- **C)** A abertura da estação elimina qualquer contribuição da ciclovia.
-- **D)** A feira, sozinha, explica necessariamente o crescimento das duas lojas.
-- **E)** Sem uma causa isolada, é possível concluir que as vendas não cresceram.
+- **C)** Ciclovia isolada explica alta do comércio local
+- **D)** Feira responde pela alta após instalação de ciclovia
+- **E)** Vendas caem durante mudanças no bairro
 
-**Gabarito: B.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Vendas em alta, causas ainda a distinguir” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: B.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Vendas em alta, causas ainda a distinguir” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P43 — Ironia e crítica social
 
-ID: d1431000-0000-4000-8000-000000000043. Versão: 1. Dificuldade estimada: medium. Família: P3.
+ID: d1431000-0000-4000-8000-000000000043. Versão: 2. Dificuldade estimada: medium. Família: P3.
 
 Texto autoral para esta atividade:
-O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto; quando o ônibus atrasou, recebeu seis notificações explicando que o horário era apenas estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Seu comentário foi recebido com risos, mas apontava uma tensão entre a promessa e o uso efetivo da tecnologia.
+O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto. Quando o ônibus atrasou, recebeu seis notificações de que o horário era estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Os colegas riram, mas continuaram na fila esperando o veículo.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A estimativa de horário equivale a uma garantia de pontualidade.
-- **B)** Os risos demonstram que o ônibus chegou dentro da previsão.
-- **C)** Lara considera as notificações uma economia comprovada de tempo.
-- **D)** A crítica se dirige exclusivamente ao número de passageiros do ônibus.
+- **A)** Lara comemora o tempo poupado pelo aplicativo
+- **B)** Notificações substituem o tempo gasto na fila
+- **C)** Previsões do aplicativo tornam o ônibus pontual
+- **D)** Colegas criticam a falta de notificações de atraso
 - **E)** A promessa de poupar tempo e o custo de acompanhar o atraso
 
-**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “A promessa de poupar tempo e o custo de acompanhar o atraso” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “A promessa de poupar tempo e o custo de acompanhar o atraso” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P44 — Modalização e certeza
 
-ID: d1431000-0000-4000-8000-000000000044. Versão: 1. Dificuldade estimada: medium. Família: P4.
+ID: d1431000-0000-4000-8000-000000000044. Versão: 2. Dificuldade estimada: medium. Família: P4.
 
 Texto autoral para esta atividade:
-Um estudo acompanhou pequenas hortas em três escolas. As turmas participantes relataram maior interesse por alimentação. Os autores afirmam que a atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia transformou a conclusão em: Hortas garantem mudança alimentar. Ao retirar as ressalvas, o título ampliou a força da afirmação além do que os dados permitiam.
+Um estudo acompanhou hortas em três escolas e registrou relatos de maior interesse por alimentação. Os autores escreveram: A atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia foi publicada com o título Hortas garantem mudança alimentar. O texto da reportagem não acrescentava observações sobre os hábitos alimentares posteriores.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A palavra pode, no estudo, exprime uma obrigação legal de mudar hábitos.
-- **B)** O relato de interesse comprova mudança alimentar permanente em toda escola.
+- **A)** Título preserva a hipótese formulada no estudo
+- **B)** Hortas reduzem interesse dos alunos por alimentação
 - **C)** Da possibilidade observada à certeza indevida no título
-- **D)** O tamanho do grupo torna impossível observar qualquer resultado local.
-- **E)** A notícia manteve a mesma cautela expressa pelos autores do estudo.
+- **D)** Estudo compara hábitos de todas as escolas
+- **E)** Três hortas comprovam novos hábitos permanentes
 
-**Gabarito: C.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Da possibilidade observada à certeza indevida no título” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: C.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Da possibilidade observada à certeza indevida no título” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P45 — Pressupostos e escolhas lexicais
 
-ID: d1431000-0000-4000-8000-000000000045. Versão: 1. Dificuldade estimada: medium. Família: P5.
+ID: d1431000-0000-4000-8000-000000000045. Versão: 2. Dificuldade estimada: medium. Família: P5.
 
 Texto autoral para esta atividade:
-No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante destacou que voltar sugere uma escuta anterior interrompida; outro perguntou se essa escuta havia sido ampla ou apenas formal. A discussão mostrou que a escolha de um verbo pode carregar uma informação não apresentada como afirmação principal.
+No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante perguntou quando havia ocorrido a escuta anterior; outra perguntou se ela havia sido ampla ou apenas formal. O registro da reunião não traz resposta a essas perguntas.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A existência de escuta anterior comprova concordância de todos os moradores.
-- **B)** A participante nega que o vereador tenha usado um verbo com sentido temporal.
-- **C)** A frase afirma diretamente que todos os moradores foram ouvidos antes.
+- **A)** Moradores concordam com o projeto da praça
+- **B)** Perguntas encerram a necessidade de ouvir moradores
+- **C)** Ouvir os moradores pela primeira vez
 - **D)** O passado pressuposto em uma proposta de escuta
-- **E)** Voltar elimina qualquer referência a momentos anteriores do debate.
+- **E)** Proposta comprova ampla participação anterior
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “O passado pressuposto em uma proposta de escuta” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “O passado pressuposto em uma proposta de escuta” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P46 — Coesão e referência
 
-ID: d1431000-0000-4000-8000-000000000046. Versão: 1. Dificuldade estimada: medium. Família: P6.
+ID: d1431000-0000-4000-8000-000000000046. Versão: 2. Dificuldade estimada: medium. Família: P6.
 
 Texto autoral para esta atividade:
-A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Essa divisão evitou que visitantes precisassem receber um mapa para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
+A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Visitantes consultavam os painéis para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** Essa divisão indica que os mapas foram fixados nos portões.
-- **B)** A instalação dos painéis torna desnecessária a revisão dos caminhos.
-- **C)** Os dois recursos designa exclusivamente dois mapas entregues a visitantes.
+- **A)** Mapas fixados nos portões orientam visitantes
+- **B)** Estudantes deixam de receber mapas do bairro
+- **C)** Obras confirmam a estabilidade dos caminhos
 - **D)** Informação distribuída em recursos distintos, atualização comum
-- **E)** Primeiros e segundos retomam dois grupos de estudantes citados no texto.
+- **E)** Painéis substituem mapas e dispensam atualização
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Informação distribuída em recursos distintos, atualização comum” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Informação distribuída em recursos distintos, atualização comum” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P47 — Comparação de argumentos
 
-ID: d1431000-0000-4000-8000-000000000047. Versão: 1. Dificuldade estimada: medium. Família: P7.
+ID: d1431000-0000-4000-8000-000000000047. Versão: 2. Dificuldade estimada: medium. Família: P7.
 
 Texto autoral para esta atividade:
-O texto de um fabricante destaca que uma embalagem usa menos plástico. O relatório de uma cooperativa observa que ela combina materiais difíceis de separar. As duas informações podem ser verdadeiras: reduzir massa não equivale a facilitar reciclagem. Uma avaliação ambiental precisa considerar etapas diferentes, sem escolher um único indicador como resposta completa.
+Um fabricante informou que sua embalagem usava 20% menos plástico. Uma cooperativa observou que ela combinava materiais difíceis de separar nos equipamentos disponíveis. O relatório final pediu uma avaliação da produção e da destinação, sem apresentar um único indicador como resposta para todas as etapas.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A dificuldade de separar materiais demonstra que a embalagem usa mais plástico.
-- **B)** A redução de massa garante que o material seja reciclado em qualquer cidade.
-- **C)** A reciclagem elimina a relevância de medir a massa de material consumida.
+- **A)** Menos plástico garante destinação mais eficiente
+- **B)** Materiais combinados aumentam o consumo de plástico
+- **C)** Peso da embalagem basta para avaliar seu ciclo
 - **D)** Menos material não resolve sozinho a avaliação ambiental
-- **E)** O relatório da cooperativa contradiz necessariamente a informação do fabricante.
+- **E)** Cooperativa rejeita a redução informada pelo fabricante
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Menos material não resolve sozinho a avaliação ambiental” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Menos material não resolve sozinho a avaliação ambiental” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P48 — Conectivos e estrutura lógica
 
-ID: d1431000-0000-4000-8000-000000000048. Versão: 1. Dificuldade estimada: medium. Família: P8.
+ID: d1431000-0000-4000-8000-000000000048. Versão: 2. Dificuldade estimada: medium. Família: P8.
 
 Texto autoral para esta atividade:
-O conselho não se opôs à reforma porque rejeitasse a acessibilidade. Contestou o projeto porque a obra retiraria a única rota de passagem antes de criar uma alternativa. Para os conselheiros, a mesma finalidade pode exigir outra sequência de execução. Confundir a crítica ao procedimento com oposição ao objetivo reduz o debate a uma falsa escolha.
+O conselho apoiou a finalidade de ampliar a acessibilidade, mas contestou a sequência proposta para a reforma: a única passagem seria fechada antes de a alternativa ficar pronta. Para os conselheiros, o plano deveria manter uma rota durante toda a obra. A empresa respondeu que reorganizaria as etapas.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** O conselho rejeita a acessibilidade como finalidade da reforma.
-- **B)** Os conselheiros consideram a sequência de execução irrelevante para o projeto.
-- **C)** A oposição ao procedimento implica rejeição de toda reforma possível.
+- **A)** Conselho rejeita a acessibilidade na reforma
+- **B)** Nova sequência recebe crítica ao objetivo da reforma
+- **C)** Empresa elimina a rota alternativa do projeto
 - **D)** Um objetivo comum pode exigir outro procedimento
-- **E)** A passagem alternativa já havia sido criada antes da contestação.
+- **E)** Manter passagem exige cancelar a obra
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Um objetivo comum pode exigir outro procedimento” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Um objetivo comum pode exigir outro procedimento” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P49 — Narrador e inferência
 
-ID: d1431000-0000-4000-8000-000000000049. Versão: 1. Dificuldade estimada: medium. Família: P9.
+ID: d1431000-0000-4000-8000-000000000049. Versão: 2. Dificuldade estimada: medium. Família: P9.
 
 Texto autoral para esta atividade:
-Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia em nenhuma fotografia. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O narrador não informa o que ele pensou; a sequência de ações permite uma leitura sobre reconhecimento, sem transformar essa leitura em certeza sobre suas intenções.
+Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia nas fotografias. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O relato encerra-se com essa ação, sem registrar fala ou pensamento do porteiro.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A ausência nas fotos prova que o porteiro desconhecia os convidados.
-- **B)** O narrador declara que o porteiro desejava receber o prêmio principal.
-- **C)** A medalha foi entregue oficialmente ao porteiro pela organização.
+- **A)** Medalha comprova a intenção de disputar o prêmio
+- **B)** Porteiro recebe homenagem oficial na cerimônia
+- **C)** Fotografias registram reconhecimento do porteiro
 - **D)** Presença no trabalho, ausência no registro da festa
-- **E)** Conhecer as placas demonstra que o porteiro era um dos homenageados.
+- **E)** Porteiro desconhece os nomes dos convidados
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Presença no trabalho, ausência no registro da festa” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Presença no trabalho, ausência no registro da festa” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P50 — Generalização e amostragem
 
-ID: d1431000-0000-4000-8000-000000000050. Versão: 1. Dificuldade estimada: medium. Família: P10.
+ID: d1431000-0000-4000-8000-000000000050. Versão: 2. Dificuldade estimada: medium. Família: P10.
 
 Texto autoral para esta atividade:
-Uma enquete divulgada apenas no perfil de um clube mostrou apoio majoritário a ampliar sua sede. O anúncio dizia que a cidade aprovara a proposta. Uma leitora observou que participar do perfil e responder à enquete não são escolhas aleatórias. O resultado descreve os respondentes, mas não autoriza estendê-lo automaticamente à população inteira.
+Uma enquete foi divulgada apenas no perfil de um clube. Entre as 300 respostas, 240 apoiavam ampliar sua sede. O anúncio dizia: A cidade aprova o projeto. A cidade tinha 40 mil moradores, mas o relatório não informou como os seguidores do perfil se distribuíam entre bairros nem quem decidiu responder.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** Uma enquete em rede social representa necessariamente todos os bairros.
-- **B)** A maioria no perfil prova que os habitantes que não responderam concordam.
-- **C)** A ausência de seleção aleatória impede descrever os próprios respondentes.
-- **D)** A divulgação em um clube garante proporção igual de opiniões favoráveis e contrárias.
+- **A)** Moradores de toda a cidade aprovam ampliação
+- **B)** Maioria da cidade acompanha o perfil do clube
+- **C)** Enquete representa bairros em proporções iguais
+- **D)** Falta de amostragem invalida contagem das respostas
 - **E)** Da opinião dos respondentes à generalização sobre a cidade
 
-**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Da opinião dos respondentes à generalização sobre a cidade” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Da opinião dos respondentes à generalização sobre a cidade” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P51 — Polissemia e contexto
 
-ID: d1431000-0000-4000-8000-000000000051. Versão: 1. Dificuldade estimada: medium. Família: P11.
+ID: d1431000-0000-4000-8000-000000000051. Versão: 2. Dificuldade estimada: medium. Família: P11.
 
 Texto autoral para esta atividade:
-No relatório financeiro, a comissão pediu que a proposta fosse revista. No relato do passeio, uma aluna disse que queria rever a cidade. As duas formas pertencem ao mesmo verbo, mas os complementos e a situação de uso orientam sentidos diferentes. Um leitor que substitua as duas por corrigir preserva melhor a primeira intenção que a segunda.
+A comissão pediu que a proposta financeira fosse revista. Ao comentar um passeio, uma aluna disse que queria rever a cidade. Um colega sugeriu empregar corrigir nas duas frases, mas a editora pediu que ele considerasse o complemento e a situação de cada ocorrência.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
 - **A)** Um verbo, duas leituras orientadas pelo contexto
-- **B)** Os complementos não contribuem para interpretar o sentido do verbo.
-- **C)** Rever possui obrigatoriamente sentido idêntico nos dois contextos.
-- **D)** A proposta foi mencionada apenas como um local a visitar novamente.
-- **E)** A cidade é um erro administrativo que a aluna pretende corrigir.
+- **B)** A proposta e a cidade exigem a mesma revisão
+- **C)** Rever conserva o mesmo sentido nos dois relatos
+- **D)** O sentido do verbo dispensa seus complementos
+- **E)** Corrigir substitui rever no relato do passeio
 
-**Gabarito: A.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Um verbo, duas leituras orientadas pelo contexto” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: A.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Um verbo, duas leituras orientadas pelo contexto” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P52 — Pontuação e abrangência
 
-ID: d1431000-0000-4000-8000-000000000052. Versão: 1. Dificuldade estimada: medium. Família: P12.
+ID: d1431000-0000-4000-8000-000000000052. Versão: 2. Dificuldade estimada: medium. Família: P12.
 
 Texto autoral para esta atividade:
-Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Uma segunda versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras são as mesmas, porém as vírgulas mudam o alcance da informação: na primeira versão, a solicitação delimita um grupo; na segunda, aparece como explicação associada ao conjunto mencionado.
+Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Outra versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras eram as mesmas, porém a equipe precisava decidir se o aviso se referia apenas aos solicitantes ou ao conjunto dos moradores mencionado no documento.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
 - **A)** As mesmas palavras, diferentes limites de um grupo
-- **B)** A segunda versão restringe mais o conjunto de moradores que a primeira.
-- **C)** A oração relativa não interfere no alcance do substantivo moradores.
-- **D)** As vírgulas conservam exatamente a mesma delimitação dos moradores nas duas versões.
-- **E)** A primeira versão afirma que nenhum morador pediu vistoria.
+- **B)** Oração explicativa seleciona apenas solicitantes
+- **C)** A pontuação muda o momento da vistoria
+- **D)** Vírgulas preservam o mesmo grupo de destinatários
+- **E)** Aviso sem vírgulas abrange todos os moradores
 
-**Gabarito: A.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “As mesmas palavras, diferentes limites de um grupo” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: A.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “As mesmas palavras, diferentes limites de um grupo” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P53 — Voz verbal e responsabilidade
 
-ID: d1431000-0000-4000-8000-000000000053. Versão: 1. Dificuldade estimada: medium. Família: P13.
+ID: d1431000-0000-4000-8000-000000000053. Versão: 2. Dificuldade estimada: medium. Família: P13.
 
 Texto autoral para esta atividade:
-A nota dizia: Foram eliminados os registros duplicados. O relatório posterior informou: A equipe de cadastro eliminou os registros duplicados. Ambos descrevem a ação, mas a primeira formulação deixa o agente sem identificação; a segunda o explicita. Em um pedido de prestação de contas, essa diferença pode ser relevante, embora não demonstre, sozinha, intenção de esconder responsabilidade.
+A nota dizia: Foram eliminados os registros duplicados. O relatório posterior dizia: A equipe de cadastro eliminou os registros duplicados. Embora os documentos tratassem da mesma ação, uma solicitação de prestação de contas pedia também a identificação de quem a executou.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A voz passiva impede que o agente seja apresentado em qualquer construção.
-- **B)** A segunda formulação altera necessariamente quais registros foram eliminados.
+- **A)** A equipe é identificada nos dois relatos
+- **B)** Novo relatório muda os registros eliminados
 - **C)** Descrever a ação e identificar quem a executou
-- **D)** A ausência do agente comprova intenção deliberada de fraude.
-- **E)** A primeira formulação nega que alguma pessoa tenha executado a ação.
+- **D)** Ação sem agente significa ação sem responsável
+- **E)** Voz passiva comprova fraude no cadastro
 
-**Gabarito: C.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Descrever a ação e identificar quem a executou” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: C.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Descrever a ação e identificar quem a executou” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P54 — Concordância e norma-padrão
 
-ID: d1431000-0000-4000-8000-000000000054. Versão: 1. Dificuldade estimada: medium. Família: P14.
+ID: d1431000-0000-4000-8000-000000000054. Versão: 2. Dificuldade estimada: medium. Família: P14.
 
 Texto autoral para esta atividade:
-Na revisão de um relatório, apareceram duas frases: Fazem três meses que o projeto começou e Houveram alterações no cronograma. A editora explicou que fazer indicando tempo decorrido e haver com sentido de existir são impessoais. A correção deve considerar a função de cada verbo no contexto, e não a aparência plural das expressões que o acompanham.
+Uma editora encontrou no relatório: Fazem três meses que o projeto começou. Na página seguinte, leu: Houveram alterações no cronograma. Ela pediu a revisão das formas verbais, e não apenas a troca dos termos meses e alterações por palavras no singular.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** Somente Houveram deve ser alterado, porque fazer sempre tem sujeito plural.
-- **B)** Somente Fazem deve ser alterado, porque haver sempre concorda com o termo seguinte.
-- **C)** A impessoalidade exige colocar ambos os verbos na primeira pessoa do plural.
+- **A)** Existir e haver têm a mesma concordância
+- **B)** Singular em meses corrige todas as frases
+- **C)** Indicação de tempo exige sujeito plural
 - **D)** A função dos verbos orienta a concordância
-- **E)** Três meses e alterações funcionam necessariamente como sujeitos dos dois verbos.
+- **E)** Termos plurais exigem plural em qualquer verbo
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “A função dos verbos orienta a concordância” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “A função dos verbos orienta a concordância” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P55 — Regência e mudança de sentido
 
-ID: d1431000-0000-4000-8000-000000000055. Versão: 1. Dificuldade estimada: medium. Família: P15.
+ID: d1431000-0000-4000-8000-000000000055. Versão: 2. Dificuldade estimada: medium. Família: P15.
 
 Texto autoral para esta atividade:
-A revisora encontrou: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. Na norma-padrão, assistir no sentido de ver pede a preposição a; no sentido de prestar assistência, pode ter complemento direto. Corrigir automaticamente as duas frases da mesma maneira apagaria a diferença de sentido e regência apresentada pelo contexto.
+No relatório, constavam: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. A primeira frase tratava da exibição de um filme; a segunda, da ajuda prestada no laboratório. A revisora avaliou a regência de assistir no sentido de cada ação descrita.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** As duas construções expressam apenas o ato de ver uma produção audiovisual.
-- **B)** As duas construções devem obrigatoriamente receber ao antes dos complementos.
-- **C)** A regência é independente do sentido do verbo em cada ocorrência.
+- **A)** Assistir mantém regência única nos dois sentidos
+- **B)** Complemento humano exige preposição em assistir
+- **C)** Filme e ajuda recebem a mesma construção verbal
 - **D)** O sentido de assistir modifica sua regência
-- **E)** A presença de um complemento humano elimina a possibilidade de prestar assistência.
+- **E)** Regência depende do tempo verbal do relatório
 
-**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “O sentido de assistir modifica sua regência” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: D.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “O sentido de assistir modifica sua regência” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P56 — Crase e comparação de construções
 
-ID: d1431000-0000-4000-8000-000000000056. Versão: 1. Dificuldade estimada: medium. Família: P16.
+ID: d1431000-0000-4000-8000-000000000056. Versão: 2. Dificuldade estimada: medium. Família: P16.
 
 Texto autoral para esta atividade:
-Em uma ficha de viagem, a editora comparou: Entregou o documento à diretora e Entregou o documento a uma diretora. Na primeira, a preposição exigida por entregar encontra o artigo feminino definido; na segunda, uma é artigo indefinido. A marca de crase não se decide apenas pela presença de palavra feminina, mas pela combinação das formas gramaticais.
+A ficha registrava: Entregou o documento à diretora. Outra registrava: Entregou o documento a uma diretora. Uma estudante propôs pôr acento grave nas duas, mas a editora pediu que ela comparasse os artigos e a preposição exigida pelo verbo.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** Qualquer substantivo feminino após entregar exige acento grave.
-- **B)** Uma funciona como artigo definido nas duas construções apresentadas.
+- **A)** Palavra feminina basta para o emprego de crase
+- **B)** Artigo indefinido exige acento grave no exemplo
 - **C)** A combinação gramatical, e não só o gênero, explica a crase
-- **D)** O acento grave indica que diretora é o sujeito de entregou.
-- **E)** A preposição deixa de ser exigida sempre que aparece um artigo indefinido.
+- **D)** Acento grave identifica o sujeito da entrega
+- **E)** A preposição é dispensada antes de uma
 
-**Gabarito: C.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “A combinação gramatical, e não só o gênero, explica a crase” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: C.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “A combinação gramatical, e não só o gênero, explica a crase” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P57 — Ambiguidade sintática
 
-ID: d1431000-0000-4000-8000-000000000057. Versão: 1. Dificuldade estimada: medium. Família: P17.
+ID: d1431000-0000-4000-8000-000000000057. Versão: 2. Dificuldade estimada: medium. Família: P17.
 
 Texto autoral para esta atividade:
-O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou a quem se referia sua. O redator decidiu substituir a expressão por a inscrição da aluna. A mudança manteve a informação pretendida e reduziu uma ambiguidade que não poderia ser resolvida apenas pela forma do pronome possessivo.
+O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou de quem era a inscrição. O redator a substituiu por a inscrição da aluna e manteve o restante da informação. A alteração passou a constar na edição seguinte.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A substituição cria um novo referente que não havia aparecido no relato.
+- **A)** A troca do verbo esclarece o dono da inscrição
 - **B)** Explicitar o referente para reduzir ambiguidade
-- **C)** Sua identifica exclusivamente a professora em qualquer contexto.
-- **D)** A leitura do pronome é determinada sem qualquer apoio do contexto.
-- **E)** A ambiguidade decorre apenas da flexão incompleta do verbo informar.
+- **C)** Possessivo identifica apenas a professora
+- **D)** O redator muda o estado da inscrição
+- **E)** Sua e dela eliminam igualmente a ambiguidade
 
-**Gabarito: B.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Explicitar o referente para reduzir ambiguidade” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: B.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Explicitar o referente para reduzir ambiguidade” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P58 — Metáfora e argumentação
 
-ID: d1431000-0000-4000-8000-000000000058. Versão: 1. Dificuldade estimada: medium. Família: P18.
+ID: d1431000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: medium. Família: P18.
 
 Texto autoral para esta atividade:
-O editorial chamou a falta de planejamento de um buraco no orçamento. Não descrevia uma abertura física: relacionava a insuficiência de recursos a uma imagem de ausência. A metáfora tornou o problema mais concreto para o leitor, mas não substituiu os números necessários para dimensioná-lo. A expressividade da frase e sua capacidade de provar uma conclusão são aspectos diferentes.
+O editorial chamou a falta de planejamento de um buraco no orçamento. Na sequência, apresentou receitas e despesas para dimensionar o problema. Um leitor destacou a imagem expressiva, mas outro pediu que a avaliação se baseasse também nos valores documentados.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** A metáfora comprova numericamente a insuficiência dos recursos.
+- **A)** A imagem do buraco comprova o déficit exato
 - **B)** Uma imagem ajuda a explicar, dados ajudam a demonstrar
-- **C)** O editorial elimina o sentido figurado ao mencionar planejamento.
-- **D)** Uma imagem expressiva dispensa todos os dados para avaliar o problema.
-- **E)** Buraco no orçamento descreve uma perfuração física nos documentos financeiros.
+- **C)** Editorial relata dano físico aos documentos
+- **D)** Reação dos leitores dimensiona o orçamento
+- **E)** Receitas e despesas substituem o sentido figurado
 
-**Gabarito: B.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Uma imagem ajuda a explicar, dados ajudam a demonstrar” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: B.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Uma imagem ajuda a explicar, dados ajudam a demonstrar” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P59 — Discurso e atribuição de informação
 
-ID: d1431000-0000-4000-8000-000000000059. Versão: 1. Dificuldade estimada: medium. Família: P19.
+ID: d1431000-0000-4000-8000-000000000059. Versão: 2. Dificuldade estimada: medium. Família: P19.
 
 Texto autoral para esta atividade:
-A notícia informou: Segundo a pesquisadora, o novo material pode reduzir perdas. Na edição seguinte, apareceu: O novo material reduz perdas. A retirada da fonte e do verbo modal aproximou a segunda frase de uma afirmação assumida pelo veículo. Não se trata apenas de encurtar o período: muda-se a maneira de apresentar a responsabilidade e o grau de certeza da informação.
+A notícia dizia: Segundo a pesquisadora, o material pode reduzir perdas. Na edição seguinte, apareceu: O material reduz perdas. A mudança retirou palavras da frase, sem acrescentar dados ou resultados ao conteúdo publicado.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** As duas versões apresentam necessariamente o mesmo grau de certeza e atribuição.
-- **B)** Pode reduzir exprime resultado inevitável, equivalente a reduz em qualquer caso.
-- **C)** Segundo a pesquisadora indica discordância obrigatória do veículo com a fonte.
-- **D)** A edição acrescentou uma nova fonte explícita para responsabilizar pela informação.
+- **A)** Notícia mais curta preserva a mesma certeza
+- **B)** Fonte citada torna a conclusão uma obrigação
+- **C)** Nova edição acrescenta comprovação do resultado
+- **D)** Pode reduzir equivale a resultado garantido
 - **E)** Fonte e possibilidade desaparecem em uma versão mais assertiva
 
-**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Fonte e possibilidade desaparecem em uma versão mais assertiva” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Fonte e possibilidade desaparecem em uma versão mais assertiva” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P60 — Condição necessária e conclusão
 
-ID: d1431000-0000-4000-8000-000000000060. Versão: 1. Dificuldade estimada: medium. Família: P20.
+ID: d1431000-0000-4000-8000-000000000060. Versão: 2. Dificuldade estimada: medium. Família: P20.
 
 Texto autoral para esta atividade:
-O regulamento informa: A inscrição será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. O uso de e reúne requisitos; cumprir apenas um deles não satisfaz a condição descrita. Interpretar a frase como se trouxesse ou alteraria os critérios do regulamento.
+O regulamento dizia: A inscrição só será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. Uma colega sugeriu que ele relesse os dois requisitos antes de reclamar.
 
-Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
+Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?
 
-- **A)** O regulamento aceita necessariamente inscrições sem comprovante.
-- **B)** A recusa demonstra que Rui deixou de preencher o formulário.
-- **C)** Completar o formulário é suficiente, pois os requisitos são alternativos.
-- **D)** Substituir e por ou preserva obrigatoriamente os mesmos critérios de aceitação.
+- **A)** Enviar comprovante substitui todo preenchimento
+- **B)** Requisitos alternativos explicam a recusa
+- **C)** Formulário preenchido basta para a aceitação
+- **D)** Recusa demonstra formulário incompleto
 - **E)** Dois requisitos conjuntos não equivalem a duas alternativas
 
-**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Dois requisitos conjuntos não equivalem a duas alternativas” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.
+**Gabarito: E.** O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “Dois requisitos conjuntos não equivalem a duas alternativas” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.
 
 Revisor/data: pendentes.
 
 ## P61 — Leitura crítica de dados
 
-ID: d1431000-0000-4000-8000-000000000061. Versão: 1. Dificuldade estimada: hard. Família: P1.
+ID: d1431000-0000-4000-8000-000000000061. Versão: 2. Dificuldade estimada: medium. Família: P1.
 
 Texto autoral para esta atividade:
-A biblioteca ampliou o horário de funcionamento. O número de empréstimos subiu, mas a quantidade de usuários distintos permaneceu estável. A direção comemorou a maior circulação dos livros; o conselho pediu cautela: empréstimos adicionais podem ter sido feitos pelas mesmas pessoas. Embora a mudança pareça útil, ainda não se sabe se ela alcançou novos leitores.
+A biblioteca ampliou o horário. Em dois meses comparáveis, os empréstimos passaram de 800 para 1.100, mas o número de usuários distintos permaneceu em 200. A direção comemorou a circulação maior; o conselho solicitou os registros de novos cadastros. Embora o relatório destaque o crescimento, não informa quem fez os empréstimos adicionais.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Empréstimos aumentaram, mas o número de usuários ficou estável.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A estabilidade dos usuários invalida qualquer benefício da mudança.
-- **B)** O número de novos leitores cresceu na mesma proporção dos empréstimos.
-- **C)** Cada usuário passou a tomar exatamente um livro a mais.
-- **D)** O uso do acervo cresceu sem evidência de ampliação do número de leitores.
-- **E)** A ampliação do horário não produziu mudança no uso dos livros.
+- **A)** Os empréstimos aumentaram, portanto o número de usuários também aumentou.
+- **B)** Como os empréstimos aumentaram, o número de usuários ficou estável.
+- **C)** O número de usuários ficou estável para que os empréstimos aumentassem.
+- **D)** Embora os empréstimos tenham aumentado, o número de usuários ficou estável.
+- **E)** Se os empréstimos aumentarem, o número de usuários ficará estável.
 
-**Gabarito: D.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: D.** A reescrita conserva o contraste e o caráter factual dos dois acontecimentos; as demais acrescentam causa, condição, finalidade ou outro resultado.
 
 Revisor/data: pendentes.
 
 ## P62 — Argumentação e causalidade
 
-ID: d1431000-0000-4000-8000-000000000062. Versão: 1. Dificuldade estimada: hard. Família: P2.
+ID: d1431000-0000-4000-8000-000000000062. Versão: 2. Dificuldade estimada: medium. Família: P2.
 
 Texto autoral para esta atividade:
-Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Os lojistas atribuem o resultado à ciclovia. O pesquisador não descarta essa hipótese, porém observa que mudanças simultâneas impedem atribuir o crescimento a uma causa isolada.
+Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Um lojista declarou: Foi a ciclovia que trouxe o crescimento. O levantamento apresenta os totais anteriores e posteriores, porém não compara ruas com condições semelhantes.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “O levantamento não compara ruas semelhantes, por isso não isola o efeito da ciclovia.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A abertura da estação elimina qualquer contribuição da ciclovia.
-- **B)** A ciclovia pode ter contribuído, mas os dados apresentados não isolam seu efeito.
-- **C)** Sem uma causa isolada, é possível concluir que as vendas não cresceram.
-- **D)** A feira, sozinha, explica necessariamente o crescimento das duas lojas.
-- **E)** A sequência temporal demonstra que a ciclovia foi a única causa das vendas.
+- **A)** O efeito da ciclovia é isolado se não houver comparação entre ruas.
+- **B)** O efeito da ciclovia não é isolado, pois falta comparação entre ruas semelhantes.
+- **C)** A falta de comparação demonstra que a ciclovia não teve efeito.
+- **D)** O levantamento compara ruas semelhantes para não isolar o efeito.
+- **E)** Embora isole o efeito da ciclovia, o levantamento não compara ruas.
 
-**Gabarito: B.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: B.** A relação causal é preservada: falta de comparação limita a atribuição, sem provar ausência de efeito.
 
 Revisor/data: pendentes.
 
 ## P63 — Ironia e crítica social
 
-ID: d1431000-0000-4000-8000-000000000063. Versão: 1. Dificuldade estimada: hard. Família: P3.
+ID: d1431000-0000-4000-8000-000000000063. Versão: 2. Dificuldade estimada: medium. Família: P3.
 
 Texto autoral para esta atividade:
-O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto; quando o ônibus atrasou, recebeu seis notificações explicando que o horário era apenas estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Seu comentário foi recebido com risos, mas apontava uma tensão entre a promessa e o uso efetivo da tecnologia.
+O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto. Quando o ônibus atrasou, recebeu seis notificações de que o horário era estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Os colegas riram, mas continuaram na fila esperando o veículo.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Lara disse: Agora preciso acompanhar o atraso em tempo real.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** Os risos demonstram que o ônibus chegou dentro da previsão.
-- **B)** A fala elogia aparentemente o aplicativo para criticar o tempo gasto em acompanhá-lo.
-- **C)** Lara considera as notificações uma economia comprovada de tempo.
-- **D)** A crítica se dirige exclusivamente ao número de passageiros do ônibus.
-- **E)** A estimativa de horário equivale a uma garantia de pontualidade.
+- **A)** Lara disse que eu precisava acompanhar o atraso em tempo real.
+- **B)** Lara disse que naquele momento precisava acompanhar o atraso em tempo real.
+- **C)** Lara disse que naquele momento precisará acompanhar o atraso em tempo real.
+- **D)** Lara disse que os colegas precisavam acompanhar o atraso em tempo real.
+- **E)** Lara disse que nunca havia precisado acompanhar o atraso em tempo real.
 
-**Gabarito: B.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: B.** O discurso indireto mantém a fala atribuída a Lara e ajusta as referências de pessoa, tempo verbal e momento da enunciação.
 
 Revisor/data: pendentes.
 
 ## P64 — Modalização e certeza
 
-ID: d1431000-0000-4000-8000-000000000064. Versão: 1. Dificuldade estimada: hard. Família: P4.
+ID: d1431000-0000-4000-8000-000000000064. Versão: 2. Dificuldade estimada: medium. Família: P4.
 
 Texto autoral para esta atividade:
-Um estudo acompanhou pequenas hortas em três escolas. As turmas participantes relataram maior interesse por alimentação. Os autores afirmam que a atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia transformou a conclusão em: Hortas garantem mudança alimentar. Ao retirar as ressalvas, o título ampliou a força da afirmação além do que os dados permitiam.
+Um estudo acompanhou hortas em três escolas e registrou relatos de maior interesse por alimentação. Os autores escreveram: A atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia foi publicada com o título Hortas garantem mudança alimentar. O texto da reportagem não acrescentava observações sobre os hábitos alimentares posteriores.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “A atividade pode favorecer o interesse por alimentação.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** O relato de interesse comprova mudança alimentar permanente em toda escola.
-- **B)** O tamanho do grupo torna impossível observar qualquer resultado local.
-- **C)** A notícia manteve a mesma cautela expressa pelos autores do estudo.
-- **D)** A palavra pode, no estudo, exprime uma obrigação legal de mudar hábitos.
-- **E)** O título converte uma possibilidade limitada em garantia geral.
+- **A)** A atividade deve obrigatoriamente favorecer esse interesse.
+- **B)** Está comprovado que a atividade favorece hábitos alimentares permanentes.
+- **C)** A atividade favorecerá o interesse por alimentação.
+- **D)** É impossível que a atividade favoreça esse interesse.
+- **E)** É possível que a atividade favoreça o interesse por alimentação.
 
-**Gabarito: E.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: E.** A possibilidade expressa por pode permanece; previsão certa, obrigação, comprovação de hábitos e impossibilidade alteram o alcance.
 
 Revisor/data: pendentes.
 
 ## P65 — Pressupostos e escolhas lexicais
 
-ID: d1431000-0000-4000-8000-000000000065. Versão: 1. Dificuldade estimada: hard. Família: P5.
+ID: d1431000-0000-4000-8000-000000000065. Versão: 2. Dificuldade estimada: medium. Família: P5.
 
 Texto autoral para esta atividade:
-No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante destacou que voltar sugere uma escuta anterior interrompida; outro perguntou se essa escuta havia sido ampla ou apenas formal. A discussão mostrou que a escolha de um verbo pode carregar uma informação não apresentada como afirmação principal.
+No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante perguntou quando havia ocorrido a escuta anterior; outra perguntou se ela havia sido ampla ou apenas formal. O registro da reunião não traz resposta a essas perguntas.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Precisamos voltar a ouvir os moradores.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A frase afirma diretamente que todos os moradores foram ouvidos antes.
-- **B)** A participante nega que o vereador tenha usado um verbo com sentido temporal.
-- **C)** O verbo voltar pressupõe uma prática anterior, sem provar sua qualidade ou abrangência.
-- **D)** A existência de escuta anterior comprova concordância de todos os moradores.
-- **E)** Voltar elimina qualquer referência a momentos anteriores do debate.
+- **A)** Precisamos começar a ouvir os moradores pela primeira vez.
+- **B)** Precisamos confirmar que todos os moradores foram ouvidos.
+- **C)** Precisamos ouvir novamente os moradores.
+- **D)** Precisamos ouvir somente moradores que já concordaram.
+- **E)** Precisamos parar de ouvir os moradores.
 
-**Gabarito: C.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: C.** Novamente preserva a retomada pressuposta por voltar. A frase não determina quem concordou nem que todos participaram anteriormente.
 
 Revisor/data: pendentes.
 
 ## P66 — Coesão e referência
 
-ID: d1431000-0000-4000-8000-000000000066. Versão: 1. Dificuldade estimada: hard. Família: P6.
+ID: d1431000-0000-4000-8000-000000000066. Versão: 2. Dificuldade estimada: medium. Família: P6.
 
 Texto autoral para esta atividade:
-A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Essa divisão evitou que visitantes precisassem receber um mapa para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
+A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Visitantes consultavam os painéis para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Painéis e mapas são necessários. Ambos precisam de atualização.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** Essa divisão indica que os mapas foram fixados nos portões.
-- **B)** Os dois recursos designa exclusivamente dois mapas entregues a visitantes.
-- **C)** Primeiros e segundos retomam dois grupos de estudantes citados no texto.
-- **D)** Primeiros retoma painéis, e segundos retoma mapas; a divisão não dispensa atualizações.
-- **E)** A instalação dos painéis torna desnecessária a revisão dos caminhos.
+- **A)** Painéis e mapas, que dispensa atualização, são necessários.
+- **B)** Painéis e mapas, o qual precisam de atualização, são necessários.
+- **C)** Painéis e mapas, a qual precisa de atualização, são necessários.
+- **D)** Painéis e mapas, os quais precisam de atualização, são necessários.
+- **E)** Painéis e mapas, cujas precisam de atualização, são necessários.
 
-**Gabarito: D.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: D.** Os quais retoma corretamente o antecedente plural. Cujo exige um substantivo possuído, e as outras formas rompem concordância ou o sentido.
 
 Revisor/data: pendentes.
 
 ## P67 — Comparação de argumentos
 
-ID: d1431000-0000-4000-8000-000000000067. Versão: 1. Dificuldade estimada: hard. Família: P7.
+ID: d1431000-0000-4000-8000-000000000067. Versão: 2. Dificuldade estimada: medium. Família: P7.
 
 Texto autoral para esta atividade:
-O texto de um fabricante destaca que uma embalagem usa menos plástico. O relatório de uma cooperativa observa que ela combina materiais difíceis de separar. As duas informações podem ser verdadeiras: reduzir massa não equivale a facilitar reciclagem. Uma avaliação ambiental precisa considerar etapas diferentes, sem escolher um único indicador como resposta completa.
+Um fabricante informou que sua embalagem usava 20% menos plástico. Uma cooperativa observou que ela combinava materiais difíceis de separar nos equipamentos disponíveis. O relatório final pediu uma avaliação da produção e da destinação, sem apresentar um único indicador como resposta para todas as etapas.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Usar menos plástico não significa, por si só, reciclar com mais facilidade.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A redução de massa garante que o material seja reciclado em qualquer cidade.
-- **B)** O relatório da cooperativa contradiz necessariamente a informação do fabricante.
-- **C)** Menor consumo de plástico pode coexistir com dificuldade de reciclagem.
-- **D)** A reciclagem elimina a relevância de medir a massa de material consumida.
-- **E)** A dificuldade de separar materiais demonstra que a embalagem usa mais plástico.
+- **A)** Reciclar com mais facilidade comprova uso de mais plástico.
+- **B)** Usar menos plástico e reciclar com mais facilidade são equivalentes.
+- **C)** A redução de plástico, isoladamente, não assegura reciclagem mais fácil.
+- **D)** A separação de materiais assegura redução de massa em qualquer produto.
+- **E)** A redução de plástico impede qualquer reciclagem.
 
-**Gabarito: C.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: C.** A relação de não suficiência é mantida, sem convertê-la em impossibilidade, equivalência ou causalidade inversa.
 
 Revisor/data: pendentes.
 
 ## P68 — Conectivos e estrutura lógica
 
-ID: d1431000-0000-4000-8000-000000000068. Versão: 1. Dificuldade estimada: hard. Família: P8.
+ID: d1431000-0000-4000-8000-000000000068. Versão: 2. Dificuldade estimada: medium. Família: P8.
 
 Texto autoral para esta atividade:
-O conselho não se opôs à reforma porque rejeitasse a acessibilidade. Contestou o projeto porque a obra retiraria a única rota de passagem antes de criar uma alternativa. Para os conselheiros, a mesma finalidade pode exigir outra sequência de execução. Confundir a crítica ao procedimento com oposição ao objetivo reduz o debate a uma falsa escolha.
+O conselho apoiou a finalidade de ampliar a acessibilidade, mas contestou a sequência proposta para a reforma: a única passagem seria fechada antes de a alternativa ficar pronta. Para os conselheiros, o plano deveria manter uma rota durante toda a obra. A empresa respondeu que reorganizaria as etapas.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Antes de fechar a passagem, a empresa deve criar uma alternativa.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A crítica recai sobre a sequência da obra, e não sobre o objetivo de acessibilidade.
-- **B)** O conselho rejeita a acessibilidade como finalidade da reforma.
-- **C)** Os conselheiros consideram a sequência de execução irrelevante para o projeto.
-- **D)** A oposição ao procedimento implica rejeição de toda reforma possível.
-- **E)** A passagem alternativa já havia sido criada antes da contestação.
+- **A)** A empresa deve criar uma alternativa antes que a passagem seja fechada.
+- **B)** A empresa deve criar uma alternativa depois que a passagem for fechada.
+- **C)** A empresa deve fechar a alternativa antes de criar a passagem.
+- **D)** A passagem deve ser fechada para dispensar uma alternativa.
+- **E)** A alternativa deve ser criada se a passagem já estiver fechada.
 
-**Gabarito: A.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: A.** A prioridade temporal de criar a rota é preservada. O uso de antes que com subjuntivo expressa uma ação anterior ao fechamento previsto.
 
 Revisor/data: pendentes.
 
 ## P69 — Narrador e inferência
 
-ID: d1431000-0000-4000-8000-000000000069. Versão: 1. Dificuldade estimada: hard. Família: P9.
+ID: d1431000-0000-4000-8000-000000000069. Versão: 2. Dificuldade estimada: medium. Família: P9.
 
 Texto autoral para esta atividade:
-Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia em nenhuma fotografia. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O narrador não informa o que ele pensou; a sequência de ações permite uma leitura sobre reconhecimento, sem transformar essa leitura em certeza sobre suas intenções.
+Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia nas fotografias. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O relato encerra-se com essa ação, sem registrar fala ou pensamento do porteiro.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “O gesto pode indicar uma busca de reconhecimento.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A ausência nas fotos prova que o porteiro desconhecia os convidados.
-- **B)** Conhecer as placas demonstra que o porteiro era um dos homenageados.
-- **C)** A medalha foi entregue oficialmente ao porteiro pela organização.
-- **D)** O narrador declara que o porteiro desejava receber o prêmio principal.
-- **E)** A medalha pode representar busca de reconhecimento, mas a intenção não é explicitada.
+- **A)** O gesto foi uma homenagem oficial da organização.
+- **B)** O porteiro declarou que buscava reconhecimento.
+- **C)** O gesto necessariamente impede qualquer busca de reconhecimento.
+- **D)** O gesto confirma uma busca de reconhecimento.
+- **E)** Talvez o gesto indique uma busca de reconhecimento.
 
-**Gabarito: E.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: E.** Talvez com subjuntivo mantém a leitura possível do gesto, sem atribuir uma fala inexistente ou afirmar certeza sobre intenção.
 
 Revisor/data: pendentes.
 
 ## P70 — Generalização e amostragem
 
-ID: d1431000-0000-4000-8000-000000000070. Versão: 1. Dificuldade estimada: hard. Família: P10.
+ID: d1431000-0000-4000-8000-000000000070. Versão: 2. Dificuldade estimada: medium. Família: P10.
 
 Texto autoral para esta atividade:
-Uma enquete divulgada apenas no perfil de um clube mostrou apoio majoritário a ampliar sua sede. O anúncio dizia que a cidade aprovara a proposta. Uma leitora observou que participar do perfil e responder à enquete não são escolhas aleatórias. O resultado descreve os respondentes, mas não autoriza estendê-lo automaticamente à população inteira.
+Uma enquete foi divulgada apenas no perfil de um clube. Entre as 300 respostas, 240 apoiavam ampliar sua sede. O anúncio dizia: A cidade aprova o projeto. A cidade tinha 40 mil moradores, mas o relatório não informou como os seguidores do perfil se distribuíam entre bairros nem quem decidiu responder.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “A maioria dos respondentes apoiou o projeto.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** O apoio dos respondentes não demonstra apoio de toda a população da cidade.
-- **B)** A ausência de seleção aleatória impede descrever os próprios respondentes.
-- **C)** A maioria no perfil prova que os habitantes que não responderam concordam.
-- **D)** A divulgação em um clube garante proporção igual de opiniões favoráveis e contrárias.
-- **E)** Uma enquete em rede social representa necessariamente todos os bairros.
+- **A)** Entre os que responderam à enquete, predominou o apoio ao projeto.
+- **B)** Todos os seguidores responderam favoravelmente à enquete.
+- **C)** Os que não responderam apoiaram o projeto.
+- **D)** A maioria dos respondentes morava em todos os bairros na mesma proporção.
+- **E)** Entre todos os moradores, predominou o apoio ao projeto.
 
-**Gabarito: A.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: A.** A reescrita mantém o universo de respondentes. Seguidores, não respondentes e população municipal são conjuntos distintos.
 
 Revisor/data: pendentes.
 
 ## P71 — Polissemia e contexto
 
-ID: d1431000-0000-4000-8000-000000000071. Versão: 1. Dificuldade estimada: hard. Família: P11.
+ID: d1431000-0000-4000-8000-000000000071. Versão: 2. Dificuldade estimada: medium. Família: P11.
 
 Texto autoral para esta atividade:
-No relatório financeiro, a comissão pediu que a proposta fosse revista. No relato do passeio, uma aluna disse que queria rever a cidade. As duas formas pertencem ao mesmo verbo, mas os complementos e a situação de uso orientam sentidos diferentes. Um leitor que substitua as duas por corrigir preserva melhor a primeira intenção que a segunda.
+A comissão pediu que a proposta financeira fosse revista. Ao comentar um passeio, uma aluna disse que queria rever a cidade. Um colega sugeriu empregar corrigir nas duas frases, mas a editora pediu que ele considerasse o complemento e a situação de cada ocorrência.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “A proposta deve ser revista; a aluna quer rever a cidade.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A proposta foi mencionada apenas como um local a visitar novamente.
-- **B)** A cidade é um erro administrativo que a aluna pretende corrigir.
-- **C)** Rever possui obrigatoriamente sentido idêntico nos dois contextos.
-- **D)** Os complementos não contribuem para interpretar o sentido do verbo.
-- **E)** Rever significa reexaminar a proposta no primeiro caso e ver novamente a cidade no segundo.
+- **A)** A proposta deve ser vista pela primeira vez; a aluna quer apagar a cidade.
+- **B)** A proposta deve ser corrigida; a aluna quer revisar as contas da cidade.
+- **C)** A proposta deve ser visitada; a aluna quer corrigir a cidade.
+- **D)** A proposta deve ser descartada; a aluna quer conhecer a cidade pela primeira vez.
+- **E)** A proposta deve ser reexaminada; a aluna quer visitar a cidade novamente.
 
-**Gabarito: E.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: E.** A troca lexical preserva o reexame da proposta e a nova visita. Não se acrescenta intenção de descartar, corrigir contas ou realizar primeira visita.
 
 Revisor/data: pendentes.
 
 ## P72 — Pontuação e abrangência
 
-ID: d1431000-0000-4000-8000-000000000072. Versão: 1. Dificuldade estimada: hard. Família: P12.
+ID: d1431000-0000-4000-8000-000000000072. Versão: 2. Dificuldade estimada: medium. Família: P12.
 
 Texto autoral para esta atividade:
-Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Uma segunda versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras são as mesmas, porém as vírgulas mudam o alcance da informação: na primeira versão, a solicitação delimita um grupo; na segunda, aparece como explicação associada ao conjunto mencionado.
+Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Outra versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras eram as mesmas, porém a equipe precisava decidir se o aviso se referia apenas aos solicitantes ou ao conjunto dos moradores mencionado no documento.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Somente os moradores solicitantes receberão resposta.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A oração relativa não interfere no alcance do substantivo moradores.
-- **B)** A primeira versão restringe o grupo atendido; a segunda apresenta a solicitação como explicativa.
-- **C)** A segunda versão restringe mais o conjunto de moradores que a primeira.
-- **D)** As vírgulas conservam exatamente a mesma delimitação dos moradores nas duas versões.
-- **E)** A primeira versão afirma que nenhum morador pediu vistoria.
+- **A)** Os moradores receberão resposta, pois todos solicitaram vistoria.
+- **B)** Os moradores que solicitaram vistoria receberão resposta.
+- **C)** Nenhum morador receberá resposta até que todos solicitem.
+- **D)** Os moradores, que solicitaram vistoria, receberão resposta.
+- **E)** Todos os moradores receberão resposta, mesmo os que não solicitaram.
 
-**Gabarito: B.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: B.** A oração sem vírgulas restringe o grupo a solicitantes. As demais explicam o conjunto ou mudam quantificação e condição.
 
 Revisor/data: pendentes.
 
 ## P73 — Voz verbal e responsabilidade
 
-ID: d1431000-0000-4000-8000-000000000073. Versão: 1. Dificuldade estimada: hard. Família: P13.
+ID: d1431000-0000-4000-8000-000000000073. Versão: 2. Dificuldade estimada: medium. Família: P13.
 
 Texto autoral para esta atividade:
-A nota dizia: Foram eliminados os registros duplicados. O relatório posterior informou: A equipe de cadastro eliminou os registros duplicados. Ambos descrevem a ação, mas a primeira formulação deixa o agente sem identificação; a segunda o explicita. Em um pedido de prestação de contas, essa diferença pode ser relevante, embora não demonstre, sozinha, intenção de esconder responsabilidade.
+A nota dizia: Foram eliminados os registros duplicados. O relatório posterior dizia: A equipe de cadastro eliminou os registros duplicados. Embora os documentos tratassem da mesma ação, uma solicitação de prestação de contas pedia também a identificação de quem a executou.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “A equipe de cadastro eliminou os registros duplicados.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A segunda formulação altera necessariamente quais registros foram eliminados.
-- **B)** A primeira formulação omite o agente; isso não basta para provar intenção de ocultação.
-- **C)** A voz passiva impede que o agente seja apresentado em qualquer construção.
-- **D)** A primeira formulação nega que alguma pessoa tenha executado a ação.
-- **E)** A ausência do agente comprova intenção deliberada de fraude.
+- **A)** A equipe de cadastro foi eliminada pelos registros duplicados.
+- **B)** Os registros duplicados foram eliminados pela equipe de cadastro.
+- **C)** A equipe eliminaria registros se fossem duplicados.
+- **D)** Os registros duplicados eliminaram a equipe de cadastro.
+- **E)** Os registros duplicados seriam eliminados por outra equipe.
 
-**Gabarito: B.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: B.** A voz passiva mantém paciente, agente e ação concluída. As outras construções trocam papéis, tempo, agente ou certeza.
 
 Revisor/data: pendentes.
 
 ## P74 — Concordância e norma-padrão
 
-ID: d1431000-0000-4000-8000-000000000074. Versão: 1. Dificuldade estimada: hard. Família: P14.
+ID: d1431000-0000-4000-8000-000000000074. Versão: 2. Dificuldade estimada: medium. Família: P14.
 
 Texto autoral para esta atividade:
-Na revisão de um relatório, apareceram duas frases: Fazem três meses que o projeto começou e Houveram alterações no cronograma. A editora explicou que fazer indicando tempo decorrido e haver com sentido de existir são impessoais. A correção deve considerar a função de cada verbo no contexto, e não a aparência plural das expressões que o acompanham.
+Uma editora encontrou no relatório: Fazem três meses que o projeto começou. Na página seguinte, leu: Houveram alterações no cronograma. Ela pediu a revisão das formas verbais, e não apenas a troca dos termos meses e alterações por palavras no singular.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Haverá alterações. Vai fazer três meses que o projeto começou.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** Três meses e alterações funcionam necessariamente como sujeitos dos dois verbos.
-- **B)** A impessoalidade exige colocar ambos os verbos na primeira pessoa do plural.
-- **C)** Somente Houveram deve ser alterado, porque fazer sempre tem sujeito plural.
-- **D)** Na norma-padrão, as formas adequadas são Faz três meses e Houve alterações.
-- **E)** Somente Fazem deve ser alterado, porque haver sempre concorda com o termo seguinte.
+- **A)** Devem existir alterações é inadequada porque existir é impessoal.
+- **B)** Devem haver alterações é equivalente à primeira frase na norma-padrão.
+- **C)** Haverão alterações é exigida pelo plural alterações.
+- **D)** As duas formas estão adequadas: haver existencial e fazer temporal são impessoais.
+- **E)** Vão fazer três meses é exigida pelo plural meses.
 
-**Gabarito: D.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: D.** Haver e fazer, nesses sentidos, ficam na terceira pessoa do singular; a impessoalidade alcança seus auxiliares. Existir tem sujeito e pode concordar no plural.
 
 Revisor/data: pendentes.
 
 ## P75 — Regência e mudança de sentido
 
-ID: d1431000-0000-4000-8000-000000000075. Versão: 1. Dificuldade estimada: hard. Família: P15.
+ID: d1431000-0000-4000-8000-000000000075. Versão: 2. Dificuldade estimada: medium. Família: P15.
 
 Texto autoral para esta atividade:
-A revisora encontrou: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. Na norma-padrão, assistir no sentido de ver pede a preposição a; no sentido de prestar assistência, pode ter complemento direto. Corrigir automaticamente as duas frases da mesma maneira apagaria a diferença de sentido e regência apresentada pelo contexto.
+No relatório, constavam: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. A primeira frase tratava da exibição de um filme; a segunda, da ajuda prestada no laboratório. A revisora avaliou a regência de assistir no sentido de cada ação descrita.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Os estudantes assistiram ao documentário.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A regência é independente do sentido do verbo em cada ocorrência.
-- **B)** As duas construções expressam apenas o ato de ver uma produção audiovisual.
-- **C)** A primeira pede assistiram ao documentário; a segunda pode manter assistiu o pesquisador.
-- **D)** A presença de um complemento humano elimina a possibilidade de prestar assistência.
-- **E)** As duas construções devem obrigatoriamente receber ao antes dos complementos.
+- **A)** O documentário cujo os estudantes assistiram foi debatido.
+- **B)** O documentário em que os estudantes assistiram foi debatido.
+- **C)** O documentário a que os estudantes assistiram foi debatido.
+- **D)** O documentário por que os estudantes assistiram foi debatido.
+- **E)** O documentário de que os estudantes assistiram foi debatido.
 
-**Gabarito: C.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: C.** Assistir com sentido de ver rege a. A preposição é conservada diante do pronome relativo; cujo não substitui essa relação e exige substantivo possuído.
 
 Revisor/data: pendentes.
 
 ## P76 — Crase e comparação de construções
 
-ID: d1431000-0000-4000-8000-000000000076. Versão: 1. Dificuldade estimada: hard. Família: P16.
+ID: d1431000-0000-4000-8000-000000000076. Versão: 2. Dificuldade estimada: medium. Família: P16.
 
 Texto autoral para esta atividade:
-Em uma ficha de viagem, a editora comparou: Entregou o documento à diretora e Entregou o documento a uma diretora. Na primeira, a preposição exigida por entregar encontra o artigo feminino definido; na segunda, uma é artigo indefinido. A marca de crase não se decide apenas pela presença de palavra feminina, mas pela combinação das formas gramaticais.
+A ficha registrava: Entregou o documento à diretora. Outra registrava: Entregou o documento a uma diretora. Uma estudante propôs pôr acento grave nas duas, mas a editora pediu que ela comparasse os artigos e a preposição exigida pelo verbo.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Os documentos foram entregues às diretoras e a duas supervisoras.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** Uma funciona como artigo definido nas duas construções apresentadas.
-- **B)** A preposição deixa de ser exigida sempre que aparece um artigo indefinido.
-- **C)** Qualquer substantivo feminino após entregar exige acento grave.
-- **D)** O acento grave indica que diretora é o sujeito de entregou.
-- **E)** A primeira combina preposição e artigo definido; a segunda não produz essa mesma fusão.
+- **A)** É obrigatório escrever à duas supervisoras por serem pessoas do gênero feminino.
+- **B)** A forma às duas supervisoras é idêntica a a duas supervisoras quanto à determinação do grupo.
+- **C)** O acento deve ser retirado de às diretoras porque o termo está no plural.
+- **D)** Deve-se retirar toda preposição porque entregues não exige destinatário.
+- **E)** As duas construções estão adequadas: há artigo definido em às diretoras, mas não antes de duas supervisoras.
 
-**Gabarito: E.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: E.** A primeira combina a preposição a com as; a segunda usa numeral sem artigo. Acrescentar as antes de duas determina um grupo e muda a construção, não corrige a original.
 
 Revisor/data: pendentes.
 
 ## P77 — Ambiguidade sintática
 
-ID: d1431000-0000-4000-8000-000000000077. Versão: 1. Dificuldade estimada: hard. Família: P17.
+ID: d1431000-0000-4000-8000-000000000077. Versão: 2. Dificuldade estimada: medium. Família: P17.
 
 Texto autoral para esta atividade:
-O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou a quem se referia sua. O redator decidiu substituir a expressão por a inscrição da aluna. A mudança manteve a informação pretendida e reduziu uma ambiguidade que não poderia ser resolvida apenas pela forma do pronome possessivo.
+O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou de quem era a inscrição. O redator a substituiu por a inscrição da aluna e manteve o restante da informação. A alteração passou a constar na edição seguinte.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “A professora informou à aluna que sua inscrição estava incompleta.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** A substituição cria um novo referente que não havia aparecido no relato.
-- **B)** Sua identifica exclusivamente a professora em qualquer contexto.
-- **C)** A ambiguidade decorre apenas da flexão incompleta do verbo informar.
-- **D)** O possessivo permite mais de um referente; explicitar da aluna elimina a leitura concorrente.
-- **E)** A leitura do pronome é determinada sem qualquer apoio do contexto.
+- **A)** A professora comunicou à aluna que sua inscrição estava incompleta.
+- **B)** A professora informou à aluna que a inscrição dela estava incompleta.
+- **C)** A professora informou à aluna que aquela inscrição estava incompleta.
+- **D)** A professora informou à aluna que a inscrição da aluna estava incompleta.
+- **E)** A professora disse à aluna que sua própria inscrição estava incompleta.
 
-**Gabarito: D.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: D.** A inscrição da aluna explicita o referente pretendido. Dela, sua e aquela dependem de contexto ou admitem leituras concorrentes; trocar o verbo não resolve a referência.
 
 Revisor/data: pendentes.
 
 ## P78 — Metáfora e argumentação
 
-ID: d1431000-0000-4000-8000-000000000078. Versão: 1. Dificuldade estimada: hard. Família: P18.
+ID: d1431000-0000-4000-8000-000000000078. Versão: 2. Dificuldade estimada: medium. Família: P18.
 
 Texto autoral para esta atividade:
-O editorial chamou a falta de planejamento de um buraco no orçamento. Não descrevia uma abertura física: relacionava a insuficiência de recursos a uma imagem de ausência. A metáfora tornou o problema mais concreto para o leitor, mas não substituiu os números necessários para dimensioná-lo. A expressividade da frase e sua capacidade de provar uma conclusão são aspectos diferentes.
+O editorial chamou a falta de planejamento de um buraco no orçamento. Na sequência, apresentou receitas e despesas para dimensionar o problema. Um leitor destacou a imagem expressiva, mas outro pediu que a avaliação se baseasse também nos valores documentados.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “A metáfora torna o problema concreto, mas não mede seu tamanho.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** Uma imagem expressiva dispensa todos os dados para avaliar o problema.
-- **B)** A imagem reforça a compreensão do problema, sem servir como prova de seu tamanho.
-- **C)** O editorial elimina o sentido figurado ao mencionar planejamento.
-- **D)** A metáfora comprova numericamente a insuficiência dos recursos.
-- **E)** Buraco no orçamento descreve uma perfuração física nos documentos financeiros.
+- **A)** Os números dispensam a leitura do sentido da metáfora.
+- **B)** A metáfora torna o problema concreto sem fornecer, por isso, uma medida de sua dimensão.
+- **C)** A expressão buraco relata uma perfuração nos documentos financeiros.
+- **D)** A metáfora mede o problema porque usa uma imagem concreta.
+- **E)** A metáfora deixa de ser figurada quando o problema pode ser medido.
 
-**Gabarito: B.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: B.** A reescrita preserva a diferença entre expressividade e medida. Concretude figurativa não corresponde a quantificação nem torna a imagem literal.
 
 Revisor/data: pendentes.
 
 ## P79 — Discurso e atribuição de informação
 
-ID: d1431000-0000-4000-8000-000000000079. Versão: 1. Dificuldade estimada: hard. Família: P19.
+ID: d1431000-0000-4000-8000-000000000079. Versão: 2. Dificuldade estimada: medium. Família: P19.
 
 Texto autoral para esta atividade:
-A notícia informou: Segundo a pesquisadora, o novo material pode reduzir perdas. Na edição seguinte, apareceu: O novo material reduz perdas. A retirada da fonte e do verbo modal aproximou a segunda frase de uma afirmação assumida pelo veículo. Não se trata apenas de encurtar o período: muda-se a maneira de apresentar a responsabilidade e o grau de certeza da informação.
+A notícia dizia: Segundo a pesquisadora, o material pode reduzir perdas. Na edição seguinte, apareceu: O material reduz perdas. A mudança retirou palavras da frase, sem acrescentar dados ou resultados ao conteúdo publicado.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “Segundo a pesquisadora, o material pode reduzir perdas.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** As duas versões apresentam necessariamente o mesmo grau de certeza e atribuição.
-- **B)** Pode reduzir exprime resultado inevitável, equivalente a reduz em qualquer caso.
-- **C)** Segundo a pesquisadora indica discordância obrigatória do veículo com a fonte.
-- **D)** A edição acrescentou uma nova fonte explícita para responsabilizar pela informação.
-- **E)** A segunda versão apaga a atribuição da fonte e fortalece a certeza da afirmação.
+- **A)** A pesquisadora comprovou que o material elimina perdas.
+- **B)** A pesquisadora exige que o material reduza todas as perdas.
+- **C)** O veículo garante que o material reduzirá perdas.
+- **D)** O veículo apresenta dados novos que tornam a redução certa.
+- **E)** A pesquisadora afirma que é possível reduzir perdas com o material.
 
-**Gabarito: E.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: E.** Fonte e grau de certeza são preservados. A versão não acrescenta comprovação, obrigação, garantia do veículo ou resultados ausentes.
 
 Revisor/data: pendentes.
 
 ## P80 — Condição necessária e conclusão
 
-ID: d1431000-0000-4000-8000-000000000080. Versão: 1. Dificuldade estimada: hard. Família: P20.
+ID: d1431000-0000-4000-8000-000000000080. Versão: 2. Dificuldade estimada: medium. Família: P20.
 
 Texto autoral para esta atividade:
-O regulamento informa: A inscrição será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. O uso de e reúne requisitos; cumprir apenas um deles não satisfaz a condição descrita. Interpretar a frase como se trouxesse ou alteraria os critérios do regulamento.
+O regulamento dizia: A inscrição só será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. Uma colega sugeriu que ele relesse os dois requisitos antes de reclamar.
 
-Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?
+Considere também a formulação: “O formulário deve estar completo e o comprovante deve ser enviado.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
-- **A)** O regulamento aceita necessariamente inscrições sem comprovante.
-- **B)** A recusa demonstra que Rui deixou de preencher o formulário.
-- **C)** O pedido não satisfaz a condição conjunta, porque um dos requisitos não foi cumprido.
-- **D)** Substituir e por ou preserva obrigatoriamente os mesmos critérios de aceitação.
-- **E)** Completar o formulário é suficiente, pois os requisitos são alternativos.
+- **A)** Enviar o comprovante dispensa completar o formulário.
+- **B)** O comprovante é exigido apenas se o formulário estiver incompleto.
+- **C)** Além de completar o formulário, é necessário enviar o comprovante.
+- **D)** Completar o formulário impede a necessidade de enviar comprovante.
+- **E)** Basta completar o formulário ou enviar o comprovante.
 
-**Gabarito: C.** Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.
+**Gabarito: C.** Além de mantém a exigência conjunta dos dois requisitos. As outras opções transformam conjunção em alternativa, dispensam uma condição ou a invertem.
 
 Revisor/data: pendentes.
 
 ## P81 — Leitura crítica de dados
 
-ID: d1431000-0000-4000-8000-000000000081. Versão: 1. Dificuldade estimada: hard. Família: P1.
+ID: d1431000-0000-4000-8000-000000000081. Versão: 2. Dificuldade estimada: hard. Família: P1.
 
 Texto autoral para esta atividade:
-A biblioteca ampliou o horário de funcionamento. O número de empréstimos subiu, mas a quantidade de usuários distintos permaneceu estável. A direção comemorou a maior circulação dos livros; o conselho pediu cautela: empréstimos adicionais podem ter sido feitos pelas mesmas pessoas. Embora a mudança pareça útil, ainda não se sabe se ela alcançou novos leitores.
+A biblioteca ampliou o horário. Em dois meses comparáveis, os empréstimos passaram de 800 para 1.100, mas o número de usuários distintos permaneceu em 200. A direção comemorou a circulação maior; o conselho solicitou os registros de novos cadastros. Embora o relatório destaque o crescimento, não informa quem fez os empréstimos adicionais.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1543,10 +1543,10 @@ Revisor/data: pendentes.
 
 ## P82 — Argumentação e causalidade
 
-ID: d1431000-0000-4000-8000-000000000082. Versão: 1. Dificuldade estimada: hard. Família: P2.
+ID: d1431000-0000-4000-8000-000000000082. Versão: 2. Dificuldade estimada: hard. Família: P2.
 
 Texto autoral para esta atividade:
-Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Os lojistas atribuem o resultado à ciclovia. O pesquisador não descarta essa hipótese, porém observa que mudanças simultâneas impedem atribuir o crescimento a uma causa isolada.
+Depois que uma rua recebeu ciclovia, as vendas de duas lojas aumentaram. No mesmo mês, abriu uma estação de transporte e ocorreu uma feira comercial. Um lojista declarou: Foi a ciclovia que trouxe o crescimento. O levantamento apresenta os totais anteriores e posteriores, porém não compara ruas com condições semelhantes.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1562,10 +1562,10 @@ Revisor/data: pendentes.
 
 ## P83 — Ironia e crítica social
 
-ID: d1431000-0000-4000-8000-000000000083. Versão: 1. Dificuldade estimada: hard. Família: P3.
+ID: d1431000-0000-4000-8000-000000000083. Versão: 2. Dificuldade estimada: hard. Família: P3.
 
 Texto autoral para esta atividade:
-O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto; quando o ônibus atrasou, recebeu seis notificações explicando que o horário era apenas estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Seu comentário foi recebido com risos, mas apontava uma tensão entre a promessa e o uso efetivo da tecnologia.
+O aplicativo prometia devolver tempo aos passageiros. Lara passou a consultar a previsão a cada minuto. Quando o ônibus atrasou, recebeu seis notificações de que o horário era estimado. Ela comentou: Que economia de tempo, agora preciso acompanhar o atraso em tempo real. Os colegas riram, mas continuaram na fila esperando o veículo.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1581,10 +1581,10 @@ Revisor/data: pendentes.
 
 ## P84 — Modalização e certeza
 
-ID: d1431000-0000-4000-8000-000000000084. Versão: 1. Dificuldade estimada: hard. Família: P4.
+ID: d1431000-0000-4000-8000-000000000084. Versão: 2. Dificuldade estimada: hard. Família: P4.
 
 Texto autoral para esta atividade:
-Um estudo acompanhou pequenas hortas em três escolas. As turmas participantes relataram maior interesse por alimentação. Os autores afirmam que a atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia transformou a conclusão em: Hortas garantem mudança alimentar. Ao retirar as ressalvas, o título ampliou a força da afirmação além do que os dados permitiam.
+Um estudo acompanhou hortas em três escolas e registrou relatos de maior interesse por alimentação. Os autores escreveram: A atividade pode favorecer esse interesse, embora o grupo não represente todas as escolas. A notícia foi publicada com o título Hortas garantem mudança alimentar. O texto da reportagem não acrescentava observações sobre os hábitos alimentares posteriores.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1600,10 +1600,10 @@ Revisor/data: pendentes.
 
 ## P85 — Pressupostos e escolhas lexicais
 
-ID: d1431000-0000-4000-8000-000000000085. Versão: 1. Dificuldade estimada: hard. Família: P5.
+ID: d1431000-0000-4000-8000-000000000085. Versão: 2. Dificuldade estimada: hard. Família: P5.
 
 Texto autoral para esta atividade:
-No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante destacou que voltar sugere uma escuta anterior interrompida; outro perguntou se essa escuta havia sido ampla ou apenas formal. A discussão mostrou que a escolha de um verbo pode carregar uma informação não apresentada como afirmação principal.
+No debate sobre a praça, o vereador afirmou: Precisamos voltar a ouvir os moradores. Uma participante perguntou quando havia ocorrido a escuta anterior; outra perguntou se ela havia sido ampla ou apenas formal. O registro da reunião não traz resposta a essas perguntas.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1619,10 +1619,10 @@ Revisor/data: pendentes.
 
 ## P86 — Coesão e referência
 
-ID: d1431000-0000-4000-8000-000000000086. Versão: 1. Dificuldade estimada: hard. Família: P6.
+ID: d1431000-0000-4000-8000-000000000086. Versão: 2. Dificuldade estimada: hard. Família: P6.
 
 Texto autoral para esta atividade:
-A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Essa divisão evitou que visitantes precisassem receber um mapa para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
+A escola instalou painéis informativos e distribuiu mapas do bairro. Os primeiros ficaram próximos aos portões; os segundos foram entregues aos estudantes. Visitantes consultavam os painéis para localizar a entrada. Ainda assim, os dois recursos dependiam de atualização, pois obras temporárias alteravam os caminhos indicados.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1638,10 +1638,10 @@ Revisor/data: pendentes.
 
 ## P87 — Comparação de argumentos
 
-ID: d1431000-0000-4000-8000-000000000087. Versão: 1. Dificuldade estimada: hard. Família: P7.
+ID: d1431000-0000-4000-8000-000000000087. Versão: 2. Dificuldade estimada: hard. Família: P7.
 
 Texto autoral para esta atividade:
-O texto de um fabricante destaca que uma embalagem usa menos plástico. O relatório de uma cooperativa observa que ela combina materiais difíceis de separar. As duas informações podem ser verdadeiras: reduzir massa não equivale a facilitar reciclagem. Uma avaliação ambiental precisa considerar etapas diferentes, sem escolher um único indicador como resposta completa.
+Um fabricante informou que sua embalagem usava 20% menos plástico. Uma cooperativa observou que ela combinava materiais difíceis de separar nos equipamentos disponíveis. O relatório final pediu uma avaliação da produção e da destinação, sem apresentar um único indicador como resposta para todas as etapas.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1657,10 +1657,10 @@ Revisor/data: pendentes.
 
 ## P88 — Conectivos e estrutura lógica
 
-ID: d1431000-0000-4000-8000-000000000088. Versão: 1. Dificuldade estimada: hard. Família: P8.
+ID: d1431000-0000-4000-8000-000000000088. Versão: 2. Dificuldade estimada: hard. Família: P8.
 
 Texto autoral para esta atividade:
-O conselho não se opôs à reforma porque rejeitasse a acessibilidade. Contestou o projeto porque a obra retiraria a única rota de passagem antes de criar uma alternativa. Para os conselheiros, a mesma finalidade pode exigir outra sequência de execução. Confundir a crítica ao procedimento com oposição ao objetivo reduz o debate a uma falsa escolha.
+O conselho apoiou a finalidade de ampliar a acessibilidade, mas contestou a sequência proposta para a reforma: a única passagem seria fechada antes de a alternativa ficar pronta. Para os conselheiros, o plano deveria manter uma rota durante toda a obra. A empresa respondeu que reorganizaria as etapas.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1676,10 +1676,10 @@ Revisor/data: pendentes.
 
 ## P89 — Narrador e inferência
 
-ID: d1431000-0000-4000-8000-000000000089. Versão: 1. Dificuldade estimada: hard. Família: P9.
+ID: d1431000-0000-4000-8000-000000000089. Versão: 2. Dificuldade estimada: hard. Família: P9.
 
 Texto autoral para esta atividade:
-Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia em nenhuma fotografia. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O narrador não informa o que ele pensou; a sequência de ações permite uma leitura sobre reconhecimento, sem transformar essa leitura em certeza sobre suas intenções.
+Enquanto os convidados discutiam o prêmio, o porteiro reorganizava as cadeiras. Conhecia cada nome das placas, mas não aparecia nas fotografias. Ao final, encontrou no chão uma medalha de participação e a pendurou no uniforme. O relato encerra-se com essa ação, sem registrar fala ou pensamento do porteiro.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1695,10 +1695,10 @@ Revisor/data: pendentes.
 
 ## P90 — Generalização e amostragem
 
-ID: d1431000-0000-4000-8000-000000000090. Versão: 1. Dificuldade estimada: hard. Família: P10.
+ID: d1431000-0000-4000-8000-000000000090. Versão: 2. Dificuldade estimada: hard. Família: P10.
 
 Texto autoral para esta atividade:
-Uma enquete divulgada apenas no perfil de um clube mostrou apoio majoritário a ampliar sua sede. O anúncio dizia que a cidade aprovara a proposta. Uma leitora observou que participar do perfil e responder à enquete não são escolhas aleatórias. O resultado descreve os respondentes, mas não autoriza estendê-lo automaticamente à população inteira.
+Uma enquete foi divulgada apenas no perfil de um clube. Entre as 300 respostas, 240 apoiavam ampliar sua sede. O anúncio dizia: A cidade aprova o projeto. A cidade tinha 40 mil moradores, mas o relatório não informou como os seguidores do perfil se distribuíam entre bairros nem quem decidiu responder.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1714,10 +1714,10 @@ Revisor/data: pendentes.
 
 ## P91 — Polissemia e contexto
 
-ID: d1431000-0000-4000-8000-000000000091. Versão: 1. Dificuldade estimada: hard. Família: P11.
+ID: d1431000-0000-4000-8000-000000000091. Versão: 2. Dificuldade estimada: hard. Família: P11.
 
 Texto autoral para esta atividade:
-No relatório financeiro, a comissão pediu que a proposta fosse revista. No relato do passeio, uma aluna disse que queria rever a cidade. As duas formas pertencem ao mesmo verbo, mas os complementos e a situação de uso orientam sentidos diferentes. Um leitor que substitua as duas por corrigir preserva melhor a primeira intenção que a segunda.
+A comissão pediu que a proposta financeira fosse revista. Ao comentar um passeio, uma aluna disse que queria rever a cidade. Um colega sugeriu empregar corrigir nas duas frases, mas a editora pediu que ele considerasse o complemento e a situação de cada ocorrência.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1733,10 +1733,10 @@ Revisor/data: pendentes.
 
 ## P92 — Pontuação e abrangência
 
-ID: d1431000-0000-4000-8000-000000000092. Versão: 1. Dificuldade estimada: hard. Família: P12.
+ID: d1431000-0000-4000-8000-000000000092. Versão: 2. Dificuldade estimada: hard. Família: P12.
 
 Texto autoral para esta atividade:
-Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Uma segunda versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras são as mesmas, porém as vírgulas mudam o alcance da informação: na primeira versão, a solicitação delimita um grupo; na segunda, aparece como explicação associada ao conjunto mencionado.
+Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Outra versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras eram as mesmas, porém a equipe precisava decidir se o aviso se referia apenas aos solicitantes ou ao conjunto dos moradores mencionado no documento.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1752,10 +1752,10 @@ Revisor/data: pendentes.
 
 ## P93 — Voz verbal e responsabilidade
 
-ID: d1431000-0000-4000-8000-000000000093. Versão: 1. Dificuldade estimada: hard. Família: P13.
+ID: d1431000-0000-4000-8000-000000000093. Versão: 2. Dificuldade estimada: hard. Família: P13.
 
 Texto autoral para esta atividade:
-A nota dizia: Foram eliminados os registros duplicados. O relatório posterior informou: A equipe de cadastro eliminou os registros duplicados. Ambos descrevem a ação, mas a primeira formulação deixa o agente sem identificação; a segunda o explicita. Em um pedido de prestação de contas, essa diferença pode ser relevante, embora não demonstre, sozinha, intenção de esconder responsabilidade.
+A nota dizia: Foram eliminados os registros duplicados. O relatório posterior dizia: A equipe de cadastro eliminou os registros duplicados. Embora os documentos tratassem da mesma ação, uma solicitação de prestação de contas pedia também a identificação de quem a executou.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1771,10 +1771,10 @@ Revisor/data: pendentes.
 
 ## P94 — Concordância e norma-padrão
 
-ID: d1431000-0000-4000-8000-000000000094. Versão: 1. Dificuldade estimada: hard. Família: P14.
+ID: d1431000-0000-4000-8000-000000000094. Versão: 2. Dificuldade estimada: hard. Família: P14.
 
 Texto autoral para esta atividade:
-Na revisão de um relatório, apareceram duas frases: Fazem três meses que o projeto começou e Houveram alterações no cronograma. A editora explicou que fazer indicando tempo decorrido e haver com sentido de existir são impessoais. A correção deve considerar a função de cada verbo no contexto, e não a aparência plural das expressões que o acompanham.
+Uma editora encontrou no relatório: Fazem três meses que o projeto começou. Na página seguinte, leu: Houveram alterações no cronograma. Ela pediu a revisão das formas verbais, e não apenas a troca dos termos meses e alterações por palavras no singular.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1790,10 +1790,10 @@ Revisor/data: pendentes.
 
 ## P95 — Regência e mudança de sentido
 
-ID: d1431000-0000-4000-8000-000000000095. Versão: 1. Dificuldade estimada: hard. Família: P15.
+ID: d1431000-0000-4000-8000-000000000095. Versão: 2. Dificuldade estimada: hard. Família: P15.
 
 Texto autoral para esta atividade:
-A revisora encontrou: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. Na norma-padrão, assistir no sentido de ver pede a preposição a; no sentido de prestar assistência, pode ter complemento direto. Corrigir automaticamente as duas frases da mesma maneira apagaria a diferença de sentido e regência apresentada pelo contexto.
+No relatório, constavam: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. A primeira frase tratava da exibição de um filme; a segunda, da ajuda prestada no laboratório. A revisora avaliou a regência de assistir no sentido de cada ação descrita.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1809,10 +1809,10 @@ Revisor/data: pendentes.
 
 ## P96 — Crase e comparação de construções
 
-ID: d1431000-0000-4000-8000-000000000096. Versão: 1. Dificuldade estimada: hard. Família: P16.
+ID: d1431000-0000-4000-8000-000000000096. Versão: 2. Dificuldade estimada: hard. Família: P16.
 
 Texto autoral para esta atividade:
-Em uma ficha de viagem, a editora comparou: Entregou o documento à diretora e Entregou o documento a uma diretora. Na primeira, a preposição exigida por entregar encontra o artigo feminino definido; na segunda, uma é artigo indefinido. A marca de crase não se decide apenas pela presença de palavra feminina, mas pela combinação das formas gramaticais.
+A ficha registrava: Entregou o documento à diretora. Outra registrava: Entregou o documento a uma diretora. Uma estudante propôs pôr acento grave nas duas, mas a editora pediu que ela comparasse os artigos e a preposição exigida pelo verbo.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1828,10 +1828,10 @@ Revisor/data: pendentes.
 
 ## P97 — Ambiguidade sintática
 
-ID: d1431000-0000-4000-8000-000000000097. Versão: 1. Dificuldade estimada: hard. Família: P17.
+ID: d1431000-0000-4000-8000-000000000097. Versão: 2. Dificuldade estimada: hard. Família: P17.
 
 Texto autoral para esta atividade:
-O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou a quem se referia sua. O redator decidiu substituir a expressão por a inscrição da aluna. A mudança manteve a informação pretendida e reduziu uma ambiguidade que não poderia ser resolvida apenas pela forma do pronome possessivo.
+O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou de quem era a inscrição. O redator a substituiu por a inscrição da aluna e manteve o restante da informação. A alteração passou a constar na edição seguinte.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1847,10 +1847,10 @@ Revisor/data: pendentes.
 
 ## P98 — Metáfora e argumentação
 
-ID: d1431000-0000-4000-8000-000000000098. Versão: 1. Dificuldade estimada: hard. Família: P18.
+ID: d1431000-0000-4000-8000-000000000098. Versão: 2. Dificuldade estimada: hard. Família: P18.
 
 Texto autoral para esta atividade:
-O editorial chamou a falta de planejamento de um buraco no orçamento. Não descrevia uma abertura física: relacionava a insuficiência de recursos a uma imagem de ausência. A metáfora tornou o problema mais concreto para o leitor, mas não substituiu os números necessários para dimensioná-lo. A expressividade da frase e sua capacidade de provar uma conclusão são aspectos diferentes.
+O editorial chamou a falta de planejamento de um buraco no orçamento. Na sequência, apresentou receitas e despesas para dimensionar o problema. Um leitor destacou a imagem expressiva, mas outro pediu que a avaliação se baseasse também nos valores documentados.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1866,10 +1866,10 @@ Revisor/data: pendentes.
 
 ## P99 — Discurso e atribuição de informação
 
-ID: d1431000-0000-4000-8000-000000000099. Versão: 1. Dificuldade estimada: hard. Família: P19.
+ID: d1431000-0000-4000-8000-000000000099. Versão: 2. Dificuldade estimada: hard. Família: P19.
 
 Texto autoral para esta atividade:
-A notícia informou: Segundo a pesquisadora, o novo material pode reduzir perdas. Na edição seguinte, apareceu: O novo material reduz perdas. A retirada da fonte e do verbo modal aproximou a segunda frase de uma afirmação assumida pelo veículo. Não se trata apenas de encurtar o período: muda-se a maneira de apresentar a responsabilidade e o grau de certeza da informação.
+A notícia dizia: Segundo a pesquisadora, o material pode reduzir perdas. Na edição seguinte, apareceu: O material reduz perdas. A mudança retirou palavras da frase, sem acrescentar dados ou resultados ao conteúdo publicado.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 
@@ -1885,10 +1885,10 @@ Revisor/data: pendentes.
 
 ## P100 — Condição necessária e conclusão
 
-ID: d1431000-0000-4000-8000-000000000100. Versão: 1. Dificuldade estimada: hard. Família: P20.
+ID: d1431000-0000-4000-8000-000000000100. Versão: 2. Dificuldade estimada: hard. Família: P20.
 
 Texto autoral para esta atividade:
-O regulamento informa: A inscrição será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. O uso de e reúne requisitos; cumprir apenas um deles não satisfaz a condição descrita. Interpretar a frase como se trouxesse ou alteraria os critérios do regulamento.
+O regulamento dizia: A inscrição só será aceita se o formulário estiver completo e o comprovante for enviado. Rui preencheu o formulário, mas não enviou o comprovante. A equipe recusou o pedido. Uma colega sugeriu que ele relesse os dois requisitos antes de reclamar.
 
 Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?
 

@@ -1,12 +1,12 @@
-# Revisão atual — Matemática — etapa 43
+# Revisão atual — Matemática — etapa 44
 
 Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
 ## M01 — Frações e reconstrução do total
 
-ID: d1090000-0000-4000-8000-000000000001. Versão: 2. Dificuldade estimada: hard. Família: M1.
+ID: d1090000-0000-4000-8000-000000000001. Versão: 3. Dificuldade estimada: hard. Família: M1.
 
-Uma associação separou R$ 120 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 840. Um tesoureiro calculou a arrecadação somando a reserva ao triplo da sobra. Qual foi a arrecadação inicial que justifica esse procedimento?
+Uma associação separou R$ 120 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 840. Qual foi a arrecadação inicial?
 
 - **A)** 2.640 reais
 - **B)** 2.520 reais
@@ -100,25 +100,25 @@ Revisor/data: pendentes.
 
 ## M07 — Média e reconstrução de dados
 
-ID: d1370000-0000-4000-8000-000000000005. Versão: 3. Dificuldade estimada: hard. Família: M7.
+ID: d1370000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: hard. Família: M7.
 
-A média de 12 avaliações de um projeto era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,4. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
+A média de 12 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,3. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
 
-- **A)** 8 pontos
-- **B)** 9 pontos
-- **C)** 10 pontos
-- **D)** 8,2 pontos
-- **E)** 7,4 pontos
+- **A)** 8,2 pontos
+- **B)** 8,5 pontos
+- **C)** 36,5 pontos
+- **D)** 7,15 pontos
+- **E)** 7,3 pontos
 
-**Gabarito: B.** A soma antiga é 12 × 7 = 84; a nova soma é 15 × 7,4 = 111. A diferença, dividida por três, resulta em 9. Não se calcula a nova nota pela média simples de 7 e 7,4.
+**Gabarito: B.** A soma antiga é 12 × 7 = 84; a nova soma é 15 × 7,3 = 109,5. A diferença, dividida por três, resulta em 8,5. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
 Revisor/data: pendentes.
 
 ## M08 — Média ponderada e percentuais
 
-ID: d1370000-0000-4000-8000-000000000006. Versão: 3. Dificuldade estimada: hard. Família: M8.
+ID: d1370000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: hard. Família: M8.
 
-Uma turma de 20 estudantes teve 60% de presença em uma oficina; outra de 30 teve 80%. Um relatório somou os presentes e dividiu pelo total de estudantes das duas turmas, em vez de simplesmente tirar a média dos percentuais. Qual percentual conjunto obteve, aproximadamente, com até quatro casas decimais?
+Uma turma de 20 estudantes teve 60% de presença em uma oficina; outra de 30 teve 80%. Qual foi o percentual de presença no conjunto das duas turmas, aproximadamente, com até quatro casas decimais?
 
 - **A)** 72%
 - **B)** 80%
@@ -244,9 +244,9 @@ Revisor/data: pendentes.
 
 ## M16 — Velocidade média em trechos iguais
 
-ID: d1370000-0000-4000-8000-000000000014. Versão: 3. Dificuldade estimada: hard. Família: M16.
+ID: d1370000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista percorre 24 km a 12 km/h e retorna pelo mesmo trajeto, de 24 km, a 18 km/h. Não há paradas. Um observador usa a média aritmética de 12 e 18, mas a ciclista usa distância total dividida pelo tempo total. Qual velocidade média obtém no percurso completo?
+Uma ciclista percorre 24 km a 12 km/h e retorna pelo mesmo trajeto, de 24 km, a 18 km/h. Não há paradas. Qual foi a velocidade média no percurso completo?
 
 - **A)** 13,5 km/h
 - **B)** 16 km/h
@@ -260,9 +260,9 @@ Revisor/data: pendentes.
 
 ## M17 — Ângulos de polígonos e giro
 
-ID: d1370000-0000-4000-8000-000000000015. Versão: 3. Dificuldade estimada: hard. Família: M17.
+ID: d1370000-0000-4000-8000-000000000015. Versão: 4. Dificuldade estimada: hard. Família: M17.
 
-Uma praça tem contorno de polígono regular com 6 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Ele parte da soma dos ângulos internos, (n − 2) × 180°, e distribui essa soma igualmente. Qual ângulo interno obtém, aproximadamente?
+Uma praça tem contorno de polígono regular com 6 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Qual é a medida desse ângulo interno, aproximadamente?
 
 - **A)** 120°
 - **B)** 60°
@@ -276,9 +276,9 @@ Revisor/data: pendentes.
 
 ## M18 — Contagem e distinção de funções
 
-ID: d1370000-0000-4000-8000-000000000016. Versão: 3. Dificuldade estimada: hard. Família: M18.
+ID: d1370000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: hard. Família: M18.
 
-Um grupo tem 7 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Um aluno contou cada dupla nas duas ordens possíveis. Qual total corrige essa dupla contagem e dá o número de comissões distintas?
+Um grupo tem 7 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Quantas comissões distintas podem ser formadas?
 
 - **A)** 49 comissões
 - **B)** 21 comissões
@@ -324,9 +324,9 @@ Revisor/data: pendentes.
 
 ## M21 — Frações e reconstrução do total
 
-ID: d1430000-0000-4000-8000-000000000021. Versão: 1. Dificuldade estimada: hard. Família: M1.
+ID: d1430000-0000-4000-8000-000000000021. Versão: 2. Dificuldade estimada: hard. Família: M1.
 
-Uma associação separou R$ 150 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1080. Um tesoureiro calculou a arrecadação somando a reserva ao triplo da sobra. Qual foi a arrecadação inicial que justifica esse procedimento?
+Uma associação separou R$ 150 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1080. Qual foi a arrecadação inicial?
 
 - **A)** 3.390 reais
 - **B)** 3.240 reais
@@ -420,25 +420,25 @@ Revisor/data: pendentes.
 
 ## M27 — Média e reconstrução de dados
 
-ID: d1430000-0000-4000-8000-000000000027. Versão: 1. Dificuldade estimada: hard. Família: M7.
+ID: d1430000-0000-4000-8000-000000000027. Versão: 2. Dificuldade estimada: hard. Família: M7.
 
-A média de 14 avaliações de um projeto era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,4. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
+A média de 14 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,3. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
 
-- **A)** 9,2667 pontos
-- **B)** 8,2667 pontos
-- **C)** 7,4 pontos
-- **D)** 8,2 pontos
-- **E)** 10,2667 pontos
+- **A)** 8,7 pontos
+- **B)** 8,4 pontos
+- **C)** 7,3 pontos
+- **D)** 7,15 pontos
+- **E)** 41,3667 pontos
 
-**Gabarito: A.** A soma antiga é 14 × 7 = 98; a nova soma é 17 × 7,4 = 125,8. A diferença, dividida por três, resulta em 9,2667. Não se calcula a nova nota pela média simples de 7 e 7,4.
+**Gabarito: A.** A soma antiga é 14 × 7 = 98; a nova soma é 17 × 7,3 = 124,1. A diferença, dividida por três, resulta em 8,7. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
 Revisor/data: pendentes.
 
 ## M28 — Média ponderada e percentuais
 
-ID: d1430000-0000-4000-8000-000000000028. Versão: 1. Dificuldade estimada: hard. Família: M8.
+ID: d1430000-0000-4000-8000-000000000028. Versão: 2. Dificuldade estimada: hard. Família: M8.
 
-Uma turma de 25 estudantes teve 60% de presença em uma oficina; outra de 35 teve 80%. Um relatório somou os presentes e dividiu pelo total de estudantes das duas turmas, em vez de simplesmente tirar a média dos percentuais. Qual percentual conjunto obteve, aproximadamente, com até quatro casas decimais?
+Uma turma de 25 estudantes teve 60% de presença em uma oficina; outra de 35 teve 80%. Qual foi o percentual de presença no conjunto das duas turmas, aproximadamente, com até quatro casas decimais?
 
 - **A)** 60%
 - **B)** 71,6667%
@@ -564,9 +564,9 @@ Revisor/data: pendentes.
 
 ## M36 — Velocidade média em trechos iguais
 
-ID: d1430000-0000-4000-8000-000000000036. Versão: 1. Dificuldade estimada: hard. Família: M16.
+ID: d1430000-0000-4000-8000-000000000036. Versão: 2. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista percorre 30 km a 12 km/h e retorna pelo mesmo trajeto, de 30 km, a 18 km/h. Não há paradas. Um observador usa a média aritmética de 12 e 18, mas a ciclista usa distância total dividida pelo tempo total. Qual velocidade média obtém no percurso completo?
+Uma ciclista percorre 30 km a 12 km/h e retorna pelo mesmo trajeto, de 30 km, a 18 km/h. Não há paradas. Qual foi a velocidade média no percurso completo?
 
 - **A)** 16 km/h
 - **B)** 15 km/h
@@ -580,9 +580,9 @@ Revisor/data: pendentes.
 
 ## M37 — Ângulos de polígonos e giro
 
-ID: d1430000-0000-4000-8000-000000000037. Versão: 1. Dificuldade estimada: hard. Família: M17.
+ID: d1430000-0000-4000-8000-000000000037. Versão: 2. Dificuldade estimada: hard. Família: M17.
 
-Uma praça tem contorno de polígono regular com 7 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Ele parte da soma dos ângulos internos, (n − 2) × 180°, e distribui essa soma igualmente. Qual ângulo interno obtém, aproximadamente?
+Uma praça tem contorno de polígono regular com 7 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Qual é a medida desse ângulo interno, aproximadamente?
 
 - **A)** 51,4286°
 - **B)** 25,7143°
@@ -596,9 +596,9 @@ Revisor/data: pendentes.
 
 ## M38 — Contagem e distinção de funções
 
-ID: d1430000-0000-4000-8000-000000000038. Versão: 1. Dificuldade estimada: hard. Família: M18.
+ID: d1430000-0000-4000-8000-000000000038. Versão: 2. Dificuldade estimada: hard. Família: M18.
 
-Um grupo tem 8 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Um aluno contou cada dupla nas duas ordens possíveis. Qual total corrige essa dupla contagem e dá o número de comissões distintas?
+Um grupo tem 8 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Quantas comissões distintas podem ser formadas?
 
 - **A)** 36 comissões
 - **B)** 56 comissões
@@ -644,9 +644,9 @@ Revisor/data: pendentes.
 
 ## M41 — Frações e reconstrução do total
 
-ID: d1430000-0000-4000-8000-000000000041. Versão: 1. Dificuldade estimada: hard. Família: M1.
+ID: d1430000-0000-4000-8000-000000000041. Versão: 2. Dificuldade estimada: hard. Família: M1.
 
-Uma associação separou R$ 180 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1320. Um tesoureiro calculou a arrecadação somando a reserva ao triplo da sobra. Qual foi a arrecadação inicial que justifica esse procedimento?
+Uma associação separou R$ 180 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1320. Qual foi a arrecadação inicial?
 
 - **A)** 2.160 reais
 - **B)** 4.140 reais
@@ -740,25 +740,25 @@ Revisor/data: pendentes.
 
 ## M47 — Média e reconstrução de dados
 
-ID: d1430000-0000-4000-8000-000000000047. Versão: 1. Dificuldade estimada: hard. Família: M7.
+ID: d1430000-0000-4000-8000-000000000047. Versão: 2. Dificuldade estimada: hard. Família: M7.
 
-A média de 16 avaliações de um projeto era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,4. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
+A média de 16 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,3. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
 
-- **A)** 9,5333 pontos
-- **B)** 8,2 pontos
-- **C)** 10,5333 pontos
-- **D)** 7,4 pontos
-- **E)** 8,5333 pontos
+- **A)** 8,9 pontos
+- **B)** 7,15 pontos
+- **C)** 46,2333 pontos
+- **D)** 7,3 pontos
+- **E)** 8,6 pontos
 
-**Gabarito: A.** A soma antiga é 16 × 7 = 112; a nova soma é 19 × 7,4 = 140,6. A diferença, dividida por três, resulta em 9,5333. Não se calcula a nova nota pela média simples de 7 e 7,4.
+**Gabarito: A.** A soma antiga é 16 × 7 = 112; a nova soma é 19 × 7,3 = 138,7. A diferença, dividida por três, resulta em 8,9. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
 Revisor/data: pendentes.
 
 ## M48 — Média ponderada e percentuais
 
-ID: d1430000-0000-4000-8000-000000000048. Versão: 1. Dificuldade estimada: hard. Família: M8.
+ID: d1430000-0000-4000-8000-000000000048. Versão: 2. Dificuldade estimada: hard. Família: M8.
 
-Uma turma de 30 estudantes teve 60% de presença em uma oficina; outra de 40 teve 80%. Um relatório somou os presentes e dividiu pelo total de estudantes das duas turmas, em vez de simplesmente tirar a média dos percentuais. Qual percentual conjunto obteve, aproximadamente, com até quatro casas decimais?
+Uma turma de 30 estudantes teve 60% de presença em uma oficina; outra de 40 teve 80%. Qual foi o percentual de presença no conjunto das duas turmas, aproximadamente, com até quatro casas decimais?
 
 - **A)** 71,4286%
 - **B)** 70%
@@ -884,9 +884,9 @@ Revisor/data: pendentes.
 
 ## M56 — Velocidade média em trechos iguais
 
-ID: d1430000-0000-4000-8000-000000000056. Versão: 1. Dificuldade estimada: hard. Família: M16.
+ID: d1430000-0000-4000-8000-000000000056. Versão: 2. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista percorre 36 km a 12 km/h e retorna pelo mesmo trajeto, de 36 km, a 18 km/h. Não há paradas. Um observador usa a média aritmética de 12 e 18, mas a ciclista usa distância total dividida pelo tempo total. Qual velocidade média obtém no percurso completo?
+Uma ciclista percorre 36 km a 12 km/h e retorna pelo mesmo trajeto, de 36 km, a 18 km/h. Não há paradas. Qual foi a velocidade média no percurso completo?
 
 - **A)** 13,5 km/h
 - **B)** 14,4 km/h
@@ -900,9 +900,9 @@ Revisor/data: pendentes.
 
 ## M57 — Ângulos de polígonos e giro
 
-ID: d1430000-0000-4000-8000-000000000057. Versão: 1. Dificuldade estimada: hard. Família: M17.
+ID: d1430000-0000-4000-8000-000000000057. Versão: 2. Dificuldade estimada: hard. Família: M17.
 
-Uma praça tem contorno de polígono regular com 8 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Ele parte da soma dos ângulos internos, (n − 2) × 180°, e distribui essa soma igualmente. Qual ângulo interno obtém, aproximadamente?
+Uma praça tem contorno de polígono regular com 8 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Qual é a medida desse ângulo interno, aproximadamente?
 
 - **A)** 45°
 - **B)** 136°
@@ -916,9 +916,9 @@ Revisor/data: pendentes.
 
 ## M58 — Contagem e distinção de funções
 
-ID: d1430000-0000-4000-8000-000000000058. Versão: 1. Dificuldade estimada: hard. Família: M18.
+ID: d1430000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: hard. Família: M18.
 
-Um grupo tem 9 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Um aluno contou cada dupla nas duas ordens possíveis. Qual total corrige essa dupla contagem e dá o número de comissões distintas?
+Um grupo tem 9 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Quantas comissões distintas podem ser formadas?
 
 - **A)** 36 comissões
 - **B)** 18 comissões
@@ -964,9 +964,9 @@ Revisor/data: pendentes.
 
 ## M61 — Frações e reconstrução do total
 
-ID: d1430000-0000-4000-8000-000000000061. Versão: 1. Dificuldade estimada: hard. Família: M1.
+ID: d1430000-0000-4000-8000-000000000061. Versão: 2. Dificuldade estimada: hard. Família: M1.
 
-Uma associação separou R$ 210 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1560. Um tesoureiro calculou a arrecadação somando a reserva ao triplo da sobra. Qual foi a arrecadação inicial que justifica esse procedimento?
+Uma associação separou R$ 210 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1560. Qual foi a arrecadação inicial?
 
 - **A)** 2.550 reais
 - **B)** 5.310 reais
@@ -1060,25 +1060,25 @@ Revisor/data: pendentes.
 
 ## M67 — Média e reconstrução de dados
 
-ID: d1430000-0000-4000-8000-000000000067. Versão: 1. Dificuldade estimada: hard. Família: M7.
+ID: d1430000-0000-4000-8000-000000000067. Versão: 2. Dificuldade estimada: hard. Família: M7.
 
-A média de 18 avaliações de um projeto era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,4. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
+A média de 18 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,3. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
 
-- **A)** 9,8 pontos
-- **B)** 7,4 pontos
-- **C)** 10,8 pontos
+- **A)** 9,1 pontos
+- **B)** 7,3 pontos
+- **C)** 51,1 pontos
 - **D)** 8,8 pontos
-- **E)** 8,2 pontos
+- **E)** 7,15 pontos
 
-**Gabarito: A.** A soma antiga é 18 × 7 = 126; a nova soma é 21 × 7,4 = 155,4. A diferença, dividida por três, resulta em 9,8. Não se calcula a nova nota pela média simples de 7 e 7,4.
+**Gabarito: A.** A soma antiga é 18 × 7 = 126; a nova soma é 21 × 7,3 = 153,3. A diferença, dividida por três, resulta em 9,1. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
 Revisor/data: pendentes.
 
 ## M68 — Média ponderada e percentuais
 
-ID: d1430000-0000-4000-8000-000000000068. Versão: 1. Dificuldade estimada: hard. Família: M8.
+ID: d1430000-0000-4000-8000-000000000068. Versão: 2. Dificuldade estimada: hard. Família: M8.
 
-Uma turma de 35 estudantes teve 60% de presença em uma oficina; outra de 45 teve 80%. Um relatório somou os presentes e dividiu pelo total de estudantes das duas turmas, em vez de simplesmente tirar a média dos percentuais. Qual percentual conjunto obteve, aproximadamente, com até quatro casas decimais?
+Uma turma de 35 estudantes teve 60% de presença em uma oficina; outra de 45 teve 80%. Qual foi o percentual de presença no conjunto das duas turmas, aproximadamente, com até quatro casas decimais?
 
 - **A)** 70%
 - **B)** 60%
@@ -1204,9 +1204,9 @@ Revisor/data: pendentes.
 
 ## M76 — Velocidade média em trechos iguais
 
-ID: d1430000-0000-4000-8000-000000000076. Versão: 1. Dificuldade estimada: hard. Família: M16.
+ID: d1430000-0000-4000-8000-000000000076. Versão: 2. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista percorre 42 km a 12 km/h e retorna pelo mesmo trajeto, de 42 km, a 18 km/h. Não há paradas. Um observador usa a média aritmética de 12 e 18, mas a ciclista usa distância total dividida pelo tempo total. Qual velocidade média obtém no percurso completo?
+Uma ciclista percorre 42 km a 12 km/h e retorna pelo mesmo trajeto, de 42 km, a 18 km/h. Não há paradas. Qual foi a velocidade média no percurso completo?
 
 - **A)** 15 km/h
 - **B)** 14,4 km/h
@@ -1220,9 +1220,9 @@ Revisor/data: pendentes.
 
 ## M77 — Ângulos de polígonos e giro
 
-ID: d1430000-0000-4000-8000-000000000077. Versão: 1. Dificuldade estimada: hard. Família: M17.
+ID: d1430000-0000-4000-8000-000000000077. Versão: 2. Dificuldade estimada: hard. Família: M17.
 
-Uma praça tem contorno de polígono regular com 9 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Ele parte da soma dos ângulos internos, (n − 2) × 180°, e distribui essa soma igualmente. Qual ângulo interno obtém, aproximadamente?
+Uma praça tem contorno de polígono regular com 9 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Qual é a medida desse ângulo interno, aproximadamente?
 
 - **A)** 20°
 - **B)** 40°
@@ -1236,9 +1236,9 @@ Revisor/data: pendentes.
 
 ## M78 — Contagem e distinção de funções
 
-ID: d1430000-0000-4000-8000-000000000078. Versão: 1. Dificuldade estimada: hard. Família: M18.
+ID: d1430000-0000-4000-8000-000000000078. Versão: 2. Dificuldade estimada: hard. Família: M18.
 
-Um grupo tem 10 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Um aluno contou cada dupla nas duas ordens possíveis. Qual total corrige essa dupla contagem e dá o número de comissões distintas?
+Um grupo tem 10 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Quantas comissões distintas podem ser formadas?
 
 - **A)** 90 comissões
 - **B)** 100 comissões
@@ -1284,9 +1284,9 @@ Revisor/data: pendentes.
 
 ## M81 — Frações e reconstrução do total
 
-ID: d1430000-0000-4000-8000-000000000081. Versão: 1. Dificuldade estimada: hard. Família: M1.
+ID: d1430000-0000-4000-8000-000000000081. Versão: 2. Dificuldade estimada: hard. Família: M1.
 
-Uma associação separou R$ 240 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1800. Um tesoureiro calculou a arrecadação somando a reserva ao triplo da sobra. Qual foi a arrecadação inicial que justifica esse procedimento?
+Uma associação separou R$ 240 de sua arrecadação para manutenção. Aplicou 2/3 do dinheiro restante em materiais; depois dessa aplicação, ainda tinha R$ 1800. Qual foi a arrecadação inicial?
 
 - **A)** 2.040 reais
 - **B)** 6.120 reais
@@ -1380,25 +1380,25 @@ Revisor/data: pendentes.
 
 ## M87 — Média e reconstrução de dados
 
-ID: d1430000-0000-4000-8000-000000000087. Versão: 1. Dificuldade estimada: hard. Família: M7.
+ID: d1430000-0000-4000-8000-000000000087. Versão: 2. Dificuldade estimada: hard. Família: M7.
 
-A média de 20 avaliações de um projeto era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,4. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
+A média de 20 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7,0. Foram acrescentadas três avaliações iguais entre si, e a nova média passou a 7,3. As avaliações têm o mesmo peso. Qual nota foi atribuída em cada uma das três novas avaliações?
 
-- **A)** 11,0667 pontos
-- **B)** 9,0667 pontos
-- **C)** 8,2 pontos
-- **D)** 10,0667 pontos
-- **E)** 7,4 pontos
+- **A)** 55,9667 pontos
+- **B)** 9 pontos
+- **C)** 7,15 pontos
+- **D)** 9,3 pontos
+- **E)** 7,3 pontos
 
-**Gabarito: D.** A soma antiga é 20 × 7 = 140; a nova soma é 23 × 7,4 = 170,2. A diferença, dividida por três, resulta em 10,0667. Não se calcula a nova nota pela média simples de 7 e 7,4.
+**Gabarito: D.** A soma antiga é 20 × 7 = 140; a nova soma é 23 × 7,3 = 167,9. A diferença, dividida por três, resulta em 9,3. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
 Revisor/data: pendentes.
 
 ## M88 — Média ponderada e percentuais
 
-ID: d1430000-0000-4000-8000-000000000088. Versão: 1. Dificuldade estimada: hard. Família: M8.
+ID: d1430000-0000-4000-8000-000000000088. Versão: 2. Dificuldade estimada: hard. Família: M8.
 
-Uma turma de 40 estudantes teve 60% de presença em uma oficina; outra de 50 teve 80%. Um relatório somou os presentes e dividiu pelo total de estudantes das duas turmas, em vez de simplesmente tirar a média dos percentuais. Qual percentual conjunto obteve, aproximadamente, com até quatro casas decimais?
+Uma turma de 40 estudantes teve 60% de presença em uma oficina; outra de 50 teve 80%. Qual foi o percentual de presença no conjunto das duas turmas, aproximadamente, com até quatro casas decimais?
 
 - **A)** 71,1111%
 - **B)** 66,1111%
@@ -1524,9 +1524,9 @@ Revisor/data: pendentes.
 
 ## M96 — Velocidade média em trechos iguais
 
-ID: d1430000-0000-4000-8000-000000000096. Versão: 1. Dificuldade estimada: hard. Família: M16.
+ID: d1430000-0000-4000-8000-000000000096. Versão: 2. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista percorre 48 km a 12 km/h e retorna pelo mesmo trajeto, de 48 km, a 18 km/h. Não há paradas. Um observador usa a média aritmética de 12 e 18, mas a ciclista usa distância total dividida pelo tempo total. Qual velocidade média obtém no percurso completo?
+Uma ciclista percorre 48 km a 12 km/h e retorna pelo mesmo trajeto, de 48 km, a 18 km/h. Não há paradas. Qual foi a velocidade média no percurso completo?
 
 - **A)** 30 km/h
 - **B)** 16 km/h
@@ -1540,9 +1540,9 @@ Revisor/data: pendentes.
 
 ## M97 — Ângulos de polígonos e giro
 
-ID: d1430000-0000-4000-8000-000000000097. Versão: 1. Dificuldade estimada: hard. Família: M17.
+ID: d1430000-0000-4000-8000-000000000097. Versão: 2. Dificuldade estimada: hard. Família: M17.
 
-Uma praça tem contorno de polígono regular com 10 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Ele parte da soma dos ângulos internos, (n − 2) × 180°, e distribui essa soma igualmente. Qual ângulo interno obtém, aproximadamente?
+Uma praça tem contorno de polígono regular com 10 lados. Um desenhista precisa do ângulo interno em cada vértice para produzir o desenho. Qual é a medida desse ângulo interno, aproximadamente?
 
 - **A)** 144°
 - **B)** 36°
@@ -1556,9 +1556,9 @@ Revisor/data: pendentes.
 
 ## M98 — Contagem e distinção de funções
 
-ID: d1430000-0000-4000-8000-000000000098. Versão: 1. Dificuldade estimada: hard. Família: M18.
+ID: d1430000-0000-4000-8000-000000000098. Versão: 2. Dificuldade estimada: hard. Família: M18.
 
-Um grupo tem 11 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Um aluno contou cada dupla nas duas ordens possíveis. Qual total corrige essa dupla contagem e dá o número de comissões distintas?
+Um grupo tem 11 participantes e precisa escolher duas pessoas para uma comissão sem cargos diferentes. Quantas comissões distintas podem ser formadas?
 
 - **A)** 22 comissões
 - **B)** 110 comissões

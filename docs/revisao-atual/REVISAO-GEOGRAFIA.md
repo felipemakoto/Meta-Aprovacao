@@ -1,4 +1,4 @@
-# Revisão atual — Geografia — etapa 43
+# Revisão atual — Geografia — etapa 44
 
 Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
@@ -1182,20 +1182,20 @@ Revisor/data: pendentes.
 
 ## G63 — Urbanização e crescimento absoluto
 
-ID: d1434000-0000-4000-8000-000000000063. Versão: 1. Dificuldade estimada: hard. Família: G3.
+ID: d1434000-0000-4000-8000-000000000063. Versão: 2. Dificuldade estimada: hard. Família: G3.
 
 Dados fictícios elaborados para interpretação geográfica:
 Um município tinha 80.000 habitantes, dos quais 60.000 urbanos. Dez anos depois passou a 100.000 habitantes, sendo 85.000 urbanos. Considere os mesmos limites territoriais e critérios de classificação nos dois momentos.
 
-Os dados bastam para afirmar que toda a redução rural corresponde a pessoas que migraram para a área urbana?
+O aumento da população urbana de 60.000 para 85.000 permite concluir que 25.000 pessoas migraram do campo para a cidade?
 
-- **A)** Sim, pois o aumento urbano coincide exatamente com a redução rural.
-- **B)** Sim, porque toda mudança absoluta rural é necessariamente migração interna.
-- **C)** Não, porque urbanização não tem relação com movimentos de pessoas.
-- **D)** Não; nascimentos, mortes e migrações externas também podem afetar os totais.
-- **E)** Sim, porque os limites territoriais foram mantidos.
+- **A)** Não; a queda do total rural demonstra que não houve migração para a cidade.
+- **B)** Sim; o aumento absoluto urbano é uma medida direta de migração rural–urbana.
+- **C)** Sim; manter os limites territoriais elimina a possibilidade de nascimentos urbanos.
+- **D)** Não; o aumento urbano também pode envolver crescimento natural e migração de outras cidades.
+- **E)** Não; migração rural–urbana só altera a população rural, sem entrar no total urbano.
 
-**Gabarito: D.** Totais agregados não isolam causas. A manutenção dos critérios ajuda a comparar, mas ainda é necessário separar componentes demográficos e movimentos migratórios.
+**Gabarito: D.** O estoque populacional urbano pode mudar por nascimentos, mortes e fluxos migratórios de diferentes origens. Manter limites e classificação comparáveis evita um tipo de distorção, mas não permite atribuir toda a variação a uma causa.
 
 Revisor/data: pendentes.
 
@@ -1448,20 +1448,20 @@ Revisor/data: pendentes.
 
 ## G77 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000077. Versão: 1. Dificuldade estimada: hard. Família: G17.
+ID: d1434000-0000-4000-8000-000000000077. Versão: 2. Dificuldade estimada: hard. Família: G17.
 
 Dados fictícios elaborados para interpretação geográfica:
 Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Para este exercício, considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
-Por que uma diferença de 20° de longitude não corresponde à mesma distância linear em todos os paralelos?
+Em um modelo esférico da Terra, por que 20° de longitude representam menor distância sobre o paralelo de 60° do que sobre o equador?
 
-- **A)** Porque todos os paralelos têm exatamente o mesmo comprimento.
-- **B)** Porque a circunferência dos paralelos diminui do equador em direção aos polos.
-- **C)** Porque longitude é uma unidade de massa.
-- **D)** Porque os meridianos não se relacionam à posição na Terra.
-- **E)** Porque cada grau de longitude equivale sempre a 20 km.
+- **A)** Os meridianos tornam-se mais curtos em 60°, diminuindo a unidade usada para longitude.
+- **B)** O paralelo de 60° possui menor circunferência, de modo que a mesma fração angular corresponde a um arco menor.
+- **C)** O grau de longitude passa a ter menos minutos angulares ao aumentar a latitude.
+- **D)** A circunferência do paralelo cresce com a latitude, reduzindo o arco associado a 20°.
+- **E)** A latitude altera a distância entre os polos, embora o tamanho dos paralelos permaneça igual.
 
-**Gabarito: B.** Longitude é angular. A distância associada a um ângulo depende do raio do paralelo, que varia com latitude; não se converte diretamente um número de graus em quilômetros universais.
+**Gabarito: B.** O ângulo mantém sua medida, mas o raio do paralelo diminui em direção aos polos. Como a circunferência é proporcional a esse raio, uma mesma diferença de longitude corresponde a distâncias menores em paralelos de maior latitude.
 
 Revisor/data: pendentes.
 
@@ -1524,39 +1524,39 @@ Revisor/data: pendentes.
 
 ## G81 — Escala, distância e área
 
-ID: d1434000-0000-4000-8000-000000000081. Versão: 1. Dificuldade estimada: hard. Família: G1.
+ID: d1434000-0000-4000-8000-000000000081. Versão: 2. Dificuldade estimada: hard. Família: G1.
 
 Dados fictícios elaborados para interpretação geográfica:
 Um mapa tem escala 1:50.000. Uma trilha mede 8 cm no papel e a área representada por um quadrado de 2 cm de lado será estudada. Um segundo mapa da mesma região usa escala 1:25.000. Despreze distorções da projeção neste exercício.
 
-Um estudante calcula a área real multiplicando 4 cm² por 50.000. Qual falha conceitual comete?
+O quadrado de 2 cm de lado no mapa 1:50.000 representa uma área real de quanto?
 
-- **A)** Confunde o número de habitantes com distância.
-- **B)** Usa a escala apenas no lado de um quadrado que não possui área.
-- **C)** Esquece que mapas não podem representar áreas.
-- **D)** Aplica um fator linear a uma área; o fator de escala deve ser aplicado às duas dimensões.
-- **E)** Aumenta necessariamente a precisão ao misturar unidades de área e comprimento.
+- **A)** 2 km²
+- **B)** 4 km²
+- **C)** 0,5 km²
+- **D)** 1 km²
+- **E)** 10 km²
 
-**Gabarito: D.** Uma área depende do produto de duas dimensões. É preciso converter cada lado ou usar o quadrado do fator linear e depois converter as unidades de área.
+**Gabarito: D.** Cada lado representa 2 × 50.000 = 100.000 cm, isto é, 1 km. A área é 1 km × 1 km = 1 km². É necessário converter as medidas lineares antes de calcular a área; o fator de escala de área é quadrático.
 
 Revisor/data: pendentes.
 
 ## G82 — Densidade demográfica e distribuição
 
-ID: d1434000-0000-4000-8000-000000000082. Versão: 1. Dificuldade estimada: hard. Família: G2.
+ID: d1434000-0000-4000-8000-000000000082. Versão: 2. Dificuldade estimada: hard. Família: G2.
 
 Dados fictícios elaborados para interpretação geográfica:
 A região A tem 600.000 habitantes em 3.000 km²; B tem 400.000 habitantes em 1.000 km². Em A, 80% das pessoas vivem em apenas 20% da área. As áreas não se sobrepõem e os dados referem-se ao mesmo ano.
 
-Que informação complementa a densidade para planejar serviços?
+Em A, qual densidade resulta na parcela que reúne 80% dos habitantes em 20% da área?
 
-- **A)** Localização de moradores, redes de transporte e áreas efetivamente atendidas.
-- **B)** A densidade tomada como prova de que todos têm igual acesso.
-- **C)** O número total de habitantes usado como única medida de distância aos serviços.
-- **D)** Somente o total de quilômetros quadrados sem localização.
-- **E)** A ordem alfabética do nome das duas regiões.
+- **A)** 800 hab./km²
+- **B)** 400 hab./km²
+- **C)** 1.000 hab./km²
+- **D)** 160 hab./km²
+- **E)** 200 hab./km²
 
-**Gabarito: A.** Planejamento depende de distribuição e acessibilidade. População e área agregadas não informam automaticamente proximidade, deslocamento ou cobertura de serviços.
+**Gabarito: A.** Essa parcela reúne 0,8 × 600.000 = 480.000 pessoas em 0,2 × 3.000 = 600 km². Dividindo, obtém-se 800 hab./km², quatro vezes a média de A. A densidade média regional não descreve a concentração interna.
 
 Revisor/data: pendentes.
 
@@ -1619,20 +1619,20 @@ Revisor/data: pendentes.
 
 ## G86 — Produtividade agrícola e área
 
-ID: d1434000-0000-4000-8000-000000000086. Versão: 1. Dificuldade estimada: hard. Família: G6.
+ID: d1434000-0000-4000-8000-000000000086. Versão: 2. Dificuldade estimada: hard. Família: G6.
 
 Dados fictícios elaborados para interpretação geográfica:
 A propriedade A colheu 12.000 toneladas em 3.000 hectares; B colheu 10.000 toneladas em 2.000 hectares. No ano seguinte, A pretende aumentar a produção para 15.000 toneladas mantendo a área. Os dados não incluem custo, renda dos trabalhadores ou impactos ambientais.
 
-Qual conclusão não pode ser obtida apenas da maior produtividade de B?
+Para A colher 15.000 toneladas sem aumentar a área de 3.000 hectares, que mudança de produtividade é necessária?
 
-- **A)** Que sua produção é necessariamente mais sustentável e distribui melhor a renda.
-- **B)** Que seu rendimento calculado é de 5 t/ha.
-- **C)** Que sua produção total é 10.000 toneladas.
-- **D)** Que sua área informada é menor que a de A.
-- **E)** Que rendimento e produção total não têm a mesma comparação neste caso.
+- **A)** Passar de 4 para 5 t/ha, aumento de 25%.
+- **B)** Passar de 4 para 5 t/ha, aumento de 20%.
+- **C)** Passar de 4 para 6 t/ha, aumento de 50%.
+- **D)** Passar de 4 para 4,25 t/ha, aumento de 25%.
+- **E)** Manter 4 t/ha, pois a área permanece igual.
 
-**Gabarito: A.** Sustentabilidade e distribuição de renda exigem dados sobre práticas, custos, trabalho e impactos. Produtividade não é medida suficiente dessas dimensões.
+**Gabarito: A.** Inicialmente são 12.000/3.000 = 4 t/ha. A meta exige 15.000/3.000 = 5 t/ha. O acréscimo de 1 t/ha dividido pelo valor inicial de 4 t/ha equivale a 25%; a área constante exige maior rendimento.
 
 Revisor/data: pendentes.
 
@@ -1676,20 +1676,20 @@ Revisor/data: pendentes.
 
 ## G89 — Emissões totais e por habitante
 
-ID: d1434000-0000-4000-8000-000000000089. Versão: 1. Dificuldade estimada: hard. Família: G9.
+ID: d1434000-0000-4000-8000-000000000089. Versão: 2. Dificuldade estimada: hard. Família: G9.
 
 Dados fictícios elaborados para interpretação geográfica:
 O país A emite 120 milhões de toneladas de um gás em um ano e tem 60 milhões de habitantes. B emite 80 milhões de toneladas e tem 20 milhões de habitantes. Considere a mesma metodologia de inventário e não inclua emissões históricas acumuladas neste cálculo.
 
-Que dado é necessário para comparar responsabilidade histórica além do ano informado?
+Se A reduzir suas emissões totais em 10% e mantiver a população, qual será sua emissão anual por habitante?
 
-- **A)** Somente a população de um único ano.
-- **B)** Inventários de vários períodos e critérios de atribuição das emissões acumuladas.
-- **C)** A área do país usada como substituto de todos os inventários.
-- **D)** A emissão anual atual considerada como toda história de emissões.
-- **E)** A ordem dos países na tabela tomada como critério histórico.
+- **A)** 2,2 t/habitante
+- **B)** 1,8 t/habitante
+- **C)** 0,2 t/habitante
+- **D)** 1,9 t/habitante
+- **E)** 3,6 t/habitante
 
-**Gabarito: B.** Responsabilidade acumulada exige informação temporal e critérios, não apenas um retrato anual. O enunciado explicitamente não inclui esse histórico.
+**Gabarito: B.** As emissões passam de 120 para 108 milhões de toneladas. Dividindo pelos mesmos 60 milhões de habitantes, obtêm-se 1,8 t/habitante. A redução percentual do total também reduz a razão em 10% quando o denominador permanece constante.
 
 Revisor/data: pendentes.
 
@@ -1847,20 +1847,20 @@ Revisor/data: pendentes.
 
 ## G98 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000098. Versão: 1. Dificuldade estimada: hard. Família: G18.
+ID: d1434000-0000-4000-8000-000000000098. Versão: 2. Dificuldade estimada: hard. Família: G18.
 
 Dados fictícios elaborados para interpretação geográfica:
 Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Neste exercício, força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
-Qual mudança evidencia o risco de interpretar apenas a taxa sem seus componentes?
+Compare dois cenários: mil desocupados encontram trabalho; ou mil desocupados deixam de procurar. Qual comparação das taxas resultantes está correta?
 
-- **A)** A comparação entre pessoas disponíveis no mesmo período.
-- **B)** A taxa cair por saída de pessoas da força, mantendo o número de ocupados.
-- **C)** A soma correta de ocupados e desocupados.
-- **D)** A apresentação dos dados na mesma unidade.
-- **E)** O uso da definição fornecida para força de trabalho.
+- **A)** 10% no primeiro e 20% no segundo; pessoas fora da força entram como desocupadas.
+- **B)** Cerca de 13,3% no primeiro e 14,3% no segundo; só o primeiro aumenta o número de ocupados.
+- **C)** 20% nos dois; a população total permanece constante.
+- **D)** Cerca de 13,3% nos dois; retirar mil do numerador mantém a mesma taxa independentemente do denominador.
+- **E)** Cerca de 14,3% no primeiro e 13,3% no segundo; a força de trabalho cai apenas com novos empregos.
 
-**Gabarito: B.** Numerador e denominador podem variar por motivos diferentes. Examinar participação e ocupação permite distinguir geração de empregos de outras causas de queda da taxa.
+**Gabarito: B.** Com emprego novo, são 2.000 desocupados em força de 15.000: 13,3%. Com saída da participação, são 2.000 em força de 14.000: 14,3%. A força soma ocupados e desocupados, excluindo os que deixam de procurar no modelo.
 
 Revisor/data: pendentes.
 
@@ -1885,19 +1885,19 @@ Revisor/data: pendentes.
 
 ## G100 — Cadeias produtivas e divisão territorial
 
-ID: d1434000-0000-4000-8000-000000000100. Versão: 1. Dificuldade estimada: hard. Família: G20.
+ID: d1434000-0000-4000-8000-000000000100. Versão: 2. Dificuldade estimada: hard. Família: G20.
 
 Dados fictícios elaborados para interpretação geográfica:
 Um produto vendido por R$ 1.000 envolve etapas em três regiões: extração e materiais somam R$ 100; montagem soma R$ 200; desenvolvimento, marca e comercialização somam R$ 700. Para o exercício, os valores particionam o preço sem dupla contagem. Não se informa como cada etapa distribui sua receita entre salários, custos e lucros.
 
-Que análise explica a divisão territorial além de listar onde cada etapa ocorre?
+Se a parcela de montagem crescer de R$ 200 para R$ 250 e as outras duas parcelas permanecerem iguais, qual será sua participação no novo preço?
 
-- **A)** Supor que cada região produz isoladamente o produto completo.
-- **B)** Investigar infraestrutura, trabalho, tecnologia, redes e controle das decisões entre regiões.
-- **C)** Usar apenas a distância entre regiões como explicação suficiente de todo valor.
-- **D)** Tratar as parcelas iguais como condição obrigatória de toda cadeia produtiva.
-- **E)** Considerar que fronteiras impedem qualquer conexão produtiva.
+- **A)** Aproximadamente 26,3%.
+- **B)** Aproximadamente 23,8%.
+- **C)** 25%
+- **D)** 30%
+- **E)** 20%
 
-**Gabarito: B.** Cadeias articulam etapas por fluxos e relações de poder. Localização e valor dependem de condições produtivas e controle, não apenas distância ou fronteiras.
+**Gabarito: B.** O novo preço é 100 + 250 + 700 = 1.050 reais. A montagem representa 250/1.050 × 100 ≈ 23,8%. Dividir por 1.000 desconsidera a mudança no total; aumento da parcela e aumento de participação são medidas diferentes.
 
 Revisor/data: pendentes.

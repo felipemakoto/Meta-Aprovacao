@@ -1,13 +1,13 @@
-# Revisão atual — Ciências — etapa 43
+# Revisão atual — Ciências — etapa 44
 
 Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
 ## C01 — Densidade e flutuação
 
-ID: d1090000-0000-4000-8000-000000000005. Versão: 2. Dificuldade estimada: hard. Família: C1.
+ID: d1090000-0000-4000-8000-000000000005. Versão: 3. Dificuldade estimada: hard. Família: C1.
 
 Situação experimental fictícia:
-Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve e flutua em equilíbrio quando sua densidade é menor que a do líquido.
+Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Qual previsão combina corretamente a medida de densidade e o comportamento nos dois líquidos?
 
@@ -23,39 +23,39 @@ Revisor/data: pendentes.
 
 ## C02 — Separação de misturas e conservação
 
-ID: d1090000-0000-4000-8000-000000000006. Versão: 2. Dificuldade estimada: hard. Família: C2.
+ID: d1090000-0000-4000-8000-000000000006. Versão: 3. Dificuldade estimada: hard. Família: C2.
 
 Situação experimental fictícia:
 Uma amostra contém 20 g de areia seca e 30 g de sal completamente dissolvido em 150 g de água. A areia é insolúvel; o sal não é volátil nas condições do experimento. Após filtração ideal, o líquido é dividido em duas partes iguais: uma sofre evaporação até secar; a outra, destilação com coleta completa da água.
 
-Qual sequência recupera areia, sal e água sem confundir filtração com remoção de substância dissolvida?
+Para recuperar separadamente a areia, o sal e a água, qual procedimento deve ser aplicado à amostra?
 
-- **A)** A filtração retém a areia; a destilação do filtrado separa água e sal.
-- **B)** A filtração retém areia e todo o sal, deixando apenas água.
-- **C)** A destilação exige que areia e sal tenham a mesma solubilidade.
-- **D)** A evaporação transforma o sal dissolvido em vapor coletável.
-- **E)** A decantação da areia remove também todo o sal dissolvido.
+- **A)** Filtrar a areia e destilar o filtrado, recolhendo a água condensada e o sal residual.
+- **B)** Filtrar a areia e evaporar o filtrado em recipiente aberto, recolhendo sal e água no mesmo recipiente.
+- **C)** Filtrar a areia e resfriar o filtrado, considerando todo o sal recuperado sem verificar sua solubilidade.
+- **D)** Destilar a amostra inteira, recolhendo areia no condensador e sal junto à água destilada.
+- **E)** Decantar a areia e filtrar o líquido, recolhendo o sal dissolvido no papel de filtro.
 
-**Gabarito: A.** A areia é retida pelo filtro, enquanto água e sal dissolvido atravessam. A destilação vaporiza e condensa água, deixando o sal não volátil no recipiente.
+**Gabarito: A.** O filtro retém a areia insolúvel; o sal dissolvido atravessa com a água. A destilação permite condensar e recolher a água, deixando sal no recipiente aquecido. Evaporação aberta recupera sal, mas não recolhe a água.
 
 Revisor/data: pendentes.
 
 ## C03 — Energia elétrica e eficiência
 
-ID: d1390000-0000-4000-8000-000000000001. Versão: 3. Dificuldade estimada: hard. Família: C3.
+ID: d1390000-0000-4000-8000-000000000001. Versão: 4. Dificuldade estimada: hard. Família: C3.
 
 Situação experimental fictícia:
 Uma bomba recebe 600 W de potência elétrica durante 10 minutos. Sua eficiência de conversão em energia útil é 70%; o restante aquece o equipamento e o ambiente. Uma segunda bomba recebe 500 W, tem eficiência de 84% e realiza a mesma transferência de água nas condições consideradas.
 
-Comparando a potência útil das duas bombas, qual conclusão é correta?
+Para realizar a mesma transferência de água em dez minutos, qual comparação das bombas está correta?
 
-- **A)** A primeira é mais eficiente por receber maior potência.
-- **B)** As duas dissipam a mesma potência, pois a potência útil é igual.
-- **C)** A primeira fornece 600 W úteis e a segunda 500 W.
-- **D)** A segunda fornece 84 W úteis, independentemente da potência recebida.
-- **E)** As duas fornecem 420 W úteis, embora a segunda demande menos potência elétrica.
+- **A)** A segunda entrega 420 W úteis; a primeira entrega 180 W úteis.
+- **B)** Ambas consomem a mesma energia, pois realizam a mesma transferência de água.
+- **C)** Ambas entregam 420 W úteis; a segunda consome 100 J a menos nesse intervalo.
+- **D)** A primeira entrega 600 W úteis; a segunda entrega 500 W úteis.
+- **E)** Ambas entregam 420 W úteis; a segunda consome 60.000 J a menos nesse intervalo.
 
-**Gabarito: E.** A primeira fornece 600 × 0,70 = 420 W. A segunda fornece 500 × 0,84 = 420 W. Suas dissipações são 180 W e 80 W, respectivamente.
+**Gabarito: E.** A potência útil é 600 × 0,70 = 420 W e 500 × 0,84 = 420 W. Em 600 segundos, a diferença de energia elétrica consumida é (600 − 500) × 600 = 60.000 J; potência e energia não são a mesma grandeza.
 
 Revisor/data: pendentes.
 
@@ -80,10 +80,10 @@ Revisor/data: pendentes.
 
 ## C05 — Temperatura e equilíbrio térmico
 
-ID: d1390000-0000-4000-8000-000000000003. Versão: 3. Dificuldade estimada: hard. Família: C5.
+ID: d1390000-0000-4000-8000-000000000003. Versão: 4. Dificuldade estimada: hard. Família: C5.
 
 Situação experimental fictícia:
-Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico; o calor perdido pela parte quente iguala o recebido pela parte fria.
+Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Qual temperatura final satisfaz o equilíbrio de energia?
 
@@ -99,10 +99,10 @@ Revisor/data: pendentes.
 
 ## C06 — Fotossíntese e controle experimental
 
-ID: d1390000-0000-4000-8000-000000000004. Versão: 3. Dificuldade estimada: hard. Família: C6.
+ID: d1390000-0000-4000-8000-000000000004. Versão: 4. Dificuldade estimada: hard. Família: C6.
 
 Situação experimental fictícia:
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água, temperatura e concentração inicial de gás carbônico. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido; D fica no escuro. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Que comparação permite avaliar o efeito da intensidade luminosa mantendo as outras condições descritas?
 
@@ -118,10 +118,10 @@ Revisor/data: pendentes.
 
 ## C07 — Fluxo de energia e cadeias alimentares
 
-ID: d1390000-0000-4000-8000-000000000005. Versão: 3. Dificuldade estimada: hard. Família: C7.
+ID: d1390000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: hard. Família: C7.
 
 Situação experimental fictícia:
-Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final. O modelo trata fluxo de energia, não reciclagem de átomos.
+Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Que energia fica disponível ao predador final no modelo?
 
@@ -156,20 +156,20 @@ Revisor/data: pendentes.
 
 ## C09 — Seleção de resistência bacteriana
 
-ID: d1390000-0000-4000-8000-000000000007. Versão: 3. Dificuldade estimada: hard. Família: C9.
+ID: d1390000-0000-4000-8000-000000000007. Versão: 4. Dificuldade estimada: hard. Família: C9.
 
 Situação experimental fictícia:
-Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. A substância não cria a variante resistente no modelo; todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
+Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
-Que mecanismo explica o aumento da proporção de resistentes após a exposição?
+Após a exposição, a proporção de resistentes cresce. Qual mecanismo explica isso no modelo apresentado?
 
-- **A)** Todas as sensíveis decidem tornar-se resistentes por necessidade.
-- **B)** Sobrevivência diferencial favorece variantes resistentes já presentes.
-- **C)** A substância transforma igualmente todas as variantes em resistentes.
-- **D)** A exposição elimina a hereditariedade das características bacterianas.
-- **E)** A resistência aparece apenas porque as resistentes são inicialmente maioria.
+- **A)** A exposição provoca em cada bactéria sensível a alteração hereditária necessária à sobrevivência.
+- **B)** A diferença de sobrevivência modifica a composição da população a partir de variantes hereditárias preexistentes.
+- **C)** O aumento da resistência resulta da maior taxa de reprodução durante a exposição, não das taxas de sobrevivência.
+- **D)** A sobrevivência de algumas sensíveis demonstra que a exposição não exerce seleção sobre a população.
+- **E)** A frequência inicial de 1% permanece entre os sobreviventes porque a característica é hereditária.
 
-**Gabarito: B.** O modelo informa variação hereditária anterior. A exposição seleciona sobreviventes em proporções diferentes; não é apresentada como criação dirigida da característica.
+**Gabarito: B.** As frequências mudam porque os dois grupos sobrevivem em proporções distintas. Hereditariedade não fixa frequências na população. O enunciado informa sobrevivência, mas não uma diferença de reprodução durante a exposição nem aquisição dirigida de resistência.
 
 Revisor/data: pendentes.
 
@@ -213,20 +213,20 @@ Revisor/data: pendentes.
 
 ## C12 — Reação química e sistema fechado
 
-ID: d1390000-0000-4000-8000-000000000010. Versão: 3. Dificuldade estimada: hard. Família: C12.
+ID: d1390000-0000-4000-8000-000000000010. Versão: 4. Dificuldade estimada: hard. Família: C12.
 
 Situação experimental fictícia:
 Um frasco fechado contém 5 g de bicarbonato e 25 g de solução ácida. Ao misturá-los, forma-se gás e o recipiente permanece vedado. A balança continua marcando 30 g de conteúdo. Em outro ensaio igual, o recipiente é aberto e parte do gás escapa, deixando 28 g de conteúdo medido.
 
-Que interpretação concilia os dois resultados com conservação de massa?
+Qual interpretação das duas pesagens é compatível com a conservação da massa?
 
-- **A)** No frasco aberto, 2 g saíram na forma de gás; no fechado, todo o conteúdo permaneceu no sistema.
-- **B)** A reação no frasco fechado produziu massa nova para manter 30 g.
-- **C)** O gás formado não possui massa e não participa da medição.
-- **D)** A reação destruiu 2 g de matéria apenas porque o frasco foi aberto.
-- **E)** A conservação de massa exige que todo recipiente aberto mantenha o mesmo conteúdo.
+- **A)** No ensaio aberto, 2 g cruzam a fronteira do sistema; no fechado, o gás permanece entre os materiais pesados.
+- **B)** O gás tem massa desprezível nos dois ensaios; a diferença deve ser atribuída ao bicarbonato sólido.
+- **C)** No ensaio fechado, a pressão do gás acrescenta 2 g à massa dos reagentes.
+- **D)** No ensaio aberto, a reação fica incompleta e por isso parte da massa inicial deixa de existir.
+- **E)** A massa dos produtos é 28 g nos dois ensaios; no fechado, os 2 g restantes são calor retido.
 
-**Gabarito: A.** A diferença corresponde a matéria que cruzou a fronteira do sistema aberto. No fechado, o gás também é parte do conteúdo pesado; conservação não exige massa constante em sistema com saída de matéria.
+**Gabarito: A.** A massa inclui substâncias gasosas. Em sistema aberto há saída de matéria, e a diferença medida não significa destruição de átomos. Pressão e calor não correspondem, neste modelo escolar, a uma parcela adicional de massa dos materiais.
 
 Revisor/data: pendentes.
 
@@ -270,20 +270,20 @@ Revisor/data: pendentes.
 
 ## C15 — Estações e duração da luz
 
-ID: d1390000-0000-4000-8000-000000000013. Versão: 3. Dificuldade estimada: hard. Família: C15.
+ID: d1390000-0000-4000-8000-000000000013. Versão: 4. Dificuldade estimada: hard. Família: C15.
 
 Situação experimental fictícia:
-Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem. Considere a inclinação do eixo terrestre e a translação; não atribua as estações apenas à distância entre Terra e Sol.
+Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
-Qual explicação integra a inversão sazonal entre hemisférios?
+Qual mecanismo explica a inversão das durações de luz entre junho e dezembro nos dois hemisférios?
 
-- **A)** A Terra fica mais próxima do Sol apenas para o hemisfério sul em dezembro.
-- **B)** A inclinação do eixo modifica a incidência solar e a duração do dia ao longo da translação.
-- **C)** A inclinação do eixo deixa de existir durante o inverno.
-- **D)** A rotação anual inverte os hemisférios norte e sul.
-- **E)** A órbita faz cada cidade mudar de hemisfério em junho.
+- **A)** A variação da distância Terra–Sol aquece alternadamente um hemisfério, mantendo o outro à mesma distância.
+- **B)** A inclinação do eixo, combinada à translação, altera alternadamente a iluminação dos hemisférios.
+- **C)** A translação altera as latitudes das cidades, aproximando cada uma do equador em seu verão.
+- **D)** A mudança sazonal da velocidade de rotação altera a duração do dia de forma oposta nos dois hemisférios.
+- **E)** A inclinação do eixo explica dia e noite; a rotação explica a inversão das estações ao longo do ano.
 
-**Gabarito: B.** A orientação do eixo relativamente estável durante a translação favorece alternadamente cada hemisfério em duração do dia e incidência solar. A distância ao Sol é compartilhada pela Terra inteira.
+**Gabarito: B.** Ao longo da translação, a inclinação do eixo favorece alternadamente a iluminação dos hemisférios. Rotação explica a alternância cotidiana de dia e noite; a latitude de cada cidade não muda por causa da estação.
 
 Revisor/data: pendentes.
 
@@ -308,20 +308,20 @@ Revisor/data: pendentes.
 
 ## C17 — Eutrofização e oxigênio dissolvido
 
-ID: d1390000-0000-4000-8000-000000000015. Versão: 3. Dificuldade estimada: hard. Família: C17.
+ID: d1390000-0000-4000-8000-000000000015. Versão: 4. Dificuldade estimada: hard. Família: C17.
 
 Situação experimental fictícia:
 Após receber escoamento rico em nutrientes, um lago apresenta crescimento de algas. Dias depois, parte delas morre; aumenta a atividade de decompositores e cai o oxigênio dissolvido. Em noites sem luz, a concentração chega a 2 mg/L, abaixo do valor anterior de 8 mg/L. O experimento é um cenário simplificado de eutrofização.
 
-Qual encadeamento explica a redução de oxigênio sem supor que nutrientes sejam venenos diretos?
+Qual sequência de processos é compatível com a queda noturna do oxigênio após a entrada de nutrientes?
 
-- **A)** Decompositores interrompem a respiração quando recebem mais matéria orgânica.
-- **B)** A morte das algas elimina toda atividade biológica no lago.
-- **C)** Nutrientes transformam automaticamente todo oxigênio em sal.
-- **D)** Nutrientes favorecem algas; a decomposição da biomassa e a respiração elevam o consumo de oxigênio.
-- **E)** As algas só consomem oxigênio quando há luz intensa.
+- **A)** Mais algas → mais fotossíntese noturna → retirada de oxigênio da água.
+- **B)** Morte das algas → menor matéria orgânica disponível → aumento da respiração dos decompositores.
+- **C)** Mais nutrientes → menos algas → menos decomposição → maior consumo de oxigênio.
+- **D)** Mais biomassa algal → mais matéria para decomposição → consumo respiratório de oxigênio sem produção fotossintética noturna.
+- **E)** Mais decomposição → produção de oxigênio → redução da concentração por retenção do gás nos decompositores.
 
-**Gabarito: D.** A entrada de nutrientes pode ampliar a biomassa; sua decomposição e a respiração de organismos consomem oxigênio. A falta de produção fotossintética noturna acentua o balanço negativo.
+**Gabarito: D.** A biomassa formada pode alimentar decompositores quando morre. Respiração de algas e decompositores consome oxigênio, enquanto no escuro não há a produção fotossintética que compensaria esse consumo.
 
 Revisor/data: pendentes.
 
@@ -365,29 +365,29 @@ Revisor/data: pendentes.
 
 ## C20 — Materiais, condução e isolamento
 
-ID: d1390000-0000-4000-8000-000000000018. Versão: 3. Dificuldade estimada: hard. Família: C20.
+ID: d1390000-0000-4000-8000-000000000018. Versão: 4. Dificuldade estimada: hard. Família: C20.
 
 Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final. A espuma não produz frio; o experimento busca explicar a diferença por transferência de energia.
+Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
-Qual interpretação respeita o resultado sem atribuir criação de frio à espuma?
+Por que a caixa revestida de espuma conserva mais gelo nas condições do experimento?
 
-- **A)** A espuma produz energia negativa e transforma água em gelo continuamente.
-- **B)** A existência de gelo elimina a influência da temperatura externa.
-- **C)** O metal impede toda transferência de energia por possuir maior massa.
-- **D)** A espuma reduz a transferência de calor do ambiente para o conteúdo, retardando a fusão.
-- **E)** A diferença comprova que a espuma remove átomos de água do conteúdo.
+- **A)** A espuma aumenta o calor específico do gelo, exigindo maior temperatura para iniciar a fusão.
+- **B)** A espuma permite que o gelo perca calor para um ambiente mais quente, enquanto o metal inverte esse fluxo.
+- **C)** O metal reduz a temperatura de fusão do gelo por contato, mesmo sem dissolver substâncias na água.
+- **D)** A espuma oferece maior resistência à transferência de calor para o interior, retardando a fusão.
+- **E)** As caixas recebem a mesma quantidade de calor; a espuma apenas reduz o volume da água formada.
 
-**Gabarito: D.** Um isolante dificulta a transferência de calor. O gelo recebe menos energia por unidade de tempo e funde mais lentamente; não há produção de frio como substância.
+**Gabarito: D.** A diferença está na transferência de energia através do revestimento. O ambiente mais quente fornece calor ao gelo; o isolante reduz a taxa dessa transferência, sem mudar a temperatura de fusão ou o calor específico do gelo.
 
 Revisor/data: pendentes.
 
 ## C21 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000021. Versão: 1. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000021. Versão: 2. Dificuldade estimada: hard. Família: C1.
 
 Situação experimental fictícia:
-Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve e flutua em equilíbrio quando sua densidade é menor que a do líquido.
+Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Na água, que volume precisa ficar submerso para que a massa de água deslocada iguale os 240 g do objeto?
 
@@ -460,10 +460,10 @@ Revisor/data: pendentes.
 
 ## C25 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000025. Versão: 1. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000025. Versão: 2. Dificuldade estimada: hard. Família: C5.
 
 Situação experimental fictícia:
-Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico; o calor perdido pela parte quente iguala o recebido pela parte fria.
+Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Se as duas massas fossem iguais, mantendo as temperaturas iniciais, qual seria a temperatura final ideal?
 
@@ -479,10 +479,10 @@ Revisor/data: pendentes.
 
 ## C26 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000026. Versão: 1. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000026. Versão: 2. Dificuldade estimada: hard. Família: C6.
 
 Situação experimental fictícia:
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água, temperatura e concentração inicial de gás carbônico. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido; D fica no escuro. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Que interpretação é sustentada pela comparação entre A e C?
 
@@ -498,10 +498,10 @@ Revisor/data: pendentes.
 
 ## C27 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000027. Versão: 1. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000027. Versão: 2. Dificuldade estimada: hard. Família: C7.
 
 Situação experimental fictícia:
-Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final. O modelo trata fluxo de energia, não reciclagem de átomos.
+Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Se o consumo humano ocorrer diretamente no nível dos herbívoros em vez do predador final, qual comparação de energia entre esses níveis decorre do modelo?
 
@@ -536,10 +536,10 @@ Revisor/data: pendentes.
 
 ## C29 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000029. Versão: 1. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000029. Versão: 2. Dificuldade estimada: hard. Família: C9.
 
 Situação experimental fictícia:
-Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. A substância não cria a variante resistente no modelo; todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
+Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Quantas bactérias sensíveis sobrevivem sob as condições descritas?
 
@@ -650,10 +650,10 @@ Revisor/data: pendentes.
 
 ## C35 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000035. Versão: 1. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000035. Versão: 2. Dificuldade estimada: hard. Família: C15.
 
 Situação experimental fictícia:
-Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem. Considere a inclinação do eixo terrestre e a translação; não atribua as estações apenas à distância entre Terra e Sol.
+Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Que diferença de tempo de luz a cidade sul apresenta entre os dois meses do exemplo?
 
@@ -745,10 +745,10 @@ Revisor/data: pendentes.
 
 ## C40 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000040. Versão: 1. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000040. Versão: 2. Dificuldade estimada: hard. Família: C20.
 
 Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final. A espuma não produz frio; o experimento busca explicar a diferença por transferência de energia.
+Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Qual variável deve permanecer comparável para atribuir a diferença ao revestimento?
 
@@ -764,10 +764,10 @@ Revisor/data: pendentes.
 
 ## C41 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000041. Versão: 1. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000041. Versão: 2. Dificuldade estimada: hard. Família: C1.
 
 Situação experimental fictícia:
-Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve e flutua em equilíbrio quando sua densidade é menor que a do líquido.
+Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Um segundo objeto do mesmo material tem 600 cm³. Qual massa e comportamento na água são coerentes com a homogeneidade do material?
 
@@ -840,10 +840,10 @@ Revisor/data: pendentes.
 
 ## C45 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000045. Versão: 1. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000045. Versão: 2. Dificuldade estimada: hard. Família: C5.
 
 Situação experimental fictícia:
-Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico; o calor perdido pela parte quente iguala o recebido pela parte fria.
+Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Mantendo 200 g de água quente, que massa de água a 15 °C produziria temperatura final de 45 °C?
 
@@ -859,10 +859,10 @@ Revisor/data: pendentes.
 
 ## C46 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000046. Versão: 1. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000046. Versão: 2. Dificuldade estimada: hard. Família: C6.
 
 Situação experimental fictícia:
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água, temperatura e concentração inicial de gás carbônico. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido; D fica no escuro. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 A ausência de bolhas em D permite concluir o quê, sem extrapolar o indicador?
 
@@ -878,10 +878,10 @@ Revisor/data: pendentes.
 
 ## C47 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000047. Versão: 1. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000047. Versão: 2. Dificuldade estimada: hard. Família: C7.
 
 Situação experimental fictícia:
-Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final. O modelo trata fluxo de energia, não reciclagem de átomos.
+Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 O que acontece com a energia que não chega ao nível seguinte?
 
@@ -916,10 +916,10 @@ Revisor/data: pendentes.
 
 ## C49 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000049. Versão: 1. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000049. Versão: 2. Dificuldade estimada: hard. Família: C9.
 
 Situação experimental fictícia:
-Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. A substância não cria a variante resistente no modelo; todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
+Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Que proporção aproximada dos sobreviventes é resistente?
 
@@ -1030,10 +1030,10 @@ Revisor/data: pendentes.
 
 ## C55 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000055. Versão: 1. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000055. Versão: 2. Dificuldade estimada: hard. Família: C15.
 
 Situação experimental fictícia:
-Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem. Considere a inclinação do eixo terrestre e a translação; não atribua as estações apenas à distância entre Terra e Sol.
+Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Que observação contradiz mais diretamente a explicação baseada só na aproximação de toda a Terra ao Sol?
 
@@ -1125,10 +1125,10 @@ Revisor/data: pendentes.
 
 ## C60 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000060. Versão: 1. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000060. Versão: 2. Dificuldade estimada: hard. Família: C20.
 
 Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final. A espuma não produz frio; o experimento busca explicar a diferença por transferência de energia.
+Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Se o conteúdo estivesse quente e o ambiente frio, qual previsão sobre a espuma seria coerente?
 
@@ -1144,10 +1144,10 @@ Revisor/data: pendentes.
 
 ## C61 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000061. Versão: 1. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000061. Versão: 2. Dificuldade estimada: hard. Família: C1.
 
 Situação experimental fictícia:
-Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve e flutua em equilíbrio quando sua densidade é menor que a do líquido.
+Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Uma cavidade fechada reduz a massa do objeto para 180 g, mantendo o volume externo de 300 cm³. No segundo líquido, qual previsão decorre do modelo?
 
@@ -1220,10 +1220,10 @@ Revisor/data: pendentes.
 
 ## C65 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000065. Versão: 1. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000065. Versão: 2. Dificuldade estimada: hard. Família: C5.
 
 Situação experimental fictícia:
-Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico; o calor perdido pela parte quente iguala o recebido pela parte fria.
+Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Uma medida de 12 °C após a mistura inicial é compatível com quais condições?
 
@@ -1239,10 +1239,10 @@ Revisor/data: pendentes.
 
 ## C66 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000066. Versão: 1. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000066. Versão: 2. Dificuldade estimada: hard. Família: C6.
 
 Situação experimental fictícia:
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água, temperatura e concentração inicial de gás carbônico. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido; D fica no escuro. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Qual razão entre as contagens de A e B resume o resultado, sem afirmar precisão sobre a massa de oxigênio?
 
@@ -1258,10 +1258,10 @@ Revisor/data: pendentes.
 
 ## C67 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000067. Versão: 1. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000067. Versão: 2. Dificuldade estimada: hard. Família: C7.
 
 Situação experimental fictícia:
-Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final. O modelo trata fluxo de energia, não reciclagem de átomos.
+Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Se a energia inicialmente armazenada cair para 40.000 kJ, mantendo as eficiências, qual é a nova disponibilidade ao predador final?
 
@@ -1296,10 +1296,10 @@ Revisor/data: pendentes.
 
 ## C69 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000069. Versão: 1. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000069. Versão: 2. Dificuldade estimada: hard. Família: C9.
 
 Situação experimental fictícia:
-Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. A substância não cria a variante resistente no modelo; todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
+Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Qual conclusão é inadequada ao modelo mesmo após várias gerações sob a mesma seleção?
 
@@ -1410,10 +1410,10 @@ Revisor/data: pendentes.
 
 ## C75 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000075. Versão: 1. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000075. Versão: 2. Dificuldade estimada: hard. Família: C15.
 
 Situação experimental fictícia:
-Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem. Considere a inclinação do eixo terrestre e a translação; não atribua as estações apenas à distância entre Terra e Sol.
+Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Se o eixo não tivesse inclinação, mantendo a translação, o que mudaria no mecanismo descrito?
 
@@ -1505,10 +1505,10 @@ Revisor/data: pendentes.
 
 ## C80 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000080. Versão: 1. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000080. Versão: 2. Dificuldade estimada: hard. Família: C20.
 
 Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final. A espuma não produz frio; o experimento busca explicar a diferença por transferência de energia.
+Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Que observação impediria concluir que B não recebeu calor durante o teste?
 
@@ -1524,10 +1524,10 @@ Revisor/data: pendentes.
 
 ## C81 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000081. Versão: 1. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000081. Versão: 2. Dificuldade estimada: hard. Família: C1.
 
 Situação experimental fictícia:
-Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve e flutua em equilíbrio quando sua densidade é menor que a do líquido.
+Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Para testar a influência da densidade do líquido, qual procedimento controla melhor as demais características do objeto?
 
@@ -1600,10 +1600,10 @@ Revisor/data: pendentes.
 
 ## C85 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000085. Versão: 1. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000085. Versão: 2. Dificuldade estimada: hard. Família: C5.
 
 Situação experimental fictícia:
-Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico; o calor perdido pela parte quente iguala o recebido pela parte fria.
+Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Se o recipiente inicialmente frio absorvesse calor, mantendo o restante comparável, o que se esperaria em relação aos 30 °C calculados?
 
@@ -1619,10 +1619,10 @@ Revisor/data: pendentes.
 
 ## C86 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000086. Versão: 1. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000086. Versão: 2. Dificuldade estimada: hard. Família: C6.
 
 Situação experimental fictícia:
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água, temperatura e concentração inicial de gás carbônico. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido; D fica no escuro. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Como melhorar a confiabilidade da conclusão sobre intensidade luminosa?
 
@@ -1638,10 +1638,10 @@ Revisor/data: pendentes.
 
 ## C87 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000087. Versão: 1. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000087. Versão: 2. Dificuldade estimada: hard. Família: C7.
 
 Situação experimental fictícia:
-Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final. O modelo trata fluxo de energia, não reciclagem de átomos.
+Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Que afirmação distingue corretamente decomposição de fluxo energético?
 
@@ -1676,10 +1676,10 @@ Revisor/data: pendentes.
 
 ## C89 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000089. Versão: 1. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000089. Versão: 2. Dificuldade estimada: hard. Família: C9.
 
 Situação experimental fictícia:
-Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. A substância não cria a variante resistente no modelo; todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
+Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Qual comparação ajuda a avaliar o papel seletivo da exposição?
 
@@ -1790,10 +1790,10 @@ Revisor/data: pendentes.
 
 ## C95 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000095. Versão: 1. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000095. Versão: 2. Dificuldade estimada: hard. Família: C15.
 
 Situação experimental fictícia:
-Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem. Considere a inclinação do eixo terrestre e a translação; não atribua as estações apenas à distância entre Terra e Sol.
+Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Qual cuidado evita transformar o exemplo de horas de luz em uma regra para qualquer cidade?
 
@@ -1866,29 +1866,29 @@ Revisor/data: pendentes.
 
 ## C99 — Placas tectônicas e evidências
 
-ID: d1432000-0000-4000-8000-000000000099. Versão: 1. Dificuldade estimada: hard. Família: C19.
+ID: d1432000-0000-4000-8000-000000000099. Versão: 2. Dificuldade estimada: hard. Família: C19.
 
 Situação experimental fictícia:
 Em uma região, terremotos se concentram numa faixa estreita. Há uma cadeia montanhosa paralela à faixa e um alinhamento de vulcões no continente. Estudos indicam que uma placa oceânica mergulha sob uma continental. Em outra região, duas placas se afastam e há formação de nova crosta junto a uma dorsal.
 
-Que informação é insuficiente para prever dia e hora de um futuro terremoto?
+Um relatório identifica subducção e registra terremotos anteriores na região. Qual conclusão pode ser sustentada por essas informações?
 
-- **A)** Uma simulação com certeza física de cada ruptura futura, condição não fornecida.
-- **B)** A definição de um calendário preciso pela quantidade de vulcões, procedimento inexistente no modelo.
-- **C)** A identificação do limite e do histórico regional, embora ajude a avaliar risco.
-- **D)** Conhecimento completo e verificável de toda evolução de tensão, condição não fornecida.
-- **E)** Registro direto do evento após ocorrer, usado como previsão retrospectiva.
+- **A)** O intervalo médio entre terremotos determina a data do próximo, mesmo com variação nos intervalos anteriores.
+- **B)** O limite convergente indica que o próximo terremoto terá a mesma magnitude do último registrado.
+- **C)** Há evidências para avaliar a atividade tectônica regional, mas elas não determinam a data e a hora da próxima ruptura.
+- **D)** O número de vulcões permite calcular a hora da ruptura a partir da velocidade média das placas.
+- **E)** Terremotos anteriores demonstram que toda a tensão acumulada foi liberada e não haverá novas rupturas.
 
-**Gabarito: C.** Modelos e histórico permitem avaliação de risco, mas não fornecem previsão exata de data e hora de cada ruptura. As outras opções não são informações efetivamente disponíveis ou métodos válidos de previsão.
+**Gabarito: C.** Histórico e tipo de limite ajudam a avaliar perigos tectônicos. Eles não fornecem calendário exato nem magnitude determinada de cada evento; tampouco provam que toda a tensão regional foi eliminada.
 
 Revisor/data: pendentes.
 
 ## C100 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000100. Versão: 1. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000100. Versão: 2. Dificuldade estimada: hard. Família: C20.
 
 Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final. A espuma não produz frio; o experimento busca explicar a diferença por transferência de energia.
+Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Se os dois conteúdos forem observados por tempo suficiente no mesmo ambiente, sem fontes ativas, o que se espera em termos de tendência térmica?
 

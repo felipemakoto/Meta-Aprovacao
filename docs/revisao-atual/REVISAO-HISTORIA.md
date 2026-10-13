@@ -1,4 +1,4 @@
-# Revisão atual — História — etapa 43
+# Revisão atual — História — etapa 44
 
 Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
@@ -23,20 +23,20 @@ Revisor/data: pendentes.
 
 ## H02 — Democracia ateniense e cidadania
 
-ID: d1090000-0000-4000-8000-000000000008. Versão: 2. Dificuldade estimada: hard. Família: H2.
+ID: d1090000-0000-4000-8000-000000000008. Versão: 3. Dificuldade estimada: hard. Família: H2.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 Na Atenas clássica, cidadãos homens adultos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não possuíam os mesmos direitos de participação. A democracia daquela cidade não pode ser identificada sem distinções com o sufrágio amplo contemporâneo; tampouco sua exclusão anula a importância histórica das instituições de participação entre cidadãos.
 
-Qual comparação com o presente preserva a especificidade histórica?
+Um morador estrangeiro de Atenas pagava tributos, mas não participava da assembleia como cidadão. Qual interpretação distingue residência e cidadania?
 
-- **A)** A presença de exclusões significa que não existia qualquer instituição participativa.
-- **B)** Estrangeiros residentes exerciam necessariamente os mesmos direitos dos cidadãos.
-- **C)** As mulheres votavam somente quando os homens estavam ausentes.
-- **D)** Havia participação política direta entre cidadãos, mas a cidadania excluía amplos grupos.
-- **E)** A participação era universal, pois todos os moradores eram cidadãos.
+- **A)** A restrição aos estrangeiros caracteriza a assembleia ateniense como instituição representativa eleita por todos os moradores.
+- **B)** A exclusão de moradores indica que os cidadãos participavam somente por representantes profissionais.
+- **C)** A condição de homem adulto bastava para incluir qualquer morador no corpo de cidadãos.
+- **D)** A participação direta era exercida por um conjunto de cidadãos mais restrito que o conjunto de moradores.
+- **E)** A contribuição econômica conferia aos residentes estrangeiros participação política equivalente à dos cidadãos.
 
-**Gabarito: D.** É preciso distinguir participação dos cidadãos e acesso à cidadania. Reconhecer instituições democráticas não implica atribuir universalidade aos direitos daquela sociedade.
+**Gabarito: D.** Na Atenas clássica, cidadania e residência não eram equivalentes. Havia participação direta dos cidadãos, ao mesmo tempo que estrangeiros residentes, mulheres e pessoas escravizadas eram excluídos desses direitos.
 
 Revisor/data: pendentes.
 
@@ -61,39 +61,39 @@ Revisor/data: pendentes.
 
 ## H04 — Relações feudais e obrigações
 
-ID: d1392000-0000-4000-8000-000000000002. Versão: 3. Dificuldade estimada: hard. Família: H4.
+ID: d1392000-0000-4000-8000-000000000002. Versão: 4. Dificuldade estimada: hard. Família: H4.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 Em partes da Europa medieval, senhores controlavam terras e exerciam poderes locais. Camponeses podiam prestar trabalho e entregar parte da produção em troca de acesso à terra e proteção sob relações desiguais. Vassalagem ligava membros da elite por compromissos de fidelidade e serviço; não era a mesma relação que a servidão camponesa. A organização variava entre regiões e períodos.
 
-Qual distinção evita confundir vassalagem e servidão?
+Um camponês entrega parte da colheita ao senhor; um nobre promete serviço militar a outro nobre em troca de um feudo. Como se distinguem as relações?
 
-- **A)** Vassalagem era a participação de todos os camponeses em eleições nacionais.
-- **B)** Servidão era exclusivamente uma aliança militar entre reis independentes.
-- **C)** As duas relações dispensavam qualquer desigualdade de poder.
-- **D)** Vassalagem articulava compromissos entre membros da elite; servidão envolvia obrigações de camponeses ligados à terra.
-- **E)** Ambas designavam apenas contratos salariais iguais aos atuais.
+- **A)** Ambas são relações de vassalagem porque toda entrega de produção equivale a serviço militar.
+- **B)** A primeira é contrato de trabalho assalariado; a segunda é obrigação camponesa vinculada ao cultivo.
+- **C)** A primeira caracteriza tributo a um Estado nacional centralizado; a segunda caracteriza arrendamento comercial da terra.
+- **D)** A primeira envolve obrigações camponesas; a segunda caracteriza vínculos de vassalagem entre membros da elite.
+- **E)** A primeira caracteriza vassalagem; a segunda caracteriza servidão camponesa.
 
-**Gabarito: D.** A síntese distingue posições e tipos de obrigação. Relações pessoais de elite e obrigações camponesas não são categorias equivalentes, mesmo quando coexistem.
+**Gabarito: D.** Entrega de parte da produção integra obrigações camponesas em relações senhoriais. Vassalagem envolve fidelidade e serviços entre membros da elite. A distinção depende das posições e obrigações, não só da presença de uma terra.
 
 Revisor/data: pendentes.
 
 ## H05 — Renascimento e circulação de conhecimento
 
-ID: d1392000-0000-4000-8000-000000000003. Versão: 3. Dificuldade estimada: hard. Família: H5.
+ID: d1392000-0000-4000-8000-000000000003. Versão: 4. Dificuldade estimada: hard. Família: H5.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 Mudanças culturais associadas ao Renascimento envolveram interesse por referências clássicas, observação, experimentação em certos campos e novas formas de representar pessoas e espaços. A imprensa ampliou possibilidades de circulação de textos, mas o acesso não foi imediato nem igual para toda a população. A valorização do ser humano coexistiu com religiosidade e relações de poder.
 
-Qual interpretação distingue humanismo de abandono universal da religião?
+Um artista renascentista usa perspectiva e referências clássicas em uma obra encomendada por uma instituição religiosa. Que interpretação é mais adequada?
 
-- **A)** O humanismo eliminou todas as crenças religiosas em todas as regiões.
-- **B)** A circulação de textos tornou toda pessoa leitora imediatamente.
-- **C)** A religiosidade prova que não houve mudanças culturais.
-- **D)** A referência clássica impediu qualquer investigação da natureza.
-- **E)** A valorização de capacidades humanas podia coexistir com crenças e instituições religiosas.
+- **A)** A encomenda religiosa demonstra que a obra não pode empregar inovações renascentistas.
+- **B)** A referência clássica revela reprodução integral da organização política da Antiguidade.
+- **C)** A presença de um patrono religioso mostra que o humanismo se limitava à cópia de textos medievais.
+- **D)** O emprego da perspectiva comprova que o artista recusava crenças religiosas.
+- **E)** Novas formas de representação e referências humanistas podiam coexistir com patronos e temas religiosos.
 
-**Gabarito: E.** O Renascimento não é ruptura total e uniforme com a religião. Mudanças no interesse intelectual e na representação humana podem coexistir com crenças e poderes existentes.
+**Gabarito: E.** Mudanças culturais não exigem abandono de toda religiosidade. Técnica, referência intelectual, tema e patrono são dimensões que podem combinar elementos distintos numa mesma obra.
 
 Revisor/data: pendentes.
 
@@ -118,39 +118,39 @@ Revisor/data: pendentes.
 
 ## H07 — Expansão marítima e redes atlânticas
 
-ID: d1392000-0000-4000-8000-000000000005. Versão: 3. Dificuldade estimada: hard. Família: H7.
+ID: d1392000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: hard. Família: H7.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 A expansão marítima europeia articulou técnicas de navegação, interesses comerciais, ação de monarquias e disputas por rotas. A chegada a territórios já habitados produziu conquista, trocas e violência, com efeitos distintos sobre grupos europeus, africanos e americanos. Chamar esses territórios de vazios apaga populações e relações existentes antes da conquista.
 
-Qual explicação articula fatores sem reduzir a expansão a uma única invenção?
+Um reino financia viagens, comerciantes buscam novas rotas e navegadores empregam instrumentos aperfeiçoados. Qual relação explica a expansão marítima?
 
-- **A)** Todo contato teve os mesmos efeitos para conquistadores e conquistados.
-- **B)** As rotas foram abertas sem participação de autoridades políticas.
-- **C)** A expansão não tinha relação com comércio ou disputas de poder.
-- **D)** A existência de instrumentos de navegação bastou para eliminar todos os obstáculos.
-- **E)** Técnicas, interesses econômicos e poderes políticos combinaram-se em condições históricas específicas.
+- **A)** A existência de instrumentos semelhantes demonstra que todos os reinos tinham igual capacidade de organizar expedições.
+- **B)** O financiamento régio mostra que as viagens estavam desvinculadas dos interesses dos comerciantes.
+- **C)** A busca de rotas indica que as expedições dependiam apenas de iniciativa privada, sem interesses monárquicos.
+- **D)** O aperfeiçoamento dos instrumentos substitui a necessidade de financiamento e organização das expedições.
+- **E)** Interesses comerciais, recursos políticos e conhecimentos técnicos articulam condições para as viagens.
 
-**Gabarito: E.** Mudanças técnicas oferecem possibilidades, mas seu uso depende de interesses, financiamento e disputas. A síntese apresenta combinação de condições, não determinismo tecnológico.
+**Gabarito: E.** Instrumentos oferecem possibilidades de navegação, mas organização e financiamento dependem de interesses e recursos. Os três elementos apresentados se articulam; nenhum deles explica sozinho a expansão.
 
 Revisor/data: pendentes.
 
 ## H08 — Economia açucareira e trabalho
 
-ID: d1392000-0000-4000-8000-000000000006. Versão: 3. Dificuldade estimada: hard. Família: H8.
+ID: d1392000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: hard. Família: H8.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 A produção de açúcar na América portuguesa articulava grandes unidades de cultivo e processamento, circulação atlântica e trabalho escravizado. O destino externo de parte expressiva da produção influenciava investimentos e dependência comercial. Outras atividades abasteciam moradores e unidades produtivas; economia exportadora não significa inexistência de mercados internos.
 
-Qual análise relaciona produção exportadora e organização social?
+Um engenho exporta açúcar e compra alimentos de produtores locais. Que interpretação relaciona essas duas atividades?
 
-- **A)** A exportação garantia igualdade entre proprietários e trabalhadores.
-- **B)** Grandes unidades, coerção do trabalho e redes comerciais compunham relações econômicas e de poder.
-- **C)** O destino externo eliminava qualquer vínculo com poder local.
-- **D)** A produção dispensava processamento e transporte.
-- **E)** O cultivo era realizado somente por empregados livres com direitos atuais.
+- **A)** A compra de alimentos locais indica que o engenho deixou de integrar a economia de exportação.
+- **B)** A produção exportadora podia articular-se a circuitos internos de abastecimento.
+- **C)** A compra local mostra que a unidade açucareira não mantinha vínculos com redes atlânticas.
+- **D)** O abastecimento local comprova que o trabalho do engenho era realizado por pequenos proprietários independentes.
+- **E)** A produção de açúcar para exportação implica que os alimentos também eram vendidos exclusivamente no exterior.
 
-**Gabarito: B.** Produção, trabalho e circulação não são dimensões isoladas. O trabalho escravizado e o controle das unidades articulavam interesses e hierarquias, não relações igualitárias.
+**Gabarito: B.** O destino externo do açúcar não elimina a demanda por alimentos e outros bens locais. Redes de exportação e abastecimento interno podiam coexistir, sem que isso alterasse automaticamente as relações de trabalho do engenho.
 
 Revisor/data: pendentes.
 
@@ -251,20 +251,20 @@ Revisor/data: pendentes.
 
 ## H14 — Transferência da corte e mudanças coloniais
 
-ID: d1392000-0000-4000-8000-000000000012. Versão: 3. Dificuldade estimada: hard. Família: H14.
+ID: d1392000-0000-4000-8000-000000000012. Versão: 4. Dificuldade estimada: hard. Família: H14.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 A transferência da corte portuguesa para o Brasil em 1808 relacionou-se ao contexto europeu das guerras napoleônicas. A instalação da monarquia no Rio de Janeiro e medidas comerciais e administrativas alteraram relações entre metrópole e colônia. Em 1815, o Brasil foi elevado à condição de Reino Unido a Portugal e Algarves; a independência de 1822 não deve ser confundida com essas mudanças anteriores.
 
-Qual sequência distingue os três eventos apresentados?
+A abertura dos portos em 1808 ampliou o comércio direto do Brasil com nações amigas. Que mudança a medida representa naquele contexto?
 
-- **A)** Independência em 1808, transferência em 1815 e Reino Unido em 1822.
-- **B)** Transferência e independência foram o mesmo ato em 1808.
-- **C)** Reino Unido em 1808, independência em 1815 e transferência em 1822.
-- **D)** Transferência da corte em 1808, elevação a Reino Unido em 1815 e independência em 1822.
-- **E)** Independência precedeu a instalação da corte no Rio.
+- **A)** A independência política do Brasil, com substituição imediata da monarquia pela república.
+- **B)** A transferência da soberania brasileira para os comerciantes britânicos que passaram a atuar nos portos.
+- **C)** A restauração do exclusivo comercial português após a chegada da corte.
+- **D)** Uma ruptura do exclusivo comercial metropolitano, anterior à independência política de 1822.
+- **E)** A extinção da monarquia portuguesa e sua substituição por governos provinciais autônomos.
 
-**Gabarito: D.** Os marcos têm significados e datas diferentes. A presença da corte e a mudança de condição jurídica não equivalem, por si sós, à separação política de 1822.
+**Gabarito: D.** A abertura dos portos altera a regra de comércio colonial, permitindo relações diretas com nações amigas. O Brasil continuava ligado à monarquia portuguesa; mudança comercial em 1808 não equivale à independência de 1822.
 
 Revisor/data: pendentes.
 
@@ -289,20 +289,20 @@ Revisor/data: pendentes.
 
 ## H16 — Abolição e cidadania no pós-emancipação
 
-ID: d1392000-0000-4000-8000-000000000014. Versão: 3. Dificuldade estimada: hard. Família: H16.
+ID: d1392000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: hard. Família: H16.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 A abolição legal da escravidão no Brasil, em 1888, resultou de processos que envolveram ação de pessoas escravizadas, movimentos abolicionistas, conflitos e decisões políticas. O fim da condição jurídica de escravidão não assegurou automaticamente acesso igual à terra, renda ou proteção social. Disputas por cidadania continuaram após a emancipação.
 
-Qual distinção explica a continuidade das lutas após 1888?
+Após 1888, trabalhadores juridicamente livres ainda enfrentavam restrições de acesso à terra e renda. Qual distinção ajuda a interpretar essa situação?
 
-- **A)** A emancipação eliminou qualquer conflito sobre cidadania.
-- **B)** A alteração legal não teve importância para a condição das pessoas.
-- **C)** A permanência de desigualdade comprova que a escravidão nunca foi abolida legalmente.
-- **D)** A liberdade jurídica distribuiu imediatamente terras e renda de maneira igual.
-- **E)** Liberdade jurídica e acesso efetivo a recursos e direitos são dimensões relacionadas, mas não idênticas.
+- **A)** O fim da escravidão transferiu automaticamente a propriedade dos antigos senhores aos trabalhadores.
+- **B)** A permanência de desigualdades indica que movimentos abolicionistas buscavam conservar o estatuto de escravidão.
+- **C)** A liberdade jurídica conferiu aos libertos distribuição de terras, mas as diferenças decorreram apenas de suas escolhas individuais.
+- **D)** A persistência da desigualdade demonstra que a condição jurídica de escravizado foi mantida pela lei de 1888.
+- **E)** A extinção da condição legal de escravidão não corresponde, por si só, à igualdade das condições sociais.
 
-**Gabarito: E.** O marco legal muda a condição de escravidão, mas não resolve automaticamente condições materiais ou discriminação. Reconhecer seus limites não elimina a importância da ruptura jurídica.
+**Gabarito: E.** A abolição extinguiu a escravidão como condição jurídica. Acesso à terra, renda e proteção social envolve outras relações e políticas; sua persistente desigualdade não anula o marco legal nem prova igualdade de oportunidades.
 
 Revisor/data: pendentes.
 
@@ -327,20 +327,20 @@ Revisor/data: pendentes.
 
 ## H18 — Primeira Guerra e múltiplas causas
 
-ID: d1392000-0000-4000-8000-000000000016. Versão: 3. Dificuldade estimada: hard. Família: H18.
+ID: d1392000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: hard. Família: H18.
 
 Síntese didática autoral; não é transcrição de documento histórico:
 A Primeira Guerra Mundial começou em 1914 em um cenário de rivalidades imperialistas, nacionalismos, alianças e corrida armamentista. Um atentado funcionou como estopim, mas não explica sozinho a expansão do conflito. Mobilização de recursos, trincheiras e impactos sobre civis mostraram relações entre decisões políticas, tecnologia e organização das sociedades.
 
-Que distinção explica por que o estopim não é causa suficiente de toda a guerra?
+Por que distinguir o atentado de 1914 das rivalidades e alianças anteriores ao interpretar a Primeira Guerra?
 
-- **A)** O atentado desencadeou uma crise em estruturas prévias de rivalidade e alianças.
-- **B)** A corrida armamentista impedia decisões políticas de mobilização.
-- **C)** Nacionalismos só surgiram após o término da guerra.
-- **D)** O atentado criou do zero todas as rivalidades e armamentos.
-- **E)** A existência de alianças tornou impossível ampliar o conflito.
+- **A)** O atentado atua como estopim de uma crise cuja expansão envolve condições e compromissos anteriores.
+- **B)** As rivalidades anteriores determinam que todos os países entrariam na guerra ao mesmo tempo e pela mesma motivação.
+- **C)** A existência de um estopim torna dispensável investigar as condições anteriores do conflito.
+- **D)** O atentado criou naquele momento as rivalidades imperialistas que antes não existiam.
+- **E)** As alianças anteriores demonstram que o atentado não teve relação com as decisões de mobilização.
 
-**Gabarito: A.** É necessário distinguir evento desencadeador e condições acumuladas. Rivalidades, alianças e armamentos ajudam a explicar como uma crise se expandiu.
+**Gabarito: A.** Um acontecimento pode desencadear a crise sem ser sua explicação completa. Alianças, rivalidades e decisões de mobilização ajudam a compreender sua expansão; não impõem motivações ou participação idênticas a todos os países.
 
 Revisor/data: pendentes.
 

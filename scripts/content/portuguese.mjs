@@ -1,4 +1,5 @@
 import { block } from "./bank-utils.mjs";
+import { passages, titles, rewrites } from "./portuguese-quality.mjs";
 // Textos autorais, situações fictícias; nenhuma atribuição a autores externos.
 const contexts = [
   ["Leitura crítica de dados", "A biblioteca ampliou o horário de funcionamento. O número de empréstimos subiu, mas a quantidade de usuários distintos permaneceu estável. A direção comemorou a maior circulação dos livros; o conselho pediu cautela: empréstimos adicionais podem ter sido feitos pelas mesmas pessoas. Embora a mudança pareça útil, ainda não se sabe se ela alcançou novos leitores.", "O uso do acervo cresceu sem evidência de ampliação do número de leitores.", ["O número de novos leitores cresceu na mesma proporção dos empréstimos.", "A ampliação do horário não produziu mudança no uso dos livros.", "Cada usuário passou a tomar exatamente um livro a mais.", "A estabilidade dos usuários invalida qualquer benefício da mudança."], "Embora", "concessão", "Empréstimos crescem; alcance permanece em investigação", "Comparar quantos usuários novos frequentaram a biblioteca antes e depois da mudança."],
@@ -49,12 +50,14 @@ export function portuguese() {
   const groups = contexts.map(([topic, text, inference, wrong, marker, relation, title, evidence], index) => {
     if (index === 4) relation = "introdução de uma interrogação indireta";
     const wrongRelations = relations.filter(r => r !== relation && !(relation.startsWith("contraste") && r === "oposição") && !(relation.startsWith("adição") && r === "adição")).slice(0, 4);
+    text = passages[index];
     const passage = `Texto autoral para esta atividade:\n${text}`;
+    const [phrase, rewrite, wrongRewrites, rewriteWhy] = rewrites[index];
     const tasks = [
       ["Considerando o que é afirmado e o que permanece apenas como hipótese, qual interpretação é sustentada pelo texto?", inference, wrong, `A leitura precisa combinar as informações e as ressalvas. ${inference} As demais opções introduzem certezas, relações ou referentes que o texto não autoriza.`],
       [`Na passagem que emprega “${marker}”, qual análise do papel dessa expressão é compatível com a organização do argumento?`, `A expressão estabelece ${relation} no contexto.`, wrongRelations.map(r => `A expressão estabelece ${r} no contexto.`), `A interpretação depende da relação entre as partes da passagem, não de um rótulo isolado. Neste contexto, “${marker}” funciona como ${relation}; essa relação deve preservar o sentido das informações articuladas.`, "medium"],
-      ["Qual formulação para a manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?", title, wrong, `O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “${title}” sintetiza esse contraste; os demais títulos o eliminam, exageram ou contradizem.`, "medium"],
-      ["Ao preparar uma paráfrase da conclusão para outro público, qual interpretação precisa ser preservada?", inference, wrong, `Uma paráfrase não pode fortalecer a certeza nem alterar a relação lógica ou o referente. A distinção expressa pela interpretação correta precisa permanecer mesmo quando mudam as palavras.`],
+      ["Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das informações?", title, titles[index], `O título adequado relaciona os dois aspectos discutidos e preserva seu alcance. “${title}” sintetiza esse contraste; os demais alteram os dados, o referente ou a relação entre as informações.`, "medium"],
+      [`Considere também a formulação: “${phrase}” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?`, rewrite, wrongRewrites, rewriteWhy, "medium"],
       ["Para avaliar a informação ou solucionar o problema de leitura discutido, qual procedimento responde diretamente à limitação apontada?", evidence, procedures[index], `O procedimento adequado é: ${evidence} Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.`],
     ];
     return block(topic, passage, tasks).map((q, variant) => ({ ...q, family: `P${index + 1}`, variant: variant + 1 }));

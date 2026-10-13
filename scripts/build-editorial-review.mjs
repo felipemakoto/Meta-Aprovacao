@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { loadCatalog, root, subjects } from "./lib/editorial-content.mjs";
 const catalog = loadCatalog();
+const revision = JSON.parse(readFileSync(new URL("content/revisao-etapa-44.json", root), "utf8"));
+const changed = subject => revision.changes.filter(c => c.after.subject === subject).length;
 assert.ok(process.argv.slice(2).every(a => a === "--check"));
 const template = readFileSync(new URL("review/editorial-template.html", root), "utf8").replaceAll("\r\n", "\n");
 assert.equal(template.split("__CATALOG_JSON__").length, 2);
@@ -13,9 +15,15 @@ const rows = subjects.map(([subject, name]) => {
   const versions = [...new Set(q.map(q => q.version))].sort();
   return `| ${name} | ${q.length} | ${q.filter(q => q.difficulty === "medium").length} | ${q.filter(q => q.difficulty === "hard").length} | ${new Set(q.map(q => q.family)).size} | ${versions.join(", ")} |`;
 });
-const report = `# Conferência editorial atual — etapa 43
+const report = `# Conferência editorial atual — etapa 44
 
-Catálogo de 500 questões autorais, preparado em 12/10/2026: 100 por matéria. Todas as cem anteriores foram reformuladas e receberam versão nova; quatrocentas foram acrescentadas. Todos os registros permanecem em rascunho, sem aprovação humana atribuída. Hash: \`${catalog.catalogHash}\`.
+Catálogo de 500 questões autorais, revisado em 13/10/2026: 100 por matéria. ${revision.changes.length} questões tiveram conteúdo alterado: ${changed("matematica")} de Matemática, ${changed("portugues")} de Português, ${changed("ciencias")} de Ciências, ${changed("historia")} de História e ${changed("geografia")} de Geografia. Mantidos IDs, ordem e versões dos registros sem alteração; nenhuma questão acrescentada. Todos os registros permanecem em rascunho, sem aprovação humana atribuída. Hash: \`${catalog.catalogHash}\`.
+
+## Melhorias desta revisão
+
+Retiradas pistas que forneciam o método de cálculo ou a interpretação antes do comando. As vinte tarefas repetidas de paráfrase foram substituídas por reescritas específicas de sentido, concordância, regência, pontuação, voz verbal e discurso indireto. Manchetes usam alternativas do mesmo gênero. Distratores de oito questões por área em Ciências, História e Geografia foram reescritos com erros conceituais plausíveis; perguntas agora articulam informações e cenários concretos.
+
+Corrigida a série de médias para notas entre zero e dez; explicitada a concentração de gás carbônico nos controles de fotossíntese. Na regra de inscrição, a necessidade dos dois requisitos agora é explícita. Substituída a pergunta ambígua sobre previsão de terremotos. Gabaritos numéricos e versões têm testes independentes. [Registro completo da revisão](QUALIDADE-QUESTOES-ETAPA-44.md).
 
 ## Conteúdo e nível
 
@@ -35,13 +43,13 @@ Matemática/Português têm destino both. Ciências/História/Geografia têm des
 
 ## Revisão atual
 
-Abrir \`out/revisao-editorial.html\` ou o pacote extraído \`out/revisao-editorial-meta-aprovacao-v3/revisao-editorial.html\`. Filtrar por matéria/tema/número, conferir respostas e exportar o JSON de anotações. O receptor da etapa 42 aceita somente o hash e as versões atuais; ausências continuam pendentes. Nenhuma marcação local publica questões ou modelos. As cinco revisões completas por matéria ficam em \`docs/revisao-atual/\`.
+Abrir \`out/revisao-editorial.html\` ou o pacote extraído \`out/revisao-editorial-meta-aprovacao-v4/revisao-editorial.html\`. Filtrar por matéria/tema/número, conferir respostas e exportar o JSON de anotações. O receptor da etapa 42 aceita somente o hash e as versões atuais; ausências continuam pendentes. Nenhuma marcação local publica questões ou modelos. As cinco revisões completas por matéria ficam em \`docs/revisao-atual/\`.
 
-O ZIP e HTML v2 e a pasta já usada pelo amigo foram preservados. A nova ferramenta pode exportar separadamente as anotações v2 se encontrá-las nesse navegador/origem; não as transfere nem trata a conferência anterior como aprovação do conteúdo reformulado. Guarde o JSON e use o HTML antigo para consulta. O [relatório da etapa 41](CONFERENCIA-EDITORIAL-ETAPA-41.md) mantém o catálogo anterior.
+O ZIP e HTML v3 e a pasta já usada pelo amigo foram preservados. A nova ferramenta pode exportar separadamente as anotações v3 se encontrá-las nesse navegador/origem; não as transfere nem trata a conferência anterior como aprovação do conteúdo reformulado. Guarde o JSON e use o HTML antigo para consulta. O [relatório da etapa 41](CONFERENCIA-EDITORIAL-ETAPA-41.md) mantém o catálogo anterior.
 
 Na aplicação, a seleção prioriza as questões menos apresentadas na conta, cruzando prática, simulados e diagnósticos salvos. Repetições são permitidas sem aviso específico conforme orientação do usuário; nunca ocorre duplicação de ID dentro de um mesmo simulado. Esta política não representa uma promessa de questões sempre inéditas.
 
-Revisão humana das questões e dos seis modelos continua pendente. Nenhum conteúdo publicado ou venda liberada. Conferência técnica e carga controlada em [Etapa 43](CONTEUDO-PROVAS-ETAPA-43.md); condições comerciais em [Prontidão](PRONTIDAO-LANCAMENTO.md).
+Revisão humana das questões e dos seis modelos continua pendente. Nenhum conteúdo publicado ou venda liberada. Conferência técnica e carga controlada em [Etapa 44](QUALIDADE-QUESTOES-ETAPA-44.md); condições comerciais em [Prontidão](PRONTIDAO-LANCAMENTO.md).
 `;
 mkdirSync(new URL("out/", root), { recursive: true });
 for (const [relative, expected] of [["out/revisao-editorial.html", html], ["docs/CONFERENCIA-EDITORIAL.md", report]]) {

@@ -260,3 +260,8 @@ Backend separado da interface: preservado mockup aprovado do quiz; integração 
 Escolha explícita: opção 3 é o resumo após concluir; opção 2 revisa somente erros, um a um. Ver todas as respostas também disponível. Não requer gerar outro layout: são dois alvos aprovados para estados distintos. Filtros e contagens derivados do resultado confirmado, sem recalcular gabaritos. Escolhas congeladas após primeira tentativa de envio; retry mantém payload. Consulta de resultado antes de criar tentativa evita sobrescrever cookie concluído.
 
 Novo contrato público compartilhado para não importar Next/server no cliente. Prévia segue exclusiva de desenvolvimento. Build/lint e testes passaram; QA visual bloqueado porque ferramenta de navegador não iniciou. Não encerrar a etapa nem alegar comparação visual até restabelecer a ferramenta.
+
+
+## Etapa 44 — qualidade antes de nova expansão
+
+Manter 500, revisar conteúdo concreto em vez de acrescentar variações. Incrementar versão somente quando o conteúdo editorial mudar, preservar anotações e snapshot v3, gerar v4 sem aprovação presumida. Treze testes e validação transacional sustentam correções técnicas, sem certificar qualidade pedagógica ou publicação. Registro em QUALIDADE-QUESTOES-ETAPA-44.md.
