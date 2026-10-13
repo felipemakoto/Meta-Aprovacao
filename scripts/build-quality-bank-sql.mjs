@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import { readFileSync, writeFileSync } from "node:fs";
-import { loadCatalog, root } from "./lib/editorial-content.mjs";
+import { root } from "./lib/editorial-content.mjs";
 import { editorialProjection } from "./lib/content-versions.mjs";
 const manifest = JSON.parse(readFileSync(new URL("content/revisao-etapa-44.json", root), "utf8"));
-const catalog = loadCatalog();
+const catalog = JSON.parse(readFileSync(new URL("content/catalogo-etapa-44.json", root), "utf8"));
 assert.ok(manifest.changes.length > 100);
 assert.equal(manifest.additions.length, 0);
 assert.equal(manifest.catalogHash, catalog.catalogHash);

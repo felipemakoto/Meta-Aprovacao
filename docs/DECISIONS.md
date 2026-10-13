@@ -265,3 +265,8 @@ Novo contrato público compartilhado para não importar Next/server no cliente. 
 ## Etapa 44 — qualidade antes de nova expansão
 
 Manter 500, revisar conteúdo concreto em vez de acrescentar variações. Incrementar versão somente quando o conteúdo editorial mudar, preservar anotações e snapshot v3, gerar v4 sem aprovação presumida. Treze testes e validação transacional sustentam correções técnicas, sem certificar qualidade pedagógica ou publicação. Registro em QUALIDADE-QUESTOES-ETAPA-44.md.
+
+
+## Etapa 45 — conferência integral e nível estimado
+
+Distinguir revisão de conteúdo de mudança de dificuldade, preservando IDs e versões quando não há alteração editorial. Dificuldade por tarefa comparada qualitativamente a provas ETEC/IFSP, sem atribuir calibração estatística. Diversificar objetivos dentro das famílias e manter informação necessária ao comando. Contagens, notas e volumes incorretos continuam plausíveis dentro do domínio; situações impossíveis somente quando são o objeto explícito da análise. Transporte compacto usa SHA-256 de toda a projeção antes/depois para proteger também campos não enviados; nenhuma validação retirada para contornar o limite 413. Fonte completa e snapshot v4 preservados.

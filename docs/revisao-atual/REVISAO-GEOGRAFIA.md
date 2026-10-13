@@ -1,31 +1,29 @@
-# Revisão atual — Geografia — etapa 44
+# Revisão atual — Geografia — etapa 45
 
-Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
 ## G01 — Escala, distância e área
 
-ID: d1090000-0000-4000-8000-000000000009. Versão: 2. Dificuldade estimada: hard. Família: G1.
+ID: d1090000-0000-4000-8000-000000000009. Versão: 3. Dificuldade estimada: easy. Família: G1.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa tem escala 1:50.000. Uma trilha mede 8 cm no papel e a área representada por um quadrado de 2 cm de lado será estudada. Um segundo mapa da mesma região usa escala 1:25.000. Despreze distorções da projeção neste exercício.
+Em um mapa de escala 1:50.000, uma trilha mede 8 cm. Despreze distorções da projeção.
 
-Qual distância real corresponde à trilha no primeiro mapa?
+Qual é o comprimento real da trilha?
 
-- **A)** 50 km
-- **B)** 40 km
-- **C)** 8 km
-- **D)** 0,4 km
+- **A)** 8 km
+- **B)** 0,4 km
+- **C)** 2 km
+- **D)** 40 km
 - **E)** 4 km
 
-**Gabarito: E.** Cada centímetro representa 50.000 cm, ou 0,5 km. Oito centímetros correspondem a 4 km; é necessário converter corretamente centímetros em quilômetros.
+**Gabarito: E.** O comprimento real é 8 × 50.000 = 400.000 cm. Como 100.000 cm correspondem a 1 km, a trilha tem 4 km.
 
 Revisor/data: pendentes.
 
 ## G02 — Densidade demográfica e distribuição
 
-ID: d1090000-0000-4000-8000-000000000010. Versão: 2. Dificuldade estimada: hard. Família: G2.
+ID: d1090000-0000-4000-8000-000000000010. Versão: 3. Dificuldade estimada: easy. Família: G2.
 
-Dados fictícios elaborados para interpretação geográfica:
 A região A tem 600.000 habitantes em 3.000 km²; B tem 400.000 habitantes em 1.000 km². Em A, 80% das pessoas vivem em apenas 20% da área. As áreas não se sobrepõem e os dados referem-se ao mesmo ano.
 
 Qual comparação entre densidades médias está correta?
@@ -42,9 +40,8 @@ Revisor/data: pendentes.
 
 ## G03 — Urbanização e crescimento absoluto
 
-ID: d1394000-0000-4000-8000-000000000001. Versão: 3. Dificuldade estimada: hard. Família: G3.
+ID: d1394000-0000-4000-8000-000000000001. Versão: 4. Dificuldade estimada: medium. Família: G3.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um município tinha 80.000 habitantes, dos quais 60.000 urbanos. Dez anos depois passou a 100.000 habitantes, sendo 85.000 urbanos. Considere os mesmos limites territoriais e critérios de classificação nos dois momentos.
 
 Qual mudança da taxa de urbanização ocorreu?
@@ -61,9 +58,8 @@ Revisor/data: pendentes.
 
 ## G04 — Crescimento natural e saldo migratório
 
-ID: d1394000-0000-4000-8000-000000000002. Versão: 3. Dificuldade estimada: hard. Família: G4.
+ID: d1394000-0000-4000-8000-000000000002. Versão: 4. Dificuldade estimada: medium. Família: G4.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região começa o ano com 50.000 habitantes. Registra 900 nascimentos, 400 mortes, 1.500 imigrantes e 2.000 emigrantes. As categorias não se sobrepõem, não há mudança de limites e os valores correspondem ao mesmo ano.
 
 Qual população é esperada ao fim do ano?
@@ -80,10 +76,9 @@ Revisor/data: pendentes.
 
 ## G05 — Estrutura etária e indicadores
 
-ID: d1394000-0000-4000-8000-000000000003. Versão: 3. Dificuldade estimada: hard. Família: G5.
+ID: d1394000-0000-4000-8000-000000000003. Versão: 4. Dificuldade estimada: medium. Família: G5.
 
-Dados fictícios elaborados para interpretação geográfica:
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. Para este exercício, a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Qual é a razão de dependência demográfica aproximada?
 
@@ -99,9 +94,8 @@ Revisor/data: pendentes.
 
 ## G06 — Produtividade agrícola e área
 
-ID: d1394000-0000-4000-8000-000000000004. Versão: 3. Dificuldade estimada: hard. Família: G6.
+ID: d1394000-0000-4000-8000-000000000004. Versão: 4. Dificuldade estimada: medium. Família: G6.
 
-Dados fictícios elaborados para interpretação geográfica:
 A propriedade A colheu 12.000 toneladas em 3.000 hectares; B colheu 10.000 toneladas em 2.000 hectares. No ano seguinte, A pretende aumentar a produção para 15.000 toneladas mantendo a área. Os dados não incluem custo, renda dos trabalhadores ou impactos ambientais.
 
 Qual comparação entre produção total e produtividade é correta?
@@ -118,9 +112,8 @@ Revisor/data: pendentes.
 
 ## G07 — Uso do solo e mudança de cobertura
 
-ID: d1394000-0000-4000-8000-000000000005. Versão: 3. Dificuldade estimada: hard. Família: G7.
+ID: d1394000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: easy. Família: G7.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma bacia de 1.000 km², a cobertura florestal era 600 km² e passou a 450 km². Áreas impermeabilizadas passaram de 100 para 200 km²; os demais usos ocupam a área restante. Os períodos têm os mesmos limites. O relatório não identifica automaticamente as causas de cada mudança.
 
 Qual redução relativa da cobertura florestal ocorreu?
@@ -137,10 +130,9 @@ Revisor/data: pendentes.
 
 ## G08 — Energia, potência e intermitência
 
-ID: d1394000-0000-4000-8000-000000000006. Versão: 3. Dificuldade estimada: hard. Família: G8.
+ID: d1394000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: easy. Família: G8.
 
-Dados fictícios elaborados para interpretação geográfica:
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Para este exercício, potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Que potências médias resultam no período?
 
@@ -156,9 +148,8 @@ Revisor/data: pendentes.
 
 ## G09 — Emissões totais e por habitante
 
-ID: d1394000-0000-4000-8000-000000000007. Versão: 3. Dificuldade estimada: hard. Família: G9.
+ID: d1394000-0000-4000-8000-000000000007. Versão: 4. Dificuldade estimada: medium. Família: G9.
 
-Dados fictícios elaborados para interpretação geográfica:
 O país A emite 120 milhões de toneladas de um gás em um ano e tem 60 milhões de habitantes. B emite 80 milhões de toneladas e tem 20 milhões de habitantes. Considere a mesma metodologia de inventário e não inclua emissões históricas acumuladas neste cálculo.
 
 Qual comparação distingue total anual e emissão por habitante?
@@ -175,9 +166,8 @@ Revisor/data: pendentes.
 
 ## G10 — Transporte e custo logístico
 
-ID: d1394000-0000-4000-8000-000000000008. Versão: 3. Dificuldade estimada: hard. Família: G10.
+ID: d1394000-0000-4000-8000-000000000008. Versão: 4. Dificuldade estimada: medium. Família: G10.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma carga de 400 toneladas deve percorrer 300 km. A rodovia cobra R$ 0,30 por tonelada-quilômetro. A ferrovia cobra R$ 0,15 por tonelada-quilômetro e exige R$ 12.000 de transferência nos terminais. Ignore custos e prazos não informados; a transferência é cobrada uma vez para toda a carga.
 
 Qual comparação de custo total corresponde aos dados?
@@ -194,9 +184,8 @@ Revisor/data: pendentes.
 
 ## G11 — Comércio externo e saldo
 
-ID: d1394000-0000-4000-8000-000000000009. Versão: 3. Dificuldade estimada: hard. Família: G11.
+ID: d1394000-0000-4000-8000-000000000009. Versão: 4. Dificuldade estimada: easy. Família: G11.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região exporta 50 milhões de reais em alimentos e 30 milhões em equipamentos. Importa 20 milhões em alimentos e 45 milhões em equipamentos. Os dados usam a mesma moeda e período e não incluem serviços, investimentos ou movimentos financeiros.
 
 Qual saldo comercial total corresponde ao período?
@@ -213,9 +202,8 @@ Revisor/data: pendentes.
 
 ## G12 — Renda média, mediana e desigualdade
 
-ID: d1394000-0000-4000-8000-000000000010. Versão: 3. Dificuldade estimada: hard. Família: G12.
+ID: d1394000-0000-4000-8000-000000000010. Versão: 4. Dificuldade estimada: medium. Família: G12.
 
-Dados fictícios elaborados para interpretação geográfica:
 Cinco domicílios de um setor têm rendas mensais de R$ 1.000, R$ 1.200, R$ 1.500, R$ 2.000 e R$ 9.300. Outro setor tem cinco domicílios com R$ 3.000 cada. A comparação não inclui diferenças de tamanho familiar ou custo de vida.
 
 Qual comparação das médias é correta?
@@ -232,10 +220,9 @@ Revisor/data: pendentes.
 
 ## G13 — Clima, chuva e balanço simplificado
 
-ID: d1394000-0000-4000-8000-000000000011. Versão: 3. Dificuldade estimada: hard. Família: G13.
+ID: d1394000-0000-4000-8000-000000000011. Versão: 4. Dificuldade estimada: easy. Família: G13.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Para este exercício, saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Qual comparação dos saldos está correta?
 
@@ -251,9 +238,8 @@ Revisor/data: pendentes.
 
 ## G14 — Bacia hidrográfica e disponibilidade
 
-ID: d1394000-0000-4000-8000-000000000012. Versão: 3. Dificuldade estimada: hard. Família: G14.
+ID: d1394000-0000-4000-8000-000000000012. Versão: 4. Dificuldade estimada: easy. Família: G14.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma bacia recebe, no período estudado, 100 unidades de água por precipitação e 10 por entrada externa. Perde 40 por evapotranspiração e 50 por saída fluvial. No modelo, a diferença altera o armazenamento. Uma captação adicional retiraria 30 unidades, sem outras mudanças.
 
 Que alteração do armazenamento ocorre antes da captação adicional?
@@ -270,9 +256,8 @@ Revisor/data: pendentes.
 
 ## G15 — Relevo, infiltração e risco
 
-ID: d1394000-0000-4000-8000-000000000013. Versão: 3. Dificuldade estimada: hard. Família: G15.
+ID: d1394000-0000-4000-8000-000000000013. Versão: 4. Dificuldade estimada: medium. Família: G15.
 
-Dados fictícios elaborados para interpretação geográfica:
 Duas encostas têm a mesma declividade e recebem chuva semelhante. A mantém vegetação e solo permeável; B foi desmatada e tem trechos compactados. Há moradias na parte baixa de ambas. O relatório considera escoamento, erosão e exposição de pessoas, sem afirmar que um único fator determina todos os eventos.
 
 Que tendência diferencia B de A sob as condições informadas?
@@ -289,12 +274,11 @@ Revisor/data: pendentes.
 
 ## G16 — Fusos horários e conexões
 
-ID: d1394000-0000-4000-8000-000000000014. Versão: 3. Dificuldade estimada: hard. Família: G16.
+ID: d1394000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: medium. Família: G16.
 
-Dados fictícios elaborados para interpretação geográfica:
-Para este exercício, a cidade A usa UTC−3, B usa UTC+1 e C usa UTC+5, sem mudanças sazonais. Um voo sai de A às 22h de uma segunda-feira e dura oito horas até B. Depois de duas horas de espera em B, um segundo voo de quatro horas chega a C. Horários são locais e durações são reais.
+A cidade A usa UTC−3 e B, UTC+1. Um voo sai de A às 22h de segunda-feira e dura oito horas. Não há mudança sazonal de fuso.
 
-Em que horário local o primeiro voo chega a B?
+Em que horário local chega a B?
 
 - **A)** 6h de terça-feira.
 - **B)** 2h de terça-feira.
@@ -302,16 +286,15 @@ Em que horário local o primeiro voo chega a B?
 - **D)** 18h de terça-feira.
 - **E)** 10h de terça-feira.
 
-**Gabarito: E.** A partida às 22h em UTC−3 corresponde a 1h UTC de terça. Oito horas depois são 9h UTC, ou 10h em B, que usa UTC+1.
+**Gabarito: E.** A partida equivale a 1h UTC de terça-feira. Oito horas depois são 9h UTC, ou 10h no fuso UTC+1. A diferença de fuso se soma à duração ao converter os horários locais.
 
 Revisor/data: pendentes.
 
 ## G17 — Coordenadas e distribuição espacial
 
-ID: d1394000-0000-4000-8000-000000000015. Versão: 3. Dificuldade estimada: hard. Família: G17.
+ID: d1394000-0000-4000-8000-000000000015. Versão: 4. Dificuldade estimada: easy. Família: G17.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Para este exercício, considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Qual comparação das coordenadas é correta?
 
@@ -327,10 +310,9 @@ Revisor/data: pendentes.
 
 ## G18 — Mercado de trabalho e denominadores
 
-ID: d1394000-0000-4000-8000-000000000016. Versão: 3. Dificuldade estimada: hard. Família: G18.
+ID: d1394000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: easy. Família: G18.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Neste exercício, força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Qual taxa de desocupação resulta da definição fornecida?
 
@@ -346,9 +328,8 @@ Revisor/data: pendentes.
 
 ## G19 — Mobilidade urbana e desigualdade de acesso
 
-ID: d1394000-0000-4000-8000-000000000017. Versão: 3. Dificuldade estimada: hard. Família: G19.
+ID: d1394000-0000-4000-8000-000000000017. Versão: 4. Dificuldade estimada: medium. Família: G19.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma cidade, 600 viagens usam uma linha rápida com duração média de 20 minutos; 400 usam uma linha periférica com duração média de 50 minutos. Uma intervenção reduziria a duração periférica para 35 minutos, sem mudar a quantidade de viagens. Considere médias dos dois grupos, não tempos idênticos para cada pessoa.
 
 Qual duração média ponderada das viagens existe inicialmente?
@@ -365,9 +346,8 @@ Revisor/data: pendentes.
 
 ## G20 — Cadeias produtivas e divisão territorial
 
-ID: d1394000-0000-4000-8000-000000000018. Versão: 3. Dificuldade estimada: hard. Família: G20.
+ID: d1394000-0000-4000-8000-000000000018. Versão: 4. Dificuldade estimada: easy. Família: G20.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um produto vendido por R$ 1.000 envolve etapas em três regiões: extração e materiais somam R$ 100; montagem soma R$ 200; desenvolvimento, marca e comercialização somam R$ 700. Para o exercício, os valores particionam o preço sem dupla contagem. Não se informa como cada etapa distribui sua receita entre salários, custos e lucros.
 
 Qual participação do preço corresponde à montagem?
@@ -384,28 +364,26 @@ Revisor/data: pendentes.
 
 ## G21 — Escala, distância e área
 
-ID: d1434000-0000-4000-8000-000000000021. Versão: 1. Dificuldade estimada: hard. Família: G1.
+ID: d1434000-0000-4000-8000-000000000021. Versão: 2. Dificuldade estimada: medium. Família: G1.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa tem escala 1:50.000. Uma trilha mede 8 cm no papel e a área representada por um quadrado de 2 cm de lado será estudada. Um segundo mapa da mesma região usa escala 1:25.000. Despreze distorções da projeção neste exercício.
+Um terreno quadrado tem lado de 2 cm em um mapa de escala 1:50.000. Despreze distorções da projeção.
 
-Qual área real corresponde ao quadrado de 2 cm de lado?
+Qual área real corresponde ao terreno?
 
 - **A)** 4 km²
 - **B)** 2 km²
 - **C)** 1 km²
-- **D)** 50 km²
+- **D)** 0,25 km²
 - **E)** 0,5 km²
 
-**Gabarito: C.** Cada lado representa 2 × 0,5 = 1 km. A área é 1 × 1 = 1 km². Escala de área não se aplica como se fosse apenas uma distância linear.
+**Gabarito: C.** Cada lado corresponde a 2 × 50.000 = 100.000 cm, ou 1 km. A área é 1 × 1 = 1 km²; o fator de conversão linear deve ser aplicado aos dois lados.
 
 Revisor/data: pendentes.
 
 ## G22 — Densidade demográfica e distribuição
 
-ID: d1434000-0000-4000-8000-000000000022. Versão: 1. Dificuldade estimada: hard. Família: G2.
+ID: d1434000-0000-4000-8000-000000000022. Versão: 2. Dificuldade estimada: medium. Família: G2.
 
-Dados fictícios elaborados para interpretação geográfica:
 A região A tem 600.000 habitantes em 3.000 km²; B tem 400.000 habitantes em 1.000 km². Em A, 80% das pessoas vivem em apenas 20% da área. As áreas não se sobrepõem e os dados referem-se ao mesmo ano.
 
 Qual densidade existe na parcela de A que concentra 80% da população?
@@ -422,9 +400,8 @@ Revisor/data: pendentes.
 
 ## G23 — Urbanização e crescimento absoluto
 
-ID: d1434000-0000-4000-8000-000000000023. Versão: 1. Dificuldade estimada: hard. Família: G3.
+ID: d1434000-0000-4000-8000-000000000023. Versão: 2. Dificuldade estimada: medium. Família: G3.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um município tinha 80.000 habitantes, dos quais 60.000 urbanos. Dez anos depois passou a 100.000 habitantes, sendo 85.000 urbanos. Considere os mesmos limites territoriais e critérios de classificação nos dois momentos.
 
 Como mudou a população rural absoluta?
@@ -441,9 +418,8 @@ Revisor/data: pendentes.
 
 ## G24 — Crescimento natural e saldo migratório
 
-ID: d1434000-0000-4000-8000-000000000024. Versão: 1. Dificuldade estimada: hard. Família: G4.
+ID: d1434000-0000-4000-8000-000000000024. Versão: 2. Dificuldade estimada: easy. Família: G4.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região começa o ano com 50.000 habitantes. Registra 900 nascimentos, 400 mortes, 1.500 imigrantes e 2.000 emigrantes. As categorias não se sobrepõem, não há mudança de limites e os valores correspondem ao mesmo ano.
 
 Qual par distingue os componentes demográficos?
@@ -460,10 +436,9 @@ Revisor/data: pendentes.
 
 ## G25 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000025. Versão: 1. Dificuldade estimada: hard. Família: G5.
+ID: d1434000-0000-4000-8000-000000000025. Versão: 2. Dificuldade estimada: easy. Família: G5.
 
-Dados fictícios elaborados para interpretação geográfica:
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. Para este exercício, a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Que fração da população total tem 65 anos ou mais?
 
@@ -479,9 +454,8 @@ Revisor/data: pendentes.
 
 ## G26 — Produtividade agrícola e área
 
-ID: d1434000-0000-4000-8000-000000000026. Versão: 1. Dificuldade estimada: hard. Família: G6.
+ID: d1434000-0000-4000-8000-000000000026. Versão: 2. Dificuldade estimada: easy. Família: G6.
 
-Dados fictícios elaborados para interpretação geográfica:
 A propriedade A colheu 12.000 toneladas em 3.000 hectares; B colheu 10.000 toneladas em 2.000 hectares. No ano seguinte, A pretende aumentar a produção para 15.000 toneladas mantendo a área. Os dados não incluem custo, renda dos trabalhadores ou impactos ambientais.
 
 Que produtividade A precisará atingir para cumprir a meta sem ampliar área?
@@ -498,9 +472,8 @@ Revisor/data: pendentes.
 
 ## G27 — Uso do solo e mudança de cobertura
 
-ID: d1434000-0000-4000-8000-000000000027. Versão: 1. Dificuldade estimada: hard. Família: G7.
+ID: d1434000-0000-4000-8000-000000000027. Versão: 2. Dificuldade estimada: medium. Família: G7.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma bacia de 1.000 km², a cobertura florestal era 600 km² e passou a 450 km². Áreas impermeabilizadas passaram de 100 para 200 km²; os demais usos ocupam a área restante. Os períodos têm os mesmos limites. O relatório não identifica automaticamente as causas de cada mudança.
 
 Como mudou a participação das áreas impermeabilizadas no território total?
@@ -517,10 +490,9 @@ Revisor/data: pendentes.
 
 ## G28 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000028. Versão: 1. Dificuldade estimada: hard. Família: G8.
+ID: d1434000-0000-4000-8000-000000000028. Versão: 2. Dificuldade estimada: medium. Família: G8.
 
-Dados fictícios elaborados para interpretação geográfica:
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Para este exercício, potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Qual energia conjunta média seria produzida em 10 horas sob esses valores médios?
 
@@ -536,9 +508,8 @@ Revisor/data: pendentes.
 
 ## G29 — Emissões totais e por habitante
 
-ID: d1434000-0000-4000-8000-000000000029. Versão: 1. Dificuldade estimada: hard. Família: G9.
+ID: d1434000-0000-4000-8000-000000000029. Versão: 2. Dificuldade estimada: medium. Família: G9.
 
-Dados fictícios elaborados para interpretação geográfica:
 O país A emite 120 milhões de toneladas de um gás em um ano e tem 60 milhões de habitantes. B emite 80 milhões de toneladas e tem 20 milhões de habitantes. Considere a mesma metodologia de inventário e não inclua emissões históricas acumuladas neste cálculo.
 
 Qual emissão per capita conjunta se obtém ao agregar os dois países?
@@ -555,9 +526,8 @@ Revisor/data: pendentes.
 
 ## G30 — Transporte e custo logístico
 
-ID: d1434000-0000-4000-8000-000000000030. Versão: 1. Dificuldade estimada: hard. Família: G10.
+ID: d1434000-0000-4000-8000-000000000030. Versão: 2. Dificuldade estimada: medium. Família: G10.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma carga de 400 toneladas deve percorrer 300 km. A rodovia cobra R$ 0,30 por tonelada-quilômetro. A ferrovia cobra R$ 0,15 por tonelada-quilômetro e exige R$ 12.000 de transferência nos terminais. Ignore custos e prazos não informados; a transferência é cobrada uma vez para toda a carga.
 
 Qual distância iguala os custos mantendo as demais condições?
@@ -574,9 +544,8 @@ Revisor/data: pendentes.
 
 ## G31 — Comércio externo e saldo
 
-ID: d1434000-0000-4000-8000-000000000031. Versão: 1. Dificuldade estimada: hard. Família: G11.
+ID: d1434000-0000-4000-8000-000000000031. Versão: 2. Dificuldade estimada: medium. Família: G11.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região exporta 50 milhões de reais em alimentos e 30 milhões em equipamentos. Importa 20 milhões em alimentos e 45 milhões em equipamentos. Os dados usam a mesma moeda e período e não incluem serviços, investimentos ou movimentos financeiros.
 
 Qual comparação setorial é correta?
@@ -593,9 +562,8 @@ Revisor/data: pendentes.
 
 ## G32 — Renda média, mediana e desigualdade
 
-ID: d1434000-0000-4000-8000-000000000032. Versão: 1. Dificuldade estimada: hard. Família: G12.
+ID: d1434000-0000-4000-8000-000000000032. Versão: 2. Dificuldade estimada: easy. Família: G12.
 
-Dados fictícios elaborados para interpretação geográfica:
 Cinco domicílios de um setor têm rendas mensais de R$ 1.000, R$ 1.200, R$ 1.500, R$ 2.000 e R$ 9.300. Outro setor tem cinco domicílios com R$ 3.000 cada. A comparação não inclui diferenças de tamanho familiar ou custo de vida.
 
 Qual mediana existe no primeiro setor?
@@ -612,10 +580,9 @@ Revisor/data: pendentes.
 
 ## G33 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000033. Versão: 1. Dificuldade estimada: hard. Família: G13.
+ID: d1434000-0000-4000-8000-000000000033. Versão: 2. Dificuldade estimada: easy. Família: G13.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Para este exercício, saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Se julho recebesse irrigação de 50 mm, qual saldo simplificado passaria a ter?
 
@@ -631,9 +598,8 @@ Revisor/data: pendentes.
 
 ## G34 — Bacia hidrográfica e disponibilidade
 
-ID: d1434000-0000-4000-8000-000000000034. Versão: 1. Dificuldade estimada: hard. Família: G14.
+ID: d1434000-0000-4000-8000-000000000034. Versão: 2. Dificuldade estimada: medium. Família: G14.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma bacia recebe, no período estudado, 100 unidades de água por precipitação e 10 por entrada externa. Perde 40 por evapotranspiração e 50 por saída fluvial. No modelo, a diferença altera o armazenamento. Uma captação adicional retiraria 30 unidades, sem outras mudanças.
 
 Que alteração do armazenamento resulta com a captação adicional?
@@ -650,9 +616,8 @@ Revisor/data: pendentes.
 
 ## G35 — Relevo, infiltração e risco
 
-ID: d1434000-0000-4000-8000-000000000035. Versão: 1. Dificuldade estimada: hard. Família: G15.
+ID: d1434000-0000-4000-8000-000000000035. Versão: 2. Dificuldade estimada: medium. Família: G15.
 
-Dados fictícios elaborados para interpretação geográfica:
 Duas encostas têm a mesma declividade e recebem chuva semelhante. A mantém vegetação e solo permeável; B foi desmatada e tem trechos compactados. Há moradias na parte baixa de ambas. O relatório considera escoamento, erosão e exposição de pessoas, sem afirmar que um único fator determina todos os eventos.
 
 Qual informação é necessária para avaliar risco às pessoas além da tendência física?
@@ -669,29 +634,27 @@ Revisor/data: pendentes.
 
 ## G36 — Fusos horários e conexões
 
-ID: d1434000-0000-4000-8000-000000000036. Versão: 1. Dificuldade estimada: hard. Família: G16.
+ID: d1434000-0000-4000-8000-000000000036. Versão: 2. Dificuldade estimada: medium. Família: G16.
 
-Dados fictícios elaborados para interpretação geográfica:
-Para este exercício, a cidade A usa UTC−3, B usa UTC+1 e C usa UTC+5, sem mudanças sazonais. Um voo sai de A às 22h de uma segunda-feira e dura oito horas até B. Depois de duas horas de espera em B, um segundo voo de quatro horas chega a C. Horários são locais e durações são reais.
+Um voo chega a B (UTC+1) às 10h de terça-feira. Após duas horas de conexão, outro voo de quatro horas segue para C (UTC+5). Os fusos não mudam.
 
-Em que horário local o segundo voo chega a C?
+Em que horário local chega a C?
 
-- **A)** 20h de segunda-feira.
+- **A)** 0h de quarta-feira.
 - **B)** 20h de terça-feira.
 - **C)** 12h de terça-feira.
 - **D)** 16h de terça-feira.
-- **E)** 0h de quarta-feira.
+- **E)** 18h de terça-feira.
 
-**Gabarito: B.** O primeiro chega às 9h UTC. Espera de 2 h e voo de 4 h levam a 15h UTC. Em UTC+5, são 20h de terça-feira.
+**Gabarito: B.** A saída de B é às 12h locais e a chegada seria às 16h no relógio de B. C está quatro horas adiante: 16 + 4 = 20h de terça-feira.
 
 Revisor/data: pendentes.
 
 ## G37 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000037. Versão: 1. Dificuldade estimada: hard. Família: G17.
+ID: d1434000-0000-4000-8000-000000000037. Versão: 2. Dificuldade estimada: easy. Família: G17.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Para este exercício, considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Qual separação angular de latitude existe entre A e B?
 
@@ -707,10 +670,9 @@ Revisor/data: pendentes.
 
 ## G38 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000038. Versão: 1. Dificuldade estimada: hard. Família: G18.
+ID: d1434000-0000-4000-8000-000000000038. Versão: 2. Dificuldade estimada: medium. Família: G18.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Neste exercício, força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Se 1.000 desocupados conseguirem trabalho e ninguém mudar de grupo de participação, qual será a nova taxa?
 
@@ -726,9 +688,8 @@ Revisor/data: pendentes.
 
 ## G39 — Mobilidade urbana e desigualdade de acesso
 
-ID: d1434000-0000-4000-8000-000000000039. Versão: 1. Dificuldade estimada: hard. Família: G19.
+ID: d1434000-0000-4000-8000-000000000039. Versão: 2. Dificuldade estimada: medium. Família: G19.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma cidade, 600 viagens usam uma linha rápida com duração média de 20 minutos; 400 usam uma linha periférica com duração média de 50 minutos. Uma intervenção reduziria a duração periférica para 35 minutos, sem mudar a quantidade de viagens. Considere médias dos dois grupos, não tempos idênticos para cada pessoa.
 
 Qual média resulta depois da intervenção prevista?
@@ -745,9 +706,8 @@ Revisor/data: pendentes.
 
 ## G40 — Cadeias produtivas e divisão territorial
 
-ID: d1434000-0000-4000-8000-000000000040. Versão: 1. Dificuldade estimada: hard. Família: G20.
+ID: d1434000-0000-4000-8000-000000000040. Versão: 2. Dificuldade estimada: medium. Família: G20.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um produto vendido por R$ 1.000 envolve etapas em três regiões: extração e materiais somam R$ 100; montagem soma R$ 200; desenvolvimento, marca e comercialização somam R$ 700. Para o exercício, os valores particionam o preço sem dupla contagem. Não se informa como cada etapa distribui sua receita entre salários, custos e lucros.
 
 Qual comparação entre localização da montagem e apropriação do valor total é coerente?
@@ -764,28 +724,26 @@ Revisor/data: pendentes.
 
 ## G41 — Escala, distância e área
 
-ID: d1434000-0000-4000-8000-000000000041. Versão: 1. Dificuldade estimada: hard. Família: G1.
+ID: d1434000-0000-4000-8000-000000000041. Versão: 2. Dificuldade estimada: medium. Família: G1.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa tem escala 1:50.000. Uma trilha mede 8 cm no papel e a área representada por um quadrado de 2 cm de lado será estudada. Um segundo mapa da mesma região usa escala 1:25.000. Despreze distorções da projeção neste exercício.
+Uma trilha de 4 km será desenhada em um mapa de escala 1:25.000. Despreze distorções da projeção.
 
-Que comprimento no papel a mesma trilha teria no segundo mapa?
+Qual será seu comprimento no papel?
 
-- **A)** 4 cm
-- **B)** 2 cm
+- **A)** 8 cm
+- **B)** 1,6 cm
 - **C)** 32 cm
-- **D)** 8 cm
+- **D)** 4 cm
 - **E)** 16 cm
 
-**Gabarito: E.** A escala 1:25.000 representa 0,25 km por centímetro. Para os mesmos 4 km, são necessários 16 cm; o mapa de maior escala amplia a representação.
+**Gabarito: E.** Quatro quilômetros correspondem a 400.000 cm. Dividindo pelo denominador da escala: 400.000/25.000 = 16 cm no papel.
 
 Revisor/data: pendentes.
 
 ## G42 — Densidade demográfica e distribuição
 
-ID: d1434000-0000-4000-8000-000000000042. Versão: 1. Dificuldade estimada: hard. Família: G2.
+ID: d1434000-0000-4000-8000-000000000042. Versão: 2. Dificuldade estimada: medium. Família: G2.
 
-Dados fictícios elaborados para interpretação geográfica:
 A região A tem 600.000 habitantes em 3.000 km²; B tem 400.000 habitantes em 1.000 km². Em A, 80% das pessoas vivem em apenas 20% da área. As áreas não se sobrepõem e os dados referem-se ao mesmo ano.
 
 Qual densidade conjunta resulta de agregar A e B?
@@ -802,9 +760,8 @@ Revisor/data: pendentes.
 
 ## G43 — Urbanização e crescimento absoluto
 
-ID: d1434000-0000-4000-8000-000000000043. Versão: 1. Dificuldade estimada: hard. Família: G3.
+ID: d1434000-0000-4000-8000-000000000043. Versão: 2. Dificuldade estimada: medium. Família: G3.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um município tinha 80.000 habitantes, dos quais 60.000 urbanos. Dez anos depois passou a 100.000 habitantes, sendo 85.000 urbanos. Considere os mesmos limites territoriais e critérios de classificação nos dois momentos.
 
 Qual crescimento relativo da população urbana ocorreu?
@@ -821,9 +778,8 @@ Revisor/data: pendentes.
 
 ## G44 — Crescimento natural e saldo migratório
 
-ID: d1434000-0000-4000-8000-000000000044. Versão: 1. Dificuldade estimada: hard. Família: G4.
+ID: d1434000-0000-4000-8000-000000000044. Versão: 2. Dificuldade estimada: medium. Família: G4.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região começa o ano com 50.000 habitantes. Registra 900 nascimentos, 400 mortes, 1.500 imigrantes e 2.000 emigrantes. As categorias não se sobrepõem, não há mudança de limites e os valores correspondem ao mesmo ano.
 
 Qual taxa de crescimento natural se obtém usando a população inicial como base?
@@ -840,10 +796,9 @@ Revisor/data: pendentes.
 
 ## G45 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000045. Versão: 1. Dificuldade estimada: hard. Família: G5.
+ID: d1434000-0000-4000-8000-000000000045. Versão: 2. Dificuldade estimada: medium. Família: G5.
 
-Dados fictícios elaborados para interpretação geográfica:
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. Para este exercício, a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Por que não se pode transformar diretamente a razão calculada em desemprego?
 
@@ -859,9 +814,8 @@ Revisor/data: pendentes.
 
 ## G46 — Produtividade agrícola e área
 
-ID: d1434000-0000-4000-8000-000000000046. Versão: 1. Dificuldade estimada: hard. Família: G6.
+ID: d1434000-0000-4000-8000-000000000046. Versão: 2. Dificuldade estimada: easy. Família: G6.
 
-Dados fictícios elaborados para interpretação geográfica:
 A propriedade A colheu 12.000 toneladas em 3.000 hectares; B colheu 10.000 toneladas em 2.000 hectares. No ano seguinte, A pretende aumentar a produção para 15.000 toneladas mantendo a área. Os dados não incluem custo, renda dos trabalhadores ou impactos ambientais.
 
 Qual aumento percentual de produtividade essa meta exige em relação ao ano inicial?
@@ -878,9 +832,8 @@ Revisor/data: pendentes.
 
 ## G47 — Uso do solo e mudança de cobertura
 
-ID: d1434000-0000-4000-8000-000000000047. Versão: 1. Dificuldade estimada: hard. Família: G7.
+ID: d1434000-0000-4000-8000-000000000047. Versão: 2. Dificuldade estimada: medium. Família: G7.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma bacia de 1.000 km², a cobertura florestal era 600 km² e passou a 450 km². Áreas impermeabilizadas passaram de 100 para 200 km²; os demais usos ocupam a área restante. Os períodos têm os mesmos limites. O relatório não identifica automaticamente as causas de cada mudança.
 
 Qual tendência hidrológica pode resultar da maior impermeabilização, mantendo precipitação comparável?
@@ -897,10 +850,9 @@ Revisor/data: pendentes.
 
 ## G48 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000048. Versão: 1. Dificuldade estimada: hard. Família: G8.
+ID: d1434000-0000-4000-8000-000000000048. Versão: 2. Dificuldade estimada: medium. Família: G8.
 
-Dados fictícios elaborados para interpretação geográfica:
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Para este exercício, potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Qual participação aproximada da geração solar no total médio das duas fontes?
 
@@ -916,9 +868,8 @@ Revisor/data: pendentes.
 
 ## G49 — Emissões totais e por habitante
 
-ID: d1434000-0000-4000-8000-000000000049. Versão: 1. Dificuldade estimada: hard. Família: G9.
+ID: d1434000-0000-4000-8000-000000000049. Versão: 2. Dificuldade estimada: medium. Família: G9.
 
-Dados fictícios elaborados para interpretação geográfica:
 O país A emite 120 milhões de toneladas de um gás em um ano e tem 60 milhões de habitantes. B emite 80 milhões de toneladas e tem 20 milhões de habitantes. Considere a mesma metodologia de inventário e não inclua emissões históricas acumuladas neste cálculo.
 
 Se B reduzir seu total em 25% e mantiver população, que emissão per capita terá?
@@ -935,9 +886,8 @@ Revisor/data: pendentes.
 
 ## G50 — Transporte e custo logístico
 
-ID: d1434000-0000-4000-8000-000000000050. Versão: 1. Dificuldade estimada: hard. Família: G10.
+ID: d1434000-0000-4000-8000-000000000050. Versão: 2. Dificuldade estimada: medium. Família: G10.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma carga de 400 toneladas deve percorrer 300 km. A rodovia cobra R$ 0,30 por tonelada-quilômetro. A ferrovia cobra R$ 0,15 por tonelada-quilômetro e exige R$ 12.000 de transferência nos terminais. Ignore custos e prazos não informados; a transferência é cobrada uma vez para toda a carga.
 
 Para percurso de 100 km, qual modal tem menor custo nas hipóteses dadas?
@@ -954,9 +904,8 @@ Revisor/data: pendentes.
 
 ## G51 — Comércio externo e saldo
 
-ID: d1434000-0000-4000-8000-000000000051. Versão: 1. Dificuldade estimada: hard. Família: G11.
+ID: d1434000-0000-4000-8000-000000000051. Versão: 2. Dificuldade estimada: medium. Família: G11.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região exporta 50 milhões de reais em alimentos e 30 milhões em equipamentos. Importa 20 milhões em alimentos e 45 milhões em equipamentos. Os dados usam a mesma moeda e período e não incluem serviços, investimentos ou movimentos financeiros.
 
 Se a exportação de equipamentos aumentar 50%, mantendo os demais valores, qual saldo total resulta?
@@ -973,9 +922,8 @@ Revisor/data: pendentes.
 
 ## G52 — Renda média, mediana e desigualdade
 
-ID: d1434000-0000-4000-8000-000000000052. Versão: 1. Dificuldade estimada: hard. Família: G12.
+ID: d1434000-0000-4000-8000-000000000052. Versão: 2. Dificuldade estimada: medium. Família: G12.
 
-Dados fictícios elaborados para interpretação geográfica:
 Cinco domicílios de um setor têm rendas mensais de R$ 1.000, R$ 1.200, R$ 1.500, R$ 2.000 e R$ 9.300. Outro setor tem cinco domicílios com R$ 3.000 cada. A comparação não inclui diferenças de tamanho familiar ou custo de vida.
 
 Que percentual da renda total do primeiro setor cabe ao domicílio de maior renda?
@@ -992,10 +940,9 @@ Revisor/data: pendentes.
 
 ## G53 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000053. Versão: 1. Dificuldade estimada: hard. Família: G13.
+ID: d1434000-0000-4000-8000-000000000053. Versão: 2. Dificuldade estimada: medium. Família: G13.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Para este exercício, saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Que informação falta para transformar esse saldo em diagnóstico completo de disponibilidade de água para plantas?
 
@@ -1011,9 +958,8 @@ Revisor/data: pendentes.
 
 ## G54 — Bacia hidrográfica e disponibilidade
 
-ID: d1434000-0000-4000-8000-000000000054. Versão: 1. Dificuldade estimada: hard. Família: G14.
+ID: d1434000-0000-4000-8000-000000000054. Versão: 2. Dificuldade estimada: medium. Família: G14.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma bacia recebe, no período estudado, 100 unidades de água por precipitação e 10 por entrada externa. Perde 40 por evapotranspiração e 50 por saída fluvial. No modelo, a diferença altera o armazenamento. Uma captação adicional retiraria 30 unidades, sem outras mudanças.
 
 Por que saldo negativo não significa automaticamente que não resta água na bacia?
@@ -1030,9 +976,8 @@ Revisor/data: pendentes.
 
 ## G55 — Relevo, infiltração e risco
 
-ID: d1434000-0000-4000-8000-000000000055. Versão: 1. Dificuldade estimada: hard. Família: G15.
+ID: d1434000-0000-4000-8000-000000000055. Versão: 2. Dificuldade estimada: medium. Família: G15.
 
-Dados fictícios elaborados para interpretação geográfica:
 Duas encostas têm a mesma declividade e recebem chuva semelhante. A mantém vegetação e solo permeável; B foi desmatada e tem trechos compactados. Há moradias na parte baixa de ambas. O relatório considera escoamento, erosão e exposição de pessoas, sem afirmar que um único fator determina todos os eventos.
 
 Uma obra de drenagem em B elimina automaticamente todo risco?
@@ -1049,29 +994,27 @@ Revisor/data: pendentes.
 
 ## G56 — Fusos horários e conexões
 
-ID: d1434000-0000-4000-8000-000000000056. Versão: 1. Dificuldade estimada: hard. Família: G16.
+ID: d1434000-0000-4000-8000-000000000056. Versão: 2. Dificuldade estimada: easy. Família: G16.
 
-Dados fictícios elaborados para interpretação geográfica:
-Para este exercício, a cidade A usa UTC−3, B usa UTC+1 e C usa UTC+5, sem mudanças sazonais. Um voo sai de A às 22h de uma segunda-feira e dura oito horas até B. Depois de duas horas de espera em B, um segundo voo de quatro horas chega a C. Horários são locais e durações são reais.
+Uma viagem tem um voo de oito horas, conexão de duas horas e outro voo de quatro horas.
 
-Qual duração real existe entre saída de A e chegada a C, incluindo a conexão?
+Qual é a duração da viagem, incluindo a conexão?
 
-- **A)** 18 horas
-- **B)** 8 horas
-- **C)** 10 horas
+- **A)** 16 horas
+- **B)** 10 horas
+- **C)** 18 horas
 - **D)** 14 horas
-- **E)** 22 horas
+- **E)** 12 horas
 
-**Gabarito: D.** Somam-se 8 horas do primeiro voo, 2 de espera e 4 do segundo: 14 horas. Diferenças de fuso mudam os relógios locais, não a duração física da viagem.
+**Gabarito: D.** Somam-se as durações: 8 + 2 + 4 = 14 horas. Não é necessário saber os fusos, pois os três valores já expressam intervalos de tempo, não leituras de relógios locais.
 
 Revisor/data: pendentes.
 
 ## G57 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000057. Versão: 1. Dificuldade estimada: hard. Família: G17.
+ID: d1434000-0000-4000-8000-000000000057. Versão: 2. Dificuldade estimada: medium. Família: G17.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Para este exercício, considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Em relação a A, C está em que direção sobre o paralelo indicado?
 
@@ -1087,10 +1030,9 @@ Revisor/data: pendentes.
 
 ## G58 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000058. Versão: 1. Dificuldade estimada: hard. Família: G18.
+ID: d1434000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: medium. Família: G18.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Neste exercício, força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Se 1.000 desocupados deixarem de procurar trabalho e saírem da força, sem conseguir emprego, qual taxa resulta?
 
@@ -1106,9 +1048,8 @@ Revisor/data: pendentes.
 
 ## G59 — Mobilidade urbana e desigualdade de acesso
 
-ID: d1434000-0000-4000-8000-000000000059. Versão: 1. Dificuldade estimada: hard. Família: G19.
+ID: d1434000-0000-4000-8000-000000000059. Versão: 2. Dificuldade estimada: medium. Família: G19.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma cidade, 600 viagens usam uma linha rápida com duração média de 20 minutos; 400 usam uma linha periférica com duração média de 50 minutos. Uma intervenção reduziria a duração periférica para 35 minutos, sem mudar a quantidade de viagens. Considere médias dos dois grupos, não tempos idênticos para cada pessoa.
 
 Quantos minutos de viagem são poupados no conjunto de 400 viagens periféricas?
@@ -1125,9 +1066,8 @@ Revisor/data: pendentes.
 
 ## G60 — Cadeias produtivas e divisão territorial
 
-ID: d1434000-0000-4000-8000-000000000060. Versão: 1. Dificuldade estimada: hard. Família: G20.
+ID: d1434000-0000-4000-8000-000000000060. Versão: 2. Dificuldade estimada: easy. Família: G20.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um produto vendido por R$ 1.000 envolve etapas em três regiões: extração e materiais somam R$ 100; montagem soma R$ 200; desenvolvimento, marca e comercialização somam R$ 700. Para o exercício, os valores particionam o preço sem dupla contagem. Não se informa como cada etapa distribui sua receita entre salários, custos e lucros.
 
 Se o preço e todas as parcelas aumentarem 10%, qual valor passa a corresponder à montagem?
@@ -1144,28 +1084,26 @@ Revisor/data: pendentes.
 
 ## G61 — Escala, distância e área
 
-ID: d1434000-0000-4000-8000-000000000061. Versão: 1. Dificuldade estimada: hard. Família: G1.
+ID: d1434000-0000-4000-8000-000000000061. Versão: 2. Dificuldade estimada: easy. Família: G1.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa tem escala 1:50.000. Uma trilha mede 8 cm no papel e a área representada por um quadrado de 2 cm de lado será estudada. Um segundo mapa da mesma região usa escala 1:25.000. Despreze distorções da projeção neste exercício.
+Dois mapas representam a mesma região nas escalas 1:50.000 e 1:25.000.
 
-Qual comparação de detalhe é coerente com as escalas?
+Qual comparação entre as escalas está correta?
 
-- **A)** As duas escalas produzem necessariamente o mesmo tamanho de representação.
-- **B)** A escala 1:25.000 impede medir distâncias lineares.
-- **C)** O mapa 1:50.000 é de maior escala porque seu denominador é maior.
-- **D)** O mapa 1:25.000 permite representar mais detalhe para a mesma região, ocupando maior espaço no papel.
-- **E)** A mudança de escala altera a distância real da trilha.
+- **A)** A escala 1:25.000 reduz pela metade as distâncias no papel para a mesma região.
+- **B)** A escala 1:50.000 permite mais detalhes porque representa mais território em cada centímetro.
+- **C)** A escala 1:50.000 é maior porque seu denominador é maior.
+- **D)** A escala 1:25.000 é maior e permite mais detalhes, usando maior espaço no papel para a mesma região.
+- **E)** As duas escalas mostram a mesma distância no papel, pois ambas começam por 1.
 
-**Gabarito: D.** Maior escala cartográfica corresponde a menor denominador e maior representação do mesmo objeto. Ela não modifica as dimensões reais do território.
+**Gabarito: D.** Escala é uma razão: 1/25.000 é maior que 1/50.000. Para a mesma distância real, o primeiro mapa usa o dobro do comprimento no papel, permitindo representar mais detalhes.
 
 Revisor/data: pendentes.
 
 ## G62 — Densidade demográfica e distribuição
 
-ID: d1434000-0000-4000-8000-000000000062. Versão: 1. Dificuldade estimada: hard. Família: G2.
+ID: d1434000-0000-4000-8000-000000000062. Versão: 2. Dificuldade estimada: medium. Família: G2.
 
-Dados fictícios elaborados para interpretação geográfica:
 A região A tem 600.000 habitantes em 3.000 km²; B tem 400.000 habitantes em 1.000 km². Em A, 80% das pessoas vivem em apenas 20% da área. As áreas não se sobrepõem e os dados referem-se ao mesmo ano.
 
 Por que a média de A não descreve a distribuição interna da população?
@@ -1182,9 +1120,8 @@ Revisor/data: pendentes.
 
 ## G63 — Urbanização e crescimento absoluto
 
-ID: d1434000-0000-4000-8000-000000000063. Versão: 2. Dificuldade estimada: hard. Família: G3.
+ID: d1434000-0000-4000-8000-000000000063. Versão: 3. Dificuldade estimada: medium. Família: G3.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um município tinha 80.000 habitantes, dos quais 60.000 urbanos. Dez anos depois passou a 100.000 habitantes, sendo 85.000 urbanos. Considere os mesmos limites territoriais e critérios de classificação nos dois momentos.
 
 O aumento da população urbana de 60.000 para 85.000 permite concluir que 25.000 pessoas migraram do campo para a cidade?
@@ -1201,9 +1138,8 @@ Revisor/data: pendentes.
 
 ## G64 — Crescimento natural e saldo migratório
 
-ID: d1434000-0000-4000-8000-000000000064. Versão: 1. Dificuldade estimada: hard. Família: G4.
+ID: d1434000-0000-4000-8000-000000000064. Versão: 2. Dificuldade estimada: medium. Família: G4.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região começa o ano com 50.000 habitantes. Registra 900 nascimentos, 400 mortes, 1.500 imigrantes e 2.000 emigrantes. As categorias não se sobrepõem, não há mudança de limites e os valores correspondem ao mesmo ano.
 
 Se a emigração caísse para 1.000, mantendo os demais valores, qual seria o crescimento total?
@@ -1220,10 +1156,9 @@ Revisor/data: pendentes.
 
 ## G65 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000065. Versão: 1. Dificuldade estimada: hard. Família: G5.
+ID: d1434000-0000-4000-8000-000000000065. Versão: 2. Dificuldade estimada: medium. Família: G5.
 
-Dados fictícios elaborados para interpretação geográfica:
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. Para este exercício, a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Se o grupo de 65 ou mais passar a 20.000 e os outros ficarem iguais, qual razão resulta?
 
@@ -1239,9 +1174,8 @@ Revisor/data: pendentes.
 
 ## G66 — Produtividade agrícola e área
 
-ID: d1434000-0000-4000-8000-000000000066. Versão: 1. Dificuldade estimada: hard. Família: G6.
+ID: d1434000-0000-4000-8000-000000000066. Versão: 2. Dificuldade estimada: medium. Família: G6.
 
-Dados fictícios elaborados para interpretação geográfica:
 A propriedade A colheu 12.000 toneladas em 3.000 hectares; B colheu 10.000 toneladas em 2.000 hectares. No ano seguinte, A pretende aumentar a produção para 15.000 toneladas mantendo a área. Os dados não incluem custo, renda dos trabalhadores ou impactos ambientais.
 
 Se A mantivesse 4 t/ha, que área precisaria para obter 15.000 toneladas?
@@ -1258,9 +1192,8 @@ Revisor/data: pendentes.
 
 ## G67 — Uso do solo e mudança de cobertura
 
-ID: d1434000-0000-4000-8000-000000000067. Versão: 1. Dificuldade estimada: hard. Família: G7.
+ID: d1434000-0000-4000-8000-000000000067. Versão: 2. Dificuldade estimada: medium. Família: G7.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma bacia de 1.000 km², a cobertura florestal era 600 km² e passou a 450 km². Áreas impermeabilizadas passaram de 100 para 200 km²; os demais usos ocupam a área restante. Os períodos têm os mesmos limites. O relatório não identifica automaticamente as causas de cada mudança.
 
 É possível afirmar que os 150 km² de floresta perdida viraram integralmente área impermeabilizada?
@@ -1277,10 +1210,9 @@ Revisor/data: pendentes.
 
 ## G68 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000068. Versão: 1. Dificuldade estimada: hard. Família: G8.
+ID: d1434000-0000-4000-8000-000000000068. Versão: 2. Dificuldade estimada: medium. Família: G8.
 
-Dados fictícios elaborados para interpretação geográfica:
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Para este exercício, potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Por que esses valores não demonstram disponibilidade de 55 MW em qualquer hora?
 
@@ -1296,9 +1228,8 @@ Revisor/data: pendentes.
 
 ## G69 — Emissões totais e por habitante
 
-ID: d1434000-0000-4000-8000-000000000069. Versão: 1. Dificuldade estimada: hard. Família: G9.
+ID: d1434000-0000-4000-8000-000000000069. Versão: 2. Dificuldade estimada: medium. Família: G9.
 
-Dados fictícios elaborados para interpretação geográfica:
 O país A emite 120 milhões de toneladas de um gás em um ano e tem 60 milhões de habitantes. B emite 80 milhões de toneladas e tem 20 milhões de habitantes. Considere a mesma metodologia de inventário e não inclua emissões históricas acumuladas neste cálculo.
 
 O indicador per capita comprova que cada morador emite exatamente o valor médio?
@@ -1315,9 +1246,8 @@ Revisor/data: pendentes.
 
 ## G70 — Transporte e custo logístico
 
-ID: d1434000-0000-4000-8000-000000000070. Versão: 1. Dificuldade estimada: hard. Família: G10.
+ID: d1434000-0000-4000-8000-000000000070. Versão: 2. Dificuldade estimada: medium. Família: G10.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma carga de 400 toneladas deve percorrer 300 km. A rodovia cobra R$ 0,30 por tonelada-quilômetro. A ferrovia cobra R$ 0,15 por tonelada-quilômetro e exige R$ 12.000 de transferência nos terminais. Ignore custos e prazos não informados; a transferência é cobrada uma vez para toda a carga.
 
 Que conclusão não é sustentada apenas pelo menor custo no percurso de 300 km?
@@ -1334,9 +1264,8 @@ Revisor/data: pendentes.
 
 ## G71 — Comércio externo e saldo
 
-ID: d1434000-0000-4000-8000-000000000071. Versão: 1. Dificuldade estimada: hard. Família: G11.
+ID: d1434000-0000-4000-8000-000000000071. Versão: 2. Dificuldade estimada: medium. Família: G11.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região exporta 50 milhões de reais em alimentos e 30 milhões em equipamentos. Importa 20 milhões em alimentos e 45 milhões em equipamentos. Os dados usam a mesma moeda e período e não incluem serviços, investimentos ou movimentos financeiros.
 
 O superávit comercial comprova que a região não depende de produtos externos?
@@ -1353,9 +1282,8 @@ Revisor/data: pendentes.
 
 ## G72 — Renda média, mediana e desigualdade
 
-ID: d1434000-0000-4000-8000-000000000072. Versão: 1. Dificuldade estimada: hard. Família: G12.
+ID: d1434000-0000-4000-8000-000000000072. Versão: 2. Dificuldade estimada: medium. Família: G12.
 
-Dados fictícios elaborados para interpretação geográfica:
 Cinco domicílios de um setor têm rendas mensais de R$ 1.000, R$ 1.200, R$ 1.500, R$ 2.000 e R$ 9.300. Outro setor tem cinco domicílios com R$ 3.000 cada. A comparação não inclui diferenças de tamanho familiar ou custo de vida.
 
 Qual leitura evita confundir renda média com situação de cada domicílio?
@@ -1372,10 +1300,9 @@ Revisor/data: pendentes.
 
 ## G73 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000073. Versão: 1. Dificuldade estimada: hard. Família: G13.
+ID: d1434000-0000-4000-8000-000000000073. Versão: 2. Dificuldade estimada: easy. Família: G13.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Para este exercício, saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Uma sequência de dois meses com saldos −60 e −20 mm representa que saldo acumulado simplificado?
 
@@ -1391,9 +1318,8 @@ Revisor/data: pendentes.
 
 ## G74 — Bacia hidrográfica e disponibilidade
 
-ID: d1434000-0000-4000-8000-000000000074. Versão: 1. Dificuldade estimada: hard. Família: G14.
+ID: d1434000-0000-4000-8000-000000000074. Versão: 2. Dificuldade estimada: medium. Família: G14.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma bacia recebe, no período estudado, 100 unidades de água por precipitação e 10 por entrada externa. Perde 40 por evapotranspiração e 50 por saída fluvial. No modelo, a diferença altera o armazenamento. Uma captação adicional retiraria 30 unidades, sem outras mudanças.
 
 Que problema pode surgir ao avaliar apenas a precipitação total?
@@ -1410,9 +1336,8 @@ Revisor/data: pendentes.
 
 ## G75 — Relevo, infiltração e risco
 
-ID: d1434000-0000-4000-8000-000000000075. Versão: 1. Dificuldade estimada: hard. Família: G15.
+ID: d1434000-0000-4000-8000-000000000075. Versão: 2. Dificuldade estimada: medium. Família: G15.
 
-Dados fictícios elaborados para interpretação geográfica:
 Duas encostas têm a mesma declividade e recebem chuva semelhante. A mantém vegetação e solo permeável; B foi desmatada e tem trechos compactados. Há moradias na parte baixa de ambas. O relatório considera escoamento, erosão e exposição de pessoas, sem afirmar que um único fator determina todos os eventos.
 
 Que comparação preserva as hipóteses do estudo ao investigar cobertura vegetal?
@@ -1429,29 +1354,27 @@ Revisor/data: pendentes.
 
 ## G76 — Fusos horários e conexões
 
-ID: d1434000-0000-4000-8000-000000000076. Versão: 1. Dificuldade estimada: hard. Família: G16.
+ID: d1434000-0000-4000-8000-000000000076. Versão: 2. Dificuldade estimada: medium. Família: G16.
 
-Dados fictícios elaborados para interpretação geográfica:
-Para este exercício, a cidade A usa UTC−3, B usa UTC+1 e C usa UTC+5, sem mudanças sazonais. Um voo sai de A às 22h de uma segunda-feira e dura oito horas até B. Depois de duas horas de espera em B, um segundo voo de quatro horas chega a C. Horários são locais e durações são reais.
+Uma pessoa sai de A (UTC−3) às 22h de segunda-feira e chega a C (UTC+5) às 20h de terça-feira. Os fusos permanecem constantes.
 
-Um observador subtrai apenas 22h de 20h e conclui que a viagem durou −2h. Que informação falta em seu cálculo?
+Qual foi a duração real entre saída e chegada?
 
-- **A)** A quantidade de aeroportos em cada cidade.
-- **B)** A distância angular entre dois pontos como substituto completo de tempo de voo.
-- **C)** Somente o nome das companhias aéreas.
-- **D)** A moeda usada nos bilhetes, porque define duração real.
-- **E)** Diferenças de fuso e mudança de data entre os horários locais.
+- **A)** 30 horas
+- **B)** 6 horas
+- **C)** 22 horas
+- **D)** 8 horas
+- **E)** 14 horas
 
-**Gabarito: E.** Horários locais pertencem a referências e datas diferentes. A duração exige uma escala temporal comum ou soma dos intervalos reais, não subtração isolada dos números do relógio.
+**Gabarito: E.** Os horários locais aparentam um intervalo de 22 horas, mas C está oito horas adiante de A. Ao converter para uma referência comum, a duração é 22 − 8 = 14 horas. É necessário considerar também a mudança de data.
 
 Revisor/data: pendentes.
 
 ## G77 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000077. Versão: 2. Dificuldade estimada: hard. Família: G17.
+ID: d1434000-0000-4000-8000-000000000077. Versão: 3. Dificuldade estimada: medium. Família: G17.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Para este exercício, considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Em um modelo esférico da Terra, por que 20° de longitude representam menor distância sobre o paralelo de 60° do que sobre o equador?
 
@@ -1467,10 +1390,9 @@ Revisor/data: pendentes.
 
 ## G78 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000078. Versão: 1. Dificuldade estimada: hard. Família: G18.
+ID: d1434000-0000-4000-8000-000000000078. Versão: 2. Dificuldade estimada: medium. Família: G18.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Neste exercício, força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Que informação complementa a taxa para avaliar melhoria das condições de trabalho?
 
@@ -1486,9 +1408,8 @@ Revisor/data: pendentes.
 
 ## G79 — Mobilidade urbana e desigualdade de acesso
 
-ID: d1434000-0000-4000-8000-000000000079. Versão: 1. Dificuldade estimada: hard. Família: G19.
+ID: d1434000-0000-4000-8000-000000000079. Versão: 2. Dificuldade estimada: medium. Família: G19.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma cidade, 600 viagens usam uma linha rápida com duração média de 20 minutos; 400 usam uma linha periférica com duração média de 50 minutos. Uma intervenção reduziria a duração periférica para 35 minutos, sem mudar a quantidade de viagens. Considere médias dos dois grupos, não tempos idênticos para cada pessoa.
 
 Por que a média geral de 32 minutos não retrata igualmente os dois grupos?
@@ -1505,9 +1426,8 @@ Revisor/data: pendentes.
 
 ## G80 — Cadeias produtivas e divisão territorial
 
-ID: d1434000-0000-4000-8000-000000000080. Versão: 1. Dificuldade estimada: hard. Família: G20.
+ID: d1434000-0000-4000-8000-000000000080. Versão: 2. Dificuldade estimada: medium. Família: G20.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um produto vendido por R$ 1.000 envolve etapas em três regiões: extração e materiais somam R$ 100; montagem soma R$ 200; desenvolvimento, marca e comercialização somam R$ 700. Para o exercício, os valores particionam o preço sem dupla contagem. Não se informa como cada etapa distribui sua receita entre salários, custos e lucros.
 
 Os R$ 700 da última etapa correspondem necessariamente a lucro líquido de uma única empresa?
@@ -1524,47 +1444,44 @@ Revisor/data: pendentes.
 
 ## G81 — Escala, distância e área
 
-ID: d1434000-0000-4000-8000-000000000081. Versão: 2. Dificuldade estimada: hard. Família: G1.
+ID: d1434000-0000-4000-8000-000000000081. Versão: 3. Dificuldade estimada: hard. Família: G1.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa tem escala 1:50.000. Uma trilha mede 8 cm no papel e a área representada por um quadrado de 2 cm de lado será estudada. Um segundo mapa da mesma região usa escala 1:25.000. Despreze distorções da projeção neste exercício.
+Um mapa de escala 1:60.000 é ampliado proporcionalmente. Após a ampliação, a área no papel de um mesmo terreno quadrado fica quatro vezes maior.
 
-O quadrado de 2 cm de lado no mapa 1:50.000 representa uma área real de quanto?
+Qual é a escala da cópia ampliada?
 
-- **A)** 2 km²
-- **B)** 4 km²
-- **C)** 0,5 km²
-- **D)** 1 km²
-- **E)** 10 km²
+- **A)** 1:120.000
+- **B)** 1:240.000
+- **C)** 1:15.000
+- **D)** 1:30.000
+- **E)** 1:60.000
 
-**Gabarito: D.** Cada lado representa 2 × 50.000 = 100.000 cm, isto é, 1 km. A área é 1 km × 1 km = 1 km². É necessário converter as medidas lineares antes de calcular a área; o fator de escala de área é quadrático.
+**Gabarito: D.** Se a área no papel quadruplica, cada comprimento dobra. A distância real permanece igual, então o denominador da escala é dividido por dois: 60.000/2 = 30.000. Dividir por quatro confundiria área com comprimento.
 
 Revisor/data: pendentes.
 
 ## G82 — Densidade demográfica e distribuição
 
-ID: d1434000-0000-4000-8000-000000000082. Versão: 2. Dificuldade estimada: hard. Família: G2.
+ID: d1434000-0000-4000-8000-000000000082. Versão: 3. Dificuldade estimada: medium. Família: G2.
 
-Dados fictícios elaborados para interpretação geográfica:
-A região A tem 600.000 habitantes em 3.000 km²; B tem 400.000 habitantes em 1.000 km². Em A, 80% das pessoas vivem em apenas 20% da área. As áreas não se sobrepõem e os dados referem-se ao mesmo ano.
+A região A tem 600.000 habitantes em 3.000 km². Uma parcela que ocupa 20% da área reúne 80% dos habitantes.
 
-Em A, qual densidade resulta na parcela que reúne 80% dos habitantes em 20% da área?
+Qual é a densidade demográfica na área restante?
 
-- **A)** 800 hab./km²
-- **B)** 400 hab./km²
-- **C)** 1.000 hab./km²
-- **D)** 160 hab./km²
-- **E)** 200 hab./km²
+- **A)** 50 hab./km²
+- **B)** 250 hab./km²
+- **C)** 40 hab./km²
+- **D)** 200 hab./km²
+- **E)** 800 hab./km²
 
-**Gabarito: A.** Essa parcela reúne 0,8 × 600.000 = 480.000 pessoas em 0,2 × 3.000 = 600 km². Dividindo, obtém-se 800 hab./km², quatro vezes a média de A. A densidade média regional não descreve a concentração interna.
+**Gabarito: A.** Na parte restante vivem 20% de 600.000 = 120.000 habitantes, em 80% de 3.000 = 2.400 km². A densidade é 120.000/2.400 = 50 hab./km². A concentração de um grupo não descreve a ocupação do território restante.
 
 Revisor/data: pendentes.
 
 ## G83 — Urbanização e crescimento absoluto
 
-ID: d1434000-0000-4000-8000-000000000083. Versão: 1. Dificuldade estimada: hard. Família: G3.
+ID: d1434000-0000-4000-8000-000000000083. Versão: 2. Dificuldade estimada: medium. Família: G3.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um município tinha 80.000 habitantes, dos quais 60.000 urbanos. Dez anos depois passou a 100.000 habitantes, sendo 85.000 urbanos. Considere os mesmos limites territoriais e critérios de classificação nos dois momentos.
 
 Que mudança de classificação prejudicaria a comparação direta das taxas?
@@ -1581,9 +1498,8 @@ Revisor/data: pendentes.
 
 ## G84 — Crescimento natural e saldo migratório
 
-ID: d1434000-0000-4000-8000-000000000084. Versão: 1. Dificuldade estimada: hard. Família: G4.
+ID: d1434000-0000-4000-8000-000000000084. Versão: 2. Dificuldade estimada: medium. Família: G4.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região começa o ano com 50.000 habitantes. Registra 900 nascimentos, 400 mortes, 1.500 imigrantes e 2.000 emigrantes. As categorias não se sobrepõem, não há mudança de limites e os valores correspondem ao mesmo ano.
 
 Que leitura evita confundir estabilidade do total com imobilidade populacional?
@@ -1600,10 +1516,9 @@ Revisor/data: pendentes.
 
 ## G85 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000085. Versão: 1. Dificuldade estimada: hard. Família: G5.
+ID: d1434000-0000-4000-8000-000000000085. Versão: 2. Dificuldade estimada: medium. Família: G5.
 
-Dados fictícios elaborados para interpretação geográfica:
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. Para este exercício, a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Que informação complementa esses números para planejar serviços?
 
@@ -1619,28 +1534,26 @@ Revisor/data: pendentes.
 
 ## G86 — Produtividade agrícola e área
 
-ID: d1434000-0000-4000-8000-000000000086. Versão: 2. Dificuldade estimada: hard. Família: G6.
+ID: d1434000-0000-4000-8000-000000000086. Versão: 3. Dificuldade estimada: hard. Família: G6.
 
-Dados fictícios elaborados para interpretação geográfica:
-A propriedade A colheu 12.000 toneladas em 3.000 hectares; B colheu 10.000 toneladas em 2.000 hectares. No ano seguinte, A pretende aumentar a produção para 15.000 toneladas mantendo a área. Os dados não incluem custo, renda dos trabalhadores ou impactos ambientais.
+A propriedade A produz 12.000 t em 3.000 ha; B produz 10.000 t em 2.000 ha. Ambas vendem a R$ 700/t. Os custos totais por tonelada são R$ 500 em A e R$ 650 em B.
 
-Para A colher 15.000 toneladas sem aumentar a área de 3.000 hectares, que mudança de produtividade é necessária?
+Qual comparação distingue produtividade e lucro total nesse período?
 
-- **A)** Passar de 4 para 5 t/ha, aumento de 25%.
-- **B)** Passar de 4 para 5 t/ha, aumento de 20%.
-- **C)** Passar de 4 para 6 t/ha, aumento de 50%.
-- **D)** Passar de 4 para 4,25 t/ha, aumento de 25%.
-- **E)** Manter 4 t/ha, pois a área permanece igual.
+- **A)** B tem maior produtividade, mas A tem maior lucro total: R$ 2,4 milhões contra R$ 0,5 milhão.
+- **B)** B tem maior produtividade e maior lucro total, pois produz mais por hectare.
+- **C)** As duas têm o mesmo lucro por tonelada, pois o preço de venda é igual.
+- **D)** A tem maior produtividade e maior lucro total, pois produz mais toneladas.
+- **E)** A tem maior lucro total, mas B tem lucro de R$ 6,5 milhões, confundindo custo com lucro.
 
-**Gabarito: A.** Inicialmente são 12.000/3.000 = 4 t/ha. A meta exige 15.000/3.000 = 5 t/ha. O acréscimo de 1 t/ha dividido pelo valor inicial de 4 t/ha equivale a 25%; a área constante exige maior rendimento.
+**Gabarito: A.** A produtividade é 4 t/ha em A e 5 t/ha em B. O lucro é receita menos custo: A = 12.000 × (700 − 500) = 2.400.000; B = 10.000 × (700 − 650) = 500.000. Maior rendimento por área não garante maior lucro.
 
 Revisor/data: pendentes.
 
 ## G87 — Uso do solo e mudança de cobertura
 
-ID: d1434000-0000-4000-8000-000000000087. Versão: 1. Dificuldade estimada: hard. Família: G7.
+ID: d1434000-0000-4000-8000-000000000087. Versão: 2. Dificuldade estimada: medium. Família: G7.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma bacia de 1.000 km², a cobertura florestal era 600 km² e passou a 450 km². Áreas impermeabilizadas passaram de 100 para 200 km²; os demais usos ocupam a área restante. Os períodos têm os mesmos limites. O relatório não identifica automaticamente as causas de cada mudança.
 
 Que dado complementa o relatório para estudar causas e consequências?
@@ -1657,10 +1570,9 @@ Revisor/data: pendentes.
 
 ## G88 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000088. Versão: 1. Dificuldade estimada: hard. Família: G8.
+ID: d1434000-0000-4000-8000-000000000088. Versão: 2. Dificuldade estimada: medium. Família: G8.
 
-Dados fictícios elaborados para interpretação geográfica:
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Para este exercício, potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Qual informação melhora o planejamento do atendimento contínuo da demanda?
 
@@ -1676,9 +1588,8 @@ Revisor/data: pendentes.
 
 ## G89 — Emissões totais e por habitante
 
-ID: d1434000-0000-4000-8000-000000000089. Versão: 2. Dificuldade estimada: hard. Família: G9.
+ID: d1434000-0000-4000-8000-000000000089. Versão: 3. Dificuldade estimada: medium. Família: G9.
 
-Dados fictícios elaborados para interpretação geográfica:
 O país A emite 120 milhões de toneladas de um gás em um ano e tem 60 milhões de habitantes. B emite 80 milhões de toneladas e tem 20 milhões de habitantes. Considere a mesma metodologia de inventário e não inclua emissões históricas acumuladas neste cálculo.
 
 Se A reduzir suas emissões totais em 10% e mantiver a população, qual será sua emissão anual por habitante?
@@ -1695,9 +1606,8 @@ Revisor/data: pendentes.
 
 ## G90 — Transporte e custo logístico
 
-ID: d1434000-0000-4000-8000-000000000090. Versão: 1. Dificuldade estimada: hard. Família: G10.
+ID: d1434000-0000-4000-8000-000000000090. Versão: 2. Dificuldade estimada: medium. Família: G10.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma carga de 400 toneladas deve percorrer 300 km. A rodovia cobra R$ 0,30 por tonelada-quilômetro. A ferrovia cobra R$ 0,15 por tonelada-quilômetro e exige R$ 12.000 de transferência nos terminais. Ignore custos e prazos não informados; a transferência é cobrada uma vez para toda a carga.
 
 Qual característica territorial pode impedir a escolha de um modal mesmo com custo calculado menor?
@@ -1714,9 +1624,8 @@ Revisor/data: pendentes.
 
 ## G91 — Comércio externo e saldo
 
-ID: d1434000-0000-4000-8000-000000000091. Versão: 1. Dificuldade estimada: hard. Família: G11.
+ID: d1434000-0000-4000-8000-000000000091. Versão: 2. Dificuldade estimada: medium. Família: G11.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma região exporta 50 milhões de reais em alimentos e 30 milhões em equipamentos. Importa 20 milhões em alimentos e 45 milhões em equipamentos. Os dados usam a mesma moeda e período e não incluem serviços, investimentos ou movimentos financeiros.
 
 Que informação seria necessária para avaliar bem-estar social associado ao comércio?
@@ -1733,9 +1642,8 @@ Revisor/data: pendentes.
 
 ## G92 — Renda média, mediana e desigualdade
 
-ID: d1434000-0000-4000-8000-000000000092. Versão: 1. Dificuldade estimada: hard. Família: G12.
+ID: d1434000-0000-4000-8000-000000000092. Versão: 2. Dificuldade estimada: medium. Família: G12.
 
-Dados fictícios elaborados para interpretação geográfica:
 Cinco domicílios de um setor têm rendas mensais de R$ 1.000, R$ 1.200, R$ 1.500, R$ 2.000 e R$ 9.300. Outro setor tem cinco domicílios com R$ 3.000 cada. A comparação não inclui diferenças de tamanho familiar ou custo de vida.
 
 Que informação adicional permite comparar mais adequadamente condições de vida?
@@ -1752,10 +1660,9 @@ Revisor/data: pendentes.
 
 ## G93 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000093. Versão: 1. Dificuldade estimada: hard. Família: G13.
+ID: d1434000-0000-4000-8000-000000000093. Versão: 2. Dificuldade estimada: medium. Família: G13.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Para este exercício, saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Qual comparação distingue clima de uma observação meteorológica isolada?
 
@@ -1771,9 +1678,8 @@ Revisor/data: pendentes.
 
 ## G94 — Bacia hidrográfica e disponibilidade
 
-ID: d1434000-0000-4000-8000-000000000094. Versão: 1. Dificuldade estimada: hard. Família: G14.
+ID: d1434000-0000-4000-8000-000000000094. Versão: 2. Dificuldade estimada: medium. Família: G14.
 
-Dados fictícios elaborados para interpretação geográfica:
 Uma bacia recebe, no período estudado, 100 unidades de água por precipitação e 10 por entrada externa. Perde 40 por evapotranspiração e 50 por saída fluvial. No modelo, a diferença altera o armazenamento. Uma captação adicional retiraria 30 unidades, sem outras mudanças.
 
 Que medida de planejamento é mais coerente com o balanço apresentado?
@@ -1790,9 +1696,8 @@ Revisor/data: pendentes.
 
 ## G95 — Relevo, infiltração e risco
 
-ID: d1434000-0000-4000-8000-000000000095. Versão: 1. Dificuldade estimada: hard. Família: G15.
+ID: d1434000-0000-4000-8000-000000000095. Versão: 2. Dificuldade estimada: medium. Família: G15.
 
-Dados fictícios elaborados para interpretação geográfica:
 Duas encostas têm a mesma declividade e recebem chuva semelhante. A mantém vegetação e solo permeável; B foi desmatada e tem trechos compactados. Há moradias na parte baixa de ambas. O relatório considera escoamento, erosão e exposição de pessoas, sem afirmar que um único fator determina todos os eventos.
 
 Qual interpretação evita culpabilizar apenas os moradores por consequências do risco?
@@ -1809,29 +1714,27 @@ Revisor/data: pendentes.
 
 ## G96 — Fusos horários e conexões
 
-ID: d1434000-0000-4000-8000-000000000096. Versão: 1. Dificuldade estimada: hard. Família: G16.
+ID: d1434000-0000-4000-8000-000000000096. Versão: 2. Dificuldade estimada: easy. Família: G16.
 
-Dados fictícios elaborados para interpretação geográfica:
-Para este exercício, a cidade A usa UTC−3, B usa UTC+1 e C usa UTC+5, sem mudanças sazonais. Um voo sai de A às 22h de uma segunda-feira e dura oito horas até B. Depois de duas horas de espera em B, um segundo voo de quatro horas chega a C. Horários são locais e durações são reais.
+Uma viagem tem chegada prevista a C às 20h de terça-feira. A conexão sofre um atraso adicional de três horas e o voo seguinte mantém sua duração.
 
-Se B atrasar a conexão em três horas adicionais, mantendo todo o restante, quando ocorre a chegada a C?
+Qual é o novo horário previsto de chegada a C?
 
 - **A)** 23h de terça-feira.
 - **B)** 17h de terça-feira.
 - **C)** 20h de terça-feira.
-- **D)** 3h de quarta-feira.
-- **E)** 23h de segunda-feira.
+- **D)** 1h de quarta-feira.
+- **E)** 3h de quarta-feira.
 
-**Gabarito: A.** A chegada inicialmente prevista era 20h em C. O atraso real adicional de três horas desloca-a para 23h do mesmo dia, sem alterar os fusos do exercício.
+**Gabarito: A.** O atraso adicional desloca a chegada em três horas: 20 + 3 = 23h de terça-feira. Os dois horários já se referem à mesma cidade, então não é preciso aplicar diferença de fuso.
 
 Revisor/data: pendentes.
 
 ## G97 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000097. Versão: 1. Dificuldade estimada: hard. Família: G17.
+ID: d1434000-0000-4000-8000-000000000097. Versão: 2. Dificuldade estimada: medium. Família: G17.
 
-Dados fictícios elaborados para interpretação geográfica:
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Para este exercício, considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Que informação falta para determinar a distância real precisa entre os pontos usando apenas o desenho esquemático?
 
@@ -1847,28 +1750,26 @@ Revisor/data: pendentes.
 
 ## G98 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000098. Versão: 2. Dificuldade estimada: hard. Família: G18.
+ID: d1434000-0000-4000-8000-000000000098. Versão: 3. Dificuldade estimada: medium. Família: G18.
 
-Dados fictícios elaborados para interpretação geográfica:
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Neste exercício, força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Uma região tem 12.000 ocupados e 3.000 desocupados. Pessoas desocupadas conseguirão trabalho, sem entradas ou saídas da força de trabalho.
 
-Compare dois cenários: mil desocupados encontram trabalho; ou mil desocupados deixam de procurar. Qual comparação das taxas resultantes está correta?
+Quantas precisam conseguir trabalho para a taxa de desocupação cair para 10%?
 
-- **A)** 10% no primeiro e 20% no segundo; pessoas fora da força entram como desocupadas.
-- **B)** Cerca de 13,3% no primeiro e 14,3% no segundo; só o primeiro aumenta o número de ocupados.
-- **C)** 20% nos dois; a população total permanece constante.
-- **D)** Cerca de 13,3% nos dois; retirar mil do numerador mantém a mesma taxa independentemente do denominador.
-- **E)** Cerca de 14,3% no primeiro e 13,3% no segundo; a força de trabalho cai apenas com novos empregos.
+- **A)** 2.700 pessoas
+- **B)** 1.500 pessoas
+- **C)** 2.000 pessoas
+- **D)** 300 pessoas
+- **E)** 1.200 pessoas
 
-**Gabarito: B.** Com emprego novo, são 2.000 desocupados em força de 15.000: 13,3%. Com saída da participação, são 2.000 em força de 14.000: 14,3%. A força soma ocupados e desocupados, excluindo os que deixam de procurar no modelo.
+**Gabarito: B.** A força de trabalho continua em 15.000. Para uma taxa de 10%, devem restar 1.500 desocupados. Assim, 3.000 − 1.500 = 1.500 precisam conseguir trabalho; mudar de desocupado para ocupado não altera o denominador.
 
 Revisor/data: pendentes.
 
 ## G99 — Mobilidade urbana e desigualdade de acesso
 
-ID: d1434000-0000-4000-8000-000000000099. Versão: 1. Dificuldade estimada: hard. Família: G19.
+ID: d1434000-0000-4000-8000-000000000099. Versão: 2. Dificuldade estimada: medium. Família: G19.
 
-Dados fictícios elaborados para interpretação geográfica:
 Em uma cidade, 600 viagens usam uma linha rápida com duração média de 20 minutos; 400 usam uma linha periférica com duração média de 50 minutos. Uma intervenção reduziria a duração periférica para 35 minutos, sem mudar a quantidade de viagens. Considere médias dos dois grupos, não tempos idênticos para cada pessoa.
 
 Que dado amplia a avaliação da intervenção além do tempo médio?
@@ -1885,9 +1786,8 @@ Revisor/data: pendentes.
 
 ## G100 — Cadeias produtivas e divisão territorial
 
-ID: d1434000-0000-4000-8000-000000000100. Versão: 2. Dificuldade estimada: hard. Família: G20.
+ID: d1434000-0000-4000-8000-000000000100. Versão: 3. Dificuldade estimada: medium. Família: G20.
 
-Dados fictícios elaborados para interpretação geográfica:
 Um produto vendido por R$ 1.000 envolve etapas em três regiões: extração e materiais somam R$ 100; montagem soma R$ 200; desenvolvimento, marca e comercialização somam R$ 700. Para o exercício, os valores particionam o preço sem dupla contagem. Não se informa como cada etapa distribui sua receita entre salários, custos e lucros.
 
 Se a parcela de montagem crescer de R$ 200 para R$ 250 e as outras duas parcelas permanecerem iguais, qual será sua participação no novo preço?

@@ -1,13 +1,12 @@
-# Revisão atual — História — etapa 44
+# Revisão atual — História — etapa 45
 
-Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
 ## H01 — Agricultura, sedentarização e diversidade
 
-ID: d1090000-0000-4000-8000-000000000007. Versão: 2. Dificuldade estimada: hard. Família: H1.
+ID: d1090000-0000-4000-8000-000000000007. Versão: 3. Dificuldade estimada: easy. Família: H1.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A adoção de agricultura e criação de animais em diferentes regiões modificou a produção de alimentos. Em alguns grupos, favoreceu assentamentos mais permanentes, armazenamento e especialização do trabalho. A mudança não ocorreu de uma só vez em toda parte e não eliminou automaticamente coleta, caça ou conflitos. Vestígios arqueológicos precisam ser interpretados junto ao contexto em que foram encontrados.
+Em diferentes regiões, grupos humanos adotaram agricultura e criação de animais em épocas distintas. Há vestígios de armazenamento, assentamentos e coexistência dessas atividades com caça e coleta.
 
 Qual interpretação evita transformar essas mudanças em uma evolução única e inevitável de todas as sociedades?
 
@@ -17,16 +16,15 @@ Qual interpretação evita transformar essas mudanças em uma evolução única 
 - **D)** Considerar que a agricultura surgiu simultaneamente em todas as regiões.
 - **E)** Tomar todo assentamento como prova de ausência de coleta e caça.
 
-**Gabarito: B.** A síntese destaca diversidade de tempo e combinação de atividades. Agricultura pode favorecer permanência e especialização sem impor um mesmo caminho a todos os grupos.
+**Gabarito: B.** O contexto apresenta diversidade de tempo e combinação de atividades. Agricultura pode favorecer permanência e especialização sem impor um mesmo caminho a todos os grupos.
 
 Revisor/data: pendentes.
 
 ## H02 — Democracia ateniense e cidadania
 
-ID: d1090000-0000-4000-8000-000000000008. Versão: 3. Dificuldade estimada: hard. Família: H2.
+ID: d1090000-0000-4000-8000-000000000008. Versão: 4. Dificuldade estimada: medium. Família: H2.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Na Atenas clássica, cidadãos homens adultos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não possuíam os mesmos direitos de participação. A democracia daquela cidade não pode ser identificada sem distinções com o sufrágio amplo contemporâneo; tampouco sua exclusão anula a importância histórica das instituições de participação entre cidadãos.
+Na Atenas clássica, homens adultos reconhecidos como cidadãos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não tinham esses direitos de participação.
 
 Um morador estrangeiro de Atenas pagava tributos, mas não participava da assembleia como cidadão. Qual interpretação distingue residência e cidadania?
 
@@ -42,10 +40,9 @@ Revisor/data: pendentes.
 
 ## H03 — Roma, expansão e conflitos sociais
 
-ID: d1392000-0000-4000-8000-000000000001. Versão: 3. Dificuldade estimada: hard. Família: H3.
+ID: d1392000-0000-4000-8000-000000000001. Versão: 4. Dificuldade estimada: medium. Família: H3.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão romana ampliou territórios, circulação de riquezas e uso de trabalho escravizado. Proprietários concentraram terras em algumas regiões, enquanto grupos plebeus enfrentavam disputas por recursos e participação. A passagem da República ao Império envolveu conflitos e concentração de poder, não apenas um aumento de tamanho do território.
+A expansão romana ampliou terras conquistadas e o uso de trabalho escravizado. A distribuição de terras e a participação política provocaram conflitos na República e na formação do poder imperial.
 
 Que relação explica por que expansão territorial podia coexistir com conflitos internos?
 
@@ -61,10 +58,9 @@ Revisor/data: pendentes.
 
 ## H04 — Relações feudais e obrigações
 
-ID: d1392000-0000-4000-8000-000000000002. Versão: 4. Dificuldade estimada: hard. Família: H4.
+ID: d1392000-0000-4000-8000-000000000002. Versão: 5. Dificuldade estimada: medium. Família: H4.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Em partes da Europa medieval, senhores controlavam terras e exerciam poderes locais. Camponeses podiam prestar trabalho e entregar parte da produção em troca de acesso à terra e proteção sob relações desiguais. Vassalagem ligava membros da elite por compromissos de fidelidade e serviço; não era a mesma relação que a servidão camponesa. A organização variava entre regiões e períodos.
+Em partes da Europa medieval, senhores exerciam poderes sobre terras e camponeses. Estes deviam trabalho ou parte da produção. Nobres também estabeleciam compromissos de fidelidade e serviço entre si.
 
 Um camponês entrega parte da colheita ao senhor; um nobre promete serviço militar a outro nobre em troca de um feudo. Como se distinguem as relações?
 
@@ -80,10 +76,9 @@ Revisor/data: pendentes.
 
 ## H05 — Renascimento e circulação de conhecimento
 
-ID: d1392000-0000-4000-8000-000000000003. Versão: 4. Dificuldade estimada: hard. Família: H5.
+ID: d1392000-0000-4000-8000-000000000003. Versão: 5. Dificuldade estimada: medium. Família: H5.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Mudanças culturais associadas ao Renascimento envolveram interesse por referências clássicas, observação, experimentação em certos campos e novas formas de representar pessoas e espaços. A imprensa ampliou possibilidades de circulação de textos, mas o acesso não foi imediato nem igual para toda a população. A valorização do ser humano coexistiu com religiosidade e relações de poder.
+Artistas e estudiosos do Renascimento retomaram referências clássicas e desenvolveram técnicas de representação e investigação. Instituições religiosas e governantes estavam entre seus patronos. A imprensa ampliou a circulação de textos.
 
 Um artista renascentista usa perspectiva e referências clássicas em uma obra encomendada por uma instituição religiosa. Que interpretação é mais adequada?
 
@@ -99,10 +94,9 @@ Revisor/data: pendentes.
 
 ## H06 — Reformas religiosas e poder político
 
-ID: d1392000-0000-4000-8000-000000000004. Versão: 3. Dificuldade estimada: hard. Família: H6.
+ID: d1392000-0000-4000-8000-000000000004. Versão: 4. Dificuldade estimada: medium. Família: H6.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-As reformas religiosas do século XVI questionaram práticas e autoridades da Igreja ocidental e deram origem a diferentes correntes. A circulação de escritos e o apoio de governantes contribuíram para a expansão de propostas. Disputas religiosas também se relacionaram a interesses políticos; a reação católica combinou reafirmação doutrinária e reformas internas, não desaparecimento da instituição.
+No século XVI, correntes reformadoras questionaram a autoridade e práticas da Igreja católica. Governantes tomaram posições nos conflitos. A Igreja católica reafirmou doutrinas e promoveu mudanças internas.
 
 Que relação entre religião e política é coerente com a síntese?
 
@@ -118,10 +112,9 @@ Revisor/data: pendentes.
 
 ## H07 — Expansão marítima e redes atlânticas
 
-ID: d1392000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: hard. Família: H7.
+ID: d1392000-0000-4000-8000-000000000005. Versão: 5. Dificuldade estimada: medium. Família: H7.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão marítima europeia articulou técnicas de navegação, interesses comerciais, ação de monarquias e disputas por rotas. A chegada a territórios já habitados produziu conquista, trocas e violência, com efeitos distintos sobre grupos europeus, africanos e americanos. Chamar esses territórios de vazios apaga populações e relações existentes antes da conquista.
+As viagens marítimas europeias envolveram instrumentos de navegação, comércio, financiamento e ação de monarquias. Nas Américas, chegaram a territórios ocupados por diferentes povos.
 
 Um reino financia viagens, comerciantes buscam novas rotas e navegadores empregam instrumentos aperfeiçoados. Qual relação explica a expansão marítima?
 
@@ -137,10 +130,9 @@ Revisor/data: pendentes.
 
 ## H08 — Economia açucareira e trabalho
 
-ID: d1392000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: hard. Família: H8.
+ID: d1392000-0000-4000-8000-000000000006. Versão: 5. Dificuldade estimada: medium. Família: H8.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A produção de açúcar na América portuguesa articulava grandes unidades de cultivo e processamento, circulação atlântica e trabalho escravizado. O destino externo de parte expressiva da produção influenciava investimentos e dependência comercial. Outras atividades abasteciam moradores e unidades produtivas; economia exportadora não significa inexistência de mercados internos.
+Na América portuguesa, engenhos articulavam cultivo, processamento do açúcar, comércio atlântico e trabalho escravizado. Produtores de alimentos e outros bens abasteciam essas unidades e as populações locais.
 
 Um engenho exporta açúcar e compra alimentos de produtores locais. Que interpretação relaciona essas duas atividades?
 
@@ -156,10 +148,9 @@ Revisor/data: pendentes.
 
 ## H09 — Mineração, fiscalidade e interiorização
 
-ID: d1392000-0000-4000-8000-000000000007. Versão: 3. Dificuldade estimada: hard. Família: H9.
+ID: d1392000-0000-4000-8000-000000000007. Versão: 4. Dificuldade estimada: medium. Família: H9.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A mineração na América portuguesa ampliou fluxos de pessoas, mercadorias e recursos para áreas do interior. A Coroa estabeleceu mecanismos de tributação e fiscalização; cobranças e controles produziram conflitos. A extração coexistiu com abastecimento, agricultura e comércio, e seus efeitos não podem ser medidos apenas pela quantidade de metal enviada à metrópole.
+A mineração na América portuguesa ampliou a circulação no interior. A Coroa tributava e fiscalizava a extração. As zonas mineradoras também mantinham relações com produtores de alimentos e comerciantes.
 
 Qual relação integra mineração e reorganização do território?
 
@@ -175,10 +166,9 @@ Revisor/data: pendentes.
 
 ## H10 — Iluminismo e limites das mudanças
 
-ID: d1392000-0000-4000-8000-000000000008. Versão: 3. Dificuldade estimada: hard. Família: H10.
+ID: d1392000-0000-4000-8000-000000000008. Versão: 4. Dificuldade estimada: medium. Família: H10.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Pensadores iluministas discutiram razão, direitos e limites do poder, com propostas e posições distintas. Ideias de liberdade podiam inspirar críticas ao absolutismo, mas sua aplicação não foi igual para todos os grupos. Em diferentes processos revolucionários, declarações de direitos coexistiram com exclusões políticas, coloniais e sociais.
+Pensadores iluministas discutiram razão, direitos e limites da autoridade. Declarações de direitos elaboradas em processos revolucionários conviveram com regras que restringiam a participação de grupos sociais.
 
 Qual análise explica a coexistência entre discurso de direitos e exclusões?
 
@@ -194,10 +184,9 @@ Revisor/data: pendentes.
 
 ## H11 — Industrialização e organização do trabalho
 
-ID: d1392000-0000-4000-8000-000000000009. Versão: 3. Dificuldade estimada: hard. Família: H11.
+ID: d1392000-0000-4000-8000-000000000009. Versão: 4. Dificuldade estimada: medium. Família: H11.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Uma síntese sobre a industrialização distingue produção em oficinas e produção fabril. Máquinas, concentração de trabalhadores e disciplina de horários ampliaram certas capacidades produtivas, enquanto jornadas, salários e condições de trabalho se tornaram objeto de conflito. O aumento da produção não significou distribuição automática e igual dos benefícios.
+A industrialização ampliou o uso de máquinas e reuniu trabalhadores em fábricas. Horários, jornadas e salários eram organizados sob direção dos proprietários e provocavam conflitos com os trabalhadores.
 
 Qual relação explica o conflito social apesar do aumento da produção?
 
@@ -213,10 +202,9 @@ Revisor/data: pendentes.
 
 ## H12 — Revolução Francesa e cidadania
 
-ID: d1392000-0000-4000-8000-000000000010. Versão: 3. Dificuldade estimada: hard. Família: H12.
+ID: d1392000-0000-4000-8000-000000000010. Versão: 4. Dificuldade estimada: medium. Família: H12.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Revolução Francesa questionou privilégios e autoridade do Antigo Regime. Declarações de liberdade e igualdade, mudanças institucionais e disputas entre grupos marcaram o processo. A cidadania não foi ampliada de forma estável e uniforme para todos; diferenças de gênero, propriedade e condição colonial permaneceram em debate e conflito.
+A Revolução Francesa questionou privilégios do Antigo Regime. O processo teve diferentes fases e grupos políticos. Os ideais de liberdade e igualdade foram debatidos também em relação a mulheres e populações coloniais.
 
 Qual leitura compara ideais revolucionários e sua aplicação sem confundi-los?
 
@@ -232,10 +220,9 @@ Revisor/data: pendentes.
 
 ## H13 — Independências nas Américas
 
-ID: d1392000-0000-4000-8000-000000000011. Versão: 3. Dificuldade estimada: hard. Família: H13.
+ID: d1392000-0000-4000-8000-000000000011. Versão: 4. Dificuldade estimada: medium. Família: H13.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A crise de autoridades metropolitanas e conflitos locais contribuíram para independências em diferentes partes das Américas. Projetos de governo, território e cidadania divergiam entre elites e outros grupos. A ruptura política com uma metrópole podia preservar desigualdades de propriedade e formas de coerção do trabalho; processos distintos não produziram resultados sociais idênticos.
+Nas independências americanas, grupos disputaram a ruptura com autoridades metropolitanas e a organização do novo governo. Propriedade, trabalho e participação política variaram entre os processos.
 
 Qual distinção é necessária entre independência política e transformação social?
 
@@ -251,10 +238,9 @@ Revisor/data: pendentes.
 
 ## H14 — Transferência da corte e mudanças coloniais
 
-ID: d1392000-0000-4000-8000-000000000012. Versão: 4. Dificuldade estimada: hard. Família: H14.
+ID: d1392000-0000-4000-8000-000000000012. Versão: 5. Dificuldade estimada: medium. Família: H14.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A transferência da corte portuguesa para o Brasil em 1808 relacionou-se ao contexto europeu das guerras napoleônicas. A instalação da monarquia no Rio de Janeiro e medidas comerciais e administrativas alteraram relações entre metrópole e colônia. Em 1815, o Brasil foi elevado à condição de Reino Unido a Portugal e Algarves; a independência de 1822 não deve ser confundida com essas mudanças anteriores.
+A corte portuguesa chegou ao Brasil em 1808 no contexto das guerras napoleônicas. O Rio de Janeiro passou a sediar instituições da monarquia. Em 1815 formou-se o Reino Unido de Portugal, Brasil e Algarves; em 1822 ocorreu a independência brasileira.
 
 A abertura dos portos em 1808 ampliou o comércio direto do Brasil com nações amigas. Que mudança a medida representa naquele contexto?
 
@@ -270,10 +256,9 @@ Revisor/data: pendentes.
 
 ## H15 — Independência do Brasil e continuidades
 
-ID: d1392000-0000-4000-8000-000000000013. Versão: 3. Dificuldade estimada: hard. Família: H15.
+ID: d1392000-0000-4000-8000-000000000013. Versão: 4. Dificuldade estimada: medium. Família: H15.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A independência de 1822 rompeu vínculos políticos com Portugal e manteve uma monarquia no Brasil. Sua organização envolveu disputas regionais e diferentes participações sociais. A escravidão e a concentração de propriedade persistiram. A Constituição de 1824 estabeleceu instituições do Império e regras de participação que não equivaliam ao sufrágio universal contemporâneo.
+O Brasil tornou-se independente em 1822 sob uma monarquia. A Constituição de 1824 organizou instituições imperiais e estabeleceu regras de participação. A escravidão e a concentração de propriedade persistiram.
 
 Qual análise identifica simultaneamente ruptura e continuidade?
 
@@ -289,10 +274,9 @@ Revisor/data: pendentes.
 
 ## H16 — Abolição e cidadania no pós-emancipação
 
-ID: d1392000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: hard. Família: H16.
+ID: d1392000-0000-4000-8000-000000000014. Versão: 5. Dificuldade estimada: medium. Família: H16.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A abolição legal da escravidão no Brasil, em 1888, resultou de processos que envolveram ação de pessoas escravizadas, movimentos abolicionistas, conflitos e decisões políticas. O fim da condição jurídica de escravidão não assegurou automaticamente acesso igual à terra, renda ou proteção social. Disputas por cidadania continuaram após a emancipação.
+A escravidão foi abolida legalmente no Brasil em 1888, após resistências, mobilizações e disputas políticas. Trabalhadores emancipados continuaram disputando acesso a terra, trabalho, renda e direitos.
 
 Após 1888, trabalhadores juridicamente livres ainda enfrentavam restrições de acesso à terra e renda. Qual distinção ajuda a interpretar essa situação?
 
@@ -308,10 +292,9 @@ Revisor/data: pendentes.
 
 ## H17 — Primeira República e participação política
 
-ID: d1392000-0000-4000-8000-000000000015. Versão: 3. Dificuldade estimada: hard. Família: H17.
+ID: d1392000-0000-4000-8000-000000000015. Versão: 4. Dificuldade estimada: medium. Família: H17.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A proclamação da República em 1889 mudou a forma de governo, mas a participação política continuou limitada por regras de acesso e práticas de poder. Em muitas regiões, redes locais controlavam recursos e pressionavam eleitores; mecanismos formais coexistiam com coerção e disputas. Mudança institucional e democratização efetiva não são equivalentes automáticos.
+A República brasileira foi proclamada em 1889. Na Primeira República, regras de acesso ao voto e redes de poder local limitavam a participação. Eleitores podiam sofrer pressões de autoridades e proprietários.
 
 Qual comparação distingue forma de governo e efetividade da participação?
 
@@ -327,10 +310,9 @@ Revisor/data: pendentes.
 
 ## H18 — Primeira Guerra e múltiplas causas
 
-ID: d1392000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: hard. Família: H18.
+ID: d1392000-0000-4000-8000-000000000016. Versão: 5. Dificuldade estimada: medium. Família: H18.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Primeira Guerra Mundial começou em 1914 em um cenário de rivalidades imperialistas, nacionalismos, alianças e corrida armamentista. Um atentado funcionou como estopim, mas não explica sozinho a expansão do conflito. Mobilização de recursos, trincheiras e impactos sobre civis mostraram relações entre decisões políticas, tecnologia e organização das sociedades.
+Em 1914, o atentado contra o herdeiro do Império Austro-Húngaro ocorreu num contexto de alianças, nacionalismos e rivalidades imperialistas. A guerra envolveu mobilização industrial e social, trincheiras e impactos sobre civis.
 
 Por que distinguir o atentado de 1914 das rivalidades e alianças anteriores ao interpretar a Primeira Guerra?
 
@@ -346,10 +328,9 @@ Revisor/data: pendentes.
 
 ## H19 — Segunda Guerra, propaganda e perseguição
 
-ID: d1392000-0000-4000-8000-000000000017. Versão: 3. Dificuldade estimada: hard. Família: H19.
+ID: d1392000-0000-4000-8000-000000000017. Versão: 4. Dificuldade estimada: medium. Família: H19.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Segunda Guerra Mundial ocorreu entre 1939 e 1945 em um contexto que incluía expansionismo e regimes autoritários. Propaganda mobilizava populações e legitimava políticas, enquanto perseguições e genocídio atingiam grupos definidos por ideologias racistas. Analisar propaganda exige distinguir sua intenção persuasiva de evidências sobre o que ocorreu.
+Entre 1939 e 1945, a Segunda Guerra envolveu expansionismo e regimes autoritários. Propaganda, perseguições e políticas de extermínio integraram a atuação de regimes como o nazista.
 
 Qual interpretação relaciona propaganda e poder sem tratá-la como fonte neutra?
 
@@ -365,10 +346,9 @@ Revisor/data: pendentes.
 
 ## H20 — Guerra Fria e ditaduras na América Latina
 
-ID: d1392000-0000-4000-8000-000000000018. Versão: 3. Dificuldade estimada: hard. Família: H20.
+ID: d1392000-0000-4000-8000-000000000018. Versão: 4. Dificuldade estimada: medium. Família: H20.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Após a Segunda Guerra, a disputa entre Estados Unidos e União Soviética influenciou alianças, propaganda e conflitos em diferentes regiões. Na América Latina, governos autoritários relacionaram discursos de segurança a repressão e restrições de direitos. O contexto internacional não elimina a importância de interesses locais, ações de grupos sociais e processos próprios de cada país.
+Após a Segunda Guerra, Estados Unidos e União Soviética disputaram influência. Na América Latina, ditaduras restringiram direitos e usaram discursos de segurança. Grupos locais participaram de disputas e resistências.
 
 Qual explicação evita reduzir todos os processos latino-americanos a decisões externas?
 
@@ -384,10 +364,9 @@ Revisor/data: pendentes.
 
 ## H21 — Agricultura, sedentarização e diversidade
 
-ID: d1433000-0000-4000-8000-000000000021. Versão: 1. Dificuldade estimada: hard. Família: H1.
+ID: d1433000-0000-4000-8000-000000000021. Versão: 2. Dificuldade estimada: medium. Família: H1.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A adoção de agricultura e criação de animais em diferentes regiões modificou a produção de alimentos. Em alguns grupos, favoreceu assentamentos mais permanentes, armazenamento e especialização do trabalho. A mudança não ocorreu de uma só vez em toda parte e não eliminou automaticamente coleta, caça ou conflitos. Vestígios arqueológicos precisam ser interpretados junto ao contexto em que foram encontrados.
+Em diferentes regiões, grupos humanos adotaram agricultura e criação de animais em épocas distintas. Há vestígios de armazenamento, assentamentos e coexistência dessas atividades com caça e coleta.
 
 Que relação entre produção e organização social é compatível com a síntese?
 
@@ -403,10 +382,9 @@ Revisor/data: pendentes.
 
 ## H22 — Democracia ateniense e cidadania
 
-ID: d1433000-0000-4000-8000-000000000022. Versão: 1. Dificuldade estimada: hard. Família: H2.
+ID: d1433000-0000-4000-8000-000000000022. Versão: 2. Dificuldade estimada: medium. Família: H2.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Na Atenas clássica, cidadãos homens adultos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não possuíam os mesmos direitos de participação. A democracia daquela cidade não pode ser identificada sem distinções com o sufrágio amplo contemporâneo; tampouco sua exclusão anula a importância histórica das instituições de participação entre cidadãos.
+Na Atenas clássica, homens adultos reconhecidos como cidadãos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não tinham esses direitos de participação.
 
 Um texto que define apenas os direitos dos cidadãos permite concluir o quê sobre toda a população?
 
@@ -422,10 +400,9 @@ Revisor/data: pendentes.
 
 ## H23 — Roma, expansão e conflitos sociais
 
-ID: d1433000-0000-4000-8000-000000000023. Versão: 1. Dificuldade estimada: hard. Família: H3.
+ID: d1433000-0000-4000-8000-000000000023. Versão: 2. Dificuldade estimada: medium. Família: H3.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão romana ampliou territórios, circulação de riquezas e uso de trabalho escravizado. Proprietários concentraram terras em algumas regiões, enquanto grupos plebeus enfrentavam disputas por recursos e participação. A passagem da República ao Império envolveu conflitos e concentração de poder, não apenas um aumento de tamanho do território.
+A expansão romana ampliou terras conquistadas e o uso de trabalho escravizado. A distribuição de terras e a participação política provocaram conflitos na República e na formação do poder imperial.
 
 Que transformação política distingue a concentração imperial de uma simples mudança geográfica?
 
@@ -441,10 +418,9 @@ Revisor/data: pendentes.
 
 ## H24 — Relações feudais e obrigações
 
-ID: d1433000-0000-4000-8000-000000000024. Versão: 1. Dificuldade estimada: hard. Família: H4.
+ID: d1433000-0000-4000-8000-000000000024. Versão: 2. Dificuldade estimada: medium. Família: H4.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Em partes da Europa medieval, senhores controlavam terras e exerciam poderes locais. Camponeses podiam prestar trabalho e entregar parte da produção em troca de acesso à terra e proteção sob relações desiguais. Vassalagem ligava membros da elite por compromissos de fidelidade e serviço; não era a mesma relação que a servidão camponesa. A organização variava entre regiões e períodos.
+Em partes da Europa medieval, senhores exerciam poderes sobre terras e camponeses. Estes deviam trabalho ou parte da produção. Nobres também estabeleciam compromissos de fidelidade e serviço entre si.
 
 Que interpretação do trabalho e entrega de produção preserva a desigualdade descrita?
 
@@ -460,10 +436,9 @@ Revisor/data: pendentes.
 
 ## H25 — Renascimento e circulação de conhecimento
 
-ID: d1433000-0000-4000-8000-000000000025. Versão: 1. Dificuldade estimada: hard. Família: H5.
+ID: d1433000-0000-4000-8000-000000000025. Versão: 2. Dificuldade estimada: medium. Família: H5.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Mudanças culturais associadas ao Renascimento envolveram interesse por referências clássicas, observação, experimentação em certos campos e novas formas de representar pessoas e espaços. A imprensa ampliou possibilidades de circulação de textos, mas o acesso não foi imediato nem igual para toda a população. A valorização do ser humano coexistiu com religiosidade e relações de poder.
+Artistas e estudiosos do Renascimento retomaram referências clássicas e desenvolveram técnicas de representação e investigação. Instituições religiosas e governantes estavam entre seus patronos. A imprensa ampliou a circulação de textos.
 
 Como a imprensa podia favorecer debates sem garantir igualdade de acesso?
 
@@ -479,10 +454,9 @@ Revisor/data: pendentes.
 
 ## H26 — Reformas religiosas e poder político
 
-ID: d1433000-0000-4000-8000-000000000026. Versão: 1. Dificuldade estimada: hard. Família: H6.
+ID: d1433000-0000-4000-8000-000000000026. Versão: 2. Dificuldade estimada: medium. Família: H6.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-As reformas religiosas do século XVI questionaram práticas e autoridades da Igreja ocidental e deram origem a diferentes correntes. A circulação de escritos e o apoio de governantes contribuíram para a expansão de propostas. Disputas religiosas também se relacionaram a interesses políticos; a reação católica combinou reafirmação doutrinária e reformas internas, não desaparecimento da instituição.
+No século XVI, correntes reformadoras questionaram a autoridade e práticas da Igreja católica. Governantes tomaram posições nos conflitos. A Igreja católica reafirmou doutrinas e promoveu mudanças internas.
 
 Como a circulação de escritos alterava as condições do debate?
 
@@ -498,10 +472,9 @@ Revisor/data: pendentes.
 
 ## H27 — Expansão marítima e redes atlânticas
 
-ID: d1433000-0000-4000-8000-000000000027. Versão: 1. Dificuldade estimada: hard. Família: H7.
+ID: d1433000-0000-4000-8000-000000000027. Versão: 2. Dificuldade estimada: medium. Família: H7.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão marítima europeia articulou técnicas de navegação, interesses comerciais, ação de monarquias e disputas por rotas. A chegada a territórios já habitados produziu conquista, trocas e violência, com efeitos distintos sobre grupos europeus, africanos e americanos. Chamar esses territórios de vazios apaga populações e relações existentes antes da conquista.
+As viagens marítimas europeias envolveram instrumentos de navegação, comércio, financiamento e ação de monarquias. Nas Américas, chegaram a territórios ocupados por diferentes povos.
 
 Qual problema histórico existe em descrever os territórios americanos como vazios?
 
@@ -517,10 +490,9 @@ Revisor/data: pendentes.
 
 ## H28 — Economia açucareira e trabalho
 
-ID: d1433000-0000-4000-8000-000000000028. Versão: 1. Dificuldade estimada: hard. Família: H8.
+ID: d1433000-0000-4000-8000-000000000028. Versão: 2. Dificuldade estimada: medium. Família: H8.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A produção de açúcar na América portuguesa articulava grandes unidades de cultivo e processamento, circulação atlântica e trabalho escravizado. O destino externo de parte expressiva da produção influenciava investimentos e dependência comercial. Outras atividades abasteciam moradores e unidades produtivas; economia exportadora não significa inexistência de mercados internos.
+Na América portuguesa, engenhos articulavam cultivo, processamento do açúcar, comércio atlântico e trabalho escravizado. Produtores de alimentos e outros bens abasteciam essas unidades e as populações locais.
 
 Que continuidade econômica pode coexistir com o destaque do açúcar?
 
@@ -536,10 +508,9 @@ Revisor/data: pendentes.
 
 ## H29 — Mineração, fiscalidade e interiorização
 
-ID: d1433000-0000-4000-8000-000000000029. Versão: 1. Dificuldade estimada: hard. Família: H9.
+ID: d1433000-0000-4000-8000-000000000029. Versão: 2. Dificuldade estimada: medium. Família: H9.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A mineração na América portuguesa ampliou fluxos de pessoas, mercadorias e recursos para áreas do interior. A Coroa estabeleceu mecanismos de tributação e fiscalização; cobranças e controles produziram conflitos. A extração coexistiu com abastecimento, agricultura e comércio, e seus efeitos não podem ser medidos apenas pela quantidade de metal enviada à metrópole.
+A mineração na América portuguesa ampliou a circulação no interior. A Coroa tributava e fiscalizava a extração. As zonas mineradoras também mantinham relações com produtores de alimentos e comerciantes.
 
 Por que fiscalidade pode ser fonte de conflito, além de fonte de receita?
 
@@ -555,10 +526,9 @@ Revisor/data: pendentes.
 
 ## H30 — Iluminismo e limites das mudanças
 
-ID: d1433000-0000-4000-8000-000000000030. Versão: 1. Dificuldade estimada: hard. Família: H10.
+ID: d1433000-0000-4000-8000-000000000030. Versão: 2. Dificuldade estimada: medium. Família: H10.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Pensadores iluministas discutiram razão, direitos e limites do poder, com propostas e posições distintas. Ideias de liberdade podiam inspirar críticas ao absolutismo, mas sua aplicação não foi igual para todos os grupos. Em diferentes processos revolucionários, declarações de direitos coexistiram com exclusões políticas, coloniais e sociais.
+Pensadores iluministas discutiram razão, direitos e limites da autoridade. Declarações de direitos elaboradas em processos revolucionários conviveram com regras que restringiam a participação de grupos sociais.
 
 Que crítica ao poder é compatível com a discussão iluminista sintetizada?
 
@@ -574,10 +544,9 @@ Revisor/data: pendentes.
 
 ## H31 — Industrialização e organização do trabalho
 
-ID: d1433000-0000-4000-8000-000000000031. Versão: 1. Dificuldade estimada: hard. Família: H11.
+ID: d1433000-0000-4000-8000-000000000031. Versão: 2. Dificuldade estimada: medium. Família: H11.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Uma síntese sobre a industrialização distingue produção em oficinas e produção fabril. Máquinas, concentração de trabalhadores e disciplina de horários ampliaram certas capacidades produtivas, enquanto jornadas, salários e condições de trabalho se tornaram objeto de conflito. O aumento da produção não significou distribuição automática e igual dos benefícios.
+A industrialização ampliou o uso de máquinas e reuniu trabalhadores em fábricas. Horários, jornadas e salários eram organizados sob direção dos proprietários e provocavam conflitos com os trabalhadores.
 
 Uma fábrica exige presença em horários fixos e coordena tarefas sucessivas. Qual mudança isso evidencia em relação ao controle do tempo de trabalho?
 
@@ -593,10 +562,9 @@ Revisor/data: pendentes.
 
 ## H32 — Revolução Francesa e cidadania
 
-ID: d1433000-0000-4000-8000-000000000032. Versão: 1. Dificuldade estimada: hard. Família: H12.
+ID: d1433000-0000-4000-8000-000000000032. Versão: 2. Dificuldade estimada: medium. Família: H12.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Revolução Francesa questionou privilégios e autoridade do Antigo Regime. Declarações de liberdade e igualdade, mudanças institucionais e disputas entre grupos marcaram o processo. A cidadania não foi ampliada de forma estável e uniforme para todos; diferenças de gênero, propriedade e condição colonial permaneceram em debate e conflito.
+A Revolução Francesa questionou privilégios do Antigo Regime. O processo teve diferentes fases e grupos políticos. Os ideais de liberdade e igualdade foram debatidos também em relação a mulheres e populações coloniais.
 
 Uma crítica a privilégios hereditários atinge qual característica do Antigo Regime?
 
@@ -612,10 +580,9 @@ Revisor/data: pendentes.
 
 ## H33 — Independências nas Américas
 
-ID: d1433000-0000-4000-8000-000000000033. Versão: 1. Dificuldade estimada: hard. Família: H13.
+ID: d1433000-0000-4000-8000-000000000033. Versão: 2. Dificuldade estimada: medium. Família: H13.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A crise de autoridades metropolitanas e conflitos locais contribuíram para independências em diferentes partes das Américas. Projetos de governo, território e cidadania divergiam entre elites e outros grupos. A ruptura política com uma metrópole podia preservar desigualdades de propriedade e formas de coerção do trabalho; processos distintos não produziram resultados sociais idênticos.
+Nas independências americanas, grupos disputaram a ruptura com autoridades metropolitanas e a organização do novo governo. Propriedade, trabalho e participação política variaram entre os processos.
 
 Por que diferenças entre projetos de território e governo são relevantes?
 
@@ -631,10 +598,9 @@ Revisor/data: pendentes.
 
 ## H34 — Transferência da corte e mudanças coloniais
 
-ID: d1433000-0000-4000-8000-000000000034. Versão: 1. Dificuldade estimada: hard. Família: H14.
+ID: d1433000-0000-4000-8000-000000000034. Versão: 2. Dificuldade estimada: medium. Família: H14.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A transferência da corte portuguesa para o Brasil em 1808 relacionou-se ao contexto europeu das guerras napoleônicas. A instalação da monarquia no Rio de Janeiro e medidas comerciais e administrativas alteraram relações entre metrópole e colônia. Em 1815, o Brasil foi elevado à condição de Reino Unido a Portugal e Algarves; a independência de 1822 não deve ser confundida com essas mudanças anteriores.
+A corte portuguesa chegou ao Brasil em 1808 no contexto das guerras napoleônicas. O Rio de Janeiro passou a sediar instituições da monarquia. Em 1815 formou-se o Reino Unido de Portugal, Brasil e Algarves; em 1822 ocorreu a independência brasileira.
 
 Qual relação entre contexto externo e transformação interna é coerente?
 
@@ -650,10 +616,9 @@ Revisor/data: pendentes.
 
 ## H35 — Independência do Brasil e continuidades
 
-ID: d1433000-0000-4000-8000-000000000035. Versão: 1. Dificuldade estimada: hard. Família: H15.
+ID: d1433000-0000-4000-8000-000000000035. Versão: 2. Dificuldade estimada: medium. Família: H15.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A independência de 1822 rompeu vínculos políticos com Portugal e manteve uma monarquia no Brasil. Sua organização envolveu disputas regionais e diferentes participações sociais. A escravidão e a concentração de propriedade persistiram. A Constituição de 1824 estabeleceu instituições do Império e regras de participação que não equivaliam ao sufrágio universal contemporâneo.
+O Brasil tornou-se independente em 1822 sob uma monarquia. A Constituição de 1824 organizou instituições imperiais e estabeleceu regras de participação. A escravidão e a concentração de propriedade persistiram.
 
 Que investigação é necessária para avaliar participação política no início do Império?
 
@@ -669,10 +634,9 @@ Revisor/data: pendentes.
 
 ## H36 — Abolição e cidadania no pós-emancipação
 
-ID: d1433000-0000-4000-8000-000000000036. Versão: 1. Dificuldade estimada: hard. Família: H16.
+ID: d1433000-0000-4000-8000-000000000036. Versão: 2. Dificuldade estimada: medium. Família: H16.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A abolição legal da escravidão no Brasil, em 1888, resultou de processos que envolveram ação de pessoas escravizadas, movimentos abolicionistas, conflitos e decisões políticas. O fim da condição jurídica de escravidão não assegurou automaticamente acesso igual à terra, renda ou proteção social. Disputas por cidadania continuaram após a emancipação.
+A escravidão foi abolida legalmente no Brasil em 1888, após resistências, mobilizações e disputas políticas. Trabalhadores emancipados continuaram disputando acesso a terra, trabalho, renda e direitos.
 
 Qual interpretação evita reduzir a abolição a uma concessão isolada de uma autoridade?
 
@@ -688,10 +652,9 @@ Revisor/data: pendentes.
 
 ## H37 — Primeira República e participação política
 
-ID: d1433000-0000-4000-8000-000000000037. Versão: 1. Dificuldade estimada: hard. Família: H17.
+ID: d1433000-0000-4000-8000-000000000037. Versão: 2. Dificuldade estimada: medium. Família: H17.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A proclamação da República em 1889 mudou a forma de governo, mas a participação política continuou limitada por regras de acesso e práticas de poder. Em muitas regiões, redes locais controlavam recursos e pressionavam eleitores; mecanismos formais coexistiam com coerção e disputas. Mudança institucional e democratização efetiva não são equivalentes automáticos.
+A República brasileira foi proclamada em 1889. Na Primeira República, regras de acesso ao voto e redes de poder local limitavam a participação. Eleitores podiam sofrer pressões de autoridades e proprietários.
 
 Como controle de recursos pode se relacionar a coerção eleitoral?
 
@@ -707,10 +670,9 @@ Revisor/data: pendentes.
 
 ## H38 — Primeira Guerra e múltiplas causas
 
-ID: d1433000-0000-4000-8000-000000000038. Versão: 1. Dificuldade estimada: hard. Família: H18.
+ID: d1433000-0000-4000-8000-000000000038. Versão: 2. Dificuldade estimada: medium. Família: H18.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Primeira Guerra Mundial começou em 1914 em um cenário de rivalidades imperialistas, nacionalismos, alianças e corrida armamentista. Um atentado funcionou como estopim, mas não explica sozinho a expansão do conflito. Mobilização de recursos, trincheiras e impactos sobre civis mostraram relações entre decisões políticas, tecnologia e organização das sociedades.
+Em 1914, o atentado contra o herdeiro do Império Austro-Húngaro ocorreu num contexto de alianças, nacionalismos e rivalidades imperialistas. A guerra envolveu mobilização industrial e social, trincheiras e impactos sobre civis.
 
 Qual relação entre alianças e ampliação da guerra é coerente?
 
@@ -726,17 +688,16 @@ Revisor/data: pendentes.
 
 ## H39 — Segunda Guerra, propaganda e perseguição
 
-ID: d1433000-0000-4000-8000-000000000039. Versão: 1. Dificuldade estimada: hard. Família: H19.
+ID: d1433000-0000-4000-8000-000000000039. Versão: 2. Dificuldade estimada: medium. Família: H19.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Segunda Guerra Mundial ocorreu entre 1939 e 1945 em um contexto que incluía expansionismo e regimes autoritários. Propaganda mobilizava populações e legitimava políticas, enquanto perseguições e genocídio atingiam grupos definidos por ideologias racistas. Analisar propaganda exige distinguir sua intenção persuasiva de evidências sobre o que ocorreu.
+Entre 1939 e 1945, a Segunda Guerra envolveu expansionismo e regimes autoritários. Propaganda, perseguições e políticas de extermínio integraram a atuação de regimes como o nazista.
 
 Que procedimento é adequado ao estudar uma mensagem racista produzida por um regime perseguidor?
 
 - **A)** Considerar o texto prova de que todos os contemporâneos concordavam.
 - **B)** Eliminar outras fontes por divergirem da mensagem oficial.
 - **C)** Reproduzir a classificação como verdade sem contextualização.
-- **D)** Analisar sua função de desumanização e legitimidade da violência, sem adotar sua classificação como descrição válida dos grupos.
+- **D)** Analisar sua função de desumanização e legitimação da violência, sem adotar sua classificação como descrição válida dos grupos.
 - **E)** Usar suas categorias como explicação científica da desigualdade entre pessoas.
 
 **Gabarito: D.** Estudar ideologia não significa endossá-la. Categorias racistas devem ser analisadas como instrumentos históricos de perseguição e poder, não como descrição científica das pessoas.
@@ -745,10 +706,9 @@ Revisor/data: pendentes.
 
 ## H40 — Guerra Fria e ditaduras na América Latina
 
-ID: d1433000-0000-4000-8000-000000000040. Versão: 1. Dificuldade estimada: hard. Família: H20.
+ID: d1433000-0000-4000-8000-000000000040. Versão: 2. Dificuldade estimada: medium. Família: H20.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Após a Segunda Guerra, a disputa entre Estados Unidos e União Soviética influenciou alianças, propaganda e conflitos em diferentes regiões. Na América Latina, governos autoritários relacionaram discursos de segurança a repressão e restrições de direitos. O contexto internacional não elimina a importância de interesses locais, ações de grupos sociais e processos próprios de cada país.
+Após a Segunda Guerra, Estados Unidos e União Soviética disputaram influência. Na América Latina, ditaduras restringiram direitos e usaram discursos de segurança. Grupos locais participaram de disputas e resistências.
 
 Que tensão existe entre discurso de segurança e restrição de direitos?
 
@@ -764,10 +724,9 @@ Revisor/data: pendentes.
 
 ## H41 — Agricultura, sedentarização e diversidade
 
-ID: d1433000-0000-4000-8000-000000000041. Versão: 1. Dificuldade estimada: hard. Família: H1.
+ID: d1433000-0000-4000-8000-000000000041. Versão: 2. Dificuldade estimada: medium. Família: H1.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A adoção de agricultura e criação de animais em diferentes regiões modificou a produção de alimentos. Em alguns grupos, favoreceu assentamentos mais permanentes, armazenamento e especialização do trabalho. A mudança não ocorreu de uma só vez em toda parte e não eliminou automaticamente coleta, caça ou conflitos. Vestígios arqueológicos precisam ser interpretados junto ao contexto em que foram encontrados.
+Em diferentes regiões, grupos humanos adotaram agricultura e criação de animais em épocas distintas. Há vestígios de armazenamento, assentamentos e coexistência dessas atividades com caça e coleta.
 
 Um recipiente com restos de grãos, encontrado isoladamente, permite qual conclusão mais prudente?
 
@@ -783,10 +742,9 @@ Revisor/data: pendentes.
 
 ## H42 — Democracia ateniense e cidadania
 
-ID: d1433000-0000-4000-8000-000000000042. Versão: 1. Dificuldade estimada: hard. Família: H2.
+ID: d1433000-0000-4000-8000-000000000042. Versão: 2. Dificuldade estimada: medium. Família: H2.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Na Atenas clássica, cidadãos homens adultos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não possuíam os mesmos direitos de participação. A democracia daquela cidade não pode ser identificada sem distinções com o sufrágio amplo contemporâneo; tampouco sua exclusão anula a importância histórica das instituições de participação entre cidadãos.
+Na Atenas clássica, homens adultos reconhecidos como cidadãos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não tinham esses direitos de participação.
 
 Que diferença entre participação e representação é relevante nesse exemplo?
 
@@ -802,10 +760,9 @@ Revisor/data: pendentes.
 
 ## H43 — Roma, expansão e conflitos sociais
 
-ID: d1433000-0000-4000-8000-000000000043. Versão: 1. Dificuldade estimada: hard. Família: H3.
+ID: d1433000-0000-4000-8000-000000000043. Versão: 2. Dificuldade estimada: medium. Família: H3.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão romana ampliou territórios, circulação de riquezas e uso de trabalho escravizado. Proprietários concentraram terras em algumas regiões, enquanto grupos plebeus enfrentavam disputas por recursos e participação. A passagem da República ao Império envolveu conflitos e concentração de poder, não apenas um aumento de tamanho do território.
+A expansão romana ampliou terras conquistadas e o uso de trabalho escravizado. A distribuição de terras e a participação política provocaram conflitos na República e na formação do poder imperial.
 
 Um relato de vitória militar basta para comprovar melhoria de vida de todos os habitantes?
 
@@ -821,10 +778,9 @@ Revisor/data: pendentes.
 
 ## H44 — Relações feudais e obrigações
 
-ID: d1433000-0000-4000-8000-000000000044. Versão: 1. Dificuldade estimada: hard. Família: H4.
+ID: d1433000-0000-4000-8000-000000000044. Versão: 2. Dificuldade estimada: medium. Família: H4.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Em partes da Europa medieval, senhores controlavam terras e exerciam poderes locais. Camponeses podiam prestar trabalho e entregar parte da produção em troca de acesso à terra e proteção sob relações desiguais. Vassalagem ligava membros da elite por compromissos de fidelidade e serviço; não era a mesma relação que a servidão camponesa. A organização variava entre regiões e períodos.
+Em partes da Europa medieval, senhores exerciam poderes sobre terras e camponeses. Estes deviam trabalho ou parte da produção. Nobres também estabeleciam compromissos de fidelidade e serviço entre si.
 
 Por que não se deve tratar a síntese como descrição idêntica de toda a Europa medieval?
 
@@ -840,10 +796,9 @@ Revisor/data: pendentes.
 
 ## H45 — Renascimento e circulação de conhecimento
 
-ID: d1433000-0000-4000-8000-000000000045. Versão: 1. Dificuldade estimada: hard. Família: H5.
+ID: d1433000-0000-4000-8000-000000000045. Versão: 2. Dificuldade estimada: medium. Família: H5.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Mudanças culturais associadas ao Renascimento envolveram interesse por referências clássicas, observação, experimentação em certos campos e novas formas de representar pessoas e espaços. A imprensa ampliou possibilidades de circulação de textos, mas o acesso não foi imediato nem igual para toda a população. A valorização do ser humano coexistiu com religiosidade e relações de poder.
+Artistas e estudiosos do Renascimento retomaram referências clássicas e desenvolveram técnicas de representação e investigação. Instituições religiosas e governantes estavam entre seus patronos. A imprensa ampliou a circulação de textos.
 
 Uma pintura que emprega perspectiva permite investigar qual dimensão de mudança?
 
@@ -859,10 +814,9 @@ Revisor/data: pendentes.
 
 ## H46 — Reformas religiosas e poder político
 
-ID: d1433000-0000-4000-8000-000000000046. Versão: 1. Dificuldade estimada: hard. Família: H6.
+ID: d1433000-0000-4000-8000-000000000046. Versão: 2. Dificuldade estimada: medium. Família: H6.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-As reformas religiosas do século XVI questionaram práticas e autoridades da Igreja ocidental e deram origem a diferentes correntes. A circulação de escritos e o apoio de governantes contribuíram para a expansão de propostas. Disputas religiosas também se relacionaram a interesses políticos; a reação católica combinou reafirmação doutrinária e reformas internas, não desaparecimento da instituição.
+No século XVI, correntes reformadoras questionaram a autoridade e práticas da Igreja católica. Governantes tomaram posições nos conflitos. A Igreja católica reafirmou doutrinas e promoveu mudanças internas.
 
 Qual comparação evita tratar a reação católica como mera imobilidade?
 
@@ -878,10 +832,9 @@ Revisor/data: pendentes.
 
 ## H47 — Expansão marítima e redes atlânticas
 
-ID: d1433000-0000-4000-8000-000000000047. Versão: 1. Dificuldade estimada: hard. Família: H7.
+ID: d1433000-0000-4000-8000-000000000047. Versão: 2. Dificuldade estimada: medium. Família: H7.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão marítima europeia articulou técnicas de navegação, interesses comerciais, ação de monarquias e disputas por rotas. A chegada a territórios já habitados produziu conquista, trocas e violência, com efeitos distintos sobre grupos europeus, africanos e americanos. Chamar esses territórios de vazios apaga populações e relações existentes antes da conquista.
+As viagens marítimas europeias envolveram instrumentos de navegação, comércio, financiamento e ação de monarquias. Nas Américas, chegaram a territórios ocupados por diferentes povos.
 
 Um mapa europeu de rotas descreve automaticamente a experiência de todos os povos envolvidos?
 
@@ -897,10 +850,9 @@ Revisor/data: pendentes.
 
 ## H48 — Economia açucareira e trabalho
 
-ID: d1433000-0000-4000-8000-000000000048. Versão: 1. Dificuldade estimada: hard. Família: H8.
+ID: d1433000-0000-4000-8000-000000000048. Versão: 2. Dificuldade estimada: medium. Família: H8.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A produção de açúcar na América portuguesa articulava grandes unidades de cultivo e processamento, circulação atlântica e trabalho escravizado. O destino externo de parte expressiva da produção influenciava investimentos e dependência comercial. Outras atividades abasteciam moradores e unidades produtivas; economia exportadora não significa inexistência de mercados internos.
+Na América portuguesa, engenhos articulavam cultivo, processamento do açúcar, comércio atlântico e trabalho escravizado. Produtores de alimentos e outros bens abasteciam essas unidades e as populações locais.
 
 Por que um registro de produção de um proprietário não descreve integralmente a experiência dos trabalhadores?
 
@@ -916,10 +868,9 @@ Revisor/data: pendentes.
 
 ## H49 — Mineração, fiscalidade e interiorização
 
-ID: d1433000-0000-4000-8000-000000000049. Versão: 1. Dificuldade estimada: hard. Família: H9.
+ID: d1433000-0000-4000-8000-000000000049. Versão: 2. Dificuldade estimada: medium. Família: H9.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A mineração na América portuguesa ampliou fluxos de pessoas, mercadorias e recursos para áreas do interior. A Coroa estabeleceu mecanismos de tributação e fiscalização; cobranças e controles produziram conflitos. A extração coexistiu com abastecimento, agricultura e comércio, e seus efeitos não podem ser medidos apenas pela quantidade de metal enviada à metrópole.
+A mineração na América portuguesa ampliou a circulação no interior. A Coroa tributava e fiscalizava a extração. As zonas mineradoras também mantinham relações com produtores de alimentos e comerciantes.
 
 Que informação complementa um registro de metal exportado para estudar efeitos locais?
 
@@ -935,10 +886,9 @@ Revisor/data: pendentes.
 
 ## H50 — Iluminismo e limites das mudanças
 
-ID: d1433000-0000-4000-8000-000000000050. Versão: 1. Dificuldade estimada: hard. Família: H10.
+ID: d1433000-0000-4000-8000-000000000050. Versão: 2. Dificuldade estimada: medium. Família: H10.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Pensadores iluministas discutiram razão, direitos e limites do poder, com propostas e posições distintas. Ideias de liberdade podiam inspirar críticas ao absolutismo, mas sua aplicação não foi igual para todos os grupos. Em diferentes processos revolucionários, declarações de direitos coexistiram com exclusões políticas, coloniais e sociais.
+Pensadores iluministas discutiram razão, direitos e limites da autoridade. Declarações de direitos elaboradas em processos revolucionários conviveram com regras que restringiam a participação de grupos sociais.
 
 Como investigar quem foi efetivamente incluído por uma declaração de direitos?
 
@@ -954,10 +904,9 @@ Revisor/data: pendentes.
 
 ## H51 — Industrialização e organização do trabalho
 
-ID: d1433000-0000-4000-8000-000000000051. Versão: 1. Dificuldade estimada: hard. Família: H11.
+ID: d1433000-0000-4000-8000-000000000051. Versão: 2. Dificuldade estimada: medium. Família: H11.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Uma síntese sobre a industrialização distingue produção em oficinas e produção fabril. Máquinas, concentração de trabalhadores e disciplina de horários ampliaram certas capacidades produtivas, enquanto jornadas, salários e condições de trabalho se tornaram objeto de conflito. O aumento da produção não significou distribuição automática e igual dos benefícios.
+A industrialização ampliou o uso de máquinas e reuniu trabalhadores em fábricas. Horários, jornadas e salários eram organizados sob direção dos proprietários e provocavam conflitos com os trabalhadores.
 
 Um registro de produção elevada basta para comprovar melhoria das condições dos trabalhadores?
 
@@ -973,10 +922,9 @@ Revisor/data: pendentes.
 
 ## H52 — Revolução Francesa e cidadania
 
-ID: d1433000-0000-4000-8000-000000000052. Versão: 1. Dificuldade estimada: hard. Família: H12.
+ID: d1433000-0000-4000-8000-000000000052. Versão: 2. Dificuldade estimada: medium. Família: H12.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Revolução Francesa questionou privilégios e autoridade do Antigo Regime. Declarações de liberdade e igualdade, mudanças institucionais e disputas entre grupos marcaram o processo. A cidadania não foi ampliada de forma estável e uniforme para todos; diferenças de gênero, propriedade e condição colonial permaneceram em debate e conflito.
+A Revolução Francesa questionou privilégios do Antigo Regime. O processo teve diferentes fases e grupos políticos. Os ideais de liberdade e igualdade foram debatidos também em relação a mulheres e populações coloniais.
 
 Como avaliar se a igualdade proclamada alcançou mulheres em determinado momento?
 
@@ -992,10 +940,9 @@ Revisor/data: pendentes.
 
 ## H53 — Independências nas Américas
 
-ID: d1433000-0000-4000-8000-000000000053. Versão: 1. Dificuldade estimada: hard. Família: H13.
+ID: d1433000-0000-4000-8000-000000000053. Versão: 2. Dificuldade estimada: medium. Família: H13.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A crise de autoridades metropolitanas e conflitos locais contribuíram para independências em diferentes partes das Américas. Projetos de governo, território e cidadania divergiam entre elites e outros grupos. A ruptura política com uma metrópole podia preservar desigualdades de propriedade e formas de coerção do trabalho; processos distintos não produziram resultados sociais idênticos.
+Nas independências americanas, grupos disputaram a ruptura com autoridades metropolitanas e a organização do novo governo. Propriedade, trabalho e participação política variaram entre os processos.
 
 Um discurso de uma elite independentista pode ser usado de que modo?
 
@@ -1011,10 +958,9 @@ Revisor/data: pendentes.
 
 ## H54 — Transferência da corte e mudanças coloniais
 
-ID: d1433000-0000-4000-8000-000000000054. Versão: 1. Dificuldade estimada: hard. Família: H14.
+ID: d1433000-0000-4000-8000-000000000054. Versão: 2. Dificuldade estimada: medium. Família: H14.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A transferência da corte portuguesa para o Brasil em 1808 relacionou-se ao contexto europeu das guerras napoleônicas. A instalação da monarquia no Rio de Janeiro e medidas comerciais e administrativas alteraram relações entre metrópole e colônia. Em 1815, o Brasil foi elevado à condição de Reino Unido a Portugal e Algarves; a independência de 1822 não deve ser confundida com essas mudanças anteriores.
+A corte portuguesa chegou ao Brasil em 1808 no contexto das guerras napoleônicas. O Rio de Janeiro passou a sediar instituições da monarquia. Em 1815 formou-se o Reino Unido de Portugal, Brasil e Algarves; em 1822 ocorreu a independência brasileira.
 
 Por que a instalação da corte alterava a posição do Rio de Janeiro?
 
@@ -1030,10 +976,9 @@ Revisor/data: pendentes.
 
 ## H55 — Independência do Brasil e continuidades
 
-ID: d1433000-0000-4000-8000-000000000055. Versão: 1. Dificuldade estimada: hard. Família: H15.
+ID: d1433000-0000-4000-8000-000000000055. Versão: 2. Dificuldade estimada: medium. Família: H15.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A independência de 1822 rompeu vínculos políticos com Portugal e manteve uma monarquia no Brasil. Sua organização envolveu disputas regionais e diferentes participações sociais. A escravidão e a concentração de propriedade persistiram. A Constituição de 1824 estabeleceu instituições do Império e regras de participação que não equivaliam ao sufrágio universal contemporâneo.
+O Brasil tornou-se independente em 1822 sob uma monarquia. A Constituição de 1824 organizou instituições imperiais e estabeleceu regras de participação. A escravidão e a concentração de propriedade persistiram.
 
 Qual informação contraria a ideia de consenso nacional completo no processo?
 
@@ -1049,10 +994,9 @@ Revisor/data: pendentes.
 
 ## H56 — Abolição e cidadania no pós-emancipação
 
-ID: d1433000-0000-4000-8000-000000000056. Versão: 1. Dificuldade estimada: hard. Família: H16.
+ID: d1433000-0000-4000-8000-000000000056. Versão: 2. Dificuldade estimada: medium. Família: H16.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A abolição legal da escravidão no Brasil, em 1888, resultou de processos que envolveram ação de pessoas escravizadas, movimentos abolicionistas, conflitos e decisões políticas. O fim da condição jurídica de escravidão não assegurou automaticamente acesso igual à terra, renda ou proteção social. Disputas por cidadania continuaram após a emancipação.
+A escravidão foi abolida legalmente no Brasil em 1888, após resistências, mobilizações e disputas políticas. Trabalhadores emancipados continuaram disputando acesso a terra, trabalho, renda e direitos.
 
 Que fonte ajuda a estudar experiência social após a abolição além da lei?
 
@@ -1068,10 +1012,9 @@ Revisor/data: pendentes.
 
 ## H57 — Primeira República e participação política
 
-ID: d1433000-0000-4000-8000-000000000057. Versão: 1. Dificuldade estimada: hard. Família: H17.
+ID: d1433000-0000-4000-8000-000000000057. Versão: 2. Dificuldade estimada: medium. Família: H17.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A proclamação da República em 1889 mudou a forma de governo, mas a participação política continuou limitada por regras de acesso e práticas de poder. Em muitas regiões, redes locais controlavam recursos e pressionavam eleitores; mecanismos formais coexistiam com coerção e disputas. Mudança institucional e democratização efetiva não são equivalentes automáticos.
+A República brasileira foi proclamada em 1889. Na Primeira República, regras de acesso ao voto e redes de poder local limitavam a participação. Eleitores podiam sofrer pressões de autoridades e proprietários.
 
 Um registro oficial de votos prova sozinho a liberdade de todos os votantes?
 
@@ -1087,10 +1030,9 @@ Revisor/data: pendentes.
 
 ## H58 — Primeira Guerra e múltiplas causas
 
-ID: d1433000-0000-4000-8000-000000000058. Versão: 1. Dificuldade estimada: hard. Família: H18.
+ID: d1433000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: medium. Família: H18.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Primeira Guerra Mundial começou em 1914 em um cenário de rivalidades imperialistas, nacionalismos, alianças e corrida armamentista. Um atentado funcionou como estopim, mas não explica sozinho a expansão do conflito. Mobilização de recursos, trincheiras e impactos sobre civis mostraram relações entre decisões políticas, tecnologia e organização das sociedades.
+Em 1914, o atentado contra o herdeiro do Império Austro-Húngaro ocorreu num contexto de alianças, nacionalismos e rivalidades imperialistas. A guerra envolveu mobilização industrial e social, trincheiras e impactos sobre civis.
 
 Um relato de soldado de trincheira permite qual uso histórico?
 
@@ -1106,10 +1048,9 @@ Revisor/data: pendentes.
 
 ## H59 — Segunda Guerra, propaganda e perseguição
 
-ID: d1433000-0000-4000-8000-000000000059. Versão: 1. Dificuldade estimada: hard. Família: H19.
+ID: d1433000-0000-4000-8000-000000000059. Versão: 2. Dificuldade estimada: medium. Família: H19.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Segunda Guerra Mundial ocorreu entre 1939 e 1945 em um contexto que incluía expansionismo e regimes autoritários. Propaganda mobilizava populações e legitimava políticas, enquanto perseguições e genocídio atingiam grupos definidos por ideologias racistas. Analisar propaganda exige distinguir sua intenção persuasiva de evidências sobre o que ocorreu.
+Entre 1939 e 1945, a Segunda Guerra envolveu expansionismo e regimes autoritários. Propaganda, perseguições e políticas de extermínio integraram a atuação de regimes como o nazista.
 
 Por que testemunhos, documentos administrativos e vestígios devem ser confrontados?
 
@@ -1125,10 +1066,9 @@ Revisor/data: pendentes.
 
 ## H60 — Guerra Fria e ditaduras na América Latina
 
-ID: d1433000-0000-4000-8000-000000000060. Versão: 1. Dificuldade estimada: hard. Família: H20.
+ID: d1433000-0000-4000-8000-000000000060. Versão: 2. Dificuldade estimada: medium. Família: H20.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Após a Segunda Guerra, a disputa entre Estados Unidos e União Soviética influenciou alianças, propaganda e conflitos em diferentes regiões. Na América Latina, governos autoritários relacionaram discursos de segurança a repressão e restrições de direitos. O contexto internacional não elimina a importância de interesses locais, ações de grupos sociais e processos próprios de cada país.
+Após a Segunda Guerra, Estados Unidos e União Soviética disputaram influência. Na América Latina, ditaduras restringiram direitos e usaram discursos de segurança. Grupos locais participaram de disputas e resistências.
 
 Como examinar a afirmação de consenso em um período de censura?
 
@@ -1144,10 +1084,9 @@ Revisor/data: pendentes.
 
 ## H61 — Agricultura, sedentarização e diversidade
 
-ID: d1433000-0000-4000-8000-000000000061. Versão: 1. Dificuldade estimada: hard. Família: H1.
+ID: d1433000-0000-4000-8000-000000000061. Versão: 2. Dificuldade estimada: medium. Família: H1.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A adoção de agricultura e criação de animais em diferentes regiões modificou a produção de alimentos. Em alguns grupos, favoreceu assentamentos mais permanentes, armazenamento e especialização do trabalho. A mudança não ocorreu de uma só vez em toda parte e não eliminou automaticamente coleta, caça ou conflitos. Vestígios arqueológicos precisam ser interpretados junto ao contexto em que foram encontrados.
+Em diferentes regiões, grupos humanos adotaram agricultura e criação de animais em épocas distintas. Há vestígios de armazenamento, assentamentos e coexistência dessas atividades com caça e coleta.
 
 Qual pesquisa ajuda a diferenciar produção local de circulação de alimentos por troca?
 
@@ -1163,10 +1102,9 @@ Revisor/data: pendentes.
 
 ## H62 — Democracia ateniense e cidadania
 
-ID: d1433000-0000-4000-8000-000000000062. Versão: 1. Dificuldade estimada: hard. Família: H2.
+ID: d1433000-0000-4000-8000-000000000062. Versão: 2. Dificuldade estimada: medium. Família: H2.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Na Atenas clássica, cidadãos homens adultos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não possuíam os mesmos direitos de participação. A democracia daquela cidade não pode ser identificada sem distinções com o sufrágio amplo contemporâneo; tampouco sua exclusão anula a importância histórica das instituições de participação entre cidadãos.
+Na Atenas clássica, homens adultos reconhecidos como cidadãos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não tinham esses direitos de participação.
 
 Qual afirmação caracteriza um anacronismo ao interpretar Atenas?
 
@@ -1182,10 +1120,9 @@ Revisor/data: pendentes.
 
 ## H63 — Roma, expansão e conflitos sociais
 
-ID: d1433000-0000-4000-8000-000000000063. Versão: 1. Dificuldade estimada: hard. Família: H3.
+ID: d1433000-0000-4000-8000-000000000063. Versão: 2. Dificuldade estimada: medium. Família: H3.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão romana ampliou territórios, circulação de riquezas e uso de trabalho escravizado. Proprietários concentraram terras em algumas regiões, enquanto grupos plebeus enfrentavam disputas por recursos e participação. A passagem da República ao Império envolveu conflitos e concentração de poder, não apenas um aumento de tamanho do território.
+A expansão romana ampliou terras conquistadas e o uso de trabalho escravizado. A distribuição de terras e a participação política provocaram conflitos na República e na formação do poder imperial.
 
 Qual mudança pode relacionar concentração fundiária a tensões entre grupos?
 
@@ -1201,10 +1138,9 @@ Revisor/data: pendentes.
 
 ## H64 — Relações feudais e obrigações
 
-ID: d1433000-0000-4000-8000-000000000064. Versão: 1. Dificuldade estimada: hard. Família: H4.
+ID: d1433000-0000-4000-8000-000000000064. Versão: 2. Dificuldade estimada: medium. Família: H4.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Em partes da Europa medieval, senhores controlavam terras e exerciam poderes locais. Camponeses podiam prestar trabalho e entregar parte da produção em troca de acesso à terra e proteção sob relações desiguais. Vassalagem ligava membros da elite por compromissos de fidelidade e serviço; não era a mesma relação que a servidão camponesa. A organização variava entre regiões e períodos.
+Em partes da Europa medieval, senhores exerciam poderes sobre terras e camponeses. Estes deviam trabalho ou parte da produção. Nobres também estabeleciam compromissos de fidelidade e serviço entre si.
 
 Qual informação seria útil ao examinar uma obrigação de entrega de parte da colheita?
 
@@ -1220,10 +1156,9 @@ Revisor/data: pendentes.
 
 ## H65 — Renascimento e circulação de conhecimento
 
-ID: d1433000-0000-4000-8000-000000000065. Versão: 1. Dificuldade estimada: hard. Família: H5.
+ID: d1433000-0000-4000-8000-000000000065. Versão: 2. Dificuldade estimada: medium. Família: H5.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Mudanças culturais associadas ao Renascimento envolveram interesse por referências clássicas, observação, experimentação em certos campos e novas formas de representar pessoas e espaços. A imprensa ampliou possibilidades de circulação de textos, mas o acesso não foi imediato nem igual para toda a população. A valorização do ser humano coexistiu com religiosidade e relações de poder.
+Artistas e estudiosos do Renascimento retomaram referências clássicas e desenvolveram técnicas de representação e investigação. Instituições religiosas e governantes estavam entre seus patronos. A imprensa ampliou a circulação de textos.
 
 Que pesquisa testa melhor a afirmação de que todos tiveram o mesmo acesso aos novos textos?
 
@@ -1239,10 +1174,9 @@ Revisor/data: pendentes.
 
 ## H66 — Reformas religiosas e poder político
 
-ID: d1433000-0000-4000-8000-000000000066. Versão: 1. Dificuldade estimada: hard. Família: H6.
+ID: d1433000-0000-4000-8000-000000000066. Versão: 2. Dificuldade estimada: medium. Família: H6.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-As reformas religiosas do século XVI questionaram práticas e autoridades da Igreja ocidental e deram origem a diferentes correntes. A circulação de escritos e o apoio de governantes contribuíram para a expansão de propostas. Disputas religiosas também se relacionaram a interesses políticos; a reação católica combinou reafirmação doutrinária e reformas internas, não desaparecimento da instituição.
+No século XVI, correntes reformadoras questionaram a autoridade e práticas da Igreja católica. Governantes tomaram posições nos conflitos. A Igreja católica reafirmou doutrinas e promoveu mudanças internas.
 
 Ao analisar um escrito de controvérsia religiosa, que cuidado é necessário?
 
@@ -1258,10 +1192,9 @@ Revisor/data: pendentes.
 
 ## H67 — Expansão marítima e redes atlânticas
 
-ID: d1433000-0000-4000-8000-000000000067. Versão: 1. Dificuldade estimada: hard. Família: H7.
+ID: d1433000-0000-4000-8000-000000000067. Versão: 2. Dificuldade estimada: medium. Família: H7.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão marítima europeia articulou técnicas de navegação, interesses comerciais, ação de monarquias e disputas por rotas. A chegada a territórios já habitados produziu conquista, trocas e violência, com efeitos distintos sobre grupos europeus, africanos e americanos. Chamar esses territórios de vazios apaga populações e relações existentes antes da conquista.
+As viagens marítimas europeias envolveram instrumentos de navegação, comércio, financiamento e ação de monarquias. Nas Américas, chegaram a territórios ocupados por diferentes povos.
 
 Qual relação pode coexistir no processo de contato sem contradição lógica?
 
@@ -1277,10 +1210,9 @@ Revisor/data: pendentes.
 
 ## H68 — Economia açucareira e trabalho
 
-ID: d1433000-0000-4000-8000-000000000068. Versão: 1. Dificuldade estimada: hard. Família: H8.
+ID: d1433000-0000-4000-8000-000000000068. Versão: 2. Dificuldade estimada: medium. Família: H8.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A produção de açúcar na América portuguesa articulava grandes unidades de cultivo e processamento, circulação atlântica e trabalho escravizado. O destino externo de parte expressiva da produção influenciava investimentos e dependência comercial. Outras atividades abasteciam moradores e unidades produtivas; economia exportadora não significa inexistência de mercados internos.
+Na América portuguesa, engenhos articulavam cultivo, processamento do açúcar, comércio atlântico e trabalho escravizado. Produtores de alimentos e outros bens abasteciam essas unidades e as populações locais.
 
 Qual diferença distingue escravidão de uma relação assalariada livre?
 
@@ -1296,10 +1228,9 @@ Revisor/data: pendentes.
 
 ## H69 — Mineração, fiscalidade e interiorização
 
-ID: d1433000-0000-4000-8000-000000000069. Versão: 1. Dificuldade estimada: hard. Família: H9.
+ID: d1433000-0000-4000-8000-000000000069. Versão: 2. Dificuldade estimada: medium. Família: H9.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A mineração na América portuguesa ampliou fluxos de pessoas, mercadorias e recursos para áreas do interior. A Coroa estabeleceu mecanismos de tributação e fiscalização; cobranças e controles produziram conflitos. A extração coexistiu com abastecimento, agricultura e comércio, e seus efeitos não podem ser medidos apenas pela quantidade de metal enviada à metrópole.
+A mineração na América portuguesa ampliou a circulação no interior. A Coroa tributava e fiscalizava a extração. As zonas mineradoras também mantinham relações com produtores de alimentos e comerciantes.
 
 Qual interpretação evita reduzir conflitos fiscais a uma unidade de interesses de todos os moradores?
 
@@ -1315,10 +1246,9 @@ Revisor/data: pendentes.
 
 ## H70 — Iluminismo e limites das mudanças
 
-ID: d1433000-0000-4000-8000-000000000070. Versão: 1. Dificuldade estimada: hard. Família: H10.
+ID: d1433000-0000-4000-8000-000000000070. Versão: 2. Dificuldade estimada: medium. Família: H10.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Pensadores iluministas discutiram razão, direitos e limites do poder, com propostas e posições distintas. Ideias de liberdade podiam inspirar críticas ao absolutismo, mas sua aplicação não foi igual para todos os grupos. Em diferentes processos revolucionários, declarações de direitos coexistiram com exclusões políticas, coloniais e sociais.
+Pensadores iluministas discutiram razão, direitos e limites da autoridade. Declarações de direitos elaboradas em processos revolucionários conviveram com regras que restringiam a participação de grupos sociais.
 
 Qual relação evita tratar ideias como causa suficiente de uma revolução?
 
@@ -1334,10 +1264,9 @@ Revisor/data: pendentes.
 
 ## H71 — Industrialização e organização do trabalho
 
-ID: d1433000-0000-4000-8000-000000000071. Versão: 1. Dificuldade estimada: hard. Família: H11.
+ID: d1433000-0000-4000-8000-000000000071. Versão: 2. Dificuldade estimada: medium. Família: H11.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Uma síntese sobre a industrialização distingue produção em oficinas e produção fabril. Máquinas, concentração de trabalhadores e disciplina de horários ampliaram certas capacidades produtivas, enquanto jornadas, salários e condições de trabalho se tornaram objeto de conflito. O aumento da produção não significou distribuição automática e igual dos benefícios.
+A industrialização ampliou o uso de máquinas e reuniu trabalhadores em fábricas. Horários, jornadas e salários eram organizados sob direção dos proprietários e provocavam conflitos com os trabalhadores.
 
 Qual ação coletiva se relaciona à disputa sobre condições de trabalho?
 
@@ -1353,10 +1282,9 @@ Revisor/data: pendentes.
 
 ## H72 — Revolução Francesa e cidadania
 
-ID: d1433000-0000-4000-8000-000000000072. Versão: 1. Dificuldade estimada: hard. Família: H12.
+ID: d1433000-0000-4000-8000-000000000072. Versão: 2. Dificuldade estimada: medium. Família: H12.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Revolução Francesa questionou privilégios e autoridade do Antigo Regime. Declarações de liberdade e igualdade, mudanças institucionais e disputas entre grupos marcaram o processo. A cidadania não foi ampliada de forma estável e uniforme para todos; diferenças de gênero, propriedade e condição colonial permaneceram em debate e conflito.
+A Revolução Francesa questionou privilégios do Antigo Regime. O processo teve diferentes fases e grupos políticos. Os ideais de liberdade e igualdade foram debatidos também em relação a mulheres e populações coloniais.
 
 Qual informação enfraquece a leitura de que a Revolução foi um bloco de ideias e práticas imutáveis?
 
@@ -1372,10 +1300,9 @@ Revisor/data: pendentes.
 
 ## H73 — Independências nas Américas
 
-ID: d1433000-0000-4000-8000-000000000073. Versão: 1. Dificuldade estimada: hard. Família: H13.
+ID: d1433000-0000-4000-8000-000000000073. Versão: 2. Dificuldade estimada: medium. Família: H13.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A crise de autoridades metropolitanas e conflitos locais contribuíram para independências em diferentes partes das Américas. Projetos de governo, território e cidadania divergiam entre elites e outros grupos. A ruptura política com uma metrópole podia preservar desigualdades de propriedade e formas de coerção do trabalho; processos distintos não produziram resultados sociais idênticos.
+Nas independências americanas, grupos disputaram a ruptura com autoridades metropolitanas e a organização do novo governo. Propriedade, trabalho e participação política variaram entre os processos.
 
 Que continuidade pode ser investigada após a ruptura política?
 
@@ -1391,10 +1318,9 @@ Revisor/data: pendentes.
 
 ## H74 — Transferência da corte e mudanças coloniais
 
-ID: d1433000-0000-4000-8000-000000000074. Versão: 1. Dificuldade estimada: hard. Família: H14.
+ID: d1433000-0000-4000-8000-000000000074. Versão: 2. Dificuldade estimada: medium. Família: H14.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A transferência da corte portuguesa para o Brasil em 1808 relacionou-se ao contexto europeu das guerras napoleônicas. A instalação da monarquia no Rio de Janeiro e medidas comerciais e administrativas alteraram relações entre metrópole e colônia. Em 1815, o Brasil foi elevado à condição de Reino Unido a Portugal e Algarves; a independência de 1822 não deve ser confundida com essas mudanças anteriores.
+A corte portuguesa chegou ao Brasil em 1808 no contexto das guerras napoleônicas. O Rio de Janeiro passou a sediar instituições da monarquia. Em 1815 formou-se o Reino Unido de Portugal, Brasil e Algarves; em 1822 ocorreu a independência brasileira.
 
 Qual interpretação da elevação de 1815 é inadequada?
 
@@ -1410,10 +1336,9 @@ Revisor/data: pendentes.
 
 ## H75 — Independência do Brasil e continuidades
 
-ID: d1433000-0000-4000-8000-000000000075. Versão: 1. Dificuldade estimada: hard. Família: H15.
+ID: d1433000-0000-4000-8000-000000000075. Versão: 2. Dificuldade estimada: medium. Família: H15.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A independência de 1822 rompeu vínculos políticos com Portugal e manteve uma monarquia no Brasil. Sua organização envolveu disputas regionais e diferentes participações sociais. A escravidão e a concentração de propriedade persistiram. A Constituição de 1824 estabeleceu instituições do Império e regras de participação que não equivaliam ao sufrágio universal contemporâneo.
+O Brasil tornou-se independente em 1822 sob uma monarquia. A Constituição de 1824 organizou instituições imperiais e estabeleceu regras de participação. A escravidão e a concentração de propriedade persistiram.
 
 Um relato que menciona apenas líderes políticos é suficiente para negar participação popular?
 
@@ -1429,10 +1354,9 @@ Revisor/data: pendentes.
 
 ## H76 — Abolição e cidadania no pós-emancipação
 
-ID: d1433000-0000-4000-8000-000000000076. Versão: 1. Dificuldade estimada: hard. Família: H16.
+ID: d1433000-0000-4000-8000-000000000076. Versão: 2. Dificuldade estimada: medium. Família: H16.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A abolição legal da escravidão no Brasil, em 1888, resultou de processos que envolveram ação de pessoas escravizadas, movimentos abolicionistas, conflitos e decisões políticas. O fim da condição jurídica de escravidão não assegurou automaticamente acesso igual à terra, renda ou proteção social. Disputas por cidadania continuaram após a emancipação.
+A escravidão foi abolida legalmente no Brasil em 1888, após resistências, mobilizações e disputas políticas. Trabalhadores emancipados continuaram disputando acesso a terra, trabalho, renda e direitos.
 
 Qual relação entre continuidade e mudança é coerente?
 
@@ -1448,10 +1372,9 @@ Revisor/data: pendentes.
 
 ## H77 — Primeira República e participação política
 
-ID: d1433000-0000-4000-8000-000000000077. Versão: 1. Dificuldade estimada: hard. Família: H17.
+ID: d1433000-0000-4000-8000-000000000077. Versão: 2. Dificuldade estimada: medium. Família: H17.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A proclamação da República em 1889 mudou a forma de governo, mas a participação política continuou limitada por regras de acesso e práticas de poder. Em muitas regiões, redes locais controlavam recursos e pressionavam eleitores; mecanismos formais coexistiam com coerção e disputas. Mudança institucional e democratização efetiva não são equivalentes automáticos.
+A República brasileira foi proclamada em 1889. Na Primeira República, regras de acesso ao voto e redes de poder local limitavam a participação. Eleitores podiam sofrer pressões de autoridades e proprietários.
 
 Que mudança pode coexistir com práticas locais persistentes?
 
@@ -1467,10 +1390,9 @@ Revisor/data: pendentes.
 
 ## H78 — Primeira Guerra e múltiplas causas
 
-ID: d1433000-0000-4000-8000-000000000078. Versão: 1. Dificuldade estimada: hard. Família: H18.
+ID: d1433000-0000-4000-8000-000000000078. Versão: 2. Dificuldade estimada: medium. Família: H18.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Primeira Guerra Mundial começou em 1914 em um cenário de rivalidades imperialistas, nacionalismos, alianças e corrida armamentista. Um atentado funcionou como estopim, mas não explica sozinho a expansão do conflito. Mobilização de recursos, trincheiras e impactos sobre civis mostraram relações entre decisões políticas, tecnologia e organização das sociedades.
+Em 1914, o atentado contra o herdeiro do Império Austro-Húngaro ocorreu num contexto de alianças, nacionalismos e rivalidades imperialistas. A guerra envolveu mobilização industrial e social, trincheiras e impactos sobre civis.
 
 Que análise relaciona guerra e sociedade além do combate militar?
 
@@ -1486,10 +1408,9 @@ Revisor/data: pendentes.
 
 ## H79 — Segunda Guerra, propaganda e perseguição
 
-ID: d1433000-0000-4000-8000-000000000079. Versão: 1. Dificuldade estimada: hard. Família: H19.
+ID: d1433000-0000-4000-8000-000000000079. Versão: 2. Dificuldade estimada: medium. Família: H19.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Segunda Guerra Mundial ocorreu entre 1939 e 1945 em um contexto que incluía expansionismo e regimes autoritários. Propaganda mobilizava populações e legitimava políticas, enquanto perseguições e genocídio atingiam grupos definidos por ideologias racistas. Analisar propaganda exige distinguir sua intenção persuasiva de evidências sobre o que ocorreu.
+Entre 1939 e 1945, a Segunda Guerra envolveu expansionismo e regimes autoritários. Propaganda, perseguições e políticas de extermínio integraram a atuação de regimes como o nazista.
 
 Qual distinção entre regime autoritário e democracia é relevante ao contexto?
 
@@ -1505,10 +1426,9 @@ Revisor/data: pendentes.
 
 ## H80 — Guerra Fria e ditaduras na América Latina
 
-ID: d1433000-0000-4000-8000-000000000080. Versão: 1. Dificuldade estimada: hard. Família: H20.
+ID: d1433000-0000-4000-8000-000000000080. Versão: 2. Dificuldade estimada: medium. Família: H20.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Após a Segunda Guerra, a disputa entre Estados Unidos e União Soviética influenciou alianças, propaganda e conflitos em diferentes regiões. Na América Latina, governos autoritários relacionaram discursos de segurança a repressão e restrições de direitos. O contexto internacional não elimina a importância de interesses locais, ações de grupos sociais e processos próprios de cada país.
+Após a Segunda Guerra, Estados Unidos e União Soviética disputaram influência. Na América Latina, ditaduras restringiram direitos e usaram discursos de segurança. Grupos locais participaram de disputas e resistências.
 
 Qual relação entre democracia e redemocratização é historicamente prudente?
 
@@ -1524,380 +1444,320 @@ Revisor/data: pendentes.
 
 ## H81 — Agricultura, sedentarização e diversidade
 
-ID: d1433000-0000-4000-8000-000000000081. Versão: 1. Dificuldade estimada: hard. Família: H1.
+ID: d1433000-0000-4000-8000-000000000081. Versão: 2. Dificuldade estimada: medium. Família: H1.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A adoção de agricultura e criação de animais em diferentes regiões modificou a produção de alimentos. Em alguns grupos, favoreceu assentamentos mais permanentes, armazenamento e especialização do trabalho. A mudança não ocorreu de uma só vez em toda parte e não eliminou automaticamente coleta, caça ou conflitos. Vestígios arqueológicos precisam ser interpretados junto ao contexto em que foram encontrados.
+Em dois sítios arqueológicos, um grupo manteve a caça junto ao cultivo; outro reuniu grandes estoques de cereais. Que comparação é sustentada por esses vestígios?
 
-Que mudança poderia coexistir com a permanência de práticas anteriores?
+- **A)** As atividades e formas de organização podiam combinar-se de modo diferente entre grupos.
+- **B)** A presença de caça impede a existência de cultivo.
+- **C)** O grupo com estoques abandonou obrigatoriamente toda caça.
+- **D)** Os dois grupos adotaram agricultura no mesmo ano.
+- **E)** O armazenamento comprova distribuição igualitária dos alimentos.
 
-- **A)** Cultivar parte dos alimentos e continuar coleta ou caça de outras fontes.
-- **B)** Construir um assentamento elimina qualquer deslocamento sazonal.
-- **C)** Adotar agricultura significa abandonar toda outra fonte de alimento.
-- **D)** Domesticar animais impede a manutenção de redes de troca.
-- **E)** Armazenar grãos exige extinguir toda diversidade alimentar.
-
-**Gabarito: A.** Mudanças produtivas podem combinar-se com práticas já existentes. A síntese rejeita a ideia de substituição total e imediata de todas as atividades.
+**Gabarito: A.** Os vestígios permitem comparar práticas, não impor uma sequência única ou deduzir igualdade social. Combinações distintas de produção e armazenamento são compatíveis com trajetórias diversas.
 
 Revisor/data: pendentes.
 
 ## H82 — Democracia ateniense e cidadania
 
-ID: d1433000-0000-4000-8000-000000000082. Versão: 1. Dificuldade estimada: hard. Família: H2.
+ID: d1433000-0000-4000-8000-000000000082. Versão: 2. Dificuldade estimada: medium. Família: H2.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Na Atenas clássica, cidadãos homens adultos participavam de instituições políticas. Mulheres, estrangeiros residentes e pessoas escravizadas não possuíam os mesmos direitos de participação. A democracia daquela cidade não pode ser identificada sem distinções com o sufrágio amplo contemporâneo; tampouco sua exclusão anula a importância histórica das instituições de participação entre cidadãos.
+Um debate escolar distingue democracia direta e sufrágio universal. Qual característica da Atenas clássica pertence a cada dimensão?
 
-Que tipo de evidência complementa um discurso de elogio da cidadania?
+- **A)** Participação direta de cidadãos descreve a forma de decisão; exclusão de moradores descreve os limites da cidadania.
+- **B)** Excluir estrangeiros transforma qualquer assembleia em monarquia hereditária.
+- **C)** Sufrágio universal significa que apenas homens reconhecidos como cidadãos participam.
+- **D)** Participação direta significa que todos os moradores tinham os mesmos direitos.
+- **E)** Ser cidadão dependia exclusivamente de morar na cidade.
 
-- **A)** Registros de regras, práticas e exclusões que permitam comparar o ideal declarado com o acesso efetivo.
-- **B)** Uma definição moderna aplicada sem mudanças ao passado.
-- **C)** A opinião de um leitor atual sem consultar práticas antigas.
-- **D)** Somente outro elogio com as mesmas palavras.
-- **E)** Um mapa da cidade usado como prova suficiente de direitos universais.
-
-**Gabarito: A.** Um discurso apresenta perspectiva e finalidade. Compará-lo a regras e práticas ajuda a avaliar quem participava e como os ideais se relacionavam às experiências sociais.
+**Gabarito: A.** Forma de participação e abrangência da cidadania são dimensões diferentes. Uma assembleia pode ter participação direta de um corpo de cidadãos limitado, sem equivaler ao sufrágio universal.
 
 Revisor/data: pendentes.
 
 ## H83 — Roma, expansão e conflitos sociais
 
-ID: d1433000-0000-4000-8000-000000000083. Versão: 1. Dificuldade estimada: hard. Família: H3.
+ID: d1433000-0000-4000-8000-000000000083. Versão: 2. Dificuldade estimada: medium. Família: H3.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão romana ampliou territórios, circulação de riquezas e uso de trabalho escravizado. Proprietários concentraram terras em algumas regiões, enquanto grupos plebeus enfrentavam disputas por recursos e participação. A passagem da República ao Império envolveu conflitos e concentração de poder, não apenas um aumento de tamanho do território.
+Um mapa mostra a expansão de Roma e uma tabela registra concentração de terras. Qual análise articula as duas informações?
 
-Que procedimento evita reduzir a história romana a uma causa única?
+- **A)** A expansão territorial podia ampliar recursos, enquanto sua apropriação desigual alimentava disputas internas.
+- **B)** A concentração de terras demonstra que Roma deixou de expandir seu território.
+- **C)** A conquista territorial garantia que todas as famílias recebiam a mesma área de terra.
+- **D)** O aumento do território eliminava diferenças de posição social.
+- **E)** Um mapa territorial mede diretamente a renda de cada grupo.
 
-- **A)** Relacionar expansão, trabalho, propriedade e disputas institucionais em seus períodos específicos.
-- **B)** Ignorar conflitos porque houve crescimento econômico.
-- **C)** Explicar toda transformação apenas pelo número de quilômetros conquistados.
-- **D)** Aplicar uma descrição única da Roma antiga a todos os séculos.
-- **E)** Considerar relatos de governantes como retrato completo da população.
-
-**Gabarito: A.** Processos políticos e sociais se articulam e mudam ao longo do tempo. Evitar monocausalidade exige examinar relações e períodos, não uma variável isolada.
+**Gabarito: A.** O mapa descreve extensão territorial; a tabela descreve propriedade. Relacionar as fontes permite examinar quem se beneficiava da expansão, sem converter crescimento de território em igualdade de distribuição.
 
 Revisor/data: pendentes.
 
 ## H84 — Relações feudais e obrigações
 
-ID: d1433000-0000-4000-8000-000000000084. Versão: 1. Dificuldade estimada: hard. Família: H4.
+ID: d1433000-0000-4000-8000-000000000084. Versão: 2. Dificuldade estimada: medium. Família: H4.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Em partes da Europa medieval, senhores controlavam terras e exerciam poderes locais. Camponeses podiam prestar trabalho e entregar parte da produção em troca de acesso à terra e proteção sob relações desiguais. Vassalagem ligava membros da elite por compromissos de fidelidade e serviço; não era a mesma relação que a servidão camponesa. A organização variava entre regiões e períodos.
+Um camponês presta dias de trabalho em terras do senhor e entrega parte de sua colheita. Qual elemento diferencia essa relação de uma aliança de vassalagem entre nobres?
 
-Qual afirmação projeta indevidamente uma instituição contemporânea sobre a relação descrita?
+- **A)** A relação dispensa controle senhorial sobre a terra.
+- **B)** Entregar colheita significa receber salário fixo do senhor.
+- **C)** O camponês exerce um cargo militar equivalente ao de qualquer nobre.
+- **D)** Vassalagem e obrigações camponesas têm participantes e funções idênticos.
+- **E)** As obrigações ligam o uso da terra ao trabalho e à produção camponesa, em vez de um pacto de fidelidade entre membros da elite.
 
-- **A)** Examinar variações das obrigações entre regiões.
-- **B)** Distinguir elites e trabalhadores camponeses.
-- **C)** Investigar formas de dependência econômica.
-- **D)** Estudar como proteção e acesso à terra se relacionavam.
-- **E)** Dizer que todo vínculo camponês equivalia a emprego assalariado com os mesmos direitos trabalhistas atuais.
-
-**Gabarito: E.** A equivalência sem contexto entre dependência medieval e emprego atual apaga diferenças de direito, poder e organização econômica. Comparações precisam explicitar essas diferenças.
+**Gabarito: E.** A identificação considera posições sociais e obrigações. Prestação de trabalho e entrega de produtos pertencem às relações senhoriais camponesas; vassalagem corresponde a compromissos entre membros da elite.
 
 Revisor/data: pendentes.
 
 ## H85 — Renascimento e circulação de conhecimento
 
-ID: d1433000-0000-4000-8000-000000000085. Versão: 1. Dificuldade estimada: hard. Família: H5.
+ID: d1433000-0000-4000-8000-000000000085. Versão: 2. Dificuldade estimada: medium. Família: H5.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Mudanças culturais associadas ao Renascimento envolveram interesse por referências clássicas, observação, experimentação em certos campos e novas formas de representar pessoas e espaços. A imprensa ampliou possibilidades de circulação de textos, mas o acesso não foi imediato nem igual para toda a população. A valorização do ser humano coexistiu com religiosidade e relações de poder.
+Uma oficina produz livros impressos mais rapidamente que um copista. Ainda assim, muitos habitantes não leem esses livros. Qual fator social ajuda a explicar essa situação?
 
-Qual leitura reconhece mudança e continuidade simultâneas?
+- **A)** A maior velocidade de produção torna desnecessário saber ler.
+- **B)** Ter mais exemplares garante o mesmo acesso em todos os grupos.
+- **C)** Alfabetização, preço e controles de circulação condicionam o acesso, mesmo com maior produção.
+- **D)** A imprensa reproduz apenas um exemplar de cada texto.
+- **E)** Imprimir exemplares reduz automaticamente a população alfabetizada.
 
-- **A)** A continuidade de poderes comprova ausência de inovação artística.
-- **B)** A circulação impressa elimina a necessidade de interpretar fontes.
-- **C)** Novas referências e técnicas se desenvolveram em sociedades que mantinham instituições e conflitos anteriores.
-- **D)** O interesse clássico impede qualquer criação original.
-- **E)** Toda mudança cultural implica desaparecimento instantâneo da sociedade anterior.
-
-**Gabarito: C.** Mudanças históricas não substituem necessariamente todos os elementos anteriores. Relações entre inovação, instituições e conflitos precisam ser consideradas em conjunto.
+**Gabarito: C.** Capacidade técnica de reproduzir livros e acesso efetivo são dimensões distintas. Custo, alfabetização e mecanismos de controle podem limitar a circulação e a leitura sem negar o aumento da produção.
 
 Revisor/data: pendentes.
 
 ## H86 — Reformas religiosas e poder político
 
-ID: d1433000-0000-4000-8000-000000000086. Versão: 1. Dificuldade estimada: hard. Família: H6.
+ID: d1433000-0000-4000-8000-000000000086. Versão: 2. Dificuldade estimada: medium. Família: H6.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-As reformas religiosas do século XVI questionaram práticas e autoridades da Igreja ocidental e deram origem a diferentes correntes. A circulação de escritos e o apoio de governantes contribuíram para a expansão de propostas. Disputas religiosas também se relacionaram a interesses políticos; a reação católica combinou reafirmação doutrinária e reformas internas, não desaparecimento da instituição.
+Um governante apoia uma corrente reformadora e assume controle de instituições religiosas em seu território. Qual interpretação evita reduzir o episódio a uma causa única?
 
-Qual afirmação simplifica inadequadamente a multiplicidade de reformas?
+- **A)** O episódio prova que a circulação de escritos não teve papel nas reformas.
+- **B)** Controlar instituições comprova que todas as correntes tinham a mesma doutrina.
+- **C)** O apoio político demonstra ausência de qualquer divergência religiosa.
+- **D)** Debates doutrinários e interesses de poder podiam articular-se no apoio à reforma.
+- **E)** A atuação de governantes exclui a participação de outros grupos.
 
-- **A)** Interesses políticos podiam articular-se a questões religiosas.
-- **B)** A circulação de ideias influenciou o alcance dos debates.
-- **C)** Correntes distintas podiam apresentar divergências entre si.
-- **D)** Todas as propostas tinham a mesma doutrina e a mesma relação com governos locais.
-- **E)** A Igreja católica organizou respostas às contestações.
-
-**Gabarito: D.** A síntese apresenta pluralidade. Reduzir propostas distintas a uma doutrina e relação política únicas elimina diferenças importantes do processo histórico.
+**Gabarito: D.** Motivações religiosas têm conteúdo próprio, mas podem se relacionar a poder, instituições e alianças. O apoio de um governante não basta para negar a diversidade dos agentes e das doutrinas.
 
 Revisor/data: pendentes.
 
 ## H87 — Expansão marítima e redes atlânticas
 
-ID: d1433000-0000-4000-8000-000000000087. Versão: 1. Dificuldade estimada: hard. Família: H7.
+ID: d1433000-0000-4000-8000-000000000087. Versão: 2. Dificuldade estimada: medium. Família: H7.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A expansão marítima europeia articulou técnicas de navegação, interesses comerciais, ação de monarquias e disputas por rotas. A chegada a territórios já habitados produziu conquista, trocas e violência, com efeitos distintos sobre grupos europeus, africanos e americanos. Chamar esses territórios de vazios apaga populações e relações existentes antes da conquista.
+Um relato europeu apresenta a chegada às Américas como ocupação de terras vazias. Qual evidência contraria essa descrição?
 
-Que pesquisa amplia o estudo para além da perspectiva das rotas europeias?
+- **A)** A existência de novas rotas comerciais europeias depois da chegada.
+- **B)** O uso de instrumentos náuticos nas embarcações europeias.
+- **C)** Vestígios de aldeias, cultivos, redes de troca e organizações locais anteriores à chegada.
+- **D)** O financiamento da viagem por uma monarquia.
+- **E)** A quantidade de navios registrada na partida.
 
-- **A)** Usar apenas registros de navegação de um único comandante.
-- **B)** Pressupor que a chegada europeia foi o início de toda história local.
-- **C)** Examinar ocupações locais, redes africanas e americanas e efeitos das conquistas sobre diferentes grupos.
-- **D)** Contar navios sem investigar relações com populações.
-- **E)** Excluir relatos de grupos conquistados porque apresentam outra perspectiva.
-
-**Gabarito: C.** Ampliar as perspectivas permite contextualizar contatos e assimetrias. A história dos territórios e grupos não se inicia necessariamente com sua inclusão em mapas europeus.
+**Gabarito: C.** Ocupações e atividades anteriores demonstram que os territórios já eram habitados e organizados. Dados sobre a viagem europeia, por si só, não informam a presença ou ausência das populações locais.
 
 Revisor/data: pendentes.
 
 ## H88 — Economia açucareira e trabalho
 
-ID: d1433000-0000-4000-8000-000000000088. Versão: 1. Dificuldade estimada: hard. Família: H8.
+ID: d1433000-0000-4000-8000-000000000088. Versão: 2. Dificuldade estimada: medium. Família: H8.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A produção de açúcar na América portuguesa articulava grandes unidades de cultivo e processamento, circulação atlântica e trabalho escravizado. O destino externo de parte expressiva da produção influenciava investimentos e dependência comercial. Outras atividades abasteciam moradores e unidades produtivas; economia exportadora não significa inexistência de mercados internos.
+Um engenho vende açúcar ao exterior e registra compra de farinha de produtores da região. Qual conclusão respeita as duas informações?
 
-Qual afirmação reconhece agência dos grupos escravizados sem minimizar a violência?
+- **A)** Exportação e abastecimento interno integravam circuitos econômicos articulados.
+- **B)** Vender ao exterior exclui a existência de qualquer mercado local.
+- **C)** A compra regional demonstra que todo o trabalho do engenho era livre.
+- **D)** A farinha comprada era necessariamente enviada ao exterior junto com o açúcar.
+- **E)** A compra de farinha impede classificar o açúcar como produto exportado.
 
-- **A)** Resistências e negociações podiam existir dentro de relações fortemente coercitivas.
-- **B)** Coerção significa ausência absoluta de ações e estratégias dos escravizados.
-- **C)** Negociações eliminavam automaticamente a condição jurídica de escravidão.
-- **D)** Toda resistência assumia forma idêntica em qualquer local.
-- **E)** A existência de resistência prova que a escravidão era voluntária.
-
-**Gabarito: A.** Reconhecer ações e estratégias não transforma a relação em livre. Resistência pode assumir formas diversas sob coerção; violência e agência não são conceitos mutuamente excludentes.
+**Gabarito: A.** As duas operações podem coexistir: uma gera venda externa; a outra abastece a unidade e seus trabalhadores. Destino do produto e relação de trabalho não podem ser deduzidos de uma compra de alimentos.
 
 Revisor/data: pendentes.
 
 ## H89 — Mineração, fiscalidade e interiorização
 
-ID: d1433000-0000-4000-8000-000000000089. Versão: 1. Dificuldade estimada: hard. Família: H9.
+ID: d1433000-0000-4000-8000-000000000089. Versão: 2. Dificuldade estimada: easy. Família: H9.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A mineração na América portuguesa ampliou fluxos de pessoas, mercadorias e recursos para áreas do interior. A Coroa estabeleceu mecanismos de tributação e fiscalização; cobranças e controles produziram conflitos. A extração coexistiu com abastecimento, agricultura e comércio, e seus efeitos não podem ser medidos apenas pela quantidade de metal enviada à metrópole.
+Em um exercício sobre a mineração colonial, o quinto corresponde a 20% do ouro tributável. Um registro anota 450 g de ouro sujeitos a essa cobrança. Quanto corresponde ao quinto?
 
-Que continuidade impede afirmar que a mineração substituiu toda economia anterior?
+- **A)** 90 g
+- **B)** 360 g
+- **C)** 225 g
+- **D)** 112,5 g
+- **E)** 45 g
 
-- **A)** Produção de alimentos, comércio e outros setores persistiram e se articularam à extração.
-- **B)** A tributação passou a incidir apenas sobre uma sociedade sem trocas.
-- **C)** A mineração tornou desnecessário trabalho em qualquer outra atividade.
-- **D)** A interiorização eliminou toda relação com o litoral.
-- **E)** O envio de metal significou desaparecimento automático do açúcar.
-
-**Gabarito: A.** Setores econômicos podem coexistir e relacionar-se. O destaque de uma atividade em um período não comprova extinção completa das demais.
+**Gabarito: A.** O quinto é 1/5, ou 20%. A parcela tributária é 450 × 0,20 = 90 g; os 360 g restantes não são o imposto. O exercício usa uma regra informada, sem supor que toda prática fiscal colonial se resumia a ela.
 
 Revisor/data: pendentes.
 
 ## H90 — Iluminismo e limites das mudanças
 
-ID: d1433000-0000-4000-8000-000000000090. Versão: 1. Dificuldade estimada: hard. Família: H10.
+ID: d1433000-0000-4000-8000-000000000090. Versão: 2. Dificuldade estimada: medium. Família: H10.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Pensadores iluministas discutiram razão, direitos e limites do poder, com propostas e posições distintas. Ideias de liberdade podiam inspirar críticas ao absolutismo, mas sua aplicação não foi igual para todos os grupos. Em diferentes processos revolucionários, declarações de direitos coexistiram com exclusões políticas, coloniais e sociais.
+Uma declaração proclama igualdade, mas uma regra de cidadania limita a participação política por renda. Qual comparação é necessária?
 
-Que comparação com o presente preserva o caráter histórico de direitos?
+- **A)** Tomar a igualdade declarada como comprovação de participação igual em qualquer instituição.
+- **B)** Distinguir o princípio declarado dos critérios efetivos de inclusão nas instituições.
+- **C)** Considerar a renda uma medida direta da liberdade de pensamento.
+- **D)** Supor que toda restrição de participação era aplicada de forma idêntica em todos os países.
+- **E)** Concluir que o princípio nunca influenciou disputas por direitos.
 
-- **A)** Presumir que o uso da mesma palavra significa direitos idênticos em qualquer época.
-- **B)** Examinar mudanças em definição, abrangência e mecanismos de garantia ao longo do tempo.
-- **C)** Considerar todo direito atual existente de forma completa desde o primeiro debate.
-- **D)** Ignorar disputas porque conceitos jurídicos não se transformam.
-- **E)** Tomar a exclusão antiga como prova de impossibilidade de mudança futura.
-
-**Gabarito: B.** Direitos são formulados, disputados e aplicados em contextos. Continuidade de palavras não garante igualdade de alcance, titularidade ou proteção em períodos diferentes.
+**Gabarito: B.** O princípio orienta debates, mas regras e práticas definem sua abrangência efetiva. Uma restrição permite investigar exclusões sem tratar o ideal como automaticamente realizado ou completamente irrelevante.
 
 Revisor/data: pendentes.
 
 ## H91 — Industrialização e organização do trabalho
 
-ID: d1433000-0000-4000-8000-000000000091. Versão: 1. Dificuldade estimada: hard. Família: H11.
+ID: d1433000-0000-4000-8000-000000000091. Versão: 2. Dificuldade estimada: medium. Família: H11.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Uma síntese sobre a industrialização distingue produção em oficinas e produção fabril. Máquinas, concentração de trabalhadores e disciplina de horários ampliaram certas capacidades produtivas, enquanto jornadas, salários e condições de trabalho se tornaram objeto de conflito. O aumento da produção não significou distribuição automática e igual dos benefícios.
+Uma fábrica dobra sua produção, mantendo jornadas extensas e salários baixos. Que dado seria necessário para avaliar se os trabalhadores se beneficiaram do aumento?
 
-Que comparação evita explicar industrialização somente por invenções técnicas?
+- **A)** Mudanças de remuneração, jornada, segurança e distribuição dos ganhos.
+- **B)** A quantidade de produtos tomada como prova de redução da jornada.
+- **C)** A produção total usada como prova suficiente de melhoria individual.
+- **D)** O número de máquinas usado como medida direta de salário.
+- **E)** A data da inauguração usada como indicador de segurança.
 
-- **A)** Relacionar máquinas a mercados, investimentos, trabalho, energia e instituições.
-- **B)** Atribuir todas as mudanças sociais a um único inventor.
-- **C)** Considerar a presença de uma máquina suficiente para caracterizar toda sociedade industrial.
-- **D)** Ignorar oferta de energia e circulação de mercadorias.
-- **E)** Usar apenas o número de ferramentas para definir direitos e salários.
-
-**Gabarito: A.** Técnicas operam em condições sociais e econômicas. Sua difusão e efeitos dependem de trabalho, recursos, mercados e formas de organização, não apenas da invenção.
+**Gabarito: A.** Produção mede resultado do processo produtivo. Benefícios dos trabalhadores exigem indicadores de renda e condições de trabalho; eles não são automaticamente proporcionais à quantidade de produtos fabricados.
 
 Revisor/data: pendentes.
 
 ## H92 — Revolução Francesa e cidadania
 
-ID: d1433000-0000-4000-8000-000000000092. Versão: 1. Dificuldade estimada: hard. Família: H12.
+ID: d1433000-0000-4000-8000-000000000092. Versão: 2. Dificuldade estimada: medium. Família: H12.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Revolução Francesa questionou privilégios e autoridade do Antigo Regime. Declarações de liberdade e igualdade, mudanças institucionais e disputas entre grupos marcaram o processo. A cidadania não foi ampliada de forma estável e uniforme para todos; diferenças de gênero, propriedade e condição colonial permaneceram em debate e conflito.
+Na Revolução Francesa, uma reivindicação pede participação política para mulheres com base no ideal de igualdade. Que relação essa reivindicação evidencia?
 
-Que relação conecta condição colonial e debates revolucionários?
+- **A)** Os princípios revolucionários podiam ser mobilizados para contestar exclusões presentes em sua aplicação.
+- **B)** A reivindicação comprova que as mulheres já tinham os mesmos direitos políticos em todas as fases.
+- **C)** Questionar exclusões significava rejeitar necessariamente todo princípio de igualdade.
+- **D)** A participação das mulheres era determinada apenas pela alfabetização, sem regras institucionais.
+- **E)** A igualdade declarada impedia debates sobre quem poderia participar.
 
-- **A)** A escravidão e o domínio colonial colocavam à prova o alcance dos ideais de liberdade.
-- **B)** A liberdade proclamada tornava qualquer relação colonial automaticamente livre.
-- **C)** Um ideal político elimina por si só as relações de coerção existentes.
-- **D)** A condição das colônias não podia ser discutida por nenhum grupo.
-- **E)** A escravidão era compatível com igualdade jurídica universal sem tensão.
-
-**Gabarito: A.** Princípios de liberdade podiam ser mobilizados contra coerção e hierarquias coloniais. Sua aplicação dependia de conflitos e decisões, não de efeito automático do discurso.
+**Gabarito: A.** Um princípio pode servir de argumento para ampliar direitos além da aplicação inicial. A reivindicação revela uma disputa sobre sua abrangência, sem comprovar que a inclusão já estivesse realizada.
 
 Revisor/data: pendentes.
 
 ## H93 — Independências nas Américas
 
-ID: d1433000-0000-4000-8000-000000000093. Versão: 1. Dificuldade estimada: hard. Família: H13.
+ID: d1433000-0000-4000-8000-000000000093. Versão: 2. Dificuldade estimada: medium. Família: H13.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A crise de autoridades metropolitanas e conflitos locais contribuíram para independências em diferentes partes das Américas. Projetos de governo, território e cidadania divergiam entre elites e outros grupos. A ruptura política com uma metrópole podia preservar desigualdades de propriedade e formas de coerção do trabalho; processos distintos não produziram resultados sociais idênticos.
+Duas antigas colônias tornam-se independentes: uma mantém monarquia, outra adota república. Em ambas persistem concentração de terras e coerção do trabalho. Qual comparação é correta?
 
-Qual procedimento permite comparar dois processos de independência sem apagar diferenças?
+- **A)** A independência substituiu automaticamente toda propriedade privada por propriedade coletiva.
+- **B)** As duas adotaram instituições e relações de trabalho idênticas.
+- **C)** A existência de república garante desaparecimento de concentração de terras.
+- **D)** A manutenção de monarquia significa que não houve independência política.
+- **E)** A ruptura metropolitana ocorreu em formas de governo diferentes e não eliminou as continuidades sociais indicadas.
 
-- **A)** Ignorar condições locais porque ambas eram sociedades americanas.
-- **B)** Aplicar a cronologia de um caso ao outro sem consultar fontes.
-- **C)** Usar somente a palavra independência como prova de trajetórias idênticas.
-- **D)** Comparar apenas as cores das bandeiras.
-- **E)** Definir critérios comuns e examinar cronologia, grupos envolvidos, instituições e relações de trabalho.
-
-**Gabarito: E.** Critérios comuns permitem comparação; contexto e evidências preservam diferenças. Localização continental ou um rótulo político não tornam processos equivalentes.
+**Gabarito: E.** Independência, forma de governo e relações sociais são dimensões distintas. É possível haver ruptura de soberania e continuidade social, com instituições diferentes em cada caso.
 
 Revisor/data: pendentes.
 
 ## H94 — Transferência da corte e mudanças coloniais
 
-ID: d1433000-0000-4000-8000-000000000094. Versão: 1. Dificuldade estimada: hard. Família: H14.
+ID: d1433000-0000-4000-8000-000000000094. Versão: 2. Dificuldade estimada: easy. Família: H14.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A transferência da corte portuguesa para o Brasil em 1808 relacionou-se ao contexto europeu das guerras napoleônicas. A instalação da monarquia no Rio de Janeiro e medidas comerciais e administrativas alteraram relações entre metrópole e colônia. Em 1815, o Brasil foi elevado à condição de Reino Unido a Portugal e Algarves; a independência de 1822 não deve ser confundida com essas mudanças anteriores.
+Ordene os acontecimentos: instalação da corte no Brasil, formação do Reino Unido e independência brasileira. Qual sequência está correta?
 
-Que evidência complementa decretos administrativos para avaliar os efeitos da instalação da corte?
+- **A)** 1808 → 1815 → 1822.
+- **B)** 1822 → 1815 → 1808.
+- **C)** 1815 → 1822 → 1808.
+- **D)** 1808 → 1822 → 1815.
+- **E)** 1815 → 1808 → 1822.
 
-- **A)** Registros de preços, moradia, trabalho e experiências de diferentes grupos urbanos.
-- **B)** Um retrato da corte tratado como medida do bem-estar de todos.
-- **C)** A data da chegada usada como explicação de toda experiência social.
-- **D)** O número de títulos nobiliárquicos tomado como prova de igualdade.
-- **E)** Somente a assinatura do governante em um decreto.
-
-**Gabarito: A.** Normas e instituições não abrangem toda vivência da população. Fontes sobre condições materiais e grupos diferentes permitem relacionar decisão política e efeitos sociais.
+**Gabarito: A.** A corte chegou em 1808. A elevação do Brasil a reino integrante do Reino Unido ocorreu em 1815. A independência foi proclamada em 1822. São etapas distintas, não nomes diferentes de um único acontecimento.
 
 Revisor/data: pendentes.
 
 ## H95 — Independência do Brasil e continuidades
 
-ID: d1433000-0000-4000-8000-000000000095. Versão: 1. Dificuldade estimada: hard. Família: H15.
+ID: d1433000-0000-4000-8000-000000000095. Versão: 2. Dificuldade estimada: medium. Família: H15.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A independência de 1822 rompeu vínculos políticos com Portugal e manteve uma monarquia no Brasil. Sua organização envolveu disputas regionais e diferentes participações sociais. A escravidão e a concentração de propriedade persistiram. A Constituição de 1824 estabeleceu instituições do Império e regras de participação que não equivaliam ao sufrágio universal contemporâneo.
+Na Constituição de 1824, o Poder Moderador era atribuído ao imperador. Qual efeito institucional esse dispositivo ajuda a compreender?
 
-Qual cronologia evita fundir diferentes transformações da história brasileira?
+- **A)** O dispositivo implantava uma república com eleição direta do chefe de Estado.
+- **B)** Todos os habitantes exerciam o Poder Moderador por sufrágio universal.
+- **C)** O imperador exercia função apenas cerimonial, sem atribuições políticas.
+- **D)** O monarca dispunha de prerrogativas de intervenção na organização dos demais poderes.
+- **E)** O Poder Moderador era eleito anualmente pelos trabalhadores escravizados.
 
-- **A)** Abolição em 1889 e República em 1888, antes da independência.
-- **B)** A Constituição de 1824 extinguiu a escravidão e proclamou a República.
-- **C)** República em 1822, abolição em 1824 e independência em 1889.
-- **D)** Independência em 1822, abolição em 1888 e proclamação da República em 1889.
-- **E)** Abolição e República ocorreram juntas na independência de 1822.
-
-**Gabarito: D.** São marcos diferentes, com agentes, disputas e efeitos próprios. A sequência 1822, 1888 e 1889 ajuda a distinguir soberania, relações de trabalho e forma de governo.
+**Gabarito: D.** O Poder Moderador dava ao imperador instrumentos de intervenção no funcionamento das instituições. Reconhecer essas prerrogativas distingue a monarquia imperial de um chefe de Estado apenas simbólico ou de uma república.
 
 Revisor/data: pendentes.
 
 ## H96 — Abolição e cidadania no pós-emancipação
 
-ID: d1433000-0000-4000-8000-000000000096. Versão: 1. Dificuldade estimada: hard. Família: H16.
+ID: d1433000-0000-4000-8000-000000000096. Versão: 2. Dificuldade estimada: medium. Família: H16.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A abolição legal da escravidão no Brasil, em 1888, resultou de processos que envolveram ação de pessoas escravizadas, movimentos abolicionistas, conflitos e decisões políticas. O fim da condição jurídica de escravidão não assegurou automaticamente acesso igual à terra, renda ou proteção social. Disputas por cidadania continuaram após a emancipação.
+A Lei Áurea aboliu a escravidão em 1888. Qual informação não pode ser deduzida apenas desse marco legal?
 
-Qual conclusão não pode ser obtida apenas da data de uma lei?
+- **A)** Que a abolição ocorreu antes da proclamação da República.
+- **B)** Que todas as pessoas emancipadas receberam terras e passaram a ter a mesma renda.
+- **C)** Que a condição jurídica de escravidão foi extinta pela lei.
+- **D)** Que o marco legal é posterior à independência de 1822.
+- **E)** Que 1888 pertence ao período imperial brasileiro.
 
-- **A)** A localização temporal do marco jurídico.
-- **B)** O grau de acesso à terra, renda e proteção social de todas as pessoas emancipadas.
-- **C)** A ocorrência de uma decisão legal no período.
-- **D)** A distinção cronológica entre 1888 e a República de 1889.
-- **E)** A necessidade de investigar efeitos posteriores.
-
-**Gabarito: B.** Uma data permite localizar o evento, mas não descreve a abrangência das condições de vida. A avaliação material e social exige outras evidências e recortes.
+**Gabarito: B.** A lei extingue a escravidão como condição jurídica. Ela não comprova distribuição universal de terras ou igualdade de renda. As outras informações decorrem do marco legal e da cronologia indicada da história brasileira.
 
 Revisor/data: pendentes.
 
 ## H97 — Primeira República e participação política
 
-ID: d1433000-0000-4000-8000-000000000097. Versão: 1. Dificuldade estimada: hard. Família: H17.
+ID: d1433000-0000-4000-8000-000000000097. Versão: 2. Dificuldade estimada: medium. Família: H17.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A proclamação da República em 1889 mudou a forma de governo, mas a participação política continuou limitada por regras de acesso e práticas de poder. Em muitas regiões, redes locais controlavam recursos e pressionavam eleitores; mecanismos formais coexistiam com coerção e disputas. Mudança institucional e democratização efetiva não são equivalentes automáticos.
+Um eleitor depende de um proprietário para obter trabalho e recebe ameaça de perdê-lo caso vote contra o candidato indicado. Que relação o episódio ilustra?
 
-Qual pesquisa avalia melhor democratização do que apenas a troca de regime?
+- **A)** Escolha livre garantida pela existência de uma urna.
+- **B)** Ausência de influência dos poderes locais sobre o voto.
+- **C)** Distribuição igual de poder entre todos os eleitores.
+- **D)** Uso de dependência econômica como instrumento de coerção política.
+- **E)** Participação política definida exclusivamente pela preferência individual.
 
-- **A)** Verificar somente se o governante usa título republicano.
-- **B)** Usar apenas a data de proclamação como medida de participação.
-- **C)** Contar o número de bandeiras em uma cerimônia oficial.
-- **D)** Comparar abrangência do voto, competição, liberdade de escolha e acesso à representação.
-- **E)** Comparar os nomes dos prédios sem estudar eleitores e práticas.
-
-**Gabarito: D.** Democratização envolve quem participa e em quais condições. Títulos, símbolos e datas não substituem investigação da liberdade e abrangência política.
+**Gabarito: D.** A ameaça liga recursos materiais à escolha eleitoral. Um registro formal de voto não comprova liberdade quando existem coerção, dependência e pressões sobre o eleitor.
 
 Revisor/data: pendentes.
 
 ## H98 — Primeira Guerra e múltiplas causas
 
-ID: d1433000-0000-4000-8000-000000000098. Versão: 1. Dificuldade estimada: hard. Família: H18.
+ID: d1433000-0000-4000-8000-000000000098. Versão: 2. Dificuldade estimada: medium. Família: H18.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Primeira Guerra Mundial começou em 1914 em um cenário de rivalidades imperialistas, nacionalismos, alianças e corrida armamentista. Um atentado funcionou como estopim, mas não explica sozinho a expansão do conflito. Mobilização de recursos, trincheiras e impactos sobre civis mostraram relações entre decisões políticas, tecnologia e organização das sociedades.
+Uma tabela de 1914 registra sucessivas mobilizações de países ligados por alianças. Qual pergunta ajuda a explicar a ampliação da crise para além do atentado?
 
-Qual cronologia distingue as duas guerras mundiais sem confundir seus estopins?
+- **A)** Por que as datas diferentes de mobilização demonstrariam ausência de relações entre os países?
+- **B)** Como atribuir toda a expansão da guerra exclusivamente à resposta de um único governo?
+- **C)** Como compromissos, rivalidades e decisões de cada governo contribuíram para envolver outros países?
+- **D)** Como descrever cada mobilização como uma decisão econômica isolada das alianças militares?
+- **E)** Por que o atentado criou naquele momento as rivalidades que não existiam antes?
 
-- **A)** A Primeira foi uma fase de combate da Guerra Fria posterior.
-- **B)** A Primeira começou em 1939 e a Segunda em 1914.
-- **C)** A Primeira começou em 1914; a Segunda, em 1939, em outro contexto de conflitos.
-- **D)** Ambas começaram em 1914 e tiveram o mesmo atentado como único motivo.
-- **E)** A Segunda terminou antes do início da Primeira.
-
-**Gabarito: C.** As guerras têm datas e condições próprias. Relações históricas entre os períodos não autorizam tratá-las como um evento único com causas idênticas.
+**Gabarito: C.** A sequência de mobilizações pode ser relacionada a alianças e decisões dentro de um contexto anterior de rivalidades. O estopim não cria automaticamente todas as condições nem determina motivações idênticas.
 
 Revisor/data: pendentes.
 
 ## H99 — Segunda Guerra, propaganda e perseguição
 
-ID: d1433000-0000-4000-8000-000000000099. Versão: 1. Dificuldade estimada: hard. Família: H19.
+ID: d1433000-0000-4000-8000-000000000099. Versão: 2. Dificuldade estimada: medium. Família: H19.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-A Segunda Guerra Mundial ocorreu entre 1939 e 1945 em um contexto que incluía expansionismo e regimes autoritários. Propaganda mobilizava populações e legitimava políticas, enquanto perseguições e genocídio atingiam grupos definidos por ideologias racistas. Analisar propaganda exige distinguir sua intenção persuasiva de evidências sobre o que ocorreu.
+Uma propaganda nazista desumaniza um grupo perseguido. Qual uso histórico desse material é adequado?
 
-Qual afirmação evita relativizar genocídio como simples disputa de opiniões?
+- **A)** Concluir que a finalidade persuasiva elimina todo valor do material como evidência histórica.
+- **B)** Usar o material para negar políticas de perseguição registradas em outras fontes.
+- **C)** Adotar a classificação racista da propaganda como descrição factual do grupo.
+- **D)** Investigar a estratégia de legitimação da perseguição, confrontando-a com outras evidências.
+- **E)** Tomar a propaganda como comprovação de apoio espontâneo de toda a população.
 
-- **A)** Ideologias racistas eram apenas escolhas estéticas sem relação com práticas.
-- **B)** A existência de conflito torna impossível reconhecer vítimas e responsabilidades.
-- **C)** A intenção persuasiva da propaganda transforma extermínio em debate sem consequências.
-- **D)** Perseguição organizada e extermínio precisam ser investigados como ações e políticas, com evidências e responsabilidade histórica.
-- **E)** Toda fonte sobre violência possui o mesmo valor independentemente de evidências.
-
-**Gabarito: D.** Genocídio não é uma opinião abstrata: envolve práticas, políticas e vítimas. Investigar evidências e responsabilidade não equivale a tratar propaganda e documentação como versões de mesmo valor.
+**Gabarito: D.** A propaganda é evidência da construção de mensagens e da legitimação do poder, não uma classificação válida dos perseguidos. Sua função deve ser analisada sem reproduzir a ideologia como descrição neutra.
 
 Revisor/data: pendentes.
 
 ## H100 — Guerra Fria e ditaduras na América Latina
 
-ID: d1433000-0000-4000-8000-000000000100. Versão: 1. Dificuldade estimada: hard. Família: H20.
+ID: d1433000-0000-4000-8000-000000000100. Versão: 2. Dificuldade estimada: medium. Família: H20.
 
-Síntese didática autoral; não é transcrição de documento histórico:
-Após a Segunda Guerra, a disputa entre Estados Unidos e União Soviética influenciou alianças, propaganda e conflitos em diferentes regiões. Na América Latina, governos autoritários relacionaram discursos de segurança a repressão e restrições de direitos. O contexto internacional não elimina a importância de interesses locais, ações de grupos sociais e processos próprios de cada país.
+Durante uma ditadura, um jornal é censurado e manifestações são proibidas. Um relatório oficial afirma que não houve oposição. Qual conclusão é mais prudente?
 
-Que cronologia é coerente com o contexto descrito?
+- **A)** A ausência de manifestações públicas pode refletir repressão, sendo necessário investigar outras fontes.
+- **B)** A ausência de registros comprova concordância de toda a população.
+- **C)** A censura garante que todas as opiniões foram publicadas.
+- **D)** Um relatório oficial dispensa análise das condições em que foi produzido.
+- **E)** A proibição das manifestações demonstra que a oposição não existia antes dela.
 
-- **A)** A Guerra Fria se desenvolve após a Segunda Guerra; processos regionais precisam ser situados dentro e além dessa disputa.
-- **B)** A Guerra Fria terminou antes da Primeira Guerra e causou seu início.
-- **C)** As duas guerras mundiais ocorreram depois de todos os processos de redemocratização latino-americanos.
-- **D)** A Guerra Fria elimina a necessidade de localizar datas em cada país.
-- **E)** A Segunda Guerra foi apenas um conflito posterior ao fim da disputa entre Estados Unidos e União Soviética.
-
-**Gabarito: A.** A localização do contexto global ajuda a comparar processos, mas não substitui cronologias e condições específicas. Eventos anteriores e posteriores podem produzir continuidades relevantes.
+**Gabarito: A.** Silêncio público sob repressão não equivale a consenso. Censura e proibições afetam o registro das opiniões; correspondência, testemunhos e outros materiais podem revelar posições impedidas de circular.
 
 Revisor/data: pendentes.

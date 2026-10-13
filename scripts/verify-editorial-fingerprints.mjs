@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {root,loadCatalog} from './lib/editorial-content.mjs';
+import {editorialProjection} from './lib/content-versions.mjs';
+import {fingerprint,projection} from './lib/editorial-patch.mjs';
+assert.ok(process.argv.slice(2).every(a=>a==='--before'));
+const catalog=process.argv.includes('--before')?JSON.parse(readFileSync(new URL('content/catalogo-etapa-44.json',root),'utf8')):loadCatalog();
+const require=createRequire(import.meta.url),pkg=require.resolve('supabase/package.json'),entry=path.resolve(path.dirname(pkg),require(pkg).bin.supabase);
+const ids=catalog.questions.map(q=>`'${q.id}'`).join(',');
+const sql=`select q.id,encode(sha256(convert_to((${projection})::text,'UTF8')),'hex') as hash
+ from public.questions q left join public.question_answers a on a.question_id=q.id where q.id in(${ids});`;
+const result=spawnSync(process.execPath,[entry,'db','query','--linked',sql,'-o','json'],{cwd:fileURLToPath(root),encoding:'utf8',timeout:60000,windowsHide:true,maxBuffer:1048576});
+assert.ok(!result.error&&result.status===0,'Falha na consulta de hashes, sem alteração de dados.');
+const rows=JSON.parse(result.stdout.slice(result.stdout.indexOf('{'),result.stdout.lastIndexOf('}')+1)).rows;
+assert.equal(rows.length,500);
+for(const q of catalog.questions)assert.equal(rows.find(r=>r.id===q.id)?.hash,fingerprint(editorialProjection(q)),q.label);
+console.log(`500 fingerprints SHA-256 correspondem à fonte ${process.argv.includes('--before')?'anterior':'atual'}; formato PostgreSQL/Node conferido, consulta somente leitura.`);

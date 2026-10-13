@@ -1,12 +1,11 @@
-# Revisão atual — Ciências — etapa 44
+# Revisão atual — Ciências — etapa 45
 
-Cem questões autorais, níveis medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
 ## C01 — Densidade e flutuação
 
-ID: d1090000-0000-4000-8000-000000000005. Versão: 3. Dificuldade estimada: hard. Família: C1.
+ID: d1090000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: medium. Família: C1.
 
-Situação experimental fictícia:
 Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Qual previsão combina corretamente a medida de densidade e o comportamento nos dois líquidos?
@@ -23,28 +22,26 @@ Revisor/data: pendentes.
 
 ## C02 — Separação de misturas e conservação
 
-ID: d1090000-0000-4000-8000-000000000006. Versão: 3. Dificuldade estimada: hard. Família: C2.
+ID: d1090000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: medium. Família: C2.
 
-Situação experimental fictícia:
-Uma amostra contém 20 g de areia seca e 30 g de sal completamente dissolvido em 150 g de água. A areia é insolúvel; o sal não é volátil nas condições do experimento. Após filtração ideal, o líquido é dividido em duas partes iguais: uma sofre evaporação até secar; a outra, destilação com coleta completa da água.
+Uma amostra contém areia e sal dissolvido em água. A areia é insolúvel e o sal não evapora nas condições usadas. O objetivo é recolher separadamente os três componentes, em procedimentos ideais sem perdas.
 
-Para recuperar separadamente a areia, o sal e a água, qual procedimento deve ser aplicado à amostra?
+Qual sequência de procedimentos atende ao objetivo?
 
 - **A)** Filtrar a areia e destilar o filtrado, recolhendo a água condensada e o sal residual.
-- **B)** Filtrar a areia e evaporar o filtrado em recipiente aberto, recolhendo sal e água no mesmo recipiente.
-- **C)** Filtrar a areia e resfriar o filtrado, considerando todo o sal recuperado sem verificar sua solubilidade.
-- **D)** Destilar a amostra inteira, recolhendo areia no condensador e sal junto à água destilada.
-- **E)** Decantar a areia e filtrar o líquido, recolhendo o sal dissolvido no papel de filtro.
+- **B)** Filtrar a areia e evaporar o filtrado em recipiente aberto, recolhendo apenas o resíduo sólido.
+- **C)** Destilar a amostra sem filtrar, considerando o resíduo de areia e sal como dois componentes já separados.
+- **D)** Filtrar a amostra, considerando que o papel retém também o sal dissolvido.
+- **E)** Decantar a areia e recolher o restante como se fosse água pura.
 
-**Gabarito: A.** O filtro retém a areia insolúvel; o sal dissolvido atravessa com a água. A destilação permite condensar e recolher a água, deixando sal no recipiente aquecido. Evaporação aberta recupera sal, mas não recolhe a água.
+**Gabarito: A.** A filtração separa a areia insolúvel. O filtrado ainda contém água e sal; a destilação permite recolher a água e deixar o sal. Evaporação aberta não recupera a água, e destilar sem filtrar deixa areia e sal juntos no resíduo.
 
 Revisor/data: pendentes.
 
 ## C03 — Energia elétrica e eficiência
 
-ID: d1390000-0000-4000-8000-000000000001. Versão: 4. Dificuldade estimada: hard. Família: C3.
+ID: d1390000-0000-4000-8000-000000000001. Versão: 5. Dificuldade estimada: hard. Família: C3.
 
-Situação experimental fictícia:
 Uma bomba recebe 600 W de potência elétrica durante 10 minutos. Sua eficiência de conversão em energia útil é 70%; o restante aquece o equipamento e o ambiente. Uma segunda bomba recebe 500 W, tem eficiência de 84% e realiza a mesma transferência de água nas condições consideradas.
 
 Para realizar a mesma transferência de água em dez minutos, qual comparação das bombas está correta?
@@ -61,9 +58,8 @@ Revisor/data: pendentes.
 
 ## C04 — Circuitos e associação de resistores
 
-ID: d1390000-0000-4000-8000-000000000002. Versão: 3. Dificuldade estimada: hard. Família: C4.
+ID: d1390000-0000-4000-8000-000000000002. Versão: 4. Dificuldade estimada: medium. Família: C4.
 
-Situação experimental fictícia:
 Dois resistores ideais de 6 Ω são ligados a uma fonte ideal de 12 V. No circuito I ficam em série; no II, em paralelo. Use U = R × I e P = U × I. Considere fios sem resistência, resistores ôhmicos e ausência de limite de corrente na fonte.
 
 Qual comparação das correntes totais está correta?
@@ -80,9 +76,8 @@ Revisor/data: pendentes.
 
 ## C05 — Temperatura e equilíbrio térmico
 
-ID: d1390000-0000-4000-8000-000000000003. Versão: 4. Dificuldade estimada: hard. Família: C5.
+ID: d1390000-0000-4000-8000-000000000003. Versão: 5. Dificuldade estimada: medium. Família: C5.
 
-Situação experimental fictícia:
 Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Qual temperatura final satisfaz o equilíbrio de energia?
@@ -99,9 +94,8 @@ Revisor/data: pendentes.
 
 ## C06 — Fotossíntese e controle experimental
 
-ID: d1390000-0000-4000-8000-000000000004. Versão: 4. Dificuldade estimada: hard. Família: C6.
+ID: d1390000-0000-4000-8000-000000000004. Versão: 5. Dificuldade estimada: medium. Família: C6.
 
-Situação experimental fictícia:
 Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Que comparação permite avaliar o efeito da intensidade luminosa mantendo as outras condições descritas?
@@ -112,15 +106,14 @@ Que comparação permite avaliar o efeito da intensidade luminosa mantendo as ou
 - **D)** A e C
 - **E)** B e C
 
-**Gabarito: B.** A e B diferem na intensidade da luz, mas mantêm as condições iniciais comparáveis. A e C variam gás carbônico; outras comparações alteram mais de uma variável.
+**Gabarito: B.** A e B diferem na intensidade da luz, mas mantêm as condições iniciais comparáveis. A e C variam gás carbônico; Entre as alternativas, as demais comparações não isolam a intensidade: A/C varia gás carbônico; B/C e C/D variam gás carbônico e luz; D sozinho não oferece comparação.
 
 Revisor/data: pendentes.
 
 ## C07 — Fluxo de energia e cadeias alimentares
 
-ID: d1390000-0000-4000-8000-000000000005. Versão: 4. Dificuldade estimada: hard. Família: C7.
+ID: d1390000-0000-4000-8000-000000000005. Versão: 5. Dificuldade estimada: medium. Família: C7.
 
-Situação experimental fictícia:
 Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Que energia fica disponível ao predador final no modelo?
@@ -137,10 +130,9 @@ Revisor/data: pendentes.
 
 ## C08 — Genética e probabilidade
 
-ID: d1390000-0000-4000-8000-000000000006. Versão: 3. Dificuldade estimada: hard. Família: C8.
+ID: d1390000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: easy. Família: C8.
 
-Situação experimental fictícia:
-Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação independente dos gametas e sem diferença de viabilidade entre genótipos. O modelo não pretende explicar toda a herança humana.
+Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação dos alelos, fecundações independentes e igual viabilidade dos genótipos.
 
 Qual probabilidade de um descendente apresentar a característica recessiva?
 
@@ -156,9 +148,8 @@ Revisor/data: pendentes.
 
 ## C09 — Seleção de resistência bacteriana
 
-ID: d1390000-0000-4000-8000-000000000007. Versão: 4. Dificuldade estimada: hard. Família: C9.
+ID: d1390000-0000-4000-8000-000000000007. Versão: 5. Dificuldade estimada: medium. Família: C9.
 
-Situação experimental fictícia:
 Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Após a exposição, a proporção de resistentes cresce. Qual mecanismo explica isso no modelo apresentado?
@@ -175,10 +166,9 @@ Revisor/data: pendentes.
 
 ## C10 — Osmose e membranas
 
-ID: d1390000-0000-4000-8000-000000000008. Versão: 3. Dificuldade estimada: hard. Família: C10.
+ID: d1390000-0000-4000-8000-000000000008. Versão: 4. Dificuldade estimada: medium. Família: C10.
 
-Situação experimental fictícia:
-Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra e despreze transporte ativo no período.
+Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra, pressões hidrostáticas inicialmente iguais e ausência de transporte ativo no período.
 
 Qual direção inicial do fluxo líquido de água é coerente com as três situações?
 
@@ -194,28 +184,26 @@ Revisor/data: pendentes.
 
 ## C11 — Diluição e concentração
 
-ID: d1390000-0000-4000-8000-000000000009. Versão: 3. Dificuldade estimada: hard. Família: C11.
+ID: d1390000-0000-4000-8000-000000000009. Versão: 4. Dificuldade estimada: easy. Família: C11.
 
-Situação experimental fictícia:
-Um frasco contém 200 mL de solução com 12 g de um soluto completamente dissolvido. Acrescenta-se água até o volume total atingir 600 mL, sem retirar ou adicionar soluto. Depois, 150 mL dessa solução homogênea são separados. Considere volumes medidos após cada etapa e ausência de reação química.
+Uma solução contém 12 g de soluto. Acrescenta-se água até o volume total chegar a 600 mL, sem perda ou adição de soluto.
 
-Qual concentração em g/L resulta da diluição?
+Qual é a concentração final, em g/L?
 
 - **A)** 20 g/L
-- **B)** 30 g/L
-- **C)** 80 g/L
+- **B)** 80 g/L
+- **C)** 6 g/L
 - **D)** 60 g/L
-- **E)** 6 g/L
+- **E)** 30 g/L
 
-**Gabarito: A.** A massa permanece 12 g e o volume final é 0,6 L. A concentração é 12/0,6 = 20 g/L, um terço dos 60 g/L iniciais.
+**Gabarito: A.** A massa de soluto continua em 12 g e o volume final é 0,600 L. Logo, a concentração é 12/0,600 = 20 g/L. Deve-se usar o volume final em litros, sem alterar a massa de soluto.
 
 Revisor/data: pendentes.
 
 ## C12 — Reação química e sistema fechado
 
-ID: d1390000-0000-4000-8000-000000000010. Versão: 4. Dificuldade estimada: hard. Família: C12.
+ID: d1390000-0000-4000-8000-000000000010. Versão: 5. Dificuldade estimada: medium. Família: C12.
 
-Situação experimental fictícia:
 Um frasco fechado contém 5 g de bicarbonato e 25 g de solução ácida. Ao misturá-los, forma-se gás e o recipiente permanece vedado. A balança continua marcando 30 g de conteúdo. Em outro ensaio igual, o recipiente é aberto e parte do gás escapa, deixando 28 g de conteúdo medido.
 
 Qual interpretação das duas pesagens é compatível com a conservação da massa?
@@ -232,9 +220,8 @@ Revisor/data: pendentes.
 
 ## C13 — Pressão e distribuição de força
 
-ID: d1390000-0000-4000-8000-000000000011. Versão: 3. Dificuldade estimada: hard. Família: C13.
+ID: d1390000-0000-4000-8000-000000000011. Versão: 4. Dificuldade estimada: medium. Família: C13.
 
-Situação experimental fictícia:
 Um bloco exerce força de 600 N sobre uma superfície horizontal. Na posição I, apoia-se em área de 0,03 m²; na II, em 0,06 m². Use pressão média = força/área e despreze irregularidades do apoio. A massa do bloco não muda ao girá-lo.
 
 Como as pressões médias se comparam?
@@ -251,10 +238,9 @@ Revisor/data: pendentes.
 
 ## C14 — Ondas e mudança de meio
 
-ID: d1390000-0000-4000-8000-000000000012. Versão: 3. Dificuldade estimada: hard. Família: C14.
+ID: d1390000-0000-4000-8000-000000000012. Versão: 4. Dificuldade estimada: medium. Família: C14.
 
-Situação experimental fictícia:
-Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ. Não há informação suficiente para calcular amplitudes ou energias transmitidas.
+Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ.
 
 Quais comprimentos de onda resultam nos dois meios?
 
@@ -270,9 +256,8 @@ Revisor/data: pendentes.
 
 ## C15 — Estações e duração da luz
 
-ID: d1390000-0000-4000-8000-000000000013. Versão: 4. Dificuldade estimada: hard. Família: C15.
+ID: d1390000-0000-4000-8000-000000000013. Versão: 5. Dificuldade estimada: medium. Família: C15.
 
-Situação experimental fictícia:
 Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Qual mecanismo explica a inversão das durações de luz entre junho e dezembro nos dois hemisférios?
@@ -289,9 +274,8 @@ Revisor/data: pendentes.
 
 ## C16 — Respiração celular e interpretação de medidas
 
-ID: d1390000-0000-4000-8000-000000000014. Versão: 3. Dificuldade estimada: hard. Família: C16.
+ID: d1390000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: medium. Família: C16.
 
-Situação experimental fictícia:
 Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Que inferência é compatível com a comparação entre os frascos?
@@ -308,9 +292,8 @@ Revisor/data: pendentes.
 
 ## C17 — Eutrofização e oxigênio dissolvido
 
-ID: d1390000-0000-4000-8000-000000000015. Versão: 4. Dificuldade estimada: hard. Família: C17.
+ID: d1390000-0000-4000-8000-000000000015. Versão: 5. Dificuldade estimada: medium. Família: C17.
 
-Situação experimental fictícia:
 Após receber escoamento rico em nutrientes, um lago apresenta crescimento de algas. Dias depois, parte delas morre; aumenta a atividade de decompositores e cai o oxigênio dissolvido. Em noites sem luz, a concentração chega a 2 mg/L, abaixo do valor anterior de 8 mg/L. O experimento é um cenário simplificado de eutrofização.
 
 Qual sequência de processos é compatível com a queda noturna do oxigênio após a entrada de nutrientes?
@@ -327,10 +310,9 @@ Revisor/data: pendentes.
 
 ## C18 — Populações e limite de recursos
 
-ID: d1390000-0000-4000-8000-000000000016. Versão: 3. Dificuldade estimada: hard. Família: C18.
+ID: d1390000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: medium. Família: C18.
 
-Situação experimental fictícia:
-Em um cultivo com espaço e alimento limitados, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos. O ambiente continua sendo monitorado, pois sua capacidade não é considerada imutável.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
 
 Que leitura distingue esse crescimento de uma duplicação indefinida?
 
@@ -346,9 +328,8 @@ Revisor/data: pendentes.
 
 ## C19 — Placas tectônicas e evidências
 
-ID: d1390000-0000-4000-8000-000000000017. Versão: 3. Dificuldade estimada: hard. Família: C19.
+ID: d1390000-0000-4000-8000-000000000017. Versão: 4. Dificuldade estimada: medium. Família: C19.
 
-Situação experimental fictícia:
 Em uma região, terremotos se concentram numa faixa estreita. Há uma cadeia montanhosa paralela à faixa e um alinhamento de vulcões no continente. Estudos indicam que uma placa oceânica mergulha sob uma continental. Em outra região, duas placas se afastam e há formação de nova crosta junto a uma dorsal.
 
 Qual comparação dos limites é coerente com as evidências?
@@ -365,10 +346,9 @@ Revisor/data: pendentes.
 
 ## C20 — Materiais, condução e isolamento
 
-ID: d1390000-0000-4000-8000-000000000018. Versão: 4. Dificuldade estimada: hard. Família: C20.
+ID: d1390000-0000-4000-8000-000000000018. Versão: 5. Dificuldade estimada: medium. Família: C20.
 
-Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Por que a caixa revestida de espuma conserva mais gelo nas condições do experimento?
 
@@ -384,9 +364,8 @@ Revisor/data: pendentes.
 
 ## C21 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000021. Versão: 2. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000021. Versão: 3. Dificuldade estimada: medium. Família: C1.
 
-Situação experimental fictícia:
 Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Na água, que volume precisa ficar submerso para que a massa de água deslocada iguale os 240 g do objeto?
@@ -403,28 +382,26 @@ Revisor/data: pendentes.
 
 ## C22 — Separação de misturas e conservação
 
-ID: d1432000-0000-4000-8000-000000000022. Versão: 1. Dificuldade estimada: hard. Família: C2.
+ID: d1432000-0000-4000-8000-000000000022. Versão: 2. Dificuldade estimada: easy. Família: C2.
 
-Situação experimental fictícia:
-Uma amostra contém 20 g de areia seca e 30 g de sal completamente dissolvido em 150 g de água. A areia é insolúvel; o sal não é volátil nas condições do experimento. Após filtração ideal, o líquido é dividido em duas partes iguais: uma sofre evaporação até secar; a outra, destilação com coleta completa da água.
+Após separar 20 g de areia por filtração sem perdas, obtém-se uma solução homogênea de 30 g de sal em 150 g de água. A solução é dividida em duas partes de mesma massa. Uma delas é evaporada em recipiente aberto até secar, sem decomposição nem perda de sal.
 
-Qual massa de sal resta na metade do filtrado que foi evaporada até secar?
+Qual massa de sal fica nesse recipiente?
 
 - **A)** 90 g
 - **B)** 30 g
-- **C)** 20 g
+- **C)** 10 g
 - **D)** 15 g
 - **E)** 75 g
 
-**Gabarito: D.** O filtrado é homogêneo e contém 30 g de sal. Sua divisão em partes iguais distribui 15 g de sal a cada parte; retirar água não elimina esse sal.
+**Gabarito: D.** Cada metade homogênea contém metade do sal: 30/2 = 15 g. A evaporação remove a água dessa metade, mas não o sal, que fica no recipiente.
 
 Revisor/data: pendentes.
 
 ## C23 — Energia elétrica e eficiência
 
-ID: d1432000-0000-4000-8000-000000000023. Versão: 1. Dificuldade estimada: hard. Família: C3.
+ID: d1432000-0000-4000-8000-000000000023. Versão: 2. Dificuldade estimada: medium. Família: C3.
 
-Situação experimental fictícia:
 Uma bomba recebe 600 W de potência elétrica durante 10 minutos. Sua eficiência de conversão em energia útil é 70%; o restante aquece o equipamento e o ambiente. Uma segunda bomba recebe 500 W, tem eficiência de 84% e realiza a mesma transferência de água nas condições consideradas.
 
 Que energia útil a primeira bomba fornece nos dez minutos, em joules?
@@ -441,9 +418,8 @@ Revisor/data: pendentes.
 
 ## C24 — Circuitos e associação de resistores
 
-ID: d1432000-0000-4000-8000-000000000024. Versão: 1. Dificuldade estimada: hard. Família: C4.
+ID: d1432000-0000-4000-8000-000000000024. Versão: 2. Dificuldade estimada: easy. Família: C4.
 
-Situação experimental fictícia:
 Dois resistores ideais de 6 Ω são ligados a uma fonte ideal de 12 V. No circuito I ficam em série; no II, em paralelo. Use U = R × I e P = U × I. Considere fios sem resistência, resistores ôhmicos e ausência de limite de corrente na fonte.
 
 Qual diferença de potencial aparece em cada resistor em série?
@@ -460,9 +436,8 @@ Revisor/data: pendentes.
 
 ## C25 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000025. Versão: 2. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000025. Versão: 3. Dificuldade estimada: easy. Família: C5.
 
-Situação experimental fictícia:
 Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Se as duas massas fossem iguais, mantendo as temperaturas iniciais, qual seria a temperatura final ideal?
@@ -479,9 +454,8 @@ Revisor/data: pendentes.
 
 ## C26 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000026. Versão: 2. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000026. Versão: 3. Dificuldade estimada: medium. Família: C6.
 
-Situação experimental fictícia:
 Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Que interpretação é sustentada pela comparação entre A e C?
@@ -498,9 +472,8 @@ Revisor/data: pendentes.
 
 ## C27 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000027. Versão: 2. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000027. Versão: 3. Dificuldade estimada: medium. Família: C7.
 
-Situação experimental fictícia:
 Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Se o consumo humano ocorrer diretamente no nível dos herbívoros em vez do predador final, qual comparação de energia entre esses níveis decorre do modelo?
@@ -517,10 +490,9 @@ Revisor/data: pendentes.
 
 ## C28 — Genética e probabilidade
 
-ID: d1432000-0000-4000-8000-000000000028. Versão: 1. Dificuldade estimada: hard. Família: C8.
+ID: d1432000-0000-4000-8000-000000000028. Versão: 2. Dificuldade estimada: hard. Família: C8.
 
-Situação experimental fictícia:
-Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação independente dos gametas e sem diferença de viabilidade entre genótipos. O modelo não pretende explicar toda a herança humana.
+Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação dos alelos, fecundações independentes e igual viabilidade dos genótipos.
 
 Entre os descendentes que não apresentam a característica recessiva, que fração esperada é heterozigota?
 
@@ -536,9 +508,8 @@ Revisor/data: pendentes.
 
 ## C29 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000029. Versão: 2. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000029. Versão: 3. Dificuldade estimada: easy. Família: C9.
 
-Situação experimental fictícia:
 Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Quantas bactérias sensíveis sobrevivem sob as condições descritas?
@@ -555,10 +526,9 @@ Revisor/data: pendentes.
 
 ## C30 — Osmose e membranas
 
-ID: d1432000-0000-4000-8000-000000000030. Versão: 1. Dificuldade estimada: hard. Família: C10.
+ID: d1432000-0000-4000-8000-000000000030. Versão: 2. Dificuldade estimada: medium. Família: C10.
 
-Situação experimental fictícia:
-Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra e despreze transporte ativo no período.
+Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra, pressões hidrostáticas inicialmente iguais e ausência de transporte ativo no período.
 
 Qual comparação descreve a diferença entre célula vegetal e uma célula sem parede sob condições hipotônicas?
 
@@ -574,12 +544,11 @@ Revisor/data: pendentes.
 
 ## C31 — Diluição e concentração
 
-ID: d1432000-0000-4000-8000-000000000031. Versão: 1. Dificuldade estimada: hard. Família: C11.
+ID: d1432000-0000-4000-8000-000000000031. Versão: 2. Dificuldade estimada: medium. Família: C11.
 
-Situação experimental fictícia:
-Um frasco contém 200 mL de solução com 12 g de um soluto completamente dissolvido. Acrescenta-se água até o volume total atingir 600 mL, sem retirar ou adicionar soluto. Depois, 150 mL dessa solução homogênea são separados. Considere volumes medidos após cada etapa e ausência de reação química.
+Uma solução homogênea contém 12 g de soluto em 600 mL. Retiram-se 150 mL dessa solução.
 
-Que massa de soluto existe nos 150 mL separados após a diluição?
+Qual massa de soluto foi retirada?
 
 - **A)** 9 g
 - **B)** 6 g
@@ -587,15 +556,14 @@ Que massa de soluto existe nos 150 mL separados após a diluição?
 - **D)** 3 g
 - **E)** 12 g
 
-**Gabarito: D.** A alíquota de 150 mL equivale a 0,15 L. Multiplicando 20 g/L por 0,15 L, obtêm-se 3 g. A homogeneidade distribui o soluto proporcionalmente ao volume.
+**Gabarito: D.** A porção retirada corresponde a 150/600 = 1/4 do volume. Por ser homogênea, ela contém 1/4 da massa de soluto: 12/4 = 3 g.
 
 Revisor/data: pendentes.
 
 ## C32 — Reação química e sistema fechado
 
-ID: d1432000-0000-4000-8000-000000000032. Versão: 1. Dificuldade estimada: hard. Família: C12.
+ID: d1432000-0000-4000-8000-000000000032. Versão: 2. Dificuldade estimada: easy. Família: C12.
 
-Situação experimental fictícia:
 Um frasco fechado contém 5 g de bicarbonato e 25 g de solução ácida. Ao misturá-los, forma-se gás e o recipiente permanece vedado. A balança continua marcando 30 g de conteúdo. Em outro ensaio igual, o recipiente é aberto e parte do gás escapa, deixando 28 g de conteúdo medido.
 
 Qual massa do conteúdo é esperada no frasco fechado antes e depois da reação ideal?
@@ -612,9 +580,8 @@ Revisor/data: pendentes.
 
 ## C33 — Pressão e distribuição de força
 
-ID: d1432000-0000-4000-8000-000000000033. Versão: 1. Dificuldade estimada: hard. Família: C13.
+ID: d1432000-0000-4000-8000-000000000033. Versão: 2. Dificuldade estimada: medium. Família: C13.
 
-Situação experimental fictícia:
 Um bloco exerce força de 600 N sobre uma superfície horizontal. Na posição I, apoia-se em área de 0,03 m²; na II, em 0,06 m². Use pressão média = força/área e despreze irregularidades do apoio. A massa do bloco não muda ao girá-lo.
 
 Que área seria necessária para limitar a pressão média a 5.000 Pa?
@@ -631,10 +598,9 @@ Revisor/data: pendentes.
 
 ## C34 — Ondas e mudança de meio
 
-ID: d1432000-0000-4000-8000-000000000034. Versão: 1. Dificuldade estimada: hard. Família: C14.
+ID: d1432000-0000-4000-8000-000000000034. Versão: 2. Dificuldade estimada: easy. Família: C14.
 
-Situação experimental fictícia:
-Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ. Não há informação suficiente para calcular amplitudes ou energias transmitidas.
+Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ.
 
 Qual é o período da fonte?
 
@@ -650,9 +616,8 @@ Revisor/data: pendentes.
 
 ## C35 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000035. Versão: 2. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000035. Versão: 3. Dificuldade estimada: easy. Família: C15.
 
-Situação experimental fictícia:
 Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Que diferença de tempo de luz a cidade sul apresenta entre os dois meses do exemplo?
@@ -669,9 +634,8 @@ Revisor/data: pendentes.
 
 ## C36 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000036. Versão: 1. Dificuldade estimada: hard. Família: C16.
+ID: d1432000-0000-4000-8000-000000000036. Versão: 2. Dificuldade estimada: medium. Família: C16.
 
-Situação experimental fictícia:
 Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Qual redução relativa da concentração de oxigênio ocorre em A, tomando 21% como referência inicial?
@@ -688,9 +652,8 @@ Revisor/data: pendentes.
 
 ## C37 — Eutrofização e oxigênio dissolvido
 
-ID: d1432000-0000-4000-8000-000000000037. Versão: 1. Dificuldade estimada: hard. Família: C17.
+ID: d1432000-0000-4000-8000-000000000037. Versão: 2. Dificuldade estimada: easy. Família: C17.
 
-Situação experimental fictícia:
 Após receber escoamento rico em nutrientes, um lago apresenta crescimento de algas. Dias depois, parte delas morre; aumenta a atividade de decompositores e cai o oxigênio dissolvido. Em noites sem luz, a concentração chega a 2 mg/L, abaixo do valor anterior de 8 mg/L. O experimento é um cenário simplificado de eutrofização.
 
 Qual é a queda percentual em relação aos 8 mg/L anteriores?
@@ -707,10 +670,9 @@ Revisor/data: pendentes.
 
 ## C38 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000038. Versão: 1. Dificuldade estimada: hard. Família: C18.
+ID: d1432000-0000-4000-8000-000000000038. Versão: 2. Dificuldade estimada: easy. Família: C18.
 
-Situação experimental fictícia:
-Em um cultivo com espaço e alimento limitados, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos. O ambiente continua sendo monitorado, pois sua capacidade não é considerada imutável.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
 
 Qual crescimento relativo ocorre de 200 para 320 indivíduos?
 
@@ -726,9 +688,8 @@ Revisor/data: pendentes.
 
 ## C39 — Placas tectônicas e evidências
 
-ID: d1432000-0000-4000-8000-000000000039. Versão: 1. Dificuldade estimada: hard. Família: C19.
+ID: d1432000-0000-4000-8000-000000000039. Versão: 2. Dificuldade estimada: medium. Família: C19.
 
-Situação experimental fictícia:
 Em uma região, terremotos se concentram numa faixa estreita. Há uma cadeia montanhosa paralela à faixa e um alinhamento de vulcões no continente. Estudos indicam que uma placa oceânica mergulha sob uma continental. Em outra região, duas placas se afastam e há formação de nova crosta junto a uma dorsal.
 
 Por que o conjunto de montanhas, vulcões e terremotos é mais informativo que um evento isolado?
@@ -745,10 +706,9 @@ Revisor/data: pendentes.
 
 ## C40 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000040. Versão: 2. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000040. Versão: 3. Dificuldade estimada: medium. Família: C20.
 
-Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Qual variável deve permanecer comparável para atribuir a diferença ao revestimento?
 
@@ -764,9 +724,8 @@ Revisor/data: pendentes.
 
 ## C41 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000041. Versão: 2. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000041. Versão: 3. Dificuldade estimada: easy. Família: C1.
 
-Situação experimental fictícia:
 Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Um segundo objeto do mesmo material tem 600 cm³. Qual massa e comportamento na água são coerentes com a homogeneidade do material?
@@ -783,28 +742,26 @@ Revisor/data: pendentes.
 
 ## C42 — Separação de misturas e conservação
 
-ID: d1432000-0000-4000-8000-000000000042. Versão: 1. Dificuldade estimada: hard. Família: C2.
+ID: d1432000-0000-4000-8000-000000000042. Versão: 2. Dificuldade estimada: easy. Família: C2.
 
-Situação experimental fictícia:
-Uma amostra contém 20 g de areia seca e 30 g de sal completamente dissolvido em 150 g de água. A areia é insolúvel; o sal não é volátil nas condições do experimento. Após filtração ideal, o líquido é dividido em duas partes iguais: uma sofre evaporação até secar; a outra, destilação com coleta completa da água.
+Uma solução homogênea de 30 g de sal em 150 g de água é dividida em duas partes de mesma massa. Uma metade é destilada com coleta completa do vapor condensado. O sal não é volátil nas condições do processo.
 
-Na metade submetida à destilação, qual massa de água pode ser recuperada sob coleta ideal?
+Qual massa de água é recolhida na destilação dessa metade?
 
-- **A)** 90 g
-- **B)** 150 g
+- **A)** 150 g
+- **B)** 90 g
 - **C)** 15 g
-- **D)** 100 g
+- **D)** 60 g
 - **E)** 75 g
 
-**Gabarito: E.** Os 150 g de água foram repartidos igualmente, resultando em 75 g por metade. A coleta ideal recupera essa água, separada dos 15 g de sal.
+**Gabarito: E.** A divisão da solução homogênea reparte também a água: 150/2 = 75 g em cada metade. O destilado recolhido é a água; os 15 g de sal da metade permanecem no recipiente aquecido.
 
 Revisor/data: pendentes.
 
 ## C43 — Energia elétrica e eficiência
 
-ID: d1432000-0000-4000-8000-000000000043. Versão: 1. Dificuldade estimada: hard. Família: C3.
+ID: d1432000-0000-4000-8000-000000000043. Versão: 2. Dificuldade estimada: medium. Família: C3.
 
-Situação experimental fictícia:
 Uma bomba recebe 600 W de potência elétrica durante 10 minutos. Sua eficiência de conversão em energia útil é 70%; o restante aquece o equipamento e o ambiente. Uma segunda bomba recebe 500 W, tem eficiência de 84% e realiza a mesma transferência de água nas condições consideradas.
 
 Qual energia a primeira bomba dissipa no mesmo intervalo?
@@ -821,9 +778,8 @@ Revisor/data: pendentes.
 
 ## C44 — Circuitos e associação de resistores
 
-ID: d1432000-0000-4000-8000-000000000044. Versão: 1. Dificuldade estimada: hard. Família: C4.
+ID: d1432000-0000-4000-8000-000000000044. Versão: 2. Dificuldade estimada: medium. Família: C4.
 
-Situação experimental fictícia:
 Dois resistores ideais de 6 Ω são ligados a uma fonte ideal de 12 V. No circuito I ficam em série; no II, em paralelo. Use U = R × I e P = U × I. Considere fios sem resistência, resistores ôhmicos e ausência de limite de corrente na fonte.
 
 Qual potência total é dissipada no circuito em paralelo?
@@ -840,9 +796,8 @@ Revisor/data: pendentes.
 
 ## C45 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000045. Versão: 2. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000045. Versão: 3. Dificuldade estimada: medium. Família: C5.
 
-Situação experimental fictícia:
 Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Mantendo 200 g de água quente, que massa de água a 15 °C produziria temperatura final de 45 °C?
@@ -859,9 +814,8 @@ Revisor/data: pendentes.
 
 ## C46 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000046. Versão: 2. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000046. Versão: 3. Dificuldade estimada: medium. Família: C6.
 
-Situação experimental fictícia:
 Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 A ausência de bolhas em D permite concluir o quê, sem extrapolar o indicador?
@@ -878,9 +832,8 @@ Revisor/data: pendentes.
 
 ## C47 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000047. Versão: 2. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000047. Versão: 3. Dificuldade estimada: medium. Família: C7.
 
-Situação experimental fictícia:
 Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 O que acontece com a energia que não chega ao nível seguinte?
@@ -897,10 +850,9 @@ Revisor/data: pendentes.
 
 ## C48 — Genética e probabilidade
 
-ID: d1432000-0000-4000-8000-000000000048. Versão: 1. Dificuldade estimada: hard. Família: C8.
+ID: d1432000-0000-4000-8000-000000000048. Versão: 2. Dificuldade estimada: medium. Família: C8.
 
-Situação experimental fictícia:
-Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação independente dos gametas e sem diferença de viabilidade entre genótipos. O modelo não pretende explicar toda a herança humana.
+Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação dos alelos, fecundações independentes e igual viabilidade dos genótipos.
 
 Qual chance de dois descendentes independentes serem ambos aa?
 
@@ -916,9 +868,8 @@ Revisor/data: pendentes.
 
 ## C49 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000049. Versão: 2. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000049. Versão: 3. Dificuldade estimada: medium. Família: C9.
 
-Situação experimental fictícia:
 Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Que proporção aproximada dos sobreviventes é resistente?
@@ -935,10 +886,9 @@ Revisor/data: pendentes.
 
 ## C50 — Osmose e membranas
 
-ID: d1432000-0000-4000-8000-000000000050. Versão: 1. Dificuldade estimada: hard. Família: C10.
+ID: d1432000-0000-4000-8000-000000000050. Versão: 2. Dificuldade estimada: medium. Família: C10.
 
-Situação experimental fictícia:
-Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra e despreze transporte ativo no período.
+Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra, pressões hidrostáticas inicialmente iguais e ausência de transporte ativo no período.
 
 Em III, o citoplasma se retrai e a membrana se afasta parcialmente da parede. Qual explicação é compatível com o enunciado?
 
@@ -954,47 +904,44 @@ Revisor/data: pendentes.
 
 ## C51 — Diluição e concentração
 
-ID: d1432000-0000-4000-8000-000000000051. Versão: 1. Dificuldade estimada: hard. Família: C11.
+ID: d1432000-0000-4000-8000-000000000051. Versão: 2. Dificuldade estimada: medium. Família: C11.
 
-Situação experimental fictícia:
-Um frasco contém 200 mL de solução com 12 g de um soluto completamente dissolvido. Acrescenta-se água até o volume total atingir 600 mL, sem retirar ou adicionar soluto. Depois, 150 mL dessa solução homogênea são separados. Considere volumes medidos após cada etapa e ausência de reação química.
+Uma solução homogênea contém 12 g de soluto em 600 mL. Retiram-se 150 mL, sem acrescentar água ou alterar o soluto.
 
-O que acontece com a concentração no frasco original imediatamente após retirar a alíquota homogênea?
+Como fica a concentração da solução que permanece no frasco?
 
-- **A)** Permanece 20 g/L, pois massa e volume diminuem na mesma proporção.
-- **B)** Cai a zero porque a retirada elimina todo o soluto.
-- **C)** Aumenta para 60 g/L porque a água foi retirada primeiro.
-- **D)** Permanece a massa de 12 g, embora a alíquota contenha 3 g.
-- **E)** Cai para 15 g/L porque o volume restante é menor.
+- **A)** Permanece em 20 g/L, pois restam 9 g em 450 mL.
+- **B)** Sobe para 60 g/L, pois a retirada reverte a diluição anterior.
+- **C)** Sobe para 26,7 g/L, pois sai água, mas se considera que todo o soluto permanece.
+- **D)** Cai para 5 g/L, pois a porção retirada é confundida com a solução restante.
+- **E)** Cai para 15 g/L, pois sai um quarto do soluto e o volume é considerado constante.
 
-**Gabarito: A.** Restam 9 g em 450 mL, ou 9/0,45 = 20 g/L. Retirar uma parte homogênea reduz massa e volume proporcionalmente, sem alterar sua razão.
+**Gabarito: A.** Retirar 1/4 de uma solução homogênea retira a mesma fração de soluto e de volume. Restam 9 g em 0,450 L: 9/0,450 = 20 g/L. Transferir uma porção não concentra nem dilui a parte restante.
 
 Revisor/data: pendentes.
 
 ## C52 — Reação química e sistema fechado
 
-ID: d1432000-0000-4000-8000-000000000052. Versão: 1. Dificuldade estimada: hard. Família: C12.
+ID: d1432000-0000-4000-8000-000000000052. Versão: 2. Dificuldade estimada: easy. Família: C12.
 
-Situação experimental fictícia:
-Um frasco fechado contém 5 g de bicarbonato e 25 g de solução ácida. Ao misturá-los, forma-se gás e o recipiente permanece vedado. A balança continua marcando 30 g de conteúdo. Em outro ensaio igual, o recipiente é aberto e parte do gás escapa, deixando 28 g de conteúdo medido.
+Após reagirem 5 g de bicarbonato de sódio com 25 g de solução ácida, um frasco aberto tem 28 g de conteúdo. Em seguida, saem mais 0,5 g de gás, sem outras trocas de matéria.
 
-Se o recipiente aberto perder mais 1 g de gás depois da primeira medição, qual massa de conteúdo terá?
+Qual massa de conteúdo será medida após essa saída adicional?
 
-- **A)** 25 g
-- **B)** 29 g
-- **C)** 27 g
-- **D)** 31 g
-- **E)** 30 g
+- **A)** 26,5 g
+- **B)** 28,5 g
+- **C)** 27,5 g
+- **D)** 29,5 g
+- **E)** 27 g
 
-**Gabarito: C.** O conteúdo aberto já estava em 28 g. A saída adicional de 1 g reduz a massa medida para 27 g, sem implicar destruição da matéria que saiu.
+**Gabarito: C.** A saída adicional reduz a massa de 28 para 27,5 g: 28 − 0,5 = 27,5. A perda total é de 2,5 g de gás, compatível com a quantidade de bicarbonato informada; o gás que saiu continua existindo fora do frasco.
 
 Revisor/data: pendentes.
 
 ## C53 — Pressão e distribuição de força
 
-ID: d1432000-0000-4000-8000-000000000053. Versão: 1. Dificuldade estimada: hard. Família: C13.
+ID: d1432000-0000-4000-8000-000000000053. Versão: 2. Dificuldade estimada: easy. Família: C13.
 
-Situação experimental fictícia:
 Um bloco exerce força de 600 N sobre uma superfície horizontal. Na posição I, apoia-se em área de 0,03 m²; na II, em 0,06 m². Use pressão média = força/área e despreze irregularidades do apoio. A massa do bloco não muda ao girá-lo.
 
 Se a força aumentar para 1.200 N, mantendo o apoio II, que pressão resulta?
@@ -1011,10 +958,9 @@ Revisor/data: pendentes.
 
 ## C54 — Ondas e mudança de meio
 
-ID: d1432000-0000-4000-8000-000000000054. Versão: 1. Dificuldade estimada: hard. Família: C14.
+ID: d1432000-0000-4000-8000-000000000054. Versão: 2. Dificuldade estimada: medium. Família: C14.
 
-Situação experimental fictícia:
-Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ. Não há informação suficiente para calcular amplitudes ou energias transmitidas.
+Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ.
 
 Que mudança ocorre na quantidade de comprimentos de onda contidos em um trecho de 20 m após entrar em II?
 
@@ -1030,9 +976,8 @@ Revisor/data: pendentes.
 
 ## C55 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000055. Versão: 2. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000055. Versão: 3. Dificuldade estimada: medium. Família: C15.
 
-Situação experimental fictícia:
 Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Que observação contradiz mais diretamente a explicação baseada só na aproximação de toda a Terra ao Sol?
@@ -1049,9 +994,8 @@ Revisor/data: pendentes.
 
 ## C56 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000056. Versão: 1. Dificuldade estimada: hard. Família: C16.
+ID: d1432000-0000-4000-8000-000000000056. Versão: 2. Dificuldade estimada: medium. Família: C16.
 
-Situação experimental fictícia:
 Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Por que o frasco B é relevante para a interpretação?
@@ -1068,9 +1012,8 @@ Revisor/data: pendentes.
 
 ## C57 — Eutrofização e oxigênio dissolvido
 
-ID: d1432000-0000-4000-8000-000000000057. Versão: 1. Dificuldade estimada: hard. Família: C17.
+ID: d1432000-0000-4000-8000-000000000057. Versão: 2. Dificuldade estimada: medium. Família: C17.
 
-Situação experimental fictícia:
 Após receber escoamento rico em nutrientes, um lago apresenta crescimento de algas. Dias depois, parte delas morre; aumenta a atividade de decompositores e cai o oxigênio dissolvido. Em noites sem luz, a concentração chega a 2 mg/L, abaixo do valor anterior de 8 mg/L. O experimento é um cenário simplificado de eutrofização.
 
 Por que a queda pode se intensificar à noite?
@@ -1087,10 +1030,9 @@ Revisor/data: pendentes.
 
 ## C58 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000058. Versão: 1. Dificuldade estimada: hard. Família: C18.
+ID: d1432000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: medium. Família: C18.
 
-Situação experimental fictícia:
-Em um cultivo com espaço e alimento limitados, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos. O ambiente continua sendo monitorado, pois sua capacidade não é considerada imutável.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
 
 Que mudança pode alterar o patamar próximo de 400?
 
@@ -1106,9 +1048,8 @@ Revisor/data: pendentes.
 
 ## C59 — Placas tectônicas e evidências
 
-ID: d1432000-0000-4000-8000-000000000059. Versão: 1. Dificuldade estimada: hard. Família: C19.
+ID: d1432000-0000-4000-8000-000000000059. Versão: 2. Dificuldade estimada: medium. Família: C19.
 
-Situação experimental fictícia:
 Em uma região, terremotos se concentram numa faixa estreita. Há uma cadeia montanhosa paralela à faixa e um alinhamento de vulcões no continente. Estudos indicam que uma placa oceânica mergulha sob uma continental. Em outra região, duas placas se afastam e há formação de nova crosta junto a uma dorsal.
 
 Qual processo mantém aproximadamente o balanço de crosta oceânica ao longo do tempo geológico?
@@ -1125,10 +1066,9 @@ Revisor/data: pendentes.
 
 ## C60 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000060. Versão: 2. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000060. Versão: 3. Dificuldade estimada: medium. Família: C20.
 
-Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Se o conteúdo estivesse quente e o ambiente frio, qual previsão sobre a espuma seria coerente?
 
@@ -1144,9 +1084,8 @@ Revisor/data: pendentes.
 
 ## C61 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000061. Versão: 2. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000061. Versão: 3. Dificuldade estimada: medium. Família: C1.
 
-Situação experimental fictícia:
 Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Uma cavidade fechada reduz a massa do objeto para 180 g, mantendo o volume externo de 300 cm³. No segundo líquido, qual previsão decorre do modelo?
@@ -1163,28 +1102,26 @@ Revisor/data: pendentes.
 
 ## C62 — Separação de misturas e conservação
 
-ID: d1432000-0000-4000-8000-000000000062. Versão: 1. Dificuldade estimada: hard. Família: C2.
+ID: d1432000-0000-4000-8000-000000000062. Versão: 2. Dificuldade estimada: medium. Família: C2.
 
-Situação experimental fictícia:
-Uma amostra contém 20 g de areia seca e 30 g de sal completamente dissolvido em 150 g de água. A areia é insolúvel; o sal não é volátil nas condições do experimento. Após filtração ideal, o líquido é dividido em duas partes iguais: uma sofre evaporação até secar; a outra, destilação com coleta completa da água.
+Uma solução de sal não volátil é destilada. Durante o aquecimento intenso, observa-se projeção de pequenas gotas da solução para o tubo ligado ao condensador. O líquido recolhido apresenta sal.
 
-Se o líquido destilado continuar contendo sal, qual hipótese explica uma falha sem contradizer a informação de que o sal não é volátil?
+Qual mecanismo explica a contaminação do destilado?
 
-- **A)** Gotículas da solução foram arrastadas para o condensador.
-- **B)** O filtro transformou a solução em sal gasoso.
-- **C)** A conservação de massa obriga o sal a acompanhar todo vapor de água.
-- **D)** O sal se tornou água devido ao aquecimento.
-- **E)** A insolubilidade da areia provocou volatilização do sal.
+- **A)** Arraste de gotículas da solução para o condensador.
+- **B)** Transformação do sal em água durante a condensação.
+- **C)** Separação completa do sal no recipiente aquecido, sem nenhum transporte de solução.
+- **D)** Evaporação do sal junto com a água, apesar de o sal ser não volátil nessas condições.
+- **E)** Retenção da água pelo sal, seguida de passagem apenas do sal pelo tubo.
 
-**Gabarito: A.** O transporte mecânico de gotículas pode contaminar o destilado sem que o sal vaporize. O experimento ideal exclui esse arraste; a observação indicaria falha no procedimento.
+**Gabarito: A.** As gotas carregam sal dissolvido por transporte mecânico. Isso contamina o líquido recolhido sem exigir que o sal vaporize. O problema é o arraste de solução, não uma mudança da volatilidade do sal.
 
 Revisor/data: pendentes.
 
 ## C63 — Energia elétrica e eficiência
 
-ID: d1432000-0000-4000-8000-000000000063. Versão: 1. Dificuldade estimada: hard. Família: C3.
+ID: d1432000-0000-4000-8000-000000000063. Versão: 2. Dificuldade estimada: medium. Família: C3.
 
-Situação experimental fictícia:
 Uma bomba recebe 600 W de potência elétrica durante 10 minutos. Sua eficiência de conversão em energia útil é 70%; o restante aquece o equipamento e o ambiente. Uma segunda bomba recebe 500 W, tem eficiência de 84% e realiza a mesma transferência de água nas condições consideradas.
 
 Uma fonte fornece apenas 500 W. Qual bomba pode manter os 420 W úteis nas condições descritas?
@@ -1201,9 +1138,8 @@ Revisor/data: pendentes.
 
 ## C64 — Circuitos e associação de resistores
 
-ID: d1432000-0000-4000-8000-000000000064. Versão: 1. Dificuldade estimada: hard. Família: C4.
+ID: d1432000-0000-4000-8000-000000000064. Versão: 2. Dificuldade estimada: medium. Família: C4.
 
-Situação experimental fictícia:
 Dois resistores ideais de 6 Ω são ligados a uma fonte ideal de 12 V. No circuito I ficam em série; no II, em paralelo. Use U = R × I e P = U × I. Considere fios sem resistência, resistores ôhmicos e ausência de limite de corrente na fonte.
 
 Se um resistor é retirado de cada circuito, deixando os fios restantes sem criar atalhos, qual mudança descreve o resultado?
@@ -1220,9 +1156,8 @@ Revisor/data: pendentes.
 
 ## C65 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000065. Versão: 2. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000065. Versão: 3. Dificuldade estimada: medium. Família: C5.
 
-Situação experimental fictícia:
 Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
 Uma medida de 12 °C após a mistura inicial é compatível com quais condições?
@@ -1239,9 +1174,8 @@ Revisor/data: pendentes.
 
 ## C66 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000066. Versão: 2. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000066. Versão: 3. Dificuldade estimada: easy. Família: C6.
 
-Situação experimental fictícia:
 Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Qual razão entre as contagens de A e B resume o resultado, sem afirmar precisão sobre a massa de oxigênio?
@@ -1258,9 +1192,8 @@ Revisor/data: pendentes.
 
 ## C67 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000067. Versão: 2. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000067. Versão: 3. Dificuldade estimada: easy. Família: C7.
 
-Situação experimental fictícia:
 Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Se a energia inicialmente armazenada cair para 40.000 kJ, mantendo as eficiências, qual é a nova disponibilidade ao predador final?
@@ -1277,10 +1210,9 @@ Revisor/data: pendentes.
 
 ## C68 — Genética e probabilidade
 
-ID: d1432000-0000-4000-8000-000000000068. Versão: 1. Dificuldade estimada: hard. Família: C8.
+ID: d1432000-0000-4000-8000-000000000068. Versão: 2. Dificuldade estimada: medium. Família: C8.
 
-Situação experimental fictícia:
-Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação independente dos gametas e sem diferença de viabilidade entre genótipos. O modelo não pretende explicar toda a herança humana.
+Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação dos alelos, fecundações independentes e igual viabilidade dos genótipos.
 
 O nascimento de um descendente aa altera a probabilidade de aa no próximo nascimento sob as hipóteses dadas?
 
@@ -1296,9 +1228,8 @@ Revisor/data: pendentes.
 
 ## C69 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000069. Versão: 2. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000069. Versão: 3. Dificuldade estimada: medium. Família: C9.
 
-Situação experimental fictícia:
 Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Qual conclusão é inadequada ao modelo mesmo após várias gerações sob a mesma seleção?
@@ -1315,10 +1246,9 @@ Revisor/data: pendentes.
 
 ## C70 — Osmose e membranas
 
-ID: d1432000-0000-4000-8000-000000000070. Versão: 1. Dificuldade estimada: hard. Família: C10.
+ID: d1432000-0000-4000-8000-000000000070. Versão: 2. Dificuldade estimada: medium. Família: C10.
 
-Situação experimental fictícia:
-Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra e despreze transporte ativo no período.
+Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra, pressões hidrostáticas inicialmente iguais e ausência de transporte ativo no período.
 
 Se células de III forem transferidas a I antes de dano irreversível, que mudança se espera inicialmente?
 
@@ -1334,28 +1264,26 @@ Revisor/data: pendentes.
 
 ## C71 — Diluição e concentração
 
-ID: d1432000-0000-4000-8000-000000000071. Versão: 1. Dificuldade estimada: hard. Família: C11.
+ID: d1432000-0000-4000-8000-000000000071. Versão: 2. Dificuldade estimada: medium. Família: C11.
 
-Situação experimental fictícia:
-Um frasco contém 200 mL de solução com 12 g de um soluto completamente dissolvido. Acrescenta-se água até o volume total atingir 600 mL, sem retirar ou adicionar soluto. Depois, 150 mL dessa solução homogênea são separados. Considere volumes medidos após cada etapa e ausência de reação química.
+Uma porção de 150 mL de solução tem concentração de 20 g/L. Acrescenta-se água até o volume total dessa porção chegar a 300 mL, mantendo todo o soluto.
 
-Se a água dos 150 mL separados for evaporada até secar, sem perda de soluto, qual massa sólida resta?
+Qual concentração resulta dessa nova diluição?
 
-- **A)** 6 g
-- **B)** 12 g
-- **C)** 3 g
-- **D)** 20 g
-- **E)** 0 g
+- **A)** 15 g/L
+- **B)** 20 g/L
+- **C)** 10 g/L
+- **D)** 40 g/L
+- **E)** 5 g/L
 
-**Gabarito: C.** A alíquota continha 3 g de soluto. Evaporar apenas solvente concentra a amostra e, ao secar, deixa a mesma massa de soluto não volátil.
+**Gabarito: C.** A porção contém 20 × 0,150 = 3 g de soluto. No volume final de 0,300 L, a concentração é 3/0,300 = 10 g/L. Dobrar o volume sem mudar a massa reduz a concentração à metade.
 
 Revisor/data: pendentes.
 
 ## C72 — Reação química e sistema fechado
 
-ID: d1432000-0000-4000-8000-000000000072. Versão: 1. Dificuldade estimada: hard. Família: C12.
+ID: d1432000-0000-4000-8000-000000000072. Versão: 2. Dificuldade estimada: medium. Família: C12.
 
-Situação experimental fictícia:
 Um frasco fechado contém 5 g de bicarbonato e 25 g de solução ácida. Ao misturá-los, forma-se gás e o recipiente permanece vedado. A balança continua marcando 30 g de conteúdo. Em outro ensaio igual, o recipiente é aberto e parte do gás escapa, deixando 28 g de conteúdo medido.
 
 Que característica permite distinguir a reação de uma simples mudança de estado no relato?
@@ -1372,9 +1300,8 @@ Revisor/data: pendentes.
 
 ## C73 — Pressão e distribuição de força
 
-ID: d1432000-0000-4000-8000-000000000073. Versão: 1. Dificuldade estimada: hard. Família: C13.
+ID: d1432000-0000-4000-8000-000000000073. Versão: 2. Dificuldade estimada: easy. Família: C13.
 
-Situação experimental fictícia:
 Um bloco exerce força de 600 N sobre uma superfície horizontal. Na posição I, apoia-se em área de 0,03 m²; na II, em 0,06 m². Use pressão média = força/área e despreze irregularidades do apoio. A massa do bloco não muda ao girá-lo.
 
 Que aplicação usa o mesmo princípio para reduzir pressão sobre solo pouco resistente?
@@ -1391,10 +1318,9 @@ Revisor/data: pendentes.
 
 ## C74 — Ondas e mudança de meio
 
-ID: d1432000-0000-4000-8000-000000000074. Versão: 1. Dificuldade estimada: hard. Família: C14.
+ID: d1432000-0000-4000-8000-000000000074. Versão: 2. Dificuldade estimada: medium. Família: C14.
 
-Situação experimental fictícia:
-Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ. Não há informação suficiente para calcular amplitudes ou energias transmitidas.
+Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ.
 
 A velocidade menor em II prova que a onda perdeu metade de sua energia?
 
@@ -1410,9 +1336,8 @@ Revisor/data: pendentes.
 
 ## C75 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000075. Versão: 2. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000075. Versão: 3. Dificuldade estimada: medium. Família: C15.
 
-Situação experimental fictícia:
 Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Se o eixo não tivesse inclinação, mantendo a translação, o que mudaria no mecanismo descrito?
@@ -1429,9 +1354,8 @@ Revisor/data: pendentes.
 
 ## C76 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000076. Versão: 1. Dificuldade estimada: hard. Família: C16.
+ID: d1432000-0000-4000-8000-000000000076. Versão: 2. Dificuldade estimada: medium. Família: C16.
 
-Situação experimental fictícia:
 Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Que resultado adicional seria coerente com respiração aeróbia no frasco A?
@@ -1448,9 +1372,8 @@ Revisor/data: pendentes.
 
 ## C77 — Eutrofização e oxigênio dissolvido
 
-ID: d1432000-0000-4000-8000-000000000077. Versão: 1. Dificuldade estimada: hard. Família: C17.
+ID: d1432000-0000-4000-8000-000000000077. Versão: 2. Dificuldade estimada: medium. Família: C17.
 
-Situação experimental fictícia:
 Após receber escoamento rico em nutrientes, um lago apresenta crescimento de algas. Dias depois, parte delas morre; aumenta a atividade de decompositores e cai o oxigênio dissolvido. Em noites sem luz, a concentração chega a 2 mg/L, abaixo do valor anterior de 8 mg/L. O experimento é um cenário simplificado de eutrofização.
 
 Que medida enfrenta a causa descrita, em vez de apenas aumentar oxigênio temporariamente?
@@ -1467,10 +1390,9 @@ Revisor/data: pendentes.
 
 ## C78 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000078. Versão: 1. Dificuldade estimada: hard. Família: C18.
+ID: d1432000-0000-4000-8000-000000000078. Versão: 2. Dificuldade estimada: medium. Família: C18.
 
-Situação experimental fictícia:
-Em um cultivo com espaço e alimento limitados, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos. O ambiente continua sendo monitorado, pois sua capacidade não é considerada imutável.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
 
 Qual resultado pode produzir estabilidade em torno de 400 mesmo com reprodução contínua?
 
@@ -1486,9 +1408,8 @@ Revisor/data: pendentes.
 
 ## C79 — Placas tectônicas e evidências
 
-ID: d1432000-0000-4000-8000-000000000079. Versão: 1. Dificuldade estimada: hard. Família: C19.
+ID: d1432000-0000-4000-8000-000000000079. Versão: 2. Dificuldade estimada: medium. Família: C19.
 
-Situação experimental fictícia:
 Em uma região, terremotos se concentram numa faixa estreita. Há uma cadeia montanhosa paralela à faixa e um alinhamento de vulcões no continente. Estudos indicam que uma placa oceânica mergulha sob uma continental. Em outra região, duas placas se afastam e há formação de nova crosta junto a uma dorsal.
 
 Se duas placas deslizarem lateralmente uma em relação à outra, que comparação evita confundir esse limite com a dorsal?
@@ -1505,10 +1426,9 @@ Revisor/data: pendentes.
 
 ## C80 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000080. Versão: 2. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000080. Versão: 3. Dificuldade estimada: medium. Família: C20.
 
-Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Que observação impediria concluir que B não recebeu calor durante o teste?
 
@@ -1524,9 +1444,8 @@ Revisor/data: pendentes.
 
 ## C81 — Densidade e flutuação
 
-ID: d1432000-0000-4000-8000-000000000081. Versão: 2. Dificuldade estimada: hard. Família: C1.
+ID: d1432000-0000-4000-8000-000000000081. Versão: 3. Dificuldade estimada: medium. Família: C1.
 
-Situação experimental fictícia:
 Um laboratório mede a massa de 240 g e o volume de 300 cm³ de um objeto homogêneo. Ele é colocado primeiro em água (densidade 1,0 g/cm³) e depois em um líquido de densidade 0,6 g/cm³. Considere que o objeto não absorve líquido, não se dissolve.
 
 Para testar a influência da densidade do líquido, qual procedimento controla melhor as demais características do objeto?
@@ -1543,28 +1462,26 @@ Revisor/data: pendentes.
 
 ## C82 — Separação de misturas e conservação
 
-ID: d1432000-0000-4000-8000-000000000082. Versão: 1. Dificuldade estimada: hard. Família: C2.
+ID: d1432000-0000-4000-8000-000000000082. Versão: 2. Dificuldade estimada: medium. Família: C2.
 
-Situação experimental fictícia:
-Uma amostra contém 20 g de areia seca e 30 g de sal completamente dissolvido em 150 g de água. A areia é insolúvel; o sal não é volátil nas condições do experimento. Após filtração ideal, o líquido é dividido em duas partes iguais: uma sofre evaporação até secar; a outra, destilação com coleta completa da água.
+Uma amostra de 20 g de areia, 30 g de sal e 150 g de água é filtrada sem perdas. O filtrado homogêneo é dividido ao meio. Uma metade é evaporada até secar, liberando sua água para o ambiente; a outra é destilada, recolhendo toda a sua água. A areia e os dois resíduos de sal são recolhidos secos.
 
-Qual massa total permite verificar a recuperação completa dos três componentes antes de dividir o filtrado?
+Qual massa total de materiais é efetivamente recolhida ao final?
 
-- **A)** 200 g
-- **B)** 150 g
-- **C)** 50 g
-- **D)** 170 g
-- **E)** 180 g
+- **A)** 125 g
+- **B)** 95 g
+- **C)** 110 g
+- **D)** 180 g
+- **E)** 200 g
 
-**Gabarito: A.** A massa inicial é 20 + 30 + 150 = 200 g. Sem perdas, a soma das massas recuperadas deve conservar esse total; areia e sal não deixam de contar por serem separados.
+**Gabarito: A.** Recolhem-se 20 g de areia, 15 + 15 = 30 g de sal e 150/2 = 75 g de água: total de 125 g. Os outros 75 g de água foram liberados na evaporação aberta. A conservação da massa inclui essa água no ambiente; não significa recuperação integral.
 
 Revisor/data: pendentes.
 
 ## C83 — Energia elétrica e eficiência
 
-ID: d1432000-0000-4000-8000-000000000083. Versão: 1. Dificuldade estimada: hard. Família: C3.
+ID: d1432000-0000-4000-8000-000000000083. Versão: 2. Dificuldade estimada: medium. Família: C3.
 
-Situação experimental fictícia:
 Uma bomba recebe 600 W de potência elétrica durante 10 minutos. Sua eficiência de conversão em energia útil é 70%; o restante aquece o equipamento e o ambiente. Uma segunda bomba recebe 500 W, tem eficiência de 84% e realiza a mesma transferência de água nas condições consideradas.
 
 Qual interpretação respeita conservação de energia e eficiência?
@@ -1575,15 +1492,14 @@ Qual interpretação respeita conservação de energia e eficiência?
 - **D)** A eficiência de 84% significa criação de energia pela segunda bomba.
 - **E)** A energia não convertida em trabalho útil é transferida como outras formas, principalmente calor.
 
-**Gabarito: E.** Eficiência descreve a fração aproveitada para a finalidade considerada. As perdas úteis não são desaparecimento de energia: há transferência para calor e outras formas.
+**Gabarito: E.** Eficiência descreve a fração aproveitada para a finalidade considerada. As perdas para a finalidade considerada não são desaparecimento de energia: há transferência para calor e outras formas.
 
 Revisor/data: pendentes.
 
 ## C84 — Circuitos e associação de resistores
 
-ID: d1432000-0000-4000-8000-000000000084. Versão: 1. Dificuldade estimada: hard. Família: C4.
+ID: d1432000-0000-4000-8000-000000000084. Versão: 2. Dificuldade estimada: medium. Família: C4.
 
-Situação experimental fictícia:
 Dois resistores ideais de 6 Ω são ligados a uma fonte ideal de 12 V. No circuito I ficam em série; no II, em paralelo. Use U = R × I e P = U × I. Considere fios sem resistência, resistores ôhmicos e ausência de limite de corrente na fonte.
 
 Qual conclusão depende explicitamente da hipótese de fonte ideal adotada?
@@ -1600,12 +1516,11 @@ Revisor/data: pendentes.
 
 ## C85 — Temperatura e equilíbrio térmico
 
-ID: d1432000-0000-4000-8000-000000000085. Versão: 2. Dificuldade estimada: hard. Família: C5.
+ID: d1432000-0000-4000-8000-000000000085. Versão: 3. Dificuldade estimada: medium. Família: C5.
 
-Situação experimental fictícia:
 Em um recipiente isolado, misturam-se 200 g de água a 60 °C com 400 g de água a 15 °C. Não há mudança de fase nem troca de calor com o recipiente ou ambiente. Ambas as porções têm o mesmo calor específico.
 
-Se o recipiente inicialmente frio absorvesse calor, mantendo o restante comparável, o que se esperaria em relação aos 30 °C calculados?
+Se o recipiente inicialmente a 15 °C absorvesse calor, mantendo o restante comparável, o que se esperaria em relação aos 30 °C calculados?
 
 - **A)** Temperatura final menor que 30 °C, pois parte da energia aqueceria o recipiente.
 - **B)** Nenhuma diferença, independentemente da capacidade térmica do recipiente.
@@ -1619,9 +1534,8 @@ Revisor/data: pendentes.
 
 ## C86 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000086. Versão: 2. Dificuldade estimada: hard. Família: C6.
+ID: d1432000-0000-4000-8000-000000000086. Versão: 3. Dificuldade estimada: medium. Família: C6.
 
-Situação experimental fictícia:
 Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Como melhorar a confiabilidade da conclusão sobre intensidade luminosa?
@@ -1638,9 +1552,8 @@ Revisor/data: pendentes.
 
 ## C87 — Fluxo de energia e cadeias alimentares
 
-ID: d1432000-0000-4000-8000-000000000087. Versão: 2. Dificuldade estimada: hard. Família: C7.
+ID: d1432000-0000-4000-8000-000000000087. Versão: 3. Dificuldade estimada: medium. Família: C7.
 
-Situação experimental fictícia:
 Em uma cadeia simplificada, produtores armazenam 80.000 kJ disponíveis em um período. Considere que 10% da energia de cada nível se torna disponível ao nível seguinte. A cadeia é: plantas → herbívoros → pequenos predadores → predador final.
 
 Que afirmação distingue corretamente decomposição de fluxo energético?
@@ -1657,10 +1570,9 @@ Revisor/data: pendentes.
 
 ## C88 — Genética e probabilidade
 
-ID: d1432000-0000-4000-8000-000000000088. Versão: 1. Dificuldade estimada: hard. Família: C8.
+ID: d1432000-0000-4000-8000-000000000088. Versão: 2. Dificuldade estimada: easy. Família: C8.
 
-Situação experimental fictícia:
-Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação independente dos gametas e sem diferença de viabilidade entre genótipos. O modelo não pretende explicar toda a herança humana.
+Em uma característica hipotética de um organismo diploide, o alelo A é dominante e a é recessivo. A característica recessiva aparece apenas em aa. Dois indivíduos Aa produzem descendentes, com segregação dos alelos, fecundações independentes e igual viabilidade dos genótipos.
 
 Um indivíduo aa cruza com outro AA. Que resultado se espera quanto ao genótipo dos descendentes?
 
@@ -1676,9 +1588,8 @@ Revisor/data: pendentes.
 
 ## C89 — Seleção de resistência bacteriana
 
-ID: d1432000-0000-4000-8000-000000000089. Versão: 2. Dificuldade estimada: hard. Família: C9.
+ID: d1432000-0000-4000-8000-000000000089. Versão: 3. Dificuldade estimada: medium. Família: C9.
 
-Situação experimental fictícia:
 Uma população bacteriana inclui variantes hereditárias: 99% são sensíveis a uma substância experimental e 1% são resistentes. Sob exposição, sobrevivem 1% das sensíveis e 90% das resistentes. Todas as sobreviventes podem se reproduzir. Considere população inicial de 100.000 bactérias.
 
 Qual comparação ajuda a avaliar o papel seletivo da exposição?
@@ -1695,10 +1606,9 @@ Revisor/data: pendentes.
 
 ## C90 — Osmose e membranas
 
-ID: d1432000-0000-4000-8000-000000000090. Versão: 1. Dificuldade estimada: hard. Família: C10.
+ID: d1432000-0000-4000-8000-000000000090. Versão: 2. Dificuldade estimada: hard. Família: C10.
 
-Situação experimental fictícia:
-Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra e despreze transporte ativo no período.
+Três amostras iguais de células vegetais são colocadas em soluções I, II e III. A concentração externa de solutos não permeantes é, respectivamente, menor, igual e maior que a interna inicial. A membrana permite passagem de água, mas não desses solutos durante a observação. Considere a parede celular íntegra, pressões hidrostáticas inicialmente iguais e ausência de transporte ativo no período.
 
 Que alteração impediria usar diretamente as previsões anteriores?
 
@@ -1714,28 +1624,26 @@ Revisor/data: pendentes.
 
 ## C91 — Diluição e concentração
 
-ID: d1432000-0000-4000-8000-000000000091. Versão: 1. Dificuldade estimada: hard. Família: C11.
+ID: d1432000-0000-4000-8000-000000000091. Versão: 2. Dificuldade estimada: medium. Família: C11.
 
-Situação experimental fictícia:
-Um frasco contém 200 mL de solução com 12 g de um soluto completamente dissolvido. Acrescenta-se água até o volume total atingir 600 mL, sem retirar ou adicionar soluto. Depois, 150 mL dessa solução homogênea são separados. Considere volumes medidos após cada etapa e ausência de reação química.
+Uma solução aquosa contém um soluto não volátil e estável durante o aquecimento. Pretende-se aumentar sua concentração sem acrescentar soluto.
 
-Qual procedimento aumenta a concentração sem acrescentar soluto?
+Qual procedimento atende ao objetivo?
 
-- **A)** Retirar uma alíquota homogênea mantendo o restante.
+- **A)** Acrescentar água até dobrar o volume.
 - **B)** Evaporar parte da água, mantendo o soluto no recipiente.
-- **C)** Transferir toda a solução para um frasco de maior capacidade.
-- **D)** Acrescentar água até dobrar o volume.
-- **E)** Dividir a solução homogênea em dois frascos iguais.
+- **C)** Dividir a solução em frascos iguais e considerar cada porção mais concentrada.
+- **D)** Retirar uma porção homogênea e manter o restante sem alterações.
+- **E)** Transferir toda a solução para um recipiente de menor capacidade, sem alterar o volume.
 
-**Gabarito: B.** Reduzir o volume do solvente sem perder soluto aumenta a razão massa/volume. Divisão ou transferência não alteram essa razão; acrescentar água a diminui.
+**Gabarito: B.** Ao evaporar parte da água sem perder soluto, diminui-se o volume da solução e aumenta-se a razão massa/volume. Retirada homogênea, transferência ou divisão não mudam essa razão; acrescentar água a diminui.
 
 Revisor/data: pendentes.
 
 ## C92 — Reação química e sistema fechado
 
-ID: d1432000-0000-4000-8000-000000000092. Versão: 1. Dificuldade estimada: hard. Família: C12.
+ID: d1432000-0000-4000-8000-000000000092. Versão: 2. Dificuldade estimada: medium. Família: C12.
 
-Situação experimental fictícia:
 Um frasco fechado contém 5 g de bicarbonato e 25 g de solução ácida. Ao misturá-los, forma-se gás e o recipiente permanece vedado. A balança continua marcando 30 g de conteúdo. Em outro ensaio igual, o recipiente é aberto e parte do gás escapa, deixando 28 g de conteúdo medido.
 
 Como medir a massa total dos produtos no ensaio aberto sem perder a parcela gasosa?
@@ -1752,9 +1660,8 @@ Revisor/data: pendentes.
 
 ## C93 — Pressão e distribuição de força
 
-ID: d1432000-0000-4000-8000-000000000093. Versão: 1. Dificuldade estimada: hard. Família: C13.
+ID: d1432000-0000-4000-8000-000000000093. Versão: 2. Dificuldade estimada: medium. Família: C13.
 
-Situação experimental fictícia:
 Um bloco exerce força de 600 N sobre uma superfície horizontal. Na posição I, apoia-se em área de 0,03 m²; na II, em 0,06 m². Use pressão média = força/área e despreze irregularidades do apoio. A massa do bloco não muda ao girá-lo.
 
 Que limitação impede afirmar que a pressão é idêntica em todos os pontos de um apoio real?
@@ -1771,10 +1678,9 @@ Revisor/data: pendentes.
 
 ## C94 — Ondas e mudança de meio
 
-ID: d1432000-0000-4000-8000-000000000094. Versão: 1. Dificuldade estimada: hard. Família: C14.
+ID: d1432000-0000-4000-8000-000000000094. Versão: 2. Dificuldade estimada: easy. Família: C14.
 
-Situação experimental fictícia:
-Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ. Não há informação suficiente para calcular amplitudes ou energias transmitidas.
+Uma onda periódica tem frequência de 5 Hz e se propaga a 20 m/s no meio I. Ao entrar no meio II, sua velocidade passa a 10 m/s, mantendo a frequência imposta pela fonte. Use v = f × λ.
 
 Se a fonte passar a 10 Hz no meio I, mantendo velocidade de 20 m/s, qual será o comprimento de onda?
 
@@ -1790,9 +1696,8 @@ Revisor/data: pendentes.
 
 ## C95 — Estações e duração da luz
 
-ID: d1432000-0000-4000-8000-000000000095. Versão: 2. Dificuldade estimada: hard. Família: C15.
+ID: d1432000-0000-4000-8000-000000000095. Versão: 3. Dificuldade estimada: medium. Família: C15.
 
-Situação experimental fictícia:
 Uma escola compara duas cidades de latitudes semelhantes em hemisférios opostos. Em dezembro, a cidade do hemisfério sul tem cerca de 14 horas de luz e a do norte, 10 horas. Em junho os valores se invertem.
 
 Qual cuidado evita transformar o exemplo de horas de luz em uma regra para qualquer cidade?
@@ -1809,9 +1714,8 @@ Revisor/data: pendentes.
 
 ## C96 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000096. Versão: 1. Dificuldade estimada: hard. Família: C16.
+ID: d1432000-0000-4000-8000-000000000096. Versão: 2. Dificuldade estimada: medium. Família: C16.
 
-Situação experimental fictícia:
 Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Se A estivesse aberto e recebesse ar continuamente, que dificuldade surgiria?
@@ -1828,9 +1732,8 @@ Revisor/data: pendentes.
 
 ## C97 — Eutrofização e oxigênio dissolvido
 
-ID: d1432000-0000-4000-8000-000000000097. Versão: 1. Dificuldade estimada: hard. Família: C17.
+ID: d1432000-0000-4000-8000-000000000097. Versão: 2. Dificuldade estimada: medium. Família: C17.
 
-Situação experimental fictícia:
 Após receber escoamento rico em nutrientes, um lago apresenta crescimento de algas. Dias depois, parte delas morre; aumenta a atividade de decompositores e cai o oxigênio dissolvido. Em noites sem luz, a concentração chega a 2 mg/L, abaixo do valor anterior de 8 mg/L. O experimento é um cenário simplificado de eutrofização.
 
 Qual cuidado é necessário ao interpretar uma única medida diurna de oxigênio?
@@ -1847,10 +1750,9 @@ Revisor/data: pendentes.
 
 ## C98 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000098. Versão: 1. Dificuldade estimada: hard. Família: C18.
+ID: d1432000-0000-4000-8000-000000000098. Versão: 2. Dificuldade estimada: medium. Família: C18.
 
-Situação experimental fictícia:
-Em um cultivo com espaço e alimento limitados, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos. O ambiente continua sendo monitorado, pois sua capacidade não é considerada imutável.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
 
 Qual informação adicional ajuda a investigar o mecanismo da desaceleração?
 
@@ -1866,9 +1768,8 @@ Revisor/data: pendentes.
 
 ## C99 — Placas tectônicas e evidências
 
-ID: d1432000-0000-4000-8000-000000000099. Versão: 2. Dificuldade estimada: hard. Família: C19.
+ID: d1432000-0000-4000-8000-000000000099. Versão: 3. Dificuldade estimada: medium. Família: C19.
 
-Situação experimental fictícia:
 Em uma região, terremotos se concentram numa faixa estreita. Há uma cadeia montanhosa paralela à faixa e um alinhamento de vulcões no continente. Estudos indicam que uma placa oceânica mergulha sob uma continental. Em outra região, duas placas se afastam e há formação de nova crosta junto a uma dorsal.
 
 Um relatório identifica subducção e registra terremotos anteriores na região. Qual conclusão pode ser sustentada por essas informações?
@@ -1885,10 +1786,9 @@ Revisor/data: pendentes.
 
 ## C100 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000100. Versão: 2. Dificuldade estimada: hard. Família: C20.
+ID: d1432000-0000-4000-8000-000000000100. Versão: 3. Dificuldade estimada: easy. Família: C20.
 
-Situação experimental fictícia:
-Duas caixas idênticas, com mesma quantidade de gelo e mesma temperatura inicial, são colocadas no mesmo ambiente. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Se os dois conteúdos forem observados por tempo suficiente no mesmo ambiente, sem fontes ativas, o que se espera em termos de tendência térmica?
 

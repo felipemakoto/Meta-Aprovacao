@@ -10,10 +10,11 @@
 <main>
 <header><small>Meta Aprovação · Material interno</small><h1>Revisão das questões</h1>
 <p>Leia, confira a resposta e registre ajustes. As marcações ficam neste navegador e não publicam questões no site.</p>
-<p class="muted">Catálogo revisado: 500 questões autorais. Enunciados, alternativas e tarefas de interpretação foram aprimorados. Níveis médio/difícil estimados; revisão humana pendente.</p>
+<p class="muted">Catálogo revisado: 500 questões autorais. Enunciados, alternativas e tarefas de interpretação foram aprimorados. Dificuldade estimada por tarefa, com referência ETEC/IFSP; revisão humana pendente.</p>
 <p class="muted">Anotações da versão anterior devem ser consultadas no arquivo anterior; não são importadas automaticamente nesta revisão.</p></header>
 <section class="tools" aria-label="Filtros e revisor">
 <label>Matéria<select id="subject"><option value="">Todas as matérias</option></select></label>
+<label>Dificuldade estimada<select id="difficulty"><option value="">Todas</option><option value="easy">Fácil</option><option value="medium">Média</option><option value="hard">Difícil</option></select></label>
 <label>Marcação<select id="filter"><option value="">Todas</option><option value="pending">Pendentes</option><option value="correction">Com ajustes</option><option value="checked">Conferidas neste arquivo</option></select></label>
 <label class="wide">Buscar por número, tema ou texto<input id="search" type="search" placeholder="Ex.: M03, fotossíntese, mapas"></label>
 <label class="wide">Nome do revisor<input id="reviewer" maxlength="120" autocomplete="off" placeholder="Preencha antes de marcar uma questão como conferida"></label>
@@ -33,6 +34,7 @@ const key="meta-editorial-"+catalog.catalogHash;
 const $=id=>document.getElementById(id);
 let entries={},reviewer="";
 const states=["pending","correction","checked"];
+const levels={easy:"Fácil",medium:"Média",hard:"Difícil"};
 function validate(data,legacy=false){
  if(!data||data.schema!==1||data.catalogHash!==(legacy?catalog.previousCatalogHash:catalog.catalogHash)||typeof data.reviewer!=="string"||data.reviewer.length>120||!Array.isArray(data.entries)||data.entries.length>catalog.questions.length)throw Error("Catálogo diferente ou arquivo inválido. Nenhuma anotação foi substituída.");
  const ids=new Set();
@@ -51,9 +53,9 @@ function render(){
  $("questions").replaceChildren();
  for(const q of catalog.questions){
   const article=node("article",undefined,"question");article.dataset.id=q.id;article.id=q.label;
-  article.append(node("small",q.subjectName+" · "+q.label+" · v"+q.version),node("h2",q.topic),node("p",q.statement,"statement"));
+  article.append(node("small",q.subjectName+" · "+q.label+" · v"+q.version+" · "+levels[q.difficulty]+" (estimada)"),node("h2",q.topic),node("p",q.statement,"statement"));
   const list=node("ul",undefined,"options");q.options.forEach((o,i)=>{const li=node("li");li.append(node("strong","ABCDE"[i]+")"),node("span",o));list.append(li);});article.append(list);
-  const details=node("details");details.open=$("answers").checked;details.append(node("summary","Conferir gabarito e explicação"));const answer=node("div",undefined,"answer");answer.append(node("strong","Resposta "+q.correctAnswer+" · "+q.options["ABCDE".indexOf(q.correctAnswer)]),node("p",q.explanation));
+  const details=node("details");details.open=$("answers").checked;details.append(node("summary","Conferir gabarito e explicação"));const answer=node("div",undefined,"answer");answer.append(node("strong","Resposta "+q.correctAnswer+" · "+q.options["ABCDE".indexOf(q.correctAnswer)]),node("p",q.explanation));if(q.difficultyReview)answer.append(node("p","Dificuldade estimada · "+levels[q.difficulty]+". Tarefa: "+q.difficultyReview.skill+". "+q.difficultyReview.rationale,"muted"));
   for(const r of q.references){const p=node("p",undefined,"refs");const a=node("a",r.title);const url=new URL(r.url);if(url.protocol!=="https:")continue;a.href=url.href;a.target="_blank";a.rel="noopener noreferrer";p.append(a,node("span"," — "+r.access));answer.append(p);}details.append(answer);article.append(details);
   const label=node("label","Sua marcação para "+q.label);const select=node("select");select.setAttribute("aria-label","Marcação de "+q.label);["Pendente","Precisa de ajustes","Conferida neste arquivo"].forEach((s,i)=>{const o=node("option",s);o.value=states[i];select.append(o);});select.value=entries[q.id]?.status??"pending";label.append(select);
   const noteLabel=node("label","Anotações para "+q.label);const note=node("textarea");note.maxLength=8000;note.setAttribute("aria-label","Anotações de "+q.label);note.value=entries[q.id]?.note??"";noteLabel.append(note);
@@ -62,8 +64,8 @@ function render(){
   select.addEventListener("change",update);note.addEventListener("input",()=>{if(select.value==="checked")select.value="pending";update();});article.append(label,noteLabel,signed);$("questions").append(article);
  }filter();
 }
-function filter(){let visible=0;const search=$("search").value.trim().toLocaleLowerCase("pt-BR");for(const article of $("questions").children){const q=byId.get(article.dataset.id);const status=entries[q.id]?.status??"pending";article.hidden=Boolean(($("subject").value&&q.subject!==$("subject").value)||($("filter").value&&status!==$("filter").value)||(search&&![q.label,q.topic,q.statement,...q.options].join(" ").toLocaleLowerCase("pt-BR").includes(search)));if(!article.hidden)visible++;}const checked=Object.values(entries).filter(e=>e.status==="checked").length;$("count").textContent=visible+" de "+catalog.questions.length+" questões · "+checked+" conferidas neste arquivo";$("empty").hidden=visible!==0;}
-for(const id of ["subject","filter","search"])$(id).addEventListener("input",filter);
+function filter(){let visible=0;const search=$("search").value.trim().toLocaleLowerCase("pt-BR");for(const article of $("questions").children){const q=byId.get(article.dataset.id);const status=entries[q.id]?.status??"pending";article.hidden=Boolean(($("subject").value&&q.subject!==$("subject").value)||($("filter").value&&status!==$("filter").value)||($("difficulty").value&&q.difficulty!==$("difficulty").value)||(search&&![q.label,q.topic,q.statement,...q.options].join(" ").toLocaleLowerCase("pt-BR").includes(search)));if(!article.hidden)visible++;}const checked=Object.values(entries).filter(e=>e.status==="checked").length;$("count").textContent=visible+" de "+catalog.questions.length+" questões · "+checked+" conferidas neste arquivo";$("empty").hidden=visible!==0;}
+for(const id of ["subject","difficulty","filter","search"])$(id).addEventListener("input",filter);
 $("reviewer").addEventListener("input",()=>{reviewer=$("reviewer").value;save();});
 $("answers").addEventListener("change",()=>{for(const d of document.querySelectorAll("article details"))d.open=$("answers").checked;});
 function exportNotes(data,filename){const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const link=node("a");link.href=url;link.download=filename;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}

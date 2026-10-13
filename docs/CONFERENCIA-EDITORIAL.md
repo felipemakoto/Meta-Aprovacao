@@ -1,39 +1,37 @@
-# Conferência editorial atual — etapa 44
+# Conferência editorial atual — etapa 45
 
-Catálogo de 500 questões autorais, revisado em 13/10/2026: 100 por matéria. 186 questões tiveram conteúdo alterado: 30 de Matemática, 100 de Português, 40 de Ciências, 8 de História e 8 de Geografia. Mantidos IDs, ordem e versões dos registros sem alteração; nenhuma questão acrescentada. Todos os registros permanecem em rascunho, sem aprovação humana atribuída. Hash: `22e6bcd78f5b3f7b22373a9968196e30c12e6094d0189a2b3250964e96485df9`.
+Revisão em 13/10/2026 das 500 questões, cem por matéria. 499 registros alterados: 456 têm alterações em texto, alternativas, resposta ou explicação; 429 mudaram de dificuldade. Essas contagens se sobrepõem. Todas as 500 tarefas receberam análise e fundamento de dificuldade. IDs e ordem foram preservados; versões aumentam somente quando o conteúdo editorial ou sua dificuldade mudam. Todas continuam draft, sem revisão humana atribuída.
 
-## Melhorias desta revisão
+## Correções solicitadas
 
-Retiradas pistas que forneciam o método de cálculo ou a interpretação antes do comando. As vinte tarefas repetidas de paráfrase foram substituídas por reescritas específicas de sentido, concordância, regência, pontuação, voz verbal e discurso indireto. Manchetes usam alternativas do mesmo gênero. Distratores de oito questões por área em Ciências, História e Geografia foram reescritos com erros conceituais plausíveis; perguntas agora articulam informações e cenários concretos.
+C02 separa planejamento de separação e experimento já executado. C22: 15 g de sal; C42: 75 g de água; C82: 125 g efetivamente recolhidos, porque 75 g de água se perderam na evaporação aberta. Isso distingue recuperação de conservação de massa.
 
-Corrigida a série de médias para notas entre zero e dez; explicitada a concentração de gás carbônico nos controles de fotossíntese. Na regra de inscrição, a necessidade dos dois requisitos agora é explícita. Substituída a pergunta ambígua sobre previsão de terremotos. Gabaritos numéricos e versões têm testes independentes. [Registro completo da revisão](QUALIDADE-QUESTOES-ETAPA-44.md).
+M06 e suas variantes têm contagens inteiras e arrecadações possíveis; M07 usa notas entre zero e dez. A tarefa M87 pede explicitamente avaliar uma meta impossível, em vez de oferecer uma nota fora da escala como distrator numérico. Corrigidos também distratores negativos de contagem e volumes acima da capacidade em outras famílias.
 
-## Conteúdo e nível
+Os cinco enunciados de C11, G01 e G16 usam somente os dados pertinentes a cada comando. Nos demais, retirados avisos repetidos e orientações dispensáveis. Mantidas unidades, hipóteses físicas e condições necessárias. Corrigidas referência possessiva, terminologia gramatical, legitimação da violência e detalhes de controle experimental.
 
-Problemas com interpretação de dados, cálculos encadeados, comparação de informações, controle experimental, leitura crítica e análise de fontes. Dificuldades medium/hard estimadas pelo autor, sem calibração por desempenho; enunciado maior ou etiqueta de dificuldade não certificam nível de prova. Os conceitos permanecem no escopo escolar; revisão humana deve avaliar clareza, resposta única, distratores e exigência real de raciocínio.
+## Diversificação e verificação
 
-| Matéria | Questões | Média estimada | Difícil estimada | Famílias/temas | Versões |
-| --- | ---: | ---: | ---: | ---: | --- |
-| Matemática | 100 | 0 | 100 | 20 | 1, 2, 3, 4 |
-| Português | 100 | 60 | 40 | 20 | 2, 3, 4 |
-| Ciências | 100 | 0 | 100 | 20 | 1, 2, 3, 4 |
-| História | 100 | 0 | 100 | 20 | 1, 2, 3, 4 |
-| Geografia | 100 | 0 | 100 | 20 | 1, 2, 3 |
+Matemática: 44 tarefas substituídas por problemas inversos, comparação, validação de relatórios, viabilidade e hipóteses. Velocidade média agora inclui tempos iguais, trechos distintos e parada. Sequências incluem crescimento aditivo, multiplicativo e reconstrução do primeiro termo. História: vinte casos novos, com fontes, cronologia, relações institucionais e aplicação. Português: vinte análises linguísticas contextualizadas e distratores de vinte procedimentos, além de quarenta explicações específicas. Eliminadas duplicações de objetivo em famílias de Geografia e Ciências.
 
-Cem famílias/temas no total, com cinco tarefas ou variações por família. Português, Ciências, História e Geografia usam estímulos compartilhados para perguntas distintas; Matemática inclui variações parametrizadas de problemas. Não são quinhentos estímulos independentes, nem uma garantia de variedade infinita. Letras de resposta reorganizadas de forma reproduzível por ID.
+Os 80 problemas numéricos de Matemática foram conferidos por relações independentes; mais setenta resultados de Ciências, Geografia e História foram recalculados, além de resultados compostos, conservação, probabilidade e fusos. Os vinte problemas conceituais de Matemática e os conteúdos não numéricos tiveram conferência editorial assistida por IA. Testes não demonstram, sozinhos, ausência de ambiguidade em todas as alternativas ou qualidade pedagógica. Os gabaritos e fundamentos das 500 tarefas estão no [registro de conferência](AUDITORIA-GABARITOS-ETAPA-45.md).
 
-## Referências e proveniência
+## Dificuldade estimada por tarefa
 
-Consultados os cadernos oficiais ETEC 2025/2026 disponibilizados pelo CPS e IFSP Integrado, edital 211/2025, tipo 2. As questões deste catálogo são autorais elaboradas com auxílio de IA; não se atribuem enunciados ou gabaritos à banca. Dados experimentais, textos de atividade e indicadores são fictícios. Referências oficiais indicadas na ferramenta servem ao estilo/competências, sem apresentar os exercícios como cópias de provas. Os PDFs oficiais e os limites de uso estão em [Conteúdo de provas](CONTEUDO-PROVAS-ETAPA-43.md).
+| Matéria | Questões | Fácil | Média | Difícil |
+| --- | ---: | ---: | ---: | ---: |
+| Matemática | 100 | 10 | 82 | 8 |
+| Português | 100 | 11 | 80 | 9 |
+| Ciências | 100 | 21 | 76 | 3 |
+| História | 100 | 3 | 97 | 0 |
+| Geografia | 100 | 22 | 76 | 2 |
 
-Matemática/Português têm destino both. Ciências/História/Geografia têm destino etec: o caderno IFSP integrado consultado reúne Matemática e Português, não uma prova geral das cinco matérias.
+Fácil: leitura explícita ou cálculo direto. Média: aplicação de conceito, combinação de dados ou distinção entre condições. Difícil: integração de etapas dependentes, comparação não imediata ou análise de hipóteses. O julgamento considera comando, conhecimento exigido e alternativas, não extensão do texto. Comparação qualitativa com os cadernos oficiais ETEC 2026 e IFSP integrado, edital 211/2025, tipo 2. Não há dados de desempenho de candidatos: classificação editorial, sem calibração estatística. Ciências, História e Geografia referem-se à ETEC; o caderno IFSP consultado concentra Matemática e Português.
 
-## Revisão atual
+## Uso da ferramenta
 
-Abrir `out/revisao-editorial.html` ou o pacote extraído `out/revisao-editorial-meta-aprovacao-v4/revisao-editorial.html`. Filtrar por matéria/tema/número, conferir respostas e exportar o JSON de anotações. O receptor da etapa 42 aceita somente o hash e as versões atuais; ausências continuam pendentes. Nenhuma marcação local publica questões ou modelos. As cinco revisões completas por matéria ficam em `docs/revisao-atual/`.
+Abrir out/revisao-editorial-meta-aprovacao-v5/revisao-editorial.html. Filtrar por matéria, dificuldade, marcação ou busca. Conferir resposta e fundamento; registrar comentários e exportar JSON. Nenhuma marcação local publica questões. v4 e a pasta do revisor foram preservadas; as anotações antigas podem ser exportadas para consulta, sem transferência automática como aprovação da versão nova.
 
-O ZIP e HTML v3 e a pasta já usada pelo amigo foram preservados. A nova ferramenta pode exportar separadamente as anotações v3 se encontrá-las nesse navegador/origem; não as transfere nem trata a conferência anterior como aprovação do conteúdo reformulado. Guarde o JSON e use o HTML antigo para consulta. O [relatório da etapa 41](CONFERENCIA-EDITORIAL-ETAPA-41.md) mantém o catálogo anterior.
+Fonte: content/banco-etec-if.json. Snapshot anterior: content/catalogo-etapa-44.json. Manifesto antes/depois: content/revisao-etapa-45.json. Carga protegida: supabase/content/revisao-etapa-45.sql. Hash: 07dcc140487f6b283554cadcead05fdcbbb759eb0711632e4cd3f59f7bf4cad3.
 
-Na aplicação, a seleção prioriza as questões menos apresentadas na conta, cruzando prática, simulados e diagnósticos salvos. Repetições são permitidas sem aviso específico conforme orientação do usuário; nunca ocorre duplicação de ID dentro de um mesmo simulado. Esta política não representa uma promessa de questões sempre inéditas.
-
-Revisão humana das questões e dos seis modelos continua pendente. Nenhum conteúdo publicado ou venda liberada. Conferência técnica e carga controlada em [Etapa 44](QUALIDADE-QUESTOES-ETAPA-44.md); condições comerciais em [Prontidão](PRONTIDAO-LANCAMENTO.md).
+Critérios, referências e evidências operacionais em [Revisão completa](REVISAO-INTEGRAL-ETAPA-45.md). Revisão humana das questões e dos seis modelos continua pendente. Nenhum conteúdo publicado ou venda liberada.
