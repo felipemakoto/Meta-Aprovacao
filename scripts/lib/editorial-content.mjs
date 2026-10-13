@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { contentVersion, revision } from "./content-versions.mjs";
 
@@ -13,7 +13,16 @@ export const subjects = [
 ];
 export const hash = value => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 
-export function loadCatalog() {
+export function loadCatalog({ historical = false } = {}) {
+  const activeFile = new URL("content/banco-etec-if.json", root);
+  if (!historical && existsSync(activeFile)) {
+    const catalog = JSON.parse(readFileSync(activeFile, "utf8"));
+    assert.equal(catalog.schema, 1);
+    assert.equal(catalog.questions.length, 500);
+    assert.equal(new Set(catalog.questions.map(q => q.id)).size, 500);
+    assert.equal(hash(catalog.questions), catalog.catalogHash);
+    return catalog;
+  }
   // O seed contém somente tuplas de literais; rejeitar qualquer outra forma.
   const seed = readFileSync(new URL("supabase/seed.sql", root), "utf8");
   const initial = [...seed.matchAll(/^  \(('(?:''|[^'])*'.*)\),?\r?$/gm)].map(match => {

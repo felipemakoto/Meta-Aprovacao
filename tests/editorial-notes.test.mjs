@@ -15,20 +15,21 @@ const fixture = entries => ({ schema: 1, catalogHash: catalog.catalogHash, revie
 const parse = data => parseEditorialNotes(JSON.stringify(data), catalog);
 
 test("retorno parcial mantém ausências pendentes e comentários associados à versão correta", () => {
-  const notes = parse(fixture([entry(catalog.questions[2]), entry(catalog.questions[20], "correction", "Rever a inferência.")]));
+  const second = catalog.questions.find(q => q.label === "P01");
+  const notes = parse(fixture([entry(catalog.questions[2]), entry(second, "correction", "Rever a inferência.")]));
   const report = editorialNotesReport(notes, catalog);
-  assert.match(report, /98 pendentes, 1 com ajustes e 1 conferidas no arquivo/);
-  assert.match(report, /M03 · v2/);
-  assert.match(report, /P01 · v1/);
+  assert.ok(report.includes(`${catalog.questions.length - 2} pendentes, 1 com ajustes e 1 conferidas no arquivo`));
+  assert.ok(report.includes(`M03 · v${catalog.questions[2].version}`));
+  assert.ok(report.includes(`P01 · v${second.version}`));
   assert.match(report, /Rever a inferência/);
   assert.match(report, /não autentica o revisor/);
 });
 
-test("cem conferidas não aprovam publicação, e conferida com comentário continua visível", () => {
+test("todas conferidas não aprovam publicação, e conferida com comentário continua visível", () => {
   const data = fixture(catalog.questions.map(q => entry(q)));
   data.entries[0].note = "Conferida, mas ainda sugiro rever o exemplo.";
   const report = editorialNotesReport(parse(data), catalog);
-  assert.match(report, /0 pendentes, 0 com ajustes e 100 conferidas no arquivo/);
+  assert.ok(report.includes(`0 pendentes, 0 com ajustes e ${catalog.questions.length} conferidas no arquivo`));
   assert.match(report, /1 conferidas também contêm comentários/);
   assert.match(report, /não aprova automaticamente/);
   assert.match(report, /Conferida, mas ainda sugiro/);
@@ -86,7 +87,7 @@ test("JSON com BOM e exportação parcial sem data mantêm compatibilidade com a
   delete data.exportedAt;
   const notes = parseEditorialNotes("\uFEFF" + JSON.stringify(data), catalog);
   assert.equal(notes.exportedAt, null);
-  assert.match(editorialNotesReport(notes, catalog), /100 pendentes/);
+  assert.ok(editorialNotesReport(notes, catalog).includes(`${catalog.questions.length} pendentes`));
 });
 
 test("comando preserva JSON, cria relatório separado e não produz saída para catálogo antigo", () => {

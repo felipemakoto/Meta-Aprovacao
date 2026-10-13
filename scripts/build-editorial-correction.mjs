@@ -6,7 +6,7 @@ import { editorialProjection, revision } from "./lib/content-versions.mjs";
 
 assert.ok(process.argv.slice(2).every(a => a === "--check"));
 assert.equal(revision.changes.length, 90);
-const catalog = loadCatalog();
+const catalog = loadCatalog({ historical: true });
 const changedLabels = new Set(["P04", "C16", "C19", "H09"]);
 for (const c of revision.changes) {
   const q = catalog.questions.find(q => q.id === c.id);

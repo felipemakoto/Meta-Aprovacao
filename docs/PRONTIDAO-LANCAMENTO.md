@@ -4,6 +4,8 @@ Implementada em 10/10/2026. Reúne a situação real de conteúdo, catálogo, op
 
 ## Atualização em 12/10/2026
 
+Após a etapa 43, o conteúdo passou para 500 rascunhos, cem por matéria; seis modelos continuam não publicados. Revisão humana da reformulação e ampliação permanece pendente, com [ferramenta v3](CONTEUDO-PROVAS-ETAPA-43.md). A prioridade por histórico permite repetição sem aviso específico conforme nova orientação. Os dados de cem rascunhos no registro da consulta abaixo são anteriores à carga, não o total atual.
+
 Consulta atual: cem questões draft, vinte por matéria, zero revisadas/publicadas; seis modelos draft, zero publicados. Operação/monitor ativos, fila vazia e última execução concluída com sucesso na amostra. Histórico de falhas recorrentes da automação resolvido no instante consultado; não comprova disponibilidade contínua nem identifica sua causa. Configuração local válida e contratação desativada. Inventário financeiro zero e 8.094 execuções técnicas, sem exclusão. O amigo do usuário continua revisando; [recebimento do JSON](RECEBIMENTO-REVISAO.md) preparado, sem aprovação presumida. As seis pendências separadas abaixo permanecem; o item editorial abrange agora as cem questões e os seis modelos.
 
 ## Resultado histórico da etapa 36
@@ -55,7 +57,7 @@ Essa configuração é a do computador onde o comando roda. Ela não comprova os
 
 ## Pendências que exigem evidência separada
 
-1. Revisar as [cem questões atuais](CONFERENCIA-EDITORIAL.md) e os seis modelos, registrar correções/aprovação humana e avaliar variedade/adequação do conteúdo prometido. A aprovação do mockup, dos testes ou um “continue” não publica conteúdo gerado por IA.
+1. Revisar as [quinhentas questões atuais](CONFERENCIA-EDITORIAL.md) e os seis modelos, registrar correções/aprovação humana e avaliar variedade/adequação do conteúdo prometido. A aprovação do mockup, dos testes ou um “continue” não publica conteúdo gerado por IA.
 2. Confirmar o contrato real de moeda BRL, unidade/valores e formato dos campos do pedido/assinatura na Cakto. O verificador mantém divergências ou moeda ausente em revisão.
 3. Validar pagamento e entrega comerciais de ponta a ponta, com ambiente oficial autorizado ou compra explicitamente autorizada. As simulações locais já aprovadas não comprovam esse contrato externo. Não foi realizada compra nesta etapa.
 4. Confirmar horário/fuso de expiração do cupom em 31/10/2026 e desconto somente na primeira mensalidade, além dos valores e taxa no checkout real.

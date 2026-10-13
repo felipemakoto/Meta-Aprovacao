@@ -1,5 +1,9 @@
 # Decisões técnicas
 
+## Etapa 43 — reformulação integral, ampliação e prioridade por histórico
+
+Atender ao novo pedido com cem reformulações versionadas e quatrocentas adições em rascunho, cem por matéria. Usar cadernos oficiais para referência de competências/estilo e identificar os exercícios como autorais, sem reprodução integral ou falsa atribuição à banca. Fonte ativa única com geração reprodutível, histórico antes/depois e SQL explícito que rejeita divergência, conteúdo usado/revisado/publicado e conflitos. Níveis são estimativas; revisão humana continua necessária. Orientação mais recente permite repetir sem aviso: usar frequência e recência da apresentação, cruzando modalidades por conta e preservando snapshots/retomada, sem anunciar repetida como inédita ou alterar seu texto para disfarçar. Trava comum aos implementadores e nenhum acesso cliente ao histórico agregado. Novo HTML/ZIP v3 e JSON compatível com novo catálogo; v2 e marcações anteriores permanecem separados. Guia CONTEUDO-PROVAS-ETAPA-43.md.
+
 ## Etapa 42 — retorno editorial sem publicação automática
 
 Receber o JSON exportado como declaração do revisor, validar hash/versões/IDs e assinatura das conferidas e gerar relatório local separado, preservando o original. Ausências contam como pendentes; comentários permanecem visíveis mesmo em conferidas. Dados recebidos são texto, sem interpretação de HTML/instruções. Não autenticar pessoa, unir versões/revisores silenciosamente ou converter marcação local em status editorial do banco. Revisão dos modelos é separada. Sete testes de formato, compatibilidade, conteúdo e comando aprovados. Guia RECEBIMENTO-REVISAO.md.

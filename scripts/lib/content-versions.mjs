@@ -15,6 +15,14 @@ for (const change of revision.changes) {
   versions.set(change.id, change.after.version);
 }
 export const contentVersion = id => versions.get(id) ?? 1;
+export function activeContentMeta(id) {
+  const active = new URL("../../content/banco-etec-if.json", import.meta.url);
+  if (existsSync(active)) {
+    const q = JSON.parse(readFileSync(active, "utf8")).questions.find(q => q.id === id);
+    if (q) return { version: q.version, targetExam: q.targetExam };
+  }
+  return { version: contentVersion(id), targetExam: "both" };
+}
 export function editorialProjection(q) {
   const { subject, topic, difficulty, statement, options, correctAnswer, explanation, status, version, targetExam } = q;
   return { subject, topic, difficulty, statement, options, correctAnswer, explanation, status, version, targetExam };

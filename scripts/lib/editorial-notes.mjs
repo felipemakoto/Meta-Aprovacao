@@ -1,7 +1,7 @@
 // Recebe marcações locais, sem aprovar conteúdo nem consultar/gravar o banco.
 import { Buffer } from "node:buffer";
 
-export const maxNotesBytes = 1_200_000;
+export const maxNotesBytes = 16_000_000;
 const states = ["pending", "correction", "checked"];
 const validDate = value => typeof value === "string" && /^\d{4}-\d{2}-\d{2}T/.test(value) && Number.isFinite(Date.parse(value));
 const bounded = (value, limit) => typeof value === "string" && value.length <= limit;

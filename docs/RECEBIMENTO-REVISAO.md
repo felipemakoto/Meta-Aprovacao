@@ -1,5 +1,7 @@
 # Recebimento da revisão — etapa 42
 
+Atualização da etapa 43: o catálogo atual tem 500 questões e limite de arquivo de 16 MB. A revisão v2 continua separada; use a ferramenta v3 e [guia atual](CONTEUDO-PROVAS-ETAPA-43.md). O restante registra a preparação anterior.
+
 Preparado em 12/10/2026 enquanto o amigo do usuário continua revisando. Nenhum arquivo real de revisão foi recebido ou aprovação humana registrada nesta etapa. A ferramenta extraída e o ZIP v2 permanecem válidos e não foram modificados.
 
 ## Quando a revisão chegar

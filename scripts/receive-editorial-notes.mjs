@@ -13,7 +13,7 @@ try {
     const stat = statSync(source);
     if (!stat.isFile() || stat.size > maxNotesBytes) throw Error();
     text = readFileSync(source, "utf8");
-  } catch { throw Error("Não foi possível ler um arquivo de anotações de até 1,2 MB. Confira o caminho e o tamanho."); }
+  } catch { throw Error("Não foi possível ler um arquivo de anotações de até 16 MB. Confira o caminho e o tamanho."); }
   const catalog = loadCatalog();
   const notes = parseEditorialNotes(text, catalog);
   const report = editorialNotesReport(notes, catalog);
