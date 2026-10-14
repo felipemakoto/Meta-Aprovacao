@@ -1,5 +1,7 @@
 # Etapa 29 — verificação independente do pagamento
 
+Atualização em 14/10/2026 — etapa 49: [estudo autenticado na produção](VALIDACAO-PRODUCAO-ETAPA-49.md) conferido com conta descartável removida, sem compra. Oferta ativa de R$22,99 e checkout público exibindo R$12,49 inicial/R$23,98 seguintes no Pix Automático. `orders/retrieve` continua sem moeda explícita no contrato documentado; não foi adicionada uma inferência de BRL. A Cakto documenta staging com URL e credenciais fornecidas pelo suporte, sem confirmar checkout hospedado de teste. O responsável informou ainda não ter acesso. [Solicitação preparada](SOLICITACAO-TESTES-CAKTO.md), sem envio. Nenhum pagamento do provedor validado nem contratação liberada. Relatos abaixo são históricos.
+
 Atualização de 09/10/2026: [etapa 32](ACESSO-PAGO-CAKTO.md) conecta a evidência verificada à concessão atômica de trinta dias e trata renovação pela primeira prova. A duração é regra do produto; data final do provedor deixou de ser pré-requisito. Moeda/formato real continuam pendentes para lançamento; testes simulados não comprovam produção. Registros abaixo são históricos.
 
 ## Intenção e evidência integradas em 06/10/2026

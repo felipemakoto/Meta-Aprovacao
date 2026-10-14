@@ -1,5 +1,7 @@
 # Checagem de lançamento — etapa 36
 
+Atualização em 14/10/2026 — etapa 49: [teste autenticado na publicação](VALIDACAO-PRODUCAO-ETAPA-49.md) passou para login, estudo gratuito, cotas, histórico/estatísticas e restrição do Premium, com fixture removida e sem compra. A oferta e o checkout público mostraram os preços esperados e desconto inicial no Pix Automático padrão. Isso avança a conferência de produção, mas não certifica cadastro/e-mail, todos os meios de pagamento ou entrega comercial. Responsável ainda sem staging; [pedido ao suporte preparado](SOLICITACAO-TESTES-CAKTO.md) a partir da documentação oficial, sem envio. Contratação e aprovação comercial seguem false.
+
 Atualização em 14/10/2026 — etapa 48: [instrumentação da automação](DIAGNOSTICO-AUTOMACAO-ETAPA-48.md) publicada e fluxo técnico de pagamento/acesso conferido com provedor simulado e conta temporária removida. Essa evidência não substitui compra comercial nem confirma o contrato externo de moeda/valores. `launchApproved:false` e `checkoutEnabled:false` mantidos; 500 questões e seis modelos continuam publicados. A amostra de operação da etapa 47 abaixo é histórica, não um diagnóstico definitivo da causa.
 
 Implementada em 10/10/2026. Reúne a situação real de conteúdo, catálogo, operação e configuração local, sem liberar vendas. A checagem é administrativa, somente de leitura, com contagens e estados; não exibe enunciados, gabaritos, dados do comprador, referências, IDs comerciais ou credenciais.

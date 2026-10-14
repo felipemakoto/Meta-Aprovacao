@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização em 14/10/2026 — etapa 49: [validação do site publicado](docs/VALIDACAO-PRODUCAO-ETAPA-49.md) com login, prática, rápido, histórico, estatísticas, cotas e negação dos cinco modelos Premium à conta gratuita. Dez grupos integrados aprovados; conta temporária removida. Oferta e checkout conferidos sem compra: R$12,49 inicial com cupom e R$23,98 nas seguintes, no Pix Automático exibido. [Solicitação de staging preparada](docs/SOLICITACAO-TESTES-CAKTO.md), sem envio; acesso ainda não disponível. Contratação continua desativada.
+
 Atualização em 14/10/2026 — etapa 48: [diagnóstico da automação Cakto](docs/DIAGNOSTICO-AUTOMACAO-ETAPA-48.md) publicado, com fase/categoria da falha sem expor dados privados. 35 testes Node/HTTP, seis suítes SQL com rollback, integração de pagamento simulado e build aprovados. 500 questões e seis modelos publicados; contratação Premium continua desativada, sem compra real comprovada.
 
 Atualização em 14/10/2026 — etapa 47: [conferência final e publicação](docs/REVISAO-ETAPA-47.md). Revisão humana adicional dispensada por instrução do responsável; revisão final por IA das 500 questões, treze ajustes e 487 conteúdos/versões preservados. Publicadas 500 questões e seis modelos após 51 testes, ensaio transacional, build e conferência do banco. Ferramenta/ZIP v7; v6 e anotações preservadas. Contratação Premium desativada e [falha intermitente da automação diagnosticada](docs/DIAGNOSTICO-AUTOMACAO-ETAPA-47.md).
