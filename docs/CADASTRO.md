@@ -1,5 +1,7 @@
 # Etapa 14 — cadastro
 
+Atualização em 14/10/2026 — [etapa 50](AUTENTICACAO-ETAPA-50.md): leitura dos formulários limitada a cinco segundos, mantendo teto de bytes e proteção de origem; mensagem de demora e testes adicionais. Cadastro habilitado e confirmação exigida conferidos no Auth; token administrativo de conta descartável foi confirmado, sem entregar e-mail e sem comprovar o callback PKCE completo. Responsável ainda sem SMTP/domínio; [roteiro inicial](SMTP-INICIAL-GMAIL.md) preparado. Relatos abaixo preservam o histórico.
+
 Implementada em 27/09/2026 com a opção 2 aprovada: painel com borda, três campos e botão Criar conta. Verificação visual e testes automatizados concluídos; teste real confirmado pelo usuário em 28/09/2026: a tela E-mail confirmado foi exibida. Etapa 14 concluída; implementação no checkpoint c4ccd8f.
 
 Retomada em 28/09/2026: servidor reiniciado, aba recarregada após estilos antigos e 12 testes específicos do cadastro novamente aprovados. Evidências finais e checkpoint registrados; aplicação pronta para o teste acima, sem criação automática de conta.

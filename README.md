@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização em 14/10/2026 — etapa 50: [autenticação e conferência móvel](docs/AUTENTICACAO-ETAPA-50.md). Corrigida espera sem prazo no corpo dos formulários, com limite de cinco segundos e mensagem específica. 40 testes Node/HTTP, sete grupos com tokens reais de conta descartável e 24 combinações de telas/larguras aprovados; fixtures removidas. Entrega de e-mail e recuperação positiva por PKCE continuam pendentes. Responsável ainda sem SMTP/domínio; [roteiro inicial com Gmail](docs/SMTP-INICIAL-GMAIL.md) preparado, sem configuração ou envio automático.
+
 Atualização em 14/10/2026 — etapa 49: [validação do site publicado](docs/VALIDACAO-PRODUCAO-ETAPA-49.md) com login, prática, rápido, histórico, estatísticas, cotas e negação dos cinco modelos Premium à conta gratuita. Dez grupos integrados aprovados; conta temporária removida. Oferta e checkout conferidos sem compra: R$12,49 inicial com cupom e R$23,98 nas seguintes, no Pix Automático exibido. [Solicitação de staging preparada](docs/SOLICITACAO-TESTES-CAKTO.md), sem envio; acesso ainda não disponível. Contratação continua desativada.
 
 Atualização em 14/10/2026 — etapa 48: [diagnóstico da automação Cakto](docs/DIAGNOSTICO-AUTOMACAO-ETAPA-48.md) publicado, com fase/categoria da falha sem expor dados privados. 35 testes Node/HTTP, seis suítes SQL com rollback, integração de pagamento simulado e build aprovados. 500 questões e seis modelos publicados; contratação Premium continua desativada, sem compra real comprovada.

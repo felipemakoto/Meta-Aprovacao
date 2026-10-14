@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "../cadastro/signup.module.css";
 
 const messages: Record<string, string> = {
+  request_timeout: "O envio demorou demais. Confira sua conexão e tente novamente.",
   invalid_credentials: "Não foi possível entrar. Confira e-mail e senha e confirme seu e-mail pelo link do cadastro.",
   rate_limited: "Muitas tentativas. Aguarde alguns minutos antes de tentar novamente.",
   invalid_input: "Confira o e-mail e a senha antes de enviar.",

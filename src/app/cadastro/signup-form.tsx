@@ -7,6 +7,7 @@ import { validateSignup, type SignupErrors, type SignupInput } from "@/lib/auth/
 import styles from "./signup.module.css";
 
 const messages: Record<string, string> = {
+  request_timeout: "O envio demorou demais. Confira sua conexão e tente novamente.",
   rate_limited: "Muitas tentativas ou limite de e-mails atingido. Aguarde antes de tentar novamente.",
   weak_password: "Essa senha não foi aceita. Escolha uma senha mais forte e diferente de senhas conhecidas.",
   invalid_input: "Confira o e-mail e as senhas antes de enviar.",

@@ -1,5 +1,7 @@
 # Etapa 16 — recuperação de senha
 
+Atualização em 14/10/2026 — [etapa 50](AUTENTICACAO-ETAPA-50.md): corpo com prazo total de cinco segundos e erro de demora, sem afrouxar exigência de recuperação verificada. Sessões comuns e OTP implícito de link administrativo foram recusados; senha da fixture preservada. O teste positivo PKCE/e-mail da publicação atual ainda depende de entrega real. Responsável confirmou ausência de SMTP e domínio; [roteiro Gmail](SMTP-INICIAL-GMAIL.md) preparado, sem alteração de credenciais ou configuração remota. Testes móveis, Node/HTTP, lint e build aprovados; histórico abaixo não substitui essa pendência atual.
+
 Concluída em 29/09/2026 após aprovação visual e teste real do usuário. Checkpoint visual: 7dd8eb2; implementação: f439d12; correção: 7835cc5. O usuário confirmou que salvou a nova senha e entrou na conta usando ela. O agente não enviou e-mails, não alterou credenciais nem configurações remotas.
 
 ## Proposta visual

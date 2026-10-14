@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 const origin=process.env.AUTH_TEST_BASE_URL || 'http://127.0.0.1:3000';
 test('login público é dinâmico e não aceita GET para mutações',async()=>{
- const r=await fetch(origin+'/login');assert.equal(r.status,200);assert.match(await r.text(),/Use seu e-mail e sua senha/);
+ const r=await fetch(origin+'/login');assert.equal(r.status,200);const html=await r.text();
+ assert.match(html,/<input\b[^>]*\bid="login-email"/);assert.match(html,/<input\b[^>]*\bid="login-password"/);assert.match(html,/Esqueci minha senha/);
  assert.match(r.headers.get('cache-control'),/no-store|no-cache, must-revalidate/);
  for(const route of ['login','logout']) assert.equal((await fetch(origin+'/api/auth/'+route)).status,405);
 });

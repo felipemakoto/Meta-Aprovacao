@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server.js";
 import { parseSignup } from "./signup-contract.ts";
+import { AuthBodyError, readAuthJson } from "./request-body.ts";
 
 export const authHeaders = { "Cache-Control": "private, no-store, max-age=0", Pragma: "no-cache", "Referrer-Policy": "no-referrer" };
 type Settings = { secure: boolean; origin?: string };
@@ -30,23 +31,9 @@ export function createSignupHandlers(deps: Dependencies, settings: Settings) {
     if (request.nextUrl.search) return json({ error: "invalid_input" }, 400);
     if (request.headers.get("content-type")?.split(";")[0].trim() !== "application/json") return json({ error: "invalid_input" }, 415);
     try {
-      // Limit streamed input too; Content-Length alone can be absent or forged.
-      const reader = request.body?.getReader();
-      if (!reader) return json({ error: "invalid_input" }, 400);
-      const chunks: Uint8Array[] = []; let size = 0;
-      try {
-        for (;;) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          size += value.byteLength;
-          if (size > 2048) return json({ error: "invalid_input" }, 413);
-          chunks.push(value);
-        }
-      } finally { await reader.cancel(); reader.releaseLock(); }
-      const bytes = new Uint8Array(size); let offset = 0;
-      for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.byteLength; }
       let input;
-      try { input = parseSignup(JSON.parse(new TextDecoder().decode(bytes))); } catch { return json({ error: "invalid_input" }, 400); }
+      try { input = parseSignup(await readAuthJson(request, 2048)); }
+      catch (error) { return error instanceof AuthBodyError ? json({ error: error.message }, error.status) : json({ error: "invalid_input" }, 400); }
       if (!input) return json({ error: "invalid_input" }, 400);
       if (await deps.signedIn()) return json({ error: "already_authenticated" }, 409);
       const { error, confirmed } = await deps.signup({ email: input.email, password: input.password, redirectTo: `${origin}/auth/confirm` });

@@ -34,6 +34,8 @@
     "test:automation": "node --test tests/automation.test.mjs",
     "test:automation:diagnostics:sql": "node scripts/test-automation-diagnostics.mjs",
     "test:production:study": "node --env-file=.env.local scripts/test-production-study.mjs",
+    "test:production:auth": "node --env-file=.env.local scripts/test-production-auth.mjs",
+    "test:auth:body": "node --test tests/auth-body.test.mjs",
     "test:automation:integration": "node --env-file=.env.local scripts/test-automation-integration.mjs",
     "cakto:automation:status": "node --env-file=.env.local scripts/configure-cakto-automation.mjs status",
     "cakto:automation:pause": "node --env-file=.env.local scripts/configure-cakto-automation.mjs pause",

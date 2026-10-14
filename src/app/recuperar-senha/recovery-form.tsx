@@ -5,6 +5,7 @@ import Image from "next/image";
 import { parseNewPassword } from "@/lib/auth/recovery-contract";
 import styles from "../cadastro/signup.module.css";
 const messages: Record<string,string> = {
+  request_timeout:"O envio demorou demais. Confira sua conexão e tente novamente.",
   invalid_input:"Confira os campos. As senhas devem ser iguais, com pelo menos 8 caracteres e até 72 bytes.",
   rate_limited:"Limite de tentativas atingido. Aguarde antes de solicitar novamente.",
   recovery_required:"Este acesso expirou ou não permite trocar a senha. Solicite um novo link.",

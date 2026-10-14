@@ -1,6 +1,6 @@
 # Mensagem para o suporte da Cakto
 
-Rascunho preparado para o responsável copiar e enviar; nenhuma mensagem foi enviada pelo agente. Não incluir credenciais ou dados de compradores.
+Solicitação enviada ao suporte em 14/10/2026 pelo Gmail conectado, após autorização explícita do responsável. O Gmail confirmou o envio; resposta ainda não foi conferida nesta etapa. O texto abaixo preserva a solicitação preparada, sem credenciais ou dados de compradores.
 
 **Destinatário:** infoprodutores@cakto.com.br
 

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server.js";
 import { authHeaders, trustedAuthOrigin } from "./signup-http.ts";
 import { parseRecoveryEmail, parseNewPassword } from "./recovery-contract.ts";
+import { AuthBodyError, readAuthJson } from "./request-body.ts";
 type AuthError = {code?: string; status?: number} | null;
 type Dependencies = {
   request: (email: string, redirectTo: string) => Promise<{error: AuthError}>;
@@ -16,16 +17,9 @@ export function createRecoveryHandlers(deps: Dependencies, settings: {secure: bo
     if (request.nextUrl.search) return json({error:"invalid_input"},400);
     if (request.headers.get("content-type")?.split(";")[0].trim() !== "application/json") return json({error:"invalid_input"},415);
     try {
-      const reader = request.body?.getReader();
-      if (!reader) return json({error:"invalid_input"},400);
-      const chunks: Uint8Array[] = []; let size = 0;
-      try {
-        for (;;) { const {done,value} = await reader.read(); if (done) break; size += value.byteLength; if (size > 2048) return json({error:"invalid_input"},413); chunks.push(value); }
-      } finally { await reader.cancel(); reader.releaseLock(); }
-      const bytes = new Uint8Array(size); let offset = 0;
-      for (const chunk of chunks) { bytes.set(chunk,offset); offset += chunk.byteLength; }
       let body: unknown;
-      try { body = JSON.parse(new TextDecoder().decode(bytes)); } catch { return json({error:"invalid_input"},400); }
+      try { body = await readAuthJson(request, 2048); }
+      catch (error) { return error instanceof AuthBodyError ? json({error:error.message},error.status) : json({error:"invalid_input"},400); }
       const input = update ? parseNewPassword(body) : parseRecoveryEmail(body);
       if (!input) return json({error:"invalid_input"},400);
       if (update && !await deps.authorized()) return json({error:"recovery_required"},401);
