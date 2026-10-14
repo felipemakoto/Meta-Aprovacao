@@ -3,16 +3,21 @@ import {lifecycleEvents,lifecycleProcessor,type LifecycleBinding} from "./lifecy
 import {paymentProcessor} from "./payment-processing.ts";
 import {discoverOrders,reconcileJobs,type PaymentLease} from "./reconciliation.ts";
 import type {FirstPaymentExpectation} from "./payment-verification.ts";
+import {AutomationRunError,AutomationStorageError,automationDiagnostic,type AutomationPhase} from "./automation-diagnostics.ts";
 export type AutomationRpc=(name:string,args?:Record<string,unknown>)=>Promise<unknown>;
 type Provider=ReturnType<typeof caktoReader>;
-export async function runCaktoAutomation(rpc:AutomationRpc,provider:Provider,now:()=>number=Date.now) {
- const value=await rpc("lease_cakto_automation");if(value===null)return {skipped:true};
- const a=record(value);if(typeof a.token!=="string")throw Error("invalid_automation_lease");const token=orderUuid(a.token);
+export async function runCaktoAutomation(storage:AutomationRpc,provider:Provider,now:()=>number=Date.now) {
+ let phase:AutomationPhase="lease",token:string|undefined;
+ const rpc:AutomationRpc=async(name,args)=>{try{return await storage(name,args);}catch{throw new AutomationStorageError();}};
  try {
+  const value=await rpc("lease_cakto_automation");if(value===null)return {skipped:true};
+  phase="validation";
+  const a=record(value);if(typeof a.token!=="string")throw Error("invalid_automation_lease");token=orderUuid(a.token);
   if(typeof a.product!=="string"||!a.product||!Array.isArray(a.offers)||a.offers.some(o=>typeof o!=="string"||!o)||!["jobs","discovery"].includes(String(a.mode)))throw Error();
   const product=a.product,offers=a.offers as string[];
   if(a.mode==="discovery") {
    if(!Number.isInteger(a.page)||Number(a.page)<1||Number(a.page)>100||!Number.isInteger(a.offset)||Number(a.offset)<0||Number(a.offset)>4||typeof a.since!=="string"||typeof a.until!=="string")throw Error();
+   phase="discovery";
    const page=Number(a.page),offset=Number(a.offset),batch=await provider.recentOrderIds(product,a.since,a.until,page);
    // One order per scan invocation keeps the worst-case network time bounded and advances a durable cursor.
    const ids=batch.orderIds.slice(offset,offset+1);
@@ -20,9 +25,11 @@ export async function runCaktoAutomation(rpc:AutomationRpc,provider:Provider,now
     enqueue:async i=>await rpc("enqueue_cakto_api_order",{p_order_id:i.orderId,p_subscription_id:i.subscriptionId,p_product_id:i.productId,p_offer_id:i.offerId,p_reference:i.reference})===true,product,offers});
    const end=offset+1>=batch.orderIds.length,done=end&&(!batch.hasMore||page===100),nextPage=end&&!done?page+1:page,nextOffset=end?0:offset+1;
    const summary={matched:found.matched,ignored:found.ignored,truncated:Number(end&&batch.hasMore&&page===100)};
+   phase="finish";
    await rpc("finish_cakto_automation",{p_token:token,p_ok:true,p_summary:summary,p_page:nextPage,p_offset:nextOffset,p_done:done});
    return {skipped:false,mode:"discovery",summary};
   }
+  phase="jobs";
   const endAt=now()+90000;
   const signal=async(id:number)=>{
    const v=await rpc("read_cakto_payment_signal",{p_event_id:id});if(v===null)return null;
@@ -38,10 +45,12 @@ export async function runCaktoAutomation(rpc:AutomationRpc,provider:Provider,now
      :paymentProcessor({...common,intent:async(id,reference)=>await rpc("resolve_cakto_payment_intent",{p_event_id:id,p_reference:reference}) as FirstPaymentExpectation|null})(job.eventId);
    },recover:async job=>{const s=await signal(job.eventId);await finish(job,{outcome:"retry",reason:"unavailable"},lifecycleEvents.includes(s?.event??""));},
   },2);
+  phase="finish";
   await rpc("finish_cakto_automation",{p_token:token,p_ok:summary.failed===0,p_summary:summary});
   return {skipped:false,mode:"jobs",summary};
- }catch {
-  try {await rpc("finish_cakto_automation",{p_token:token,p_ok:false,p_summary:{failed:1}});}catch{/* Expired lease is recoverable. */}
-  throw Error("automation_unavailable");
+ }catch(error) {
+  const diagnostic=automationDiagnostic(error,phase);
+  if(token)try {await rpc("finish_cakto_automation",{p_token:token,p_ok:false,p_summary:{failed:1,diagnostic}});}catch{/* Keep the original failure when storage or the lease is unavailable. */}
+  throw new AutomationRunError(diagnostic);
  }
 }

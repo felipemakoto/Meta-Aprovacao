@@ -1,5 +1,7 @@
 # Checagem de lançamento — etapa 36
 
+Atualização em 14/10/2026 — etapa 48: [instrumentação da automação](DIAGNOSTICO-AUTOMACAO-ETAPA-48.md) publicada e fluxo técnico de pagamento/acesso conferido com provedor simulado e conta temporária removida. Essa evidência não substitui compra comercial nem confirma o contrato externo de moeda/valores. `launchApproved:false` e `checkoutEnabled:false` mantidos; 500 questões e seis modelos continuam publicados. A amostra de operação da etapa 47 abaixo é histórica, não um diagnóstico definitivo da causa.
+
 Implementada em 10/10/2026. Reúne a situação real de conteúdo, catálogo, operação e configuração local, sem liberar vendas. A checagem é administrativa, somente de leitura, com contagens e estados; não exibe enunciados, gabaritos, dados do comprador, referências, IDs comerciais ou credenciais.
 
 ## Atualização em 14/10/2026 — etapa 47

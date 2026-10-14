@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { caktoReader } from '../src/lib/subscriptions/cakto-api.ts';
+import { caktoReader,CaktoReadError } from '../src/lib/subscriptions/cakto-api.ts';
 import { cents, firstPaymentDecision } from '../src/lib/subscriptions/payment-verification.ts';
 const orderId='a'.repeat(8)+'-aaaa-aaaa-aaaa-'+'a'.repeat(12), subId='bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb';
 const expected={orderId,productId:'product',offerId:'offer',reference:'f'.repeat(64),createdAt:'2026-10-06T12:00:00Z',expiresAt:'2026-10-06T13:00:00Z',firstPriceCents:1150,monthlyPriceCents:2299,currency:'BRL'};
@@ -13,6 +13,31 @@ test('apenas pagamento consultado, vinculado e integral produz evidência comerc
  const regular={...expected,firstPriceCents:2299};
  assert.equal(decision({...order,discount:'0.00',amount:'23.98',couponCode:null},subscription,regular).verified,true);
  for (const status of ['authorized','waiting_payment','partially_paid','refunded','refund_requested','chargedback','unknown']) assert.equal(decision({...order,status}).verified,false);
+});
+
+test('diagnóstico da API distingue autenticação, lista, pedido e assinatura sem guardar resposta',async()=>{
+ for(const operation of ['authentication','orders_list','order','subscription']){
+  const reader=caktoReader(env,async url=>{
+   if(url.endsWith('/token/'))return operation==='authentication'?new Response('private-token',{status:401}):json({access_token:'private-token',token_type:'Bearer'});
+   if(url.includes('/orders/?'))return new Response('private-email@example.com',{status:429});
+   if(url.includes('/orders/'))return operation==='order'?new Response('private-order',{status:502}):json(order);
+   return new Response('private-subscription',{status:403});
+  });
+  await assert.rejects(operation==='orders_list'?reader.recentOrderIds('product','2026-10-01','2026-10-07'):reader.orderAndSubscription(orderId),e=>{
+   assert.ok(e instanceof CaktoReadError);assert.equal(e.operation,operation);
+   assert.equal(e.status,{authentication:401,orders_list:429,order:502,subscription:403}[operation]);
+   assert.doesNotMatch(JSON.stringify(e),/private|@|https/);return true;
+  });
+ }
+ for(const result of [{results:[null]}, {results:[{id:orderId,product:null}]},{results:[{id:'invalid',product:{id:'product'}}]}]){
+  const reader=caktoReader(env,async url=>url.endsWith('/token/')?json({access_token:'x',token_type:'Bearer'}):json(result));
+  await assert.rejects(reader.recentOrderIds('product','2026-10-01','2026-10-07'),e=>e.reason==='invalid_response'&&e.operation==='orders_list'&&e.status===200);
+ }
+});
+
+test('timeout inclui corpo lento mesmo quando o transporte ignora abort',async()=>{
+ const reader=caktoReader(env,async()=>new Response(new ReadableStream({start(c){c.enqueue(new TextEncoder().encode('{'));}}),{headers:{'content-type':'application/json'}}));
+ await assert.rejects(reader.orderAndSubscription(orderId),e=>e.reason==='unavailable'&&e.operation==='authentication'&&e.status===200&&e.timedOut===true);
 });
 test('divergências, moeda ausente, reversões e datas não são aprovadas',()=>{
  for(const patch of [{id:subId},{product:{id:'foreign'}},{subscription:'other'},{sck:'forged'},{amount:'11.50'},{discount:'11.50'},{currency:undefined},{currency:'USD'},{refundedAt:order.paidAt},{chargedbackAt:order.paidAt},{canceledAt:order.paidAt},{paidAt:'2027-01-01T12:00:00Z'},{createdAt:'2026-10-06T14:00:00Z'},{subscription_period:2},{type:'unique'},{baseAmount:'22.990'},{couponCode:'other'}]) assert.equal(decision({...order,...patch}).verified,false,JSON.stringify(patch));

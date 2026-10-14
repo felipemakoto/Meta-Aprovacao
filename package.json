@@ -32,6 +32,7 @@
     "test:health": "node --test tests/health.test.mjs",
     "test:health:integration": "node --env-file=.env.local scripts/test-health-integration.mjs",
     "test:automation": "node --test tests/automation.test.mjs",
+    "test:automation:diagnostics:sql": "node scripts/test-automation-diagnostics.mjs",
     "test:automation:integration": "node --env-file=.env.local scripts/test-automation-integration.mjs",
     "cakto:automation:status": "node --env-file=.env.local scripts/configure-cakto-automation.mjs status",
     "cakto:automation:pause": "node --env-file=.env.local scripts/configure-cakto-automation.mjs pause",

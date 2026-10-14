@@ -1,5 +1,7 @@
 # Automação Cakto — etapa 34
 
+Atualização em 14/10/2026 — etapa 48: [diagnóstico seguro de falhas](DIAGNOSTICO-AUTOMACAO-ETAPA-48.md) publicado na função e no resumo privado. Categorias/fases fixas e status HTTP distinguem indisponibilidade, resposta inválida, timeout, autenticação, limite de requisições e armazenamento. Mensagens originais e payloads são descartados; resposta pública continua genérica. Consulta da última conclusão: `npm run cakto:automation:status`; logs históricos: Supabase → Edge Functions → cakto-reconcile → Logs, marcador `cakto_automation_diagnostic`. Conteúdo já publicado na etapa 47: 500 questões e seis modelos. Referências a rascunhos no relato inicial abaixo são históricas. Contratação permanece desativada.
+
 Atualização em 10/10/2026 — etapa 35: [diagnóstico e monitoramento](MONITORAMENTO-CAKTO.md) ativos no banco, com registro privado de condições e comando `cakto:health`. A ausência de monitor mencionada no relato inicial abaixo foi resolvida para consulta/registro interno; não há envio de alertas externos.
 
 Implementada e ativada em 09/10/2026 no Supabase. O computador e o servidor local não precisam ficar ligados. Nenhuma página, preço, cobrança ou configuração de checkout foi alterada. A contratação continua desabilitada enquanto o contrato externo de pagamento e o conteúdo revisado não forem validados.

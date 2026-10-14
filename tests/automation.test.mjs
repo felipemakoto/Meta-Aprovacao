@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {automationHandler,automationHeaders} from '../src/lib/subscriptions/automation-http.ts';
 import {runCaktoAutomation} from '../src/lib/subscriptions/automation.ts';
+import {CaktoReadError} from '../src/lib/subscriptions/cakto-api.ts';
+import {AutomationRunError} from '../src/lib/subscriptions/automation-diagnostics.ts';
 const secret='a'.repeat(64),token='00000000-0000-4000-8000-000000000034',order='00000000-0000-4000-8000-000000000035';
 const lease={token,mode:'discovery',product:'fixture',offers:['offer'],since:'2026-10-02T00:00:00Z',until:'2026-10-09T00:00:00Z',page:1,offset:0};
 const provider={recentOrderIds:async()=>({orderIds:[],hasMore:false}),orderAndSubscription:async()=>{throw Error('private');}};
@@ -33,7 +35,26 @@ test('cursor persistido avança um pedido, página e limite máximo; falha não 
   for(const [k,v] of Object.entries(expected))assert.equal(finish[k],v);assert.equal(seen.length,1);assert.equal(result.summary.truncated,a.page===100?1:0);
  }
  let finish;await assert.rejects(()=>runCaktoAutomation(async(name,args)=>{if(name==='finish_cakto_automation')finish=args;return name==='lease_cakto_automation'?lease:null;},{...provider,recentOrderIds:async()=>{throw Error('secret');}}),/automation_unavailable/);
- assert.equal(finish.p_ok,false);assert.deepEqual(finish.p_summary,{failed:1});assert.equal(finish.p_page,undefined);
+ assert.equal(finish.p_ok,false);assert.deepEqual(finish.p_summary,{failed:1,diagnostic:{phase:'discovery',category:'internal_error'}});assert.equal(finish.p_page,undefined);
+});
+
+test('falhas distinguem fase e categoria, preservam o cursor e descartam mensagens privadas',async()=>{
+ const cases=[
+  [new CaktoReadError('unauthorized','authentication',401),{phase:'discovery',category:'provider_unauthorized',operation:'authentication',status:401}],
+  [new CaktoReadError('rate_limited','orders_list',429),{phase:'discovery',category:'provider_rate_limited',operation:'orders_list',status:429}],
+  [new CaktoReadError('invalid_response','orders_list',200),{phase:'discovery',category:'provider_invalid_response',operation:'orders_list',status:200}],
+  [new CaktoReadError('unavailable','subscription',undefined,true),{phase:'discovery',category:'provider_timeout',operation:'subscription'}],
+  [new CaktoReadError('unavailable','order',502),{phase:'discovery',category:'provider_unavailable',operation:'order',status:502}],
+  [Error('private-token email@example.com'),{phase:'discovery',category:'internal_error'}],
+ ];
+ for(const [error,diagnostic] of cases){
+  let saved;error.body='private-token';
+  await assert.rejects(runCaktoAutomation(async(name,args)=>{if(name==='lease_cakto_automation')return lease;saved=args;}, {...provider,recentOrderIds:async()=>{throw error;}}),e=>e instanceof AutomationRunError&&JSON.stringify(e.diagnostic)===JSON.stringify(diagnostic));
+  assert.deepEqual(saved,{p_token:token,p_ok:false,p_summary:{failed:1,diagnostic}});
+  assert.doesNotMatch(JSON.stringify(saved),/private-token|email|body/);
+ }
+ await assert.rejects(runCaktoAutomation(async()=>{throw Error('private database detail');},provider),e=>assert.deepEqual(e.diagnostic,{phase:'lease',category:'storage_unavailable'})===undefined);
+ await assert.rejects(runCaktoAutomation(async()=>[],provider),e=>assert.deepEqual(e.diagnostic,{phase:'validation',category:'invalid_worker_state'})===undefined);
 });
 test('dois jobs no máximo e resultados mínimos sem evidência em resposta',async()=>{
  let n=0;const saves=[];const jobs={...lease,mode:'jobs'};
@@ -44,4 +65,16 @@ test('dois jobs no máximo e resultados mínimos sem evidência em resposta',asy
   if(name==='finish_cakto_payment_job'){saves.push(args);return null;}return null;
  },provider);
  assert.equal(n,2);assert.equal(saves.length,2);assert.deepEqual(result.summary,{processed:2,verified:0,review:2,retry:0,failed:0});assert.doesNotMatch(JSON.stringify(result),/orderId|leaseToken|foreign/);
+});
+
+test('falha secundária ao salvar não apaga a causa e conclusão indisponível é distinguida',async()=>{
+ const providerError=new CaktoReadError('unavailable','orders_list',502);
+ providerError.message='private-token';providerError.cause={payload:'private-payload'};
+ await assert.rejects(runCaktoAutomation(async name=>{if(name==='lease_cakto_automation')return lease;throw Error('private-storage');}, {...provider,recentOrderIds:async()=>{throw providerError;}}),e=>{
+  assert.deepEqual(e.diagnostic,{phase:'discovery',category:'provider_unavailable',operation:'orders_list',status:502});
+  assert.doesNotMatch(JSON.stringify(e),/private|payload|cause/);return true;
+ });
+ await assert.rejects(runCaktoAutomation(async name=>{if(name==='lease_cakto_automation')return lease;throw Error('private-storage');},provider),e=>{
+  assert.deepEqual(e.diagnostic,{phase:'finish',category:'storage_unavailable'});return true;
+ });
 });

@@ -1,7 +1,15 @@
 // Server transport shared with local administrative scripts. No client imports.
 import {Buffer} from "node:buffer";
+export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription";
+type CaktoReason="configuration_missing"|"invalid_id"|"unavailable"|"unauthorized"|"not_found"|"rate_limited"|"invalid_response";
 export class CaktoReadError extends Error {
-  constructor(reason: "configuration_missing" | "invalid_id" | "unavailable" | "unauthorized" | "not_found" | "rate_limited" | "invalid_response") { super(reason); }
+  readonly reason:CaktoReason;
+  readonly operation?:CaktoOperation;
+  readonly status?:number;
+  readonly timedOut:boolean;
+  constructor(reason:CaktoReason,operation?:CaktoOperation,status?:number,timedOut=false) {
+    super(reason);this.reason=reason;this.operation=operation;this.status=status;this.timedOut=timedOut;
+  }
 }
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export function orderUuid(value: string) {
@@ -13,17 +21,19 @@ export function record(value: unknown): Record<string, unknown> {
   return value as Record<string, unknown>;
 }
 export function caktoReader(env: Record<string, string | undefined>, transport: typeof fetch = fetch) {
-  async function json(path: string, options: RequestInit, limit: number) {
+  async function json(path: string, options: RequestInit, limit: number,operation:CaktoOperation) {
     const controller = new AbortController();
     let timer: ReturnType<typeof setTimeout> | undefined;
     let reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
+    let status:number|undefined;
     try {
       return await Promise.race([
         (async () => {
           const response = await transport(`https://api.cakto.com.br/public_api/${path}`, { ...options, redirect: "error", cache: "no-store", signal: controller.signal });
+          status=response.status;
           if (!response.ok) {
             void response.body?.cancel().catch(() => {});
-            throw new CaktoReadError([401,403].includes(response.status) ? "unauthorized" : response.status === 404 ? "not_found" : response.status === 429 ? "rate_limited" : "unavailable");
+            throw new CaktoReadError([401,403].includes(response.status) ? "unauthorized" : response.status === 404 ? "not_found" : response.status === 429 ? "rate_limited" : "unavailable",operation,status);
           }
           if (response.headers.get("content-type")?.split(";")[0].trim() !== "application/json" || !response.body) throw new CaktoReadError("invalid_response");
           const length = response.headers.get("content-length");
@@ -40,16 +50,16 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
           try { return record(JSON.parse(new TextDecoder("utf-8", {fatal:true}).decode(Buffer.concat(chunks)))); }
           catch { throw new CaktoReadError("invalid_response"); }
         })(),
-        new Promise<never>((_, reject) => { timer = setTimeout(() => {controller.abort(); reject(new CaktoReadError("unavailable"));}, 8000); }),
+        new Promise<never>((_, reject) => { timer = setTimeout(() => {reject(new CaktoReadError("unavailable",operation,status,true));controller.abort();}, 8000); }),
       ]);
-    } catch (error) { throw error instanceof CaktoReadError ? error : new CaktoReadError("unavailable"); }
+    } catch (error) { throw error instanceof CaktoReadError ? new CaktoReadError(error.reason,operation,status,error.timedOut) : new CaktoReadError("unavailable",operation,status); }
     finally { clearTimeout(timer); controller.abort(); void reader?.cancel().catch(() => {}); }
   }
   async function token() {
     const clientId = env.CAKTO_CLIENT_ID, secret = env.CAKTO_CLIENT_SECRET;
-    if (!clientId || !secret) throw new CaktoReadError("configuration_missing");
-    const result = await json("token/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:new URLSearchParams({client_id:clientId, client_secret:secret})}, 16384);
-    if (typeof result.access_token !== "string" || !result.access_token || result.token_type !== "Bearer") throw new CaktoReadError("invalid_response");
+    if (!clientId || !secret) throw new CaktoReadError("configuration_missing","authentication");
+    const result = await json("token/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:new URLSearchParams({client_id:clientId, client_secret:secret})}, 16384,"authentication");
+    if (typeof result.access_token !== "string" || !result.access_token || result.token_type !== "Bearer") throw new CaktoReadError("invalid_response","authentication",200);
     return result.access_token;
   }
   return {
@@ -58,12 +68,14 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
         !Number.isFinite(Date.parse(since)) || !Number.isFinite(Date.parse(until)) || Date.parse(until)<=Date.parse(since)) throw new CaktoReadError("invalid_id");
       const accessToken=await token();
       const params=new URLSearchParams({product,createdAt__gte:since,createdAt__lt:until,status:"paid",type:"subscription",offer_type:"main",ordering:"-createdAt",limit:"5",page:String(page)});
-      const result=await json(`orders/?${params}`,{method:"GET",headers:{Authorization:`Bearer ${accessToken}`}},1024*1024);
-      if (!Array.isArray(result.results) || result.results.length>5) throw new CaktoReadError("invalid_response");
+      const result=await json(`orders/?${params}`,{method:"GET",headers:{Authorization:`Bearer ${accessToken}`}},1024*1024,"orders_list");
+      if (!Array.isArray(result.results) || result.results.length>5) throw new CaktoReadError("invalid_response","orders_list",200);
       const orderIds=result.results.map(value=>{
-        const r=record(value);
-        if(record(r.product).id!==product || typeof r.id!=="string") throw new CaktoReadError("invalid_response");
-        return orderUuid(r.id);
+        try {
+          const r=record(value);
+          if(record(r.product).id!==product || typeof r.id!=="string") throw Error();
+          return orderUuid(r.id);
+        } catch {throw new CaktoReadError("invalid_response","orders_list",200);}
       });
       // Never follow provider pagination URLs with a bearer token.
       return {orderIds:[...new Set(orderIds)],hasMore:!!result.next};
@@ -72,13 +84,14 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
       orderUuid(id); // Validate before credentials or network access.
       const accessToken = await token();
       const options = {method:"GET", headers:{Authorization:`Bearer ${accessToken}`}};
-      const order = await json(`orders/${id}/`, options, 1024 * 1024);
-      if (order.id !== id) throw new CaktoReadError("invalid_response");
+      const order = await json(`orders/${id}/`, options, 1024 * 1024,"order");
+      if (order.id !== id) throw new CaktoReadError("invalid_response","order",200);
       // Only the authenticated order response can supply the subscription ID.
       if (typeof order.subscription !== "string") return {order, subscription:null};
-      const subscriptionId = orderUuid(order.subscription);
-      const subscription = await json(`subscriptions/${subscriptionId}/`, options, 1024 * 1024);
-      if (subscription.id !== subscriptionId) throw new CaktoReadError("invalid_response");
+      let subscriptionId:string;
+      try {subscriptionId=orderUuid(order.subscription);}catch{throw new CaktoReadError("invalid_response","order",200);}
+      const subscription = await json(`subscriptions/${subscriptionId}/`, options, 1024 * 1024,"subscription");
+      if (subscription.id !== subscriptionId) throw new CaktoReadError("invalid_response","subscription",200);
       return {order, subscription};
     },
   };
