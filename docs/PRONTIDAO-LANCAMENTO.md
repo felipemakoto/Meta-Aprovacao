@@ -2,7 +2,11 @@
 
 Implementada em 10/10/2026. Reúne a situação real de conteúdo, catálogo, operação e configuração local, sem liberar vendas. A checagem é administrativa, somente de leitura, com contagens e estados; não exibe enunciados, gabaritos, dados do comprador, referências, IDs comerciais ou credenciais.
 
-## Atualização em 12/10/2026
+## Atualização em 14/10/2026 — etapa 47
+
+Publicação editorial concluída: 500 questões com gabarito, cem por matéria, e seis modelos utilizáveis (um rápido gratuito e cinco por matéria). Revisão final por IA; exigência de revisão humana adicional dispensada pelo responsável, conforme política e [evidências](REVISAO-ETAPA-47.md). Checkout e aprovação comercial continuam false. A amostra de 22:28 UTC teve operação em atenção; [diagnóstico somente leitura](DIAGNOSTICO-AUTOMACAO-ETAPA-47.md) identifica falhas503intermitentes sem causa interna específica. As verificações de conteúdo e configuração local passaram. Os registros quantitativos abaixo são históricos.
+
+## Atualização histórica em 12/10/2026
 
 Após a etapa 43, o conteúdo passou para 500 rascunhos, cem por matéria; seis modelos continuam não publicados. Revisão humana da reformulação e ampliação permanece pendente, com [ferramenta v3](CONTEUDO-PROVAS-ETAPA-43.md). A prioridade por histórico permite repetição sem aviso específico conforme nova orientação. Os dados de cem rascunhos no registro da consulta abaixo são anteriores à carga, não o total atual.
 
@@ -53,11 +57,11 @@ Essa configuração é a do computador onde o comando roda. Ela não comprova os
 - Operação: processador habilitado, última execução concluída com sucesso, sem condição ativa de atenção, monitor ativo e com amostra recente.
 - Configuração local: verificador existente aceita as URLs/IDs promocionais e regulares. Isso não é consulta da oferta na API.
 
-`draft` e `reviewed` não contam como conteúdo disponível. Modelo publicado sem questões suficientes também não conta. Falhas de RPC, datas ou somas inconsistentes são rejeitadas. Mesmo com todos os critérios técnicos verdes, `launchApproved` permanece `false`: este comando não certifica revisão humana ou uma venda.
+`draft` e `reviewed` não contam como conteúdo disponível. Modelo publicado sem questões suficientes também não conta. Falhas de RPC, datas ou somas inconsistentes são rejeitadas. Mesmo com todos os critérios técnicos verdes, `launchApproved` permanece `false`: este comando não certifica uma compra ou disponibilidade contínua.
 
 ## Pendências que exigem evidência separada
 
-1. Revisar as [quinhentas questões atuais](CONFERENCIA-EDITORIAL.md) e os seis modelos, registrar correções/aprovação humana e avaliar variedade/adequação do conteúdo prometido. A aprovação do mockup, dos testes ou um “continue” não publica conteúdo gerado por IA.
+1. Concluído em 14/10/2026: [conferência final das quinhentas questões e seis modelos](REVISAO-ETAPA-47.md), com revisão por IA, dispensa explícita da revisão humana adicional pelo responsável e publicação protegida. A dispensa não se estende à evidência comercial ou aos demais itens.
 2. Confirmar o contrato real de moeda BRL, unidade/valores e formato dos campos do pedido/assinatura na Cakto. O verificador mantém divergências ou moeda ausente em revisão.
 3. Validar pagamento e entrega comerciais de ponta a ponta, com ambiente oficial autorizado ou compra explicitamente autorizada. As simulações locais já aprovadas não comprovam esse contrato externo. Não foi realizada compra nesta etapa.
 4. Confirmar horário/fuso de expiração do cupom em 31/10/2026 e desconto somente na primeira mensalidade, além dos valores e taxa no checkout real.

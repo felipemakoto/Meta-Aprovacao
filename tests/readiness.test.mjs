@@ -24,6 +24,16 @@ test('todos os indicadores técnicos podem passar sem transformar evidência sin
  f.retentionInventory.paymentChecks=1;f.retentionInventory.periods=2;
  const r=launchReadiness(f,env,now);assert.ok(Object.values(r.checks).every(Boolean));assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);assert.ok(r.manualChecks.some(c=>c.includes('simulados')));
 });
+test('dispensa de revisão humana remove essa exigência sem retirar as conferências comerciais e operacionais',()=>{
+ const report=readinessReport(fixture(),env,now),r=report.data;
+ assert.doesNotMatch(r.manualChecks.join('\n'),/revisão humana/i);
+ assert.doesNotMatch(report.text,/revisão humana/i);
+ for(const required of [/contrato real.*API Cakto/i,/pagamento e entrega comercial de ponta a ponta/i,/retenção dos dados financeiros/i,/cupom.*primeira cobrança/i,/publicação de produção/i]){
+  assert.ok(r.manualChecks.some(check=>required.test(check)),`Conferência preservada: ${required}`);
+ }
+ assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);assert.equal(checkoutEnabled,false);
+ assert.match(report.text,/aprovação comercial pendente/i);assert.match(report.text,/checkout nesta versão: desativado/i);
+});
 test('resposta inválida, matéria duplicada e somas inconsistentes não viram checagem aprovada',()=>{
  for(const mutate of [f=>f.questions.published=-1,f=>f.questions.draft=11,f=>f.questions.diagnosticReady=true,f=>f.subjects[0].missingForDiagnostic=0,f=>f.subjects[0].subject='unknown',f=>f.subjects[0].subject=f.subjects[1].subject,f=>f.simulations.usablePremium=1,f=>f.simulations.usableFreeQuick=1,f=>f.retentionInventory.paymentChecks='1',f=>f.sampledAt='private']){
   const f=fixture();mutate(f);assert.throws(()=>launchReadiness(f,env,now),/invalid_readiness/);

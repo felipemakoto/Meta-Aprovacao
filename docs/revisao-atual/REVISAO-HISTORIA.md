@@ -1,6 +1,6 @@
-# Revisão atual — História — etapa 46
+# Revisão atual — História — etapa 47
 
-Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Revisão editorial final por IA concluída; revisão humana adicional dispensada pelo responsável. Estado publicado é o alvo verificado pelo SQL e pela consulta posterior.
 
 ## H01 — Agricultura, sedentarização e diversidade
 
@@ -18,7 +18,7 @@ Qual interpretação evita transformar essas mudanças em uma evolução única 
 
 **Gabarito: B.** O contexto apresenta diversidade de tempo e combinação de atividades. Agricultura pode favorecer permanência e especialização sem impor um mesmo caminho a todos os grupos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H02 — Democracia ateniense e cidadania
 
@@ -36,7 +36,7 @@ Um morador estrangeiro de Atenas pagava tributos, mas não participava da assemb
 
 **Gabarito: D.** Na Atenas clássica, cidadania e residência não eram equivalentes. Havia participação direta dos cidadãos, ao mesmo tempo que estrangeiros residentes, mulheres e pessoas escravizadas eram excluídos desses direitos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H03 — Roma, expansão e conflitos sociais
 
@@ -54,7 +54,7 @@ Que relação explica por que expansão territorial podia coexistir com conflito
 
 **Gabarito: D.** A expansão podia beneficiar grupos de modo diferente e alterar relações de trabalho e propriedade. Crescimento territorial não equivale a igualdade social ou ausência de disputas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H04 — Relações feudais e obrigações
 
@@ -72,7 +72,7 @@ Um camponês entrega parte da colheita ao senhor; um nobre promete serviço mili
 
 **Gabarito: D.** Entrega de parte da produção integra obrigações camponesas em relações senhoriais. Vassalagem envolve fidelidade e serviços entre membros da elite. A distinção depende das posições e obrigações, não só da presença de uma terra.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H05 — Renascimento e circulação de conhecimento
 
@@ -90,7 +90,7 @@ Um artista renascentista usa perspectiva e referências clássicas em uma obra e
 
 **Gabarito: E.** Mudanças culturais não exigem abandono de toda religiosidade. Técnica, referência intelectual, tema e patrono são dimensões que podem combinar elementos distintos numa mesma obra.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H06 — Reformas religiosas e poder político
 
@@ -108,7 +108,7 @@ Que relação entre religião e política é coerente com a síntese?
 
 **Gabarito: A.** Debates religiosos tinham conteúdo próprio e podiam articular-se a interesses de autoridades e grupos. Reconhecer a relação não reduz toda motivação à política nem exige uniformidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H07 — Expansão marítima e redes atlânticas
 
@@ -126,7 +126,7 @@ Um reino financia viagens, comerciantes buscam novas rotas e navegadores emprega
 
 **Gabarito: E.** Instrumentos oferecem possibilidades de navegação, mas organização e financiamento dependem de interesses e recursos. Os três elementos apresentados se articulam; nenhum deles explica sozinho a expansão.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H08 — Economia açucareira e trabalho
 
@@ -144,7 +144,7 @@ Um engenho exporta açúcar e compra alimentos de produtores locais. Que interpr
 
 **Gabarito: B.** O destino externo do açúcar não elimina a demanda por alimentos e outros bens locais. Redes de exportação e abastecimento interno podiam coexistir, sem que isso alterasse automaticamente as relações de trabalho do engenho.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H09 — Mineração, fiscalidade e interiorização
 
@@ -162,7 +162,7 @@ Qual relação integra mineração e reorganização do território?
 
 **Gabarito: D.** A concentração de atividade extrativa atrai pessoas e cria demanda por circulação e abastecimento. Esses vínculos articulam interior e outras regiões, não isolamento completo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H10 — Iluminismo e limites das mudanças
 
@@ -180,7 +180,7 @@ Qual análise explica a coexistência entre discurso de direitos e exclusões?
 
 **Gabarito: A.** Ideias influenciam ações, mas não determinam aplicação igualitária imediata. Comparar princípios e práticas revela limites, contradições e disputas das transformações.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H11 — Industrialização e organização do trabalho
 
@@ -198,7 +198,7 @@ Qual relação explica o conflito social apesar do aumento da produção?
 
 **Gabarito: B.** Produtividade e condições sociais são dimensões relacionadas, mas distintas. O crescimento não determina, por si só, a distribuição dos ganhos nem as jornadas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H12 — Revolução Francesa e cidadania
 
@@ -216,7 +216,7 @@ Qual leitura compara ideais revolucionários e sua aplicação sem confundi-los?
 
 **Gabarito: E.** Princípios e práticas podem divergir. Direitos foram objeto de disputa e variação; a existência de ideais não comprova inclusão universal imediata.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H13 — Independências nas Américas
 
@@ -234,7 +234,7 @@ Qual distinção é necessária entre independência política e transformação
 
 **Gabarito: E.** Soberania e relações sociais são dimensões distintas. Rupturas políticas podem coexistir com continuidades de propriedade, trabalho e hierarquia.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H14 — Transferência da corte e mudanças coloniais
 
@@ -252,7 +252,7 @@ A abertura dos portos em 1808 ampliou o comércio direto do Brasil com nações 
 
 **Gabarito: D.** A abertura dos portos altera a regra de comércio colonial, permitindo relações diretas com nações amigas. O Brasil continuava ligado à monarquia portuguesa; mudança comercial em 1808 não equivale à independência de 1822.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H15 — Independência do Brasil e continuidades
 
@@ -270,7 +270,7 @@ Qual análise identifica simultaneamente ruptura e continuidade?
 
 **Gabarito: D.** A ruptura de soberania pode coexistir com instituições e relações sociais mantidas. Não se deve confundir independência, república e abolição, que têm processos distintos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H16 — Abolição e cidadania no pós-emancipação
 
@@ -288,7 +288,7 @@ Após 1888, trabalhadores juridicamente livres ainda enfrentavam restrições de
 
 **Gabarito: E.** A abolição extinguiu a escravidão como condição jurídica. Acesso à terra, renda e proteção social envolve outras relações e políticas; sua persistente desigualdade não anula o marco legal nem prova igualdade de oportunidades.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H17 — Primeira República e participação política
 
@@ -306,7 +306,7 @@ Qual comparação distingue forma de governo e efetividade da participação?
 
 **Gabarito: D.** Instituições e práticas podem divergir. A forma republicana precisa ser estudada junto a regras de acesso, liberdade do eleitor e relações de poder.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H18 — Primeira Guerra e múltiplas causas
 
@@ -324,7 +324,7 @@ Por que distinguir o atentado de 1914 das rivalidades e alianças anteriores ao 
 
 **Gabarito: A.** Um acontecimento pode desencadear a crise sem ser sua explicação completa. Alianças, rivalidades e decisões de mobilização ajudam a compreender sua expansão; não impõem motivações ou participação idênticas a todos os países.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H19 — Segunda Guerra, propaganda e perseguição
 
@@ -342,7 +342,7 @@ Qual interpretação relaciona propaganda e poder sem tratá-la como fonte neutr
 
 **Gabarito: D.** Propaganda procura mobilizar e legitimar. Sua seleção de imagens e argumentos revela objetivos e ideologias, mas precisa ser confrontada com evidências de práticas e acontecimentos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H20 — Guerra Fria e ditaduras na América Latina
 
@@ -360,7 +360,7 @@ Qual explicação evita reduzir todos os processos latino-americanos a decisões
 
 **Gabarito: A.** Influências externas se relacionam a condições e decisões locais. A articulação permite investigar diferenças entre países, sem negar o contexto da disputa global.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H21 — Agricultura, sedentarização e diversidade
 
@@ -378,7 +378,7 @@ Que relação entre produção e organização social é compatível com a sínt
 
 **Gabarito: D.** Armazenamento altera a disponibilidade de recursos e pode permitir especialização. Isso abre possibilidades de organização, mas não prova igualdade, isolamento ou ausência de autoridade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H22 — Democracia ateniense e cidadania
 
@@ -396,7 +396,7 @@ Um texto que define apenas os direitos dos cidadãos permite concluir o quê sob
 
 **Gabarito: A.** A categoria cidadão tem abrangência histórica delimitada. Os direitos de um grupo não podem ser estendidos automaticamente a estrangeiros, mulheres ou pessoas escravizadas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H23 — Roma, expansão e conflitos sociais
 
@@ -414,7 +414,7 @@ Que transformação política distingue a concentração imperial de uma simples
 
 **Gabarito: A.** O processo imperial envolve relações de autoridade e disputas políticas. Não se reduz à dimensão do território nem implica extinção imediata de toda instituição anterior.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H24 — Relações feudais e obrigações
 
@@ -432,7 +432,7 @@ Que interpretação do trabalho e entrega de produção preserva a desigualdade 
 
 **Gabarito: C.** Proteção e acesso à terra não tornam a relação igualitária. Obrigações econômicas e poderes locais podem reforçar dependência entre os grupos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H25 — Renascimento e circulação de conhecimento
 
@@ -450,7 +450,7 @@ Como a imprensa podia favorecer debates sem garantir igualdade de acesso?
 
 **Gabarito: D.** A tecnologia modifica circulação, mas seus efeitos dependem de condições sociais e políticas. Maior reprodução não comprova acesso universal ou ausência de controle.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H26 — Reformas religiosas e poder político
 
@@ -468,7 +468,7 @@ Como a circulação de escritos alterava as condições do debate?
 
 **Gabarito: A.** Reprodução e circulação favorecem difusão de ideias, mas leitores, autoridades e condições de acesso influenciam recepção e controle. Tecnologia não determina concordância universal.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H27 — Expansão marítima e redes atlânticas
 
@@ -486,7 +486,7 @@ Qual problema histórico existe em descrever os territórios americanos como vaz
 
 **Gabarito: E.** A ocupação anterior é parte central da história dos contatos e conflitos. A categoria vazio pode legitimar conquista ao apagar habitantes e relações territoriais existentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H28 — Economia açucareira e trabalho
 
@@ -504,7 +504,7 @@ Que continuidade econômica pode coexistir com o destaque do açúcar?
 
 **Gabarito: B.** A exportação exige abastecimento e transporte e convive com necessidades sociais locais. Um setor dominante não representa sozinho todas as atividades econômicas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H29 — Mineração, fiscalidade e interiorização
 
@@ -522,7 +522,7 @@ Por que fiscalidade pode ser fonte de conflito, além de fonte de receita?
 
 **Gabarito: B.** Tributos envolvem interesses e relações de poder. Conflitos podem surgir de valores, métodos de cobrança e controle, sem que toda tributação extinga automaticamente a produção.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H30 — Iluminismo e limites das mudanças
 
@@ -540,7 +540,7 @@ Que crítica ao poder é compatível com a discussão iluminista sintetizada?
 
 **Gabarito: A.** Discussões sobre direitos e limites envolvem fundamentos da autoridade. Não correspondem à aceitação automática de poder pessoal ilimitado, embora propostas históricas fossem diversas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H31 — Industrialização e organização do trabalho
 
@@ -558,7 +558,7 @@ Uma fábrica exige presença em horários fixos e coordena tarefas sucessivas. Q
 
 **Gabarito: E.** Máquinas e tarefas interdependentes favorecem coordenação central do tempo e disciplina. Isso pode reduzir autonomia sobre ritmo e horário em comparação com certas formas de oficina.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H32 — Revolução Francesa e cidadania
 
@@ -576,7 +576,7 @@ Uma crítica a privilégios hereditários atinge qual característica do Antigo 
 
 **Gabarito: E.** Privilégios associados a ordens e nascimento constituíam hierarquias jurídicas e sociais. Questioná-los não é o mesmo que confirmar igualdade preexistente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H33 — Independências nas Américas
 
@@ -594,7 +594,7 @@ Por que diferenças entre projetos de território e governo são relevantes?
 
 **Gabarito: B.** O fim de uma autoridade comum não define automaticamente novas instituições ou fronteiras. Interesses e projetos concorrentes podem produzir disputas de organização.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H34 — Transferência da corte e mudanças coloniais
 
@@ -612,7 +612,7 @@ Qual relação entre contexto externo e transformação interna é coerente?
 
 **Gabarito: B.** O contexto europeu ajuda a explicar a transferência, mas seus desdobramentos dependem também de ações e condições locais. Relação não é determinação integral de todo resultado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H35 — Independência do Brasil e continuidades
 
@@ -630,7 +630,7 @@ Que investigação é necessária para avaliar participação política no iníc
 
 **Gabarito: B.** Independência não define por si só abrangência de cidadania. Regras históricas e práticas permitem estudar condições de participação sem anacronismo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H36 — Abolição e cidadania no pós-emancipação
 
@@ -648,7 +648,7 @@ Qual interpretação evita reduzir a abolição a uma concessão isolada de uma 
 
 **Gabarito: C.** A decisão legal integra um processo de disputas e ações. Diferentes grupos, inclusive pessoas escravizadas, participaram de pressões e resistências que precisam ser investigadas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H37 — Primeira República e participação política
 
@@ -666,7 +666,7 @@ Como controle de recursos pode se relacionar a coerção eleitoral?
 
 **Gabarito: D.** Relações de dependência podem influenciar a liberdade de escolha. A existência de voto formal não comprova autonomia em contextos de pressão social ou material.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H38 — Primeira Guerra e múltiplas causas
 
@@ -684,7 +684,7 @@ Qual relação entre alianças e ampliação da guerra é coerente?
 
 **Gabarito: E.** Alianças influenciam cálculos e compromissos, mas governos tomam decisões em contextos específicos. Não significam identidade de interesses nem paz obrigatória.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H39 — Segunda Guerra, propaganda e perseguição
 
@@ -702,7 +702,7 @@ Que procedimento é adequado ao estudar uma mensagem racista produzida por um re
 
 **Gabarito: D.** Estudar ideologia não significa endossá-la. Categorias racistas devem ser analisadas como instrumentos históricos de perseguição e poder, não como descrição científica das pessoas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H40 — Guerra Fria e ditaduras na América Latina
 
@@ -720,7 +720,7 @@ Que tensão existe entre discurso de segurança e restrição de direitos?
 
 **Gabarito: A.** Justificações oficiais devem ser confrontadas com práticas e efeitos. Silêncio ou ausência de oposição pública pode resultar de coerção, não de consenso livre.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H41 — Agricultura, sedentarização e diversidade
 
@@ -738,7 +738,7 @@ Que diferença existe entre as duas bases de evidência para estudar o cultivo?
 
 **Gabarito: A.** Restos associados no espaço e no período permitem relacionar processamento e armazenamento, fortalecendo uma hipótese que um objeto isolado não demonstra. Isso não estabelece exclusividade agrícola, igualdade social nem ausência de trocas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H42 — Democracia ateniense e cidadania
 
@@ -756,7 +756,7 @@ Que diferença entre participação e representação é relevante nesse exemplo
 
 **Gabarito: D.** A distinção trata do modo de decisão entre os habilitados. Ela não resolve, por si só, a abrangência da cidadania nem impede combinações contemporâneas de participação e representação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H43 — Roma, expansão e conflitos sociais
 
@@ -774,7 +774,7 @@ Como os registros ajudam a explicar tensões internas ligadas à expansão?
 
 **Gabarito: B.** A expansão territorial e a distribuição interna de seus efeitos são dimensões diferentes. Os registros combinam concentração de terras com vulnerabilidade dos pequenos produtores; não indicam divisão igual dos ganhos nem segurança automática da propriedade de soldados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H44 — Relações feudais e obrigações
 
@@ -792,7 +792,7 @@ Por que não se deve tratar a síntese como descrição idêntica de toda a Euro
 
 **Gabarito: B.** Uma caracterização geral não elimina diversidade. O estudo precisa identificar a região, o momento e as formas concretas de poder e obrigação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H45 — Renascimento e circulação de conhecimento
 
@@ -810,7 +810,7 @@ Qual interpretação considera a relação entre técnica de reprodução e circ
 
 **Gabarito: E.** A reprodução permite reutilizar uma imagem em contextos distintos. Legendas, autoria editorial e destinatários integram o material analisado e podem alterar a mensagem. Identidade visual não comprova identidade de público ou intenção.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H46 — Reformas religiosas e poder político
 
@@ -828,7 +828,7 @@ Qual aspecto do conflito os textos permitem comparar diretamente?
 
 **Gabarito: E.** Os textos diferem nas fontes de autoridade que reconhecem. Compartilhar uma referência não elimina a divergência sobre a tradição e a Igreja. Não foram apresentados dados que identifiquem alianças políticas ou permitam atribuir essas posições a todas as correntes reformadoras.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H47 — Expansão marítima e redes atlânticas
 
@@ -846,7 +846,7 @@ Um mapa europeu de rotas descreve automaticamente a experiência de todos os pov
 
 **Gabarito: D.** Mapas são fontes relevantes, mas fazem escolhas e refletem finalidades e saberes. Seus elementos não equivalem à experiência completa dos diferentes povos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H48 — Economia açucareira e trabalho
 
@@ -864,7 +864,7 @@ Que leitura articula os registros sem confundir produção com condições de tr
 
 **Gabarito: A.** Os registros tratam de aspectos diferentes e compatíveis: circulação de mercadorias e controle do trabalho. Receita não mede liberdade, remuneração ou distribuição. A ordem pode informar práticas de coerção, mas não substitui os dados de vendas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H49 — Mineração, fiscalidade e interiorização
 
@@ -882,7 +882,7 @@ Qual conclusão respeita o alcance das duas informações?
 
 **Gabarito: A.** As duas séries descrevem mudanças de extração e de preço. Sem renda, oferta e demanda, não se calcula poder de compra nem se isola uma causa do encarecimento. Expansão econômica agregada não demonstra benefício uniforme.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H50 — Iluminismo e limites das mudanças
 
@@ -900,7 +900,7 @@ Como investigar quem foi efetivamente incluído por uma declaração de direitos
 
 **Gabarito: E.** A abrangência jurídica e efetiva depende de regras e práticas. Palavras gerais não comprovam acesso universal a voto, liberdade ou participação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H51 — Industrialização e organização do trabalho
 
@@ -918,7 +918,7 @@ Que comparação distingue aumento de produção e condições de trabalho?
 
 **Gabarito: E.** A produção passou de 1.000 a 1.500: aumento de 50%. A jornada passou de 10 a 12 horas: aumento de 20%. Com o mesmo quadro, a produção por trabalhador-hora também cresceu, de 1 para 1,25 peça. Nenhum desses resultados informa salário ou redução da jornada.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H52 — Revolução Francesa e cidadania
 
@@ -936,7 +936,7 @@ Como avaliar se a igualdade proclamada alcançou mulheres em determinado momento
 
 **Gabarito: C.** Acesso efetivo deve ser investigado por regras e práticas. Um princípio geral precisa ser confrontado com a titularidade dos direitos e as condições de exercício.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H53 — Independências nas Américas
 
@@ -954,7 +954,7 @@ Qual comparação distingue consenso pela ruptura e divergências sobre o novo E
 
 **Gabarito: A.** O ponto comum é romper o vínculo metropolitano, não adotar a mesma cidadania. B amplia o grupo proposto em relação a A, mas ainda o limita a homens livres. Ambos mantêm a concentração de terras, permitindo distinguir dimensões da mudança.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H54 — Transferência da corte e mudanças coloniais
 
@@ -972,7 +972,7 @@ Por que a instalação da corte alterava a posição do Rio de Janeiro?
 
 **Gabarito: D.** Sediar a monarquia muda funções políticas e administrativas e gera demandas materiais. Isso não significa republicanização ou igualdade social automática.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H55 — Independência do Brasil e continuidades
 
@@ -990,7 +990,7 @@ Qual informação contraria a ideia de consenso nacional completo no processo?
 
 **Gabarito: C.** Conflitos e projetos concorrentes demonstram que a separação não foi experimentada como um acordo uniforme. Símbolos ou instituições não comprovam consenso completo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H56 — Abolição e cidadania no pós-emancipação
 
@@ -1008,7 +1008,7 @@ Que análise considera conjuntamente os registros?
 
 **Gabarito: C.** O contrato indica uma relação remunerada, enquanto a petição registra reivindicações sociais não resolvidas. Liberdade jurídica não implica acesso igual a escola e moradia. Os documentos não demonstram distribuição de terras nem manutenção legal da escravidão.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H57 — Primeira República e participação política
 
@@ -1026,7 +1026,7 @@ Um registro oficial de votos prova sozinho a liberdade de todos os votantes?
 
 **Gabarito: B.** Registros de votação são fontes importantes, mas não revelam automaticamente coerção ou exclusão. Outras evidências contextualizam como os resultados foram produzidos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H58 — Primeira Guerra e múltiplas causas
 
@@ -1044,7 +1044,7 @@ Como interpretar a diferença entre os dois relatos?
 
 **Gabarito: D.** Uma fonte pode registrar expectativas que não se concretizam. A passagem do tempo e o prolongamento do combate ajudam a interpretar a mudança de perspectiva. A autoria comum não torna o testemunho universal nem permite ler o futuro como se fosse conhecido em 1914.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H59 — Segunda Guerra, propaganda e perseguição
 
@@ -1062,7 +1062,7 @@ Por que testemunhos, documentos administrativos e vestígios devem ser confronta
 
 **Gabarito: B.** Confrontar fontes permite ampliar evidências e investigar diferenças entre políticas, registros e experiências. Contexto, proveniência e recorte continuam necessários.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H60 — Guerra Fria e ditaduras na América Latina
 
@@ -1080,7 +1080,7 @@ Como examinar a afirmação de consenso em um período de censura?
 
 **Gabarito: C.** Censura modifica o que pode aparecer publicamente. Ausência de crítica em fontes controladas não é medida neutra de opiniões; investigar repressão e silêncios é essencial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H61 — Agricultura, sedentarização e diversidade
 
@@ -1098,7 +1098,7 @@ Qual pesquisa ajuda a diferenciar produção local de circulação de alimentos 
 
 **Gabarito: A.** Um conjunto contextualizado de vestígios permite testar hipóteses distintas. A localização, o período e a proveniência ajudam a relacionar produção e circulação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H62 — Democracia ateniense e cidadania
 
@@ -1116,7 +1116,7 @@ Qual afirmação caracteriza um anacronismo ao interpretar Atenas?
 
 **Gabarito: E.** Anacronismo projeta conceitos ou instituições de outro período sem contextualização. Comparações são possíveis quando preservam diferenças e não tratam o presente como descrição do passado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H63 — Roma, expansão e conflitos sociais
 
@@ -1134,7 +1134,7 @@ Qual mudança pode relacionar concentração fundiária a tensões entre grupos?
 
 **Gabarito: D.** Controle concentrado de recursos pode alterar oportunidades e gerar tensão. Trabalho escravizado e produtores livres podem coexistir em relações diferentes com a terra.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H64 — Relações feudais e obrigações
 
@@ -1152,7 +1152,7 @@ Qual informação seria útil ao examinar uma obrigação de entrega de parte da
 
 **Gabarito: C.** Condições materiais e poderes de cobrança ajudam a compreender a relação. Características isoladas do suporte documental não explicam as obrigações sociais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H65 — Renascimento e circulação de conhecimento
 
@@ -1170,7 +1170,7 @@ Que pesquisa testa melhor a afirmação de que todos tiveram o mesmo acesso aos 
 
 **Gabarito: E.** Acesso é uma questão social e material. Custos, distribuição e capacidade de leitura variam entre grupos; exemplares famosos não representam toda a população.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H66 — Reformas religiosas e poder político
 
@@ -1188,7 +1188,7 @@ Ao analisar um escrito de controvérsia religiosa, que cuidado é necessário?
 
 **Gabarito: D.** Textos de disputa procuram persuadir e deslegitimar adversários. Sua interpretação exige contexto e confronto com outras fontes; relevância histórica não significa neutralidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H67 — Expansão marítima e redes atlânticas
 
@@ -1206,7 +1206,7 @@ Qual relação pode coexistir no processo de contato sem contradição lógica?
 
 **Gabarito: E.** Processos de contato podem combinar relações diferentes. Troca não garante igualdade, e violência não impede circulação de bens, práticas ou conhecimentos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H68 — Economia açucareira e trabalho
 
@@ -1224,7 +1224,7 @@ Qual diferença distingue escravidão de uma relação assalariada livre?
 
 **Gabarito: A.** A distinção central é social e jurídica, envolvendo coerção e restrição de liberdade. Tecnologia, escala ou volume de produção não definem isoladamente a condição do trabalhador.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H69 — Mineração, fiscalidade e interiorização
 
@@ -1242,7 +1242,7 @@ Qual interpretação evita reduzir conflitos fiscais a uma unidade de interesses
 
 **Gabarito: D.** A sociedade tinha posições diversas, inclusive dentro das regiões mineradoras. Um conflito não transforma moradores em um grupo homogêneo de interesses.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H70 — Iluminismo e limites das mudanças
 
@@ -1260,7 +1260,7 @@ Qual relação evita tratar ideias como causa suficiente de uma revolução?
 
 **Gabarito: E.** Transformações têm múltiplas condições. Ideias podem oferecer linguagem e objetivos a movimentos, mas sua ação depende de grupos, recursos e conflitos concretos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H71 — Industrialização e organização do trabalho
 
@@ -1278,7 +1278,7 @@ Qual ação coletiva se relaciona à disputa sobre condições de trabalho?
 
 **Gabarito: C.** Conflitos sobre tempo, renda e condições podem gerar organização coletiva. Isso não exige abandono de toda produção nem implica aceitação uniforme das regras.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H72 — Revolução Francesa e cidadania
 
@@ -1296,7 +1296,7 @@ Qual informação enfraquece a leitura de que a Revolução foi um bloco de idei
 
 **Gabarito: D.** Diversidade de fases e projetos demonstra transformações internas. Localização e uso de símbolos não bastam para caracterizar unidade ou multiplicidade dos projetos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H73 — Independências nas Américas
 
@@ -1314,7 +1314,7 @@ Que continuidade pode ser investigada após a ruptura política?
 
 **Gabarito: A.** A síntese distingue ruptura metropolitana e possíveis continuidades internas. As formas concretas variam e devem ser investigadas, sem generalização uniforme.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H74 — Transferência da corte e mudanças coloniais
 
@@ -1332,7 +1332,7 @@ Qual interpretação da elevação de 1815 é inadequada?
 
 **Gabarito: B.** Reino Unido mantinha articulação com Portugal e a monarquia. A independência é um marco posterior de separação política, com outro significado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H75 — Independência do Brasil e continuidades
 
@@ -1350,7 +1350,7 @@ Um relato que menciona apenas líderes políticos é suficiente para negar parti
 
 **Gabarito: D.** Silêncio de uma fonte não equivale à inexistência de um grupo. Confrontar perspectivas e vestígios permite investigar participações além do recorte do autor.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H76 — Abolição e cidadania no pós-emancipação
 
@@ -1368,7 +1368,7 @@ Qual relação entre continuidade e mudança é coerente?
 
 **Gabarito: D.** Transformação jurídica e permanências sociais não se excluem. Grupos podem formular novas reivindicações e estratégias em condições alteradas pela emancipação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H77 — Primeira República e participação política
 
@@ -1386,7 +1386,7 @@ Que mudança pode coexistir com práticas locais persistentes?
 
 **Gabarito: A.** Mudanças de regime não substituem automaticamente todos os vínculos sociais. Poderes locais e instituições nacionais podem articular-se sob a nova forma de governo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H78 — Primeira Guerra e múltiplas causas
 
@@ -1404,7 +1404,7 @@ Que análise relaciona guerra e sociedade além do combate militar?
 
 **Gabarito: C.** Mobilização envolve recursos, trabalho e vida cotidiana. As sociedades são afetadas além das frentes; decisões militares dependem também de condições materiais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H79 — Segunda Guerra, propaganda e perseguição
 
@@ -1422,7 +1422,7 @@ Qual distinção entre regime autoritário e democracia é relevante ao contexto
 
 **Gabarito: E.** A possibilidade de oposição, liberdades e controle das decisões distingue instituições e práticas. Não se identifica regime apenas pela presença de governo ou propaganda.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H80 — Guerra Fria e ditaduras na América Latina
 
@@ -1440,7 +1440,7 @@ Qual relação entre democracia e redemocratização é historicamente prudente?
 
 **Gabarito: B.** Mudanças institucionais são importantes, mas não garantem por si sós acesso igual e pleno exercício de direitos. Continuidade e conflitos posteriores também precisam ser estudados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H81 — Agricultura, sedentarização e diversidade
 
@@ -1456,7 +1456,7 @@ Em dois sítios arqueológicos, um grupo manteve a caça junto ao cultivo; outro
 
 **Gabarito: A.** Os vestígios permitem comparar práticas, não impor uma sequência única ou deduzir igualdade social. Combinações distintas de produção e armazenamento são compatíveis com trajetórias diversas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H82 — Democracia ateniense e cidadania
 
@@ -1472,7 +1472,7 @@ Um debate escolar distingue democracia direta e sufrágio universal. Qual caract
 
 **Gabarito: A.** Forma de participação e abrangência da cidadania são dimensões diferentes. Uma assembleia pode ter participação direta de um corpo de cidadãos limitado, sem equivaler ao sufrágio universal.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H83 — Roma, expansão e conflitos sociais
 
@@ -1488,7 +1488,7 @@ Um mapa mostra a expansão de Roma e uma tabela registra concentração de terra
 
 **Gabarito: A.** O mapa descreve extensão territorial; a tabela descreve propriedade. Relacionar as fontes permite examinar quem se beneficiava da expansão, sem converter crescimento de território em igualdade de distribuição.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H84 — Relações feudais e obrigações
 
@@ -1504,7 +1504,7 @@ Um camponês presta dias de trabalho em terras do senhor e entrega parte de sua 
 
 **Gabarito: E.** A identificação considera posições sociais e obrigações. Prestação de trabalho e entrega de produtos pertencem às relações senhoriais camponesas; vassalagem corresponde a compromissos entre membros da elite.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H85 — Renascimento e circulação de conhecimento
 
@@ -1520,7 +1520,7 @@ Uma oficina produz livros impressos mais rapidamente que um copista. Ainda assim
 
 **Gabarito: C.** Capacidade técnica de reproduzir livros e acesso efetivo são dimensões distintas. Custo, alfabetização e mecanismos de controle podem limitar a circulação e a leitura sem negar o aumento da produção.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H86 — Reformas religiosas e poder político
 
@@ -1536,7 +1536,7 @@ Um governante apoia uma corrente reformadora e assume controle de instituições
 
 **Gabarito: D.** Motivações religiosas têm conteúdo próprio, mas podem se relacionar a poder, instituições e alianças. O apoio de um governante não basta para negar a diversidade dos agentes e das doutrinas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H87 — Expansão marítima e redes atlânticas
 
@@ -1552,7 +1552,7 @@ Um relato europeu apresenta a chegada às Américas como ocupação de terras va
 
 **Gabarito: C.** Ocupações e atividades anteriores demonstram que os territórios já eram habitados e organizados. Dados sobre a viagem europeia, por si só, não informam a presença ou ausência das populações locais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H88 — Economia açucareira e trabalho
 
@@ -1568,7 +1568,7 @@ Um engenho vende açúcar ao exterior e registra compra de farinha de produtores
 
 **Gabarito: A.** As duas operações podem coexistir: uma gera venda externa; a outra abastece a unidade e seus trabalhadores. Destino do produto e relação de trabalho não podem ser deduzidos de uma compra de alimentos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H89 — Mineração, fiscalidade e interiorização
 
@@ -1584,7 +1584,7 @@ Em um exercício sobre a mineração colonial, o quinto corresponde a 20% do our
 
 **Gabarito: A.** O quinto é 1/5, ou 20%. A parcela tributária é 450 × 0,20 = 90 g; os 360 g restantes não são o imposto. O exercício usa uma regra informada, sem supor que toda prática fiscal colonial se resumia a ela.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H90 — Iluminismo e limites das mudanças
 
@@ -1600,7 +1600,7 @@ Uma declaração proclama igualdade, mas uma regra de cidadania limita a partici
 
 **Gabarito: B.** O princípio orienta debates, mas regras e práticas definem sua abrangência efetiva. Uma restrição permite investigar exclusões sem tratar o ideal como automaticamente realizado ou completamente irrelevante.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H91 — Industrialização e organização do trabalho
 
@@ -1616,7 +1616,7 @@ Uma fábrica dobra sua produção, mantendo jornadas extensas e salários baixos
 
 **Gabarito: A.** Produção mede resultado do processo produtivo. Benefícios dos trabalhadores exigem indicadores de renda e condições de trabalho; eles não são automaticamente proporcionais à quantidade de produtos fabricados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H92 — Revolução Francesa e cidadania
 
@@ -1632,7 +1632,7 @@ Na Revolução Francesa, uma reivindicação pede participação política para 
 
 **Gabarito: A.** Um princípio pode servir de argumento para ampliar direitos além da aplicação inicial. A reivindicação revela uma disputa sobre sua abrangência, sem comprovar que a inclusão já estivesse realizada.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H93 — Independências nas Américas
 
@@ -1648,7 +1648,7 @@ Duas antigas colônias tornam-se independentes: uma mantém monarquia, outra ado
 
 **Gabarito: E.** Independência, forma de governo e relações sociais são dimensões distintas. É possível haver ruptura de soberania e continuidade social, com instituições diferentes em cada caso.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H94 — Transferência da corte e mudanças coloniais
 
@@ -1664,7 +1664,7 @@ Ordene os acontecimentos: instalação da corte no Brasil, formação do Reino U
 
 **Gabarito: A.** A corte chegou em 1808. A elevação do Brasil a reino integrante do Reino Unido ocorreu em 1815. A independência foi proclamada em 1822. São etapas distintas, não nomes diferentes de um único acontecimento.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H95 — Independência do Brasil e continuidades
 
@@ -1680,7 +1680,7 @@ Na Constituição de 1824, o Poder Moderador era atribuído ao imperador. Qual e
 
 **Gabarito: D.** O Poder Moderador dava ao imperador instrumentos de intervenção no funcionamento das instituições. Reconhecer essas prerrogativas distingue a monarquia imperial de um chefe de Estado apenas simbólico ou de uma república.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H96 — Abolição e cidadania no pós-emancipação
 
@@ -1698,7 +1698,7 @@ Qual afirmação NÃO é sustentada por esses marcos?
 
 **Gabarito: B.** A cronologia situa 1888 após a independência e antes da República, ainda no Império. A abolição extinguiu a condição legal de escravidão, mas esses marcos não demonstram distribuição de terras nem igualdade de renda. Para estudar essas condições, são necessárias outras evidências.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H97 — Primeira República e participação política
 
@@ -1714,7 +1714,7 @@ Um eleitor depende de um proprietário para obter trabalho e recebe ameaça de p
 
 **Gabarito: D.** A ameaça liga recursos materiais à escolha eleitoral. Um registro formal de voto não comprova liberdade quando existem coerção, dependência e pressões sobre o eleitor.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H98 — Primeira Guerra e múltiplas causas
 
@@ -1730,7 +1730,7 @@ Uma tabela de 1914 registra sucessivas mobilizações de países ligados por ali
 
 **Gabarito: C.** A sequência de mobilizações pode ser relacionada a alianças e decisões dentro de um contexto anterior de rivalidades. O estopim não cria automaticamente todas as condições nem determina motivações idênticas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H99 — Segunda Guerra, propaganda e perseguição
 
@@ -1746,7 +1746,7 @@ Uma propaganda nazista desumaniza um grupo perseguido. Qual uso histórico desse
 
 **Gabarito: D.** A propaganda é evidência da construção de mensagens e da legitimação do poder, não uma classificação válida dos perseguidos. Sua função deve ser analisada sem reproduzir a ideologia como descrição neutra.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## H100 — Guerra Fria e ditaduras na América Latina
 
@@ -1762,4 +1762,4 @@ Durante uma ditadura, um jornal é censurado e manifestações são proibidas. U
 
 **Gabarito: A.** Silêncio público sob repressão não equivale a consenso. Censura e proibições afetam o registro das opiniões; correspondência, testemunhos e outros materiais podem revelar posições impedidas de circular.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.

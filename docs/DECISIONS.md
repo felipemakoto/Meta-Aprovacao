@@ -275,3 +275,8 @@ Distinguir revisão de conteúdo de mudança de dificuldade, preservando IDs e v
 ## Etapa 46 — segunda leitura e preparação da revisão dos modelos
 
 Corrigir problemas concretos sem alterar artificialmente versões dos 433 registros preservados. Comandos de reescrita devem dizer se pedem equivalência, regência ou eliminação de ambiguidade; distratores não devem anunciar o próprio erro. Dados experimentais precisam permitir a comparação pedida. Preservar v5 e suas anotações; gerar v6 com nova identidade do catálogo. Roteiro dos seis modelos usa amostras estáticas explicitamente distintas de tentativas reais e da regra de sorteio; não atribui aprovação ou duração humana. Nenhuma publicação editorial, mudança na seleção de alunos ou liberação comercial nesta etapa.
+
+
+## Etapa 47 — dispensa de revisão humana adicional e publicação editorial
+
+A instrução direta do responsável substitui a exigência anterior de revisão humana. Registrar método IA e a decisão real, sem atribuir assinatura humana. Publicar somente o catálogo exato conferido e os seis modelos: hashes completos antes/depois, rejeição de divergência/uso incompatível, preservação de históricos, versões por conteúdo e idempotência após novas tentativas. A publicação não concede Premium nem habilita checkout. Checagem comercial e falha503intermitente da automação permanecem separadas da liberação de conteúdo.

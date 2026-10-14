@@ -153,7 +153,7 @@ test('revisÃ£o de dificuldade cobre as 500 tarefas, com fundamento e sem aprovaÃ
   assert.ok(q.difficultyReview.skill.trim());
   assert.match(q.difficultyReview.method,/sem dados de desempenho/);
   assert.ok(['2026-10-13','2026-10-14'].includes(q.difficultyReview.reviewedOn));
-  assert.equal(q.status,'draft');
+  assert.equal(q.status,'published');
  }
  for(const q of catalog.questions.filter(q=>q.family==='M16'))assert.equal(new Set(q.options).size,5);
  assert.notEqual(answer('G2',2),answer('G2',5));

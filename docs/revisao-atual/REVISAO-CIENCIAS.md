@@ -1,6 +1,6 @@
-# Revisão atual — Ciências — etapa 46
+# Revisão atual — Ciências — etapa 47
 
-Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Revisão editorial final por IA concluída; revisão humana adicional dispensada pelo responsável. Estado publicado é o alvo verificado pelo SQL e pela consulta posterior.
 
 ## C01 — Densidade e flutuação
 
@@ -18,7 +18,7 @@ Qual previsão combina corretamente a medida de densidade e o comportamento nos 
 
 **Gabarito: B.** Dividindo massa por volume: 240/300 = 0,8. É menor que 1,0 e maior que 0,6, portanto os comportamentos previstos são diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C02 — Separação de misturas e conservação
 
@@ -36,7 +36,7 @@ Qual sequência de procedimentos atende ao objetivo?
 
 **Gabarito: A.** A filtração separa a areia insolúvel. O filtrado ainda contém água e sal; a destilação permite recolher a água e deixar o sal. Evaporação aberta não recupera a água, e destilar sem filtrar deixa areia e sal juntos no resíduo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C03 — Energia elétrica e eficiência
 
@@ -54,7 +54,7 @@ Para realizar a mesma transferência de água em dez minutos, qual comparação 
 
 **Gabarito: E.** A potência útil é 600 × 0,70 = 420 W e 500 × 0,84 = 420 W. Em 600 segundos, a diferença de energia elétrica consumida é (600 − 500) × 600 = 60.000 J; potência e energia não são a mesma grandeza.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C04 — Circuitos e associação de resistores
 
@@ -72,7 +72,7 @@ Qual comparação das correntes totais está correta?
 
 **Gabarito: B.** Em série, a resistência total é 12 Ω e a corrente 12/12 = 1 A. Em paralelo, a resistência equivalente é 3 Ω e a corrente total 12/3 = 4 A.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C05 — Temperatura e equilíbrio térmico
 
@@ -90,11 +90,11 @@ Qual temperatura final satisfaz o equilíbrio de energia?
 
 **Gabarito: B.** Como o calor específico é igual, usa-se a média ponderada pelas massas: (200 × 60 + 400 × 15)/600 = 30 °C. A média simples ignoraria a porção fria maior.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C06 — Fotossíntese e controle experimental
 
-ID: d1390000-0000-4000-8000-000000000004. Versão: 6. Dificuldade estimada: medium. Família: C6.
+ID: d1390000-0000-4000-8000-000000000004. Versão: 7. Dificuldade estimada: medium. Família: C6.
 
 Quatro ramos da mesma espécie aquática, com áreas foliares equivalentes e em condições semelhantes de saúde, são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
@@ -106,9 +106,9 @@ Que comparação permite avaliar o efeito da intensidade luminosa mantendo as ou
 - **D)** A e C
 - **E)** B e C
 
-**Gabarito: B.** A e B diferem na intensidade da luz, mas mantêm as condições iniciais comparáveis. A e C variam gás carbônico; Entre as alternativas, as demais comparações não isolam a intensidade: A/C varia gás carbônico; B/C e C/D variam gás carbônico e luz; D sozinho não oferece comparação.
+**Gabarito: B.** A e B diferem na intensidade luminosa e mantêm comparáveis as outras condições descritas. A/C varia a disponibilidade de gás carbônico; B/C e C/D variam gás carbônico e luz. D sozinho não oferece uma comparação. Entre as alternativas, apenas A/B permite avaliar a intensidade luminosa mantendo as demais condições comparáveis.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C07 — Fluxo de energia e cadeias alimentares
 
@@ -126,7 +126,7 @@ Que energia fica disponível ao predador final no modelo?
 
 **Gabarito: E.** São três transferências: 80.000 × 0,1 = 8.000; depois 800; depois 80 kJ. Não se aplica 10% uma única vez a toda a cadeia.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C08 — Genética e probabilidade
 
@@ -144,7 +144,7 @@ Qual probabilidade de um descendente apresentar a característica recessiva?
 
 **Gabarito: A.** Cada indivíduo fornece A ou a com probabilidade 1/2. O genótipo aa depende de a de ambos: 1/2 × 1/2 = 1/4, ou 25%.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C09 — Seleção de resistência bacteriana
 
@@ -162,7 +162,7 @@ Após a exposição, a proporção de resistentes cresce. Qual mecanismo explica
 
 **Gabarito: B.** As frequências mudam porque os dois grupos sobrevivem em proporções distintas. Hereditariedade não fixa frequências na população. O enunciado informa sobrevivência, mas não uma diferença de reprodução durante a exposição nem aquisição dirigida de resistência.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C10 — Osmose e membranas
 
@@ -180,7 +180,7 @@ Qual direção inicial do fluxo líquido de água é coerente com as três situa
 
 **Gabarito: D.** A água tende a mover-se para o meio com maior concentração efetiva de solutos não permeantes. Assim entra em I, não apresenta fluxo líquido inicial em II e sai em III.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C11 — Diluição e concentração
 
@@ -198,7 +198,7 @@ Qual é a concentração final, em g/L?
 
 **Gabarito: A.** A massa de soluto continua em 12 g e o volume final é 0,600 L. Logo, a concentração é 12/0,600 = 20 g/L. Deve-se usar o volume final em litros, sem alterar a massa de soluto.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C12 — Reação química e sistema fechado
 
@@ -216,7 +216,7 @@ Qual interpretação das duas pesagens é compatível com a conservação da mas
 
 **Gabarito: A.** A massa inclui substâncias gasosas. Em sistema aberto há saída de matéria, e a diferença medida não significa destruição de átomos. Pressão e calor não correspondem, neste modelo escolar, a uma parcela adicional de massa dos materiais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C13 — Pressão e distribuição de força
 
@@ -234,7 +234,7 @@ Como as pressões médias se comparam?
 
 **Gabarito: D.** Dividindo a mesma força pelas áreas: 600/0,03 = 20.000 Pa e 600/0,06 = 10.000 Pa. Dobrar a área reduz a pressão pela metade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C14 — Ondas e mudança de meio
 
@@ -252,7 +252,7 @@ Quais comprimentos de onda resultam nos dois meios?
 
 **Gabarito: A.** O comprimento é v/f. No meio I, 20/5 = 4 m; no II, 10/5 = 2 m. A frequência se mantém e a velocidade diferente altera o comprimento de onda.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C15 — Estações e duração da luz
 
@@ -270,7 +270,7 @@ Qual mecanismo explica a inversão das durações de luz entre junho e dezembro 
 
 **Gabarito: B.** Ao longo da translação, a inclinação do eixo favorece alternadamente a iluminação dos hemisférios. Rotação explica a alternância cotidiana de dia e noite; a latitude de cada cidade não muda por causa da estação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C16 — Respiração celular e interpretação de medidas
 
@@ -288,7 +288,7 @@ Que inferência é compatível com a comparação entre os frascos?
 
 **Gabarito: A.** O grupo vivo difere do controle inativado e apresenta redução de oxigênio. Isso é compatível com metabolismo respiratório; no escuro, não se atribui a queda à produção fotossintética.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C17 — Eutrofização e oxigênio dissolvido
 
@@ -306,7 +306,7 @@ Qual sequência de processos é compatível com a queda noturna do oxigênio ap�
 
 **Gabarito: D.** A biomassa formada pode alimentar decompositores quando morre. Respiração de algas e decompositores consome oxigênio, enquanto no escuro não há a produção fotossintética que compensaria esse consumo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C18 — Populações e limite de recursos
 
@@ -324,7 +324,7 @@ Que leitura distingue esse crescimento de uma duplicação indefinida?
 
 **Gabarito: A.** Os acréscimos posteriores são menores e a população se aproxima de um patamar. Isso é compatível com limitações ambientais; estabilidade do total não significa ausência de renovação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C19 — Placas tectônicas e evidências
 
@@ -342,7 +342,7 @@ Qual comparação dos limites é coerente com as evidências?
 
 **Gabarito: A.** O mergulho de uma placa sob outra caracteriza subducção em limite convergente. O afastamento associado a dorsais permite ascensão de material e formação de crosta oceânica.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C20 — Materiais, condução e isolamento
 
@@ -360,7 +360,7 @@ Por que a caixa revestida de espuma conserva mais gelo nas condições do experi
 
 **Gabarito: D.** A diferença está na transferência de energia através do revestimento. O ambiente mais quente fornece calor ao gelo; o isolante reduz a taxa dessa transferência, sem mudar a temperatura de fusão ou o calor específico do gelo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C21 — Densidade e flutuação
 
@@ -378,7 +378,7 @@ Na água, que volume precisa ficar submerso para que a massa de água deslocada 
 
 **Gabarito: B.** Na flutuação, a massa de água deslocada deve equilibrar a massa do objeto. Como a água tem 1 g/cm³, o volume deslocado é 240 cm³, 80% do volume do objeto.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C22 — Separação de misturas e conservação
 
@@ -396,7 +396,7 @@ Qual massa de sal fica nesse recipiente?
 
 **Gabarito: D.** Cada metade homogênea contém metade do sal: 30/2 = 15 g. A evaporação remove a água dessa metade, mas não o sal, que fica no recipiente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C23 — Energia elétrica e eficiência
 
@@ -414,7 +414,7 @@ Que energia útil a primeira bomba fornece nos dez minutos, em joules?
 
 **Gabarito: C.** Dez minutos correspondem a 600 segundos. Multiplicando a potência útil de 420 J/s pelo tempo, obtém-se 252.000 J; usar os 600 W daria energia elétrica recebida.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C24 — Circuitos e associação de resistores
 
@@ -432,7 +432,7 @@ Qual diferença de potencial aparece em cada resistor em série?
 
 **Gabarito: B.** A corrente de 1 A atravessa cada resistor de 6 Ω. Pela relação U = RI, cada queda é 6 V; as duas somam os 12 V da fonte.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C25 — Temperatura e equilíbrio térmico
 
@@ -450,7 +450,7 @@ Se as duas massas fossem iguais, mantendo as temperaturas iniciais, qual seria a
 
 **Gabarito: D.** Com massas iguais e mesmo calor específico, as capacidades térmicas são iguais. A temperatura final é (60 + 15)/2 = 37,5 °C, diferente do primeiro experimento.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C26 — Fotossíntese e controle experimental
 
@@ -468,7 +468,7 @@ Que interpretação é sustentada pela comparação entre A e C?
 
 **Gabarito: B.** A intensidade luminosa foi mantida, mas C recebeu menos gás carbônico e produziu menos bolhas. Isso é compatível com limitação por disponibilidade de reagente, sem provar sozinho todos os mecanismos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C27 — Fluxo de energia e cadeias alimentares
 
@@ -486,7 +486,7 @@ Se o consumo humano ocorrer diretamente no nível dos herbívoros em vez do pred
 
 **Gabarito: E.** Herbívoros têm 8.000 kJ e o predador final 80 kJ. A razão é 8.000/80 = 100, resultante das duas transferências intermediárias.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C28 — Genética e probabilidade
 
@@ -504,7 +504,7 @@ Entre os descendentes que não apresentam a característica recessiva, que fraç
 
 **Gabarito: B.** As proporções são 1 AA, 2 Aa e 1 aa. Ao excluir aa, restam três partes, duas delas Aa. A probabilidade condicionada é 2/3, não 1/2.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C29 — Seleção de resistência bacteriana
 
@@ -522,7 +522,7 @@ Quantas bactérias sensíveis sobrevivem sob as condições descritas?
 
 **Gabarito: D.** Há 99.000 sensíveis inicialmente. Sobrevive 1% desse grupo: 990. A porcentagem deve ser aplicada às sensíveis, não à população total.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C30 — Osmose e membranas
 
@@ -540,7 +540,7 @@ Qual comparação descreve a diferença entre célula vegetal e uma célula sem 
 
 **Gabarito: A.** A parede resiste à expansão, levando ao aumento da pressão de turgor. Sem estrutura equivalente, a entrada excessiva de água pode causar ruptura, dependendo das condições.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C31 — Diluição e concentração
 
@@ -558,7 +558,7 @@ Qual massa de soluto foi retirada?
 
 **Gabarito: D.** A porção retirada corresponde a 150/600 = 1/4 do volume. Por ser homogênea, ela contém 1/4 da massa de soluto: 12/4 = 3 g.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C32 — Reação química e sistema fechado
 
@@ -576,15 +576,15 @@ Qual massa do conteúdo é esperada no frasco fechado antes e depois da reação
 
 **Gabarito: A.** As massas iniciais somam 5 + 25 = 30 g. Mantendo todos os produtos dentro do frasco e sem troca de matéria, a massa total do conteúdo permanece 30 g.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C33 — Pressão e distribuição de força
 
-ID: d1432000-0000-4000-8000-000000000033. Versão: 2. Dificuldade estimada: medium. Família: C13.
+ID: d1432000-0000-4000-8000-000000000033. Versão: 3. Dificuldade estimada: medium. Família: C13.
 
 Um bloco exerce força de 600 N sobre uma superfície horizontal. Na posição I, apoia-se em área de 0,03 m²; na II, em 0,06 m². Use pressão média = força/área e despreze irregularidades do apoio. A massa do bloco não muda ao girá-lo.
 
-Que área seria necessária para limitar a pressão média a 5.000 Pa?
+Qual é a área mínima necessária para manter a pressão média em no máximo 5.000 Pa?
 
 - **A)** 0,12 m²
 - **B)** 0,03 m²
@@ -592,9 +592,9 @@ Que área seria necessária para limitar a pressão média a 5.000 Pa?
 - **D)** 0,012 m²
 - **E)** 0,3 m²
 
-**Gabarito: A.** P = F/A implica A = F/P = 600/5.000 = 0,12 m². O limite exige área quatro vezes maior que o primeiro apoio.
+**Gabarito: A.** Para manter F/A ≤ 5.000 Pa, a área deve satisfazer A ≥ 600/5.000 = 0,12 m². Essa é a área mínima, quatro vezes a do primeiro apoio. Uma área maior também reduz a pressão abaixo do limite, mas não é a mínima pedida.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C34 — Ondas e mudança de meio
 
@@ -612,7 +612,7 @@ Qual é o período da fonte?
 
 **Gabarito: C.** Período é o intervalo de uma oscilação: T = 1/f = 1/5 = 0,2 s. Ele permanece associado à fonte nos dois meios.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C35 — Estações e duração da luz
 
@@ -630,7 +630,7 @@ Que diferença de tempo de luz a cidade sul apresenta entre os dois meses do exe
 
 **Gabarito: D.** No exemplo, a cidade sul recebe 14 horas em dezembro e 10 em junho. A diferença é 4 horas; isso descreve a comparação fornecida, não todas as latitudes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C36 — Respiração celular e interpretação de medidas
 
@@ -648,7 +648,7 @@ Qual redução relativa da concentração de oxigênio ocorre em A, tomando 21% 
 
 **Gabarito: A.** A diferença é de 3 pontos percentuais. A redução relativa é 3/21 × 100 ≈ 14,3%; pontos percentuais e porcentagem relativa não são a mesma medida.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C37 — Eutrofização e oxigênio dissolvido
 
@@ -666,7 +666,7 @@ Qual é a queda percentual em relação aos 8 mg/L anteriores?
 
 **Gabarito: A.** A redução foi 8 − 2 = 6 mg/L. Em relação ao valor inicial, 6/8 × 100 = 75%; 25% é a fração que permaneceu.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C38 — Populações e limite de recursos
 
@@ -684,7 +684,7 @@ Qual crescimento relativo ocorre de 200 para 320 indivíduos?
 
 **Gabarito: E.** O acréscimo é 120 indivíduos. Dividindo pelo valor inicial desse intervalo, 120/200 = 0,60, ou 60%. O número 320 equivale a 160% do inicial, não ao acréscimo percentual.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C39 — Placas tectônicas e evidências
 
@@ -702,7 +702,7 @@ Por que o conjunto de montanhas, vulcões e terremotos é mais informativo que u
 
 **Gabarito: C.** Diferentes observações espacialmente relacionadas permitem testar uma explicação comum. Um evento isolado ou uma paisagem, por si só, não caracteriza necessariamente todos os mecanismos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C40 — Materiais, condução e isolamento
 
@@ -720,7 +720,7 @@ Qual variável deve permanecer comparável para atribuir a diferença ao revesti
 
 **Gabarito: A.** Manter quantidade, geometria e exposição comparáveis ajuda a isolar o efeito do revestimento. Mudanças simultâneas poderiam explicar o resultado por outros fatores.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C41 — Densidade e flutuação
 
@@ -738,7 +738,7 @@ Um segundo objeto do mesmo material tem 600 cm³. Qual massa e comportamento na 
 
 **Gabarito: E.** A densidade permanece 0,8 g/cm³; com 600 cm³, a massa é 480 g. O aumento de tamanho não muda a comparação entre as densidades, portanto continua flutuando.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C42 — Separação de misturas e conservação
 
@@ -756,7 +756,7 @@ Qual massa de água é recolhida na destilação dessa metade?
 
 **Gabarito: E.** A divisão da solução homogênea reparte também a água: 150/2 = 75 g em cada metade. O destilado recolhido é a água; os 15 g de sal da metade permanecem no recipiente aquecido.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C43 — Energia elétrica e eficiência
 
@@ -774,7 +774,7 @@ Qual energia a primeira bomba dissipa no mesmo intervalo?
 
 **Gabarito: A.** A potência dissipada é 30% de 600 W, ou 180 W. Durante 600 s, isso representa 108.000 J, completando os 360.000 J recebidos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C44 — Circuitos e associação de resistores
 
@@ -792,7 +792,7 @@ Qual potência total é dissipada no circuito em paralelo?
 
 **Gabarito: C.** A fonte fornece 12 V com corrente total 4 A, logo P = 12 × 4 = 48 W. Cada ramo recebe 12 V e dissipa 24 W.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C45 — Temperatura e equilíbrio térmico
 
@@ -810,7 +810,7 @@ Mantendo 200 g de água quente, que massa de água a 15 °C produziria temperatu
 
 **Gabarito: A.** A água quente perde proporcionalmente 200 × (60 − 45) = 3.000 unidades de mΔT. A fria recebe m × (45 − 15); portanto 30m = 3.000 e m = 100 g.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C46 — Fotossíntese e controle experimental
 
@@ -828,7 +828,7 @@ A ausência de bolhas em D permite concluir o quê, sem extrapolar o indicador?
 
 **Gabarito: A.** Fotossíntese e respiração são processos diferentes. Ausência de bolhas observáveis não comprova ausência de respiração ou de outras atividades celulares.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C47 — Fluxo de energia e cadeias alimentares
 
@@ -846,7 +846,7 @@ O que acontece com a energia que não chega ao nível seguinte?
 
 **Gabarito: D.** A eficiência de transferência não significa destruição de energia. Há metabolismo, dissipação de calor e material não ingerido ou assimilado; matéria e energia têm trajetórias distintas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C48 — Genética e probabilidade
 
@@ -864,7 +864,7 @@ Qual chance de dois descendentes independentes serem ambos aa?
 
 **Gabarito: B.** Cada descendente tem chance 1/4. Para dois resultados independentes, multiplica-se 1/4 × 1/4 = 1/16 = 6,25%. Não se somam probabilidades para a ocorrência conjunta.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C49 — Seleção de resistência bacteriana
 
@@ -882,7 +882,7 @@ Que proporção aproximada dos sobreviventes é resistente?
 
 **Gabarito: B.** Há 900 resistentes sobreviventes e 990 sensíveis, total 1.890. A fração resistente é 900/1.890 ≈ 47,6%, maior que a inicial, embora ainda não seja maioria.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C50 — Osmose e membranas
 
@@ -900,7 +900,7 @@ Em III, o citoplasma se retrai e a membrana se afasta parcialmente da parede. Qu
 
 **Gabarito: B.** A maior concentração externa provoca saída de água. A retração do conteúdo celular pode afastar a membrana da parede, caracterizando plasmólise.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C51 — Diluição e concentração
 
@@ -918,7 +918,7 @@ Como fica a concentração da solução que permanece no frasco?
 
 **Gabarito: A.** Retirar 1/4 de uma solução homogênea retira a mesma fração de soluto e de volume. Restam 9 g em 0,450 L: 9/0,450 = 20 g/L. Transferir uma porção não concentra nem dilui a parte restante.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C52 — Reação química e sistema fechado
 
@@ -936,7 +936,7 @@ Qual massa de conteúdo será medida após essa saída adicional?
 
 **Gabarito: C.** A saída adicional reduz a massa de 28 para 27,5 g: 28 − 0,5 = 27,5. A perda total é de 2,5 g de gás, compatível com a quantidade de bicarbonato informada; o gás que saiu continua existindo fora do frasco.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C53 — Pressão e distribuição de força
 
@@ -954,7 +954,7 @@ Se a força aumentar para 1.200 N, mantendo o apoio II, que pressão resulta?
 
 **Gabarito: B.** A força dobrou e a área permaneceu 0,06 m². A pressão dobra de 10.000 para 20.000 Pa, pois depende da razão entre força e área.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C54 — Ondas e mudança de meio
 
@@ -972,7 +972,7 @@ Que mudança ocorre na quantidade de comprimentos de onda contidos em um trecho 
 
 **Gabarito: C.** No meio I, 20/4 = 5 comprimentos; no II, 20/2 = 10. Frequência igual não significa espaçamento espacial igual quando a velocidade muda.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C55 — Estações e duração da luz
 
@@ -990,7 +990,7 @@ Que observação contradiz mais diretamente a explicação baseada só na aproxi
 
 **Gabarito: B.** Uma variação de distância comum ao planeta não explica sozinha favorecimento oposto dos hemisférios simultaneamente. Essa oposição é compatível com inclinação e incidência solar.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C56 — Respiração celular e interpretação de medidas
 
@@ -1008,7 +1008,7 @@ Por que o frasco B é relevante para a interpretação?
 
 **Gabarito: E.** O controle inativado ajuda a distinguir a mudança associada às sementes vivas de alterações do aparelho ou ambiente. Sua utilidade depende de condições comparáveis.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C57 — Eutrofização e oxigênio dissolvido
 
@@ -1026,7 +1026,7 @@ Por que a queda pode se intensificar à noite?
 
 **Gabarito: B.** A produção fotossintética depende de luz; o consumo respiratório não cessa necessariamente no escuro. O balanço entre produção e consumo pode, assim, reduzir a concentração noturna.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C58 — Populações e limite de recursos
 
@@ -1044,7 +1044,7 @@ Que mudança pode alterar o patamar próximo de 400?
 
 **Gabarito: D.** A capacidade de suporte depende de recursos e condições; mudanças reais nessas condições podem modificar o patamar. Uma alteração na representação dos dados não altera o ambiente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C59 — Placas tectônicas e evidências
 
@@ -1062,7 +1062,7 @@ Qual processo mantém aproximadamente o balanço de crosta oceânica ao longo do
 
 **Gabarito: E.** A tectônica relaciona criação de crosta nas dorsais com reciclagem de material nas zonas de subducção. O balanço geológico não exige crescimento indefinido da superfície terrestre.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C60 — Materiais, condução e isolamento
 
@@ -1080,7 +1080,7 @@ Se o conteúdo estivesse quente e o ambiente frio, qual previsão sobre a espuma
 
 **Gabarito: A.** Isolamento reduz a taxa de transferência, independentemente de qual lado está mais quente. O sentido espontâneo do fluxo acompanha a diferença de temperatura, não a existência de gelo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C61 — Densidade e flutuação
 
@@ -1098,7 +1098,7 @@ Uma cavidade fechada reduz a massa do objeto para 180 g, mantendo o volume exter
 
 **Gabarito: A.** A densidade média é 180/300 = 0,6 g/cm³. Sob as hipóteses ideais, a igualdade das densidades permite equilíbrio totalmente submerso, sem concluir que emerge.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C62 — Separação de misturas e conservação
 
@@ -1116,7 +1116,7 @@ Qual mecanismo explica a contaminação do destilado?
 
 **Gabarito: A.** As gotas carregam sal dissolvido por transporte mecânico. Isso contamina o líquido recolhido sem exigir que o sal vaporize. O problema é o arraste de solução, não uma mudança da volatilidade do sal.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C63 — Energia elétrica e eficiência
 
@@ -1134,7 +1134,7 @@ Uma fonte fornece apenas 500 W. Qual bomba pode manter os 420 W úteis nas condi
 
 **Gabarito: A.** Na fonte de 500 W, a primeira produziria 350 W úteis se a eficiência se mantivesse. A segunda fornece 500 × 0,84 = 420 W, dentro da condição apresentada.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C64 — Circuitos e associação de resistores
 
@@ -1152,7 +1152,7 @@ Se um resistor é retirado de cada circuito, deixando os fios restantes sem cria
 
 **Gabarito: A.** Na série, remover um componente interrompe o único caminho. No paralelo, permanece um caminho fechado pelo resistor do outro ramo, ainda ligado aos 12 V ideais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C65 — Temperatura e equilíbrio térmico
 
@@ -1170,7 +1170,7 @@ Uma medida de 12 °C após a mistura inicial é compatível com quais condiçõe
 
 **Gabarito: E.** Sem troca externa nem mudança de fase, o equilíbrio deve estar entre 15 e 60 °C. Um valor de 12 °C exige investigar medição, perdas ou outra condição não prevista.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C66 — Fotossíntese e controle experimental
 
@@ -1188,7 +1188,7 @@ Qual razão entre as contagens de A e B resume o resultado, sem afirmar precisã
 
 **Gabarito: D.** As contagens são 40 e 20, portanto 40/20 = 2. Bolhas podem ter tamanhos diferentes; a razão entre contagens não prova, por si só, a mesma razão entre massas de oxigênio.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C67 — Fluxo de energia e cadeias alimentares
 
@@ -1206,7 +1206,7 @@ Se a energia inicialmente armazenada cair para 40.000 kJ, mantendo as eficiênci
 
 **Gabarito: B.** Reduzir pela metade a energia dos produtores reduz pela metade cada nível sob o mesmo modelo. Três fatores de 0,1 levam de 40.000 a 40 kJ.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C68 — Genética e probabilidade
 
@@ -1224,7 +1224,7 @@ O nascimento de um descendente aa altera a probabilidade de aa no próximo nasci
 
 **Gabarito: D.** O primeiro resultado não modifica os gametas possíveis dos pais Aa. A proporção esperada não é uma cota que precisa ser compensada em cada família.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C69 — Seleção de resistência bacteriana
 
@@ -1242,7 +1242,7 @@ Qual conclusão é inadequada ao modelo mesmo após várias gerações sob a mes
 
 **Gabarito: E.** Seleção de variantes não equivale a mutação orientada por necessidade. As outras conclusões são compatíveis com sobrevivência diferencial e reprodução das variantes já presentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C70 — Osmose e membranas
 
@@ -1260,7 +1260,7 @@ Se células de III forem transferidas a I antes de dano irreversível, que mudan
 
 **Gabarito: E.** A inversão da diferença de concentração muda a tendência do fluxo: a água entra e pode reverter a plasmólise em células viáveis. Não se presume recuperação após dano irreversível.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C71 — Diluição e concentração
 
@@ -1278,7 +1278,7 @@ Qual concentração resulta dessa nova diluição?
 
 **Gabarito: C.** A porção contém 20 × 0,150 = 3 g de soluto. No volume final de 0,300 L, a concentração é 3/0,300 = 10 g/L. Dobrar o volume sem mudar a massa reduz a concentração à metade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C72 — Reação química e sistema fechado
 
@@ -1296,7 +1296,7 @@ Que critério distingue a reação química da mudança de estado nesses testes?
 
 **Gabarito: C.** A identificação de substâncias diferentes, associada ao consumo dos reagentes, caracteriza a transformação química. Na evaporação e condensação, a água muda de estado, preservando sua identidade química. Bolhas ou mudanças de massa isoladas não bastam para distinguir os processos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C73 — Pressão e distribuição de força
 
@@ -1314,7 +1314,7 @@ Que aplicação usa o mesmo princípio para reduzir pressão sobre solo pouco re
 
 **Gabarito: A.** A distribuição da força por uma área maior reduz a pressão média. As outras mudanças elevam a razão força/área em vez de reduzi-la.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C74 — Ondas e mudança de meio
 
@@ -1332,7 +1332,7 @@ A velocidade menor em II prova que a onda perdeu metade de sua energia?
 
 **Gabarito: D.** A relação v = fλ determina grandezas cinemáticas. Energia envolve amplitude e propriedades do meio; os dados não sustentam uma proporcionalidade universal entre energia e velocidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C75 — Estações e duração da luz
 
@@ -1350,7 +1350,7 @@ Se o eixo não tivesse inclinação, mantendo a translação, o que mudaria no m
 
 **Gabarito: E.** A inclinação é central ao mecanismo de contraste sazonal entre hemisférios. Retirá-la não implica parar rotação ou translação; são movimentos distintos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C76 — Respiração celular e interpretação de medidas
 
@@ -1368,7 +1368,7 @@ Que resultado adicional seria coerente com respiração aeróbia no frasco A?
 
 **Gabarito: B.** Na respiração aeróbia, matéria orgânica e oxigênio participam de transformações que podem liberar CO₂ e energia. Os dados não permitem calcular uma proporção precisa de gases sem outras medições.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C77 — Eutrofização e oxigênio dissolvido
 
@@ -1386,7 +1386,7 @@ Que medida enfrenta a causa descrita, em vez de apenas aumentar oxigênio tempor
 
 **Gabarito: A.** Controlar a entrada de nutrientes reduz a condição que iniciou o crescimento excessivo da biomassa. Intervenções somente no oxigênio não removem a fonte do processo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C78 — Populações e limite de recursos
 
@@ -1404,7 +1404,7 @@ Qual resultado pode produzir estabilidade em torno de 400 mesmo com reprodução
 
 **Gabarito: A.** Um total estável pode refletir equilíbrio dinâmico de entradas e saídas. O gráfico de abundância, sozinho, não mostra os fluxos internos de nascimento e morte.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C79 — Placas tectônicas e evidências
 
@@ -1422,7 +1422,7 @@ Se duas placas deslizarem lateralmente uma em relação à outra, que comparaç�
 
 **Gabarito: C.** Limites transformantes têm movimento lateral relativo e podem acumular tensão sísmica. Diferem do afastamento construtivo típico das dorsais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C80 — Materiais, condução e isolamento
 
@@ -1440,7 +1440,7 @@ Que observação impediria concluir que B não recebeu calor durante o teste?
 
 **Gabarito: C.** Manter mais gelo não equivale a isolamento perfeito. A fusão de parte dele é compatível com entrada de energia, apenas mais lenta que em A.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C81 — Densidade e flutuação
 
@@ -1458,7 +1458,7 @@ Para testar a influência da densidade do líquido, qual procedimento controla m
 
 **Gabarito: D.** A comparação isola a mudança no líquido ao manter o objeto e suas propriedades. Variar simultaneamente materiais, volumes ou temperaturas impediria atribuir diferenças à densidade do líquido.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C82 — Separação de misturas e conservação
 
@@ -1476,7 +1476,7 @@ Qual massa total de materiais é efetivamente recolhida ao final?
 
 **Gabarito: A.** Recolhem-se 20 g de areia, 15 + 15 = 30 g de sal e 150/2 = 75 g de água: total de 125 g. Os outros 75 g de água foram liberados na evaporação aberta. A conservação da massa inclui essa água no ambiente; não significa recuperação integral.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C83 — Energia elétrica e eficiência
 
@@ -1494,7 +1494,7 @@ Qual interpretação respeita conservação de energia e eficiência?
 
 **Gabarito: E.** Eficiência descreve a fração aproveitada para a finalidade considerada. As perdas para a finalidade considerada não são desaparecimento de energia: há transferência para calor e outras formas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C84 — Circuitos e associação de resistores
 
@@ -1512,7 +1512,7 @@ Qual conclusão depende explicitamente da hipótese de fonte ideal adotada?
 
 **Gabarito: C.** A fonte ideal mantém a tensão especificada sem limite de corrente. Fontes reais podem ter resistência interna e limitações, não consideradas neste modelo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C85 — Temperatura e equilíbrio térmico
 
@@ -1530,7 +1530,7 @@ Se o recipiente inicialmente a 15 °C absorvesse calor, mantendo o restante comp
 
 **Gabarito: A.** Um recipiente frio com capacidade térmica recebe energia da mistura. A hipótese de não aquecê-lo foi usada no cálculo; sua inclusão reduz a temperatura final em relação aos 30 °C ideais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C86 — Fotossíntese e controle experimental
 
@@ -1548,7 +1548,7 @@ Como melhorar a confiabilidade da conclusão sobre intensidade luminosa?
 
 **Gabarito: E.** Réplicas ajudam a estimar variação; medir volume supera parte da limitação de contar bolhas. Controlar as demais condições mantém a interpretação da variável estudada.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C87 — Fluxo de energia e cadeias alimentares
 
@@ -1566,7 +1566,7 @@ Que afirmação distingue corretamente decomposição de fluxo energético?
 
 **Gabarito: D.** Nutrientes podem ser reutilizados pelos produtores. A energia dissipada não retorna integralmente em forma aproveitável; ecossistemas dependem de entrada energética, geralmente solar.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C88 — Genética e probabilidade
 
@@ -1584,7 +1584,7 @@ Um indivíduo aa cruza com outro AA. Que resultado se espera quanto ao genótipo
 
 **Gabarito: B.** O indivíduo aa só fornece a e o AA só fornece A; todos os descendentes recebem Aa. Dominância trata manifestação, não eliminação do alelo recessivo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C89 — Seleção de resistência bacteriana
 
@@ -1602,7 +1602,7 @@ Qual comparação ajuda a avaliar o papel seletivo da exposição?
 
 **Gabarito: D.** O grupo não exposto funciona como comparação e o registro inicial permite observar mudanças de frequência. Distinguir variantes é necessário para estudar seleção, não apenas redução do total.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C90 — Osmose e membranas
 
@@ -1620,7 +1620,7 @@ Que alteração impediria usar diretamente as previsões anteriores?
 
 **Gabarito: A.** As previsões supõem solutos não permeantes no período. Se eles atravessam rapidamente, o gradiente pode mudar e a tonicidade não pode ser inferida apenas da concentração inicial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C91 — Diluição e concentração
 
@@ -1638,7 +1638,7 @@ Qual procedimento atende ao objetivo?
 
 **Gabarito: B.** Ao evaporar parte da água sem perder soluto, diminui-se o volume da solução e aumenta-se a razão massa/volume. Retirada homogênea, transferência ou divisão não mudam essa razão; acrescentar água a diminui.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C92 — Reação química e sistema fechado
 
@@ -1656,7 +1656,7 @@ Como medir a massa total dos produtos no ensaio aberto sem perder a parcela gaso
 
 **Gabarito: C.** A soma do material restante com o gás coletado permite contabilizar todos os produtos. Volume de recipiente e contagem de bolhas não substituem massa em condições desconhecidas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C93 — Pressão e distribuição de força
 
@@ -1674,7 +1674,7 @@ Que limitação impede afirmar que a pressão é idêntica em todos os pontos de
 
 **Gabarito: B.** A razão F/A fornece um valor médio. Em contato real, forças locais e irregularidades podem produzir valores distintos; o modelo não descreve cada ponto.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C94 — Ondas e mudança de meio
 
@@ -1692,7 +1692,7 @@ Se a fonte passar a 10 Hz no meio I, mantendo velocidade de 20 m/s, qual será o
 
 **Gabarito: D.** Mantendo a velocidade e dobrando a frequência, o comprimento cai pela metade: 20/10 = 2 m. A alteração agora está na fonte, não no meio.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C95 — Estações e duração da luz
 
@@ -1710,7 +1710,7 @@ Qual cuidado evita transformar o exemplo de horas de luz em uma regra para qualq
 
 **Gabarito: D.** A duração do dia varia com latitude e época. Os valores ilustram duas cidades comparáveis; não representam todos os pontos dos hemisférios, especialmente regiões equatoriais e polares.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C96 — Respiração celular e interpretação de medidas
 
@@ -1728,7 +1728,7 @@ Se A estivesse aberto e recebesse ar continuamente, que dificuldade surgiria?
 
 **Gabarito: E.** Um sistema aberto troca gases; uma concentração aproximadamente constante pode coexistir com consumo reposto pelo ambiente. Por isso o fechamento é importante para a leitura inicial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C97 — Eutrofização e oxigênio dissolvido
 
@@ -1746,11 +1746,11 @@ Qual cuidado é necessário ao interpretar uma única medida diurna de oxigênio
 
 **Gabarito: C.** O balanço varia com luz e atividade biológica. Medidas em horários distintos ajudam a captar ciclos e valores mínimos que uma observação diurna isolada pode ocultar.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C98 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000098. Versão: 3. Dificuldade estimada: medium. Família: C18.
+ID: d1432000-0000-4000-8000-000000000098. Versão: 4. Dificuldade estimada: medium. Família: C18.
 
 Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. O cultivo permaneceu fechado, sem entrada ou saída de indivíduos.
 
@@ -1762,9 +1762,9 @@ Qual informação adicional ajuda a investigar o mecanismo da desaceleração?
 - **D)** Ausência de mortes, com manutenção contínua dos nascimentos.
 - **E)** Nascimentos persistentemente maiores que as mortes, sem outra mudança.
 
-**Gabarito: A.** Recursos por indivíduo e taxas demográficas podem relacionar limitação ambiental ao crescimento. Reordenar períodos ou tomar um número como causa impede essa análise.
+**Gabarito: A.** Medir alimento disponível por indivíduo e taxas de nascimento e morte em cada intervalo permite investigar como os recursos e o balanço demográfico se relacionam com a desaceleração. As demais alternativas descrevem situações de nascimento e mortalidade, sem propor essas medições adicionais; não devem ser presumidas apenas a partir do total de indivíduos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C99 — Placas tectônicas e evidências
 
@@ -1782,7 +1782,7 @@ Um relatório identifica subducção e registra terremotos anteriores na região
 
 **Gabarito: C.** Histórico e tipo de limite ajudam a avaliar perigos tectônicos. Eles não fornecem calendário exato nem magnitude determinada de cada evento; tampouco provam que toda a tensão regional foi eliminada.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## C100 — Materiais, condução e isolamento
 
@@ -1800,4 +1800,4 @@ Se os dois conteúdos forem observados por tempo suficiente no mesmo ambiente, s
 
 **Gabarito: A.** Sem fontes ativas, o isolamento passivo não sustenta indefinidamente uma diferença de temperatura. Ele reduz a taxa de transferência e prolonga a aproximação do equilíbrio.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.

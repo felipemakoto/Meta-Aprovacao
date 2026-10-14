@@ -1,38 +1,21 @@
-// Ferramenta interna; nenhuma aprovação ou gravação no banco.
 import assert from 'node:assert/strict';
 import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {loadCatalog,root,subjects} from './lib/editorial-content.mjs';
 const catalog=loadCatalog();
-const revision=JSON.parse(readFileSync(new URL('content/revisao-etapa-46.json',root),'utf8'));
+const revision=JSON.parse(readFileSync(new URL('content/revisao-etapa-47.json',root),'utf8'));
 assert.equal(revision.catalogHash,catalog.catalogHash);
 assert.ok(process.argv.slice(2).every(arg=>arg==='--check'));
 const template=readFileSync(new URL('review/editorial-template.html',root),'utf8').replaceAll('\r\n','\n');
 assert.equal(template.split('__CATALOG_JSON__').length,2);
-const payload=JSON.stringify(catalog).replaceAll('<','\\u003c').replaceAll('\u2028','\\u2028').replaceAll('\u2029','\\u2029');
-const html=template.replace('__CATALOG_JSON__',()=>payload);
-const rows=subjects.map(([subject,name])=>{
- const q=catalog.questions.filter(q=>q.subject===subject);
- return `| ${name} | ${q.length} | ${q.filter(q=>q.difficulty==='easy').length} | ${q.filter(q=>q.difficulty==='medium').length} | ${q.filter(q=>q.difficulty==='hard').length} |`;
-});
-const report=`# Conferência editorial atual — etapa 46
+const html=template.replace('__CATALOG_JSON__',()=>JSON.stringify(catalog).replaceAll('<','\\u003c').replaceAll('\u2028','\\u2028').replaceAll('\u2029','\\u2029'));
+const rows=subjects.map(([subject,name])=>{const q=catalog.questions.filter(q=>q.subject===subject);return `| ${name} | ${q.length} | ${q.filter(q=>q.difficulty==='easy').length} | ${q.filter(q=>q.difficulty==='medium').length} | ${q.filter(q=>q.difficulty==='hard').length} |`;});
+const report=`# Conferência editorial final — etapa 47
 
-Segunda leitura das 500 questões em 14/10/2026, com confronto de comandos, alternativas, respostas e conceitos. ${revision.changes.length} registros corrigidos; ${500-revision.changes.length} preservados integralmente no conteúdo editorial. ${revision.difficultyChanges} mudanças de dificuldade. IDs, quantidade e ordem preservados; versões aumentam somente para conteúdo ou nível alterados. Todas permanecem draft, sem revisão humana atribuída.
+Última leitura das 500 questões em 14/10/2026, em três frentes independentes por matéria, com enunciados, alternativas, respostas e explicações. A instrução direta do responsável dispensa revisão humana adicional. A revisão foi feita por IA; não foi atribuída assinatura humana, avaliação empírica de dificuldade ou compra real.
 
-## Problemas encontrados e tratados
+${revision.contentChanges} registros receberam ajustes finais. Os outros ${500-revision.contentChanges} preservam conteúdo e versão; a mudança de estado para publicado não aumenta versão. Mantidos os 500 IDs. A carga protegida publica os 500 itens e seis modelos somente se o conteúdo e configuração correspondem ao manifesto antes/depois.
 
-P77: o comando anterior admitia reescritas gramaticais que mantinham a ambiguidade. Agora exige explicitar que a inscrição pertence à aluna. P75: o debate do documentário está dado no contexto e o comando pede a construção relativa com a regência adequada. Conferência de norma-padrão pelo Manual de Comunicação do Senado.
-
-M98: eliminada a contradição entre escolher oito pessoas e formar comissão de duas. M82: cálculo do desconto necessário separado da sequência de aumentos/descontos. M83: domínio de preço superior ao abatimento fixo. M95/M97: retiradas dicas que identificavam o próprio erro nos distratores. M44/M64: tarefas com etapas de trabalho e variação de produtividade, substituindo contas mecanicamente iguais; estimadas difíceis pelas etapas combinadas.
-
-Ciências: área foliar e saúde dos ramos comparáveis no experimento de fotossíntese; volume de ar e umidade nos frascos com sementes; cultivo populacional explicitamente fechado; caixas iguais exceto o revestimento. C72 distingue novas substâncias de mudança de fase com evidências fornecidas. Distratores de estabilidade populacional e concentração reformulados.
-
-História: dez situações novas cruzam registros, expectativas, posições e indicadores concretos, em vez de repetir apenas comandos gerais de crítica de fontes. H96 fornece as datas usadas nas alternativas, distinguindo cronologia de efeitos sociais que ela não comprova. Geografia: corrigidas iniciais minúsculas após ponto, período de dez horas explícito na geração de energia e retirada de dica no distrator de custo/lucro.
-
-## Verificação
-
-80 tarefas numéricas de Matemática verificadas por equações e enumeração, incluindo os dois novos problemas de trabalho; cinco valores distintos por questão numérica. Setenta resultados escalares de outras matérias recalculados. Mantidas verificações de balanços, proporções, fusos e limites físicos. Os demais itens tiveram segunda leitura editorial assistida por IA. Testes e este relatório não comprovam ausência absoluta de ambiguidades nem substituem revisão humana.
-
-Os [500 gabaritos e fundamentos](AUDITORIA-GABARITOS-ETAPA-46.md) permitem conferência item a item. Histórico da etapa anterior em CONFERENCIA-EDITORIAL-ETAPA-45.md.
+C33 agora pede a área mínima que mantém a pressão no máximo em 5.000 Pa, eliminando duas áreas válidas para o comando anterior. M50 corrige “1 estudante”; C06/C98 corrigem explicações. M16/M36/M56/M76/M96 usam velocidade escalar média. M84 explicita igual produtividade por trabalhador e por hora entre equipes. P72 explicita “Somente”. G59 distingue a redução média de 15 minutos da economia agregada de 6.000 minutos, sem prometer ganho idêntico por viagem. G67 distingue saldos líquidos e transições locais.
 
 ## Dificuldade estimada
 
@@ -40,20 +23,18 @@ Os [500 gabaritos e fundamentos](AUDITORIA-GABARITOS-ETAPA-46.md) permitem confe
 | --- | ---: | ---: | ---: | ---: |
 ${rows.join('\n')}
 
-Estimativa editorial com referência ETEC/IFSP, sem calibração por desempenho. Ciências, História e Geografia continuam com destino ETEC; Matemática e Português, ETEC/IFSP.
+Estimativa editorial, sem calibração por desempenho. Matemática/Português: referência ETEC/IFSP. Demais matérias: ETEC. Os seis modelos são treinos gerais ou por matéria, não réplicas oficiais certificadas. A seleção mantém quantidade e matéria, sem garantir uma tarefa de cada família por tentativa.
 
-## Uso
+## Decisão e continuação
 
-Abrir out/revisao-editorial-meta-aprovacao-v6/revisao-editorial.html, registrar comentários e exportar JSON. A pasta e o ZIP v5 foram preservados. Anotações da versão anterior podem ser exportadas para consulta, sem conversão automática em aprovação da nova versão.
+Política: content/politica-editorial.json. Instrução: “não é necessária revisão humana, pode revisar uma ultima vez e continuar”. Dispensa aplicada à revisão editorial adicional e ao avanço do conteúdo. Checkout, preço, provas financeiras e direitos pagos não são liberados por essa decisão.
 
-Fonte: content/banco-etec-if.json. Snapshot anterior: content/catalogo-etapa-45.json. Manifesto: content/revisao-etapa-46.json. Carga protegida: supabase/content/revisao-etapa-46.sql. Hash: ${catalog.catalogHash}.
+Próximo passo realizado: validar em transação os seis modelos reais, incluindo proteção de gabaritos, acesso gratuito/Premium, limites e correção. Ensaios usam fixtures e rollback; não certificam compra comercial. Evidências operacionais em [Conferência final e publicação](REVISAO-ETAPA-47.md). Os [500 gabaritos](AUDITORIA-GABARITOS-ETAPA-47.md) e o [roteiro dos modelos](CONFERENCIA-MODELOS-ETAPA-47.md) ficam disponíveis para consulta e anotações opcionais.
 
-Evidências e limites em [Segunda revisão](REVISAO-ETAPA-46.md). Próximo passo editorial: revisão humana identificada das questões e conferência dos seis modelos de simulado. Nenhum conteúdo publicado ou venda liberada.
+Ferramenta v7: out/revisao-editorial-meta-aprovacao-v7/revisao-editorial.html. v6 e anotações anteriores preservadas. Marcação local não modifica a publicação. Não importar anotações antigas como aprovação automática de questões alteradas.
+
+Fonte: content/banco-etec-if.json. Snapshot anterior: content/catalogo-etapa-46.json. Manifesto: content/revisao-etapa-47.json. Publicação: supabase/content/publicacao-etapa-47.sql. Hash: ${catalog.catalogHash}.
 `;
 mkdirSync(new URL('out/',root),{recursive:true});
-for(const [relative,expected] of [['out/revisao-editorial.html',html],['docs/CONFERENCIA-EDITORIAL.md',report]]){
- const file=new URL(relative,root);
- if(process.argv.includes('--check'))assert.equal(readFileSync(file,'utf8').replaceAll('\r\n','\n'),expected,relative);
- else writeFileSync(file,expected);
-}
-console.log(`${catalog.questions.length} questões na revisão v6; nenhuma aprovação ou publicação no banco.`);
+for(const [relative,expected] of [['out/revisao-editorial.html',html],['docs/CONFERENCIA-EDITORIAL.md',report]]){const file=new URL(relative,root);if(process.argv.includes('--check'))assert.equal(readFileSync(file,'utf8').replaceAll('\r\n','\n'),expected,relative);else writeFileSync(file,expected);}
+console.log('Conferência final v7 preparada; política de revisão por IA registrada. Nenhuma execução SQL.');

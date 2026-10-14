@@ -1,6 +1,6 @@
-# Revisão atual — Matemática — etapa 46
+# Revisão atual — Matemática — etapa 47
 
-Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Revisão editorial final por IA concluída; revisão humana adicional dispensada pelo responsável. Estado publicado é o alvo verificado pelo SQL e pela consulta posterior.
 
 ## M01 — Frações e reconstrução do total
 
@@ -16,7 +16,7 @@ Uma associação separou R$ 120 de sua arrecadação para manutenção. Aplicou 
 
 **Gabarito: A.** A sobra corresponde a 1/3 do valor após a reserva. Esse valor era 3 × 840 = 2520. Somando a parcela inicialmente separada, obtém-se 2.640 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M02 — Porcentagens sucessivas
 
@@ -32,7 +32,7 @@ Um equipamento custava R$ 200. Após aumento de 20%, uma campanha aplicou descon
 
 **Gabarito: D.** O aumento multiplica o preço por 1,20; o desconto, por 0,80. O produto é 0,96, portanto o valor final é 192 reais, 4% inferior ao inicial. As bases das duas porcentagens são diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M03 — Porcentagem inversa e comparação
 
@@ -48,7 +48,7 @@ Uma loja vende um produto por R$ 135 após desconto de 25%. Outra anuncia o mesm
 
 **Gabarito: C.** O preço de tabela é 135 ÷ 0,75 = 180. Na segunda loja custa 155. A diferença para 135 é 20 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M04 — Proporcionalidade composta
 
@@ -64,7 +64,7 @@ ID: d1370000-0000-4000-8000-000000000002. Versão: 4. Dificuldade estimada: medi
 
 **Gabarito: B.** O trabalho exige 432 trabalhador-horas. A nova equipe produz 48 trabalhador-horas por dia. A divisão resulta em 9 dias; aumentar trabalhadores reduz o tempo, mas reduzir a jornada o aumenta.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M05 — Equações e escolha de tarifa
 
@@ -80,7 +80,7 @@ Para percorrer x quilômetros, o serviço A cobra R$ 24 fixos mais R$ 3 por quil
 
 **Gabarito: D.** Igualando 24 + 3x = 8 + 5x, obtém-se 2x = 16, portanto x = 8. Acima desse valor, a menor taxa por quilômetro torna A mais econômico.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M06 — Sistemas de equações
 
@@ -96,7 +96,7 @@ Uma atividade vendeu 24 ingressos, alguns inteiros de R$ 18 e outros reduzidos d
 
 **Gabarito: B.** Se todos fossem reduzidos, a arrecadação seria 240. Cada inteiro acrescenta 8 reais. Logo (304 − 240) ÷ 8 = 8 inteiros; os demais são reduzidos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M07 — Média e reconstrução de dados
 
@@ -112,7 +112,7 @@ A média de 12 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7
 
 **Gabarito: B.** A soma antiga é 12 × 7 = 84; a nova soma é 15 × 7,3 = 109,5. A diferença, dividida por três, resulta em 8,5. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M08 — Média ponderada e percentuais
 
@@ -128,7 +128,7 @@ Uma turma de 20 estudantes teve 60% de presença em uma oficina; outra de 30 tev
 
 **Gabarito: A.** Os presentes são 12 e 24. A taxa conjunta é (12 + 24) ÷ 50 × 100 = 72%. As turmas têm tamanhos diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M09 — Probabilidade sem reposição
 
@@ -144,7 +144,7 @@ Uma caixa contém 3 fichas vermelhas e 5 azuis, indistinguíveis pelo tato. Duas
 
 **Gabarito: B.** A primeira chance é 3/8; após uma vermelha, restam 2 vermelhas entre 7 fichas. Multiplicando as duas probabilidades e convertendo para porcentagem, obtém-se 10,7143%. A retirada modifica a composição da caixa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M10 — Conjuntos e interpretação de pesquisa
 
@@ -160,7 +160,7 @@ Entre 54 estudantes entrevistados, 28 participam de robótica e 24 de teatro. 8 
 
 **Gabarito: A.** Ao somar os grupos, os 8 participantes de ambos foram contados duas vezes. A união tem 28 + 24 − 8 = 44. Subtraindo esse total dos 54 entrevistados, restam 10.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M11 — Escala e percurso real
 
@@ -176,7 +176,7 @@ Em um mapa de escala 1:25000, dois pontos estão separados por 6 cm em linha ret
 
 **Gabarito: A.** Seis centímetros representam 150000 cm, ou 1,5 km. O percurso aumenta esse valor em 25%: multiplica-se por 1,25, chegando a 1,875 km. A escala converte distância linear, não área.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M12 — Área composta e faixa interna
 
@@ -192,7 +192,7 @@ Um jardim retangular mede 18 m por 12 m. Uma faixa de 1 m de largura contorna to
 
 **Gabarito: D.** A largura é retirada nas duas extremidades de cada dimensão. A área interna é (18 − 2) × (12 − 2) = 160. A faixa ocupa 216 − 160 = 56 m². O perímetro, sozinho, não é a área da faixa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M13 — Teorema de Pitágoras e material
 
@@ -208,7 +208,7 @@ Uma rampa reta liga o piso a uma plataforma 3 m acima dele. Sua projeção horiz
 
 **Gabarito: B.** O comprimento inclinado é √(3² + 4²) = 5 m pelo teorema de Pitágoras. Como há duas laterais, são necessários 2 × 5 = 10 m. Somar altura e projeção não fornece a hipotenusa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M14 — Semelhança e medição indireta
 
@@ -224,7 +224,7 @@ No mesmo instante e sobre terreno plano, uma haste vertical de 1,5 m projeta som
 
 **Gabarito: C.** Os triângulos de altura e sombra são semelhantes. A razão altura/sombra é 1,5/2; assim h/12 = 1,5/2 e h = 9 m. As medições precisam ocorrer sob a mesma inclinação solar.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M15 — Volume, capacidade e fração
 
@@ -240,13 +240,13 @@ Um reservatório retangular tem medidas internas de 80 cm × 50 cm × 40 cm. Uma
 
 **Gabarito: A.** A capacidade é 80 × 50 × 40 = 160000 cm³, ou 160 litros. Multiplicando por 3/4, resulta em 120 litros; a conversão é de volume.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
-## M16 — Velocidade média em trechos iguais
+## M16 — Velocidade escalar média e tempo de percurso
 
-ID: d1370000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: hard. Família: M16.
+ID: d1370000-0000-4000-8000-000000000014. Versão: 5. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista percorre 24 km a 12 km/h e retorna pelo mesmo trajeto, de 24 km, a 18 km/h. Não há paradas. Qual foi a velocidade média no percurso completo?
+Uma ciclista percorre 24 km a 12 km/h e retorna pelo mesmo trajeto, de 24 km, a 18 km/h. Não há paradas. Qual foi a velocidade escalar média no percurso completo?
 
 - **A)** 13,5 km/h
 - **B)** 16 km/h
@@ -254,9 +254,9 @@ Uma ciclista percorre 24 km a 12 km/h e retorna pelo mesmo trajeto, de 24 km, a 
 - **D)** 14,4 km/h
 - **E)** 15 km/h
 
-**Gabarito: D.** O tempo da ida é 2 h; o da volta é 1,3333 h. A velocidade média é 48 ÷ (2 + 1,3333) = 14,4 km/h. Os tempos dos dois trechos não são iguais.
+**Gabarito: D.** O tempo da ida é 2 h; o da volta é 1,3333 h. A velocidade escalar média é 48 ÷ (2 + 1,3333) = 14,4 km/h. Os tempos dos dois trechos não são iguais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M17 — Ângulos de polígonos e giro
 
@@ -272,7 +272,7 @@ Uma praça tem contorno de polígono regular com 6 lados. Um desenhista precisa 
 
 **Gabarito: A.** A soma vale (6 − 2) × 180° = 720°. Como o polígono é regular, cada ângulo interno mede 720/6 = 120°. O valor 360°/n é o ângulo externo, não o interno.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M18 — Contagem e distinção de funções
 
@@ -288,7 +288,7 @@ Um grupo tem 7 participantes e precisa escolher duas pessoas para uma comissão 
 
 **Gabarito: B.** Há 7 escolhas para a primeira pessoa e 6 para a segunda. Cada par foi contado duas vezes, pois não existem cargos. Portanto 7 × 6 ÷ 2 = 21 comissões.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M19 — Sequências e soma acumulada
 
@@ -304,7 +304,7 @@ Uma campanha recolhe 8 kg de material no primeiro dia e aumenta o recolhimento e
 
 **Gabarito: C.** Os valores formam uma progressão aritmética: primeiro 8, último 35. A soma é 10 × (8 + 35) ÷ 2 = 215 kg, obtida pelo pareamento de termos extremos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M20 — Planejamento por média-alvo
 
@@ -320,7 +320,7 @@ Um sensor registrou 8 medições com média de 6 unidades. Para que a média de 
 
 **Gabarito: E.** A soma já registrada é 48; a soma-alvo é (8 + 4) × 7 = 84. A diferença deve ser distribuída pelas quatro novas medições: 9 unidades em cada uma.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M21 — Frações e reconstrução do total
 
@@ -336,7 +336,7 @@ Uma associação arrecadou R$ 3.390. Separou uma reserva e gastou 2/3 do restant
 
 **Gabarito: A.** A sobra é 1/3 do valor após a reserva. Logo, esse valor era 3 × 1.080 = 3.240 reais. A reserva foi 3.390 − 3.240 = 150 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M22 — Porcentagens sucessivas
 
@@ -352,7 +352,7 @@ Após um aumento de 20% e um desconto de 20% sobre o valor reajustado, um equipa
 
 **Gabarito: B.** As duas alterações multiplicam o preço inicial por 1,20 × 0,80 = 0,96. Assim, 288/0,96 = 300 reais. Aplicar porcentagens inversas por simples subtração não recupera a base original.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M23 — Porcentagem inversa e comparação
 
@@ -368,7 +368,7 @@ Uma loja vende um produto por R$ 165 após um desconto. O mesmo produto, com pre
 
 **Gabarito: C.** O desconto foi de 220 − 165 = 55 reais. Sua base é o preço de tabela: 55/220 × 100 = 25%. Os 25 reais da segunda oferta não determinam o desconto percentual da primeira.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M24 — Proporcionalidade composta
 
@@ -384,7 +384,7 @@ Uma equipe de oito trabalhadores conclui uma tarefa em doze dias de seis horas. 
 
 **Gabarito: C.** A tarefa exige 8 × 12 × 6 = 576 trabalhador-horas. Cada trabalhador da nova equipe oferece 9 × 4 = 36 horas. Portanto, são necessários 576/36 = 16 trabalhadores.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M25 — Equações e escolha de tarifa
 
@@ -400,7 +400,7 @@ O serviço A cobra R$ 28 fixos mais R$ 3 por quilômetro; o B, R$ 10 fixos mais 
 
 **Gabarito: A.** A cobrança exige 28 + 3x ≤ 55. Assim, x ≤ 9 km. A verificação dá 28 + 27 = 55; a distância de igualdade entre A e B não é o critério pedido.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M26 — Sistemas de equações
 
@@ -416,7 +416,7 @@ Um evento vendeu 28 ingressos: 9 inteiros de R$ 18 e os demais reduzidos de R$ 1
 
 **Gabarito: B.** Há 28 − 9 = 19 ingressos reduzidos. A arrecadação é 9 × 18 + 19 × 10 = 162 + 190 = 352 reais. Não se cobra o valor inteiro sobre todos os ingressos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M27 — Média e reconstrução de dados
 
@@ -432,7 +432,7 @@ Quatorze avaliações de mesmo peso tiveram média 7,0. Outras três avaliaçõe
 
 **Gabarito: A.** A soma das notas é 14 × 7 + 3 × 8,7 = 124,1. Dividindo pelas 17 avaliações: 124,1/17 = 7,3. A média simples entre 7 e 8,7 ignora a quantidade de avaliações.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M28 — Média ponderada e percentuais
 
@@ -448,7 +448,7 @@ Uma turma de 25 estudantes teve 60% de presença em uma oficina. Outra turma de 
 
 **Gabarito: B.** Na primeira turma, 25 × 0,60 = 15 estiveram presentes; na segunda, 35 × 0,80 = 28. O total é 15 + 28 = 43. Percentuais não devem ser somados diretamente como contagens.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M29 — Probabilidade sem reposição
 
@@ -464,7 +464,7 @@ Uma caixa contém quatro fichas vermelhas e cinco azuis. Retiram-se duas fichas 
 
 **Gabarito: B.** Após retirar uma ficha vermelha, restam três vermelhas em oito fichas. A probabilidade condicionada é 3/8 × 100 = 37,5%. Não se multiplica novamente pela chance da primeira, pois ela já é conhecida.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M30 — Conjuntos e interpretação de pesquisa
 
@@ -480,7 +480,7 @@ Entre 50 estudantes, 31 participam de robótica, 26 de teatro e 11 de nenhuma at
 
 **Gabarito: E.** A união dos grupos tem 50 − 11 = 39 estudantes. Como 31 + 26 = 57 conta duas vezes os participantes de ambos, a interseção é 57 − 39 = 18.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M31 — Escala e percurso real
 
@@ -496,7 +496,7 @@ Em um mapa de escala 1:30.000, dois pontos distam 6 cm em linha reta. Um percurs
 
 **Gabarito: D.** A linha reta corresponde a 6 × 30.000 cm = 1,8 km. O acréscimo é 2,25 − 1,8 = 0,45 km. Dividindo pela base de 1,8 km: 0,45/1,8 × 100 = 25%.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M32 — Área composta e faixa interna
 
@@ -512,7 +512,7 @@ Um jardim mede 20 m por 13 m. Uma faixa interna de 1 m contorna seus quatro lado
 
 **Gabarito: A.** O centro mede 18 × 11 = 198 m². A faixa ocupa 20 × 13 − 198 = 62 m². Seu custo é 62 × 25 = 1.550 reais. O cálculo deve descontar a faixa das duas extremidades de cada dimensão.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M33 — Teorema de Pitágoras e material
 
@@ -528,7 +528,7 @@ Uma rampa reta sobe 6 m e possui projeção horizontal de 8 m. Duas barras acomp
 
 **Gabarito: B.** Cada lado inclinado mede √(6² + 8²) = 10 m. As duas barras totalizam 20 m. Dividindo por peças de 2 m, obtêm-se 10 peças; altura e projeção não são somadas para achar o comprimento inclinado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M34 — Semelhança e medição indireta
 
@@ -544,7 +544,7 @@ No mesmo instante, uma haste vertical de 1,75 m projeta sombra de 2 m. Uma torre
 
 **Gabarito: D.** A razão altura/sombra é a mesma: 1,75/2 = 10,5/x. A torre é seis vezes mais alta que a haste, então sua sombra mede 6 × 2 = 12 m.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M35 — Volume, capacidade e fração
 
@@ -560,11 +560,11 @@ Um reservatório retangular tem medidas internas de 100 cm × 50 cm × 40 cm. H�
 
 **Gabarito: E.** A capacidade é 100 × 50 × 40/1.000 = 200 L. Três quartos correspondem a 150 L. Como já existem 50 L, devem ser acrescentados 150 − 50 = 100 L.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
-## M36 — Velocidade média em trechos iguais
+## M36 — Velocidade escalar média e tempo de percurso
 
-ID: d1430000-0000-4000-8000-000000000036. Versão: 3. Dificuldade estimada: medium. Família: M16.
+ID: d1430000-0000-4000-8000-000000000036. Versão: 4. Dificuldade estimada: medium. Família: M16.
 
 Uma ciclista percorre 30 km a 12 km/h e volta pelo mesmo trajeto a 18 km/h, sem paradas. Qual é a duração total, em minutos, aproximadamente?
 
@@ -576,7 +576,7 @@ Uma ciclista percorre 30 km a 12 km/h e volta pelo mesmo trajeto a 18 km/h, sem 
 
 **Gabarito: C.** A ida dura 30/12 = 2,5 h, ou 150 minutos. A volta dura 30/18 h, ou 100 minutos. O total é 250 minutos; a distância igual não implica tempos iguais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M37 — Ângulos de polígonos e giro
 
@@ -592,7 +592,7 @@ Ao contornar um polígono regular, uma pessoa muda sua direção em 40° em cada
 
 **Gabarito: D.** Os giros externos de uma volta completa somam 360°. Como cada giro mede 40°, há 360/40 = 9 vértices e nove lados. O giro externo não é o ângulo interno.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M38 — Contagem e distinção de funções
 
@@ -608,7 +608,7 @@ Oito participantes concorrem a dois cargos distintos: coordenador e secretário.
 
 **Gabarito: C.** Há oito escolhas para coordenador e sete para secretário. Como os cargos são distintos, trocar as pessoas de cargo produz outra escolha. Portanto, 8 × 7 = 56, sem dividir por dois.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M39 — Sequências e soma acumulada
 
@@ -624,7 +624,7 @@ Uma campanha recolhe 10 kg no primeiro dia e aumenta o recolhimento em 3 kg por 
 
 **Gabarito: B.** No dia n, o total diário é 10 + 3(n − 1). Igualando a 40: 3(n − 1) = 30, logo n = 11. A quantidade de aumentos é um a menos que o número do dia.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M40 — Planejamento por média-alvo
 
@@ -640,7 +640,7 @@ Um sensor registrou nove medições com média 6. Outras quatro medições, toda
 
 **Gabarito: A.** As nove primeiras somam 54; as quatro seguintes somam 37. A soma total é 91 e a média é 91/13 = 7. O peso dos dois grupos depende da quantidade de medições.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M41 — Frações e reconstrução do total
 
@@ -656,7 +656,7 @@ Uma associação separou R$ 180 de sua arrecadação para manutenção. Aplicou 
 
 **Gabarito: B.** A sobra corresponde a 1/3 do valor após a reserva. Esse valor era 3 × 1320 = 3960. Somando a parcela inicialmente separada, obtém-se 4.140 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M42 — Porcentagens sucessivas
 
@@ -672,7 +672,7 @@ Um equipamento custava R$ 400. Após aumento de 20%, uma campanha aplicou descon
 
 **Gabarito: A.** O aumento multiplica o preço por 1,20; o desconto, por 0,80. O produto é 0,96, portanto o valor final é 384 reais, 4% inferior ao inicial. As bases das duas porcentagens são diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M43 — Porcentagem inversa e comparação
 
@@ -688,7 +688,7 @@ Uma loja vende um produto por R$ 195 após desconto de 25%. Outra anuncia o mesm
 
 **Gabarito: A.** O preço de tabela é 195 ÷ 0,75 = 260. Na segunda loja custa 235. A diferença para 195 é 40 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M44 — Proporcionalidade composta
 
@@ -704,7 +704,7 @@ Dez trabalhadores realizariam uma tarefa em doze dias de seis horas. Após quatr
 
 **Gabarito: C.** A tarefa exige 10 × 12 × 6 = 720 trabalhador-horas. A primeira etapa realiza 10 × 4 × 6 = 240, restando 480. Cada trabalhador da segunda etapa fornece 6 × 4 = 24 horas; são necessários 480/24 = 20 trabalhadores.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M45 — Equações e escolha de tarifa
 
@@ -720,7 +720,7 @@ Para percorrer x quilômetros, o serviço A cobra R$ 32 fixos mais R$ 3 por quil
 
 **Gabarito: D.** Igualando 32 + 3x = 12 + 5x, obtém-se 2x = 20, portanto x = 10. Acima desse valor, a menor taxa por quilômetro torna A mais econômico.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M46 — Sistemas de equações
 
@@ -736,7 +736,7 @@ Uma atividade vendeu 32 ingressos, alguns inteiros de R$ 18 e outros reduzidos d
 
 **Gabarito: A.** Se todos fossem reduzidos, a arrecadação seria 320. Cada inteiro acrescenta 8 reais. Logo (400 − 320) ÷ 8 = 10 inteiros; os demais são reduzidos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M47 — Média e reconstrução de dados
 
@@ -752,7 +752,7 @@ A média de 16 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7
 
 **Gabarito: A.** A soma antiga é 16 × 7 = 112; a nova soma é 19 × 7,3 = 138,7. A diferença, dividida por três, resulta em 8,9. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M48 — Média ponderada e percentuais
 
@@ -768,7 +768,7 @@ Uma turma de 30 estudantes teve 60% de presença em uma oficina; outra de 40 tev
 
 **Gabarito: A.** Os presentes são 18 e 32. A taxa conjunta é (18 + 32) ÷ 70 × 100 = 71,4286%. As turmas têm tamanhos diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M49 — Probabilidade sem reposição
 
@@ -784,11 +784,11 @@ Uma caixa contém 5 fichas vermelhas e 5 azuis, indistinguíveis pelo tato. Duas
 
 **Gabarito: D.** A primeira chance é 5/10; após uma vermelha, restam 4 vermelhas entre 9 fichas. Multiplicando as duas probabilidades e convertendo para porcentagem, obtém-se 22,2222%. A retirada modifica a composição da caixa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M50 — Conjuntos e interpretação de pesquisa
 
-ID: d1430000-0000-4000-8000-000000000050. Versão: 2. Dificuldade estimada: medium. Família: M10.
+ID: d1430000-0000-4000-8000-000000000050. Versão: 3. Dificuldade estimada: medium. Família: M10.
 
 Entre 62 estudantes entrevistados, 34 participam de robótica e 28 de teatro. 12 participam das duas atividades; os demais não participam de nenhuma. A coordenação deseja ofertar uma atividade nova apenas aos que estão fora de ambos os grupos. Quantos estudantes formam esse público?
 
@@ -796,11 +796,11 @@ Entre 62 estudantes entrevistados, 34 participam de robótica e 28 de teatro. 12
 - **B)** 12 estudantes
 - **C)** 24 estudantes
 - **D)** 50 estudantes
-- **E)** 1 estudantes
+- **E)** 1 estudante
 
 **Gabarito: B.** Ao somar os grupos, os 12 participantes de ambos foram contados duas vezes. A união tem 34 + 28 − 12 = 50. Subtraindo esse total dos 62 entrevistados, restam 12.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M51 — Escala e percurso real
 
@@ -816,7 +816,7 @@ Em um mapa de escala 1:35000, dois pontos estão separados por 6 cm em linha ret
 
 **Gabarito: D.** Seis centímetros representam 210000 cm, ou 2,1 km. O percurso aumenta esse valor em 25%: multiplica-se por 1,25, chegando a 2,625 km. A escala converte distância linear, não área.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M52 — Área composta e faixa interna
 
@@ -832,7 +832,7 @@ Um jardim retangular mede 22 m por 14 m. Uma faixa de 1 m de largura contorna to
 
 **Gabarito: A.** A largura é retirada nas duas extremidades de cada dimensão. A área interna é (22 − 2) × (14 − 2) = 240. A faixa ocupa 308 − 240 = 68 m². O perímetro, sozinho, não é a área da faixa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M53 — Teorema de Pitágoras e material
 
@@ -848,7 +848,7 @@ Uma rampa reta liga o piso a uma plataforma 9 m acima dele. Sua projeção horiz
 
 **Gabarito: E.** O comprimento inclinado é √(9² + 12²) = 15 m pelo teorema de Pitágoras. Como há duas laterais, são necessários 2 × 15 = 30 m. Somar altura e projeção não fornece a hipotenusa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M54 — Semelhança e medição indireta
 
@@ -864,7 +864,7 @@ No mesmo instante e sobre terreno plano, uma haste vertical de 2 m projeta sombr
 
 **Gabarito: E.** Os triângulos de altura e sombra são semelhantes. A razão altura/sombra é 2/2; assim h/12 = 2/2 e h = 12 m. As medições precisam ocorrer sob a mesma inclinação solar.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M55 — Volume, capacidade e fração
 
@@ -880,13 +880,13 @@ Um reservatório retangular tem medidas internas de 120 cm × 50 cm × 40 cm. Um
 
 **Gabarito: A.** A capacidade é 120 × 50 × 40 = 240000 cm³, ou 240 litros. Multiplicando por 3/4, resulta em 180 litros; a conversão é de volume.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
-## M56 — Velocidade média em trechos iguais
+## M56 — Velocidade escalar média e tempo de percurso
 
-ID: d1430000-0000-4000-8000-000000000056. Versão: 3. Dificuldade estimada: hard. Família: M16.
+ID: d1430000-0000-4000-8000-000000000056. Versão: 4. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista pedala durante uma hora a 12 km/h e, em seguida, durante uma hora a 18 km/h. Sem paradas, qual é sua velocidade média nas duas horas?
+Uma ciclista pedala durante uma hora a 12 km/h e, em seguida, durante uma hora a 18 km/h. Sem paradas, qual é sua velocidade escalar média nas duas horas?
 
 - **A)** 16 km/h
 - **B)** 15 km/h
@@ -894,9 +894,9 @@ Uma ciclista pedala durante uma hora a 12 km/h e, em seguida, durante uma hora a
 - **D)** 14,4 km/h
 - **E)** 13,5 km/h
 
-**Gabarito: B.** A primeira etapa tem 12 km e a segunda, 18 km. São 30 km em duas horas: 30/2 = 15 km/h. Neste caso os tempos são iguais, de modo que a média aritmética das velocidades coincide com a velocidade média.
+**Gabarito: B.** A primeira etapa tem 12 km e a segunda, 18 km. São 30 km em duas horas: 30/2 = 15 km/h. Neste caso os tempos são iguais, de modo que a média aritmética das velocidades coincide com a velocidade escalar média.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M57 — Ângulos de polígonos e giro
 
@@ -912,7 +912,7 @@ Uma praça tem contorno de polígono regular com 8 lados. Um desenhista precisa 
 
 **Gabarito: E.** A soma vale (8 − 2) × 180° = 1080°. Como o polígono é regular, cada ângulo interno mede 1080/8 = 135°. O valor 360°/n é o ângulo externo, não o interno.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M58 — Contagem e distinção de funções
 
@@ -928,7 +928,7 @@ Um grupo tem 9 participantes e precisa escolher duas pessoas para uma comissão 
 
 **Gabarito: A.** Há 9 escolhas para a primeira pessoa e 8 para a segunda. Cada par foi contado duas vezes, pois não existem cargos. Portanto 9 × 8 ÷ 2 = 36 comissões.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M59 — Sequências e soma acumulada
 
@@ -944,7 +944,7 @@ Uma campanha recolhe 5 kg no primeiro dia e dobra o recolhimento diário a cada 
 
 **Gabarito: D.** As quantidades diárias são 5, 10, 20 e 40 kg. O total é 5 + 10 + 20 + 40 = 75 kg. O padrão é multiplicativo, diferente de acrescentar uma quantidade fixa por dia.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M60 — Planejamento por média-alvo
 
@@ -960,7 +960,7 @@ Um sensor registrou 10 medições com média de 6 unidades. Para que a média de
 
 **Gabarito: D.** A soma já registrada é 60; a soma-alvo é (10 + 4) × 7 = 98. A diferença deve ser distribuída pelas quatro novas medições: 9,5 unidades em cada uma.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M61 — Frações e reconstrução do total
 
@@ -976,7 +976,7 @@ Uma associação separou R$ 210 de sua arrecadação para manutenção. Aplicou 
 
 **Gabarito: E.** A sobra corresponde a 1/3 do valor após a reserva. Esse valor era 3 × 1560 = 4680. Somando a parcela inicialmente separada, obtém-se 4.890 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M62 — Porcentagens sucessivas
 
@@ -992,7 +992,7 @@ Um equipamento custava R$ 500. Após aumento de 20%, uma campanha aplicou descon
 
 **Gabarito: C.** O aumento multiplica o preço por 1,20; o desconto, por 0,80. O produto é 0,96, portanto o valor final é 480 reais, 4% inferior ao inicial. As bases das duas porcentagens são diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M63 — Porcentagem inversa e comparação
 
@@ -1008,7 +1008,7 @@ Uma loja vende um produto por R$ 225 após desconto de 25%. Outra anuncia o mesm
 
 **Gabarito: C.** O preço de tabela é 225 ÷ 0,75 = 300. Na segunda loja custa 275. A diferença para 225 é 50 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M64 — Proporcionalidade composta
 
@@ -1024,7 +1024,7 @@ Doze trabalhadores realizam uma tarefa em doze dias de seis horas. Em tarefa id�
 
 **Gabarito: D.** A carga equivalente é 12 × 12 × 6 = 864 horas da produtividade inicial. A segunda equipe realiza por dia 18 × 6 × 0,8 = 86,4 horas equivalentes. Logo, precisa de 864/86,4 = 10 dias. Considerar somente o aumento de trabalhadores daria oito dias e ignoraria a produtividade menor.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M65 — Equações e escolha de tarifa
 
@@ -1040,7 +1040,7 @@ Para percorrer x quilômetros, o serviço A cobra R$ 36 fixos mais R$ 3 por quil
 
 **Gabarito: D.** Igualando 36 + 3x = 14 + 5x, obtém-se 2x = 22, portanto x = 11. Acima desse valor, a menor taxa por quilômetro torna A mais econômico.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M66 — Sistemas de equações
 
@@ -1056,7 +1056,7 @@ Uma atividade vendeu 36 ingressos, alguns inteiros de R$ 18 e outros reduzidos d
 
 **Gabarito: C.** Se todos fossem reduzidos, a arrecadação seria 360. Cada inteiro acrescenta 8 reais. Logo (448 − 360) ÷ 8 = 11 inteiros; os demais são reduzidos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M67 — Média e reconstrução de dados
 
@@ -1072,7 +1072,7 @@ A média de 18 avaliações de um projeto, em uma escala de 0 a 10 pontos, era 7
 
 **Gabarito: A.** A soma antiga é 18 × 7 = 126; a nova soma é 21 × 7,3 = 153,3. A diferença, dividida por três, resulta em 9,1. Não se calcula a nova nota pela média simples de 7 e 7,3.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M68 — Média ponderada e percentuais
 
@@ -1088,7 +1088,7 @@ Uma turma de 35 estudantes teve 60% de presença em uma oficina; outra de 45 tev
 
 **Gabarito: D.** Os presentes são 21 e 36. A taxa conjunta é (21 + 36) ÷ 80 × 100 = 71,25%. As turmas têm tamanhos diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M69 — Probabilidade sem reposição
 
@@ -1104,7 +1104,7 @@ Uma caixa contém 6 fichas vermelhas e 5 azuis, indistinguíveis pelo tato. Duas
 
 **Gabarito: C.** A primeira chance é 6/11; após uma vermelha, restam 5 vermelhas entre 10 fichas. Multiplicando as duas probabilidades e convertendo para porcentagem, obtém-se 27,2727%. A retirada modifica a composição da caixa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M70 — Conjuntos e interpretação de pesquisa
 
@@ -1120,7 +1120,7 @@ Entre 66 estudantes entrevistados, 37 participam de robótica e 30 de teatro. 14
 
 **Gabarito: E.** Ao somar os grupos, os 14 participantes de ambos foram contados duas vezes. A união tem 37 + 30 − 14 = 53. Subtraindo esse total dos 66 entrevistados, restam 13.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M71 — Escala e percurso real
 
@@ -1136,7 +1136,7 @@ Em um mapa de escala 1:40000, dois pontos estão separados por 6 cm em linha ret
 
 **Gabarito: B.** Seis centímetros representam 240000 cm, ou 2,4 km. O percurso aumenta esse valor em 25%: multiplica-se por 1,25, chegando a 3 km. A escala converte distância linear, não área.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M72 — Área composta e faixa interna
 
@@ -1152,7 +1152,7 @@ Um jardim retangular mede 24 m por 15 m. Uma faixa de 1 m de largura contorna to
 
 **Gabarito: E.** A largura é retirada nas duas extremidades de cada dimensão. A área interna é (24 − 2) × (15 − 2) = 286. A faixa ocupa 360 − 286 = 74 m². O perímetro, sozinho, não é a área da faixa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M73 — Teorema de Pitágoras e material
 
@@ -1168,7 +1168,7 @@ Uma rampa reta liga o piso a uma plataforma 12 m acima dele. Sua projeção hori
 
 **Gabarito: C.** O comprimento inclinado é √(12² + 16²) = 20 m pelo teorema de Pitágoras. Como há duas laterais, são necessários 2 × 20 = 40 m. Somar altura e projeção não fornece a hipotenusa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M74 — Semelhança e medição indireta
 
@@ -1184,7 +1184,7 @@ No mesmo instante e sobre terreno plano, uma haste vertical de 2,25 m projeta so
 
 **Gabarito: E.** Os triângulos de altura e sombra são semelhantes. A razão altura/sombra é 2,25/2; assim h/12 = 2,25/2 e h = 13,5 m. As medições precisam ocorrer sob a mesma inclinação solar.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M75 — Volume, capacidade e fração
 
@@ -1200,13 +1200,13 @@ Um reservatório retangular tem medidas internas de 140 cm × 50 cm × 40 cm. Um
 
 **Gabarito: D.** A capacidade é 140 × 50 × 40 = 280000 cm³, ou 280 litros. Multiplicando por 3/4, resulta em 210 litros; a conversão é de volume.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
-## M76 — Velocidade média em trechos iguais
+## M76 — Velocidade escalar média e tempo de percurso
 
-ID: d1430000-0000-4000-8000-000000000076. Versão: 3. Dificuldade estimada: hard. Família: M16.
+ID: d1430000-0000-4000-8000-000000000076. Versão: 4. Dificuldade estimada: hard. Família: M16.
 
-Uma ciclista percorre 36 km a 12 km/h, faz uma parada de 30 minutos e percorre mais 18 km a 18 km/h. Qual é a velocidade média de toda a viagem, incluindo a parada?
+Uma ciclista percorre 36 km a 12 km/h, faz uma parada de 30 minutos e percorre mais 18 km a 18 km/h. Qual é a velocidade escalar média de toda a viagem, incluindo a parada?
 
 - **A)** 13,5 km/h
 - **B)** 12 km/h
@@ -1216,7 +1216,7 @@ Uma ciclista percorre 36 km a 12 km/h, faz uma parada de 30 minutos e percorre m
 
 **Gabarito: B.** O percurso total é 54 km. Os tempos são 36/12 = 3 h, 0,5 h de parada e 18/18 = 1 h, somando 4,5 h. A média é 54/4,5 = 12 km/h; ignorar a parada produziria 13,5 km/h.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M77 — Ângulos de polígonos e giro
 
@@ -1232,7 +1232,7 @@ Uma praça tem contorno de polígono regular com 9 lados. Um desenhista precisa 
 
 **Gabarito: E.** A soma vale (9 − 2) × 180° = 1260°. Como o polígono é regular, cada ângulo interno mede 1260/9 = 140°. O valor 360°/n é o ângulo externo, não o interno.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M78 — Contagem e distinção de funções
 
@@ -1248,7 +1248,7 @@ Um grupo tem 10 participantes e precisa escolher duas pessoas para uma comissão
 
 **Gabarito: C.** Há 10 escolhas para a primeira pessoa e 9 para a segunda. Cada par foi contado duas vezes, pois não existem cargos. Portanto 10 × 9 ÷ 2 = 45 comissões.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M79 — Sequências e soma acumulada
 
@@ -1264,7 +1264,7 @@ Uma campanha dura oito dias. A quantidade recolhida aumenta 3 kg por dia e o tot
 
 **Gabarito: C.** Se o primeiro dia tem x kg, o oitavo tem x + 21. A média dos oito termos é x + 10,5 e o total é 8x + 84. Igualando a 164, obtém-se 8x = 80 e x = 10 kg.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M80 — Planejamento por média-alvo
 
@@ -1280,7 +1280,7 @@ Um sensor registrou 11 medições com média de 6 unidades. Para que a média de
 
 **Gabarito: D.** A soma já registrada é 66; a soma-alvo é (11 + 4) × 7 = 105. A diferença deve ser distribuída pelas quatro novas medições: 9,75 unidades em cada uma.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M81 — Frações e reconstrução do total
 
@@ -1296,7 +1296,7 @@ Uma associação separa R$ 200 e usa 2/3 do restante em materiais. Um aluno afir
 
 **Gabarito: C.** Após separar 200 reais de um total T, a base é T − 200. A sobra é (T − 200)/3, diferente de T/3. Identificar a base evita tratar a fração como aplicada ao total anterior.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M82 — Porcentagens sucessivas
 
@@ -1312,7 +1312,7 @@ Um produto recebeu aumento de 20%. A loja pretende devolver o preço ao valor in
 
 **Gabarito: A.** Após o aumento, o preço é 1,20P. Para recuperar P, o desconto d satisfaz 1,20P(1 − d) = P, então d = 1 − 1/1,20 ≈ 16,7%. A base do desconto é maior que a base do aumento.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M83 — Porcentagem inversa e comparação
 
@@ -1328,13 +1328,13 @@ Duas lojas têm o mesmo preço de tabela P, superior a R$ 25. Uma oferece descon
 
 **Gabarito: A.** A oferta percentual custa 0,75P e a fixa custa P − 25. A primeira é mais barata se 0,75P < P − 25, isto é, 0,25P > 25 e P > 100. Em P = 100, as ofertas são iguais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M84 — Proporcionalidade composta
 
-ID: d1430000-0000-4000-8000-000000000084. Versão: 2. Dificuldade estimada: medium. Família: M4.
+ID: d1430000-0000-4000-8000-000000000084. Versão: 3. Dificuldade estimada: medium. Família: M4.
 
-Duas equipes realizam a mesma tarefa com produtividade individual constante. A segunda dobra o número de trabalhadores e reduz a jornada diária pela metade. Como muda o número de dias necessário?
+Duas equipes realizam a mesma tarefa, mantendo a mesma produtividade por trabalhador e por hora nas duas equipes. A segunda dobra o número de trabalhadores e reduz a jornada diária pela metade. Como muda o número de dias necessário?
 
 - **A)** Aumenta em 50%, somando diretamente as mudanças percentuais.
 - **B)** Permanece igual, pois a quantidade de trabalhador-horas por dia é mantida.
@@ -1342,9 +1342,9 @@ Duas equipes realizam a mesma tarefa com produtividade individual constante. A s
 - **D)** Dobra, considerando apenas a jornada diária.
 - **E)** Cai a um quarto, multiplicando duas reduções de tempo.
 
-**Gabarito: B.** Dobrar N e dividir h por dois mantém N × h por dia. Para o mesmo trabalho total, o número de dias é igual. Os dois fatores precisam ser considerados simultaneamente.
+**Gabarito: B.** Com a mesma produtividade por trabalhador e por hora, dobrar N e dividir h por dois mantém N × h e a produção diária. Para a mesma tarefa, o número de dias permanece igual. Os efeitos do número de trabalhadores e da jornada precisam ser considerados simultaneamente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M85 — Equações e escolha de tarifa
 
@@ -1360,7 +1360,7 @@ A tarifa A é 28 + 3x e a B é 10 + 5x, em reais, para x quilômetros. As cobran
 
 **Gabarito: A.** Para x = 12, A = 28 + 36 = 64 e B = 10 + 60 = 70. Acima de 9 km, a menor cobrança por quilômetro de A compensa sua taxa fixa maior.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M86 — Sistemas de equações
 
@@ -1376,7 +1376,7 @@ Um evento vende ingressos inteiros de R$ 18 e reduzidos de R$ 10. Há 24 ingress
 
 **Gabarito: E.** A composição indicada produz 8 × 18 + 16 × 10 = 144 + 160 = 304 reais. Estar entre o mínimo e o máximo possíveis não comprova que uma composição específica produz 320 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M87 — Média e reconstrução de dados
 
@@ -1392,7 +1392,7 @@ Dez avaliações têm média 7,0 numa escala de zero a dez. Pretende-se elevar a
 
 **Gabarito: D.** A soma atual é 70. Para onze avaliações com média 8, a soma teria de ser 88. A nota nova precisaria ser 88 − 70 = 18, fora da escala. Mesmo uma nota 10 produz média 80/11 ≈ 7,27.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M88 — Média ponderada e percentuais
 
@@ -1408,7 +1408,7 @@ Duas turmas tiveram 60% e 80% de presença. A média simples de 70% coincide com
 
 **Gabarito: A.** A taxa conjunta pondera os percentuais pelo tamanho das turmas. Para taxas diferentes de 60% e 80%, o resultado fica exatamente no ponto médio de 70% quando os pesos são iguais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M89 — Probabilidade sem reposição
 
@@ -1424,7 +1424,7 @@ Uma caixa tem quatro fichas vermelhas e cinco azuis. Comparam-se duas retiradas 
 
 **Gabarito: C.** Sem reposição, a chance é (4/9)(3/8) = 1/6. Com reposição, é (4/9)² = 16/81, maior que 1/6. Depois de uma vermelha, a fração de vermelhas restantes diminui se não houver reposição.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M90 — Conjuntos e interpretação de pesquisa
 
@@ -1440,7 +1440,7 @@ Uma pesquisa registra 31 participantes de robótica, 26 de teatro e 18 em ambas.
 
 **Gabarito: E.** A união inclui cada pessoa uma vez. Os participantes de ambos aparecem na contagem de robótica e na de teatro, então a união é 31 + 26 − 18 = 39 pessoas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M91 — Escala e percurso real
 
@@ -1456,7 +1456,7 @@ Um mapa é ampliado para o dobro de seus comprimentos no papel, sem alterar a re
 
 **Gabarito: A.** Com a mesma distância real, dobrar a representação no papel divide o denominador da escala por dois. O fator aplicado aos comprimentos não deve ser confundido com o fator quadrático das áreas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M92 — Área composta e faixa interna
 
@@ -1472,7 +1472,7 @@ Um retângulo mede 20 m por 13 m e recebe uma faixa interna de 1 m nos quatro la
 
 **Gabarito: D.** A dimensão de 20 m fica em 18 m e a de 13 m em 11 m. Subtrair somente 1 m considera a faixa em uma extremidade de cada dimensão, deixando parte da faixa contada como área central.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M93 — Teorema de Pitágoras e material
 
@@ -1488,7 +1488,7 @@ Uma rampa sobe 6 m em uma projeção horizontal de 8 m. Um aluno compra 14 m de 
 
 **Gabarito: C.** A lateral é a hipotenusa de um triângulo retângulo: √(6² + 8²) = 10 m. Comprar 14 m excede a necessidade em 4 m. A soma dos catetos descreve outro percurso, não a lateral inclinada.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M94 — Semelhança e medição indireta
 
@@ -1504,7 +1504,7 @@ Um técnico usa sombras para comparar a altura de uma haste com a de uma torre. 
 
 **Gabarito: C.** A proporcionalidade pressupõe a mesma inclinação dos raios solares. Horários diferentes podem produzir ângulos diferentes. Tamanhos distintos e uso consistente de unidades não invalidam por si só a semelhança.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M95 — Volume, capacidade e fração
 
@@ -1520,23 +1520,23 @@ Um reservatório retangular passa a ter o dobro do comprimento, mantendo largura
 
 **Gabarito: D.** O volume é comprimento × largura × altura. Dobrar apenas o comprimento multiplica o produto por dois; o fator oito só ocorreria se as três dimensões fossem dobradas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
-## M96 — Velocidade média em trechos iguais
+## M96 — Velocidade escalar média e tempo de percurso
 
-ID: d1430000-0000-4000-8000-000000000096. Versão: 3. Dificuldade estimada: medium. Família: M16.
+ID: d1430000-0000-4000-8000-000000000096. Versão: 4. Dificuldade estimada: medium. Família: M16.
 
-Uma ciclista faz ida e volta por trechos de mesmo comprimento, a 12 km/h e 18 km/h, sem paradas. Por que a média aritmética de 15 km/h não é a velocidade média da viagem?
+Uma ciclista faz ida e volta por trechos de mesmo comprimento, a 12 km/h e 18 km/h, sem paradas. Por que a média aritmética de 15 km/h não é a velocidade escalar média da viagem?
 
 - **A)** Trechos de comprimentos iguais têm necessariamente durações iguais.
-- **B)** A velocidade média deve ser sempre a menor das duas velocidades.
-- **C)** A velocidade média deve ser sempre a soma das duas velocidades.
+- **B)** A velocidade escalar média deve ser sempre a menor das duas velocidades.
+- **C)** A velocidade escalar média deve ser sempre a soma das duas velocidades.
 - **D)** O trecho de 18 km/h exige mais tempo, pois a velocidade é maior.
 - **E)** Ela permanece mais tempo no trecho de 12 km/h; a média depende do tempo total.
 
-**Gabarito: E.** Velocidade média é distância total dividida pelo tempo total. Para a mesma distância, o trecho mais lento dura mais. O resultado é 14,4 km/h, inferior à média aritmética de 15 km/h.
+**Gabarito: E.** Velocidade escalar média é distância total dividida pelo tempo total. Para a mesma distância, o trecho mais lento dura mais. O resultado é 14,4 km/h, inferior à média aritmética de 15 km/h.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M97 — Ângulos de polígonos e giro
 
@@ -1552,7 +1552,7 @@ Um polígono regular tem nove lados. Um aluno usa 360°/9 para calcular seu âng
 
 **Gabarito: A.** O giro externo de uma volta completa soma 360°, produzindo 40° por vértice. Em um polígono convexo, interno e externo adjacentes são suplementares, então o interno mede 140°.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M98 — Contagem e distinção de funções
 
@@ -1568,7 +1568,7 @@ Entre oito pessoas, duas serão escolhidas para uma comissão sem cargos distint
 
 **Gabarito: C.** A contagem ordenada inclui, por exemplo, Ana–Bruno e Bruno–Ana. Sem cargos, essas duas ordens são o mesmo grupo; cada comissão foi contada duas vezes. O total correto é 8 × 7/2 = 28.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M99 — Sequências e soma acumulada
 
@@ -1584,7 +1584,7 @@ Uma campanha começa com 10 kg e aumenta 3 kg por dia. Um aluno calcula o recolh
 
 **Gabarito: C.** O primeiro dia já tem 10 kg, antes de qualquer aumento. Do primeiro ao 11º dia existem dez passos de 3 kg, portanto 40 kg. Usar onze aumentos desloca a sequência em um dia.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## M100 — Planejamento por média-alvo
 
@@ -1600,4 +1600,4 @@ Uma série tem nove medições de média 6. Uma segunda série tem quatro mediç
 
 **Gabarito: A.** A média conjunta é a soma total dividida pelo número total: (9 × 6 + 4 × 9,25)/13 = 7. Dar pesos iguais aos dois grupos faz cada medição do grupo menor contar mais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.

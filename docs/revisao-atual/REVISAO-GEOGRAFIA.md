@@ -1,6 +1,6 @@
-# Revisão atual — Geografia — etapa 46
+# Revisão atual — Geografia — etapa 47
 
-Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Revisão editorial final por IA concluída; revisão humana adicional dispensada pelo responsável. Estado publicado é o alvo verificado pelo SQL e pela consulta posterior.
 
 ## G01 — Escala, distância e área
 
@@ -18,7 +18,7 @@ Qual é o comprimento real da trilha?
 
 **Gabarito: E.** O comprimento real é 8 × 50.000 = 400.000 cm. Como 100.000 cm correspondem a 1 km, a trilha tem 4 km.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G02 — Densidade demográfica e distribuição
 
@@ -36,7 +36,7 @@ Qual comparação entre densidades médias está correta?
 
 **Gabarito: A.** Densidade é população/área: 600.000/3.000 = 200 e 400.000/1.000 = 400 hab/km². Maior população absoluta não garante maior densidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G03 — Urbanização e crescimento absoluto
 
@@ -54,7 +54,7 @@ Qual mudança da taxa de urbanização ocorreu?
 
 **Gabarito: C.** As taxas são 60.000/80.000 = 75% e 85.000/100.000 = 85%. A diferença é 10 pontos percentuais; variação relativa é outra medida.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G04 — Crescimento natural e saldo migratório
 
@@ -72,7 +72,7 @@ Qual população é esperada ao fim do ano?
 
 **Gabarito: D.** O crescimento natural é 900 − 400 = 500. O saldo migratório é 1.500 − 2.000 = −500. Os componentes se compensam, mantendo 50.000 habitantes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G05 — Estrutura etária e indicadores
 
@@ -90,7 +90,7 @@ Qual é a razão de dependência demográfica aproximada?
 
 **Gabarito: B.** A soma dos grupos externos à faixa 15–64 é 40.000. Dividindo por 60.000 e multiplicando por 100, resulta em aproximadamente 66,7.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G06 — Produtividade agrícola e área
 
@@ -108,7 +108,7 @@ Qual comparação entre produção total e produtividade é correta?
 
 **Gabarito: B.** A produz 12.000/3.000 = 4 t/ha; B, 10.000/2.000 = 5 t/ha. Quantidade total e rendimento por área são indicadores diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G07 — Uso do solo e mudança de cobertura
 
@@ -126,7 +126,7 @@ Qual redução relativa da cobertura florestal ocorreu?
 
 **Gabarito: D.** Foram perdidos 150 km² de uma base florestal de 600: 150/600 = 25%. Quinze pontos percentuais referem-se à participação da floresta na bacia total.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G08 — Energia, potência e intermitência
 
@@ -144,7 +144,7 @@ Que potências médias resultam no período?
 
 **Gabarito: B.** Multiplicando a potência instalada pelos fatores: 100 × 0,20 = 20 MW e 100 × 0,35 = 35 MW. Capacidade nominal não é produção média garantida.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G09 — Emissões totais e por habitante
 
@@ -162,7 +162,7 @@ Qual comparação distingue total anual e emissão por habitante?
 
 **Gabarito: D.** A emite 2 t por habitante e B, 4 t. Total anual e indicador per capita respondem a perguntas diferentes; uma comparação não substitui a outra.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G10 — Transporte e custo logístico
 
@@ -180,7 +180,7 @@ Qual comparação de custo total corresponde aos dados?
 
 **Gabarito: E.** A carga gera 400 × 300 = 120.000 t·km. Rodovia: ×0,30 = 36.000. Ferrovia: ×0,15 = 18.000, mais 12.000 de terminais, total 30.000 reais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G11 — Comércio externo e saldo
 
@@ -198,7 +198,7 @@ Qual saldo comercial total corresponde ao período?
 
 **Gabarito: A.** As exportações somam 80 milhões e as importações, 65. O saldo de bens informado é 80 − 65 = +15 milhões, sem incluir as demais contas externas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G12 — Renda média, mediana e desigualdade
 
@@ -216,7 +216,7 @@ Qual comparação das médias é correta?
 
 **Gabarito: B.** No primeiro setor, a soma é 15.000 e a média 3.000; no segundo, cada renda é 3.000. Média igual não representa dispersão ou concentração igual.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G13 — Clima, chuva e balanço simplificado
 
@@ -234,7 +234,7 @@ Qual comparação dos saldos está correta?
 
 **Gabarito: D.** Subtraindo: 180 − 120 = +60; 40 − 100 = −60 mm. Chuva positiva não garante saldo positivo se a demanda for maior.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G14 — Bacia hidrográfica e disponibilidade
 
@@ -252,7 +252,7 @@ Que alteração do armazenamento ocorre antes da captação adicional?
 
 **Gabarito: A.** As entradas somam 110 e as saídas 90. O saldo é +20, que aumenta o armazenamento sob o modelo simplificado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G15 — Relevo, infiltração e risco
 
@@ -270,7 +270,7 @@ Que tendência diferencia B de A sob as condições informadas?
 
 **Gabarito: C.** Cobertura e permeabilidade influenciam como a água se distribui. Compactação e menor proteção do solo podem aumentar escoamento e erosão, mas não determinam sozinhos todos os resultados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G16 — Fusos horários e conexões
 
@@ -288,7 +288,7 @@ Em que horário local chega a B?
 
 **Gabarito: E.** A partida equivale a 1h UTC de terça-feira. Oito horas depois são 9h UTC, ou 10h no fuso UTC+1. A diferença de fuso se soma à duração ao converter os horários locais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G17 — Coordenadas e distribuição espacial
 
@@ -306,7 +306,7 @@ Qual comparação das coordenadas é correta?
 
 **Gabarito: E.** A e B estão no mesmo meridiano de 40° W, mas em hemisférios norte/sul diferentes. A e C estão no paralelo de 20° S, com longitudes distintas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G18 — Mercado de trabalho e denominadores
 
@@ -324,7 +324,7 @@ Qual taxa de desocupação resulta da definição fornecida?
 
 **Gabarito: C.** A força de trabalho soma 12.000 + 3.000 = 15.000. A taxa é 3.000/15.000 × 100 = 20%; usar o total de 20.000 pessoas responde outro indicador.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G19 — Mobilidade urbana e desigualdade de acesso
 
@@ -342,7 +342,7 @@ Qual duração média ponderada das viagens existe inicialmente?
 
 **Gabarito: E.** A soma dos tempos é 600 ×20 + 400 ×50 = 32.000 minutos. Dividindo por 1.000 viagens, obtém-se média de 32; a média simples de 20 e 50 ignora os tamanhos dos grupos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G20 — Cadeias produtivas e divisão territorial
 
@@ -360,7 +360,7 @@ Qual participação do preço corresponde à montagem?
 
 **Gabarito: E.** A montagem soma 200 de um total de 1.000 reais. A fração é 200/1.000 = 20%; localização de uma etapa não equivale à localização de toda a receita.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G21 — Escala, distância e área
 
@@ -378,7 +378,7 @@ Qual área real corresponde ao terreno?
 
 **Gabarito: C.** Cada lado corresponde a 2 × 50.000 = 100.000 cm, ou 1 km. A área é 1 × 1 = 1 km²; o fator de conversão linear deve ser aplicado aos dois lados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G22 — Densidade demográfica e distribuição
 
@@ -396,7 +396,7 @@ Qual densidade existe na parcela de A que concentra 80% da população?
 
 **Gabarito: B.** A parcela possui 480.000 habitantes em 600 km². A divisão resulta em 800 hab/km², quatro vezes a média regional.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G23 — Urbanização e crescimento absoluto
 
@@ -414,7 +414,7 @@ Como mudou a população rural absoluta?
 
 **Gabarito: B.** A população rural é o total menos a urbana. Antes: 80.000 − 60.000 = 20.000; depois: 100.000 − 85.000 = 15.000.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G24 — Crescimento natural e saldo migratório
 
@@ -432,7 +432,7 @@ Qual par distingue os componentes demográficos?
 
 **Gabarito: A.** Crescimento natural compara nascimentos e mortes; saldo migratório compara entradas e saídas. Total estável não significa que cada componente foi zero.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G25 — Estrutura etária e indicadores
 
@@ -450,7 +450,7 @@ Que fração da população total tem 65 anos ou mais?
 
 **Gabarito: D.** O total é 100.000 habitantes. O grupo de 10.000 representa 10%; dividir apenas pela população de 15–64 responderia outra questão.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G26 — Produtividade agrícola e área
 
@@ -468,7 +468,7 @@ Que produtividade A precisará atingir para cumprir a meta sem ampliar área?
 
 **Gabarito: E.** A área permanece 3.000 ha e a meta é 15.000 t. A produtividade necessária é 15.000/3.000 = 5 t/ha.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G27 — Uso do solo e mudança de cobertura
 
@@ -486,7 +486,7 @@ Como mudou a participação das áreas impermeabilizadas no território total?
 
 **Gabarito: D.** 100/1.000 = 10% e 200/1.000 = 20%. A diferença é 10 pontos percentuais; a área impermeabilizada dobrou, crescimento relativo de 100%.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G28 — Energia, potência e intermitência
 
@@ -504,7 +504,7 @@ Qual energia total as duas fontes produziram nas dez horas observadas?
 
 **Gabarito: D.** A potência média conjunta é 55 MW. Durante 10 horas, a energia é 55 × 10 = 550 MWh. Potência e energia usam unidades distintas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G29 — Emissões totais e por habitante
 
@@ -522,7 +522,7 @@ Qual emissão per capita conjunta se obtém ao agregar os dois países?
 
 **Gabarito: D.** Somam-se 200 milhões de toneladas e 80 milhões de habitantes. A razão é 2,5 t/hab, não a média simples de 2 e 4 porque as populações diferem.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G30 — Transporte e custo logístico
 
@@ -540,7 +540,7 @@ Qual distância iguala os custos mantendo as demais condições?
 
 **Gabarito: D.** Os custos são 400 × 0,30 × d e 400 × 0,15 × d + 12.000. A diferença por km é 60 reais; 12.000/60 = 200 km.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G31 — Comércio externo e saldo
 
@@ -558,7 +558,7 @@ Qual comparação setorial é correta?
 
 **Gabarito: D.** Alimentos: 50 − 20 = +30. Equipamentos: 30 − 45 = −15. A agregação combina resultados diferentes dos setores.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G32 — Renda média, mediana e desigualdade
 
@@ -576,7 +576,7 @@ Qual mediana existe no primeiro setor?
 
 **Gabarito: B.** As cinco rendas estão em ordem crescente. O valor central é o terceiro, R$ 1.500; renda muito elevada influencia a média, mas não muda essa posição central.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G33 — Clima, chuva e balanço simplificado
 
@@ -594,7 +594,7 @@ Se julho recebesse irrigação de 50 mm, qual saldo simplificado passaria a ter?
 
 **Gabarito: E.** A entrada adicional elevaria água disponível a 40 + 50 = 90 mm. Subtraindo a demanda de 100, o saldo é −10 mm, ainda negativo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G34 — Bacia hidrográfica e disponibilidade
 
@@ -612,7 +612,7 @@ Que alteração do armazenamento resulta com a captação adicional?
 
 **Gabarito: A.** A saída passa a 90 + 30 = 120, contra 110 de entrada. O saldo é −10, indicando redução do estoque no período, não estoque total necessariamente negativo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G35 — Relevo, infiltração e risco
 
@@ -630,7 +630,7 @@ Qual informação é necessária para avaliar risco às pessoas além da tendên
 
 **Gabarito: D.** Risco envolve ameaça, exposição e vulnerabilidade. Um processo físico pode ter consequências diferentes conforme ocupação, infraestrutura e capacidade de proteção.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G36 — Fusos horários e conexões
 
@@ -648,7 +648,7 @@ Em que horário local chega a C?
 
 **Gabarito: B.** A saída de B é às 12h locais e a chegada seria às 16h no relógio de B. C está quatro horas adiante: 16 + 4 = 20h de terça-feira.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G37 — Coordenadas e distribuição espacial
 
@@ -666,7 +666,7 @@ Qual separação angular de latitude existe entre A e B?
 
 **Gabarito: B.** Os pontos estão 20° em lados opostos do equador. A separação angular é 20 + 20 = 40°, não zero pelo fato de o módulo numérico ser igual.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G38 — Mercado de trabalho e denominadores
 
@@ -684,7 +684,7 @@ Se 1.000 desocupados conseguirem trabalho e ninguém mudar de grupo de participa
 
 **Gabarito: D.** Passam a existir 13.000 ocupados e 2.000 desocupados; a força permanece 15.000. A taxa é 2.000/15.000 ×100 ≈ 13,3%.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G39 — Mobilidade urbana e desigualdade de acesso
 
@@ -702,7 +702,7 @@ Qual média resulta depois da intervenção prevista?
 
 **Gabarito: B.** A soma passa a 600 ×20 + 400 ×35 = 26.000 minutos. A divisão por 1.000 gera 26 minutos; o ganho médio total é 6 minutos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G40 — Cadeias produtivas e divisão territorial
 
@@ -720,7 +720,7 @@ Qual comparação entre localização da montagem e apropriação do valor total
 
 **Gabarito: B.** A repartição informada mostra etapas e valores diferentes. Montagem física e controle de funções de maior valor podem localizar-se em regiões distintas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G41 — Escala, distância e área
 
@@ -738,7 +738,7 @@ Qual será seu comprimento no papel?
 
 **Gabarito: E.** Quatro quilômetros correspondem a 400.000 cm. Dividindo pelo denominador da escala: 400.000/25.000 = 16 cm no papel.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G42 — Densidade demográfica e distribuição
 
@@ -756,7 +756,7 @@ Qual densidade conjunta resulta de agregar A e B?
 
 **Gabarito: A.** Somam-se populações e áreas: 1.000.000/4.000 = 250 hab/km². A média simples de 200 e 400 não considera os tamanhos diferentes das regiões.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G43 — Urbanização e crescimento absoluto
 
@@ -774,7 +774,7 @@ Qual crescimento relativo da população urbana ocorreu?
 
 **Gabarito: E.** O acréscimo urbano foi 25.000 sobre uma base de 60.000: 25.000/60.000 × 100 ≈ 41,7%. Não se divide pelo total municipal ou pelo valor final para medir crescimento sobre a base inicial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G44 — Crescimento natural e saldo migratório
 
@@ -792,7 +792,7 @@ Qual taxa de crescimento natural se obtém usando a população inicial como bas
 
 **Gabarito: A.** A diferença de 500 dividida por 50.000 é 0,01. Multiplicando por mil, obtém-se 10 por mil; 18 e 8 por mil correspondem separadamente a natalidade e mortalidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G45 — Estrutura etária e indicadores
 
@@ -810,7 +810,7 @@ Por que não se pode transformar diretamente a razão calculada em desemprego?
 
 **Gabarito: C.** Estrutura etária e mercado de trabalho são conjuntos de informações diferentes. Nem todos os adultos trabalham, e pessoas fora da faixa podem ter renda ou ocupação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G46 — Produtividade agrícola e área
 
@@ -828,7 +828,7 @@ Qual aumento percentual de produtividade essa meta exige em relação ao ano ini
 
 **Gabarito: B.** A produtividade passa de 4 para 5 t/ha. O acréscimo de 1 sobre a base de 4 representa 25%; 125% descreve o valor final como proporção do inicial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G47 — Uso do solo e mudança de cobertura
 
@@ -846,7 +846,7 @@ Qual tendência hidrológica pode resultar da maior impermeabilização, mantend
 
 **Gabarito: D.** Superfícies impermeáveis dificultam infiltração e podem acelerar o escoamento. O efeito depende de drenagem, relevo, solos e outras características; não se deduz uma resposta uniforme absoluta.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G48 — Energia, potência e intermitência
 
@@ -864,7 +864,7 @@ Qual participação aproximada da geração solar no total médio das duas fonte
 
 **Gabarito: C.** A parcela solar é 20/55 × 100 ≈ 36,4%. O fator de capacidade solar de 20% tem outra base e não representa a participação no conjunto.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G49 — Emissões totais e por habitante
 
@@ -882,7 +882,7 @@ Se B reduzir seu total em 25% e mantiver população, que emissão per capita te
 
 **Gabarito: C.** O total cai de 80 para 60 milhões de toneladas. Dividindo por 20 milhões de habitantes, resulta em 3 t/hab, também 25% abaixo do valor anterior.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G50 — Transporte e custo logístico
 
@@ -900,7 +900,7 @@ Para percurso de 100 km, qual modal tem menor custo nas hipóteses dadas?
 
 **Gabarito: E.** Rodovia: 400 × 100 ×0,30 = 12.000. Ferrovia: 6.000 variáveis mais 12.000 fixos = 18.000. O custo de transferência pesa mais em percursos curtos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G51 — Comércio externo e saldo
 
@@ -918,7 +918,7 @@ Se a exportação de equipamentos aumentar 50%, mantendo os demais valores, qual
 
 **Gabarito: D.** A exportação desse setor passa de 30 para 45 milhões. As exportações totais chegam a 95, contra 65 de importações: saldo +30 milhões.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G52 — Renda média, mediana e desigualdade
 
@@ -936,7 +936,7 @@ Que percentual da renda total do primeiro setor cabe ao domicílio de maior rend
 
 **Gabarito: D.** O total é 15.000 e o maior valor 9.300. A razão 9.300/15.000 = 0,62 indica 62%, evidenciando concentração que a média não revela.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G53 — Clima, chuva e balanço simplificado
 
@@ -954,7 +954,7 @@ Que informação falta para transformar esse saldo em diagnóstico completo de d
 
 **Gabarito: B.** O modelo exclui estoques e características do solo. Disponibilidade efetiva depende de armazenamento, infiltração, perdas e uso, além do saldo mensal simplificado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G54 — Bacia hidrográfica e disponibilidade
 
@@ -972,7 +972,7 @@ Por que saldo negativo não significa automaticamente que não resta água na ba
 
 **Gabarito: B.** Variação e estoque são conceitos diferentes. Uma redução de 10 pode ser suportada por estoque existente, mas sua duração e disponibilidade exigem outros dados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G55 — Relevo, infiltração e risco
 
@@ -990,7 +990,7 @@ Uma obra de drenagem em B elimina automaticamente todo risco?
 
 **Gabarito: D.** Intervenções podem reduzir ameaças, mas têm capacidade e condições de funcionamento. Não se conclui eliminação completa do risco sem analisar evento, manutenção e ocupação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G56 — Fusos horários e conexões
 
@@ -1008,7 +1008,7 @@ Qual é a duração da viagem, incluindo a conexão?
 
 **Gabarito: D.** Somam-se as durações: 8 + 2 + 4 = 14 horas. Não é necessário saber os fusos, pois os três valores já expressam intervalos de tempo, não leituras de relógios locais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G57 — Coordenadas e distribuição espacial
 
@@ -1026,7 +1026,7 @@ Em relação a A, C está em que direção sobre o paralelo indicado?
 
 **Gabarito: A.** Partindo de 40° W para 20° W, desloca-se para leste. A latitude permanece 20° S; mudanças de longitude não são mudanças norte-sul.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G58 — Mercado de trabalho e denominadores
 
@@ -1044,11 +1044,11 @@ Se 1.000 desocupados deixarem de procurar trabalho e saírem da força, sem cons
 
 **Gabarito: D.** Restam 2.000 desocupados e 12.000 ocupados, força de 14.000. A taxa é 2.000/14.000 ≈ 14,3%; uma queda pode ocorrer por saída da participação, não só por emprego novo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G59 — Mobilidade urbana e desigualdade de acesso
 
-ID: d1434000-0000-4000-8000-000000000059. Versão: 2. Dificuldade estimada: medium. Família: G19.
+ID: d1434000-0000-4000-8000-000000000059. Versão: 3. Dificuldade estimada: medium. Família: G19.
 
 Em uma cidade, 600 viagens usam uma linha rápida com duração média de 20 minutos; 400 usam uma linha periférica com duração média de 50 minutos. Uma intervenção reduziria a duração periférica para 35 minutos, sem mudar a quantidade de viagens. Considere médias dos dois grupos, não tempos idênticos para cada pessoa.
 
@@ -1060,9 +1060,9 @@ Quantos minutos de viagem são poupados no conjunto de 400 viagens periféricas?
 - **D)** 1.000 minutos
 - **E)** 4.000 minutos
 
-**Gabarito: A.** Cada viagem periférica ganha 50 −35 =15 minutos. Para 400 viagens, 15 ×400 =6.000 minutos, diferentes do ganho médio de todas as viagens.
+**Gabarito: A.** A duração média das viagens periféricas cai de 50 para 35 minutos, uma redução de 15 minutos na média. Mantidas as 400 viagens, a soma de seus tempos diminui 400 × 15 = 6.000 minutos. Isso não significa que cada viagem individual tenha economizado exatamente 15 minutos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G60 — Cadeias produtivas e divisão territorial
 
@@ -1080,7 +1080,7 @@ Se o preço e todas as parcelas aumentarem 10%, qual valor passa a corresponder 
 
 **Gabarito: E.** O aumento proporcional de 10% leva 200 a 220 reais. A participação de 20% é mantida no total de 1.100, sob a hipótese de todas as parcelas crescerem igualmente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G61 — Escala, distância e área
 
@@ -1098,7 +1098,7 @@ Qual comparação entre as escalas está correta?
 
 **Gabarito: D.** Escala é uma razão: 1/25.000 é maior que 1/50.000. Para a mesma distância real, o primeiro mapa usa o dobro do comprimento no papel, permitindo representar mais detalhes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G62 — Densidade demográfica e distribuição
 
@@ -1116,7 +1116,7 @@ Por que a média de A não descreve a distribuição interna da população?
 
 **Gabarito: E.** A distribuição é heterogênea. Um indicador agregado não revela necessariamente concentrações, dispersões ou contrastes dentro da região.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G63 — Urbanização e crescimento absoluto
 
@@ -1134,7 +1134,7 @@ O aumento da população urbana de 60.000 para 85.000 permite concluir que 25.00
 
 **Gabarito: D.** O estoque populacional urbano pode mudar por nascimentos, mortes e fluxos migratórios de diferentes origens. Manter limites e classificação comparáveis evita um tipo de distorção, mas não permite atribuir toda a variação a uma causa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G64 — Crescimento natural e saldo migratório
 
@@ -1152,7 +1152,7 @@ Se a emigração caísse para 1.000, mantendo os demais valores, qual seria o cr
 
 **Gabarito: E.** O crescimento natural continua +500. O saldo migratório passa a 1.500 − 1.000 = +500, somando +1.000 habitantes ao total inicial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G65 — Estrutura etária e indicadores
 
@@ -1170,7 +1170,7 @@ Se o grupo de 65 ou mais passar a 20.000 e os outros ficarem iguais, qual razão
 
 **Gabarito: E.** Os grupos do numerador somam 30.000 + 20.000 = 50.000. A divisão por 60.000 e multiplicação por 100 resulta em aproximadamente 83,3.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G66 — Produtividade agrícola e área
 
@@ -1188,11 +1188,11 @@ Se A mantivesse 4 t/ha, que área precisaria para obter 15.000 toneladas?
 
 **Gabarito: E.** Área necessária é produção/produtividade: 15.000/4 = 3.750 ha. A ampliação seria 750 ha, alternativa distinta de aumentar rendimento na área atual.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G67 — Uso do solo e mudança de cobertura
 
-ID: d1434000-0000-4000-8000-000000000067. Versão: 2. Dificuldade estimada: medium. Família: G7.
+ID: d1434000-0000-4000-8000-000000000067. Versão: 3. Dificuldade estimada: medium. Família: G7.
 
 Em uma bacia de 1.000 km², a cobertura florestal era 600 km² e passou a 450 km². Áreas impermeabilizadas passaram de 100 para 200 km²; os demais usos ocupam a área restante. Os períodos têm os mesmos limites. O relatório não identifica automaticamente as causas de cada mudança.
 
@@ -1204,9 +1204,9 @@ Em uma bacia de 1.000 km², a cobertura florestal era 600 km² e passou a 450 km
 - **D)** Não, porque é impossível mapear mudanças locais.
 - **E)** Sim, porque toda perda florestal tem necessariamente esse destino.
 
-**Gabarito: C.** O aumento impermeabilizado é 100 km², menor que a perda florestal. Mapas de transição e outros usos seriam necessários para identificar destinos e origens das mudanças.
+**Gabarito: C.** A perda líquida de 150 km² de floresta e o aumento líquido de 100 km² impermeabilizados são saldos agregados. Eles não identificam as transições de cada área: ganhos e perdas locais podem se compensar dentro desses saldos. Mapas de transição são necessários para verificar os destinos e as origens das mudanças.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G68 — Energia, potência e intermitência
 
@@ -1224,7 +1224,7 @@ Por que esses valores não demonstram disponibilidade de 55 MW em qualquer hora?
 
 **Gabarito: D.** Fatores de capacidade resumem um período e não descrevem cada instante. Complementaridade, armazenamento e outras fontes podem ser relevantes ao planejamento de atendimento.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G69 — Emissões totais e por habitante
 
@@ -1242,7 +1242,7 @@ O indicador per capita comprova que cada morador emite exatamente o valor médio
 
 **Gabarito: C.** O inventário agregado pode conter emissões industriais e desigualdades de consumo. A média não distribui automaticamente responsabilidade ou experiência igualmente entre moradores.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G70 — Transporte e custo logístico
 
@@ -1260,7 +1260,7 @@ Que conclusão não é sustentada apenas pelo menor custo no percurso de 300 km?
 
 **Gabarito: B.** Adequação logística inclui prazo, conectividade, infraestrutura e tipo de carga. Custos fornecidos não resolvem dimensões ausentes do enunciado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G71 — Comércio externo e saldo
 
@@ -1278,7 +1278,7 @@ O superávit comercial comprova que a região não depende de produtos externos?
 
 **Gabarito: C.** Um saldo agregado não revela a importância estratégica dos itens importados. Dependência tecnológica ou produtiva exige examinar composição e alternativas de fornecimento.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G72 — Renda média, mediana e desigualdade
 
@@ -1296,7 +1296,7 @@ Qual leitura evita confundir renda média com situação de cada domicílio?
 
 **Gabarito: A.** Quatro dos cinco domicílios do primeiro setor têm menos de R$ 3.000. Distribuição, mediana e concentração complementam a leitura do total médio.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G73 — Clima, chuva e balanço simplificado
 
@@ -1314,7 +1314,7 @@ Uma sequência de dois meses com saldos −60 e −20 mm representa que saldo ac
 
 **Gabarito: C.** Somam-se os saldos dos dois períodos: −60 + (−20) = −80 mm. Acumulação não é média; o resultado ainda não incorpora estoques ou outras entradas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G74 — Bacia hidrográfica e disponibilidade
 
@@ -1332,7 +1332,7 @@ Que problema pode surgir ao avaliar apenas a precipitação total?
 
 **Gabarito: D.** Disponibilidade depende do balanço e da distribuição espacial e temporal. Chuva total não é equivalente a recurso integralmente acessível sem perdas ou restrições.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G75 — Relevo, infiltração e risco
 
@@ -1350,7 +1350,7 @@ Que comparação preserva as hipóteses do estudo ao investigar cobertura vegeta
 
 **Gabarito: E.** Controlar ou registrar fatores ajuda a distinguir efeitos. Na situação real, cobertura e compactação podem mudar juntas e precisam ser investigadas separadamente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G76 — Fusos horários e conexões
 
@@ -1368,7 +1368,7 @@ Qual foi a duração real entre saída e chegada?
 
 **Gabarito: E.** Os horários locais aparentam um intervalo de 22 horas, mas C está oito horas adiante de A. Ao converter para uma referência comum, a duração é 22 − 8 = 14 horas. É necessário considerar também a mudança de data.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G77 — Coordenadas e distribuição espacial
 
@@ -1386,7 +1386,7 @@ Em um modelo esférico da Terra, por que 20° de longitude representam menor dis
 
 **Gabarito: B.** O ângulo mantém sua medida, mas o raio do paralelo diminui em direção aos polos. Como a circunferência é proporcional a esse raio, uma mesma diferença de longitude corresponde a distâncias menores em paralelos de maior latitude.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G78 — Mercado de trabalho e denominadores
 
@@ -1404,7 +1404,7 @@ Que informação complementa a taxa para avaliar melhoria das condições de tra
 
 **Gabarito: A.** Ocupação não descreve automaticamente renda ou condições. Qualidade dos postos exige outros indicadores, além da proporção desocupada na força.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G79 — Mobilidade urbana e desigualdade de acesso
 
@@ -1422,7 +1422,7 @@ Por que a média geral de 32 minutos não retrata igualmente os dois grupos?
 
 **Gabarito: A.** A média resume o conjunto, mas os grupos têm tempos diferentes. Localização, serviços e redes podem produzir desigualdades que não aparecem em um único valor médio.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G80 — Cadeias produtivas e divisão territorial
 
@@ -1440,7 +1440,7 @@ Os R$ 700 da última etapa correspondem necessariamente a lucro líquido de uma 
 
 **Gabarito: D.** O enunciado particiona o preço, não discrimina custos, salários ou lucros. Interpretar uma parcela como lucro líquido exige dados contábeis adicionais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G81 — Escala, distância e área
 
@@ -1458,7 +1458,7 @@ Qual é a escala da cópia ampliada?
 
 **Gabarito: D.** Se a área no papel quadruplica, cada comprimento dobra. A distância real permanece igual, então o denominador da escala é dividido por dois: 60.000/2 = 30.000. Dividir por quatro confundiria área com comprimento.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G82 — Densidade demográfica e distribuição
 
@@ -1476,7 +1476,7 @@ Qual é a densidade demográfica na área restante?
 
 **Gabarito: A.** Na parte restante vivem 20% de 600.000 = 120.000 habitantes, em 80% de 3.000 = 2.400 km². A densidade é 120.000/2.400 = 50 hab./km². A concentração de um grupo não descreve a ocupação do território restante.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G83 — Urbanização e crescimento absoluto
 
@@ -1494,7 +1494,7 @@ Que mudança de classificação prejudicaria a comparação direta das taxas?
 
 **Gabarito: E.** Uma reclassificação pode alterar a taxa sem deslocamento de pessoas. É preciso distinguir mudança administrativa da transformação demográfica ou territorial efetiva.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G84 — Crescimento natural e saldo migratório
 
@@ -1512,7 +1512,7 @@ Que leitura evita confundir estabilidade do total com imobilidade populacional?
 
 **Gabarito: E.** Um saldo resume diferenças entre fluxos. Resultados líquidos iguais a zero podem ocultar intensa circulação e renovação demográfica.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G85 — Estrutura etária e indicadores
 
@@ -1530,7 +1530,7 @@ Que informação complementa esses números para planejar serviços?
 
 **Gabarito: C.** Planejamento exige localização e condições sociais além das faixas etárias. Um indicador agregado não descreve demandas, rendimentos ou acesso efetivo aos serviços.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G86 — Produtividade agrícola e área
 
@@ -1548,7 +1548,7 @@ Qual comparação distingue produtividade e lucro total nesse período?
 
 **Gabarito: A.** A produtividade é 4 t/ha em A e 5 t/ha em B. O lucro é receita menos custo: A = 12.000 × (700 − 500) = 2.400.000; B = 10.000 × (700 − 650) = 500.000. Maior rendimento por área não garante maior lucro.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G87 — Uso do solo e mudança de cobertura
 
@@ -1566,7 +1566,7 @@ Que dado complementa o relatório para estudar causas e consequências?
 
 **Gabarito: C.** Localização e transições permitem examinar quais áreas mudaram e como se conectam à drenagem e ocupação. Totais agregados não fornecem essas relações espaciais.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G88 — Energia, potência e intermitência
 
@@ -1584,7 +1584,7 @@ Qual informação melhora o planejamento do atendimento contínuo da demanda?
 
 **Gabarito: A.** Atendimento requer compatibilidade temporal e espacial entre geração e demanda. Dados horários e infraestrutura ajudam a estudar variabilidade e limitações que médias ocultam.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G89 — Emissões totais e por habitante
 
@@ -1602,7 +1602,7 @@ Se A reduzir suas emissões totais em 10% e mantiver a população, qual será s
 
 **Gabarito: B.** As emissões passam de 120 para 108 milhões de toneladas. Dividindo pelos mesmos 60 milhões de habitantes, obtêm-se 1,8 t/habitante. A redução percentual do total também reduz a razão em 10% quando o denominador permanece constante.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G90 — Transporte e custo logístico
 
@@ -1620,7 +1620,7 @@ Qual característica territorial pode impedir a escolha de um modal mesmo com cu
 
 **Gabarito: E.** Redes têm distribuição e conectividade espacial. Falta de acesso pode exigir transbordos e percursos não incluídos, alterando a viabilidade da comparação ideal.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G91 — Comércio externo e saldo
 
@@ -1638,7 +1638,7 @@ Que informação seria necessária para avaliar bem-estar social associado ao co
 
 **Gabarito: E.** Comércio afeta grupos de formas diferentes. Um saldo positivo de bens não descreve remuneração, condições de trabalho ou acesso da população a produtos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G92 — Renda média, mediana e desigualdade
 
@@ -1656,7 +1656,7 @@ Que informação adicional permite comparar mais adequadamente condições de vi
 
 **Gabarito: C.** Renda domiciliar não é automaticamente renda por pessoa, e condições de vida envolvem preços e serviços. Os dados omitidos podem modificar a comparação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G93 — Clima, chuva e balanço simplificado
 
@@ -1674,7 +1674,7 @@ Qual comparação distingue clima de uma observação meteorológica isolada?
 
 **Gabarito: E.** Padrões climáticos são construídos com observações ao longo do tempo. Eventos isolados são relevantes, mas não substituem análise de médias, extremos e variabilidade de séries.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G94 — Bacia hidrográfica e disponibilidade
 
@@ -1692,7 +1692,7 @@ Que medida de planejamento é mais coerente com o balanço apresentado?
 
 **Gabarito: B.** Planejamento precisa considerar balanço, estoques e conexão de fluxos. Unidades administrativas e naturais não são necessariamente coincidentes, e uma amostra não define toda disponibilidade anual.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G95 — Relevo, infiltração e risco
 
@@ -1710,7 +1710,7 @@ Qual interpretação evita culpabilizar apenas os moradores por consequências d
 
 **Gabarito: A.** Vulnerabilidade é socialmente construída e depende de alternativas e políticas. Reconhecer processos físicos não dispensa examinar moradia, recursos e decisões que distribuem exposição.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G96 — Fusos horários e conexões
 
@@ -1728,7 +1728,7 @@ Qual é o novo horário previsto de chegada a C?
 
 **Gabarito: A.** O atraso adicional desloca a chegada em três horas: 20 + 3 = 23h de terça-feira. Os dois horários já se referem à mesma cidade, então não é preciso aplicar diferença de fuso.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G97 — Coordenadas e distribuição espacial
 
@@ -1746,7 +1746,7 @@ Que informação falta para determinar a distância real precisa entre os pontos
 
 **Gabarito: D.** As coordenadas localizam pontos, mas distância depende da geometria e do percurso: geodésico, superfície ou rota disponível. O desenho esquemático não fornece uma medida linear precisa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G98 — Mercado de trabalho e denominadores
 
@@ -1764,7 +1764,7 @@ Quantas precisam conseguir trabalho para a taxa de desocupação cair para 10%?
 
 **Gabarito: B.** A força de trabalho continua em 15.000. Para uma taxa de 10%, devem restar 1.500 desocupados. Assim, 3.000 − 1.500 = 1.500 precisam conseguir trabalho; mudar de desocupado para ocupado não altera o denominador.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G99 — Mobilidade urbana e desigualdade de acesso
 
@@ -1782,7 +1782,7 @@ Que dado amplia a avaliação da intervenção além do tempo médio?
 
 **Gabarito: C.** Mobilidade depende também de oferta, custo, acessibilidade e alcance territorial. Reduzir tempo é um componente importante, mas não garante sozinho acesso adequado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## G100 — Cadeias produtivas e divisão territorial
 
@@ -1800,4 +1800,4 @@ Se a parcela de montagem crescer de R$ 200 para R$ 250 e as outras duas parcelas
 
 **Gabarito: B.** O novo preço é 100 + 250 + 700 = 1.050 reais. A montagem representa 250/1.050 × 100 ≈ 23,8%. Dividir por 1.000 desconsidera a mudança no total; aumento da parcela e aumento de participação são medidas diferentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.

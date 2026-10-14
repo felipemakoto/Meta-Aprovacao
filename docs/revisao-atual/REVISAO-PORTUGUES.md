@@ -1,6 +1,6 @@
-# Revisão atual — Português — etapa 46
+# Revisão atual — Português — etapa 47
 
-Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
+Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Revisão editorial final por IA concluída; revisão humana adicional dispensada pelo responsável. Estado publicado é o alvo verificado pelo SQL e pela consulta posterior.
 
 ## P01 — Leitura crítica de dados
 
@@ -18,7 +18,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: E.** Os empréstimos subiram de 800 para 1.100, mas continuam sendo 200 usuários distintos. O aumento mede circulação de livros, não demonstra que mais pessoas passaram a usar a biblioteca.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P02 — Argumentação e causalidade
 
@@ -36,7 +36,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: C.** Ciclovia, estação e feira aparecem no mesmo período. Sem comparação que separe essas mudanças, o aumento das vendas não pode ser atribuído exclusivamente à ciclovia nem usado para negar qualquer contribuição dela.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P03 — Ironia e crítica social
 
@@ -54,7 +54,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: A.** A promessa era poupar tempo, mas Lara consulta o aplicativo repetidamente e continua esperando. O aparente elogio ao acompanhamento do atraso produz ironia por esse contraste.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P04 — Modalização e certeza
 
@@ -72,7 +72,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: B.** O estudo usa pode favorecer e limita a abrangência a três escolas. O título emprega garantem e muda interesse por alimentação para mudança alimentar, ampliando certeza e alcance sem novos dados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P05 — Pressupostos e escolhas lexicais
 
@@ -90,7 +90,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: E.** Voltar a ouvir apresenta a escuta como retomada. Essa pressuposição linguística não demonstra quando, como ou quantos moradores foram ouvidos; por isso as perguntas da participante continuam pertinentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P06 — Coesão e referência
 
@@ -108,7 +108,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: E.** A ordem de menção é painéis e depois mapas. Assim, primeiros retoma painéis e segundos retoma mapas. As obras alteram os caminhos, justificando atualização dos dois recursos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P07 — Comparação de argumentos
 
@@ -126,7 +126,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: B.** Usar menos plástico é um indicador de produção; separar materiais é uma condição da reciclagem. A redução de 20% informada não elimina a dificuldade indicada pela cooperativa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P08 — Conectivos e estrutura lógica
 
@@ -144,7 +144,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: A.** O conselho declara apoio à acessibilidade, mas identifica fechamento antes de haver rota alternativa. A crítica é à sequência que deixaria pessoas sem passagem, não ao objetivo da reforma.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P09 — Narrador e inferência
 
@@ -162,7 +162,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: E.** O porteiro encontra e usa a medalha, mas não há fala ou pensamento registrado que revele sua intenção. A busca de reconhecimento é uma leitura possível, não um fato comprovado ou uma homenagem oficial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P10 — Generalização e amostragem
 
@@ -180,7 +180,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: A.** Entre 300 respondentes, 240 apoiam o projeto: 80% das respostas. A enquete no perfil do clube não demonstra que esses respondentes representem os 40 mil moradores; o percentual não pode ser generalizado à cidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P11 — Polissemia e contexto
 
@@ -198,7 +198,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: D.** Na proposta financeira, rever indica reexaminar; no contexto do passeio, indica ver ou visitar novamente. O complemento e a situação orientam a diferença de sentido do mesmo verbo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P12 — Pontuação e abrangência
 
@@ -216,7 +216,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: E.** Sem vírgulas, que solicitaram vistoria restringe o grupo a solicitantes. Com vírgulas, a oração é explicativa e apresenta a solicitação como informação sobre o grupo mencionado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P13 — Voz verbal e responsabilidade
 
@@ -234,7 +234,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: A.** Foram eliminados expressa voz passiva sem nomear quem agiu. A segunda versão nomeia a equipe. Omissão do agente e intenção de ocultá-lo não são equivalentes: a finalidade não é demonstrada pelo primeiro período.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P14 — Concordância e norma-padrão
 
@@ -252,7 +252,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: A.** Fazer indica tempo decorrido e haver indica existência. Nesses sentidos, são impessoais e ficam no singular: Faz três meses e Houve alterações. Meses e alterações não exigem plural desses verbos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P15 — Regência e mudança de sentido
 
@@ -270,7 +270,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: D.** Assistir no sentido de presenciar rege a: assistiram ao documentário. No sentido de ajudar, admite objeto direto: assistiu o pesquisador. A acepção orienta a regência.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P16 — Crase e comparação de construções
 
@@ -288,7 +288,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: E.** Em à diretora, unem-se a preposição a e o artigo definido a. Em a uma diretora, há preposição e artigo indefinido uma, sem o mesmo encontro que produziria o acento grave.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P17 — Ambiguidade sintática
 
@@ -306,7 +306,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: C.** Sua inscrição pode ser interpretada como inscrição da professora ou da aluna. Nomear a inscrição da aluna explicita o possuidor pretendido, mantendo o estado de incompletude informado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P18 — Metáfora e argumentação
 
@@ -324,7 +324,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: E.** Buraco no orçamento é uma imagem expressiva de insuficiência ou problema. Para avaliar a dimensão, são necessários os valores de receitas e despesas; a metáfora não fornece esse número.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P19 — Discurso e atribuição de informação
 
@@ -342,7 +342,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: C.** Segundo a pesquisadora atribui a informação a uma fonte, e pode reduz o grau de certeza. Ao retirar os dois elementos, a notícia apresenta a conclusão de forma mais assertiva sem acrescentar evidência.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P20 — Condição necessária e conclusão
 
@@ -360,7 +360,7 @@ Considerando o que é afirmado e o que permanece apenas como hipótese, qual int
 
 **Gabarito: C.** Os dois requisitos são necessários em conjunto. Rui cumpriu o formulário, mas faltou o comprovante, portanto não satisfaz a condição exigida. Isso não demonstra que o formulário estava incompleto.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P21 — Leitura crítica de dados
 
@@ -378,7 +378,7 @@ Em “Embora o relatório destaque o crescimento, não informa quem fez os empr�
 
 **Gabarito: D.** Embora introduz uma informação que não impede o fato da oração principal. Apesar de mantém a concessão; causa, finalidade e condição alteram a relação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P22 — Argumentação e causalidade
 
@@ -396,7 +396,7 @@ Em “apresenta os totais anteriores e posteriores, porém não compara ruas com
 
 **Gabarito: C.** Porém marca contraste: há dados de dois momentos, mas falta um grupo comparável para atribuir o efeito. O conector não apresenta finalidade, condição ou prova de causa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P23 — Ironia e crítica social
 
@@ -414,7 +414,7 @@ Em “Os colegas riram, mas continuaram na fila”, qual efeito é produzido por
 
 **Gabarito: B.** Mas é adversativo e destaca que a reação bem-humorada não mudou a espera. Ele não transforma riso em causa, finalidade ou condição do atraso.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P24 — Modalização e certeza
 
@@ -432,7 +432,7 @@ Em “pode favorecer esse interesse, embora o grupo não represente todas as esc
 
 **Gabarito: E.** A concessiva apresenta uma limitação relevante ao alcance da afirmação. Não nega o registro local, mas impede tratá-lo como comprovação geral.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P25 — Pressupostos e escolhas lexicais
 
@@ -450,7 +450,7 @@ Em “outra perguntou se ela havia sido ampla ou apenas formal”, qual é o pap
 
 **Gabarito: E.** Se introduz uma interrogativa indireta dependente de perguntou. O trecho equivale ao conteúdo da pergunta “A escuta havia sido ampla ou apenas formal?”, sem expressar condição para a reunião.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P26 — Coesão e referência
 
@@ -468,7 +468,7 @@ Em “os dois recursos dependiam de atualização, pois obras temporárias alter
 
 **Gabarito: C.** A oração introduzida por pois explica por que atualizar os recursos é necessário. A mudança dos caminhos é a razão indicada; não se afirma oposição ou finalidade de impedir obras.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P27 — Comparação de argumentos
 
@@ -486,7 +486,7 @@ Em “sem apresentar um único indicador como resposta para todas as etapas”, 
 
 **Gabarito: A.** Sem nega o procedimento de tratar um indicador como resposta completa. Isso não equivale a negar todos os dados ou toda avaliação; a restrição recai sobre a generalização indevida.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P28 — Conectivos e estrutura lógica
 
@@ -504,7 +504,7 @@ Em “Para os conselheiros, o plano deveria manter uma rota”, a expressão ini
 
 **Gabarito: E.** Para os conselheiros equivale a “na avaliação dos conselheiros”. A preposição atribui uma opinião; não descreve destino físico ou finalidade da rota.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P29 — Narrador e inferência
 
@@ -522,7 +522,7 @@ O porteiro “conhecia cada nome das placas, mas não aparecia nas fotografias�
 
 **Gabarito: E.** Conhecer os nomes e ficar fora das fotografias podem coexistir. O contraste contribui para a tensão entre presença no trabalho do evento e reconhecimento, sem provar intenção de quem fotografou.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P30 — Generalização e amostragem
 
@@ -540,7 +540,7 @@ Em “a cidade tinha 40 mil moradores, mas o relatório não informou como os se
 
 **Gabarito: C.** O contraste ressalta que conhecer a população municipal não demonstra representatividade dos respondentes. A limitação é de seleção e abrangência, não necessariamente da contagem das respostas.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P31 — Polissemia e contexto
 
@@ -558,7 +558,7 @@ A comissão pediu que a proposta financeira fosse revista. Ao comentar um passei
 
 **Gabarito: C.** O conector põe em contraste uma troca igual para as duas ocorrências e a necessidade de considerar seus sentidos. Ele não estabelece equivalência universal entre corrigir e rever.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P32 — Pontuação e abrangência
 
@@ -576,7 +576,7 @@ Compare “Os moradores que solicitaram vistoria” e “Os moradores, que solic
 
 **Gabarito: E.** Sem vírgulas, a relativa é restritiva; com vírgulas, é explicativa. Muda o recorte do grupo, não o tempo verbal nem o responsável pela ação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P33 — Voz verbal e responsabilidade
 
@@ -594,7 +594,7 @@ A nota dizia: Foram eliminados os registros duplicados. O relatório posterior d
 
 **Gabarito: D.** A concessiva admite a identidade da ação e contrapõe a ela uma informação ainda necessária: quem a realizou. Isso não muda o acontecimento nem demonstra que o primeiro documento já contém o agente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P34 — Concordância e norma-padrão
 
@@ -612,7 +612,7 @@ Em “revisão das formas verbais, e não apenas a troca dos termos (...) por pa
 
 **Gabarito: D.** E não apenas delimita o alcance da revisão: ela não deve se resumir à troca lexical. Haver existencial e fazer temporal exigem análise de impessoalidade, não uma regra mecânica pelo termo seguinte.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P35 — Regência e mudança de sentido
 
@@ -630,7 +630,7 @@ Assistir aparece como ver um documentário e como auxiliar um pesquisador. Qual 
 
 **Gabarito: C.** No sentido de presenciar, assistir rege a preposição a; no de ajudar, pode ser transitivo direto. A análise distingue a acepção, sem escolher a regência apenas pelo tipo de complemento.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P36 — Crase e comparação de construções
 
@@ -648,7 +648,7 @@ Qual troca permite testar o acento grave em “entregou o documento à diretora�
 
 **Gabarito: B.** Ao reúne a preposição a com o artigo o, ajudando a identificar os dois elementos que formam à no correspondente feminino. Mudar o objeto ou o tempo não verifica esse encontro.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P37 — Ambiguidade sintática
 
@@ -666,7 +666,7 @@ Em “a professora informou à aluna que sua inscrição estava incompleta”, q
 
 **Gabarito: D.** O possessivo pode ter mais de um referente no contexto. Proximidade e posição de sujeito não bastam para garantir uma leitura única; explicitar o nome do possuidor resolve essa ambiguidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P38 — Metáfora e argumentação
 
@@ -684,7 +684,7 @@ Em “um buraco no orçamento”, qual relação entre imagem e dados é adequad
 
 **Gabarito: D.** A imagem atribui uma característica ao problema e pode orientar a interpretação. Ela não fornece, sozinha, uma medida numérica nem invalida a apresentação de dados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P39 — Discurso e atribuição de informação
 
@@ -702,7 +702,7 @@ Em “Segundo a pesquisadora, o material pode reduzir perdas”, qual efeito tem
 
 **Gabarito: C.** A expressão identifica a origem da informação. Sua presença não é demonstração de eficácia nem sinal obrigatório de discordância; a hipótese continua marcada por pode.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P40 — Condição necessária e conclusão
 
@@ -720,7 +720,7 @@ Considere somente os requisitos formulário completo e comprovante enviado, sem 
 
 **Gabarito: C.** E reúne condições conjuntas. Ou inclusivo admite uma ou ambas, alterando o critério de aceitação. A indicação do sentido inclusivo evita confundir a tarefa com uma alternativa exclusiva.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P41 — Leitura crítica de dados
 
@@ -738,7 +738,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** Os empréstimos subiram de 800 para 1.100, mas continuam sendo 200 usuários distintos. O aumento mede circulação de livros, não demonstra que mais pessoas passaram a usar a biblioteca.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P42 — Argumentação e causalidade
 
@@ -756,7 +756,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: B.** Ciclovia, estação e feira aparecem no mesmo período. Sem comparação que separe essas mudanças, o aumento das vendas não pode ser atribuído exclusivamente à ciclovia nem usado para negar qualquer contribuição dela.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P43 — Ironia e crítica social
 
@@ -774,7 +774,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: E.** A promessa era poupar tempo, mas Lara consulta o aplicativo repetidamente e continua esperando. O aparente elogio ao acompanhamento do atraso produz ironia por esse contraste.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P44 — Modalização e certeza
 
@@ -792,7 +792,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: C.** O estudo usa pode favorecer e limita a abrangência a três escolas. O título emprega garantem e muda interesse por alimentação para mudança alimentar, ampliando certeza e alcance sem novos dados.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P45 — Pressupostos e escolhas lexicais
 
@@ -810,7 +810,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** Voltar a ouvir apresenta a escuta como retomada. Essa pressuposição linguística não demonstra quando, como ou quantos moradores foram ouvidos; por isso as perguntas da participante continuam pertinentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P46 — Coesão e referência
 
@@ -828,7 +828,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** A ordem de menção é painéis e depois mapas. Assim, primeiros retoma painéis e segundos retoma mapas. As obras alteram os caminhos, justificando atualização dos dois recursos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P47 — Comparação de argumentos
 
@@ -846,7 +846,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** Usar menos plástico é um indicador de produção; separar materiais é uma condição da reciclagem. A redução de 20% informada não elimina a dificuldade indicada pela cooperativa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P48 — Conectivos e estrutura lógica
 
@@ -864,7 +864,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** O conselho declara apoio à acessibilidade, mas identifica fechamento antes de haver rota alternativa. A crítica é à sequência que deixaria pessoas sem passagem, não ao objetivo da reforma.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P49 — Narrador e inferência
 
@@ -882,7 +882,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** O porteiro encontra e usa a medalha, mas não há fala ou pensamento registrado que revele sua intenção. A busca de reconhecimento é uma leitura possível, não um fato comprovado ou uma homenagem oficial.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P50 — Generalização e amostragem
 
@@ -900,7 +900,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: E.** Entre 300 respondentes, 240 apoiam o projeto: 80% das respostas. A enquete no perfil do clube não demonstra que esses respondentes representem os 40 mil moradores; o percentual não pode ser generalizado à cidade.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P51 — Polissemia e contexto
 
@@ -918,7 +918,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: A.** Na proposta financeira, rever indica reexaminar; no contexto do passeio, indica ver ou visitar novamente. O complemento e a situação orientam a diferença de sentido do mesmo verbo.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P52 — Pontuação e abrangência
 
@@ -936,7 +936,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: A.** Sem vírgulas, que solicitaram vistoria restringe o grupo a solicitantes. Com vírgulas, a oração é explicativa e apresenta a solicitação como informação sobre o grupo mencionado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P53 — Voz verbal e responsabilidade
 
@@ -954,7 +954,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: C.** Foram eliminados expressa voz passiva sem nomear quem agiu. A segunda versão nomeia a equipe. Omissão do agente e intenção de ocultá-lo não são equivalentes: a finalidade não é demonstrada pelo primeiro período.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P54 — Concordância e norma-padrão
 
@@ -972,7 +972,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** Fazer indica tempo decorrido e haver indica existência. Nesses sentidos, são impessoais e ficam no singular: Faz três meses e Houve alterações. Meses e alterações não exigem plural desses verbos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P55 — Regência e mudança de sentido
 
@@ -990,7 +990,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: D.** Assistir no sentido de presenciar rege a: assistiram ao documentário. No sentido de ajudar, admite objeto direto: assistiu o pesquisador. A acepção orienta a regência.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P56 — Crase e comparação de construções
 
@@ -1008,7 +1008,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: C.** Em à diretora, unem-se a preposição a e o artigo definido a. Em a uma diretora, há preposição e artigo indefinido uma, sem o mesmo encontro que produziria o acento grave.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P57 — Ambiguidade sintática
 
@@ -1026,7 +1026,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: B.** Sua inscrição pode ser interpretada como inscrição da professora ou da aluna. Nomear a inscrição da aluna explicita o possuidor pretendido, mantendo o estado de incompletude informado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P58 — Metáfora e argumentação
 
@@ -1044,7 +1044,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: B.** Buraco no orçamento é uma imagem expressiva de insuficiência ou problema. Para avaliar a dimensão, são necessários os valores de receitas e despesas; a metáfora não fornece esse número.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P59 — Discurso e atribuição de informação
 
@@ -1062,7 +1062,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: E.** Segundo a pesquisadora atribui a informação a uma fonte, e pode reduz o grau de certeza. Ao retirar os dois elementos, a notícia apresenta a conclusão de forma mais assertiva sem acrescentar evidência.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P60 — Condição necessária e conclusão
 
@@ -1080,7 +1080,7 @@ Qual manchete sintetiza o ponto central sem ampliar indevidamente o alcance das 
 
 **Gabarito: E.** Os dois requisitos são necessários em conjunto. Rui cumpriu o formulário, mas faltou o comprovante, portanto não satisfaz a condição exigida. Isso não demonstra que o formulário estava incompleto.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P61 — Leitura crítica de dados
 
@@ -1098,7 +1098,7 @@ Considere também a formulação: “Empréstimos aumentaram, mas o número de u
 
 **Gabarito: D.** A reescrita conserva o contraste e o caráter factual dos dois acontecimentos; as demais acrescentam causa, condição, finalidade ou outro resultado.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P62 — Argumentação e causalidade
 
@@ -1116,7 +1116,7 @@ Considere também a formulação: “O levantamento não compara ruas semelhante
 
 **Gabarito: B.** A relação causal é preservada: falta de comparação limita a atribuição, sem provar ausência de efeito.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P63 — Ironia e crítica social
 
@@ -1134,7 +1134,7 @@ Considere também a formulação: “Lara disse: Agora preciso acompanhar o atra
 
 **Gabarito: B.** O discurso indireto mantém a fala atribuída a Lara e ajusta as referências de pessoa, tempo verbal e momento da enunciação.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P64 — Modalização e certeza
 
@@ -1152,7 +1152,7 @@ Considere também a formulação: “A atividade pode favorecer o interesse por 
 
 **Gabarito: E.** A possibilidade expressa por pode permanece; previsão certa, obrigação, comprovação de hábitos e impossibilidade alteram o alcance.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P65 — Pressupostos e escolhas lexicais
 
@@ -1170,7 +1170,7 @@ Considere também a formulação: “Precisamos voltar a ouvir os moradores.” 
 
 **Gabarito: C.** Novamente preserva a retomada pressuposta por voltar. A frase não determina quem concordou nem que todos participaram anteriormente.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P66 — Coesão e referência
 
@@ -1188,7 +1188,7 @@ Considere também a formulação: “Painéis e mapas são necessários. Ambos p
 
 **Gabarito: D.** Os quais retoma corretamente o antecedente plural. Cujo exige um substantivo possuído, e as outras formas rompem concordância ou o sentido.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P67 — Comparação de argumentos
 
@@ -1206,7 +1206,7 @@ Considere também a formulação: “Usar menos plástico não significa, por si
 
 **Gabarito: C.** A relação de não suficiência é mantida, sem convertê-la em impossibilidade, equivalência ou causalidade inversa.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P68 — Conectivos e estrutura lógica
 
@@ -1224,7 +1224,7 @@ Considere também a formulação: “Antes de fechar a passagem, a empresa deve 
 
 **Gabarito: A.** A prioridade temporal de criar a rota é preservada. O uso de antes que com subjuntivo expressa uma ação anterior ao fechamento previsto.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P69 — Narrador e inferência
 
@@ -1242,7 +1242,7 @@ Considere também a formulação: “O gesto pode indicar uma busca de reconheci
 
 **Gabarito: E.** Talvez com subjuntivo mantém a leitura possível do gesto, sem atribuir uma fala inexistente ou afirmar certeza sobre intenção.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P70 — Generalização e amostragem
 
@@ -1260,7 +1260,7 @@ Considere também a formulação: “A maioria dos respondentes apoiou o projeto
 
 **Gabarito: A.** A reescrita mantém o universo de respondentes. Seguidores, não respondentes e população municipal são conjuntos distintos.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P71 — Polissemia e contexto
 
@@ -1278,25 +1278,25 @@ Considere também a formulação: “A proposta deve ser revista; a aluna quer r
 
 **Gabarito: E.** A troca lexical preserva o reexame da proposta e a nova visita. Não se acrescenta intenção de descartar, corrigir contas ou realizar primeira visita.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P72 — Pontuação e abrangência
 
-ID: d1431000-0000-4000-8000-000000000072. Versão: 3. Dificuldade estimada: medium. Família: P12.
+ID: d1431000-0000-4000-8000-000000000072. Versão: 4. Dificuldade estimada: medium. Família: P12.
 
 Um comunicado dizia: Os moradores que solicitaram vistoria receberão resposta. Outra versão dizia: Os moradores, que solicitaram vistoria, receberão resposta. As palavras eram as mesmas, porém a equipe precisava decidir se o aviso se referia apenas aos solicitantes ou ao conjunto dos moradores mencionado no documento.
 
 Considere também a formulação: “Somente os moradores solicitantes receberão resposta.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
 
 - **A)** Os moradores receberão resposta, pois todos solicitaram vistoria.
-- **B)** Os moradores que solicitaram vistoria receberão resposta.
+- **B)** Somente os moradores que solicitaram vistoria receberão resposta.
 - **C)** Nenhum morador receberá resposta até que todos solicitem.
 - **D)** Os moradores, que solicitaram vistoria, receberão resposta.
 - **E)** Todos os moradores receberão resposta, mesmo os que não solicitaram.
 
-**Gabarito: B.** A oração sem vírgulas restringe o grupo a solicitantes. As demais explicam o conjunto ou mudam quantificação e condição.
+**Gabarito: B.** Somente explicita que a resposta se destina exclusivamente ao grupo de moradores solicitantes, preservando a restrição indicada. A oração relativa sem vírgulas identifica esse grupo. As demais alternativas abrangem todos os moradores ou alteram a condição para receber resposta.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P73 — Voz verbal e responsabilidade
 
@@ -1314,7 +1314,7 @@ Considere também a formulação: “A equipe de cadastro eliminou os registros 
 
 **Gabarito: B.** A voz passiva mantém paciente, agente e ação concluída. As outras construções trocam papéis, tempo, agente ou certeza.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P74 — Concordância e norma-padrão
 
@@ -1332,7 +1332,7 @@ Considere também a formulação: “Haverá alterações. Vai fazer três meses
 
 **Gabarito: D.** Haver e fazer, nesses sentidos, ficam na terceira pessoa do singular; a impessoalidade alcança seus auxiliares. Existir tem sujeito e pode concordar no plural.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P75 — Regência e mudança de sentido
 
@@ -1350,7 +1350,7 @@ Qual frase respeita a regência desse verbo na norma-padrão adotada pelo Manual
 
 **Gabarito: C.** No sentido de ver ou presenciar, assistir exige a preposição a na norma-padrão adotada. Ao usar que para retomar documentário, a preposição vem antes do relativo: “o documentário a que os estudantes assistiram”. As demais opções substituem essa preposição ou empregam cujo sem relação de posse.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P76 — Crase e comparação de construções
 
@@ -1368,7 +1368,7 @@ Considere também a formulação: “Os documentos foram entregues às diretoras
 
 **Gabarito: E.** A primeira combina a preposição a com as; a segunda usa numeral sem artigo. Acrescentar as antes de duas determina um grupo e muda a construção, não corrige a original.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P77 — Ambiguidade sintática
 
@@ -1386,7 +1386,7 @@ Qual reescrita explicita esse referente, preservando a informação sobre o esta
 
 **Gabarito: D.** A expressão “a inscrição da aluna” identifica explicitamente a pessoa a quem a inscrição pertence. Trocar informou por comunicou mantém o possessivo ambíguo; dela e aquela não nomeiam a proprietária. Sua própria também não explicita, nessa construção, que a inscrição é da aluna.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P78 — Metáfora e argumentação
 
@@ -1404,7 +1404,7 @@ Considere também a formulação: “A metáfora torna o problema concreto, mas 
 
 **Gabarito: B.** A reescrita preserva a diferença entre expressividade e medida. Concretude figurativa não corresponde a quantificação nem torna a imagem literal.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P79 — Discurso e atribuição de informação
 
@@ -1422,7 +1422,7 @@ Considere também a formulação: “Segundo a pesquisadora, o material pode red
 
 **Gabarito: E.** Fonte e grau de certeza são preservados. A versão não acrescenta comprovação, obrigação, garantia do veículo ou resultados ausentes.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P80 — Condição necessária e conclusão
 
@@ -1440,7 +1440,7 @@ Considere também a formulação: “O formulário deve estar completo e o compr
 
 **Gabarito: C.** Além de mantém a exigência conjunta dos dois requisitos. As outras opções transformam conjunção em alternativa, dispensam uma condição ou a invertem.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P81 — Leitura crítica de dados
 
@@ -1458,7 +1458,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: C.** O procedimento adequado é: Comparar quantos usuários novos frequentaram a biblioteca antes e depois da mudança. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P82 — Argumentação e causalidade
 
@@ -1476,7 +1476,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: E.** O procedimento adequado é: Comparar ruas semelhantes com e sem ciclovia, controlando outras mudanças relevantes. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P83 — Ironia e crítica social
 
@@ -1494,7 +1494,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: A.** O procedimento adequado é: Comparar o tempo de espera e o de consulta ao aplicativo em condições equivalentes. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P84 — Modalização e certeza
 
@@ -1512,7 +1512,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: A.** O procedimento adequado é: Acompanhar práticas alimentares e ampliar a amostra antes de generalizar o resultado. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P85 — Pressupostos e escolhas lexicais
 
@@ -1530,7 +1530,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: C.** O procedimento adequado é: Consultar registros da participação anterior para verificar quem foi efetivamente ouvido. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P86 — Coesão e referência
 
@@ -1548,7 +1548,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: B.** O procedimento adequado é: Verificar periodicamente se os trajetos exibidos correspondem às condições do bairro. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P87 — Comparação de argumentos
 
@@ -1566,7 +1566,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: E.** O procedimento adequado é: Comparar produção, separação e destinação das embalagens nas condições locais. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P88 — Conectivos e estrutura lógica
 
@@ -1584,7 +1584,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: E.** O procedimento adequado é: Examinar se uma rota acessível alternativa pode ser criada antes do bloqueio da atual. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P89 — Narrador e inferência
 
@@ -1602,7 +1602,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: C.** O procedimento adequado é: Distinguir ações narradas de intenções apenas inferidas a partir delas. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P90 — Generalização e amostragem
 
@@ -1620,7 +1620,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: D.** O procedimento adequado é: Obter uma amostra representativa com método de seleção e margem de incerteza explicitados. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P91 — Polissemia e contexto
 
@@ -1638,7 +1638,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: D.** O procedimento adequado é: Examinar complementos e situações de uso antes de escolher um sinônimo para cada passagem. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P92 — Pontuação e abrangência
 
@@ -1656,7 +1656,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: D.** O procedimento adequado é: Definir se a intenção era atender somente solicitantes ou todo o conjunto mencionado. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P93 — Voz verbal e responsabilidade
 
@@ -1674,7 +1674,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: B.** O procedimento adequado é: Consultar os registros do procedimento para identificar os responsáveis efetivos. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P94 — Concordância e norma-padrão
 
@@ -1692,7 +1692,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: B.** O procedimento adequado é: Substituir haver por existir e comparar: Existiram alterações tem sujeito, ao contrário de Houve alterações. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P95 — Regência e mudança de sentido
 
@@ -1710,7 +1710,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: E.** O procedimento adequado é: Identificar a ação descrita em cada frase antes de decidir a preposição. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P96 — Crase e comparação de construções
 
@@ -1728,7 +1728,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: C.** O procedimento adequado é: Comparar Entregou ao diretor com Entregou a um diretor para verificar a combinação de preposição e artigo. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P97 — Ambiguidade sintática
 
@@ -1746,7 +1746,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: C.** O procedimento adequado é: Identificar o referente pretendido e avaliar as leituras possíveis antes da reescrita. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P98 — Metáfora e argumentação
 
@@ -1764,7 +1764,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: E.** O procedimento adequado é: Confrontar receitas e despesas documentadas para medir a insuficiência mencionada. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P99 — Discurso e atribuição de informação
 
@@ -1782,7 +1782,7 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: E.** O procedimento adequado é: Verificar quais testes sustentam a afirmação e conservar a atribuição e as ressalvas pertinentes. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.
 
 ## P100 — Condição necessária e conclusão
 
@@ -1800,4 +1800,4 @@ Para avaliar a informação ou solucionar o problema de leitura discutido, qual 
 
 **Gabarito: A.** O procedimento adequado é: Verificar separadamente os dois requisitos e aplicar a condição conjunta prevista. Ele enfrenta a limitação específica discutida; os demais não isolam o problema de leitura ou a evidência necessária.
 
-Revisor/data: pendentes.
+Revisão: IA, conferência final em 14/10/2026. Nenhuma assinatura humana atribuída.

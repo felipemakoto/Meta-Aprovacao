@@ -4,9 +4,9 @@ import { readFileSync } from "node:fs";
 import { loadCatalog, root } from "../scripts/lib/editorial-content.mjs";
 import { number } from "../scripts/content/bank-utils.mjs";
 const catalog = loadCatalog();
-const previous = JSON.parse(readFileSync(new URL("content/catalogo-etapa-45.json", root), "utf8"));
+const previous = JSON.parse(readFileSync(new URL("content/catalogo-etapa-46.json", root), "utf8"));
 const approx = (a, b) => assert.ok(Math.abs(a - b) < 0.00001, `${a} ≠ ${b}`);
-test("500 rascunhos, IDs preservados e versões incrementadas somente para conteúdo modificado", () => {
+test("500 questões, IDs preservados e versões incrementadas somente para conteúdo modificado", () => {
   assert.equal(catalog.questions.length, 500);
   assert.equal(new Set(catalog.questions.map(q => q.statement)).size, 500);
   assert.equal(new Set(catalog.questions.map(q => q.id)).size, 500);
@@ -22,7 +22,7 @@ test("500 rascunhos, IDs preservados e versões incrementadas somente para conte
     assert.equal(rows.length, 100);
     assert.equal(new Set(rows.map(q => q.family)).size, 20);
     for (const q of rows) {
-      assert.equal(q.status, "draft");
+      assert.equal(q.status, "published");
       assert.ok(["easy", "medium", "hard"].includes(q.difficulty));
       assert.equal(new Set(q.options).size, 5);
       assert.match(q.provenance, /Autoral/);

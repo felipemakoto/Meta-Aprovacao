@@ -10,7 +10,7 @@
 <main>
 <header><small>Meta Aprovação · Material interno</small><h1>Revisão das questões</h1>
 <p>Leia, confira a resposta e registre ajustes. As marcações ficam neste navegador e não publicam questões no site.</p>
-<p class="muted">Catálogo revisado: 500 questões autorais. Enunciados, alternativas e tarefas de interpretação foram aprimorados. Dificuldade estimada por tarefa, com referência ETEC/IFSP; revisão humana pendente.</p>
+<p class="muted">Catálogo revisado: 500 questões autorais. Enunciados, alternativas e tarefas de interpretação foram aprimorados. Dificuldade estimada por tarefa, com referência ETEC/IFSP. Revisão editorial por IA concluída; revisão humana adicional dispensada pelo responsável.</p>
 <p class="muted">Anotações da versão anterior devem ser consultadas no arquivo anterior; não são importadas automaticamente nesta revisão.</p></header>
 <section class="tools" aria-label="Filtros e revisor">
 <label>Matéria<select id="subject"><option value="">Todas as matérias</option></select></label>
@@ -59,7 +59,7 @@ function render(){
   for(const r of q.references){const p=node("p",undefined,"refs");const a=node("a",r.title);const url=new URL(r.url);if(url.protocol!=="https:")continue;a.href=url.href;a.target="_blank";a.rel="noopener noreferrer";p.append(a,node("span"," — "+r.access));answer.append(p);}details.append(answer);article.append(details);
   const label=node("label","Sua marcação para "+q.label);const select=node("select");select.setAttribute("aria-label","Marcação de "+q.label);["Pendente","Precisa de ajustes","Conferida neste arquivo"].forEach((s,i)=>{const o=node("option",s);o.value=states[i];select.append(o);});select.value=entries[q.id]?.status??"pending";label.append(select);
   const noteLabel=node("label","Anotações para "+q.label);const note=node("textarea");note.maxLength=8000;note.setAttribute("aria-label","Anotações de "+q.label);note.value=entries[q.id]?.note??"";noteLabel.append(note);
-  const signed=node("p",undefined,"reviewer-line");function signature(){const e=entries[q.id];signed.textContent=e?.status==="checked"?"Conferida por "+e.by+" em "+new Date(e.at).toLocaleString("pt-BR")+". Marcação local; publicação pendente.":"Revisão humana no banco: pendente.";}signature();
+  const signed=node("p",undefined,"reviewer-line");function signature(){const e=entries[q.id];signed.textContent=e?.status==="checked"?"Conferida por "+e.by+" em "+new Date(e.at).toLocaleString("pt-BR")+". Marcação local; não altera a publicação do catálogo.":"Revisão editorial por IA concluída. Anotação adicional opcional.";}signature();
   function update(){if(select.value==="checked"&&!reviewer.trim()){select.value=entries[q.id]?.status??"pending";notify("Preencha o nome do revisor antes de marcar como conferida.");$("reviewer").focus();return;}entries[q.id]={id:q.id,version:q.version,status:select.value,note:note.value,by:select.value==="checked"?reviewer.trim():"",at:select.value==="checked"?new Date().toISOString():""};signature();save();filter();}
   select.addEventListener("change",update);note.addEventListener("input",()=>{if(select.value==="checked")select.value="pending";update();});article.append(label,noteLabel,signed);$("questions").append(article);
  }filter();

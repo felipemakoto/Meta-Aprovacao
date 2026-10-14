@@ -5,7 +5,6 @@ const subjects=["matematica","portugues","ciencias","historia","geografia"];
 const manualChecks=[
  "Confirmar o contrato real de moeda, valores e campos da API Cakto.",
  "Validar pagamento e entrega comercial de ponta a ponta; testes simulados não comprovam uma compra.",
- "Registrar revisão humana do conteúdo antes de publicar.",
  "Definir retenção dos dados financeiros e do histórico técnico, sem apagar provas por engano.",
  "Conferir o horário/fuso de vencimento do cupom na Cakto e sua aplicação somente na primeira cobrança.",
  "Conferir configuração e disponibilidade da publicação de produção.",
