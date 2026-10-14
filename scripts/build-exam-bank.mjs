@@ -12,11 +12,12 @@ import { revise45, plausibleMath } from "./content/revision45.mjs";
 import { diversifyMath } from "./content/math-diversity.mjs";
 import { diversifyHistory } from "./content/history-diversity.mjs";
 import { diversifyPortuguese } from "./content/portuguese-diversity.mjs";
+import { revise46 } from "./content/revision46.mjs";
 import { classify45 } from "./content/difficulty45.mjs";
 import { editorialProjection } from "./lib/content-versions.mjs";
 
 const root = new URL("../", import.meta.url);
-const before = JSON.parse(readFileSync(new URL("content/catalogo-etapa-44.json", root), "utf8"));
+const before = JSON.parse(readFileSync(new URL("content/catalogo-etapa-45.json", root), "utf8"));
 assert.equal(before.questions.length, 500);
 const refs = {
   etec2026: { title: "CPS — caderno oficial ETEC, 1º semestre de 2026", url: "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2025/12/A-CADERNO-VESTIBULINHO-1-SEM2026.pdf", access: "Caderno consultado como referência de competências e estilo; este exercício é autoral, não transcrito" },
@@ -28,7 +29,7 @@ const refs = {
 const definitions = [["matematica", "Matemática", "M", mathematics], ["portugues", "Português", "P", portuguese], ["ciencias", "Ciências", "C", sciences], ["historia", "História", "H", history], ["geografia", "Geografia", "G", geography]];
 const questions = definitions.flatMap(([subject, subjectName, label, build], subjectIndex) => {
   const old = before.questions.filter(q => q.subject === subject);
-  const rows = revise45(improveSubject(build()).map(plausibleMath).map(diversifyMath).map(diversifyHistory)).map(diversifyPortuguese).map(classify45);
+  const rows = revise45(improveSubject(build()).map(plausibleMath).map(diversifyMath).map(diversifyHistory)).map(diversifyPortuguese).map(classify45).map(revise46);
   assert.equal(rows.length, 100);
   assert.equal(new Set(rows.map(q => q.family)).size, 20);
   return rows.map((row, i) => {
@@ -61,19 +62,19 @@ assert.equal(new Set(questions.map(q => q.id)).size, 500);
 assert.equal(new Set(questions.map(q => q.statement.trim())).size, 500);
 const oldById = new Map(before.questions.map(q => [q.id, q]));
 const changes = questions.filter(q => q.version !== oldById.get(q.id).version).map(q => ({ id: q.id, label: q.label, before: editorialProjection(oldById.get(q.id)), after: editorialProjection(q) }));
-assert.ok(changes.length > 100 && changes.length <= 500);
+assert.ok(changes.length > 0 && changes.length <= 500);
 const additions = questions.filter(q => !oldById.has(q.id)).map(q => ({ id: q.id, label: q.label, after: editorialProjection(q) }));
 assert.equal(additions.length, 0);
 const catalogHash = createHash("sha256").update(JSON.stringify(questions)).digest("hex");
-const catalog = { schema: 1, generatedOn: "2026-10-13", questions, catalogHash, previousCatalogHash: before.catalogHash,
+const catalog = { schema: 1, generatedOn: "2026-10-14", questions, catalogHash, previousCatalogHash: before.catalogHash,
   previousVersions: Object.fromEntries(before.questions.map(q => [q.id, q.version])) };
-const revision = { schema: 1, date: "2026-10-13", previousCatalogHash: before.catalogHash, catalogHash, changes, additions,
+const revision = { schema: 1, date: "2026-10-14", previousCatalogHash: before.catalogHash, catalogHash, changes, additions,
   contentChanges: changes.filter(c => ["statement", "options", "correctAnswer", "explanation", "topic", "targetExam"].some(k => JSON.stringify(c.before[k]) !== JSON.stringify(c.after[k]))).length,
   difficultyChanges: changes.filter(c => c.before.difficulty !== c.after.difficulty).length };
-const artifacts = [["content/banco-etec-if.json", JSON.stringify(catalog, null, 2) + "\n"], ["content/revisao-etapa-45.json", JSON.stringify(revision, null, 2) + "\n"]];
+const artifacts = [["content/banco-etec-if.json", JSON.stringify(catalog, null, 2) + "\n"], ["content/revisao-etapa-46.json", JSON.stringify(revision, null, 2) + "\n"]];
 for (const [subject, name] of definitions) {
   const rows = questions.filter(q => q.subject === subject);
-  const review = `# Revisão atual — ${name} — etapa 45\n\nCem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.\n\n${rows.map(q => `## ${q.label} — ${q.topic}\n\nID: ${q.id}. Versão: ${q.version}. Dificuldade estimada: ${q.difficulty}. Família: ${q.family}.\n\n${q.statement}\n\n${q.options.map((o, i) => `- **${"ABCDE"[i]})** ${o}`).join("\n")}\n\n**Gabarito: ${q.correctAnswer}.** ${q.explanation}\n\nRevisor/data: pendentes.\n`).join("\n")}`;
+  const review = `# Revisão atual — ${name} — etapa 46\n\nCem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.\n\n${rows.map(q => `## ${q.label} — ${q.topic}\n\nID: ${q.id}. Versão: ${q.version}. Dificuldade estimada: ${q.difficulty}. Família: ${q.family}.\n\n${q.statement}\n\n${q.options.map((o, i) => `- **${"ABCDE"[i]})** ${o}`).join("\n")}\n\n**Gabarito: ${q.correctAnswer}.** ${q.explanation}\n\nRevisor/data: pendentes.\n`).join("\n")}`;
   artifacts.push([`docs/revisao-atual/REVISAO-${subject.toUpperCase()}.md`, review]);
 }
 assert.ok(process.argv.slice(2).every(arg => arg === "--check"));

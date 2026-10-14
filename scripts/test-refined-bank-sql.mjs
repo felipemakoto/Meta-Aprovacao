@@ -7,10 +7,10 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import {delta} from "./lib/editorial-patch.mjs";
 const root = fileURLToPath(new URL("../", import.meta.url));
-const manifest = JSON.parse(readFileSync(path.join(root, "content/revisao-etapa-45.json"), "utf8"));
-const patch = readFileSync(path.join(root, "supabase/content/revisao-etapa-45.sql"), "utf8");
-assert.equal(patch.split("do $stage45$").length, 2);
-const fn = patch.replace("do $stage45$", "create function pg_temp.stage45_apply() returns void language plpgsql as $stage45$");
+const manifest = JSON.parse(readFileSync(path.join(root, "content/revisao-etapa-46.json"), "utf8"));
+const patch = readFileSync(path.join(root, "supabase/content/revisao-etapa-46.sql"), "utf8");
+assert.equal(patch.split("do $stage46$").length, 2);
+const fn = patch.replace("do $stage46$", "create function pg_temp.stage46_apply() returns void language plpgsql as $stage46$");
 const quote = s => `'${s.replaceAll("'", "''")}'`;
 const old = quote(JSON.stringify(manifest.changes.map(c=>({id:c.id,patch:delta(c,"before")})))) + "::jsonb";
 
@@ -27,20 +27,20 @@ const qid = manifest.changes.at(-1).id;
 const uid = "d1459000-0000-4000-8000-000000000001";
 const aid = "d1459000-0000-4000-8000-000000000002";
 const cases = [
-  ["alteração editorial", `update public.questions set statement='Fixture modificada' where id='${qid}';`, "stage45_content_diverged"],
-  ["revisada", `update public.questions set status='reviewed' where id='${qid}';`, "stage45_content_diverged"],
-  ["publicada", `update public.questions set status='published' where id='${qid}';`, "stage45_content_diverged"],
-  ["gabarito ausente", `delete from public.question_answers where question_id='${qid}';`, "stage45_content_diverged"],
-  ["gabarito modificado", `update public.question_answers set correct_answer=case when correct_answer='A' then 'B' else 'A' end where question_id='${qid}';`, "stage45_content_diverged"],
-  ["prática existente", `insert into auth.users(id,email_confirmed_at) values('${uid}',now());insert into private.practice_attempts(user_id,question_id,snapshot) values('${uid}','${qid}','{}');`, "stage45_content_used"],
-  ["simulado existente", `insert into auth.users(id,email_confirmed_at) values('${uid}',now());insert into private.simulation_attempts(user_id,simulation_id,title,snapshots) select '${uid}',id,'Fixture','[{"id":"${qid}"}]' from private.simulations order by id limit 1;`, "stage45_content_used"],
+  ["alteração editorial", `update public.questions set statement='Fixture modificada' where id='${qid}';`, "stage46_content_diverged"],
+  ["revisada", `update public.questions set status='reviewed' where id='${qid}';`, "stage46_content_diverged"],
+  ["publicada", `update public.questions set status='published' where id='${qid}';`, "stage46_content_diverged"],
+  ["gabarito ausente", `delete from public.question_answers where question_id='${qid}';`, "stage46_content_diverged"],
+  ["gabarito modificado", `update public.question_answers set correct_answer=case when correct_answer='A' then 'B' else 'A' end where question_id='${qid}';`, "stage46_content_diverged"],
+  ["prática existente", `insert into auth.users(id,email_confirmed_at) values('${uid}',now());insert into private.practice_attempts(user_id,question_id,snapshot) values('${uid}','${qid}','{}');`, "stage46_content_used"],
+  ["simulado existente", `insert into auth.users(id,email_confirmed_at) values('${uid}',now());insert into private.simulation_attempts(user_id,simulation_id,title,snapshots) select '${uid}',id,'Fixture','[{"id":"${qid}"}]' from private.simulations order by id limit 1;`, "stage46_content_used"],
   ["diagnóstico existente", `insert into public.guest_quiz_attempts(id,token_hash) values('${aid}',repeat('3',64));
    insert into private.guest_quiz_questions(attempt_id,position,question_id,question_version,subject,topic,statement,options,correct_answer,explanation)
-   select '${aid}',1,q.id,q.version,q.subject,q.topic,q.statement,jsonb_build_array(q.option_a,q.option_b,q.option_c,q.option_d,q.option_e),a.correct_answer,a.explanation from public.questions q join public.question_answers a on a.question_id=q.id where q.id='${qid}';`, "stage45_content_used"],
-  ["versão divergente", `update public.questions set version=version+9 where id='${qid}';`, "stage45_content_diverged"],
+   select '${aid}',1,q.id,q.version,q.subject,q.topic,q.statement,jsonb_build_array(q.option_a,q.option_b,q.option_c,q.option_d,q.option_e),a.correct_answer,a.explanation from public.questions q join public.question_answers a on a.question_id=q.id where q.id='${qid}';`, "stage46_content_used"],
+  ["versão divergente", `update public.questions set version=version+9 where id='${qid}';`, "stage46_content_diverged"],
 ];
 const guards = cases.map(([name, mutation, reason]) => `do $guard$ declare h text;begin h:=${snapshot};
- begin ${mutation} perform pg_temp.stage45_apply();raise exception 'guard_not_rejected';
+ begin ${mutation} perform pg_temp.stage46_apply();raise exception 'guard_not_rejected';
  exception when others then if position('${reason}' in sqlerrm)=0 then raise;end if;end;
  if h<>(${snapshot}) then raise exception 'Fixture não revertida: ${name}';end if;
 end $guard$;`).join("\n");
@@ -55,15 +55,15 @@ const reset = `
 const sql = `begin;set local statement_timeout='30s';
 ${fn}
 -- Primeiro validar o estado real; não substituir revisão divergente para montar fixture.
-select pg_temp.stage45_apply();
+select pg_temp.stage46_apply();
 ${reset}
 ${guards}
 do $positive$ declare h text;begin
- h:=${protectedSnapshot};perform pg_temp.stage45_apply();
+ h:=${protectedSnapshot};perform pg_temp.stage46_apply();
  if h<>(${protectedSnapshot}) then raise exception 'Modelos ou tentativas alterados';end if;
  if (select count(*) from public.questions where status='draft')<>500 then raise exception 'Carga incompleta';end if;
  if exists(select subject from public.questions group by subject having count(*)<>100) then raise exception 'Distribuição incorreta';end if;
- h:=${snapshot};perform pg_temp.stage45_apply();perform pg_temp.stage45_apply();
+ h:=${snapshot};perform pg_temp.stage46_apply();perform pg_temp.stage46_apply();
  if h<>(${snapshot}) then raise exception 'Reexecução alterou registros ou timestamps';end if;
 end $positive$;
 select '500_drafts_quality_nine_guards_repeatable' as check_name,true as passed;

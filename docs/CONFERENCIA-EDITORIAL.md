@@ -1,37 +1,39 @@
-# Conferência editorial atual — etapa 45
+# Conferência editorial atual — etapa 46
 
-Revisão em 13/10/2026 das 500 questões, cem por matéria. 499 registros alterados: 456 têm alterações em texto, alternativas, resposta ou explicação; 429 mudaram de dificuldade. Essas contagens se sobrepõem. Todas as 500 tarefas receberam análise e fundamento de dificuldade. IDs e ordem foram preservados; versões aumentam somente quando o conteúdo editorial ou sua dificuldade mudam. Todas continuam draft, sem revisão humana atribuída.
+Segunda leitura das 500 questões em 14/10/2026, com confronto de comandos, alternativas, respostas e conceitos. 67 registros corrigidos; 433 preservados integralmente no conteúdo editorial. 2 mudanças de dificuldade. IDs, quantidade e ordem preservados; versões aumentam somente para conteúdo ou nível alterados. Todas permanecem draft, sem revisão humana atribuída.
 
-## Correções solicitadas
+## Problemas encontrados e tratados
 
-C02 separa planejamento de separação e experimento já executado. C22: 15 g de sal; C42: 75 g de água; C82: 125 g efetivamente recolhidos, porque 75 g de água se perderam na evaporação aberta. Isso distingue recuperação de conservação de massa.
+P77: o comando anterior admitia reescritas gramaticais que mantinham a ambiguidade. Agora exige explicitar que a inscrição pertence à aluna. P75: o debate do documentário está dado no contexto e o comando pede a construção relativa com a regência adequada. Conferência de norma-padrão pelo Manual de Comunicação do Senado.
 
-M06 e suas variantes têm contagens inteiras e arrecadações possíveis; M07 usa notas entre zero e dez. A tarefa M87 pede explicitamente avaliar uma meta impossível, em vez de oferecer uma nota fora da escala como distrator numérico. Corrigidos também distratores negativos de contagem e volumes acima da capacidade em outras famílias.
+M98: eliminada a contradição entre escolher oito pessoas e formar comissão de duas. M82: cálculo do desconto necessário separado da sequência de aumentos/descontos. M83: domínio de preço superior ao abatimento fixo. M95/M97: retiradas dicas que identificavam o próprio erro nos distratores. M44/M64: tarefas com etapas de trabalho e variação de produtividade, substituindo contas mecanicamente iguais; estimadas difíceis pelas etapas combinadas.
 
-Os cinco enunciados de C11, G01 e G16 usam somente os dados pertinentes a cada comando. Nos demais, retirados avisos repetidos e orientações dispensáveis. Mantidas unidades, hipóteses físicas e condições necessárias. Corrigidas referência possessiva, terminologia gramatical, legitimação da violência e detalhes de controle experimental.
+Ciências: área foliar e saúde dos ramos comparáveis no experimento de fotossíntese; volume de ar e umidade nos frascos com sementes; cultivo populacional explicitamente fechado; caixas iguais exceto o revestimento. C72 distingue novas substâncias de mudança de fase com evidências fornecidas. Distratores de estabilidade populacional e concentração reformulados.
 
-## Diversificação e verificação
+História: dez situações novas cruzam registros, expectativas, posições e indicadores concretos, em vez de repetir apenas comandos gerais de crítica de fontes. H96 fornece as datas usadas nas alternativas, distinguindo cronologia de efeitos sociais que ela não comprova. Geografia: corrigidas iniciais minúsculas após ponto, período de dez horas explícito na geração de energia e retirada de dica no distrator de custo/lucro.
 
-Matemática: 44 tarefas substituídas por problemas inversos, comparação, validação de relatórios, viabilidade e hipóteses. Velocidade média agora inclui tempos iguais, trechos distintos e parada. Sequências incluem crescimento aditivo, multiplicativo e reconstrução do primeiro termo. História: vinte casos novos, com fontes, cronologia, relações institucionais e aplicação. Português: vinte análises linguísticas contextualizadas e distratores de vinte procedimentos, além de quarenta explicações específicas. Eliminadas duplicações de objetivo em famílias de Geografia e Ciências.
+## Verificação
 
-Os 80 problemas numéricos de Matemática foram conferidos por relações independentes; mais setenta resultados de Ciências, Geografia e História foram recalculados, além de resultados compostos, conservação, probabilidade e fusos. Os vinte problemas conceituais de Matemática e os conteúdos não numéricos tiveram conferência editorial assistida por IA. Testes não demonstram, sozinhos, ausência de ambiguidade em todas as alternativas ou qualidade pedagógica. Os gabaritos e fundamentos das 500 tarefas estão no [registro de conferência](AUDITORIA-GABARITOS-ETAPA-45.md).
+80 tarefas numéricas de Matemática verificadas por equações e enumeração, incluindo os dois novos problemas de trabalho; cinco valores distintos por questão numérica. Setenta resultados escalares de outras matérias recalculados. Mantidas verificações de balanços, proporções, fusos e limites físicos. Os demais itens tiveram segunda leitura editorial assistida por IA. Testes e este relatório não comprovam ausência absoluta de ambiguidades nem substituem revisão humana.
 
-## Dificuldade estimada por tarefa
+Os [500 gabaritos e fundamentos](AUDITORIA-GABARITOS-ETAPA-46.md) permitem conferência item a item. Histórico da etapa anterior em CONFERENCIA-EDITORIAL-ETAPA-45.md.
+
+## Dificuldade estimada
 
 | Matéria | Questões | Fácil | Média | Difícil |
 | --- | ---: | ---: | ---: | ---: |
-| Matemática | 100 | 10 | 82 | 8 |
+| Matemática | 100 | 10 | 80 | 10 |
 | Português | 100 | 11 | 80 | 9 |
 | Ciências | 100 | 21 | 76 | 3 |
 | História | 100 | 3 | 97 | 0 |
 | Geografia | 100 | 22 | 76 | 2 |
 
-Fácil: leitura explícita ou cálculo direto. Média: aplicação de conceito, combinação de dados ou distinção entre condições. Difícil: integração de etapas dependentes, comparação não imediata ou análise de hipóteses. O julgamento considera comando, conhecimento exigido e alternativas, não extensão do texto. Comparação qualitativa com os cadernos oficiais ETEC 2026 e IFSP integrado, edital 211/2025, tipo 2. Não há dados de desempenho de candidatos: classificação editorial, sem calibração estatística. Ciências, História e Geografia referem-se à ETEC; o caderno IFSP consultado concentra Matemática e Português.
+Estimativa editorial com referência ETEC/IFSP, sem calibração por desempenho. Ciências, História e Geografia continuam com destino ETEC; Matemática e Português, ETEC/IFSP.
 
-## Uso da ferramenta
+## Uso
 
-Abrir out/revisao-editorial-meta-aprovacao-v5/revisao-editorial.html. Filtrar por matéria, dificuldade, marcação ou busca. Conferir resposta e fundamento; registrar comentários e exportar JSON. Nenhuma marcação local publica questões. v4 e a pasta do revisor foram preservadas; as anotações antigas podem ser exportadas para consulta, sem transferência automática como aprovação da versão nova.
+Abrir out/revisao-editorial-meta-aprovacao-v6/revisao-editorial.html, registrar comentários e exportar JSON. A pasta e o ZIP v5 foram preservados. Anotações da versão anterior podem ser exportadas para consulta, sem conversão automática em aprovação da nova versão.
 
-Fonte: content/banco-etec-if.json. Snapshot anterior: content/catalogo-etapa-44.json. Manifesto antes/depois: content/revisao-etapa-45.json. Carga protegida: supabase/content/revisao-etapa-45.sql. Hash: 07dcc140487f6b283554cadcead05fdcbbb759eb0711632e4cd3f59f7bf4cad3.
+Fonte: content/banco-etec-if.json. Snapshot anterior: content/catalogo-etapa-45.json. Manifesto: content/revisao-etapa-46.json. Carga protegida: supabase/content/revisao-etapa-46.sql. Hash: 13dae59e8522deb5349b3d7dcc19313524545a9ce6e0101f96e9230e619c3776.
 
-Critérios, referências e evidências operacionais em [Revisão completa](REVISAO-INTEGRAL-ETAPA-45.md). Revisão humana das questões e dos seis modelos continua pendente. Nenhum conteúdo publicado ou venda liberada.
+Evidências e limites em [Segunda revisão](REVISAO-ETAPA-46.md). Próximo passo editorial: revisão humana identificada das questões e conferência dos seis modelos de simulado. Nenhum conteúdo publicado ou venda liberada.

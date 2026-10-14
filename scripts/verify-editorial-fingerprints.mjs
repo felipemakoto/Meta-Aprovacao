@@ -8,7 +8,7 @@ import {root,loadCatalog} from './lib/editorial-content.mjs';
 import {editorialProjection} from './lib/content-versions.mjs';
 import {fingerprint,projection} from './lib/editorial-patch.mjs';
 assert.ok(process.argv.slice(2).every(a=>a==='--before'));
-const catalog=process.argv.includes('--before')?JSON.parse(readFileSync(new URL('content/catalogo-etapa-44.json',root),'utf8')):loadCatalog();
+const catalog=process.argv.includes('--before')?JSON.parse(readFileSync(new URL('content/catalogo-etapa-45.json',root),'utf8')):loadCatalog();
 const require=createRequire(import.meta.url),pkg=require.resolve('supabase/package.json'),entry=path.resolve(path.dirname(pkg),require(pkg).bin.supabase);
 const ids=catalog.questions.map(q=>`'${q.id}'`).join(',');
 const sql=`select q.id,encode(sha256(convert_to((${projection})::text,'UTF8')),'hex') as hash

@@ -1,4 +1,4 @@
-# Revisão atual — Geografia — etapa 45
+# Revisão atual — Geografia — etapa 46
 
 Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
@@ -76,9 +76,9 @@ Revisor/data: pendentes.
 
 ## G05 — Estrutura etária e indicadores
 
-ID: d1394000-0000-4000-8000-000000000003. Versão: 4. Dificuldade estimada: medium. Família: G5.
+ID: d1394000-0000-4000-8000-000000000003. Versão: 5. Dificuldade estimada: medium. Família: G5.
 
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. A razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Qual é a razão de dependência demográfica aproximada?
 
@@ -130,9 +130,9 @@ Revisor/data: pendentes.
 
 ## G08 — Energia, potência e intermitência
 
-ID: d1394000-0000-4000-8000-000000000006. Versão: 4. Dificuldade estimada: easy. Família: G8.
+ID: d1394000-0000-4000-8000-000000000006. Versão: 5. Dificuldade estimada: easy. Família: G8.
 
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. Nas dez horas do período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Que potências médias resultam no período?
 
@@ -220,9 +220,9 @@ Revisor/data: pendentes.
 
 ## G13 — Clima, chuva e balanço simplificado
 
-ID: d1394000-0000-4000-8000-000000000011. Versão: 4. Dificuldade estimada: easy. Família: G13.
+ID: d1394000-0000-4000-8000-000000000011. Versão: 5. Dificuldade estimada: easy. Família: G13.
 
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Qual comparação dos saldos está correta?
 
@@ -292,9 +292,9 @@ Revisor/data: pendentes.
 
 ## G17 — Coordenadas e distribuição espacial
 
-ID: d1394000-0000-4000-8000-000000000015. Versão: 4. Dificuldade estimada: easy. Família: G17.
+ID: d1394000-0000-4000-8000-000000000015. Versão: 5. Dificuldade estimada: easy. Família: G17.
 
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Qual comparação das coordenadas é correta?
 
@@ -310,9 +310,9 @@ Revisor/data: pendentes.
 
 ## G18 — Mercado de trabalho e denominadores
 
-ID: d1394000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: easy. Família: G18.
+ID: d1394000-0000-4000-8000-000000000016. Versão: 5. Dificuldade estimada: easy. Família: G18.
 
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Qual taxa de desocupação resulta da definição fornecida?
 
@@ -436,9 +436,9 @@ Revisor/data: pendentes.
 
 ## G25 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000025. Versão: 2. Dificuldade estimada: easy. Família: G5.
+ID: d1434000-0000-4000-8000-000000000025. Versão: 3. Dificuldade estimada: easy. Família: G5.
 
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. A razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Que fração da população total tem 65 anos ou mais?
 
@@ -490,11 +490,11 @@ Revisor/data: pendentes.
 
 ## G28 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000028. Versão: 2. Dificuldade estimada: medium. Família: G8.
+ID: d1434000-0000-4000-8000-000000000028. Versão: 3. Dificuldade estimada: medium. Família: G8.
 
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. Nas dez horas do período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
-Qual energia conjunta média seria produzida em 10 horas sob esses valores médios?
+Qual energia total as duas fontes produziram nas dez horas observadas?
 
 - **A)** 200 MWh
 - **B)** 2.000 MWh
@@ -580,9 +580,9 @@ Revisor/data: pendentes.
 
 ## G33 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000033. Versão: 2. Dificuldade estimada: easy. Família: G13.
+ID: d1434000-0000-4000-8000-000000000033. Versão: 3. Dificuldade estimada: easy. Família: G13.
 
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Se julho recebesse irrigação de 50 mm, qual saldo simplificado passaria a ter?
 
@@ -652,9 +652,9 @@ Revisor/data: pendentes.
 
 ## G37 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000037. Versão: 2. Dificuldade estimada: easy. Família: G17.
+ID: d1434000-0000-4000-8000-000000000037. Versão: 3. Dificuldade estimada: easy. Família: G17.
 
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Qual separação angular de latitude existe entre A e B?
 
@@ -670,9 +670,9 @@ Revisor/data: pendentes.
 
 ## G38 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000038. Versão: 2. Dificuldade estimada: medium. Família: G18.
+ID: d1434000-0000-4000-8000-000000000038. Versão: 3. Dificuldade estimada: medium. Família: G18.
 
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Se 1.000 desocupados conseguirem trabalho e ninguém mudar de grupo de participação, qual será a nova taxa?
 
@@ -796,9 +796,9 @@ Revisor/data: pendentes.
 
 ## G45 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000045. Versão: 2. Dificuldade estimada: medium. Família: G5.
+ID: d1434000-0000-4000-8000-000000000045. Versão: 3. Dificuldade estimada: medium. Família: G5.
 
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. A razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Por que não se pode transformar diretamente a razão calculada em desemprego?
 
@@ -850,9 +850,9 @@ Revisor/data: pendentes.
 
 ## G48 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000048. Versão: 2. Dificuldade estimada: medium. Família: G8.
+ID: d1434000-0000-4000-8000-000000000048. Versão: 3. Dificuldade estimada: medium. Família: G8.
 
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. Nas dez horas do período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Qual participação aproximada da geração solar no total médio das duas fontes?
 
@@ -940,9 +940,9 @@ Revisor/data: pendentes.
 
 ## G53 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000053. Versão: 2. Dificuldade estimada: medium. Família: G13.
+ID: d1434000-0000-4000-8000-000000000053. Versão: 3. Dificuldade estimada: medium. Família: G13.
 
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Que informação falta para transformar esse saldo em diagnóstico completo de disponibilidade de água para plantas?
 
@@ -1012,9 +1012,9 @@ Revisor/data: pendentes.
 
 ## G57 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000057. Versão: 2. Dificuldade estimada: medium. Família: G17.
+ID: d1434000-0000-4000-8000-000000000057. Versão: 3. Dificuldade estimada: medium. Família: G17.
 
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Em relação a A, C está em que direção sobre o paralelo indicado?
 
@@ -1030,9 +1030,9 @@ Revisor/data: pendentes.
 
 ## G58 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: medium. Família: G18.
+ID: d1434000-0000-4000-8000-000000000058. Versão: 3. Dificuldade estimada: medium. Família: G18.
 
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Se 1.000 desocupados deixarem de procurar trabalho e saírem da força, sem conseguir emprego, qual taxa resulta?
 
@@ -1156,9 +1156,9 @@ Revisor/data: pendentes.
 
 ## G65 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000065. Versão: 2. Dificuldade estimada: medium. Família: G5.
+ID: d1434000-0000-4000-8000-000000000065. Versão: 3. Dificuldade estimada: medium. Família: G5.
 
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. A razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Se o grupo de 65 ou mais passar a 20.000 e os outros ficarem iguais, qual razão resulta?
 
@@ -1210,9 +1210,9 @@ Revisor/data: pendentes.
 
 ## G68 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000068. Versão: 2. Dificuldade estimada: medium. Família: G8.
+ID: d1434000-0000-4000-8000-000000000068. Versão: 3. Dificuldade estimada: medium. Família: G8.
 
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. Nas dez horas do período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Por que esses valores não demonstram disponibilidade de 55 MW em qualquer hora?
 
@@ -1300,9 +1300,9 @@ Revisor/data: pendentes.
 
 ## G73 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000073. Versão: 2. Dificuldade estimada: easy. Família: G13.
+ID: d1434000-0000-4000-8000-000000000073. Versão: 3. Dificuldade estimada: easy. Família: G13.
 
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Uma sequência de dois meses com saldos −60 e −20 mm representa que saldo acumulado simplificado?
 
@@ -1372,9 +1372,9 @@ Revisor/data: pendentes.
 
 ## G77 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000077. Versão: 3. Dificuldade estimada: medium. Família: G17.
+ID: d1434000-0000-4000-8000-000000000077. Versão: 4. Dificuldade estimada: medium. Família: G17.
 
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Em um modelo esférico da Terra, por que 20° de longitude representam menor distância sobre o paralelo de 60° do que sobre o equador?
 
@@ -1390,9 +1390,9 @@ Revisor/data: pendentes.
 
 ## G78 — Mercado de trabalho e denominadores
 
-ID: d1434000-0000-4000-8000-000000000078. Versão: 2. Dificuldade estimada: medium. Família: G18.
+ID: d1434000-0000-4000-8000-000000000078. Versão: 3. Dificuldade estimada: medium. Família: G18.
 
-Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
+Em uma região fictícia, 12.000 pessoas estão ocupadas, 3.000 não estão ocupadas mas procuram trabalho e estão disponíveis, e 5.000 estão fora desse grupo de participação. Força de trabalho = ocupados + pessoas que procuram e estão disponíveis; taxa de desocupação = desocupados/força de trabalho × 100.
 
 Que informação complementa a taxa para avaliar melhoria das condições de trabalho?
 
@@ -1516,9 +1516,9 @@ Revisor/data: pendentes.
 
 ## G85 — Estrutura etária e indicadores
 
-ID: d1434000-0000-4000-8000-000000000085. Versão: 2. Dificuldade estimada: medium. Família: G5.
+ID: d1434000-0000-4000-8000-000000000085. Versão: 3. Dificuldade estimada: medium. Família: G5.
 
-A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. a razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
+A população de uma região é dividida em 0–14 anos: 30.000; 15–64 anos: 60.000; 65 anos ou mais: 10.000. A razão de dependência demográfica é (população de 0–14 mais população de 65 ou mais)/população de 15–64 × 100. O indicador não mede diretamente quem trabalha ou recebe renda.
 
 Que informação complementa esses números para planejar serviços?
 
@@ -1534,7 +1534,7 @@ Revisor/data: pendentes.
 
 ## G86 — Produtividade agrícola e área
 
-ID: d1434000-0000-4000-8000-000000000086. Versão: 3. Dificuldade estimada: hard. Família: G6.
+ID: d1434000-0000-4000-8000-000000000086. Versão: 4. Dificuldade estimada: hard. Família: G6.
 
 A propriedade A produz 12.000 t em 3.000 ha; B produz 10.000 t em 2.000 ha. Ambas vendem a R$ 700/t. Os custos totais por tonelada são R$ 500 em A e R$ 650 em B.
 
@@ -1544,7 +1544,7 @@ Qual comparação distingue produtividade e lucro total nesse período?
 - **B)** B tem maior produtividade e maior lucro total, pois produz mais por hectare.
 - **C)** As duas têm o mesmo lucro por tonelada, pois o preço de venda é igual.
 - **D)** A tem maior produtividade e maior lucro total, pois produz mais toneladas.
-- **E)** A tem maior lucro total, mas B tem lucro de R$ 6,5 milhões, confundindo custo com lucro.
+- **E)** A tem maior lucro total, mas B tem lucro de R$ 6,5 milhões, pois seu lucro é o total de toneladas multiplicado pelo custo por tonelada.
 
 **Gabarito: A.** A produtividade é 4 t/ha em A e 5 t/ha em B. O lucro é receita menos custo: A = 12.000 × (700 − 500) = 2.400.000; B = 10.000 × (700 − 650) = 500.000. Maior rendimento por área não garante maior lucro.
 
@@ -1570,9 +1570,9 @@ Revisor/data: pendentes.
 
 ## G88 — Energia, potência e intermitência
 
-ID: d1434000-0000-4000-8000-000000000088. Versão: 2. Dificuldade estimada: medium. Família: G8.
+ID: d1434000-0000-4000-8000-000000000088. Versão: 3. Dificuldade estimada: medium. Família: G8.
 
-Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. No período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
+Uma região tem 100 MW instalados em painéis solares e 100 MW em turbinas eólicas. Nas dez horas do período observado, os fatores de capacidade médios foram 20% e 35%, respectivamente. Potência média = potência instalada × fator de capacidade. As condições não garantem produção constante em cada hora.
 
 Qual informação melhora o planejamento do atendimento contínuo da demanda?
 
@@ -1660,9 +1660,9 @@ Revisor/data: pendentes.
 
 ## G93 — Clima, chuva e balanço simplificado
 
-ID: d1434000-0000-4000-8000-000000000093. Versão: 2. Dificuldade estimada: medium. Família: G13.
+ID: d1434000-0000-4000-8000-000000000093. Versão: 3. Dificuldade estimada: medium. Família: G13.
 
-Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
+Em uma localidade, janeiro recebe 180 mm de chuva e apresenta demanda evaporativa de 120 mm; julho recebe 40 mm e demanda 100 mm. Saldo mensal simplificado = chuva − demanda. Não se consideram estoques do solo, irrigação nem fluxos subterrâneos.
 
 Qual comparação distingue clima de uma observação meteorológica isolada?
 
@@ -1732,9 +1732,9 @@ Revisor/data: pendentes.
 
 ## G97 — Coordenadas e distribuição espacial
 
-ID: d1434000-0000-4000-8000-000000000097. Versão: 2. Dificuldade estimada: medium. Família: G17.
+ID: d1434000-0000-4000-8000-000000000097. Versão: 3. Dificuldade estimada: medium. Família: G17.
 
-Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
+Um mapa esquemático marca A em 20° S e 40° W; B em 20° N e 40° W; C em 20° S e 20° W. Considere latitude e longitude como coordenadas angulares, sem usar seus valores diretamente como quilômetros. Todos os pontos usam a mesma referência geográfica.
 
 Que informação falta para determinar a distância real precisa entre os pontos usando apenas o desenho esquemático?
 

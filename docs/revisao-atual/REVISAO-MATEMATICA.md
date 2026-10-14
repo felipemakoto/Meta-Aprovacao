@@ -1,4 +1,4 @@
-# Revisão atual — Matemática — etapa 45
+# Revisão atual — Matemática — etapa 46
 
 Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
@@ -692,17 +692,17 @@ Revisor/data: pendentes.
 
 ## M44 — Proporcionalidade composta
 
-ID: d1430000-0000-4000-8000-000000000044. Versão: 2. Dificuldade estimada: medium. Família: M4.
+ID: d1430000-0000-4000-8000-000000000044. Versão: 3. Dificuldade estimada: hard. Família: M4.
 
-10 trabalhadores, mantendo a mesma produtividade individual, concluem uma tarefa em 12 dias de 6 horas. Uma segunda equipe tem 20 trabalhadores e trabalha 4 horas por dia. Não há interferência entre trabalhadores e a tarefa é idêntica. Quantos dias essa equipe necessita?
+Dez trabalhadores realizariam uma tarefa em doze dias de seis horas. Após quatro dias nesse ritmo, a tarefa precisa ser concluída nos seis dias seguintes, com jornadas de quatro horas. A produtividade individual é constante e não há interferência entre trabalhadores. Quantos trabalhadores deve ter a equipe nessa segunda etapa?
 
-- **A)** 6 dias
-- **B)** 18 dias
-- **C)** 9 dias
-- **D)** 12 dias
-- **E)** 8 dias
+- **A)** 10 trabalhadores
+- **B)** 30 trabalhadores
+- **C)** 20 trabalhadores
+- **D)** 18 trabalhadores
+- **E)** 15 trabalhadores
 
-**Gabarito: C.** O trabalho exige 720 trabalhador-horas. A nova equipe produz 80 trabalhador-horas por dia. A divisão resulta em 9 dias; aumentar trabalhadores reduz o tempo, mas reduzir a jornada o aumenta.
+**Gabarito: C.** A tarefa exige 10 × 12 × 6 = 720 trabalhador-horas. A primeira etapa realiza 10 × 4 × 6 = 240, restando 480. Cada trabalhador da segunda etapa fornece 6 × 4 = 24 horas; são necessários 480/24 = 20 trabalhadores.
 
 Revisor/data: pendentes.
 
@@ -1012,17 +1012,17 @@ Revisor/data: pendentes.
 
 ## M64 — Proporcionalidade composta
 
-ID: d1430000-0000-4000-8000-000000000064. Versão: 2. Dificuldade estimada: medium. Família: M4.
+ID: d1430000-0000-4000-8000-000000000064. Versão: 3. Dificuldade estimada: hard. Família: M4.
 
-12 trabalhadores, mantendo a mesma produtividade individual, concluem uma tarefa em 12 dias de 6 horas. Uma segunda equipe tem 24 trabalhadores e trabalha 4 horas por dia. Não há interferência entre trabalhadores e a tarefa é idêntica. Quantos dias essa equipe necessita?
+Doze trabalhadores realizam uma tarefa em doze dias de seis horas. Em tarefa idêntica, uma equipe de dezoito trabalha seis horas por dia, mas cada trabalhador produz 20% menos por hora. Não há interferência entre trabalhadores e a produtividade fica constante em cada equipe. Em quantos dias a segunda equipe termina a tarefa?
 
-- **A)** 6 dias
-- **B)** 8 dias
-- **C)** 18 dias
-- **D)** 9 dias
+- **A)** 8 dias
+- **B)** 9 dias
+- **C)** 15 dias
+- **D)** 10 dias
 - **E)** 12 dias
 
-**Gabarito: D.** O trabalho exige 864 trabalhador-horas. A nova equipe produz 96 trabalhador-horas por dia. A divisão resulta em 9 dias; aumentar trabalhadores reduz o tempo, mas reduzir a jornada o aumenta.
+**Gabarito: D.** A carga equivalente é 12 × 12 × 6 = 864 horas da produtividade inicial. A segunda equipe realiza por dia 18 × 6 × 0,8 = 86,4 horas equivalentes. Logo, precisa de 864/86,4 = 10 dias. Considerar somente o aumento de trabalhadores daria oito dias e ignoraria a produtividade menor.
 
 Revisor/data: pendentes.
 
@@ -1300,9 +1300,9 @@ Revisor/data: pendentes.
 
 ## M82 — Porcentagens sucessivas
 
-ID: d1430000-0000-4000-8000-000000000082. Versão: 2. Dificuldade estimada: medium. Família: M2.
+ID: d1430000-0000-4000-8000-000000000082. Versão: 3. Dificuldade estimada: medium. Família: M2.
 
-Um produto recebe aumento de 20% e depois desconto de 20% sobre o novo preço. Para retornar ao preço inicial após o aumento, qual análise está correta?
+Um produto recebeu aumento de 20%. A loja pretende devolver o preço ao valor inicial, aplicando um desconto sobre o preço reajustado. Qual análise determina o desconto necessário?
 
 - **A)** O desconto necessário seria de aproximadamente 16,7% sobre o preço aumentado.
 - **B)** Qualquer desconto inferior a 20% deixa o preço acima do original.
@@ -1316,9 +1316,9 @@ Revisor/data: pendentes.
 
 ## M83 — Porcentagem inversa e comparação
 
-ID: d1430000-0000-4000-8000-000000000083. Versão: 2. Dificuldade estimada: medium. Família: M3.
+ID: d1430000-0000-4000-8000-000000000083. Versão: 3. Dificuldade estimada: medium. Família: M3.
 
-Duas lojas têm o mesmo preço de tabela P. Uma oferece desconto de 25%; a outra, abatimento de R$ 25. Em que situação a oferta percentual é mais barata?
+Duas lojas têm o mesmo preço de tabela P, superior a R$ 25. Uma oferece desconto de 25%; a outra, abatimento de R$ 25. Em que situação a oferta percentual é mais barata?
 
 - **A)** Quando P é maior que R$ 100.
 - **B)** Para qualquer P positivo, pois 25% sempre supera 25 reais.
@@ -1508,11 +1508,11 @@ Revisor/data: pendentes.
 
 ## M95 — Volume, capacidade e fração
 
-ID: d1430000-0000-4000-8000-000000000095. Versão: 2. Dificuldade estimada: easy. Família: M15.
+ID: d1430000-0000-4000-8000-000000000095. Versão: 3. Dificuldade estimada: easy. Família: M15.
 
 Um reservatório retangular passa a ter o dobro do comprimento, mantendo largura e altura. Qual mudança ocorre em sua capacidade?
 
-- **A)** Fica quatro vezes maior, confundindo volume com área de duas dimensões.
+- **A)** Fica quatro vezes maior, pois a capacidade varia com o quadrado do comprimento.
 - **B)** Permanece igual, pois a largura e a altura não mudaram.
 - **C)** Aumenta apenas dois litros, independentemente das medidas originais.
 - **D)** Dobra, pois apenas uma das três dimensões foi multiplicada por dois.
@@ -1540,13 +1540,13 @@ Revisor/data: pendentes.
 
 ## M97 — Ângulos de polígonos e giro
 
-ID: d1430000-0000-4000-8000-000000000097. Versão: 3. Dificuldade estimada: medium. Família: M17.
+ID: d1430000-0000-4000-8000-000000000097. Versão: 4. Dificuldade estimada: medium. Família: M17.
 
 Um polígono regular tem nove lados. Um aluno usa 360°/9 para calcular seu ângulo interno. Qual correção é adequada?
 
 - **A)** 40° é o ângulo externo; o interno mede 180° − 40° = 140°.
 - **B)** 40° é o interno, pois os ângulos internos de qualquer polígono somam 360°.
-- **C)** O interno mede 180°/9 = 20°, sem considerar o número de triângulos.
+- **C)** O interno mede 180°/9 = 20°, pois os nove ângulos internos somam 180°.
 - **D)** O interno mede 40°/9, pois ainda é necessário dividir pelos lados.
 - **E)** O interno mede 360° − 40° = 320°.
 
@@ -1556,9 +1556,9 @@ Revisor/data: pendentes.
 
 ## M98 — Contagem e distinção de funções
 
-ID: d1430000-0000-4000-8000-000000000098. Versão: 3. Dificuldade estimada: medium. Família: M18.
+ID: d1430000-0000-4000-8000-000000000098. Versão: 4. Dificuldade estimada: medium. Família: M18.
 
-Oito pessoas serão escolhidas para uma comissão de duas pessoas sem cargos. Por que 8 × 7 precisa ser dividido por dois?
+Entre oito pessoas, duas serão escolhidas para uma comissão sem cargos distintos. Por que 8 × 7 precisa ser dividido por dois?
 
 - **A)** Porque os cargos da comissão são diferentes.
 - **B)** Porque somente metade das pessoas pode participar da comissão.

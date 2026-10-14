@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {root} from '../scripts/lib/editorial-content.mjs';
 import {delta,fingerprint} from '../scripts/lib/editorial-patch.mjs';
-const revision=JSON.parse(readFileSync(new URL('content/revisao-etapa-45.json',root),'utf8'));
-test('transporte compacto reconstrói integralmente os 499 conteúdos nas duas direções',()=>{
+const revision=JSON.parse(readFileSync(new URL('content/revisao-etapa-46.json',root),'utf8'));
+test('transporte compacto reconstrói integralmente os conteúdos alterados nas duas direções',()=>{
  for(const change of revision.changes){
   assert.deepEqual({...change.before,...delta(change)},change.after);
   assert.deepEqual({...change.after,...delta(change,'before')},change.before);
@@ -20,6 +20,6 @@ test('fingerprint protege também conteúdo que não foi enviado no delta',()=>{
   {...change.before,options:[...change.before.options].reverse()},
   {...change.before,explanation:change.before.explanation+' Divergência editorial.'},
  ])assert.ok(![fingerprint(change.before),fingerprint(change.after)].includes(fingerprint(changed)));
- const file=readFileSync(new URL('supabase/content/revisao-etapa-45.sql',root),'utf8');
+ const file=readFileSync(new URL('supabase/content/revisao-etapa-46.sql',root),'utf8');
  assert.ok(Buffer.byteLength(JSON.stringify({query:file}))<500000,'A carga deve caber no limite de transporte.');
 });

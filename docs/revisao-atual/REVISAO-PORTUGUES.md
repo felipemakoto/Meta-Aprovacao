@@ -1,4 +1,4 @@
-# Revisão atual — Português — etapa 45
+# Revisão atual — Português — etapa 46
 
 Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
@@ -1336,11 +1336,11 @@ Revisor/data: pendentes.
 
 ## P75 — Regência e mudança de sentido
 
-ID: d1431000-0000-4000-8000-000000000075. Versão: 3. Dificuldade estimada: medium. Família: P15.
+ID: d1431000-0000-4000-8000-000000000075. Versão: 4. Dificuldade estimada: medium. Família: P15.
 
-No relatório, constavam: Os estudantes assistiram o documentário e O técnico assistiu o pesquisador durante o procedimento. A primeira frase tratava da exibição de um filme; a segunda, da ajuda prestada no laboratório. A revisora avaliou a regência de assistir no sentido de cada ação descrita.
+A turma viu um documentário e depois o debateu. Uma revisora quer retomar “o documentário” por uma oração relativa com o verbo assistir no sentido de ver.
 
-Considere também a formulação: “Os estudantes assistiram ao documentário.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
+Qual frase respeita a regência desse verbo na norma-padrão adotada pelo Manual de Comunicação do Senado?
 
 - **A)** O documentário cujo os estudantes assistiram foi debatido.
 - **B)** O documentário em que os estudantes assistiram foi debatido.
@@ -1348,7 +1348,7 @@ Considere também a formulação: “Os estudantes assistiram ao documentário.�
 - **D)** O documentário por que os estudantes assistiram foi debatido.
 - **E)** O documentário de que os estudantes assistiram foi debatido.
 
-**Gabarito: C.** Assistir com sentido de ver rege a. A preposição é conservada diante do pronome relativo; cujo não substitui essa relação e exige substantivo possuído.
+**Gabarito: C.** No sentido de ver ou presenciar, assistir exige a preposição a na norma-padrão adotada. Ao usar que para retomar documentário, a preposição vem antes do relativo: “o documentário a que os estudantes assistiram”. As demais opções substituem essa preposição ou empregam cujo sem relação de posse.
 
 Revisor/data: pendentes.
 
@@ -1372,11 +1372,11 @@ Revisor/data: pendentes.
 
 ## P77 — Ambiguidade sintática
 
-ID: d1431000-0000-4000-8000-000000000077. Versão: 3. Dificuldade estimada: medium. Família: P17.
+ID: d1431000-0000-4000-8000-000000000077. Versão: 4. Dificuldade estimada: medium. Família: P17.
 
-O jornal publicou: A professora informou à aluna que sua inscrição estava incompleta. Um leitor perguntou de quem era a inscrição. O redator substituiu “sua inscrição” pela expressão “a inscrição da aluna” e manteve o restante da informação. A alteração passou a constar na edição seguinte.
+A frase “A professora informou à aluna que sua inscrição estava incompleta” permite leituras diferentes do possessivo. O redator sabe que a inscrição pertence à aluna.
 
-Considere também a formulação: “A professora informou à aluna que sua inscrição estava incompleta.” Qual alternativa apresenta uma reescrita equivalente ou uma análise adequada à norma-padrão e ao sentido indicado?
+Qual reescrita explicita esse referente, preservando a informação sobre o estado da inscrição?
 
 - **A)** A professora comunicou à aluna que sua inscrição estava incompleta.
 - **B)** A professora informou à aluna que a inscrição dela estava incompleta.
@@ -1384,7 +1384,7 @@ Considere também a formulação: “A professora informou à aluna que sua insc
 - **D)** A professora informou à aluna que a inscrição da aluna estava incompleta.
 - **E)** A professora disse à aluna que sua própria inscrição estava incompleta.
 
-**Gabarito: D.** A inscrição da aluna explicita o referente pretendido. Dela, sua e aquela dependem de contexto ou admitem leituras concorrentes; trocar o verbo não resolve a referência.
+**Gabarito: D.** A expressão “a inscrição da aluna” identifica explicitamente a pessoa a quem a inscrição pertence. Trocar informou por comunicou mantém o possessivo ambíguo; dela e aquela não nomeiam a proprietária. Sua própria também não explicita, nessa construção, que a inscrição é da aluna.
 
 Revisor/data: pendentes.
 

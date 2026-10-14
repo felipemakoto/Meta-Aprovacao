@@ -270,3 +270,8 @@ Manter 500, revisar conteúdo concreto em vez de acrescentar variações. Increm
 ## Etapa 45 — conferência integral e nível estimado
 
 Distinguir revisão de conteúdo de mudança de dificuldade, preservando IDs e versões quando não há alteração editorial. Dificuldade por tarefa comparada qualitativamente a provas ETEC/IFSP, sem atribuir calibração estatística. Diversificar objetivos dentro das famílias e manter informação necessária ao comando. Contagens, notas e volumes incorretos continuam plausíveis dentro do domínio; situações impossíveis somente quando são o objeto explícito da análise. Transporte compacto usa SHA-256 de toda a projeção antes/depois para proteger também campos não enviados; nenhuma validação retirada para contornar o limite 413. Fonte completa e snapshot v4 preservados.
+
+
+## Etapa 46 — segunda leitura e preparação da revisão dos modelos
+
+Corrigir problemas concretos sem alterar artificialmente versões dos 433 registros preservados. Comandos de reescrita devem dizer se pedem equivalência, regência ou eliminação de ambiguidade; distratores não devem anunciar o próprio erro. Dados experimentais precisam permitir a comparação pedida. Preservar v5 e suas anotações; gerar v6 com nova identidade do catálogo. Roteiro dos seis modelos usa amostras estáticas explicitamente distintas de tentativas reais e da regra de sorteio; não atribui aprovação ou duração humana. Nenhuma publicação editorial, mudança na seleção de alunos ou liberação comercial nesta etapa.

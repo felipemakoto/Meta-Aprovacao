@@ -1,4 +1,4 @@
-# Revisão atual — Ciências — etapa 45
+# Revisão atual — Ciências — etapa 46
 
 Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
@@ -94,9 +94,9 @@ Revisor/data: pendentes.
 
 ## C06 — Fotossíntese e controle experimental
 
-ID: d1390000-0000-4000-8000-000000000004. Versão: 5. Dificuldade estimada: medium. Família: C6.
+ID: d1390000-0000-4000-8000-000000000004. Versão: 6. Dificuldade estimada: medium. Família: C6.
 
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática, com áreas foliares equivalentes e em condições semelhantes de saúde, são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Que comparação permite avaliar o efeito da intensidade luminosa mantendo as outras condições descritas?
 
@@ -274,9 +274,9 @@ Revisor/data: pendentes.
 
 ## C16 — Respiração celular e interpretação de medidas
 
-ID: d1390000-0000-4000-8000-000000000014. Versão: 4. Dificuldade estimada: medium. Família: C16.
+ID: d1390000-0000-4000-8000-000000000014. Versão: 5. Dificuldade estimada: medium. Família: C16.
 
-Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
+Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro, com iguais volumes de ar, umidade e temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Que inferência é compatível com a comparação entre os frascos?
 
@@ -310,9 +310,9 @@ Revisor/data: pendentes.
 
 ## C18 — Populações e limite de recursos
 
-ID: d1390000-0000-4000-8000-000000000016. Versão: 4. Dificuldade estimada: medium. Família: C18.
+ID: d1390000-0000-4000-8000-000000000016. Versão: 5. Dificuldade estimada: medium. Família: C18.
 
-Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. O cultivo permaneceu fechado, sem entrada ou saída de indivíduos.
 
 Que leitura distingue esse crescimento de uma duplicação indefinida?
 
@@ -346,9 +346,9 @@ Revisor/data: pendentes.
 
 ## C20 — Materiais, condução e isolamento
 
-ID: d1390000-0000-4000-8000-000000000018. Versão: 5. Dificuldade estimada: medium. Família: C20.
+ID: d1390000-0000-4000-8000-000000000018. Versão: 6. Dificuldade estimada: medium. Família: C20.
 
-Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas de mesma geometria, diferentes apenas no material de revestimento, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Por que a caixa revestida de espuma conserva mais gelo nas condições do experimento?
 
@@ -454,9 +454,9 @@ Revisor/data: pendentes.
 
 ## C26 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000026. Versão: 3. Dificuldade estimada: medium. Família: C6.
+ID: d1432000-0000-4000-8000-000000000026. Versão: 4. Dificuldade estimada: medium. Família: C6.
 
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática, com áreas foliares equivalentes e em condições semelhantes de saúde, são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Que interpretação é sustentada pela comparação entre A e C?
 
@@ -634,9 +634,9 @@ Revisor/data: pendentes.
 
 ## C36 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000036. Versão: 2. Dificuldade estimada: medium. Família: C16.
+ID: d1432000-0000-4000-8000-000000000036. Versão: 3. Dificuldade estimada: medium. Família: C16.
 
-Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
+Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro, com iguais volumes de ar, umidade e temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Qual redução relativa da concentração de oxigênio ocorre em A, tomando 21% como referência inicial?
 
@@ -670,9 +670,9 @@ Revisor/data: pendentes.
 
 ## C38 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000038. Versão: 2. Dificuldade estimada: easy. Família: C18.
+ID: d1432000-0000-4000-8000-000000000038. Versão: 3. Dificuldade estimada: easy. Família: C18.
 
-Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. O cultivo permaneceu fechado, sem entrada ou saída de indivíduos.
 
 Qual crescimento relativo ocorre de 200 para 320 indivíduos?
 
@@ -706,9 +706,9 @@ Revisor/data: pendentes.
 
 ## C40 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000040. Versão: 3. Dificuldade estimada: medium. Família: C20.
+ID: d1432000-0000-4000-8000-000000000040. Versão: 4. Dificuldade estimada: medium. Família: C20.
 
-Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas de mesma geometria, diferentes apenas no material de revestimento, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Qual variável deve permanecer comparável para atribuir a diferença ao revestimento?
 
@@ -814,9 +814,9 @@ Revisor/data: pendentes.
 
 ## C46 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000046. Versão: 3. Dificuldade estimada: medium. Família: C6.
+ID: d1432000-0000-4000-8000-000000000046. Versão: 4. Dificuldade estimada: medium. Família: C6.
 
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática, com áreas foliares equivalentes e em condições semelhantes de saúde, são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 A ausência de bolhas em D permite concluir o quê, sem extrapolar o indicador?
 
@@ -904,7 +904,7 @@ Revisor/data: pendentes.
 
 ## C51 — Diluição e concentração
 
-ID: d1432000-0000-4000-8000-000000000051. Versão: 2. Dificuldade estimada: medium. Família: C11.
+ID: d1432000-0000-4000-8000-000000000051. Versão: 3. Dificuldade estimada: medium. Família: C11.
 
 Uma solução homogênea contém 12 g de soluto em 600 mL. Retiram-se 150 mL, sem acrescentar água ou alterar o soluto.
 
@@ -913,7 +913,7 @@ Como fica a concentração da solução que permanece no frasco?
 - **A)** Permanece em 20 g/L, pois restam 9 g em 450 mL.
 - **B)** Sobe para 60 g/L, pois a retirada reverte a diluição anterior.
 - **C)** Sobe para 26,7 g/L, pois sai água, mas se considera que todo o soluto permanece.
-- **D)** Cai para 5 g/L, pois a porção retirada é confundida com a solução restante.
+- **D)** Cai para 5 g/L, pois passa a um quarto da concentração inicial.
 - **E)** Cai para 15 g/L, pois sai um quarto do soluto e o volume é considerado constante.
 
 **Gabarito: A.** Retirar 1/4 de uma solução homogênea retira a mesma fração de soluto e de volume. Restam 9 g em 0,450 L: 9/0,450 = 20 g/L. Transferir uma porção não concentra nem dilui a parte restante.
@@ -994,9 +994,9 @@ Revisor/data: pendentes.
 
 ## C56 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000056. Versão: 2. Dificuldade estimada: medium. Família: C16.
+ID: d1432000-0000-4000-8000-000000000056. Versão: 3. Dificuldade estimada: medium. Família: C16.
 
-Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
+Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro, com iguais volumes de ar, umidade e temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Por que o frasco B é relevante para a interpretação?
 
@@ -1030,9 +1030,9 @@ Revisor/data: pendentes.
 
 ## C58 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: medium. Família: C18.
+ID: d1432000-0000-4000-8000-000000000058. Versão: 3. Dificuldade estimada: medium. Família: C18.
 
-Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. O cultivo permaneceu fechado, sem entrada ou saída de indivíduos.
 
 Que mudança pode alterar o patamar próximo de 400?
 
@@ -1066,9 +1066,9 @@ Revisor/data: pendentes.
 
 ## C60 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000060. Versão: 3. Dificuldade estimada: medium. Família: C20.
+ID: d1432000-0000-4000-8000-000000000060. Versão: 4. Dificuldade estimada: medium. Família: C20.
 
-Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas de mesma geometria, diferentes apenas no material de revestimento, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Se o conteúdo estivesse quente e o ambiente frio, qual previsão sobre a espuma seria coerente?
 
@@ -1174,9 +1174,9 @@ Revisor/data: pendentes.
 
 ## C66 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000066. Versão: 3. Dificuldade estimada: easy. Família: C6.
+ID: d1432000-0000-4000-8000-000000000066. Versão: 4. Dificuldade estimada: easy. Família: C6.
 
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática, com áreas foliares equivalentes e em condições semelhantes de saúde, são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Qual razão entre as contagens de A e B resume o resultado, sem afirmar precisão sobre a massa de oxigênio?
 
@@ -1282,11 +1282,11 @@ Revisor/data: pendentes.
 
 ## C72 — Reação química e sistema fechado
 
-ID: d1432000-0000-4000-8000-000000000072. Versão: 2. Dificuldade estimada: medium. Família: C12.
+ID: d1432000-0000-4000-8000-000000000072. Versão: 3. Dificuldade estimada: medium. Família: C12.
 
-Um frasco fechado contém 5 g de bicarbonato e 25 g de solução ácida. Ao misturá-los, forma-se gás e o recipiente permanece vedado. A balança continua marcando 30 g de conteúdo. Em outro ensaio igual, o recipiente é aberto e parte do gás escapa, deixando 28 g de conteúdo medido.
+Ao misturar bicarbonato de sódio e solução ácida, uma análise identifica consumo de reagentes e formação de substâncias diferentes, incluindo gás carbônico. Em outro teste, apenas a água de uma solução evapora, sendo recuperada por condensação.
 
-Que característica permite distinguir a reação de uma simples mudança de estado no relato?
+Que critério distingue a reação química da mudança de estado nesses testes?
 
 - **A)** A conservação de massa acontece apenas em mudanças físicas.
 - **B)** Qualquer presença de gás demonstra necessariamente reação química.
@@ -1294,7 +1294,7 @@ Que característica permite distinguir a reação de uma simples mudança de est
 - **D)** Toda mudança de massa em balança é prova suficiente de reação.
 - **E)** O fato de usar um frasco fechado impede a formação de substâncias novas.
 
-**Gabarito: C.** Uma reação altera a composição das substâncias. Gás também pode aparecer por vaporização, portanto bolhas isoladas não bastam; o processo dos reagentes é relevante.
+**Gabarito: C.** A identificação de substâncias diferentes, associada ao consumo dos reagentes, caracteriza a transformação química. Na evaporação e condensação, a água muda de estado, preservando sua identidade química. Bolhas ou mudanças de massa isoladas não bastam para distinguir os processos.
 
 Revisor/data: pendentes.
 
@@ -1354,9 +1354,9 @@ Revisor/data: pendentes.
 
 ## C76 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000076. Versão: 2. Dificuldade estimada: medium. Família: C16.
+ID: d1432000-0000-4000-8000-000000000076. Versão: 3. Dificuldade estimada: medium. Família: C16.
 
-Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
+Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro, com iguais volumes de ar, umidade e temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Que resultado adicional seria coerente com respiração aeróbia no frasco A?
 
@@ -1390,17 +1390,17 @@ Revisor/data: pendentes.
 
 ## C78 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000078. Versão: 2. Dificuldade estimada: medium. Família: C18.
+ID: d1432000-0000-4000-8000-000000000078. Versão: 3. Dificuldade estimada: medium. Família: C18.
 
-Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. O cultivo permaneceu fechado, sem entrada ou saída de indivíduos.
 
 Qual resultado pode produzir estabilidade em torno de 400 mesmo com reprodução contínua?
 
 - **A)** Nascimentos e mortes aproximadamente equilibrados ao longo dos períodos.
-- **B)** Proibição de qualquer morte assim que o total atinge 400.
-- **C)** Duplicação seguida de ausência completa de mortalidade.
-- **D)** Transformação de todos os indivíduos em organismos não reprodutivos.
-- **E)** Entrada de novos indivíduos sem qualquer saída ou morte.
+- **B)** Aumento do alimento, que reduziria o patamar por diminuir a competição.
+- **C)** Mudança do intervalo de registro, sem alterar recursos nem interações.
+- **D)** Redução do espaço, que elevaria o patamar por aproximar os indivíduos.
+- **E)** Aumento apenas do número inicial, que tornaria ilimitados os recursos disponíveis.
 
 **Gabarito: A.** Um total estável pode refletir equilíbrio dinâmico de entradas e saídas. O gráfico de abundância, sozinho, não mostra os fluxos internos de nascimento e morte.
 
@@ -1426,9 +1426,9 @@ Revisor/data: pendentes.
 
 ## C80 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000080. Versão: 3. Dificuldade estimada: medium. Família: C20.
+ID: d1432000-0000-4000-8000-000000000080. Versão: 4. Dificuldade estimada: medium. Família: C20.
 
-Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas de mesma geometria, diferentes apenas no material de revestimento, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Que observação impediria concluir que B não recebeu calor durante o teste?
 
@@ -1534,9 +1534,9 @@ Revisor/data: pendentes.
 
 ## C86 — Fotossíntese e controle experimental
 
-ID: d1432000-0000-4000-8000-000000000086. Versão: 3. Dificuldade estimada: medium. Família: C6.
+ID: d1432000-0000-4000-8000-000000000086. Versão: 4. Dificuldade estimada: medium. Família: C6.
 
-Quatro ramos da mesma espécie aquática são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
+Quatro ramos da mesma espécie aquática, com áreas foliares equivalentes e em condições semelhantes de saúde, são mantidos em frascos com igual volume de água e temperatura. A recebe luz intensa; B, luz moderada; C, luz intensa com gás carbônico reduzido em relação aos demais; D fica no escuro. A, B e D têm a mesma concentração inicial de gás carbônico. Em uma hora, produzem respectivamente 40, 20, 12 e 0 bolhas observáveis. As bolhas são usadas apenas como indicador aproximado de liberação de oxigênio.
 
 Como melhorar a confiabilidade da conclusão sobre intensidade luminosa?
 
@@ -1714,9 +1714,9 @@ Revisor/data: pendentes.
 
 ## C96 — Respiração celular e interpretação de medidas
 
-ID: d1432000-0000-4000-8000-000000000096. Versão: 2. Dificuldade estimada: medium. Família: C16.
+ID: d1432000-0000-4000-8000-000000000096. Versão: 3. Dificuldade estimada: medium. Família: C16.
 
-Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro e na mesma temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
+Dois frascos com a mesma quantidade de sementes da mesma espécie são mantidos no escuro, com iguais volumes de ar, umidade e temperatura. A contém sementes em germinação; B, sementes previamente inativadas. A concentração de oxigênio em A cai de 21% para 18% no período observado, enquanto B permanece em 21%. Não há renovação do ar durante o teste.
 
 Se A estivesse aberto e recebesse ar continuamente, que dificuldade surgiria?
 
@@ -1750,17 +1750,17 @@ Revisor/data: pendentes.
 
 ## C98 — Populações e limite de recursos
 
-ID: d1432000-0000-4000-8000-000000000098. Versão: 2. Dificuldade estimada: medium. Família: C18.
+ID: d1432000-0000-4000-8000-000000000098. Versão: 3. Dificuldade estimada: medium. Família: C18.
 
-Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. Não houve entrada deliberada de indivíduos.
+Em um cultivo com espaço e alimento limitados, em intervalos de mesma duração, uma população passa de 100 para 200 indivíduos e depois para 320. No período seguinte chega a 380 e então se estabiliza perto de 400. O cultivo permaneceu fechado, sem entrada ou saída de indivíduos.
 
 Qual informação adicional ajuda a investigar o mecanismo da desaceleração?
 
 - **A)** Medir alimento disponível por indivíduo e taxas de nascimento e morte em cada intervalo.
-- **B)** Comparar somente o nome científico da espécie com o número 400.
-- **C)** Usar apenas o maior total observado como explicação suficiente.
-- **D)** Ordenar os períodos por quantidade, removendo a sequência temporal.
-- **E)** Registrar somente a cor do recipiente de cultivo.
+- **B)** Interrupção de todos os nascimentos, com manutenção da mortalidade.
+- **C)** Mortes persistentemente maiores que os nascimentos, sem outra mudança.
+- **D)** Ausência de mortes, com manutenção contínua dos nascimentos.
+- **E)** Nascimentos persistentemente maiores que as mortes, sem outra mudança.
 
 **Gabarito: A.** Recursos por indivíduo e taxas demográficas podem relacionar limitação ambiental ao crescimento. Reordenar períodos ou tomar um número como causa impede essa análise.
 
@@ -1786,9 +1786,9 @@ Revisor/data: pendentes.
 
 ## C100 — Materiais, condução e isolamento
 
-ID: d1432000-0000-4000-8000-000000000100. Versão: 3. Dificuldade estimada: easy. Família: C20.
+ID: d1432000-0000-4000-8000-000000000100. Versão: 4. Dificuldade estimada: easy. Família: C20.
 
-Duas caixas idênticas, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
+Duas caixas de mesma geometria, diferentes apenas no material de revestimento, com mesma quantidade de gelo e temperatura inicial de 0 °C, são colocadas em um ambiente a 25 °C. A é revestida de metal; B, de espuma isolante. A caixa B mantém mais gelo ao final.
 
 Se os dois conteúdos forem observados por tempo suficiente no mesmo ambiente, sem fontes ativas, o que se espera em termos de tendência térmica?
 

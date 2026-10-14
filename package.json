@@ -5,9 +5,9 @@
   "scripts": {
     "test:content:exam:sql": "node scripts/test-refined-bank-sql.mjs",
     "test:study:selection": "node scripts/test-study-selection.mjs",
-    "content:exam:build": "node scripts/build-exam-bank.mjs && node scripts/build-refined-bank-sql.mjs && node scripts/build-editorial-review.mjs && node scripts/build-editorial-audit.mjs",
-    "content:exam:check": "node scripts/build-exam-bank.mjs --check && node scripts/build-refined-bank-sql.mjs --check && node scripts/build-editorial-review.mjs --check && node scripts/build-editorial-audit.mjs --check",
-    "test:content:exam": "node --test tests/exam-bank.test.mjs tests/editorial-accuracy.test.mjs tests/editorial-notes.test.mjs tests/editorial-patch.test.mjs",
+    "content:exam:build": "node scripts/build-exam-bank.mjs && node scripts/build-refined-bank-sql.mjs && node scripts/build-editorial-review.mjs && node scripts/build-editorial-audit.mjs && node scripts/build-simulation-editorial-plan.mjs",
+    "content:exam:check": "node scripts/build-exam-bank.mjs --check && node scripts/build-refined-bank-sql.mjs --check && node scripts/build-editorial-review.mjs --check && node scripts/build-editorial-audit.mjs --check && node scripts/build-simulation-editorial-plan.mjs --check",
+    "test:content:exam": "node --test tests/exam-bank.test.mjs tests/editorial-accuracy.test.mjs tests/editorial-notes.test.mjs tests/editorial-patch.test.mjs tests/editorial-rereview.test.mjs",
     "content:review:report": "node scripts/receive-editorial-notes.mjs",
     "test:editorial:notes": "node --test tests/editorial-notes.test.mjs",
     "content:correction:build": "node scripts/build-refined-bank-sql.mjs",

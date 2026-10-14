@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { loadCatalog, root } from "../scripts/lib/editorial-content.mjs";
 import { number } from "../scripts/content/bank-utils.mjs";
 const catalog = loadCatalog();
-const previous = JSON.parse(readFileSync(new URL("content/catalogo-etapa-44.json", root), "utf8"));
+const previous = JSON.parse(readFileSync(new URL("content/catalogo-etapa-45.json", root), "utf8"));
 const approx = (a, b) => assert.ok(Math.abs(a - b) < 0.00001, `${a} ≠ ${b}`);
 test("500 rascunhos, IDs preservados e versões incrementadas somente para conteúdo modificado", () => {
   assert.equal(catalog.questions.length, 500);
@@ -33,7 +33,7 @@ test("500 rascunhos, IDs preservados e versões incrementadas somente para conte
 test("cálculos matemáticos mantidos satisfazem relações independentes e enumeração", () => {
   for (const q of catalog.questions.filter(q => q.subject === "matematica")) {
     const a = q.audit, r = a.result;
-    if (a.kind === "concept45" || a.kind === "inverse45") continue;
+    if (["concept45","inverse45","workStages46","workRate46"].includes(a.kind)) continue;
     assert.ok(q.options["ABCDE".indexOf(q.correctAnswer)].startsWith(number(r)));
     switch (a.kind) {
       case "fraction": approx((r - a.reserve) / 3, a.rest); break;

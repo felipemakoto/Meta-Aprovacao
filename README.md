@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização em 14/10/2026 — etapa 46: [segunda revisão das 500 questões](docs/REVISAO-ETAPA-46.md), com 67 correções e 433 registros preservados. Resolvidas ambiguidades em Português, contradição em M98, controles experimentais, comandos e distratores; dois problemas matemáticos e dez casos históricos substituídos. 26 testes e conferência do banco aprovados. Ferramenta/ZIP v6, v5 e anotações anteriores preservadas. Preparado [roteiro dos seis modelos](docs/CONFERENCIA-MODELOS-ETAPA-46.md). Conteúdo segue em rascunho, revisão humana pendente.
+
 Atualização em 13/10/2026 — etapa 45: [revisão integral das 500 questões](docs/REVISAO-INTEGRAL-ETAPA-45.md). Corrigidos C02/M06/M07 e variantes, enunciados C11/G01/G16, distratores e conceitos; tarefas diversificadas e dificuldade estimada individualmente (67 fáceis/411 médias/22 difíceis). 21 testes, carga atômica protegida e conferência das 500 questões aprovados. Ferramenta/ZIP v5 com filtro de dificuldade; v4 preservada. Conteúdo em rascunho, sem aprovação humana ou publicação.
 
 Atualização em 13/10/2026 — etapa 44: [revisão de qualidade](docs/QUALIDADE-QUESTOES-ETAPA-44.md) em 186 questões, mantendo o banco de 500. Enunciados sem soluções prontas, reescritas distintas e distratores plausíveis; erros de contexto corrigidos. Treze testes Node, ensaio SQL com nove rejeições, carga/verificação, lint e QA mobile aprovados. Ferramenta/ZIP v4; v3 preservada. Conteúdo segue em rascunho, revisão humana pendente, contratação bloqueada.

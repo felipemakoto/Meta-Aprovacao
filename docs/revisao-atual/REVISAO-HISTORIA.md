@@ -1,4 +1,4 @@
-# Revisão atual — História — etapa 45
+# Revisão atual — História — etapa 46
 
 Cem questões autorais, níveis easy/medium/hard estimados. Referências oficiais orientam competências e estilo; não são questões oficiais copiadas. Dados, textos e situações de atividade são fictícios. Classificação de dificuldade não é calibração por desempenho. Nenhuma aprovação humana ou publicação atribuída.
 
@@ -724,19 +724,19 @@ Revisor/data: pendentes.
 
 ## H41 — Agricultura, sedentarização e diversidade
 
-ID: d1433000-0000-4000-8000-000000000041. Versão: 2. Dificuldade estimada: medium. Família: H1.
+ID: d1433000-0000-4000-8000-000000000041. Versão: 3. Dificuldade estimada: medium. Família: H1.
 
-Em diferentes regiões, grupos humanos adotaram agricultura e criação de animais em épocas distintas. Há vestígios de armazenamento, assentamentos e coexistência dessas atividades com caça e coleta.
+Em uma escavação fictícia, um recipiente isolado contém grãos. Em outra área do mesmo sítio e período, encontram-se instrumentos com marcas de corte de cereais e restos de estruturas de armazenamento.
 
-Um recipiente com restos de grãos, encontrado isoladamente, permite qual conclusão mais prudente?
+Que diferença existe entre as duas bases de evidência para estudar o cultivo?
 
-- **A)** Houve contato com grãos; cultivo local e forma de organização exigem outros vestígios.
-- **B)** A sociedade já possuía necessariamente escrita e Estado centralizado.
-- **C)** O objeto comprova ausência de comércio entre regiões.
-- **D)** Os grãos provam que o grupo desconhecia alimentos de origem animal.
-- **E)** Todos os habitantes eram agricultores especializados.
+- **A)** O conjunto de vestígios fortalece a hipótese de produção e armazenamento locais, que o recipiente isolado não demonstrava.
+- **B)** A presença de armazenamento exclui a circulação de grãos por troca entre grupos.
+- **C)** As marcas de corte permitem concluir que todos os habitantes trabalhavam exclusivamente no cultivo.
+- **D)** Os dois conjuntos demonstram a mesma organização social, pois ambos contêm grãos.
+- **E)** O recipiente isolado permite datar o início do cultivo com mais precisão que o conjunto contextualizado.
 
-**Gabarito: A.** Um vestígio isolado não distingue cultivo local, coleta, troca ou múltiplas funções. A interpretação precisa de contexto e associação a outras evidências.
+**Gabarito: A.** Restos associados no espaço e no período permitem relacionar processamento e armazenamento, fortalecendo uma hipótese que um objeto isolado não demonstra. Isso não estabelece exclusividade agrícola, igualdade social nem ausência de trocas.
 
 Revisor/data: pendentes.
 
@@ -760,19 +760,19 @@ Revisor/data: pendentes.
 
 ## H43 — Roma, expansão e conflitos sociais
 
-ID: d1433000-0000-4000-8000-000000000043. Versão: 2. Dificuldade estimada: medium. Família: H3.
+ID: d1433000-0000-4000-8000-000000000043. Versão: 3. Dificuldade estimada: medium. Família: H3.
 
-A expansão romana ampliou terras conquistadas e o uso de trabalho escravizado. A distribuição de terras e a participação política provocaram conflitos na República e na formação do poder imperial.
+Em um exercício sobre a República romana, dois registros descrevem o mesmo território após conquistas: grandes proprietários ampliam suas terras e empregam mais pessoas escravizadas; pequenos produtores endividados perdem lotes durante ausências militares prolongadas.
 
-Um relato de vitória militar basta para comprovar melhoria de vida de todos os habitantes?
+Como os registros ajudam a explicar tensões internas ligadas à expansão?
 
-- **A)** Sim, pois vitória implica igualdade econômica.
-- **B)** Não; é preciso investigar distribuição de recursos, tributação e formas de trabalho.
-- **C)** Sim, porque relatos militares descrevem necessariamente todos os grupos.
-- **D)** Não, porque conquistas nunca produziram riqueza.
-- **E)** Sim, se o autor do relato ocupava um cargo de comando.
+- **A)** O aumento de terras controladas por grandes proprietários demonstra que todos os pequenos produtores receberam lotes equivalentes.
+- **B)** Os recursos das conquistas e as condições do serviço militar podiam beneficiar e prejudicar grupos diferentes.
+- **C)** O emprego de pessoas escravizadas indica que os proprietários deixaram de disputar terras.
+- **D)** As perdas dos pequenos produtores significam que não houve ampliação territorial romana.
+- **E)** A participação em campanhas militares garantia a conservação da propriedade dos combatentes.
 
-**Gabarito: B.** Um relato de vitória tem recorte e perspectiva. A experiência dos grupos depende de recursos, custos e posições sociais que não são comprovados pela celebração militar.
+**Gabarito: B.** A expansão territorial e a distribuição interna de seus efeitos são dimensões diferentes. Os registros combinam concentração de terras com vulnerabilidade dos pequenos produtores; não indicam divisão igual dos ganhos nem segurança automática da propriedade de soldados.
 
 Revisor/data: pendentes.
 
@@ -796,37 +796,37 @@ Revisor/data: pendentes.
 
 ## H45 — Renascimento e circulação de conhecimento
 
-ID: d1433000-0000-4000-8000-000000000045. Versão: 2. Dificuldade estimada: medium. Família: H5.
+ID: d1433000-0000-4000-8000-000000000045. Versão: 3. Dificuldade estimada: medium. Família: H5.
 
-Artistas e estudiosos do Renascimento retomaram referências clássicas e desenvolveram técnicas de representação e investigação. Instituições religiosas e governantes estavam entre seus patronos. A imprensa ampliou a circulação de textos.
+Uma atividade apresenta duas edições fictícias de uma gravura do século XVI. Ambas usam a mesma imagem, mas as legendas atribuem sentidos opostos à cena. O impressor e o público de destino também mudaram entre as edições.
 
-Uma pintura que emprega perspectiva permite investigar qual dimensão de mudança?
+Qual interpretação considera a relação entre técnica de reprodução e circulação de ideias?
 
-- **A)** A existência de um único estilo em toda a Europa.
-- **B)** A eliminação completa de relações sociais desiguais.
-- **C)** O fim de toda religiosidade entre os artistas.
-- **D)** A distribuição universal de livros pela imprensa.
-- **E)** Técnicas de representação do espaço e escolhas artísticas em seu contexto.
+- **A)** O significado da gravura depende apenas do desenho, tornando as legendas dispensáveis à análise.
+- **B)** O emprego da mesma imagem comprova que as duas edições se destinavam ao mesmo público.
+- **C)** As legendas opostas demonstram que as imagens não podiam ser reproduzidas por impressão.
+- **D)** A mudança de impressor basta para concluir que uma das edições foi produzida antes da invenção da imprensa.
+- **E)** Reproduzir a mesma imagem não assegura a mesma mensagem, pois legenda e contexto de circulação orientam sua leitura.
 
-**Gabarito: E.** Uma técnica visual pode ser evidência de escolhas artísticas e intelectuais. Não demonstra, sozinha, transformações universais em religião, acesso ou organização social.
+**Gabarito: E.** A reprodução permite reutilizar uma imagem em contextos distintos. Legendas, autoria editorial e destinatários integram o material analisado e podem alterar a mensagem. Identidade visual não comprova identidade de público ou intenção.
 
 Revisor/data: pendentes.
 
 ## H46 — Reformas religiosas e poder político
 
-ID: d1433000-0000-4000-8000-000000000046. Versão: 2. Dificuldade estimada: medium. Família: H6.
+ID: d1433000-0000-4000-8000-000000000046. Versão: 3. Dificuldade estimada: medium. Família: H6.
 
-No século XVI, correntes reformadoras questionaram a autoridade e práticas da Igreja católica. Governantes tomaram posições nos conflitos. A Igreja católica reafirmou doutrinas e promoveu mudanças internas.
+Em uma atividade sobre as reformas religiosas do século XVI, dois textos didáticos fictícios defendem posições diferentes. O texto A apresenta as Escrituras como autoridade suficiente para a doutrina; o B também reconhece a tradição e a autoridade da Igreja.
 
-Qual comparação evita tratar a reação católica como mera imobilidade?
+Qual aspecto do conflito os textos permitem comparar diretamente?
 
-- **A)** Toda mudança interna equivale a adotar a mesma corrente protestante.
-- **B)** Reafirmar princípios significa ausência de qualquer reforma interna.
-- **C)** A reação eliminou toda doutrina católica.
-- **D)** A existência da reação comprova desaparecimento imediato da Igreja.
-- **E)** Houve reafirmação de princípios e mudanças em práticas e organização interna.
+- **A)** A decisão de ambos os autores de abandonar qualquer texto religioso.
+- **B)** A ausência de divergências doutrinárias, pois ambos mencionam as Escrituras.
+- **C)** A identidade de posição entre os autores quanto ao papel da tradição.
+- **D)** O apoio dos dois autores ao mesmo governante, deduzido apenas das referências às Escrituras.
+- **E)** Os critérios usados para reconhecer a autoridade religiosa e fundamentar a doutrina.
 
-**Gabarito: E.** Mudança e continuidade podem coexistir. Reafirmação doutrinária não exclui respostas organizacionais e disciplinares, nem implica abandono de identidade religiosa.
+**Gabarito: E.** Os textos diferem nas fontes de autoridade que reconhecem. Compartilhar uma referência não elimina a divergência sobre a tradição e a Igreja. Não foram apresentados dados que identifiquem alianças políticas ou permitam atribuir essas posições a todas as correntes reformadoras.
 
 Revisor/data: pendentes.
 
@@ -850,37 +850,37 @@ Revisor/data: pendentes.
 
 ## H48 — Economia açucareira e trabalho
 
-ID: d1433000-0000-4000-8000-000000000048. Versão: 2. Dificuldade estimada: medium. Família: H8.
+ID: d1433000-0000-4000-8000-000000000048. Versão: 3. Dificuldade estimada: medium. Família: H8.
 
-Na América portuguesa, engenhos articulavam cultivo, processamento do açúcar, comércio atlântico e trabalho escravizado. Produtores de alimentos e outros bens abasteciam essas unidades e as populações locais.
+Para estudar um engenho colonial, uma atividade cruza dois registros fictícios do mesmo ano: a contabilidade aponta aumento das vendas de açúcar; uma ordem administrativa restringe deslocamentos de trabalhadores escravizados e prevê punições.
 
-Por que um registro de produção de um proprietário não descreve integralmente a experiência dos trabalhadores?
+Que leitura articula os registros sem confundir produção com condições de trabalho?
 
-- **A)** Seu foco e posição social podem omitir coerção, cotidiano e formas de resistência.
-- **B)** Um proprietário representa a voz de todos os grupos de forma neutra.
-- **C)** Todo registro contábil é obrigatoriamente falso e inútil.
-- **D)** A existência de contas comprova ausência de trabalho coercitivo.
-- **E)** A quantidade produzida revela automaticamente direitos e condições de cada pessoa.
+- **A)** O crescimento das vendas podia coexistir com coerção, e a contabilidade sozinha não descreve a experiência dos trabalhadores.
+- **B)** A ordem de punição permite calcular o valor exportado sem consultar a contabilidade.
+- **C)** O aumento das vendas demonstra que as restrições aos trabalhadores deixaram de ser aplicadas.
+- **D)** As vendas elevadas comprovam que os trabalhadores recebiam a receita na mesma proporção que o proprietário.
+- **E)** A presença de uma ordem escrita transforma o trabalho escravizado em contrato livre.
 
-**Gabarito: A.** Registros contábeis informam aspectos da produção, mas não abrangem todas as experiências. É preciso confrontá-los com fontes de outras posições e com o contexto das relações de trabalho.
+**Gabarito: A.** Os registros tratam de aspectos diferentes e compatíveis: circulação de mercadorias e controle do trabalho. Receita não mede liberdade, remuneração ou distribuição. A ordem pode informar práticas de coerção, mas não substitui os dados de vendas.
 
 Revisor/data: pendentes.
 
 ## H49 — Mineração, fiscalidade e interiorização
 
-ID: d1433000-0000-4000-8000-000000000049. Versão: 2. Dificuldade estimada: medium. Família: H9.
+ID: d1433000-0000-4000-8000-000000000049. Versão: 3. Dificuldade estimada: medium. Família: H9.
 
-A mineração na América portuguesa ampliou a circulação no interior. A Coroa tributava e fiscalizava a extração. As zonas mineradoras também mantinham relações com produtores de alimentos e comerciantes.
+Em uma atividade sobre uma zona mineradora colonial, um registro fictício mostra aumento do ouro extraído e outro registra aumento do preço da farinha no mesmo período. Não há dados de salários, estoques ou número de moradores.
 
-Que informação complementa um registro de metal exportado para estudar efeitos locais?
+Qual conclusão respeita o alcance das duas informações?
 
-- **A)** Dados sobre abastecimento, circulação de pessoas, preços e condições de trabalho.
-- **B)** O total exportado tomado como medida direta do bem-estar de todos.
-- **C)** Uma soma do metal sem localização ou período.
-- **D)** A exclusão das atividades não extrativas dos registros de pesquisa.
-- **E)** Somente a cor das moedas cunhadas na metrópole.
+- **A)** A expansão da extração coexistiu com encarecimento do abastecimento, sem comprovar melhoria de vida de todos os grupos.
+- **B)** Os dois aumentos permitem calcular exatamente o salário real dos trabalhadores.
+- **C)** A alta da farinha comprova que a região deixou de produzir qualquer alimento.
+- **D)** A coincidência temporal demonstra que os tributos foram a única causa do encarecimento da farinha.
+- **E)** A alta do ouro demonstra que a renda de todos cresceu mais que o preço da farinha.
 
-**Gabarito: A.** Os efeitos locais incluem vida material, trabalho e redes comerciais. Exportação é um indicador parcial; outras atividades e condições são necessárias à análise social.
+**Gabarito: A.** As duas séries descrevem mudanças de extração e de preço. Sem renda, oferta e demanda, não se calcula poder de compra nem se isola uma causa do encarecimento. Expansão econômica agregada não demonstra benefício uniforme.
 
 Revisor/data: pendentes.
 
@@ -904,19 +904,19 @@ Revisor/data: pendentes.
 
 ## H51 — Industrialização e organização do trabalho
 
-ID: d1433000-0000-4000-8000-000000000051. Versão: 2. Dificuldade estimada: medium. Família: H11.
+ID: d1433000-0000-4000-8000-000000000051. Versão: 3. Dificuldade estimada: medium. Família: H11.
 
-A industrialização ampliou o uso de máquinas e reuniu trabalhadores em fábricas. Horários, jornadas e salários eram organizados sob direção dos proprietários e provocavam conflitos com os trabalhadores.
+Uma fábrica fictícia do período de industrialização tem cem trabalhadores. Antes, produzia mil peças por dia em jornadas de dez horas; depois, passou a produzir mil e quinhentas em jornadas de doze horas. O quadro de trabalhadores ficou igual e não há dados de salários.
 
-Um registro de produção elevada basta para comprovar melhoria das condições dos trabalhadores?
+Que comparação distingue aumento de produção e condições de trabalho?
 
-- **A)** Sim, pois produtividade equivale a bem-estar em qualquer sociedade.
-- **B)** Sim, porque máquinas impedem acidentes por definição.
-- **C)** Sim, desde que o proprietário comemore o resultado.
-- **D)** Não, porque registros produtivos nunca oferecem informação histórica.
-- **E)** Não; salários, jornada, segurança e distribuição dos ganhos precisam ser examinados.
+- **A)** A produção diária e a jornada cresceram na mesma proporção, de 50%.
+- **B)** O aumento da jornada explica integralmente a alta de produção, mantendo a produção por hora exatamente igual.
+- **C)** A produção maior demonstra que a jornada individual foi reduzida pela metade.
+- **D)** A manutenção do número de trabalhadores comprova que o salário de cada um cresceu 50%.
+- **E)** A produção diária cresceu 50% e a jornada, 20%; esses dados não demonstram aumento de salário ou de tempo livre.
 
-**Gabarito: E.** Registros produtivos têm valor, mas seu indicador não abrange toda experiência do trabalho. É preciso estudar condições materiais e sociais para avaliar benefícios e custos.
+**Gabarito: E.** A produção passou de 1.000 a 1.500: aumento de 50%. A jornada passou de 10 a 12 horas: aumento de 20%. Com o mesmo quadro, a produção por trabalhador-hora também cresceu, de 1 para 1,25 peça. Nenhum desses resultados informa salário ou redução da jornada.
 
 Revisor/data: pendentes.
 
@@ -940,19 +940,19 @@ Revisor/data: pendentes.
 
 ## H53 — Independências nas Américas
 
-ID: d1433000-0000-4000-8000-000000000053. Versão: 2. Dificuldade estimada: medium. Família: H13.
+ID: d1433000-0000-4000-8000-000000000053. Versão: 3. Dificuldade estimada: medium. Família: H13.
 
-Nas independências americanas, grupos disputaram a ruptura com autoridades metropolitanas e a organização do novo governo. Propriedade, trabalho e participação política variaram entre os processos.
+Dois projetos fictícios de um movimento de independência defendem romper com a metrópole. O projeto A mantém a exigência de renda para votar; o B propõe ampliar a participação para homens livres sem essa exigência. Ambos preservam a concentração de terras.
 
-Um discurso de uma elite independentista pode ser usado de que modo?
+Qual comparação distingue consenso pela ruptura e divergências sobre o novo Estado?
 
-- **A)** Como expressão de um projeto, a ser confrontado com outras vozes e práticas.
-- **B)** Como substituto suficiente de toda análise das relações sociais.
-- **C)** Como registro sem interesses por apoiar a independência.
-- **D)** Como demonstração de que apenas elites participaram do processo.
-- **E)** Como prova de que todos os habitantes concordavam com o autor.
+- **A)** A defesa comum da independência coexistia com projetos distintos de participação política e uma continuidade na propriedade.
+- **B)** A manutenção das grandes propriedades significa que nenhum dos projetos defendia ruptura política.
+- **C)** A proposta B estabelece participação política de todos os habitantes, sem qualquer exclusão.
+- **D)** A proposta A prevê distribuição de terras porque exige renda para votar.
+- **E)** A mesma posição sobre a metrópole implica propostas idênticas de cidadania.
 
-**Gabarito: A.** Discursos expressam posições e finalidades. Sua relevância não lhes confere representatividade universal nem prova ausência de ação de outros grupos.
+**Gabarito: A.** O ponto comum é romper o vínculo metropolitano, não adotar a mesma cidadania. B amplia o grupo proposto em relação a A, mas ainda o limita a homens livres. Ambos mantêm a concentração de terras, permitindo distinguir dimensões da mudança.
 
 Revisor/data: pendentes.
 
@@ -994,19 +994,19 @@ Revisor/data: pendentes.
 
 ## H56 — Abolição e cidadania no pós-emancipação
 
-ID: d1433000-0000-4000-8000-000000000056. Versão: 2. Dificuldade estimada: medium. Família: H16.
+ID: d1433000-0000-4000-8000-000000000056. Versão: 3. Dificuldade estimada: medium. Família: H16.
 
-A escravidão foi abolida legalmente no Brasil em 1888, após resistências, mobilizações e disputas políticas. Trabalhadores emancipados continuaram disputando acesso a terra, trabalho, renda e direitos.
+Uma atividade sobre o Brasil após 1888 compara dois registros fictícios de 1890: um contrato prevê salário para uma pessoa emancipada; uma petição de trabalhadores reclama de barreiras ao acesso à escola e à moradia. Não há informação sobre distribuição de terras.
 
-Que fonte ajuda a estudar experiência social após a abolição além da lei?
+Que análise considera conjuntamente os registros?
 
-- **A)** O nome de uma cidade usado como substituto de condições de vida.
-- **B)** Somente uma reprodução da assinatura da lei.
-- **C)** Registros de trabalho, associações, moradia e relatos de pessoas emancipadas.
-- **D)** Um retrato de autoridade tomado como descrição da renda dos libertos.
-- **E)** A data de 1888 usada como prova de igualdade de oportunidades.
+- **A)** A referência a direitos na petição demonstra que as reivindicações já haviam sido integralmente atendidas.
+- **B)** O contrato assalariado demonstra que todos os emancipados receberam terras.
+- **C)** A mudança jurídica e o trabalho remunerado podiam coexistir com desigualdades no acesso a direitos e condições de vida.
+- **D)** A petição comprova que a lei de abolição manteve juridicamente a escravidão.
+- **E)** O contrato permite concluir que não existiam barreiras sociais para quem recebia salário.
 
-**Gabarito: C.** A lei define uma alteração jurídica. Experiências posteriores exigem fontes sobre vida, recursos, vínculos e ações dos grupos, não apenas o texto normativo.
+**Gabarito: C.** O contrato indica uma relação remunerada, enquanto a petição registra reivindicações sociais não resolvidas. Liberdade jurídica não implica acesso igual a escola e moradia. Os documentos não demonstram distribuição de terras nem manutenção legal da escravidão.
 
 Revisor/data: pendentes.
 
@@ -1030,19 +1030,19 @@ Revisor/data: pendentes.
 
 ## H58 — Primeira Guerra e múltiplas causas
 
-ID: d1433000-0000-4000-8000-000000000058. Versão: 2. Dificuldade estimada: medium. Família: H18.
+ID: d1433000-0000-4000-8000-000000000058. Versão: 3. Dificuldade estimada: medium. Família: H18.
 
-Em 1914, o atentado contra o herdeiro do Império Austro-Húngaro ocorreu num contexto de alianças, nacionalismos e rivalidades imperialistas. A guerra envolveu mobilização industrial e social, trincheiras e impactos sobre civis.
+Uma atividade reúne duas cartas fictícias do mesmo soldado na Primeira Guerra: em 1914, ele espera voltar para casa em poucas semanas; em 1916, descreve o prolongamento do combate e dificuldades de abastecimento.
 
-Um relato de soldado de trincheira permite qual uso histórico?
+Como interpretar a diferença entre os dois relatos?
 
-- **A)** Eliminar a necessidade de contexto por ser testemunho pessoal.
-- **B)** Descrever automaticamente a experiência de todos os civis.
-- **C)** Reconstruir com certeza todos os acontecimentos de todas as frentes.
-- **D)** Investigar experiência localizada da guerra, confrontando-a com outras fontes e recortes.
-- **E)** Ignorar o testemunho porque fontes pessoais não informam experiências.
+- **A)** As dificuldades relatadas em 1916 demonstram que já eram conhecidas com a mesma intensidade em 1914.
+- **B)** A carta de 1916 invalida a de 1914 como fonte, porque expectativas não podem ser estudadas historicamente.
+- **C)** A expectativa de retorno rápido comprova que a guerra terminou em 1914 para todos os países.
+- **D)** Ela permite comparar uma expectativa inicial com uma experiência posterior, sem transformar a primeira expectativa em descrição do desfecho.
+- **E)** A autoria comum garante que os relatos descrevem todas as frentes da guerra e todas as experiências civis.
 
-**Gabarito: D.** Testemunhos oferecem acesso a experiências e perspectivas específicas. Sua abrangência é limitada; comparação e contexto não anulam seu valor, mas delimitam interpretações.
+**Gabarito: D.** Uma fonte pode registrar expectativas que não se concretizam. A passagem do tempo e o prolongamento do combate ajudam a interpretar a mudança de perspectiva. A autoria comum não torna o testemunho universal nem permite ler o futuro como se fosse conhecido em 1914.
 
 Revisor/data: pendentes.
 
@@ -1684,9 +1684,11 @@ Revisor/data: pendentes.
 
 ## H96 — Abolição e cidadania no pós-emancipação
 
-ID: d1433000-0000-4000-8000-000000000096. Versão: 2. Dificuldade estimada: medium. Família: H16.
+ID: d1433000-0000-4000-8000-000000000096. Versão: 3. Dificuldade estimada: medium. Família: H16.
 
-A Lei Áurea aboliu a escravidão em 1888. Qual informação não pode ser deduzida apenas desse marco legal?
+Uma linha do tempo indica a independência brasileira em 1822, a abolição legal da escravidão em 1888 e a proclamação da República em 1889.
+
+Qual afirmação NÃO é sustentada por esses marcos?
 
 - **A)** Que a abolição ocorreu antes da proclamação da República.
 - **B)** Que todas as pessoas emancipadas receberam terras e passaram a ter a mesma renda.
@@ -1694,7 +1696,7 @@ A Lei Áurea aboliu a escravidão em 1888. Qual informação não pode ser deduz
 - **D)** Que o marco legal é posterior à independência de 1822.
 - **E)** Que 1888 pertence ao período imperial brasileiro.
 
-**Gabarito: B.** A lei extingue a escravidão como condição jurídica. Ela não comprova distribuição universal de terras ou igualdade de renda. As outras informações decorrem do marco legal e da cronologia indicada da história brasileira.
+**Gabarito: B.** A cronologia situa 1888 após a independência e antes da República, ainda no Império. A abolição extinguiu a condição legal de escravidão, mas esses marcos não demonstram distribuição de terras nem igualdade de renda. Para estudar essas condições, são necessárias outras evidências.
 
 Revisor/data: pendentes.
 

@@ -1,0 +1,54 @@
+{
+  "capturedOn": "2026-10-14",
+  "source": "Consulta somente leitura: id, title, question_count, subject, published, free_access de private.simulations.",
+  "models": [
+    {
+      "free_access": true,
+      "id": "5af6bbbe-eb67-4b0a-bf31-3bb3907ababb",
+      "published": false,
+      "question_count": 10,
+      "subject": null,
+      "title": "Simulado rápido"
+    },
+    {
+      "free_access": false,
+      "id": "d1391000-0000-4000-8000-000000000001",
+      "published": false,
+      "question_count": 20,
+      "subject": "ciencias",
+      "title": "Ciências"
+    },
+    {
+      "free_access": false,
+      "id": "d1395000-0000-4000-8000-000000000001",
+      "published": false,
+      "question_count": 20,
+      "subject": "geografia",
+      "title": "Geografia"
+    },
+    {
+      "free_access": false,
+      "id": "d1393000-0000-4000-8000-000000000001",
+      "published": false,
+      "question_count": 20,
+      "subject": "historia",
+      "title": "História"
+    },
+    {
+      "free_access": false,
+      "id": "69747020-28a5-448a-a0f3-51464708e46e",
+      "published": false,
+      "question_count": 20,
+      "subject": "matematica",
+      "title": "Matemática"
+    },
+    {
+      "free_access": false,
+      "id": "d1381000-0000-4000-8000-000000000001",
+      "published": false,
+      "question_count": 20,
+      "subject": "portugues",
+      "title": "Português"
+    }
+  ]
+}

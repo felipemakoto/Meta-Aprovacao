@@ -52,7 +52,8 @@ test('24 novas tarefas matemáticas satisfazem equações independentes e cobrem
  }
  const math=catalog.questions.filter(q=>q.subject==='matematica');
  assert.equal(math.filter(q=>q.audit.kind==='concept45').length,20);
- assert.equal(math.filter(q=>!['concept45','inverse45'].includes(q.audit.kind)).length,56);
+ assert.equal(math.filter(q=>!['concept45','inverse45','workStages46','workRate46'].includes(q.audit.kind)).length,54);
+ assert.equal(math.filter(q=>['workStages46','workRate46'].includes(q.audit.kind)).length,2);
 });
 
 test('distratores numéricos respeitam contagens inteiras, escala de notas e capacidade',()=>{
@@ -151,7 +152,7 @@ test('revisão de dificuldade cobre as 500 tarefas, com fundamento e sem aprova�
   assert.ok(['easy','medium','hard'].includes(q.difficulty));
   assert.ok(q.difficultyReview.skill.trim());
   assert.match(q.difficultyReview.method,/sem dados de desempenho/);
-  assert.equal(q.difficultyReview.reviewedOn,'2026-10-13');
+  assert.ok(['2026-10-13','2026-10-14'].includes(q.difficultyReview.reviewedOn));
   assert.equal(q.status,'draft');
  }
  for(const q of catalog.questions.filter(q=>q.family==='M16'))assert.equal(new Set(q.options).size,5);
