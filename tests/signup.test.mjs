@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import { NextRequest } from 'next/server.js';
 import { parseSignup } from '../src/lib/auth/signup-contract.ts';
 import { createSignupHandlers } from '../src/lib/auth/signup-http.ts';
+import {legalDocuments} from '../src/lib/auth/legal-documents.ts';
 const origin = 'https://estudos.example';
-const input = {email:'aluno@example.test', password:'apenas-teste-123',confirmPassword:'apenas-teste-123'};
+const input = {email:'aluno@example.test', password:'apenas-teste-123',confirmPassword:'apenas-teste-123',acceptedLegal:true,legalVersion:legalDocuments.version};
 const req = (body=input,headers={},query='') => new NextRequest(origin+'/api/auth/signup'+query,{method:'POST',headers:{origin,'content-type':'application/json',...headers},body:typeof body==='string'?body:JSON.stringify(body)});
 const handlers = (overrides={},settings={secure:true,origin}) => createSignupHandlers({signedIn:async()=>false,signup:async()=>({error:null,confirmed:false}),exchange:async()=>true,...overrides},settings);
 
@@ -16,8 +17,20 @@ test('cadastro não devolve identidade, senha ou sessão e destino é fixo',asyn
  let received;
  const r=await handlers({signup:async value=>{received=value;return {error:null,confirmed:false,user:{id:'private'},session:{access_token:'secret'}};}}).POST(req());
  assert.equal(r.status,202); assert.deepEqual(await r.json(),{status:'check_email'});
- assert.deepEqual(received,{email:input.email,password:input.password,redirectTo:origin+'/auth/confirm'});
+ assert.deepEqual(received,{email:input.email,password:input.password,redirectTo:origin+'/auth/confirm',agreement:{version:legalDocuments.version,terms_accepted:true,privacy_acknowledged:true,accepted_at:received.agreement.accepted_at}});
+ assert.ok(Math.abs(Date.now()-Date.parse(received.agreement.accepted_at))<5000);
  assert.match(r.headers.get('cache-control'),/private.*no-store/);
+});
+test('concordância explícita e versão atual são obrigatórias, inclusive no servidor',async()=>{
+ const h=handlers({signup:async()=>assert.fail('cadastro sem concordância')});
+ for(const value of [undefined,false,'true',1,null]) {
+   const candidate={...input,acceptedLegal:value};
+   assert.equal(parseSignup(candidate),null);
+   assert.equal((await h.POST(req(candidate))).status,400);
+ }
+ for(const extra of [{legalVersion:'anterior'},{legalVersion:undefined},{accepted_at:'2000-01-01T00:00:00Z'},{legal_acceptance:{terms_accepted:true}}]) {
+   assert.equal((await h.POST(req({...input,...extra}))).status,400);
+ }
 });
 test('origens inseguras, CSRF e origem ausente não chamam serviço',async()=>{
  const deps={signup:async()=>assert.fail('chamada indevida')};

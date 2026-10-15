@@ -1,4 +1,4 @@
-import { validateSignup } from "./signup-contract.ts";
+import { validateAccountCredentials } from "./signup-contract.ts";
 export function parseRecoveryEmail(value: unknown): string | null {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
   const input = value as Record<string, unknown>;
@@ -10,7 +10,7 @@ export function parseNewPassword(value: unknown): string | null {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
   const input = value as Record<string, unknown>;
   if (Object.keys(input).length !== 2 || typeof input.password !== "string" || typeof input.confirmPassword !== "string") return null;
-  const errors = validateSignup({email:"validation@example.test",password:input.password,confirmPassword:input.confirmPassword});
+  const errors = validateAccountCredentials({email:"validation@example.test",password:input.password,confirmPassword:input.confirmPassword});
   return Object.keys(errors).length ? null : input.password;
 }
 // Apply only to claims returned by Supabase getClaims (signature verified), never decoded input.

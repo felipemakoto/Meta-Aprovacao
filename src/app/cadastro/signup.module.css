@@ -5,7 +5,10 @@
 .title { font-family: var(--font-display), Georgia, serif; font-weight: 400; font-size: clamp(34px, 8vw, 44px); line-height: 1.15; letter-spacing: -.5px; margin: 0; }
 .title:focus { outline: none; }
 .subtitle { font-size: 17px; line-height: 1.5; color: var(--color-text-secondary); margin: 12px 0 24px; }
-.panel { padding: 0; margin: 24px 0 0; }
+.panel { padding: 26px; margin: 24px 0 0; border: 1px solid #d8e1d5; border-radius: 18px; background: var(--control-surface); box-shadow: 0 8px 30px #174d3806; }
+.benefits { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: -8px 0 24px; padding: 0; list-style: none; color: var(--color-text-secondary); font-size: 13px; }
+.benefits li { display: flex; align-items: center; gap: 7px; }
+.benefits li::before { content: ""; width: 6px; height: 6px; background: #6c8a61; border-radius: 50%; }
 .panel > p { line-height: 1.6; margin: 0 0 16px; }
 .panel > p:last-child { margin-bottom: 0; }
 .fields { border: 0; padding: 0; margin: 0; min-width: 0; }
@@ -20,6 +23,14 @@
 .password button:hover { background: #dce8d9; }
 .help, .fieldError { font-size: 13px; line-height: 1.45; margin: 7px 0 0; color: var(--color-text-secondary); }
 .fieldError { color: #913624; }
+.agreement { margin-top: 4px; padding: 14px; border: 1px solid #dce2d1; border-radius: 10px; background: #f3f5eb; }
+.agreementLabel { display: flex; gap: 12px; align-items: flex-start; min-height: 48px; font-size: 13px; line-height: 1.7; cursor: pointer; }
+.agreementLabel input { flex: 0 0 22px; width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--color-action); cursor: pointer; }
+.agreementLabel a { color: var(--color-action); font-weight: 600; text-decoration: underline; text-decoration-color: #8b9e85; text-underline-offset: 3px; }
+.agreementLabel a:hover { text-decoration-color: var(--color-action); }
+.agreementInvalid { border-color: #a33a28; }
+.confirmationNote { display: flex; justify-content: center; align-items: center; gap: 7px; color: var(--color-text-secondary); font-size: 12px; line-height: 1.6; margin: 17px 0 0; }
+.confirmationNote svg { flex-shrink: 0; }
 .error { color: #913624; border-left: 3px solid #a33a28; padding: 10px 12px; font-size: 15px; line-height: 1.5; margin-bottom: 18px; }
 .error a { display: block; margin-top: 8px; }
 .submit { display: flex; align-items: center; justify-content: center; gap: 12px; border: 1px solid var(--color-action); border-radius: var(--control-radius); width: 100%; min-height: 56px; padding: 14px 16px; background: var(--color-action); box-shadow: var(--control-primary-shadow); color: white; font: inherit; font-size: 17px; font-weight: 650; cursor: pointer; margin-top: 24px; }
@@ -28,8 +39,9 @@
 .fields:disabled { opacity: .7; }
 .fields:disabled button { cursor: wait; }
 .note { font-size: 14px; line-height: 1.5; color: var(--color-text-secondary); margin: 20px 0 0; text-align: center; }
-.note a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); color: var(--color-action); font-weight: 600; text-decoration: none; }
+.note a { display: inline-flex; align-items: center; min-height: 36px; padding: 4px 6px; color: var(--color-action); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
 .skip { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; color: var(--color-action); font-size: 16px; font-weight: 600; text-decoration: none; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); box-shadow: var(--control-shadow); margin: 16px auto 0; padding: 12px 16px; text-align: center; }
 .skip:hover, .note a:hover { background: var(--control-hover); border-color: var(--color-action); }
-@media (max-width: 359px) { .main { padding-top: 28px; } }
+@media (max-width: 599px) { .panel { padding: 20px 16px; border-radius: 14px; } .benefits { gap: 8px 14px; font-size: 12px; } .agreement { padding: 12px; } }
+@media (max-width: 359px) { .main { padding-top: 28px; } .panel { padding-inline: 12px; } .agreementLabel { gap: 9px; } .confirmationNote { font-size: 11px; } }
 @media (min-width: 600px) { .main { padding-top: 36px; } }

@@ -6,7 +6,9 @@
 .article ul { padding-left: 22px; }
 .article li { margin-block: 8px; }
 .article a { color: var(--color-action); text-underline-offset: 4px; overflow-wrap: anywhere; }
-.updated { color: var(--color-text-secondary); font-size: 13px; }
+.eyebrow { color: var(--color-action); font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px!important; }
+.documentSummary { color: var(--color-text-secondary); font-size: 18px; line-height: 1.6; max-width: 560px; }
+.updated { display: inline-block; color: var(--color-text-secondary); font-size: 12px; padding: 5px 10px; border-radius: 6px; background: #edf0e7; margin-bottom: 20px!important; }
 .contact { padding: 20px; border: 1px solid var(--control-border); border-radius: 12px; background: var(--control-surface); margin: 24px 0; }
 .contact h2 { margin-top: 0; }
 .contact a { display: block; overflow-wrap: anywhere; }
@@ -15,9 +17,9 @@
 .faq { border-top: 1px solid var(--color-divider); margin-top: 14px; }
 .faq details { border-bottom: 1px solid var(--color-divider); padding-block: 8px; }
 .faq summary { min-height: 48px; padding: 12px 4px; color: var(--color-action); font-weight: 600; cursor: pointer; }
-.footer { width: min(100% - 48px,860px); margin: 24px auto 32px; padding-top: 20px; border-top: 1px solid var(--color-divider); }
-.footer nav { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
-.footer a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 6px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); color: var(--color-action); font-size: 14px; font-weight: 600; text-decoration: none; }
-.footer a:hover { background: var(--control-hover); }
-.footer p { color: var(--color-text-secondary); font-size: 12px; text-align: center; margin-top: 14px; }
-@media(max-width:359px) { .page,.footer { width: calc(100% - 40px); } .footer nav { gap: 6px; } }
+.footer { width: min(100% - 48px,860px); margin: 30px auto 24px; padding-top: 18px; border-top: 1px solid var(--color-divider); color: var(--color-text-secondary); text-align: center; }
+.footer nav { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 12px; }
+.footer a { display: inline-flex; align-items: center; min-height: 36px; padding: 6px 3px; color: var(--color-text-secondary); font-size: 12px; font-weight: 400; text-decoration: none; border: 0; background: none; box-shadow: none; }
+.footer a:hover { color: var(--color-action); text-decoration: underline; text-underline-offset: 4px; }
+.footer p { font-size: 11px; line-height: 1.6; margin: 0; }
+@media(max-width:359px) { .page,.footer { width: calc(100% - 40px); } }

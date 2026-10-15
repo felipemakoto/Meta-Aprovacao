@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from "next/server.js";
 import { parseSignup } from "./signup-contract.ts";
 import { AuthBodyError, readAuthJson } from "./request-body.ts";
+import {signupAgreement, type SignupAgreement} from "./legal-documents.ts";
 
 export const authHeaders = { "Cache-Control": "private, no-store, max-age=0", Pragma: "no-cache", "Referrer-Policy": "no-referrer" };
 type Settings = { secure: boolean; origin?: string };
 type AuthError = { code?: string; status?: number } | null;
 type Dependencies = {
   signedIn: () => Promise<boolean>;
-  signup: (input: { email: string; password: string; redirectTo: string }) => Promise<{ error: AuthError; confirmed: boolean }>;
+  signup: (input: { email: string; password: string; redirectTo: string; agreement: SignupAgreement }) => Promise<{ error: AuthError; confirmed: boolean }>;
   exchange: (code: string) => Promise<boolean | "recovery">;
 };
 
@@ -36,7 +37,7 @@ export function createSignupHandlers(deps: Dependencies, settings: Settings) {
       catch (error) { return error instanceof AuthBodyError ? json({ error: error.message }, error.status) : json({ error: "invalid_input" }, 400); }
       if (!input) return json({ error: "invalid_input" }, 400);
       if (await deps.signedIn()) return json({ error: "already_authenticated" }, 409);
-      const { error, confirmed } = await deps.signup({ email: input.email, password: input.password, redirectTo: `${origin}/auth/confirm` });
+      const { error, confirmed } = await deps.signup({ email: input.email, password: input.password, redirectTo: `${origin}/auth/confirm`, agreement: signupAgreement() });
       if (error) {
         // Do not expose provider messages or account existence.
         if (["user_already_exists", "email_exists"].includes(error.code ?? "")) return json({ status: "check_email" }, 202);

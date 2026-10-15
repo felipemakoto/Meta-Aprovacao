@@ -1,6 +1,6 @@
 .page {
   width: min(100% - 46px, 560px);
-  min-height: 100svh;
+  min-height: calc(100svh - 120px);
   margin-inline: auto;
   padding-block: 28px 40px;
 }
@@ -34,6 +34,13 @@
 }
 
 .main { padding-top: 32px; }
+.eyebrow { display: flex; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 12px; font-weight: 600; color: var(--color-action); letter-spacing: .06em; text-transform: uppercase; }
+.eyebrow > span { width: 7px; height: 7px; background: #6b8755; border-radius: 50%; }
+.testDetails { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+.testDetails li { padding: 5px 10px; border: 1px solid #d9e1cf; border-radius: 6px; color: #4f6350; background: #edf0e5; font-size: 12px; }
+.steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; list-style: none; padding: 0; margin: 32px 0 0; }
+.steps li { font-size: 12px; line-height: 1.55; color: var(--color-text-secondary); }
+.steps span { display: block; margin-bottom: 7px; font-size: 11px; letter-spacing: .08em; color: #647b5f; font-weight: 650; }
 
 .title {
   margin: 0;
@@ -120,6 +127,12 @@
   font-size: 12px;
   line-height: 19px;
 }
+.supportLink { display: flex; align-items: center; gap: 13px; padding: 16px; min-height: 76px; margin-top: 24px; border: 1px solid #d5dece; border-radius: 12px; color: var(--color-action); text-decoration: none; background: #f0f3e9; }
+.supportLink:hover { background: #e8eee0; border-color: #91a183; }
+.supportIcon { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: #e2e9d9; }
+.supportLink strong { display: block; font-size: 14px; font-weight: 600; }
+.supportLink span span { display: block; font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+.supportLink > img { margin-left: auto; flex-shrink: 0; }
 
 @media (max-width: 359px) {
   .page { width: calc(100% - 40px); padding-top: 32px; }
