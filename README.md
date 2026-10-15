@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização em 15/10/2026 — etapa 60: [login Google preparado](docs/LOGIN-GOOGLE-ETAPA-60.md) e [roteiro de ativação](docs/CONFIGURAR-GOOGLE.md). Frase de confirmação retirada do formulário; botão condicional no cadastro/entrada, concordância antes do OAuth, PKCE e retorno restrito. 37 testes isolados, dez HTTP, doze combinações de telas e cancelamento pendente aprovados, além de lint/build. Provedor Google continua desligado: responsável ainda precisa criar cliente Google Cloud, configurar o Supabase e validar entrada real. Registros abaixo são históricos.
+
 Atualização em 15/10/2026 — etapa 59: [rodapé e concordância no cadastro](docs/INTERFACE-CADASTRO-ETAPA-59.md). Termos/Privacidade como links discretos, Suporte somente na inicial e cadastro com checkbox obrigatório, links em outra aba e validação no servidor. Início/cadastro com acabamento visual e detalhes curtos. 21 testes isolados, sete HTTP, 18 combinações de telas/larguras, lint e build aprovados; nenhum e-mail enviado. Registros abaixo são históricos.
 
 Atualização em 15/10/2026 — etapa 58: [cópia externa e recuperação](docs/RECUPERACAO-BACKUP-ETAPA-58.md). Backup com permissões, restauração local de 50 tabelas com dados idênticos e limpeza do ambiente temporário. Conjunto privado no Google Drive com download e SHA-256 conferidos; chave protegida por senha criada em formulário local. Monitor atualizado para cópia externa e periodicidade de quinze minutos confirmada. Doze testes, lint e build aprovados. Serviços gerenciados do Supabase e restauração em outro equipamento ainda não certificados; checkout desativado. Registros abaixo são históricos.

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:google": "node --test tests/google-auth.test.mjs tests/google-server.test.mjs",
+    "test:google:http": "node --test tests/google-http.test.mjs",
     "ops:check": "node --env-file=.env.local scripts/operations-check.mjs",
     "ops:notice": "node --env-file=.env.local --env-file=.env.operations.local scripts/operations-notice.mjs",
     "backup:create": "node --env-file=.env.local scripts/backup-database.mjs create",

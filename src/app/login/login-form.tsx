@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../cadastro/signup.module.css";
 import accountStyles from "./login.module.css";
+import GoogleAuthButton from "../google-auth-button";
 
 const messages: Record<string, string> = {
   request_timeout: "O envio demorou demais. Confira sua conexão e tente novamente.",
@@ -45,6 +46,7 @@ export default function LoginForm({ signedIn, showPremiumOffer=false }: { signed
       <Link className={`${accountStyles.action} ${accountStyles.simulation}`} href="/simulados"><span>Fazer um simulado</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
       {showPremiumOffer && <Link className={`${accountStyles.action} ${accountStyles.upgrade}`} href="/premium"><span>Desbloquear Premium</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m7 17 10-10M7 7h10v10"/></svg></Link>}
     </nav>}
+    {!signedIn && <GoogleAuthButton disabled={busy} onPending={setBusy}/>}
     <form className={styles.panel} onSubmit={submit} aria-busy={busy}>
       <fieldset className={styles.fields} disabled={busy}>
         {!signedIn && <>

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { validateSignup, type SignupErrors, type SignupInput } from "@/lib/auth/signup-contract";
 import {legalDocuments} from "@/lib/auth/legal-documents";
 import styles from "./signup.module.css";
+import GoogleAuthButton from "../google-auth-button";
 
 const messages: Record<string, string> = {
   request_timeout: "O envio demorou demais. Confira sua conexão e tente novamente.",
@@ -64,6 +65,7 @@ export default function SignupForm() {
     <p className={styles.eyebrow}>Um espaço para a sua preparação</p>
     <h1 className={styles.title}>Criar conta</h1><p className={styles.subtitle}>Guarde seus resultados e descubra o próximo passo. Comece grátis.</p>
     <ul className={styles.benefits} aria-label="Vantagens da conta"><li>Histórico salvo</li><li>Progresso por matéria</li></ul>
+    <GoogleAuthButton disabled={busy} onPending={setBusy}/>
     <form className={styles.panel} onSubmit={submit} noValidate aria-busy={busy}>
       <fieldset disabled={busy} className={styles.fields}>
         <div className={styles.field}>
@@ -85,7 +87,6 @@ export default function SignupForm() {
       </fieldset>
       <noscript>Ative o JavaScript para usar o formulário de cadastro.</noscript>
     </form>
-    <p className={styles.confirmationNote}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>Confirme o e-mail para começar a estudar.</p>
     <p className={styles.note}>Já tem conta? <Link href="/login">Entrar</Link></p>
     <Link className={styles.skip} href="/">Continuar sem conta</Link>
   </section>;

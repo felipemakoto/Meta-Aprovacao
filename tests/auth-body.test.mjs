@@ -4,13 +4,15 @@ import {NextRequest} from 'next/server.js';
 import {createSignupHandlers} from '../src/lib/auth/signup-http.ts';
 import {createLoginHandlers} from '../src/lib/auth/login-http.ts';
 import {createRecoveryHandlers} from '../src/lib/auth/recovery-http.ts';
+import {googleHandlers} from '../src/lib/auth/google-http.ts';
 
 const origin='https://auth.example',settings={secure:true,origin};
 const forbidden=async()=>assert.fail('Body inválido chegou à autenticação');
 const signup=createSignupHandlers({signedIn:forbidden,signup:forbidden,exchange:forbidden},settings);
 const login=createLoginHandlers({signedIn:forbidden,login:forbidden,logout:forbidden},settings);
 const recovery=createRecoveryHandlers({request:forbidden,authorized:forbidden,update:forbidden,finish:forbidden},settings);
-const handlers=[signup.POST,login.login,login.logout,recovery.request,recovery.update];
+const google=googleHandlers({available:forbidden,signedIn:forbidden,begin:forbidden,finish:forbidden},{...settings,supabaseOrigin:'https://abcdefghijklmnopqrst.supabase.co',signingSecret:forbidden});
+const handlers=[signup.POST,login.login,login.logout,recovery.request,recovery.update,google.start];
 const request=body=>new NextRequest(origin+'/api/auth/test',{method:'POST',headers:{origin,'content-type':'application/json'},body,duplex:'half'});
 
 test('todos os formulários encerram corpo parado mesmo com cancelamento que não resolve',{timeout:8000},async()=>{

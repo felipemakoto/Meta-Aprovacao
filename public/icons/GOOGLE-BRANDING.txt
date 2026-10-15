@@ -1,0 +1,9 @@
+Google G brand asset
+
+Source: https://developers.google.com/static/identity/images/g-logo.png
+Guidelines: https://developers.google.com/identity/branding-guidelines
+Retrieved: 2026-10-15
+
+Google's brand asset is used only in the "Continuar com Google" authentication
+button. It is not covered by the Heroicons MIT license in LICENSE.txt.
+Google trademarks and brand guidelines remain applicable.

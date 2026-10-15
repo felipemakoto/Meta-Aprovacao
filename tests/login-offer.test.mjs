@@ -17,7 +17,7 @@ function loadTsx(relative,dependencies={}) {
  mod._compile(ts.transpileModule(readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText,filename);
  return mod.exports.default;
 }
-const LoginForm=loadTsx('../src/app/login/login-form.tsx');
+const LoginForm=loadTsx('../src/app/login/login-form.tsx',{'../google-auth-button':{__esModule:true,default:()=>null}});
 const verified={id:'verified-owner',email_confirmed_at:'2026-10-01T12:00:00Z'};
 async function render({user=verified,access={hasPremium:false,accessUntil:null},authFailure=false,readFailure=false}={}) {
  const reads=[];
