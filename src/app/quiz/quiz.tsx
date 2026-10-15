@@ -178,8 +178,10 @@ export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = fa
           );
         })}
       </fieldset>
-      <button className={styles.continue} disabled={!selected} onClick={next}>{index === quiz.questions.length - 1 ? simulation ? "Conferir respostas" : "Finalizar teste" : "Continuar"} <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
+      <div className={styles.questionActions}>
       {index > 0 && <button className={styles.previousQuestion} type="button" aria-label="Voltar à questão anterior" title="Questão anterior" onClick={() => { if (stillActive()) setIndex(index - 1); }}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>}
+      <button className={styles.continue} disabled={!selected} onClick={next}>{index === quiz.questions.length - 1 ? simulation ? "Conferir respostas" : "Finalizar teste" : "Continuar"} <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
+      </div>
     </>
   );
 }

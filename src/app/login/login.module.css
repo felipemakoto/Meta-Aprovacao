@@ -1,0 +1,11 @@
+.actions { display: grid; gap: 12px; margin-top: 28px; }
+.action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 14px 18px; border: 1px solid #9eb3a5; border-radius: 8px; background: #fffef9; color: var(--color-action); font-size: 17px; line-height: 1.4; font-weight: 600; text-decoration: none; }
+.action svg { width: 22px; height: 22px; flex-shrink: 0; }
+.action:hover { background: #edf2ec; border-color: var(--color-action); }
+.action:active { background: #e1e9df; }
+.primary { background: var(--color-action); border-color: var(--color-action); color: white; }
+.primary:hover, .primary:active { background: var(--color-action-hover); }
+.plan { background: #eef0d5; border-color: #b5bf82; }
+.plan:hover, .plan:active { background: #e3e8b9; border-color: #8c9c56; }
+.logout { display: block; width: 100%; min-height: 44px; padding: 10px; border: 0; border-radius: 6px; background: transparent; color: var(--color-text-secondary); font: inherit; font-size: 15px; cursor: pointer; }
+.logout:hover { background: #edf2ec; color: var(--color-action); }

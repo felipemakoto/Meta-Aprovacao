@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../cadastro/signup.module.css";
+import accountStyles from "./login.module.css";
 
 const messages: Record<string, string> = {
   request_timeout: "O envio demorou demais. Confira sua conexão e tente novamente.",
@@ -39,6 +40,11 @@ export default function LoginForm({ signedIn }: { signedIn: boolean }) {
   return <section>
     <h1 className={styles.title}>{signedIn ? "Você está na sua conta" : "Entrar"}</h1>
     {signedIn && <p className={styles.subtitle}>Sua sessão está ativa neste navegador.</p>}
+    {signedIn && <nav className={accountStyles.actions} aria-label="Continuar na plataforma">
+      <Link className={`${accountStyles.action} ${accountStyles.primary}`} href="/dashboard">Meus estudos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
+      <Link className={`${accountStyles.action} ${accountStyles.plan}`} href="/cadastro/confirmado"><span>Escolher plano e fazer um simulado</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
+      <Link className={accountStyles.action} href="/"><span>Voltar ao início</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 4-8 7v9h6v-6h4v6h6v-9Z"/></svg></Link>
+    </nav>}
     <form className={styles.panel} onSubmit={submit} aria-busy={busy}>
       <fieldset className={styles.fields} disabled={busy}>
         {!signedIn && <>
@@ -49,12 +55,11 @@ export default function LoginForm({ signedIn }: { signedIn: boolean }) {
           </div></div>
         </>}
         {error && <div ref={alert} tabIndex={-1} role="alert" className={styles.error}>{error}</div>}
-        <button className={styles.submit} type="submit">{busy ? signedIn ? "Saindo…" : "Entrando…" : signedIn ? "Sair da conta" : "Entrar"}{!signedIn && <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" />}</button>
+        <button className={signedIn ? accountStyles.logout : styles.submit} type="submit">{busy ? signedIn ? "Saindo…" : "Entrando…" : signedIn ? "Sair da conta" : "Entrar"}{!signedIn && <Image src="/icons/arrow-right.svg" width={23} height={23} alt="" />}</button>
       </fieldset>
       <noscript>Ative o JavaScript para entrar ou sair da conta.</noscript>
     </form>
     {!signedIn && <><p className={styles.note}><Link href="/recuperar-senha">Esqueci minha senha</Link></p><p className={styles.note}>Ainda não tem conta? <Link href="/cadastro">Criar conta</Link></p></>}
-    {signedIn && <><Link className={styles.skip} href="/dashboard">Meus estudos</Link><Link className={styles.skip} href="/cadastro/confirmado">Escolher plano e fazer um simulado</Link></>}
-    <Link className={styles.skip} href="/">{signedIn ? "Voltar ao início" : "Continuar sem conta"}</Link>
+    {!signedIn && <Link className={styles.skip} href="/">Continuar sem conta</Link>}
   </section>;
 }

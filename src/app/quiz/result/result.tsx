@@ -29,7 +29,7 @@ export default function Result({ preview, initialResult, saved = false, initialR
       <Link className={base.exit} href={saved ? "/dashboard" : "/"}>{saved ? "Meus estudos" : "Início"}</Link>
     </header>
     <main>
-      {screen.kind === "loading" && <CorrectionLoading title="Carregando seu resultado…" />}
+      {screen.kind === "loading" && <CorrectionLoading title="Carregando seu resultado…" timed complete />}
       {screen.kind === "error" && <section className={base.message} role="status">
         <h1>{screen.login ? "Entre para ver seu resultado" : screen.expired ? "Resultado indisponível." : "Não foi possível carregar o resultado."}</h1>
         <p>{screen.login ? "Use a conta em que você salvou o teste." : screen.expired ? saved ? "Ainda não há um resultado salvo nesta conta." : "Esta tentativa não foi finalizada, já foi salva na conta ou o prazo de acesso terminou." : "Confira sua conexão e tente novamente. Suas respostas não serão reenviadas."}</p>

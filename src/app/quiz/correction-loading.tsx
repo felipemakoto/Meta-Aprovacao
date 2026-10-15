@@ -6,11 +6,11 @@ import {RESULT_TRANSITION_MS} from "@/lib/quiz/result-transition";
 export default function CorrectionLoading({title="Estamos conferindo as respostas.",compact=false,headingRef,timed=false,complete=false}:{title?:string;compact?:boolean;headingRef?:Ref<HTMLHeadingElement>;timed?:boolean;complete?:boolean}) {
   const [elapsedProgress,setElapsedProgress]=useState(0);
   useEffect(()=>{
-    if(!timed)return;
+    if(!timed||complete)return;
     const started=performance.now();
     const timer=setInterval(()=>setElapsedProgress(Math.min(99,Math.floor((performance.now()-started)/RESULT_TRANSITION_MS*100))),100);
     return()=>clearInterval(timer);
-  },[timed]);
+  },[timed,complete]);
   const progress=complete?100:elapsedProgress;
   return <section className={compact?styles.loadingCompact:styles.message} role="status" aria-live="polite" aria-busy="true">
     {compact?<p>{title}</p>:<><p className={styles.stepLabel}>Último passo</p><h1 ref={headingRef} tabIndex={-1}>{title}</h1><p>Seu resultado já vai aparecer.</p></>}
