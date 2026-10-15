@@ -2,6 +2,8 @@
 
 Solicitação enviada ao suporte em 14/10/2026 pelo Gmail conectado, após autorização explícita do responsável. O Gmail confirmou o envio; resposta ainda não foi conferida nesta etapa. O texto abaixo preserva a solicitação preparada, sem credenciais ou dados de compradores.
 
+Conferência posterior em 14/10/2026: a mesma conversa no Gmail continha somente a mensagem enviada, sem resposta do suporte naquele instante. Nenhum novo e-mail ou acompanhamento automático foi enviado/criado.
+
 **Destinatário:** infoprodutores@cakto.com.br
 
 **Assunto:** Acesso a staging e confirmação do contrato da assinatura — Meta Aprovação

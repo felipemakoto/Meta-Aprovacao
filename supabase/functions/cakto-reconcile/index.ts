@@ -10,7 +10,7 @@ async function rpc(name:string,args:Record<string,unknown>={}) {
 }
 Deno.serve(automationHandler({secret:()=>Deno.env.get("CAKTO_WORKER_SECRET")??"",authorize:async nonce=>await rpc("consume_cakto_dispatch",{p_nonce:nonce})===true,run:async()=>{
  try {
-  const result=await runCaktoAutomation(rpc,caktoReader({CAKTO_CLIENT_ID:Deno.env.get("CAKTO_CLIENT_ID"),CAKTO_CLIENT_SECRET:Deno.env.get("CAKTO_CLIENT_SECRET")}));
+  const result=await runCaktoAutomation(rpc,caktoReader({CAKTO_CLIENT_ID:Deno.env.get("CAKTO_CLIENT_ID"),CAKTO_CLIENT_SECRET:Deno.env.get("CAKTO_CLIENT_SECRET")},fetch,event=>console.warn("cakto_authentication_retry",JSON.stringify(event))));
   console.info("cakto_automation",JSON.stringify(result));return result;
  }catch(error){
   console.error("cakto_automation_diagnostic",JSON.stringify(error instanceof AutomationRunError?error.diagnostic:{phase:"lease",category:"internal_error"}));

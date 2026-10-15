@@ -1,5 +1,7 @@
 # Etapa 14 — cadastro
 
+Atualização posterior em 14/10/2026: o responsável configurou Gmail SMTP e confirmou entrega e recuperação real com nova senha e login posterior. Esse teste comprova recuperação; não foi relatado um novo cadastro com confirmação após essa configuração. O registro anterior abaixo descreve a situação antes do SMTP. Ver [Autenticação](AUTENTICACAO-ETAPA-50.md).
+
 Atualização em 14/10/2026 — [etapa 50](AUTENTICACAO-ETAPA-50.md): leitura dos formulários limitada a cinco segundos, mantendo teto de bytes e proteção de origem; mensagem de demora e testes adicionais. Cadastro habilitado e confirmação exigida conferidos no Auth; token administrativo de conta descartável foi confirmado, sem entregar e-mail e sem comprovar o callback PKCE completo. Responsável ainda sem SMTP/domínio; [roteiro inicial](SMTP-INICIAL-GMAIL.md) preparado. Relatos abaixo preservam o histórico.
 
 Implementada em 27/09/2026 com a opção 2 aprovada: painel com borda, três campos e botão Criar conta. Verificação visual e testes automatizados concluídos; teste real confirmado pelo usuário em 28/09/2026: a tela E-mail confirmado foi exibida. Etapa 14 concluída; implementação no checkpoint c4ccd8f.

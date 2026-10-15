@@ -1,5 +1,11 @@
 # Autenticação e uso móvel — etapa 50
 
+## Atualização após teste real do responsável — 14/10/2026
+
+O responsável configurou o SMTP Gmail diretamente no Supabase e confirmou nesta conversa: **o e-mail chegou, ele salvou uma nova senha e entrou usando essa nova senha**. A pendência de entrega e recuperação positiva do site foi encerrada com base nesse teste humano. O agente não recebeu senha de app, senha da conta, token ou link de recuperação e não executou a troca. Isso não transforma os ensaios administrativos abaixo em testes de entrega nem certifica volume de envio ou um novo cadastro por e-mail. O responsável continua sem domínio próprio.
+
+Os registros seguintes descrevem a situação e os testes anteriores à configuração feita pelo responsável.
+
 Conferência em 14/10/2026. Sem compra, mudança de senha de contas preexistentes, envio de e-mails de autenticação ou alteração do provedor/SMTP. Contratação permanece desativada e conteúdo publicado preservado.
 
 ## Correção aplicada
@@ -26,7 +32,7 @@ Sete grupos passaram, com conclusão em 14/10/2026 às 23:31:14 UTC (20:31:14 em
 
 O código oficial do Supabase distingue a criação do estado PKCE de recuperação na [rota recover](https://github.com/supabase/auth/blob/master/internal/api/recover.go) e usa o método desse estado ao [trocar o código PKCE](https://github.com/supabase/auth/blob/master/internal/api/token.go). Links administrativos são gerados por [outro caminho](https://github.com/supabase/auth/blob/master/internal/api/mail.go). Não se deve transformar um token administrativo/fluxo implícito em evidência de que o callback PKCE e a caixa de entrada funcionaram.
 
-## Pendência de entrega
+## Pendência de entrega no momento do ensaio automatizado — resolvida pelo teste acima
 
 O responsável confirmou que **ainda não configurou SMTP e não possui domínio próprio**. As configurações públicas do Auth confirmam cadastro habilitado e confirmação obrigatória, mas não informam o SMTP personalizado; a ausência foi informada pelo responsável.
 

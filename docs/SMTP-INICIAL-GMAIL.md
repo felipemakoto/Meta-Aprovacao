@@ -1,5 +1,7 @@
 # Envio inicial com Gmail, sem domínio próprio
 
+Atualização em 14/10/2026: configuração feita pelo próprio responsável no Supabase. Ele confirmou a chegada do e-mail de recuperação, o salvamento de nova senha e o login posterior com ela. Recuperação real concluída por relato explícito do usuário; senha de app e credenciais não foram recebidas pelo agente. O roteiro abaixo é preservado como referência. Entrega para esse teste não comprova capacidade de envio em escala nem um novo cadastro por e-mail.
+
 Roteiro preparado em 14/10/2026. Nenhum SMTP foi configurado pelo agente e nenhuma senha foi criada ou salva no projeto. Esta opção permite preparar o teste com uma conta Gmail escolhida pelo responsável, se a conta permitir senha de app. Não comprova entrega nem dimensionamento para o lançamento.
 
 ## 1. Preparar a conta Google

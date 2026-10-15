@@ -1,6 +1,7 @@
 // Server transport shared with local administrative scripts. No client imports.
 import {Buffer} from "node:buffer";
 export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription";
+export type CaktoAuthenticationRetry={operation:"authentication";status:500|502|503|504};
 type CaktoReason="configuration_missing"|"invalid_id"|"unavailable"|"unauthorized"|"not_found"|"rate_limited"|"invalid_response";
 export class CaktoReadError extends Error {
   readonly reason:CaktoReason;
@@ -20,7 +21,7 @@ export function record(value: unknown): Record<string, unknown> {
   if (!value || typeof value !== "object" || Array.isArray(value)) throw new CaktoReadError("invalid_response");
   return value as Record<string, unknown>;
 }
-export function caktoReader(env: Record<string, string | undefined>, transport: typeof fetch = fetch) {
+export function caktoReader(env: Record<string, string | undefined>, transport: typeof fetch = fetch, onAuthenticationRetry?:(event:CaktoAuthenticationRetry)=>void) {
   async function json(path: string, options: RequestInit, limit: number,operation:CaktoOperation) {
     const controller = new AbortController();
     let timer: ReturnType<typeof setTimeout> | undefined;
@@ -29,8 +30,23 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
     try {
       return await Promise.race([
         (async () => {
-          const response = await transport(`https://api.cakto.com.br/public_api/${path}`, { ...options, redirect: "error", cache: "no-store", signal: controller.signal });
-          status=response.status;
+          let response:Response;
+          for(let attempt=0;;attempt++) {
+            if(controller.signal.aborted) throw new CaktoReadError("unavailable",operation,status,true);
+            response = await transport(`https://api.cakto.com.br/public_api/${path}`, { ...options, redirect: "error", cache: "no-store", signal: controller.signal });
+            status=response.status;
+            if(controller.signal.aborted) {void response.body?.cancel().catch(()=>{});throw new CaktoReadError("unavailable",operation,status,true);}
+            // Only token issuance may retry, once, within the same eight-second deadline.
+            if(operation!=="authentication" || attempt!==0 || ![500,502,503,504].includes(status)) break;
+            void response.body?.cancel().catch(()=>{});
+            try {onAuthenticationRetry?.({operation:"authentication",status:status as CaktoAuthenticationRetry["status"]});}catch{/* Diagnostic delivery must not change authentication behavior. */}
+            await new Promise<void>(resolve=>{
+              const finish=()=>{clearTimeout(pause);controller.signal.removeEventListener("abort",finish);resolve();};
+              const pause=setTimeout(finish,250);
+              controller.signal.addEventListener("abort",finish,{once:true});
+              if(controller.signal.aborted) finish();
+            });
+          }
           if (!response.ok) {
             void response.body?.cancel().catch(() => {});
             throw new CaktoReadError([401,403].includes(response.status) ? "unauthorized" : response.status === 404 ? "not_found" : response.status === 429 ? "rate_limited" : "unavailable",operation,status);
