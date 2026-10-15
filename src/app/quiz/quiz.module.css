@@ -10,7 +10,7 @@
 .progress::-webkit-progress-bar { background: var(--color-divider); }
 .progress::-webkit-progress-value { background: var(--color-action); border-radius: 8px; }
 .progress::-moz-progress-bar { background: var(--color-action); border-radius: 8px; }
-.question { font-family: var(--font-display), Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.28; letter-spacing: -.3px; margin: 32px 0 28px; overflow-wrap: anywhere; }
+.question { font-family: var(--font-display), Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.28; letter-spacing: -.3px; margin: 32px 0 28px; overflow-wrap: anywhere; white-space:pre-line; }
 .question:focus, .message h1:focus { outline: none; }
 .options { border: 0; padding: 0; margin: 0; display: grid; gap: 9px; min-width: 0; }
 .option { display: flex; gap: 16px; align-items: center; padding: 11px 12px; min-height: 56px; border: 1px solid #cbd5cc; border-radius: 5px; font-size: 18px; cursor: pointer; position: relative; overflow-wrap: anywhere; }

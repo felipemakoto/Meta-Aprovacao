@@ -1,33 +1,43 @@
-// Curated easy introduction; not part of the published ETEC/IFSP practice bank.
+// Revision 2 creates fresh IDs and retargets only future introductory attempts.
 import {readFileSync,writeFileSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
 import assert from 'node:assert/strict';
+const historical=spawnSync(process.execPath,['scripts/build-intro-quiz-v1.mjs','--check'],{encoding:'utf8'});
+assert.equal(historical.status,0,'A migration histórica deve permanecer idêntica ao arquivo arquivado.');
+const old=JSON.parse(readFileSync('content/quiz-inicial-v1.json','utf8'));
 const catalog=JSON.parse(readFileSync('content/quiz-inicial.json','utf8'));
-assert.equal(catalog.schema,1);assert.equal(catalog.questions.length,10);
+assert.equal(catalog.schema,1);assert.equal(catalog.revision,2);assert.equal(catalog.questions.length,10);
 assert.equal(new Set(catalog.questions.map(q=>q.id)).size,10);
-for(const subject of ['matematica','portugues','ciencias','historia','geografia'])assert.equal(catalog.questions.filter(q=>q.subject===subject).length,2);
+for(const subject of ['matematica','portugues','ciencias','historia','geografia']) {
+ const group=catalog.questions.filter(q=>q.subject===subject);assert.equal(group.length,2);
+ assert.deepEqual(group.map(q=>q.difficulty).sort(),['easy','medium']);
+}
 const quote=value=>"'"+value.replaceAll("'","''")+"'";
 const rows=catalog.questions.map((q,index)=>{
- assert.match(q.id,/^aa520000-0000-4000-8000-\d{12}$/);assert.equal(q.position,index+1);
+ assert.match(q.id,/^aa530000-0000-4000-8000-\d{12}$/);assert.equal(q.position,index+1);
  assert.equal(q.options.length,5);assert.equal(new Set(q.options).size,5);assert.match(q.correctAnswer,/^[A-E]$/);
+ assert.equal(q.targetExam,['matematica','portugues'].includes(q.subject)?'both':'etec');
  for(const text of [q.topic,q.statement,...q.options,q.explanation])assert.ok(typeof text==='string'&&text.trim());
- return `(${q.position},${quote(q.id)},${quote(q.subject)},${quote(q.topic)},${quote(q.statement)},${quote(JSON.stringify(q.options))}::jsonb,${quote(q.correctAnswer)},${quote(q.explanation)})`;
+ return `(${q.position},${quote(q.id)},${quote(q.subject)},${quote(q.topic)},${quote(q.difficulty)},${quote(q.targetExam)},${quote(q.statement)},${quote(JSON.stringify(q.options))}::jsonb,${quote(q.correctAnswer)},${quote(q.explanation)})`;
 }).join(',\n');
-const sql=`-- Ten fixed introductory questions. Reviewed by AI under the owner's editorial policy.
--- Status reviewed keeps them OUT of published practice/simulations; only this catalog exposes them.
-create table private.intro_quiz_catalog (
- position smallint primary key check(position between 1 and 10),
- question_id uuid not null unique references public.questions(id) on delete restrict
-);
-alter table private.intro_quiz_catalog enable row level security;
-revoke all on private.intro_quiz_catalog from public,anon,authenticated,service_role;
-create temporary table intro_content(position smallint,id uuid,subject text,topic text,statement text,options jsonb,correct_answer text,explanation text) on commit drop;
-insert into intro_content values
+const prior=old.questions.map(q=>`(${q.position},${quote(q.id)}::uuid)`).join(',');
+const sql=`begin;
+-- Retire the former introductory catalog without editing its questions or snapshots.
+create temporary table intro_previous(position smallint,id uuid) on commit drop;
+insert into intro_previous values ${prior};
+lock table private.intro_quiz_catalog in share row exclusive mode;
+do $$begin
+ if (select count(*) from private.intro_quiz_catalog)<>10 or exists(
+ select 1 from intro_previous p full join private.intro_quiz_catalog c on c.position=p.position
+ where c.question_id is distinct from p.id) then raise exception 'intro_catalog_conflict';end if;
+end$$;
+create temporary table intro_content_v2(position smallint,id uuid,subject text,topic text,difficulty text,target_exam text,statement text,options jsonb,correct_answer text,explanation text) on commit drop;
+insert into intro_content_v2 values
 ${rows};
-insert into public.questions(id,subject,topic,statement,option_a,option_b,option_c,option_d,option_e,difficulty,target_exam,status,version)
-select id,subject,topic,statement,options->>0,options->>1,options->>2,options->>3,options->>4,'easy','both','reviewed',1 from intro_content;
-insert into public.question_answers(question_id,correct_answer,explanation) select id,correct_answer,explanation from intro_content;
-insert into private.intro_quiz_catalog(position,question_id) select position,id from intro_content;
-comment on table private.intro_quiz_catalog is 'Fixed introductory quiz only. Reviewed questions are not eligible for published practice or simulations. Server snapshot and answer separation preserved.';
+insert into public.questions(id,subject,topic,difficulty,target_exam,statement,option_a,option_b,option_c,option_d,option_e,status,version)
+select id,subject,topic,difficulty,target_exam,statement,options->>0,options->>1,options->>2,options->>3,options->>4,'reviewed',1 from intro_content_v2;
+insert into public.question_answers(question_id,correct_answer,explanation) select id,correct_answer,explanation from intro_content_v2;
+update private.intro_quiz_catalog c set question_id=n.id from intro_content_v2 n where n.position=c.position;
 
 create or replace function public.start_guest_quiz(p_token_hash text)
 returns jsonb language plpgsql security definer set search_path=''
@@ -43,9 +53,10 @@ begin
  jsonb_build_array(q.option_a,q.option_b,q.option_c,q.option_d,q.option_e),a.correct_answer,a.explanation
  from private.intro_quiz_catalog c join public.questions q on q.id=c.question_id
  join public.question_answers a on a.question_id=q.id
- where q.status='reviewed' and q.difficulty='easy' order by c.position;
+ where q.status='reviewed' and q.difficulty in('easy','medium') order by c.position;
  get diagnostics inserted_count=row_count;
- if inserted_count<>10 or (select count(distinct subject) from private.guest_quiz_questions where attempt_id=attempt_uuid)<>5 then
+ if inserted_count<>10 or (select count(distinct subject) from private.guest_quiz_questions where attempt_id=attempt_uuid)<>5
+ or exists(select 1 from private.guest_quiz_questions where attempt_id=attempt_uuid group by subject having count(*)<>2) then
   raise exception 'quiz_not_ready' using errcode='P0001';
  end if;
  return public.read_guest_quiz(p_token_hash);
@@ -53,7 +64,8 @@ end;
 $$;
 revoke all on function public.start_guest_quiz(text) from public,anon,authenticated,service_role;
 grant execute on function public.start_guest_quiz(text) to service_role;
+commit;
 `;
-const file='supabase/migrations/20261015010000_intro_quiz_catalog.sql';
+const file='supabase/migrations/20261015020000_intro_quiz_contextualized.sql';
 if(process.argv.includes('--check'))assert.equal(readFileSync(file,'utf8'),sql);else writeFileSync(file,sql);
-console.log('Quiz inicial: dez questões fáceis; migration '+(process.argv.includes('--check')?'conferida.':'gerada.'));
+console.log('Quiz inicial: cinco fáceis e cinco intermediárias; migrations histórica e atual conferidas.');

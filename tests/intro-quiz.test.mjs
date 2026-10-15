@@ -15,12 +15,20 @@ test('nenhum erro não inventa fraquezas; dez erros mantêm todos os assuntos',(
  const focus=studyFocus({...result,questions:result.questions.map(q=>({...q,correct:false}))});
  assert.equal(focus.flatMap(t=>t.positions).length,10);assert.equal(new Set(focus.map(t=>t.subject)).size,5);
 });
-test('introdução tem duas questões por matéria e cálculos elementares revisados',()=>{
- for(const subject of ['matematica','portugues','ciencias','historia','geografia'])assert.equal(catalog.questions.filter(q=>q.subject===subject).length,2);
+test('introdução combina níveis por matéria e preserva exercícios anteriores em outros IDs',()=>{
+ const old=JSON.parse(readFileSync('content/quiz-inicial-v1.json','utf8'));
+ for(const subject of ['matematica','portugues','ciencias','historia','geografia'])assert.deepEqual(catalog.questions.filter(q=>q.subject===subject).map(q=>q.difficulty).sort(),['easy','medium']);
+ assert.ok(catalog.questions.every(q=>!old.questions.some(b=>b.id===q.id)));
+ assert.ok(catalog.questions.every(q=>q.statement.length>old.questions.find(b=>b.position===q.position).statement.length));
+});
+test('cálculos, inferências e conceitos do quiz contextualizado conferem',()=>{
  const selected=q=>q.options['ABCDE'.indexOf(q.correctAnswer)];
- assert.equal(selected(catalog.questions[0]),'R$ 3,00');assert.equal(30*.1,3);
- assert.equal(Number(selected(catalog.questions[1]))+5,12);
- assert.deepEqual(catalog.questions.slice(2).map(selected),['Informar quando a biblioteca não abrirá.','Feliz','Evaporação','O capim','Uma fonte histórica visual.','A cana-de-açúcar','Na legenda','No lado direito.']);
+ assert.equal(selected(catalog.questions[0]),'R$ 68,00');assert.equal(80*(1-15/100),68);
+ const participants=(720-240)/12;assert.equal(participants,40);assert.equal(240+participants*12,720);
+ assert.equal(selected(catalog.questions[1]),`${participants} alunos`);
+ const kilometres=2*50000/100/1000;assert.equal(kilometres,1);assert.equal(selected(catalog.questions[8]),`${kilometres} km`);
+ assert.deepEqual(catalog.questions.slice(2,8).map(selected),['Permitir a consulta de livros após as aulas da tarde.','Concessão: a curta duração da viagem não impedia a leitura.','Favorece a evaporação ao renovar o ar próximo ao tecido.','Aumento dos sapos e redução dos gafanhotos.','O espaço registrado apresenta mudanças no transporte e na pavimentação.','A concentração da terra e a produção voltada ao mercado externo.']);
+ assert.equal(selected(catalog.questions[9]),'A menor infiltração no bairro B favorece o escoamento superficial.');
  const bank=JSON.parse(readFileSync('content/banco-etec-if.json','utf8'));
  assert.equal(bank.questions.length,500);
  assert.ok(catalog.questions.every(q=>!bank.questions.some(b=>b.id===q.id)));

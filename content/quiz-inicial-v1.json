@@ -1,0 +1,166 @@
+{
+  "schema": 1,
+  "purpose": "Quiz inicial introdutório fixo, separado dos simulados ETEC/IFSP.",
+  "questions": [
+    {
+      "id": "aa520000-0000-4000-8000-000000000001",
+      "position": 1,
+      "subject": "matematica",
+      "topic": "Porcentagem",
+      "statement": "Um caderno custa R$ 30,00. Quanto é 10% desse valor?",
+      "options": [
+        "R$ 0,30",
+        "R$ 3,00",
+        "R$ 10,00",
+        "R$ 20,00",
+        "R$ 33,00"
+      ],
+      "correctAnswer": "B",
+      "explanation": "10% correspondem a um décimo. Assim, 30 ÷ 10 = 3 reais."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000002",
+      "position": 2,
+      "subject": "matematica",
+      "topic": "Equação do primeiro grau",
+      "statement": "Qual número deve substituir x para que x + 5 = 12?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "12",
+        "17"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Subtraindo 5 dos dois lados, x = 12 − 5 = 7."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000003",
+      "position": 3,
+      "subject": "portugues",
+      "topic": "Interpretação de texto",
+      "statement": "Leia o aviso: “A biblioteca ficará fechada na sexta-feira para manutenção.” Qual é a finalidade principal desse aviso?",
+      "options": [
+        "Convidar para uma festa na biblioteca.",
+        "Ensinar como consertar um livro.",
+        "Contar uma história sobre a escola.",
+        "Informar quando a biblioteca não abrirá.",
+        "Pedir a devolução de livros emprestados."
+      ],
+      "correctAnswer": "D",
+      "explanation": "O aviso informa que a biblioteca não abrirá na sexta-feira e explica o motivo."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000004",
+      "position": 4,
+      "subject": "portugues",
+      "topic": "Sentido das palavras",
+      "statement": "Na frase “A turma ficou contente com o resultado”, qual palavra pode substituir “contente” sem mudar o sentido?",
+      "options": [
+        "Feliz",
+        "Cansada",
+        "Preocupada",
+        "Indiferente",
+        "Confusa"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nesse contexto, contente e feliz indicam satisfação com o resultado."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000005",
+      "position": 5,
+      "subject": "ciencias",
+      "topic": "Estados físicos da água",
+      "statement": "Uma roupa molhada seca no varal. A água líquida passa para o ar na forma de vapor. Essa mudança é chamada de:",
+      "options": [
+        "Fusão",
+        "Solidificação",
+        "Condensação",
+        "Precipitação",
+        "Evaporação"
+      ],
+      "correctAnswer": "E",
+      "explanation": "A evaporação é a passagem lenta do estado líquido para o gasoso, como acontece com a água da roupa no varal."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000006",
+      "position": 6,
+      "subject": "ciencias",
+      "topic": "Cadeia alimentar",
+      "statement": "Na cadeia alimentar capim → gafanhoto → sapo, qual ser vivo produz seu próprio alimento pela fotossíntese?",
+      "options": [
+        "O gafanhoto",
+        "O capim",
+        "O sapo",
+        "O gafanhoto e o sapo",
+        "Os três seres vivos"
+      ],
+      "correctAnswer": "B",
+      "explanation": "O capim é o produtor dessa cadeia: usa luz, água e gás carbônico na fotossíntese."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000007",
+      "position": 7,
+      "subject": "historia",
+      "topic": "Fontes históricas",
+      "statement": "Uma turma encontrou uma fotografia antiga da escola. Para estudar como a escola mudou ao longo do tempo, essa fotografia pode ser usada como:",
+      "options": [
+        "Uma previsão do futuro.",
+        "Uma regra de convivência.",
+        "Uma fonte histórica visual.",
+        "Um mapa de localização.",
+        "Uma tabela de notas."
+      ],
+      "correctAnswer": "C",
+      "explanation": "A fotografia registra elementos de uma época e pode servir como fonte visual para a pesquisa histórica."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000008",
+      "position": 8,
+      "subject": "historia",
+      "topic": "Brasil Colônia",
+      "statement": "Nos séculos XVI e XVII, muitos engenhos do litoral do Nordeste brasileiro produziam açúcar. Qual era a principal matéria-prima dessa produção?",
+      "options": [
+        "O café",
+        "O algodão",
+        "O cacau",
+        "A cana-de-açúcar",
+        "A borracha"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Os engenhos produziam açúcar a partir da cana-de-açúcar, cultivada em grandes propriedades."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000009",
+      "position": 9,
+      "subject": "geografia",
+      "topic": "Leitura de mapas",
+      "statement": "Em um mapa, rios aparecem em azul e estradas aparecem em vermelho. Onde o leitor encontra a explicação dessas cores?",
+      "options": [
+        "Na legenda",
+        "Na escala numérica",
+        "Na rosa dos ventos",
+        "No título do mapa",
+        "Na indicação do ano"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A legenda explica o significado das cores e dos símbolos utilizados no mapa."
+    },
+    {
+      "id": "aa520000-0000-4000-8000-000000000010",
+      "position": 10,
+      "subject": "geografia",
+      "topic": "Orientação",
+      "statement": "Um mapa tem o norte indicado para cima. Nesse mapa, a direção leste fica:",
+      "options": [
+        "Acima do norte.",
+        "Abaixo do sul.",
+        "No lado esquerdo.",
+        "Na mesma direção do oeste.",
+        "No lado direito."
+      ],
+      "correctAnswer": "E",
+      "explanation": "Quando o norte está para cima, o sul fica embaixo, o leste à direita e o oeste à esquerda."
+    }
+  ]
+}

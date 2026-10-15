@@ -9,7 +9,10 @@ begin
  if first_quiz::text~'correctAnswer|correct_answer|explanation|token_hash' then raise exception 'intro_answer_leak';end if;
  if first_quiz<>public.start_guest_quiz(token1) then raise exception 'intro_idempotency';end if;
  if (select count(*) from private.guest_quiz_questions where attempt_id=attempt and subject='matematica')<>2 then raise exception 'intro_coverage';end if;
- if exists(select 1 from private.intro_quiz_catalog c join public.questions q on q.id=c.question_id where q.status<>'reviewed' or q.difficulty<>'easy') then raise exception 'intro_bank_separation';end if;
+ if exists(select 1 from private.intro_quiz_catalog c join public.questions q on q.id=c.question_id where q.status<>'reviewed' or q.difficulty not in('easy','medium')) then raise exception 'intro_bank_separation';end if;
+ if (select count(*) from private.intro_quiz_catalog c join public.questions q on q.id=c.question_id where q.difficulty='easy')<>5
+ or (select count(*) from private.intro_quiz_catalog c join public.questions q on q.id=c.question_id where q.difficulty='medium')<>5 then raise exception 'intro_difficulty_mix';end if;
+ if exists(select 1 from private.intro_quiz_catalog where question_id::text not like 'aa530000-%') then raise exception 'intro_wrong_revision';end if;
  if (select count(*) from public.questions where status='published')<>published_before then raise exception 'intro_published_changed';end if;
  -- Snapshot remains authoritative after source text is edited in this rollback-only test.
  select statement into original_statement from private.guest_quiz_questions where attempt_id=attempt and position=1;
