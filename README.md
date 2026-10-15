@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização em 15/10/2026 — etapa 58: [cópia externa e recuperação](docs/RECUPERACAO-BACKUP-ETAPA-58.md). Backup com permissões, restauração local de 50 tabelas com dados idênticos e limpeza do ambiente temporário. Conjunto privado no Google Drive com download e SHA-256 conferidos; chave protegida por senha criada em formulário local. Monitor atualizado para cópia externa e periodicidade de quinze minutos confirmada. Doze testes, lint e build aprovados. Serviços gerenciados do Supabase e restauração em outro equipamento ainda não certificados; checkout desativado. Registros abaixo são históricos.
+
 Atualização em 15/10/2026 — etapa 57: [suporte, termos, privacidade, cópias e alertas](docs/SUPORTE-OPERACAO-ETAPA-57.md). Rodapé público, contato aprovado e destinatário técnico separado. Cópia real criptografada verificada com474objetos; automação Codex para verificação, cópia diária quando disponível e avisos de incidentes. Seis testes, quinze combinações visuais e build/lint aprovados. Rotinas dependem deste computador/Codex; cópia externa, recuperação da chave e ensaio de restauração ainda pendentes. Registros abaixo são históricos.
 
 Atualização em 15/10/2026 — etapa 56: [revisão de pagamento e publicação](docs/VALIDACAO-PRODUCAO-ETAPA-56.md). 45 testes isolados, webhook HTTP, permissões administrativas, integração com pagamento simulado/banco real, doze grupos na publicação e percurso quiz→conta→simulado aprovados. 24 combinações visuais; fixtures removidas e nenhum e-mail/compra. Conteúdo 500/6 e operação sem alerta ativo na amostra; contratação permanece desativada até evidência comercial. Registros abaixo são históricos.

@@ -25,3 +25,9 @@ test('duas amostras confirmam incidente, repetição é silenciosa e recuperaç�
 test('tentativa de backup que falhou gera alerta mesmo se a cópia anterior ainda for recente',async()=>{
  assert.deepEqual((await checkOperations({...deps(),backupFailed:async()=>true},now)).codes,['backup_failed']);
 });
+test('cópia externa configurada detecta ausência, atraso e falha sem inventar configuração inicial', async()=>{
+ assert.deepEqual((await checkOperations({...deps(),lastOffsite:async()=>undefined},now)).codes,[]);
+ assert.deepEqual((await checkOperations({...deps(),lastOffsite:async()=>null},now)).codes,['offsite_missing']);
+ assert.deepEqual((await checkOperations({...deps(),lastOffsite:async()=>now-49*3600000},now)).codes,['offsite_stale']);
+ assert.deepEqual((await checkOperations({...deps(),lastOffsite:async()=>now,offsiteFailed:async()=>true},now)).codes,['offsite_failed']);
+});
