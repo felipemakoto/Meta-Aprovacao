@@ -19,6 +19,6 @@ export default async function ResultPreview({ searchParams }: { searchParams: Pr
     return { id: `example-${index}`, position: index + 1, subject: q[0], topic: q[1], statement: q[2],
       options: [...q[3]], correctAnswer: q[4], answer: correct ? q[4] : wrong, correct, explanation: q[5] };
   });
-  return <Result initialReview={review === "errors" || review === "all" ? review : undefined} preview={{ id: "visual-example", completedAt: "2026-09-26T00:00:00Z", total: 10,
+  return <Result intro={review!=="errors"&&review!=="all"} initialReview={review === "errors" || review === "all" ? review : undefined} preview={{ id: "visual-example", completedAt: "2026-09-26T00:00:00Z", total: 10,
     score: questions.filter(q => q.correct).length, questions }} />;
 }

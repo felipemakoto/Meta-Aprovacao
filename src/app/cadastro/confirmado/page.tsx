@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { getVerifiedUser } from "@/lib/auth/user";
 import styles from "../signup.module.css";
+import PlanOptions from "@/app/premium/plan-options";
+import {premiumOffer,parseSubscriptionAccess} from "@/lib/subscriptions/contract";
+import {readSubscriptionAccess} from "@/lib/data/subscriptions";
 export const dynamic = "force-dynamic";
 
 export default async function ConfirmedPage() {
-  let confirmed = false; let unavailable = false;
-  try { confirmed = !!(await getVerifiedUser())?.email_confirmed_at; } catch { unavailable = true; }
+  let confirmed = false; let unavailable = false;let active=false;let planUnavailable=false;
+  try { const user=await getVerifiedUser();confirmed=!!user?.email_confirmed_at;
+    if(confirmed&&user)try{active=parseSubscriptionAccess(await readSubscriptionAccess(user.id)).hasPremium;}catch{planUnavailable=true;}
+  } catch { unavailable = true; }
+  if(confirmed)return <section><p className={styles.eyebrow}>E-mail confirmado · Conta pronta</p><h1 className={styles.title}>Como quer continuar?</h1>
+    <p className={styles.subtitle}>Seu próximo simulado já pode começar no gratuito.</p>
+    {planUnavailable&&<p role="status" className={styles.subtitle}>Não conseguimos consultar seu plano atual. Seus benefícios serão verificados ao iniciar.</p>}
+    <PlanOptions offer={premiumOffer(new Date())} active={active} onboarding/>
+    <Link className={styles.skip} href="/dashboard">Ir para meus estudos</Link>
+  </section>;
   return <section>
     <h1 className={styles.title}>{confirmed ? "E-mail confirmado" : unavailable ? "Tente novamente" : "Confirmação pendente"}</h1>
     <div className={styles.panel}>

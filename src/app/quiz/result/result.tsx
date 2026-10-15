@@ -8,10 +8,12 @@ import type { QuizResult } from "@/lib/quiz/result-contract";
 import { requestResult, ResultRequestError } from "@/lib/quiz/result-client";
 import base from "../quiz.module.css";
 import styles from "./result.module.css";
+import IntroResult from "./intro-result";
+import CorrectionLoading from "../correction-loading";
 
 const subjects: Record<string,string> = { matematica: "Matemática", portugues: "Português", ciencias: "Ciências", historia: "História", geografia: "Geografia" };
 type Screen = { kind: "loading" } | { kind: "ready"; result: QuizResult } | { kind: "error"; expired: boolean; login: boolean };
-export default function Result({ preview, initialResult, saved = false, initialReview }: { preview?: QuizResult; initialResult?: QuizResult; saved?: boolean; initialReview?: "errors" | "all" }) {
+export default function Result({ preview, initialResult, saved = false, initialReview, intro=false, continueHref }: { preview?: QuizResult; initialResult?: QuizResult; saved?: boolean; initialReview?: "errors" | "all"; intro?:boolean; continueHref?:string }) {
   const [screen, setScreen] = useState<Screen>(preview || initialResult ? { kind: "ready", result: (preview ?? initialResult)! } : { kind: "loading" });
   const [retry, setRetry] = useState(0);
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function Result({ preview, initialResult, saved = false, initialR
       <Link className={base.exit} href={saved ? "/dashboard" : "/"}>{saved ? "Meus estudos" : "Início"}</Link>
     </header>
     <main>
-      {screen.kind === "loading" && <section className={base.message} role="status"><h1>Carregando seu resultado…</h1></section>}
+      {screen.kind === "loading" && <CorrectionLoading title="Carregando seu resultado…" />}
       {screen.kind === "error" && <section className={base.message} role="status">
         <h1>{screen.login ? "Entre para ver seu resultado" : screen.expired ? "Resultado indisponível." : "Não foi possível carregar o resultado."}</h1>
         <p>{screen.login ? "Use a conta em que você salvou o teste." : screen.expired ? saved ? "Ainda não há um resultado salvo nesta conta." : "Esta tentativa não foi finalizada, já foi salva na conta ou o prazo de acesso terminou." : "Confira sua conexão e tente novamente. Suas respostas não serão reenviadas."}</p>
@@ -35,7 +37,7 @@ export default function Result({ preview, initialResult, saved = false, initialR
         <Link className={base.returnLink} href="/">Voltar ao início</Link>
         <Link className={base.returnLink} href="/login">Minha conta</Link>
       </section>}
-      {screen.kind === "ready" && <ResultContent key={`${screen.result.id}-${initialReview ?? "summary"}`} result={screen.result} preview={!!preview} saved={saved} initialReview={initialReview} />}
+      {screen.kind === "ready" && (intro?<IntroResult result={screen.result} continueHref={continueHref}/>:<ResultContent key={`${screen.result.id}-${initialReview ?? "summary"}`} result={screen.result} preview={!!preview} saved={saved} initialReview={initialReview} />)}
     </main>
     {preview && <p className={styles.preview}>Exemplo de resultado. Dados ilustrativos.</p>}
   </div>;
@@ -76,8 +78,8 @@ function ResultContent({ result, preview, saved, initialReview }: { result: Quiz
     </li>)}</ol>}
     <button className={base.continue} onClick={() => setReview({ mode: errors.length ? "errors" : "all", index: 0 })}>{errors.length ? `Revisar ${errors.length === 1 ? "o erro" : `os ${errors.length} erros`}` : "Revisar respostas"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>
     {errors.length > 0 && <button className={base.back} onClick={() => setReview({ mode: "all", index: 0 })}>Ver todas as respostas</button>}
-    {saved ? <p className={styles.intro}>Resultado salvo na sua conta.</p> : <SaveResult preview={preview} />}
-    <Link className={base.returnLink} href="/login">Minha conta</Link>
+    <Link className={`${styles.secondary} ${styles.secondaryLink}`} href={preview?"/simulados/preview":"/simulados"}>Fazer outro simulado</Link>
+    {saved ? <Link className={base.returnLink} href="/dashboard">Meus estudos</Link> : <SaveResult preview={preview} />}
   </section>;
 }
 

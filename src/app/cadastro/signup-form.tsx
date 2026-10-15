@@ -54,14 +54,13 @@ export default function SignupForm() {
   if (sent) return <section>
     <h1 className={styles.title} ref={heading} tabIndex={-1}>Confira seu e-mail</h1>
     <div className={styles.panel} role="status">
-      <p>Se o endereço puder receber um cadastro, você receberá um link de confirmação. Confira também a pasta de spam.</p>
-      <p>Abra o link neste mesmo navegador, onde iniciou o cadastro.</p>
-      <p>Se já possui uma conta, sua senha permanece a mesma.</p>
+      <p>Se o cadastro puder ser feito, um link chegará ao seu e-mail. Confira também o spam.</p>
+      <p>Abra o link neste navegador para escolher seu plano e continuar.</p>
     </div>
     <Link className={styles.skip} href="/">Voltar ao início</Link>
   </section>;
   return <section>
-    <h1 className={styles.title}>Criar conta</h1>
+    <h1 className={styles.title}>Criar conta</h1><p className={styles.subtitle}>Seu simulado começa aqui. O cadastro é grátis.</p>
     <form className={styles.panel} onSubmit={submit} noValidate aria-busy={busy}>
       <fieldset disabled={busy} className={styles.fields}>
         <div className={styles.field}>

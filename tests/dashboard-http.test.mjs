@@ -17,6 +17,6 @@ test('prévia mostra valores, botões de revisão e estados vazio/erro',async()=
 });
 test('revisão abre erro individual, resumo continua separado e nota perfeita revisa todas',async()=>{
  const review=(await (await fetch(origin+'/quiz/result/preview?review=errors')).text()).replaceAll('<!-- -->','');assert.match(review,/Revisão dos erros/);assert.match(review,/Próxima explicação/);
- const summary=await (await fetch(origin+'/quiz/result/preview')).text();assert.match(summary,/Seu resultado/);assert.doesNotMatch(summary,/Próxima explicação/);
+ const summary=await (await fetch(origin+'/quiz/result/preview')).text();assert.match(summary,/Seu ponto de partida/);assert.doesNotMatch(summary,/Próxima explicação/);
  const perfect=(await (await fetch(origin+'/quiz/result/preview?score=10&review=errors')).text()).replaceAll('<!-- -->','');assert.match(perfect,/Revisão das respostas/);
 });

@@ -1,5 +1,7 @@
 # Etapa 14 — cadastro
 
+Etapa 52: cadastro com texto mais curto e, após confirmação real da conta, comparação Gratuito/Premium. Continuar no gratuito permite salvar o quiz pelo cookie e abrir os simulados. Confirmação obrigatória, callback, validação e SMTP mantidos. Ver [novo fluxo](QUIZ-INICIAL-ETAPA-52.md).
+
 Atualização posterior em 14/10/2026: o responsável configurou Gmail SMTP e confirmou entrega e recuperação real com nova senha e login posterior. Esse teste comprova recuperação; não foi relatado um novo cadastro com confirmação após essa configuração. O registro anterior abaixo descreve a situação antes do SMTP. Ver [Autenticação](AUTENTICACAO-ETAPA-50.md).
 
 Atualização em 14/10/2026 — [etapa 50](AUTENTICACAO-ETAPA-50.md): leitura dos formulários limitada a cinco segundos, mantendo teto de bytes e proteção de origem; mensagem de demora e testes adicionais. Cadastro habilitado e confirmação exigida conferidos no Auth; token administrativo de conta descartável foi confirmado, sem entregar e-mail e sem comprovar o callback PKCE completo. Responsável ainda sem SMTP/domínio; [roteiro inicial](SMTP-INICIAL-GMAIL.md) preparado. Relatos abaixo preservam o histórico.

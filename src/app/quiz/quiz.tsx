@@ -8,6 +8,7 @@ import { toPublicQuiz, type GuestQuiz } from "@/lib/quiz/contract";
 import type { Answers } from "@/lib/quiz/result-contract";
 import { requestResult, ResultRequestError } from "@/lib/quiz/result-client";
 import styles from "./quiz.module.css";
+import CorrectionLoading from "./correction-loading";
 
 type Failure = "unavailable" | "network" | "expired";
 type Screen = { kind: "loading" } | { kind: "error"; reason: Failure } | { kind: "ready"; quiz: GuestQuiz };
@@ -68,7 +69,7 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
             <Link className={styles.returnLink} href="/">Voltar ao início</Link>
           </section>
         )}
-        {screen.kind === "ready" && <QuizSession key={screen.quiz.id} quiz={screen.quiz} preview={!!preview} onExpire={() => setScreen({ kind: "error", reason: "expired" })} />}
+        {screen.kind === "ready" && <><p className={`${styles.stepLabel} ${styles.quizLabel}`}>Aquecimento · 10 questões</p><QuizSession key={screen.quiz.id} quiz={screen.quiz} preview={!!preview} onExpire={() => setScreen({ kind: "error", reason: "expired" })} /></>}
       </main>
       {preview && <p className={styles.previewNotice}>Prévia local de interface. Sem envio de respostas.</p>}
       <noscript><p className={styles.message}>Ative o JavaScript para responder ao quiz.</p></noscript>
@@ -110,7 +111,6 @@ export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = fa
   function stillActive() { if (!simulation && hasExpired(quiz.expiresAt)) { onExpire(); return false; } return true; }
   async function submit() {
     if (sending.current || !stillActive()) return;
-    if (preview && !onFinish) { router.push("/quiz/result/preview"); return; }
     if (!submittedAnswers.current) {
       if (quiz.questions.some(q => !choices[q.id])) return;
       submittedAnswers.current = quiz.questions.map(q => ({ questionId: q.id, answer: choices[q.id] }));
@@ -118,6 +118,7 @@ export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = fa
     sending.current = true;
     setSubmission("sending");
     try {
+      if (preview && !onFinish) { router.push("/quiz/result/preview"); return; }
       if (onFinish) { await onFinish(submittedAnswers.current); if(!preview)try{sessionStorage.removeItem("simulation-"+quiz.id);}catch{} return; }
       await requestResult(submittedAnswers.current);
       router.replace("/quiz/result");
@@ -132,20 +133,20 @@ export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = fa
     if (index === quiz.questions.length - 1) { if(simulation)setConfirm(true);else void submit(); } else setIndex(index + 1);
     window.scrollTo({ top: 0, behavior: "instant" });
   }
-  if (submission !== "idle") return (
-    <section className={styles.message} role="status" aria-busy={submission === "sending"}>
-      <h1 ref={heading} tabIndex={-1}>{submission === "sending" ? "Finalizando seu teste…" : "Não foi possível confirmar o envio."}</h1>
-      <p>{submission === "sending" ? "Aguarde enquanto suas respostas são corrigidas." : "Tente novamente. Manteremos as mesmas respostas para recuperar seu resultado com segurança."}</p>
-      {submission === "failed" && <button className={styles.continue} onClick={() => void submit()}>Tentar novamente</button>}
+  if (submission === "sending") return <CorrectionLoading headingRef={heading}/>;
+  if (submission === "failed") return (
+    <section className={styles.message} role="status">
+      <h1 ref={heading} tabIndex={-1}>Não foi possível carregar o resultado.</h1>
+      <p>Suas respostas foram mantidas. Tente novamente.</p>
+      <button className={styles.continue} onClick={() => void submit()}>Tentar novamente</button>
       <Link className={styles.returnLink} href="/">Voltar ao início</Link>
     </section>
   );
   if(confirm)return <section className={styles.message}>
-    <h1 ref={heading} tabIndex={-1}>Conferir respostas</h1>
-    <p>A correção aparece após o envio. Escolha uma questão para alterar sua resposta.</p>
+    <p className={styles.stepLabel}>Tudo respondido</p><h1 ref={heading} tabIndex={-1}>Pronto para corrigir?</h1>
+    <p>Toque em uma questão se quiser mudar sua resposta.</p>
     <div className={styles.reviewChoices}>{quiz.questions.map((q,i)=><button className={styles.back} key={q.id} onClick={()=>{setIndex(i);setConfirm(false);}} aria-label={`Questão ${i+1}, alternativa ${choices[q.id]??"não respondida"}`}>{i+1}: {choices[q.id]??"—"}</button>)}</div>
-    <button className={styles.continue} disabled={quiz.questions.some(q=>!choices[q.id])} onClick={()=>void submit()}>Enviar e ver resultado<Image src="/icons/arrow-right.svg" width={23} height={23} alt=""/></button>
-    <p>O envio é definitivo.</p>
+    <button className={styles.continue} disabled={quiz.questions.some(q=>!choices[q.id])} onClick={()=>void submit()}>Finalizar e ver resultado<Image src="/icons/arrow-right.svg" width={23} height={23} alt=""/></button>
   </section>;
   return (
     <>

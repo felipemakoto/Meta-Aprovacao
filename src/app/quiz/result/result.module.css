@@ -30,5 +30,16 @@
 .explanation p { font-size: 16px; line-height: 1.5; margin: 0; white-space: pre-line; overflow-wrap: anywhere; }
 .secondary { width: 100%; min-height: 48px; border: 1px solid #a8baaf; border-radius: 5px; background: none; color: var(--color-action); font: inherit; font-weight: 600; margin-top: 10px; cursor: pointer; }
 .secondary:hover { background: #e6eee4; }
+.secondaryLink {display:flex;align-items:center;justify-content:center;text-decoration:none;}
+.focusTitle {font-size:17px;font-weight:650;margin:26px 0 14px;}
+.focusTopics li {display:flex;align-items:center;gap:16px;padding:15px 0;}
+.topic small {display:block;font-size:12px;color:var(--color-text-secondary);margin-top:4px;}
+.nextStep {border-top:1px solid var(--color-divider);margin-top:28px;padding-top:24px;}
+.nextStep h2 {font:400 28px/1.2 var(--font-display),Georgia,serif;margin:0 0 12px;}
+.nextStep>p:not(:first-child) {font-size:15px;line-height:1.5;color:var(--color-text-secondary);margin:0;}
+.actionLink {text-decoration:none;margin-top:22px;min-height:58px;}
+.nextStep .accountHint {font-size:12px!important;margin-top:12px!important;text-align:center;}
+.signin {text-align:center;font-size:14px;color:var(--color-text-secondary);margin-top:24px;}
+.signin a {color:var(--color-action);text-underline-offset:4px;}
 @media (min-width: 600px) { .summary { padding-top: 38px; } .question { font-size: 26px; } }
 @media (max-width: 359px) { .topics button { gap: 10px; } .score { font-size: 19px; } }

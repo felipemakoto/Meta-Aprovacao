@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "content:intro:check": "node scripts/build-intro-quiz.mjs --check",
+    "test:intro": "node --test tests/intro-quiz.test.mjs",
+    "test:intro:sql": "node scripts/test-intro-quiz-sql.mjs --applied",
     "test:content:exam:sql": "node scripts/test-editorial-release.mjs",
     "test:study:selection": "node scripts/test-study-selection.mjs",
     "content:exam:build": "node scripts/build-exam-bank.mjs && node scripts/build-editorial-release-sql.mjs && node scripts/build-editorial-review.mjs && node scripts/build-editorial-audit.mjs && node scripts/build-simulation-editorial-plan.mjs",

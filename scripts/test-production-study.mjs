@@ -76,8 +76,8 @@ try{
  passed('five_authenticated_pages');
  phase='premium_and_checkout';
  const premium=(await (await request('/premium')).text()).replaceAll('<!-- -->','');
- assert.match(premium,/<button[^>]*disabled[^>]*>Escolher Premium/);assert.match(premium,/R\$22,99/);
- assert.match(premium,/R\$23,98/);assert.doesNotMatch(premium,/Seu Premium está ativo/);
+ assert.match(premium,/<button[^>]*disabled[^>]*>Premium em breve/);assert.match(premium,/10 questões por dia/);
+ assert.match(premium,/R\$\s*23,98/);assert.doesNotMatch(premium,/Premium ativo até/);
  assert.deepEqual(await json('/api/premium/checkout',{method:'POST',expected:503}),{error:'checkout_unavailable'});
  passed('premium_denied_and_checkout_disabled');
  phase='limits_before';

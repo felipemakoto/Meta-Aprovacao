@@ -7,6 +7,7 @@ import base from "../quiz/quiz.module.css";
 import styles from "./practice.module.css";
 import {useDailyLimits} from "@/lib/quiz/use-daily-limits";
 import {dailyLimitMessage} from "@/lib/quiz/limits-contract";
+import CorrectionLoading from "../quiz/correction-loading";
 const initial:Filters={subject:"matematica",topic:"",difficulty:"all",exam:"all"};
 const sample:PracticeQuestion={id:"00000000-0000-4000-8000-000000000019",questionId:"00000000-0000-4000-8000-000000000001",expiresAt:"2030-01-01T00:00:00Z",subject:"matematica",topic:"Porcentagem",statement:"Uma mochila custa R$ 80,00. Com 15% de desconto, qual é o preço final?",options:["R$ 12,00","R$ 68,00","R$ 65,00","R$ 72,00","R$ 92,00"]};
 const messages:Record<string,string>={login_required:"Entre na sua conta para continuar.",attempt_unavailable:"O prazo desta questão terminou. Aplique os filtros para começar outra.",already_answered:"Esta questão já foi respondida. Continue com uma nova questão.",rate_limited:"Muitas solicitações. Aguarde um minuto antes de tentar novamente.",daily_practice_limit:"Você usou as 10 questões de hoje. Novas questões ficam disponíveis à meia-noite de São Paulo. Você ainda pode conferir a questão aberta e revisar seu histórico."};
@@ -18,6 +19,7 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
   const [answer,setAnswer]=useState(preview?"B":"");
   const [feedback,setFeedback]=useState<PracticeFeedback|null>(null);
   const [busy,setBusy]=useState(false);const lock=useRef(false);
+  const [correcting,setCorrecting]=useState(false);
   const [message,setMessage]=useState(unavailable?"Não foi possível verificar sua conta. Recarregue a página para tentar novamente.":preview&&limitReached?messages.daily_practice_limit:"");
   const heading=useRef<HTMLHeadingElement>(null);const status=useRef<HTMLDivElement>(null);
   const [loaded,setLoaded]=useState(preview);
@@ -32,7 +34,7 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
   function change(field:keyof Filters,value:string){pending.current=null;setFilters(f=>({...f,[field]:value,...(field==="subject"?{topic:""}:{})}));setQuestion(null);setFeedback(null);setAnswer("");setMessage("");setLoaded(false);if(field==="subject")setTopics([]);}
   async function run(action:"next"|"answer"){
     if(lock.current||unavailable)return;if(action==="answer"&&(!answer||!question))return;
-    lock.current=true;setBusy(true);setMessage("");
+    lock.current=true;setBusy(true);setCorrecting(action==="answer");setMessage("");
     try{
       if(preview){
         if(action==="next"&&limitReached){setMessage(messages.daily_practice_limit);return;}
@@ -47,7 +49,7 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
       if(action==="next"){setQuestion(b.question?publicQuestion(b.question):null);pending.current=null;setAnswer("");setFeedback(null);setLoaded(true);}
       else setFeedback(publicFeedback(b.feedback));
     }catch(e){setMessage(e instanceof Error && Object.values(messages).includes(e.message)?e.message:"A conexão falhou. Tente novamente; sua resposta não será duplicada.");}
-    finally{if(!preview)void quota.refresh();lock.current=false;setBusy(false);requestAnimationFrame(()=>{if(action==="next")heading.current?.focus();else status.current?.focus();});}
+    finally{if(!preview)void quota.refresh();lock.current=false;setBusy(false);setCorrecting(false);requestAnimationFrame(()=>{if(action==="next")heading.current?.focus();else status.current?.focus();});}
   }
   return <div className={base.page}>
     <header className={base.header}><Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF</Link><Link className={base.exit} href="/dashboard">Meus estudos</Link></header>
@@ -70,6 +72,7 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
       {question?<section className={styles.content}><p className={styles.metadata}>{subjects[question.subject as keyof typeof subjects]} · {question.topic}</p><h2 ref={heading} tabIndex={-1} className={`${base.question} ${styles.question}`}>{question.statement}</h2>
         <form onSubmit={e=>{e.preventDefault();void run("answer");}}><fieldset className={base.options} disabled={busy||!!feedback}><legend className={base.srOnly}>Escolha uma alternativa</legend>{question.options.map((option,i)=>{const letter="ABCDE"[i];return <label className={base.option} key={letter}><input type="radio" name="answer" value={letter} required checked={answer===letter} onChange={()=>setAnswer(letter)} /><span className={base.letter}>{letter}</span><span>{option}</span></label>;})}</fieldset>
         {!feedback&&<button className={base.continue} disabled={busy||!answer}>{busy?"Conferindo…":"Conferir resposta"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>}</form>
+        {correcting&&<CorrectionLoading compact title="Conferindo sua resposta…"/>}
         {feedback&&<div ref={status} tabIndex={-1} role="status" aria-live="polite"><section className={styles.feedback}><h3>{feedback.correct?"Você acertou":"Vamos revisar"}</h3><p>Resposta correta: {feedback.correctAnswer} — {question.options["ABCDE".indexOf(feedback.correctAnswer)]}</p><p>{feedback.explanation}</p></section></div>}
         {feedback&&<button className={base.continue} disabled={busy} onClick={()=>void run("next")}>Próxima questão<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>}
       </section>:loaded&&<p className={styles.notice}>Nenhuma questão encontrada. Tente outros filtros.</p>}

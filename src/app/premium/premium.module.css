@@ -1,4 +1,4 @@
-.page {width:min(100% - 48px,520px);padding-block:20px 40px;}
+.page {width:min(100% - 48px,860px);padding-block:20px 40px;}
 .page>header {padding-bottom:10px;}
 .title {font:400 clamp(36px,8vw,44px)/1.1 var(--font-display),Georgia,serif;margin:20px 0 8px;}
 .promotion {font-size:clamp(10.5px,3vw,13px);line-height:1.2;white-space:nowrap;color:var(--color-action);margin:0;}
