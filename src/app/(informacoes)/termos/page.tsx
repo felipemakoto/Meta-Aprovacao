@@ -1,0 +1,18 @@
+import Link from "next/link";
+import {checkoutEnabled} from "@/lib/subscriptions/checkout-launch";
+import styles from "../../information.module.css";
+export const metadata={title:"Termos de uso | Meta Aprovação",description:"Condições de uso da plataforma de estudos Meta Aprovação."};
+
+export default function TermsPage() {
+  return <article><h1>Termos de uso</h1><p className={styles.updated}>Atualizados em 15 de outubro de 2026.</p>
+    <h2>Sobre a plataforma</h2><p>A Meta Aprovação oferece questões, diagnóstico inicial, simulados e acompanhamento de estudos para preparação para ETEC e IFSP. É uma plataforma independente, sem vínculo institucional com essas instituições. Os resultados são orientações de estudo e não garantem aprovação ou reproduzem uma classificação oficial.</p>
+    <h2>Sua conta e seus estudos</h2><p>Use um e-mail ao qual você tenha acesso, confirme o cadastro e mantenha sua senha protegida. Não utilize a conta de outra pessoa nem compartilhe credenciais. Estudantes menores de idade devem contar com acompanhamento adequado de seus responsáveis.</p><p>Resultados e histórico dependem da conclusão e do salvamento das atividades. O quiz inicial sem conta tem prazo de acesso; limpar cookies ou trocar de navegador pode impedir a retomada. Questões podem voltar a aparecer em atividades futuras.</p>
+    <h2>Gratuito e Premium</h2><p>O gratuito permite dez novas questões de prática e um novo simulado rápido por dia, com renovação do saldo à meia-noite no horário de São Paulo. Os benefícios e valores do Premium são apresentados na <Link href="/premium">página de planos</Link>.</p>
+    {!checkoutEnabled&&<p><strong>A contratação do Premium ainda está indisponível.</strong> A exibição de um plano ou de um botão para conhecer os benefícios não representa confirmação de compra.</p>}
+    <p>Quando a contratação estiver disponível, confira no checkout o total, as taxas, a recorrência e a validade dos descontos antes de pagar. O acesso pago depende de confirmação e vinculação do pagamento à conta; um comprovante enviado isoladamente não substitui a verificação.</p>
+    <h2>Cancelamento, reembolso e direitos</h2><p>Para dúvidas sobre cobranças, cancelamento de renovações ou reembolso, fale com <a href="mailto:metaaprovacao720@gmail.com">metaaprovacao720@gmail.com</a>. O cancelamento de futuras cobranças e o pedido de reembolso são solicitações distintas. O acesso considera o período pago e a confirmação de eventual reversão do pagamento.</p><p>São preservados os direitos previstos na legislação aplicável, incluindo o direito de arrependimento nas contratações a distância, nos casos e prazos previstos no Código de Defesa do Consumidor. Estes termos não afastam esses direitos.</p>
+    <h2>Uso adequado</h2><p>Não tente burlar cotas, acessar contas ou dados de terceiros, explorar falhas ou extrair o banco de questões de forma automatizada. Não redistribua conteúdo sem a autorização necessária. Problemas identificados podem ser comunicados ao suporte.</p>
+    <h2>Conteúdo e disponibilidade</h2><p>Enunciados e explicações podem ser corrigidos. Se encontrar uma inconsistência, envie a questão para conferência. Serviços de internet podem sofrer falhas; não há promessa de disponibilidade ininterrupta. Isso não exclui responsabilidades ou direitos previstos em lei.</p>
+    <h2>Privacidade e atendimento</h2><p>A utilização de dados é descrita na <Link href="/privacidade">política de privacidade</Link>. O responsável pelo serviço e pelo atendimento é a Meta Aprovação, pelo e-mail <a href="mailto:metaaprovacao720@gmail.com">metaaprovacao720@gmail.com</a>. Veja também a <Link href="/suporte">página de suporte</Link>.</p>
+  </article>;
+}

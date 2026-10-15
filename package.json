@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "ops:check": "node --env-file=.env.local scripts/operations-check.mjs",
+    "ops:notice": "node --env-file=.env.local --env-file=.env.operations.local scripts/operations-notice.mjs",
+    "backup:create": "node --env-file=.env.local scripts/backup-database.mjs create",
+    "backup:verify": "node scripts/backup-database.mjs verify",
+    "test:operations": "node --test tests/operations.test.mjs tests/backup-crypto.test.mjs",
     "content:intro:check": "node scripts/build-intro-quiz.mjs --check",
     "test:intro": "node --test tests/intro-quiz.test.mjs",
     "test:intro:sql": "node scripts/test-intro-quiz-sql.mjs --applied",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, Geist } from "next/font/google";
 import "./globals.css";
+import SiteFooter from "./site-footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${geistSans.variable} ${displayFont.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>{children}<SiteFooter/></body>
     </html>
   );
 }

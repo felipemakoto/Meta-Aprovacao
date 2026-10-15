@@ -1,0 +1,23 @@
+import Link from "next/link";
+import styles from "../../information.module.css";
+export const metadata={title:"Privacidade | Meta Aprovação",description:"Saiba quais dados a Meta Aprovação utiliza e como solicitar atendimento sobre privacidade."};
+
+export default function PrivacyPage() {
+  return <article><h1>Política de privacidade</h1><p className={styles.updated}>Atualizada em 15 de outubro de 2026.</p>
+    <h2>Quem é responsável</h2><p>A Meta Aprovação é responsável pela operação desta plataforma. O contato para questões sobre dados pessoais é <a href="mailto:metaaprovacao720@gmail.com">metaaprovacao720@gmail.com</a>.</p>
+    <h2>Dados que utilizamos</h2><ul>
+      <li><strong>Conta:</strong> e-mail, identificador de usuário e informações de autenticação necessárias ao cadastro, confirmação, entrada e recuperação de senha.</li>
+      <li><strong>Estudos:</strong> respostas, resultados, assuntos praticados, tentativas, datas, duração e consumo dos limites diários.</li>
+      <li><strong>Funcionamento e segurança:</strong> cookies de sessão, identificadores de tentativa e registros técnicos de acesso e falhas. O rascunho de um simulado pode ficar no armazenamento de sessão do navegador.</li>
+      <li><strong>Atendimento:</strong> informações que você enviar voluntariamente ao suporte.</li>
+      <li><strong>Assinatura, quando disponível:</strong> identificadores de pedidos e assinatura, estado do pagamento e período de acesso. Dados completos do cartão são tratados no checkout do provedor de pagamento, não nos formulários de estudo.</li>
+    </ul>
+    <h2>Para que usamos</h2><p>Os dados permitem manter sua conta, corrigir atividades, salvar histórico, apresentar estatísticas, aplicar os limites do plano, verificar direitos de acesso e atender solicitações. Também são usados para prevenir abuso, investigar falhas e cumprir obrigações aplicáveis.</p><p>Conforme a finalidade, o tratamento se relaciona à prestação do serviço solicitado, às obrigações legais e à proteção e segurança do serviço. Quando uma finalidade exigir consentimento, ele deve ser informado e obtido de forma específica; usar o site não equivale a autorizar qualquer finalidade.</p>
+    <h2>Serviços que participam da operação</h2><p>Utilizamos a Vercel para hospedagem, o Supabase para banco de dados e autenticação, serviços de e-mail para mensagens da conta e atendimento e a Cakto para a integração de pagamentos. Eles recebem os dados necessários às respectivas funções. O processamento pode envolver infraestrutura fora do Brasil, conforme a configuração e as condições desses fornecedores.</p>
+    <h2>Cookies e armazenamento no navegador</h2><p>Cookies são utilizados para sessão, confirmação e recuperação da conta e para identificar o quiz inicial. O armazenamento de sessão ajuda a retomar respostas de simulados. Remover esses dados pode encerrar a sessão ou impedir a retomada de uma atividade. O código atual não inclui ferramentas de publicidade ou medição comportamental de terceiros.</p>
+    <h2>Tempo de conservação</h2><p>Os dados da conta e dos estudos são mantidos enquanto necessários para prestar o serviço e atender solicitações. Registros de segurança, pagamentos e obrigações legais podem ter conservação própria. Não prometemos exclusão imediata de todos os registros: pedidos são analisados considerando finalidade, necessidade e obrigações aplicáveis. A política operacional de prazos está em definição.</p>
+    <h2>Seus direitos e contato</h2><p>Você pode solicitar confirmação do tratamento, acesso, correção, informações sobre compartilhamento e, quando cabível, anonimização, bloqueio, exclusão, portabilidade ou revogação de consentimento. Envie o pedido para <a href="mailto:metaaprovacao720@gmail.com">metaaprovacao720@gmail.com</a>. Podemos confirmar a identidade de quem solicita, sem pedir sua senha.</p>
+    <h2>Estudantes menores de idade</h2><p>O tratamento de dados de crianças e adolescentes deve observar seu melhor interesse. Responsáveis podem usar o canal de privacidade para esclarecer o uso da plataforma e exercer os direitos relativos aos dados do estudante. Não há, no cadastro atual, uma verificação automática de idade ou de representação legal.</p>
+    <h2>Atualizações</h2><p>Este texto será atualizado quando houver mudanças relevantes no serviço ou no uso dos dados. A data da versão aparece no início da página. Consulte também os <Link href="/termos">termos de uso</Link>.</p>
+  </article>;
+}
