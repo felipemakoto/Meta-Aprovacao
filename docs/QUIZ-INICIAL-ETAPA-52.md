@@ -40,3 +40,9 @@ A nova tabela tem RLS e nenhuma permissão direta para anon, authenticated ou se
 - `/premium/preview`: gratuito/Premium, erro, assinatura ativa e fim da promoção.
 
 Prévias continuam limitadas a desenvolvimento e retornam 404 em produção. Nenhuma cobrança ou concessão Premium foi feita. As pendências de validação financeira Cakto da etapa 51 continuam.
+
+## Publicação e ajuste solicitado na conferência
+
+Publicação do fluxo confirmada em `https://meta-aprovacao.vercel.app`, commit inicial `7ca0df7`. O percurso de sete verificações também passou no domínio público, com quiz real, planos, associação, simulado e correção; fixture removida, sem envio de e-mail ou cobrança. Os dez grupos integrados de estudo em produção passaram, incluindo cotas, histórico, estatísticas, bloqueio Premium e logout. Prévias novas retornam 404 em produção.
+
+Na conferência, o responsável pediu menos texto no Gratuito e mais no Premium. O Gratuito ficou com dois itens: dez questões por dia e um rápido por dia. O Premium passou a sete itens, detalhando também correção, histórico e estatísticas; uma nota comum esclarece que esses três recursos também existem no gratuito. Cartões têm alturas naturais para evitar espaço vazio no Gratuito. Nenhum benefício, limite, preço ou disponibilidade foi alterado.
