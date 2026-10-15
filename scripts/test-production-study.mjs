@@ -71,6 +71,11 @@ try{
  assert.deepEqual(await json('/api/auth/login',{method:'POST',body:{email,password}}),{status:'signed_in'});
  assert.ok(jar.size);assert.deepEqual(await json('/api/auth/status'),{authenticated:true});
  passed('production_login_and_session');
+ phase='account_navigation';
+ const account=await (await request('/login')).text();
+ assert.match(account,/Desbloquear Premium/);assert.doesNotMatch(account,/Mudar de plano|Escolher plano e fazer um simulado/);
+ for(const [href,label] of [['/dashboard','Meus estudos'],['/simulados','Fazer um simulado'],['/premium','Desbloquear Premium']])assert.ok(account.includes(`href="${href}"`)&&account.includes(label));
+ passed('published_account_offer_and_direct_simulation');
  phase='private_pages';
  for(const route of ['/dashboard','/questoes','/simulados','/historico','/estatisticas'])await request(route);
  passed('five_authenticated_pages');

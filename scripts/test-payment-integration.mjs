@@ -19,7 +19,7 @@ const file=path.join(dir,`payment-integration-${user}.sql`);
 function query(sql) {
  writeFileSync(file,sql);
  const r=spawnSync(process.execPath,[cli,'db','query','--linked','--file',file],{encoding:'utf8',timeout:45000,windowsHide:true});
- if(r.status!==0 || r.error || r.stdout.includes('"_tag":"Error"')) throw Error('Verificação SQL/limpeza da fixture falhou.');
+ if(r.status!==0 || r.error || /"_tag"\s*:\s*"Error"/.test(r.stdout)) throw Error('Verificação SQL/limpeza da fixture falhou.');
 }
 async function rpc(name,args) {
  const {data,error}=await admin.rpc(name,args).abortSignal(AbortSignal.timeout(5000));
