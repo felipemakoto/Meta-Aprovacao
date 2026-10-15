@@ -4,7 +4,7 @@ import {RESULT_TRANSITION_MS,withResultTransition} from '../src/lib/quiz/result-
 
 test('operação começa imediatamente, mas resposta rápida aguarda a transição visual',async t=>{
  t.mock.timers.enable({apis:['setTimeout']});
- assert.equal(RESULT_TRANSITION_MS,10000);
+ assert.equal(RESULT_TRANSITION_MS,5000);
  let calls=0,settled=false;const result={score:7};
  const pending=withResultTransition(async()=>{calls++;return result;});
  pending.then(()=>{settled=true;});assert.equal(calls,1);

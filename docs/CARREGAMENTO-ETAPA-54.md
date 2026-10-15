@@ -1,19 +1,21 @@
 # Carregamento ao finalizar — etapa 54
 
-O responsável pediu que a barra se complete em cerca de dez segundos e exiba a mensagem **“Estamos conferindo as respostas.”**. O comportamento vale para o quiz inicial e os simulados, incluindo as prévias locais.
+O responsável pediu inicialmente dez segundos e depois reduziu para **cinco segundos**, mantendo a mensagem **“Estamos conferindo as respostas.”**. O comportamento vale para o quiz inicial e os simulados, incluindo as prévias locais.
 
 ## Comportamento
 
-- Ao finalizar, a página volta ao topo e mostra a barra preenchendo de 0 a 99% ao longo de dez segundos. O envio para correção começa imediatamente, em paralelo.
-- O percentual representa a transição visual solicitada, não uma medição do trabalho de correção no servidor. Se a resposta demorar mais de dez segundos, a barra aguarda em 99% até o retorno; não reinicia o prazo.
+- Ao finalizar, a página volta ao topo e mostra a barra preenchendo de 0 a 99% ao longo de cinco segundos. O envio para correção começa imediatamente, em paralelo.
+- O percentual representa a transição visual solicitada, não uma medição do trabalho de correção no servidor. Se a resposta demorar mais de cinco segundos, a barra aguarda em 99% até o retorno; não reinicia o prazo.
 - Com o resultado disponível e o prazo completo, a barra chega a 100% e permanece por 120 ms antes de mostrar o resultado.
 - Prévias usam a mesma transição; a correção dos simulados só substitui a tela após a espera. Na navegação para fora da tela, o resultado tardio não redireciona o visitante de volta.
 - Erros continuam permitindo nova tentativa com as respostas preservadas. Bloqueio de envio duplicado, cookies, origem, prazo da requisição e regras de correção permanecem iguais.
 - A preferência por movimento reduzido remove a interpolação da largura. Os carregamentos breves de consulta e de prática individual mantêm a indicação indeterminada anterior.
 
-O mínimo de dez segundos foi solicitado expressamente nesta etapa e substitui a decisão de não adicionar atraso registrada na etapa 52. Nenhuma mudança em conteúdo, banco, planos ou contratação.
+O tempo mínimo foi solicitado expressamente nesta etapa e substitui a decisão de não adicionar atraso registrada na etapa 52. Nenhuma mudança em conteúdo, banco, planos ou contratação.
 
 ## Verificação
+
+Redução para cinco segundos: oito testes de resultado/transição aprovados, incluindo duração de 5000 ms. No navegador, quiz e simulado de prévia chegaram a 40% após dois segundos, completaram a barra e exibiram o resultado em aproximadamente 5,35 s e 5,24 s. As verificações abaixo correspondem à versão inicial de dez segundos.
 
 - 21 testes Node aprovados, cobrindo transição, início imediato da operação, resposta lenta sem espera adicional, identidade dos erros e regressões dos contratos de resultado/correção/simulado. `npm run test:result` inclui os três novos testes.
 - Lint, TypeScript e build aprovados.
