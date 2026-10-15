@@ -9,6 +9,7 @@ import type { Answers } from "@/lib/quiz/result-contract";
 import { requestResult, ResultRequestError } from "@/lib/quiz/result-client";
 import styles from "./quiz.module.css";
 import CorrectionLoading from "./correction-loading";
+import {withResultTransition} from "@/lib/quiz/result-transition";
 
 type Failure = "unavailable" | "network" | "expired";
 type Screen = { kind: "loading" } | { kind: "error"; reason: Failure } | { kind: "ready"; quiz: GuestQuiz };
@@ -77,13 +78,15 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
   );
 }
 
-export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = false }: { quiz: GuestQuiz; preview: boolean; onExpire: () => void; onFinish?: (answers:Answers)=>Promise<void>; simulation?:boolean }) {
+export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = false }: { quiz: GuestQuiz; preview: boolean; onExpire: () => void; onFinish?: (answers:Answers)=>Promise<()=>void>; simulation?:boolean }) {
   const router = useRouter();
   const [index, setIndex] = useState(0);
   const [choices, setChoices] = useState<Record<string, string>>({});
   const [confirm, setConfirm] = useState(false);
-  const [submission, setSubmission] = useState<"idle" | "sending" | "failed">("idle");
+  const [submission, setSubmission] = useState<"idle" | "sending" | "complete" | "failed">("idle");
   const sending = useRef(false);
+  const mounted=useRef(true);
+  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;};},[]);
   const submittedAnswers = useRef<Answers | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
   const question = quiz.questions[index];
@@ -117,12 +120,22 @@ export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = fa
     }
     sending.current = true;
     setSubmission("sending");
+    window.scrollTo({top:0,behavior:"instant"});
     try {
-      if (preview && !onFinish) { router.push("/quiz/result/preview"); return; }
-      if (onFinish) { await onFinish(submittedAnswers.current); if(!preview)try{sessionStorage.removeItem("simulation-"+quiz.id);}catch{} return; }
-      await requestResult(submittedAnswers.current);
-      router.replace("/quiz/result");
+      // Keep rendering here until both the provider and the visual transition finish.
+      const showResult=await withResultTransition(async()=>{
+        if(preview&&!onFinish)return ()=>router.push("/quiz/result/preview");
+        if(onFinish){const commit=await onFinish(submittedAnswers.current!);return ()=>{commit();if(!preview)try{sessionStorage.removeItem("simulation-"+quiz.id);}catch{}};}
+        await requestResult(submittedAnswers.current!);
+        return ()=>router.replace("/quiz/result");
+      });
+      if(!mounted.current)return;
+      setSubmission("complete");
+      // Let the filled bar paint before replacing it with the result.
+      await new Promise<void>(resolve=>setTimeout(resolve,120));
+      if(mounted.current)showResult();
     } catch (error) {
+      if(!mounted.current)return;
       if (error instanceof ResultRequestError && error.status === 401) onExpire();
       else if (error instanceof ResultRequestError && error.status === 409) router.replace("/quiz/result");
       else setSubmission("failed");
@@ -133,7 +146,7 @@ export function QuizSession({ quiz, preview, onExpire, onFinish, simulation = fa
     if (index === quiz.questions.length - 1) { if(simulation)setConfirm(true);else void submit(); } else setIndex(index + 1);
     window.scrollTo({ top: 0, behavior: "instant" });
   }
-  if (submission === "sending") return <CorrectionLoading headingRef={heading}/>;
+  if (submission === "sending"||submission==="complete") return <CorrectionLoading headingRef={heading} timed complete={submission==="complete"}/>;
   if (submission === "failed") return (
     <section className={styles.message} role="status">
       <h1 ref={heading} tabIndex={-1}>Não foi possível carregar o resultado.</h1>

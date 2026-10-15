@@ -13,14 +13,17 @@ import historyStyles from "../historico/history.module.css";
 export default function SimulationSession({initial,preview=false,onBack,historyView=false}:{initial:SimulationState;preview?:boolean;onBack?:()=>void;historyView?:boolean}){
  const [state,setState]=useState(initial),[expired,setExpired]=useState(false),[login,setLogin]=useState(false);
  async function finish(answers:Answers){
-  if(preview){setState(previewCorrection(state,answers));return;}
-  if(!("quiz" in state))return;
-  const r=await fetch("/api/simulations",{method:"POST",cache:"no-store",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"submit",id:state.quiz.id,answers}),signal:AbortSignal.timeout(15000)});
-  if(r.status===401){setLogin(true);throw new Error("login_required");}
-  if(r.status===404){setExpired(true);throw new Error("expired");}
-  if(r.status===409){const saved=await fetch("/api/simulations?id="+state.quiz.id,{cache:"no-store",credentials:"same-origin",signal:AbortSignal.timeout(15000)});if(saved.ok){const result=parseSimulationState(await saved.json());if("result" in result){setState(result);return;}}}
-  if(!r.ok)throw new Error("submission_failed");
-  setState(parseSimulationState(await r.json()));
+  const next=await (async()=>{
+   if(preview)return previewCorrection(state,answers);
+   if(!("quiz" in state))return state;
+   const r=await fetch("/api/simulations",{method:"POST",cache:"no-store",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"submit",id:state.quiz.id,answers}),signal:AbortSignal.timeout(15000)});
+   if(r.status===401){setLogin(true);throw new Error("login_required");}
+   if(r.status===404){setExpired(true);throw new Error("expired");}
+   if(r.status===409){const saved=await fetch("/api/simulations?id="+state.quiz.id,{cache:"no-store",credentials:"same-origin",signal:AbortSignal.timeout(15000)});if(saved.ok){const result=parseSimulationState(await saved.json());if("result" in result)return result;}}
+   if(!r.ok)throw new Error("submission_failed");
+   return parseSimulationState(await r.json());
+  })();
+  return ()=>setState(next);
  }
  const back=onBack?<button className={base.back} onClick={onBack}>Voltar aos simulados</button>:<Link className={base.returnLink} href="/simulados">Voltar aos simulados</Link>;
  const historyBack=onBack?<button className={historyStyles.backLink} onClick={onBack}><Image className={historyStyles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</button>:<Link className={historyStyles.backLink} href="/historico?kind=simulations"><Image src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</Link>;

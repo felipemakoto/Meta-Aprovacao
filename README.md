@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização — etapa 54: [barra ao finalizar quiz e simulados](docs/CARREGAMENTO-ETAPA-54.md) com preenchimento em cerca de dez segundos e mensagem “Estamos conferindo as respostas.”, conforme pedido do responsável. Resultado exibido após a transição e a resposta real; prévias também contempladas. 21 testes, navegação com banco real local, tempo de preenchimento, resposta lenta, saída durante espera, lint e build aprovados. Registros abaixo são históricos.
+
 Atualização — etapa 53: [quiz inicial contextualizado](docs/QUIZ-INICIAL-ETAPA-53.md), com dez enunciados mais desenvolvidos e mistura de cinco questões fáceis/cinco intermediárias, em níveis editoriais estimados. Conteúdo autoral com referência de estilo nos cadernos ETEC/IFSP. Versão anterior e tentativas preservadas; banco publicado e planos mantidos. 26 testes, ensaio SQL, 30 combinações de tela, lint e build aprovados. Registros abaixo são históricos.
 
 Atualização — etapa 52: [novo percurso inicial](docs/QUIZ-INICIAL-ETAPA-52.md), com dez perguntas fáceis fixas, diagnóstico dos assuntos errados e caminho para cadastro, planos Gratuito/Premium e simulado do banco ETEC/IFSP. Barra durante correção de quiz, simulados e questões; menus e textos simplificados. As 500 questões e seis modelos publicados foram preservados; dez itens introdutórios separados. Testes Node/HTTP/SQL, navegação completa e 32 combinações de telas/larguras aprovados. Contratação paga continua indisponível. Registros abaixo são históricos.
