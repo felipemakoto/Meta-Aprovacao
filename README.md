@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização — etapa 55: [botões mais perceptíveis no celular](docs/BOTOES-MOVEIS-ETAPA-55.md), com padrão de contraste, bordas e áreas de toque em todas as telas. Conta com simulado direto e “Mudar de plano” em gradiente. Conferidas 60 combinações de telas/larguras e 32 controles em hover/foco, além de lint e build. Registros abaixo são históricos.
+
 Atualização — etapa 54: [barra ao finalizar quiz e simulados](docs/CARREGAMENTO-ETAPA-54.md) com preenchimento em cerca de cinco segundos e mensagem “Estamos conferindo as respostas.”, conforme último pedido do responsável. Resultado exibido após a transição e a resposta real; prévias também contempladas. A versão inicial de dez segundos passou por 21 testes, navegação com banco real local, resposta lenta, saída durante espera, lint e build. Registros abaixo são históricos.
 
 Atualização — etapa 53: [quiz inicial contextualizado](docs/QUIZ-INICIAL-ETAPA-53.md), com dez enunciados mais desenvolvidos e mistura de cinco questões fáceis/cinco intermediárias, em níveis editoriais estimados. Conteúdo autoral com referência de estilo nos cadernos ETEC/IFSP. Versão anterior e tentativas preservadas; banco publicado e planos mantidos. 26 testes, ensaio SQL, 30 combinações de tela, lint e build aprovados. Registros abaixo são históricos.

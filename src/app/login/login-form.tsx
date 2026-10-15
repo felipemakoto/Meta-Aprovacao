@@ -42,8 +42,8 @@ export default function LoginForm({ signedIn }: { signedIn: boolean }) {
     {signedIn && <p className={styles.subtitle}>Sua sessão está ativa neste navegador.</p>}
     {signedIn && <nav className={accountStyles.actions} aria-label="Continuar na plataforma">
       <Link className={`${accountStyles.action} ${accountStyles.primary}`} href="/dashboard">Meus estudos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
-      <Link className={`${accountStyles.action} ${accountStyles.plan}`} href="/cadastro/confirmado"><span>Escolher plano e fazer um simulado</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
-      <Link className={accountStyles.action} href="/"><span>Voltar ao início</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 4-8 7v9h6v-6h4v6h6v-9Z"/></svg></Link>
+      <Link className={`${accountStyles.action} ${accountStyles.simulation}`} href="/simulados"><span>Fazer um simulado</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
+      <Link className={`${accountStyles.action} ${accountStyles.upgrade}`} href="/premium"><span>Mudar de plano</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m7 17 10-10M7 7h10v10"/></svg></Link>
     </nav>}
     <form className={styles.panel} onSubmit={submit} aria-busy={busy}>
       <fieldset className={styles.fields} disabled={busy}>

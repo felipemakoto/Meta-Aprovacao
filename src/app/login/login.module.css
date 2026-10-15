@@ -1,11 +1,13 @@
 .actions { display: grid; gap: 12px; margin-top: 28px; }
-.action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 14px 18px; border: 1px solid #9eb3a5; border-radius: 8px; background: #fffef9; color: var(--color-action); font-size: 17px; line-height: 1.4; font-weight: 600; text-decoration: none; }
+.action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 14px 18px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); box-shadow: var(--control-shadow); color: var(--color-action); font-size: 17px; line-height: 1.4; font-weight: 650; text-decoration: none; }
 .action svg { width: 22px; height: 22px; flex-shrink: 0; }
 .action:hover { background: #edf2ec; border-color: var(--color-action); }
 .action:active { background: #e1e9df; }
-.primary { background: var(--color-action); border-color: var(--color-action); color: white; }
+.primary { background: var(--color-action); border-color: var(--color-action); box-shadow: var(--control-primary-shadow); color: white; }
 .primary:hover, .primary:active { background: var(--color-action-hover); }
-.plan { background: #eef0d5; border-color: #b5bf82; }
-.plan:hover, .plan:active { background: #e3e8b9; border-color: #8c9c56; }
-.logout { display: block; width: 100%; min-height: 44px; padding: 10px; border: 0; border-radius: 6px; background: transparent; color: var(--color-text-secondary); font: inherit; font-size: 15px; cursor: pointer; }
+.simulation { background: #eef0d5; border-color: #778743; }
+.simulation:hover, .simulation:active { background: #e3e8b9; border-color: #6f7d3d; }
+.upgrade { background: linear-gradient(115deg,#174d38 0%,#25684b 48%,#166b70 100%); border-color: #225c4b; box-shadow: 0 3px 0 #0b3a33; color: white; }
+.upgrade:hover, .upgrade:active { background: linear-gradient(115deg,#113c2b 0%,#1e573e 48%,#11595d 100%); border-color: #174d38; }
+.logout { display: block; width: 100%; min-height: 48px; padding: 12px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); color: var(--color-text-secondary); font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
 .logout:hover { background: #edf2ec; color: var(--color-action); }

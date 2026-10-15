@@ -9,6 +9,12 @@
   --color-action-hover: #113b2b;
   --color-highlight: #e6ec88;
   --color-divider: #d8ded7;
+  --control-radius: 10px;
+  --control-surface: #fffef9;
+  --control-border: #789381;
+  --control-hover: #eaf1e8;
+  --control-shadow: 0 2px 0 #174d381a;
+  --control-primary-shadow: 0 3px 0 #0c3024;
 }
 
 @theme inline {
@@ -31,7 +37,14 @@ body {
 
 button, a {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
+
+button { min-height: 44px; }
+button:disabled { box-shadow: none; }
+button, a, summary { transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease; }
+button:enabled:active, a:active { box-shadow: none; }
+@media (prefers-reduced-motion: reduce) { button, a, summary { transition: none; } }
 
 :focus-visible {
   outline: 3px solid var(--color-action);

@@ -23,7 +23,8 @@
 }
 
 .whiteIcon { filter: brightness(0) invert(1); }
-.accountLink { margin-left: auto; font-size: 14px; color: var(--color-action); text-underline-offset: 4px; padding-block: 12px; }
+.accountLink { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: auto; min-height: 44px; padding: 10px 12px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); box-shadow: var(--control-shadow); font-size: 14px; font-weight: 600; color: var(--color-action); text-decoration: none; }
+.accountLink:hover { background: var(--control-hover); border-color: var(--color-action); }
 
 .brandName {
   font-size: 20px;
@@ -66,8 +67,9 @@
   width: 100%;
   min-height: 56px;
   padding: 14px 16px;
-  border: 0;
-  border-radius: 6px;
+  border: 1px solid var(--color-action);
+  border-radius: var(--control-radius);
+  box-shadow: var(--control-primary-shadow);
   background: var(--color-action);
   color: #fff;
   font: inherit;
