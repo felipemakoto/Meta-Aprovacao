@@ -27,6 +27,9 @@
 .continue:disabled img { filter: none; opacity: .6; }
 .back, .returnLink { display: block; width: fit-content; margin: 20px auto 0; padding: 6px; color: var(--color-text-secondary); font: inherit; background: none; border: 0; cursor: pointer; }
 .back:disabled { opacity: .6; cursor: not-allowed; text-decoration: none; }
+.previousQuestion { display: grid; place-items: center; width: 48px; height: 48px; margin: 16px auto 0; padding: 0; border: 1px solid #b6c8bc; border-radius: 50%; background: transparent; color: var(--color-action); cursor: pointer; }
+.previousQuestion:hover { background: #edf2ec; border-color: var(--color-action); }
+.previousQuestion:active { background: #e1e9df; }
 .message { padding-top: 38px; }
 .message h1 { font-family: var(--font-display), Georgia, serif; font-size: 32px; line-height: 1.2; font-weight: 400; margin: 0; }
 .message p { color: var(--color-text-secondary); font-size: 18px; line-height: 1.5; margin-top: 20px; }
