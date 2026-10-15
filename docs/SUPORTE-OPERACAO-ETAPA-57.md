@@ -61,5 +61,6 @@ Os comandos não alteram pagamentos, assinaturas, cotas, agendamentos do Supabas
 - Cópia do banco real criada e verificada; retorno posterior de verificação confirmou 474 objetos. Duas falhas iniciais de preparação, por papel de conexão e encerramento do pipe de catálogo, foram corrigidas; não foram relatadas como cópias aprovadas.
 - Navegador em quinze combinações de páginas/larguras: suporte, privacidade, termos, início e login em 320/390/1280px. Sem overflow ou erro; botões do rodapé com 44px, foco visível, FAQ funcional e endereço privado ausente do HTML. Capturas em `out/information57/`, ignoradas pelo Git.
 - Lint, build e TypeScript aprovados. `npm run test:operations` repete os seis testes.
+- Publicação do commit `0cf3639` conferida em produção: `/suporte`, `/privacidade`, `/termos` e `/login` responderam HTTP 200, com rodapé comum e sem o destinatário privado no HTML. O contato público está presente nas três páginas informativas.
 
 Pendências preservadas: pagamento comercial/contrato Cakto e confirmação por e-mail de um cadastro novo. Contratação continua desabilitada.
