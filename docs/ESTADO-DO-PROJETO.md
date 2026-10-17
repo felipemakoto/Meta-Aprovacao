@@ -1,5 +1,7 @@
 # Estado do Projeto
 
+Publicação da etapa65 — commit33c59b6 com statusVercelsuccess; dois endereços inexistentes conferidos no domínio público com404, português e links de retorno. Servidor temporário local encerrado.
+
 Etapa65,17/10/2026 — responsável escolheu continuar a versão gratuita por enquanto, sem trocar processador nem ativar vendas. Corrigida página inexistente: antes404/inglês/sem saída, agora português e navegação para início/estudos com identidade existente. Lint/build/TypeScript aprovados; dois endereços404/noindex/textos/links e dashboard anônimo307→login conferidos em produção local. Sem ensaio visual automatizado; contratação/cotas/banco/automação preservados. Docs NAVEGACAO-GRATUITA-ETAPA-65.md. Resultado de recuperação pela senha da etapa64 também registrado como concluído.
 
 Fechamento da etapa64 — relatório às18:22:51SP em17/10 aprovado após senha fornecida somente no formulário local:password-protected-recovery/imported-recovery-set,50tabelas idênticas/ACLs/promoção conferidas, temporário removido, sem produção. Concluído percurso completo do conjunto baixado do Drive pela senha, sem DPAPI. Outro equipamento e serviços gerenciados continuam distintos. Formulário encerrou; URL anterior não é permanente.

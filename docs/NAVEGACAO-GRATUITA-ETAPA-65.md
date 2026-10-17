@@ -21,6 +21,8 @@ Lint do componente e build/TypeScript aprovados. Servidor local em modo produç�
 
 Nenhuma mudança em cotas gratuitas, questões, modelos, preço, permissões Premium, aceite legal, autenticação ou automações Cakto.
 
+Publicação do commit `33c59b6` confirmada por status Vercel `success`. Os mesmos dois endereços foram conferidos no domínio público:404, texto em português e botões de retorno presentes. Servidor temporário local encerrado.
+
 ## Recuperação concluída
 
 Também foi recebido o resultado que estava pendente da [etapa64](RECUPERACAO-ATUALIZADA-ETAPA-64.md): o conjunto baixado do Drive foi restaurado com a senha fornecida somente no formulário local, sem DPAPI.50tabelas idênticas, permissões e promoção aprovadas, banco temporário removido. O formulário encerrou; o endereço anterior não é permanente. Serviços gerenciados/outro equipamento continuam fora desse ensaio.
