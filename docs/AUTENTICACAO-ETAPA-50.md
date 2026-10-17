@@ -1,5 +1,9 @@
 # Autenticação e uso móvel — etapa 50
 
+## Atualização em 17/10/2026
+
+Pendência de cadastro novo por e-mail encerrada por ensaio com mensagem realmente recebida na caixa autorizada: cadastro público, confirmação PKCE, planos autenticados e resposta preservada após sair/entrar aprovados. Código consumido recusado; conta descartável removida e ausência conferida. Detalhes e limites em [etapa 63](CADASTRO-EMAIL-ETAPA-63.md). Os registros abaixo são históricos.
+
 ## Atualização após teste real do responsável — 14/10/2026
 
 O responsável configurou o SMTP Gmail diretamente no Supabase e confirmou nesta conversa: **o e-mail chegou, ele salvou uma nova senha e entrou usando essa nova senha**. A pendência de entrega e recuperação positiva do site foi encerrada com base nesse teste humano. O agente não recebeu senha de app, senha da conta, token ou link de recuperação e não executou a troca. Isso não transforma os ensaios administrativos abaixo em testes de entrega nem certifica volume de envio ou um novo cadastro por e-mail. O responsável continua sem domínio próprio.
