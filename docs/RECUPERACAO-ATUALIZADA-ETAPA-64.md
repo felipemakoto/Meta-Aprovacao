@@ -28,7 +28,7 @@ O comando agora aceita `--recovery-set UUID`, sempre como **origem**, nunca dest
 
 Exemplo para operadores: `npm run backup:drill -- --recovery-set UUID_DO_CONJUNTO_IMPORTADO`.
 
-O conjunto desta etapa contém os três arquivos realmente baixados do Drive e conferidos. Formulário temporário em loopback preparado para o responsável fornecer a senha guardada, sem passar pelo chat. **O percurso completo com a senha permanece pendente até o preenchimento e um relatório aprovado.** Não foi usado DPAPI como substituto nem redefinida a senha.
+O conjunto desta etapa contém os três arquivos realmente baixados do Drive e conferidos. O responsável forneceu a senha guardada exclusivamente pelo formulário temporário em loopback. **O percurso completo foi aprovado às18:22:51 de São Paulo em17/10/2026**, com `keySource:password-protected-recovery` e `inputSource:imported-recovery-set`:50tabelas idênticas, permissões e cenários SQL da primeira compra aprovados, banco temporário removido. Não foi usado DPAPI como substituto nem redefinida a senha. O formulário encerrou após receber a senha, que não foi enviada ao chat ou gravada em arquivo.
 
 O relatório distingue `inputSource:imported-recovery-set` de `local-backup`, e `keySource:password-protected-recovery` de `windows-profile`. O campo `offsite:false` foi preservado: o script não acessa ou certifica o Drive por si próprio; a proveniência externa vem das leituras/downloads e hashes acima. Ensaio neste computador não certifica outro equipamento ou serviços gerenciados do Supabase.
 
