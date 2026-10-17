@@ -1,5 +1,7 @@
 # Backup externo e ensaio de recuperação — etapa 58
 
+Atualização em 17/10/2026: [etapa 64](RECUPERACAO-ATUALIZADA-ETAPA-64.md) criou nova cópia incluindo a promoção da primeira compra, conferiu o conjunto privado baixado do Drive e restaurou 50 tabelas com permissões e cenários SQL dessa regra aprovados. Origem importada pode ser ensaiada por `--recovery-set UUID`, com senha e destino temporário local. Cadastro novo por e-mail concluído na [etapa 63](CADASTRO-EMAIL-ETAPA-63.md). Os registros abaixo são históricos.
+
 Implementado em 15/10/2026. O responsável escolheu **Google Drive** para a cópia externa e definiu uma senha exclusivamente pelo formulário temporário em loopback. A senha não foi recebida pelo chat, registrada em configuração ou enviada ao Drive. O formulário não contém recursos externos e encerra após receber a senha.
 
 ## Resultado real

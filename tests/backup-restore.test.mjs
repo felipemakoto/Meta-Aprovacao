@@ -1,11 +1,25 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {randomBytes} from 'node:crypto';
-import {copyFingerprints, matchingCopies, restoreTarget} from '../src/lib/operations/restore-check.ts';
+import {copyFingerprints, matchingCopies, restoreTarget, restoreInput} from '../src/lib/operations/restore-check.ts';
+import path from 'node:path';
 import {sealRecoveryKey, openRecoveryKey} from '../src/lib/operations/recovery-key.ts';
 import {promptRecoveryPassword} from '../scripts/recovery-password.mjs';
 
 const copy = rows => 'COPY public.questions (id, statement) FROM stdin;\n' + rows.join('\n') + '\n\\.\n';
+test('conjunto importado exige UUID e senha, sem permitir URL, caminho ou destino externo', () => {
+  const root = path.resolve('operations-test'), tag = '10000000-0000-4000-8000-000000000001';
+  assert.deepEqual(restoreInput(root, []), {directory: root, recovery: false, imported: false});
+  assert.deepEqual(restoreInput(root, ['--recovery']), {directory: root, recovery: true, imported: false});
+  assert.deepEqual(restoreInput(root, ['--recovery-set', tag]), {
+    directory: path.join(root, 'recovery-input', tag), recovery: true, imported: true,
+  });
+  for (const args of [['--recovery-set', '../production'], ['--recovery-set', 'C:\\data'],
+    ['--recovery-set', 'https://database.example'], ['--recovery-set', tag, '--host=production'],
+    ['--recovery', '--recovery-set', tag], ['--target', tag], ['--recovery-set']]) {
+    assert.throws(() => restoreInput(root, args), /no_target_arguments_allowed/);
+  }
+});
 test('comparação considera todas as linhas, preserva duplicatas e ignora a ordem física', () => {
   const a = copyFingerprints(copy(['1\tA', '2\tB', '2\tB']));
   assert.equal(matchingCopies(a, copyFingerprints(copy(['2\tB', '1\tA', '2\tB']))), true);

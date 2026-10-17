@@ -8,7 +8,7 @@ import {Readable} from 'node:stream';
 import {pipeline} from 'node:stream/promises';
 import {backupKey, latestManifest, operationsDirectory} from './operations-local.mjs';
 import {decryptBackup, verifyBackup} from '../src/lib/operations/backup-crypto.ts';
-import {copyFingerprints, matchingCopies, restoreTarget} from '../src/lib/operations/restore-check.ts';
+import {copyFingerprints, matchingCopies, restoreTarget, restoreInput} from '../src/lib/operations/restore-check.ts';
 import {openRecoveryKey} from '../src/lib/operations/recovery-key.ts';
 import {promptRecoveryPassword} from './recovery-password.mjs';
 import {readFile} from 'node:fs/promises';
@@ -99,19 +99,21 @@ async function clean() {
 
 try {
   if (process.platform !== 'win32') throw Error('windows_required');
-  const recovery = process.argv.length === 3 && process.argv[2] === '--recovery';
-  if (process.argv.length !== 2 && !recovery) throw Error('no_target_arguments_allowed');
+  const sourceInput = restoreInput(operationsDirectory, process.argv.slice(2));
+  const {recovery} = sourceInput;
   for (const name of ['postgres', 'initdb', 'pg_ctl', 'pg_restore', 'pg_dump', 'psql']) {
     if (!(await stat(path.join(bin, name + '.exe'))).isFile()) throw Error('drill_client_missing');
   }
-  const manifest = await latestManifest();
+  const manifest = sourceInput.imported
+    ? JSON.parse(await readFile(path.join(sourceInput.directory, 'latest-backup.json'), 'utf8'))
+    : await latestManifest();
   if (!manifest?.verified || typeof manifest.file !== 'string' || path.basename(manifest.file) !== manifest.file) throw Error('backup_missing');
-  const archive = path.join(operationsDirectory, 'backups', manifest.file);
+  const archive = path.join(sourceInput.directory, 'backups', manifest.file);
   const hash = createHash('sha256');
   for await (const chunk of createReadStream(archive)) hash.update(chunk);
   if (hash.digest('hex') !== manifest.sha256) throw Error('backup_hash_invalid');
   key = recovery
-    ? await openRecoveryKey(JSON.parse(await readFile(path.join(operationsDirectory, 'recovery-key-v1.json'), 'utf8')), await promptRecoveryPassword())
+    ? await openRecoveryKey(JSON.parse(await readFile(path.join(sourceInput.directory, 'recovery-key-v1.json'), 'utf8')), await promptRecoveryPassword())
     : await backupKey();
   await verifyBackup(archive, key);
   const archivedSql = await command('pg_restore', ['--data-only', '--file=-'], {input: decryptBackup(archive, key), allowEarlyClose: true});
@@ -184,9 +186,19 @@ try {
     if (permissions !== 't') throw Error('restored_permissions_mismatch');
     accessPrivilegesTested = true;
   }
-  result = {passed: true, checkedAt: new Date().toISOString(), backupCreatedAt: manifest.createdAt, archiveSha256: manifest.sha256, tablesCompared: Object.keys(source).length, dataIdentical: true, ...counts, accessPrivilegesTested, keySource: recovery ? 'password-protected-recovery' : 'windows-profile', target: 'temporary-local-postgresql', productionContacted: false, managedSupabaseServicesTested: false, offsite: false};
+  let firstPurchasePromotionTested = false;
+  if ((await query("select exists(select 1 from supabase_migrations.schema_migrations where version='20261017210000');")).trim() === 't') {
+    phase = 'first_purchase_promotion';
+    // The existing business scenarios execute ONLY against this invocation's local cluster.
+    // No production credentials, provider calls or committed fixtures are involved.
+    const sql = await readFile(new URL('../supabase/tests/test_first_purchase_promotion.sql', import.meta.url), 'utf8');
+    const checked = await query('BEGIN;\n' + sql + '\nROLLBACK;');
+    if (!checked.trim().endsWith('t')) throw Error('restored_promotion_mismatch');
+    firstPurchasePromotionTested = true;
+  }
+  result = {passed: true, checkedAt: new Date().toISOString(), backupCreatedAt: manifest.createdAt, archiveSha256: manifest.sha256, tablesCompared: Object.keys(source).length, dataIdentical: true, ...counts, accessPrivilegesTested, firstPurchasePromotionTested, keySource: recovery ? 'password-protected-recovery' : 'windows-profile', inputSource: sourceInput.imported ? 'imported-recovery-set' : 'local-backup', target: 'temporary-local-postgresql', productionContacted: false, managedSupabaseServicesTested: false, offsite: false};
 } catch (error) {
-  const reasons = ['backup_missing', 'backup_hash_invalid', 'drill_client_missing', 'local_acl_unavailable', 'local_server_not_ready', 'restored_data_mismatch', 'restored_permissions_mismatch', 'local_command_failed', 'local_input_failed', 'incomplete_copy_data', 'unsupported_copy_table'];
+  const reasons = ['backup_missing', 'backup_hash_invalid', 'drill_client_missing', 'local_acl_unavailable', 'local_server_not_ready', 'restored_data_mismatch', 'restored_permissions_mismatch', 'restored_promotion_mismatch', 'local_command_failed', 'local_input_failed', 'incomplete_copy_data', 'unsupported_copy_table'];
   result = {passed: false, checkedAt: new Date().toISOString(), phase, reason: reasons.includes(error.message) ? error.message : 'restore_drill_incomplete', ...(localIssue ? {localIssue} : {}), productionContacted: false};
   process.exitCode = 1;
 } finally {
