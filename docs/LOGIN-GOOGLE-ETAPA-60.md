@@ -1,5 +1,11 @@
 # Preparação do login Google — etapa 60
 
+## Atualização em 17/10/2026 — ativação concluída pelo responsável
+
+O responsável criou o projeto/cliente Google Cloud e informou ID/segredo diretamente no Supabase. A consulta pública `/api/auth/google/status` retornou HTTP200 com `enabled:true`. Captura de URL Configuration mostrou os três retornos Google acrescentados e os três anteriores de confirmação preservados. O responsável confirmou entrada com chegada à escolha de planos e uma segunda entrada bem-sucedida. Captura final de Audience mostrou **External / In production**, após completar Branding e publicar o aplicativo.
+
+Nenhum segredo foi recebido no chat ou adicionado ao Git; nenhuma senha pessoal foi automatizada. O login real é evidência relatada pelo responsável e acompanhada por capturas, não um percurso executado pelo agente. Não foi conferida a retomada de estudos de uma conta antiga nem a entrada de outro aluno fora da antiga lista de teste. Publicação do público não equivale a verificação da marca ou de escopos adicionais. Os parágrafos seguintes registram a preparação e os testes de 15/10, quando o provedor ainda estava desativado.
+
 Pedido de 15/10/2026: retirar “Confirme o e-mail para começar a estudar” e integrar a criação de conta com Google/Gmail. O responsável confirmou que ainda não criou um cliente OAuth.
 
 ## Entregue
