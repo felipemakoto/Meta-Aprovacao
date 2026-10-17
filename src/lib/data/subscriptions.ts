@@ -5,3 +5,8 @@ export async function readSubscriptionAccess(user: string) {
   if (error) throw Error("subscription_unavailable");
   return data;
 }
+export async function readSubscriptionPricing(user: string) {
+  const { data, error } = await createAdminClient().rpc("read_subscription_pricing", { p_user_id: user });
+  if (error) throw Error("subscription_unavailable");
+  return data;
+}

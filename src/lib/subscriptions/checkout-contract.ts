@@ -15,10 +15,12 @@ export function checkoutUrl(value: string): URL {
       (keys.length && !/^[A-Za-z0-9_-]{1,25}$/.test(url.searchParams.get("coupon")!))) throw Error("invalid_checkout_url");
   return url;
 }
-export function configuredCheckout(env: Environment, at: Date): CheckoutOffer {
-  const promotional = premiumOffer(at).promotional;
+export function configuredCheckout(env: Environment, at: Date, hasPaidBefore = false): CheckoutOffer {
+  const promotional = premiumOffer(at, hasPaidBefore).promotional;
   const prefix = promotional ? "CAKTO_OCTOBER" : "CAKTO_REGULAR";
-  const url = checkoutUrl(env[`${prefix}_CHECKOUT_URL`] ?? "").href;
+  const destination = checkoutUrl(env[`${prefix}_CHECKOUT_URL`] ?? "");
+  if (!promotional && destination.searchParams.has("coupon")) throw Error("invalid_checkout_url");
+  const url = destination.href;
   const productId = env.CAKTO_PRODUCT_ID ?? "";
   const offerId = env[`${prefix}_OFFER_ID`] ?? "";
   if (![productId, offerId].every(id => /^[A-Za-z0-9_-]{1,200}$/.test(id))) throw Error("checkout_not_configured");

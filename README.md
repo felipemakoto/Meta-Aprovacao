@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização em 17/10/2026 — [promoção da primeira compra, etapa 62](docs/PROMOCAO-PRIMEIRA-COMPRA-ETAPA-62.md): conta que já pagou e ficou sem Premium vê o preço mensal normal nas duas telas de planos. Histórico vem de prova privada verificada; checkout e banco revalidam a elegibilidade, sem reativá-la após vencimento ou reembolso. Testes e migration aplicados; contratação permanece desativada.
+
 Atualização em 17/10/2026 — [conferência de pagamentos, etapa 61](docs/PAGAMENTOS-ETAPA-61.md): oferta ativa a R$22,99/mês, 23 testes isolados e integração com banco real/provedor simulado aprovados, fixtures removidas. Operação saudável na amostra; nenhum pedido pago recente encontrado. Contratação permanece desativada até evidência externa da Cakto. [Login Google](docs/LOGIN-GOOGLE-ETAPA-60.md) habilitado e publicado como External/In production pelo responsável; entrada e nova entrada confirmadas por ele. Registros abaixo são históricos.
 
 Atualização em 15/10/2026 — etapa 60: [login Google preparado](docs/LOGIN-GOOGLE-ETAPA-60.md) e [roteiro de ativação](docs/CONFIGURAR-GOOGLE.md). Frase de confirmação retirada do formulário; botão condicional no cadastro/entrada, concordância antes do OAuth, PKCE e retorno restrito. 37 testes isolados, dez HTTP, doze combinações de telas e cancelamento pendente aprovados, além de lint/build. Provedor Google continua desligado: responsável ainda precisa criar cliente Google Cloud, configurar o Supabase e validar entrada real. Registros abaixo são históricos.

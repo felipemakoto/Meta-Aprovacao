@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { premiumOffer, parseSubscriptionAccess, loadPremium } from '../src/lib/subscriptions/contract.ts';
+import { premiumOffer, parseSubscriptionAccess, parseSubscriptionPricing, loadPremium } from '../src/lib/subscriptions/contract.ts';
 test('campanha apenas em outubro de 2026 em Sao Paulo, primeira parcela e renovacao distintas',()=>{
  for(const at of ['2026-09-30T23:59:59-03:00','2026-11-01T00:00:00-03:00','2027-10-02T12:00:00-03:00'])assert.deepEqual(premiumOffer(new Date(at)),{promotional:false,firstPrice:22.99,monthlyPrice:22.99});
  for(const at of ['2026-10-01T00:00:00-03:00','2026-10-31T23:59:59-03:00'])assert.deepEqual(premiumOffer(new Date(at)),{promotional:true,firstPrice:11.50,monthlyPrice:22.99});
@@ -13,8 +13,20 @@ test('contrato falha fechado, sem status do provedor conceder Premium e sem expo
 });
 test('sessao ausente nao consulta assinatura; apenas identidade verificada e usada',async()=>{
  assert.deepEqual(await loadPremium({user:async()=>null,read:async()=>assert.fail('unauthenticated read')}),{kind:'login'});
- let received;const state=await loadPremium({user:async()=>'verified-id',read:async id=>{received=id;return {hasPremium:false,accessUntil:null}}});
+ let received;const state=await loadPremium({user:async()=>'verified-id',read:async id=>{received=id;return {hasPremium:false,accessUntil:null,hasPaidBefore:false}}});
  assert.equal(received,'verified-id');assert.equal(state.kind,'ready');
+});
+
+test('pagamento anterior encerra promoção mesmo com Premium expirado; histórico inválido não oferece desconto',async()=>{
+ const access={hasPremium:false,accessUntil:null,hasPaidBefore:true};
+ const state=await loadPremium({user:async()=>'returning-user',read:async()=>({...access,order:'private-order'})});
+ assert.deepEqual(state,{kind:'ready',access});
+ assert.deepEqual(premiumOffer(new Date('2026-10-17T12:00:00-03:00'),state.access.hasPaidBefore),{promotional:false,firstPrice:22.99,monthlyPrice:22.99});
+ for(const value of [undefined,null,'false',0]){
+  const raw={...access,hasPaidBefore:value};
+  assert.throws(()=>parseSubscriptionPricing(raw));
+  assert.deepEqual(await loadPremium({user:async()=>'id',read:async()=>raw}),{kind:'error'});
+ }
 });
 test('falha de autenticacao, banco e contrato nao vira gratuito nem Premium',async()=>{
  for(const deps of [{user:async()=>{throw Error('secret')},read:async()=>null},{user:async()=>'id',read:async()=>{throw Error('secret')}},{user:async()=>'id',read:async()=>({provider_status:'active'})}])assert.deepEqual(await loadPremium(deps),{kind:'error'});

@@ -7,8 +7,8 @@ export default async function Preview({ searchParams }: { searchParams: Promise<
   if (process.env.NODE_ENV !== "development") notFound();
   const query = await searchParams;
   const state: PremiumState = query.state === "error" ? { kind: "error" } : {
-    kind: "ready", access: query.state === "active" ? { hasPremium: true, accessUntil: "2026-11-02T15:00:00Z" } : { hasPremium: false, accessUntil: null },
+    kind: "ready", access: query.state === "active" ? { hasPremium: true, accessUntil: "2026-11-02T15:00:00Z", hasPaidBefore: true } : { hasPremium: false, accessUntil: null, hasPaidBefore: query.state === "returning" },
   };
-  const offer = premiumOffer(new Date(query.offer === "regular" ? "2026-11-01T12:00:00Z" : "2026-10-02T12:00:00Z"));
+  const offer = premiumOffer(new Date(query.offer === "regular" ? "2026-11-01T12:00:00Z" : "2026-10-02T12:00:00Z"),state.kind === "ready" ? state.access.hasPaidBefore : true);
   return <Premium state={state} offer={offer} preview />;
 }

@@ -11,7 +11,7 @@ const intent = { provider:'cakto', reference:'a'.repeat(64), expiresAt:'2026-10-
 const request = (opts={}) => new Request('http://localhost:3000/api/premium/checkout'+(opts.query??''),{
  method:'POST', headers:{origin:'http://localhost:3000', ...opts.headers}, ...(opts.body ? {body:opts.body}:{}),
 });
-const deps = { user:async()=>'verified-user', access:async()=>({hasPremium:false,accessUntil:null}), offer:()=>offer,
+const deps = { user:async()=>'verified-user', access:async()=>({hasPremium:false,accessUntil:null,hasPaidBefore:false}), offer:()=>offer,
  create:async(user, o)=>{assert.equal(user,'verified-user');assert.deepEqual(o,offer);return intent;}, now:()=>now };
 const handler = (overrides={}, settings={})=>checkoutHandler({...deps,...overrides},{secure:false,enabled:true,...settings});
 test('URL permite apenas HTTPS Cakto e cupom; rejeita dados pessoais e redirects',()=>{
@@ -42,8 +42,23 @@ test('CSRF, payload e parâmetros do cliente rejeitados antes de criar intençã
 test('sem sessão, Premium ativo e trava de lançamento não criam intenção',async()=>{
  const create=async()=>assert.fail('must not persist');
  assert.equal((await handler({user:async()=>null,create})(request())).status,401);
- assert.equal((await handler({access:async()=>({hasPremium:true,accessUntil:'2026-11-03T00:00:00Z'}),create})(request())).status,409);
+ assert.equal((await handler({access:async()=>({hasPremium:true,accessUntil:'2026-11-03T00:00:00Z',hasPaidBefore:true}),create})(request())).status,409);
  assert.equal((await handler({create},{enabled:false})(request())).status,503);
+});
+
+test('ex-assinante recebe intenção pelo preço normal sem cupom; ausência de histórico impede checkout',async()=>{
+ const regular=configuredCheckout(env,now,true);
+ assert.equal(regular.firstPriceCents,2299);assert.equal(new URL(regular.url).search,'');
+ assert.throws(()=>configuredCheckout({...env,CAKTO_REGULAR_CHECKOUT_URL:'https://pay.cakto.com.br/regular?coupon=primeiracompra'},now,true));
+ const r=await handler({
+  access:async()=>({hasPremium:false,accessUntil:null,hasPaidBefore:true}),
+  offer:(at,hasPaidBefore)=>{assert.equal(hasPaidBefore,true);return configuredCheckout(env,at,hasPaidBefore);},
+  create:async(user,o)=>{assert.equal(user,'verified-user');assert.deepEqual(o,regular);return {...intent,checkoutUrl:o.url,offerId:o.offerId,firstPriceCents:2299};},
+ })(request());
+ assert.equal(r.status,303);assert.equal(new URL(r.headers.get('location')).searchParams.has('coupon'),false);
+ for(const access of [{hasPremium:false,accessUntil:null},{hasPremium:false,accessUntil:null,hasPaidBefore:'false'}]){
+  assert.equal((await handler({access:async()=>access,create:async()=>assert.fail('must not persist')})(request())).status,503);
+ }
 });
 test('somente depois de persistir redireciona; falhas não expõem dados nem concedem acesso',async()=>{
  const r=await handler()(request());assert.equal(r.status,303);assert.match(r.headers.get('location'),/sck=a{64}/);

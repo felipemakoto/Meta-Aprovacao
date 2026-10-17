@@ -1,11 +1,11 @@
 import { checkoutDestination, type CheckoutOffer } from "./checkout-contract.ts";
-import { parseSubscriptionAccess } from "./contract.ts";
+import { parseSubscriptionPricing } from "./contract.ts";
 
 type Settings = { secure: boolean; origin?: string; enabled: boolean };
 type Dependencies = {
   user: () => Promise<string | null>;
   access: (user: string) => Promise<unknown>;
-  offer: (at: Date) => CheckoutOffer;
+  offer: (at: Date, hasPaidBefore: boolean) => CheckoutOffer;
   create: (user: string, offer: CheckoutOffer) => Promise<unknown>;
   now: () => Date;
 };
@@ -40,8 +40,9 @@ export function checkoutHandler(deps: Dependencies, settings: Settings) {
       const user = await deps.user();
       if (!user) return json("login_required", 401);
       if (!settings.enabled) return json("checkout_unavailable", 503);
-      if (parseSubscriptionAccess(await deps.access(user)).hasPremium) return json("already_premium", 409);
-      const offer = deps.offer(deps.now());
+      const pricing = parseSubscriptionPricing(await deps.access(user));
+      if (pricing.hasPremium) return json("already_premium", 409);
+      const offer = deps.offer(deps.now(), pricing.hasPaidBefore);
       const intent = await deps.create(user, offer);
       const location = checkoutDestination(intent, offer, deps.now());
       return new Response(null, { status: 303, headers: { Location: location,
