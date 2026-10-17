@@ -2,6 +2,8 @@
 
 Plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais, em construção.
 
+Atualização em 17/10/2026 — [continuidade gratuita, etapa65](docs/NAVEGACAO-GRATUITA-ETAPA-65.md): responsável escolheu seguir com a versão gratuita por enquanto. Página para links inexistentes em português, com volta ao início/estudos; lint/build/TypeScript e conferência HTTP aprovados. Recuperação do conjunto do Drive pela senha concluída. Contratação permanece desativada.
+
 Atualização em 17/10/2026 — [recuperação atualizada, etapa 64](docs/RECUPERACAO-ATUALIZADA-ETAPA-64.md): nova cópia com a regra da primeira compra, três arquivos privados no Drive baixados/hashes conferidos e restauração local de 50 tabelas aprovada, incluindo cenários da promoção. Percurso completo do conjunto importado pela senha também aprovado, sem DPAPI; banco temporário removido. Nenhuma contratação liberada.
 
 Atualização em 17/10/2026 — [cadastro por e-mail, etapa 63](docs/CADASTRO-EMAIL-ETAPA-63.md): mensagem real recebida na caixa autorizada, confirmação pelo site, nova entrada e resposta preservada no histórico aprovadas. Conta descartável removida; teste reutilizável exige envio explícito e mantém segredos somente em memória. Pagamentos continuam aguardando validação externa.
