@@ -69,11 +69,6 @@
 .planLimits { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; font-size: 22px; line-height: 1.5; }
 .planLimits strong { font-weight: 600; }
 .signup .primaryButton { margin-top: 24px; }
-@media (prefers-reduced-motion: no-preference) {
-  .heroCopy { animation: settle var(--home-motion-enter) var(--home-ease) both; }
-  .demo { animation: settle 800ms var(--home-ease) both; }
-}
-@keyframes settle { from { transform: translateY(12px); } to { transform: translateY(0); } }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .primaryButton:hover, .startButton:hover, .secondaryButton:hover { transform: translateY(-2px); }
   .primaryButton:active, .startButton:active, .secondaryButton:active { transform: scale(.98); }

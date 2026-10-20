@@ -27,7 +27,7 @@ O símbolo em `src/app/icon.svg` permanece um único traço verde assimétrico, 
 
 Fotos de Julio Lopez e Yen Vu no Unsplash: `public/images/study-julio-lopez.jpg` e `public/images/study-yen-vu.jpg`. Origem e licença em `public/images/STUDY-PHOTO-SOURCE.md`. Uso ilustrativo; não representam depoimento. São servidas localmente e otimizadas pelo Next. Não há imagens, fontes ou serviços pagos necessários em tempo de execução.
 
-Uma entrada coordenada dura 600–800ms, com interações de 180ms. Sem animação contínua ou conteúdo inicialmente invisível. `prefers-reduced-motion` desativa movimento. O menu móvel usa `details` nativo.
+A entrada compartilhada dura 360ms, com interações de 160–220ms. Sem animação contínua ou conteúdo inicialmente invisível. `prefers-reduced-motion` desativa movimento. O menu móvel usa `details` nativo.
 
 ## Validação
 
@@ -64,3 +64,13 @@ Na área de estudos, Minha conta é o destino do logo e o menu não oferece a p�
 Cadastro reutiliza o cabeçalho com marca Meta Aprovação, menu, formulário branco e rodapé do sistema. Formulários de entrada e cadastro usam Manrope, campos de 54px, labels de 17px e ajuda/consentimento de pelo menos 16px. O botão Google e seu diálogo seguem a mesma tipografia e superfícies. Os textos Histórico salvo e Progresso por matéria foram removidos do cadastro a pedido do responsável. O gradiente Premium usa somente verdes (#14532D, #237B38, #3B7A28), com texto branco e hover mais escuro.
 
 O layout compartilhado também mantém recuperação de senha e confirmação coerentes; regras e conteúdos de planos continuam intactos. Não foram alterados handlers, campos enviados, consentimento obrigatório, termos, validações ou autenticação. Conferidos cadastro, entrada e confirmação em 320/390/768/1440px, sem overflow; validação, senha visível/oculta, consentimento, confirmação de envio e erro de login conferidos com respostas interceptadas, sem criar contas nem enviar e-mails. Lint, TypeScript, build e 38 testes existentes aprovados.
+
+## Movimento compartilhado — 20/10/2026
+
+`page-motion.tsx` acompanha mudanças de caminho no layout raiz, com uma entrada do conteúdo principal em 360ms: opacidade 0,88→1 e deslocamento vertical de 8px→0. Usa Web Animations API nativa, sem biblioteca, wrappers, chaves de remontagem, estado de formulário, alterações de rota ou bloqueio de interação. A animação não mantém transformações ao concluir. A entrada anterior da hero foi substituída para evitar sobreposição.
+
+Tokens de movimento ficam em `globals.css`: interações de 160ms, menus/diálogos/feedback de 220ms e curva cubic-bezier(.22,1,.36,1). Botões têm resposta discreta ao hover em ponteiro preciso e ao pressionar; campos e alternativas transitam entre cores. Textos e links comuns permanecem estáveis. Não há cascata de cards, scroll listener, atraso artificial de formulário ou animação decorativa contínua.
+
+`prefers-reduced-motion` desativa movimentos e transições; a troca da preferência cancela uma entrada em execução. Sem JavaScript o conteúdo continua visível. Cabeçalhos fixos e rodapé não entram na transição de página. As animações existentes de correção mantêm seu contrato e também respeitam movimento reduzido.
+
+Conferidas as telas públicas (incluindo erro/404), cadastro, entrada, recuperação, confirmação e prévias de Premium, painel, questões, teste, resultado, simulados, histórico e estatísticas. Navegação pelo cliente, abertura de menu/consentimento, manutenção de campo preenchido, validação, retorno à questão anterior e conclusão de simulado preservados; nenhuma chamada de escrita à API nos percursos. Sem overflow em celular/desktop ou erros de execução. Cancelamento de animação em andamento, conteúdo sem JavaScript e cabeçalho fixo também conferidos. Lint, TypeScript e compilação de produção aprovados.

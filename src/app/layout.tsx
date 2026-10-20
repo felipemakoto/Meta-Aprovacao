@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { DM_Serif_Display, Geist } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "./site-footer";
+import PageMotion from "./page-motion";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${geistSans.variable} ${displayFont.variable} antialiased`}
     >
-      <body>{children}<SiteFooter/></body>
+      <body>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/></Suspense></body>
     </html>
   );
 }

@@ -15,6 +15,11 @@
   --control-hover: #eaf1e8;
   --control-shadow: 0 2px 0 #174d381a;
   --control-primary-shadow: 0 3px 0 #0c3024;
+  --motion-fast: 160ms;
+  --motion-state: 220ms;
+  --motion-page: 360ms;
+  --motion-distance: 8px;
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
 }
 
 @theme inline {
@@ -42,9 +47,29 @@ button, a {
 
 button { min-height: 44px; }
 button:disabled { box-shadow: none; }
-button, a, summary { transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease; }
+button, a, summary { transition: background-color var(--motion-fast) ease, color var(--motion-fast) ease, border-color var(--motion-fast) ease, box-shadow var(--motion-fast) ease, translate var(--motion-fast) var(--motion-ease), scale var(--motion-fast) var(--motion-ease); }
 button:enabled:active, a:active { box-shadow: none; }
-@media (prefers-reduced-motion: reduce) { button, a, summary { transition: none; } }
+input, select, textarea, label:has(input[type="radio"]) { transition: background-color var(--motion-fast) ease, border-color var(--motion-fast) ease; }
+
+@keyframes meta-pop-enter {
+  from { opacity: .8; transform: translateY(6px) scale(.985); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes meta-feedback-enter {
+  from { opacity: .7; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog[open], details[open] > nav { animation: meta-pop-enter var(--motion-state) var(--motion-ease); }
+  main [role="alert"], main [role="status"]:not(:empty) { animation: meta-feedback-enter var(--motion-state) ease-out; }
+  button:enabled:active, summary:active { scale: .985; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  button:enabled:hover { translate: 0 -1px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none!important; transition: none!important; scroll-behavior: auto!important; }
+}
 
 :focus-visible {
   outline: 3px solid var(--color-action);
