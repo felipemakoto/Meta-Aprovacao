@@ -8,8 +8,8 @@ export default function SupportPage() {
     <section className={styles.contact} aria-labelledby="contact-title"><h2 id="contact-title">Suporte por e-mail</h2>
       <a href="mailto:metaaprovacao720@gmail.com">metaaprovacao720@gmail.com</a>
       <p>Conte o que aconteceu, a tela em que estava e o e-mail da sua conta. Se enviar uma captura, esconda dados pessoais que não sejam necessários.</p>
-      <a className={styles.contactButton} href="https://mail.google.com/mail/?view=cm&fs=1&to=metaaprovacao720%40gmail.com&su=Ajuda%20com%20a%20Meta%20Aprova%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">Falar com o suporte no Gmail</a>
-      <p>Abre o Gmail em uma nova aba. Você revisa a mensagem antes de enviar.</p>
+      <a className={styles.contactButton} href="https://mail.google.com/mail/?view=cm&fs=1&to=metaaprovacao720%40gmail.com&su=Ajuda%20com%20a%20Meta%20Aprova%C3%A7%C3%A3o" rel="noreferrer">Falar com o suporte no Gmail</a>
+      <p>Abre o Gmail no navegador. Você revisa a mensagem antes de enviar.</p>
       <CopySupportEmail/>
       <a href="mailto:metaaprovacao720@gmail.com?subject=Ajuda%20com%20a%20Meta%20Aprova%C3%A7%C3%A3o">Usar outro aplicativo de e-mail</a>
     </section>
