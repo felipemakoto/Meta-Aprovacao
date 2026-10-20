@@ -1,5 +1,17 @@
 # Checagem de lançamento — etapa 36
 
+## Estado mais recente — 20/10/2026 às20:16SP
+
+- Site publicado no commit87dac09; oferta autenticada confirmada emBRL e fallback de moeda implementado/testado. A descrição histórica abaixo de moeda sem solução foi superada por VALIDACAO-CAKTO-SEM-COMPRA-2026-10-20.md.
+- Worker Supabase cakto-reconcile atualizado separadamente para versão5, incluindo o leitor de moeda e o tratamento de autenticação já testado. Publicar na Vercel não publica essa função. Projeto ligado conferido antes do envio; credenciais, permissões, schema e cron preservados.
+- A falha anterior das20:10SP foi classificada como timeout na autenticação da Cakto durante discovery. Não foi atribuída a credencial incorreta nem demonstrado que a atualização eliminou falhas externas intermitentes.
+- Primeira execução natural após a publicação: concluída em20/10/2026 às20:16:05SP, lastOk=true, matched=0, ignored=0, truncated=0. Monitor em funcionamento e fila sem tarefas prontas/em execução/em revisão/esgotadas. Não houve disparo manual, compra ou processamento de pedido comercial nessa amostra.
+- Conteúdo e configuração local passaram na checagem:500 questões publicadas com gabarito, diagnóstico, prática, simulado gratuito e catálogo Premium disponíveis. Os20 itens revisados são contagem adicional do status editorial existente.
+- Webhook, acesso e ciclo de assinatura já ensaiados com fixtures, sem exigir compra real. Valores exibidos no checkout já conferidos: primeiro mês promocionalR$12,49; mensalidade normalR$23,98.
+- Retenção: proposta em PROPOSTA-RETENCAO-CAKTO.md; nenhum descarte automatizado. Prazos financeiros definitivos continuam uma decisão do responsável, sem migração ou limpeza nesta etapa.
+- Cupom:50% apenas na primeira cobrança, painel salvo até31/10/2026 às23:59. Aplicação usa America/Sao_Paulo; equivalência com o fuso do provedor e último minuto não confirmadas documentalmente. Não criar cupom extra nem certificar esse ponto como validado.
+- Contratação Premium continua false. A liberação comercial é a próxima decisão explícita; esta conferência não a presume.
+
 Conferência de20/10/2026: ensaios de webhook e pagamento/acesso com banco real e provedor simulado aprovados, fixtures removidas; oferta e totais do checkout conferidos em três meios sem pagar. Cupom de50% apenas na primeira cobrança em BRL, término corrigido de12:59 para23:59 em31/10 após autorização, com persistência conferida. Não foi confirmado o fuso explícito do provedor nem um campo autoritativo de moeda do pedido; retenção detalhada também pendente. Checkout false. Relatório: VALIDACAO-CAKTO-SEM-COMPRA-2026-10-20.md.
 
 Decisão vigente de20/10/2026: o responsável dispensou compra real e pediu a retirada dessa etapa. Ela não deve ser exigida nem proposta como requisito nas próximas rodadas. A política técnica é realPurchaseRequired:false; permanecem os ensaios com eventos simulados e as conferências de contrato, cupom, retenção e publicação. Dispensa não equivale a prova de transação comercial e não habilita checkout automaticamente. Chave local alinhada à entrega autêntica de teste da Cakto; publicação e ambiente local aceitam a chave correta com200 e rejeitam chave incorreta com401. Ver WEBHOOK-CAKTO.md e ESTADO-DO-PROJETO.md. Referências anteriores à compra real como condição obrigatória são históricas e estão superadas.
