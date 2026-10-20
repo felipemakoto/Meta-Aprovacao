@@ -19,7 +19,7 @@ Backend, autenticação, banco, planos, permissões e pagamentos não foram alte
 
 ## Marca e movimento
 
-O símbolo original em `src/app/icon.svg` combina livro aberto, monograma M e um marcador amarelo. O mesmo SVG serve ao cabeçalho e à aba do navegador, substituindo o favicon padrão. `home-art.tsx` contém a ilustração vetorial de estudo e três ícones de navegação.
+O símbolo original em `src/app/icon.svg` é um traço verde contínuo: uma dobra assimétrica que sugere M e um percurso ascendente. Sem moldura, preenchimentos adicionais ou detalhes amarelos. O mesmo SVG serve ao cabeçalho e à aba do navegador, substituindo o favicon padrão. `home-art.tsx` contém a ilustração vetorial de estudo e três ícones de navegação.
 
 Uma entrada coordenada do título e do livro dura 600–800ms. Interações usam 180ms. Sem animação contínua, biblioteca adicional ou conteúdo escondido aguardando JavaScript. `prefers-reduced-motion` desativa o movimento. Ativos da versão anterior permanecem disponíveis, mas não são carregados nesta inicial.
 
