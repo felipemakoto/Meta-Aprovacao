@@ -1,6 +1,6 @@
 // Server transport shared with local administrative scripts. No client imports.
 import {Buffer} from "node:buffer";
-export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription";
+export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription"|"offer";
 export type CaktoAuthenticationRetry={operation:"authentication";status:500|502|503|504};
 type CaktoReason="configuration_missing"|"invalid_id"|"unavailable"|"unauthorized"|"not_found"|"rate_limited"|"invalid_response";
 export class CaktoReadError extends Error {
@@ -108,6 +108,22 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
       try {subscriptionId=orderUuid(order.subscription);}catch{throw new CaktoReadError("invalid_response","order",200);}
       const subscription = await json(`subscriptions/${subscriptionId}/`, options, 1024 * 1024,"subscription");
       if (subscription.id !== subscriptionId) throw new CaktoReadError("invalid_response","subscription",200);
+      // The order REST schema omits currency. Official offer REST schema supplies it;
+      // webhook docs define transaction amounts in the product currency. Never infer BRL.
+      // Preserve any explicit order currency, including conflicting/invalid values.
+      if (order.status === "paid" && order.currency === undefined) {
+        const offerId=subscription.offer, product=record(order.product).id;
+        if (typeof offerId!=="string" || !/^[A-Za-z0-9_-]{1,200}$/.test(offerId) ||
+          typeof product!=="string" || subscription.product!==product) throw new CaktoReadError("invalid_response","subscription",200);
+        const offer=await json(`offers/${offerId}/`, options, 1024*1024,"offer");
+        if (offer.id!==offerId || offer.product!==product ||
+          (order.offer!==undefined && (typeof order.offer==="string" ? order.offer : record(order.offer).id)!==offerId))
+          throw new CaktoReadError("invalid_response","offer",200);
+        // Current authenticated configuration, not an original transaction snapshot.
+        // Missing/invalid currency remains unconfirmed in the downstream validator.
+        if (typeof offer.currency==="string" && /^[A-Z]{3}$/.test(offer.currency))
+          return {order:{...order,currency:offer.currency,currencySource:"authenticated_offer"},subscription};
+      }
       return {order, subscription};
     },
   };

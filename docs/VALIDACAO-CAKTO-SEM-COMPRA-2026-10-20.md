@@ -1,5 +1,21 @@
 # Validação técnica da Cakto sem compra — 20/10/2026
 
+## Atualização: moeda documentada e adaptação implementada
+
+Esta atualização substitui a pendência monetária descrita abaixo. Conferência direta das páginas oficiais de [produto](https://docs.cakto.com.br/api-reference/products/retrieve), [oferta](https://docs.cakto.com.br/api-reference/offers/retrieve) e [webhooks](https://docs.cakto.com.br/conceitos/webhooks): os schemas REST de produto/oferta incluem currency; o webhook define data.currency como moeda dos valores, igual à moeda do produto. A extração do Context7 omitiu campos presentes na página; foi necessário conferir as páginas oficiais completas.
+
+Consulta autenticada somente leitura à oferta configurada retornou HTTP200, currency BRL e identificadores de oferta/produto correspondentes. Não houve consulta de compradores ou compra real.
+
+O leitor de pedidos agora consulta o detalhe autenticado da oferta da assinatura quando um pedido pago não tem currency. Confere produto, oferta e assinatura, não substitui moeda explícita e não presume BRL. Moeda ausente/inválida/estrangeira não aprova pagamento; indisponibilidade da consulta gera falha controlada. Cancelamento/reembolso não dependem dessa consulta adicional. A mesma normalização atende primeira cobrança e renovação, preservando os demais validadores e sem alteração de banco.
+
+Limite da evidência: fallback usa a configuração atual autenticada da oferta, não um snapshot histórico da moeda da transação. Isso se apoia no contrato documentado de moeda do produto; uma migração futura de moeda/oferta precisa tratar separadamente cobranças antigas e preservar sua evidência original. Não usar o webhook sozinho como prova de pagamento.
+
+Testes adicionados cobrem primeira cobrança, renovação, valores incorretos, moeda explícita conflitante, moeda ausente, identidade incompatível, ID inválido e HTTP403/429/503. Diagnóstico da nova consulta mantém compatibilidade com a RPC publicada, sem ampliar o vocabulário persistido no banco. Checkout continua desativado.
+
+Fuso do cupom: a pesquisa pública não confirmou a regra do painel. A aplicação continua usando America/Sao_Paulo; o painel foi salvo em31/10/2026 às23:59. Não certificar equivalência entre esses horários nem comportamento do último minuto. Não foi criado cupom temporário, alterada promoção ou feita compra. Essa incerteza não impede implementar/testar a integração; permanece explicitada para a decisão de lançamento.
+
+Complemento: [proposta técnica de retenção](PROPOSTA-RETENCAO-CAKTO.md), sem execução de descarte. Nova consulta documental não confirmou moeda do pedido nem fuso de endTime; a solicitação ao suporte foi detalhada nesse documento e continua não enviada.
+
 Compra real dispensada pelo responsável. Não foi criada cobrança, fornecido dado de comprador/cartão, acionado botão de pagamento ou ativado checkout. Esta rodada reuniu consultas comerciais, testes de integração com provedor simulado e o ajuste de horário do cupom explicitamente autorizado.
 
 ## Conferências concluídas
