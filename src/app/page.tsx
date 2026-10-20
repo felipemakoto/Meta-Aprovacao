@@ -33,9 +33,11 @@ export default function Home() {
           <div className={styles.heroCopy}>
             <h1 id="home-title" className={styles.title}>Seu próximo passo<br />para a ETEC e o IF.</h1>
             <p className={styles.intro}>Entenda cada questão. Pratique com simulados.<br /> Descubra o que reforçar nos seus estudos.</p>
+          </div>
+          <div className={styles.heroExperience}>
+            <HomeDemo />
             <div className={styles.heroActions}><StartTestButton /><Link className={styles.secondaryButton} href="/cadastro">Criar minha conta</Link></div>
           </div>
-          <HomeDemo />
         </div></section>
         <section className={styles.practice} aria-labelledby="practice-title">
           <h2 id="practice-title">O que vamos estudar hoje?</h2>
@@ -43,9 +45,10 @@ export default function Home() {
             <Link href="/questoes"><HomeIcon name="book" /><span>Resolver questões</span><HomeIcon name="arrow" /></Link>
             <Link href="/simulados"><HomeIcon name="timer" /><span>Fazer um simulado</span><HomeIcon name="arrow" /></Link>
           </div>
-          <ul className={styles.subjects} aria-label="Matérias disponíveis">
-            <li>Matemática</li><li>Português</li><li>Ciências</li><li>História</li><li>Geografia</li>
-          </ul>
+          <div className={styles.learning}>
+            <div><h3>Entenda o porquê de cada resposta.</h3><p>Confira a correção com explicações e transforme os erros em pontos para revisar.</p></div>
+            <Image className={styles.learningPhoto} src="/images/study-yen-vu.jpg" width={1200} height={800} sizes="(max-width: 719px) 100vw, 50vw" alt="Livros abertos, anotações e materiais organizados em uma mesa de estudo." />
+          </div>
         </section>
         <section className={styles.method} aria-labelledby="method-title">
           <h2 id="method-title">Um jeito mais claro de estudar.</h2>

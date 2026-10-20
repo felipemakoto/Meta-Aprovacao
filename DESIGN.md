@@ -11,7 +11,9 @@ Revisão de 20/10/2026: a inicial aproxima a linguagem visual do Brilliant obser
 
 ## Composição e comportamento
 
-Abertura com o destino ETEC/IF, diagnóstico gratuito e cadastro; demonstração de porcentagem; questões, simulados e cinco matérias; fotografia junto às etapas de estudo; recursos do gratuito e cadastro final. Sem depoimentos, credenciais ou resultados inventados.
+Abertura com o destino ETEC/IF; demonstração de porcentagem acima das ações de diagnóstico gratuito e cadastro; acesso a questões e simulados; bloco de correção e revisão com fotografia; etapas de estudo com outra fotografia; recursos do gratuito e cadastro final. A lista de matérias foi removida. Sem depoimentos, credenciais ou resultados inventados.
+
+O cabeçalho usa `position: sticky` com `top: 0`, fundo opaco e camada acima do conteúdo. Margens de rolagem preservam a visibilidade de destinos e controles focados. O rodapé da inicial usa fundo preto e texto, links e foco brancos.
 
 `home-demo.tsx` contém um exemplo isolado: 25% de 80. Escolher 10, 20 ou 40 mostra feedback textual e seleção acessível com `aria-pressed`. O estado vive apenas na página, sem API, conta, pontuação, consumo de limite ou gravação. A demonstração não substitui o diagnóstico em `/quiz`.
 
@@ -21,7 +23,7 @@ Rotas e regras existentes foram preservadas. O gratuito continua informado como 
 
 O símbolo em `src/app/icon.svg` permanece um único traço verde assimétrico, usado no cabeçalho e na aba do navegador.
 
-Foto de Julio Lopez no Unsplash: `public/images/study-julio-lopez.jpg`. Origem e licença em `public/images/STUDY-PHOTO-SOURCE.md`. Uso ilustrativo; não representa depoimento. A foto é servida localmente e otimizada pelo Next. Não há imagens, fontes ou serviços pagos necessários em tempo de execução.
+Fotos de Julio Lopez e Yen Vu no Unsplash: `public/images/study-julio-lopez.jpg` e `public/images/study-yen-vu.jpg`. Origem e licença em `public/images/STUDY-PHOTO-SOURCE.md`. Uso ilustrativo; não representam depoimento. São servidas localmente e otimizadas pelo Next. Não há imagens, fontes ou serviços pagos necessários em tempo de execução.
 
 Uma entrada coordenada dura 600–800ms, com interações de 180ms. Sem animação contínua ou conteúdo inicialmente invisível. `prefers-reduced-motion` desativa movimento. O menu móvel usa `details` nativo.
 

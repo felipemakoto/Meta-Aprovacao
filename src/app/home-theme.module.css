@@ -52,17 +52,18 @@
   margin: 0;
   padding: 28px max(24px, calc((100% - var(--home-width)) / 2));
   border: 0;
-  border-top: 1px solid var(--home-line);
-  background: var(--home-paper);
-  color: var(--home-muted);
+  border-top: 1px solid #000;
+  background: #000;
+  color: #fff;
   font-family: var(--home-font);
   text-align: left;
 }
 
 :global(body):has(.homeTheme) > :global(footer) p { font-size: 16px; line-height: 1.6; }
 :global(body):has(.homeTheme) > :global(footer) nav { flex-shrink: 0; gap: 16px; }
-:global(body):has(.homeTheme) > :global(footer) a { min-height: 44px; color: var(--home-muted); font-size: 16px; }
-:global(body):has(.homeTheme) > :global(footer) a:focus-visible { outline-color: var(--home-green); }
+:global(body):has(.homeTheme) > :global(footer) a { min-height: 44px; color: #fff; font-size: 16px; }
+:global(body):has(.homeTheme) > :global(footer) a:hover { color: #fff; }
+:global(body):has(.homeTheme) > :global(footer) a:focus-visible { outline-color: #fff; }
 :global(body):has(.homeTheme) > :global(footer) nav > span { display: none; }
 
 @media (max-width: 719px) {
