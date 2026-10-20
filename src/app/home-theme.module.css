@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Meta Manrope";
+  src: url("/fonts/meta/manrope-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+.homeTheme,
+:global(body):has(.homeTheme) {
+  --home-paper: #fcfdfb;
+  --home-ink: #19241f;
+  --home-muted: #515e55;
+  --home-green: #237b38;
+  --home-green-hover: #185d29;
+  --home-sage: #f0f4ec;
+  --home-mint: #e0efdf;
+  --home-line: #d9e3d7;
+  --home-violet: #6653ad;
+  --home-yellow: #f3cf69;
+  --home-font: "Meta Manrope", var(--font-geist-sans), Arial, sans-serif;
+  --home-width: 1200px;
+  --home-radius: 12px;
+  color: var(--home-ink);
+  font-family: var(--home-font);
+}
+
+:global(body):has(.homeTheme) { background: var(--home-paper); }
+.homeTheme ::selection { background: var(--home-mint); color: var(--home-ink); }
+.homeTheme :focus-visible { outline: 3px solid var(--home-green); outline-offset: 5px; }
+
+:global(body):has(.homeTheme) > :global(footer) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 28px max(24px, calc((100% - var(--home-width)) / 2));
+  border: 0;
+  border-top: 1px solid var(--home-line);
+  background: var(--home-paper);
+  color: var(--home-muted);
+  font-family: var(--home-font);
+  text-align: left;
+}
+
+:global(body):has(.homeTheme) > :global(footer) p { font-size: 13px; line-height: 1.6; }
+:global(body):has(.homeTheme) > :global(footer) nav { flex-shrink: 0; gap: 16px; }
+:global(body):has(.homeTheme) > :global(footer) a { min-height: 44px; color: var(--home-muted); font-size: 13px; }
+:global(body):has(.homeTheme) > :global(footer) a:focus-visible { outline-color: var(--home-green); }
+
+@media (max-width: 719px) {
+  :global(body):has(.homeTheme) > :global(footer) { align-items: flex-start; flex-direction: column; gap: 8px; }
+}
