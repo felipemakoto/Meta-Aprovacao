@@ -1,4 +1,5 @@
 "use client";
+import StudyShell from "../study-shell";
 import { useEffect,useRef,useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,9 +51,9 @@ export default function History({preview=false,unavailable=false,initialKind="te
  }
  function change(next:HistoryKind){if(next===kind||unavailable)return;controller.current?.abort();controller.current=null;lock.current=false;setDetail(null);setError("");setBusy(!preview);setKind(next);setPage(preview?{items:next==="tests"?demoTests.slice(0,2):next==="simulations"?simulationItems:[demoReview],next:next==="tests"?demoTests[1]:null}:{items:[],next:null});}
  if(preview&&detail&&kind==="simulations")return <SimulationSession preview historyView initial={simulationResult} onBack={()=>setDetail(null)}/>;
- if(preview&&detail)return <div><div className={styles.backRow}><button className={styles.backLink} onClick={()=>setDetail(null)}><Image className={styles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</button></div>{kind==="tests"?<Result preview={demoResult(detail)} saved/>:<div className={base.page}><PracticeReview review={demoReview}/><p className={styles.footer}>Exemplo visual · dados ilustrativos.</p></div>}</div>;
- return <div className={base.page}>
- <header className={base.header}><Link href="/" className={base.brand}><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt=""/></span>ETEC / IF</Link><Link href="/dashboard" className={base.exit}>Meus estudos</Link></header>
+ if(preview&&detail){const back=<button className={styles.backLink} onClick={()=>setDetail(null)}><Image className={styles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</button>;return kind==="tests"?<Result beforeContent={back} preview={demoResult(detail)} saved/>:<StudyShell active="history" preview><main className={base.page}>{back}<PracticeReview review={demoReview}/><p className={styles.footer}>Exemplo visual · dados ilustrativos.</p></main></StudyShell>; }
+ return <StudyShell active="history" preview={preview}><div className={base.page}>
+
  <main><h1 className={styles.title}>Histórico</h1>
  <div className={styles.tabs} aria-label="Tipo de atividade"><button disabled={unavailable} aria-pressed={kind==="tests"} onClick={()=>change("tests")}>Testes</button><button disabled={unavailable} aria-pressed={kind==="practice"} onClick={()=>change("practice")}>Questões</button><button disabled={unavailable} aria-pressed={kind==="simulations"} onClick={()=>change("simulations")}>Simulados</button></div>
  <div role="status" aria-live="polite">{busy&&<p className={styles.message}>Carregando registros…</p>}{error&&<p className={styles.message}>{error}</p>}</div>
@@ -72,5 +73,5 @@ export default function History({preview=false,unavailable=false,initialKind="te
  {page.next&&<button className={styles.more} disabled={busy} onClick={more}>{busy?"Carregando…":error?"Tentar carregar mais":"Carregar mais"}</button>}
  {!busy&&!error&&page.items.length>0&&!page.next&&<p className={styles.message}>Você chegou ao fim do histórico.</p>}
  <Link className={styles.primary} href="/questoes">Praticar questões</Link>
- </main>{preview&&<footer className={styles.footer}>Dados ilustrativos.</footer>}</div>;
+ </main>{preview&&<footer className={styles.footer}>Dados ilustrativos.</footer>}</div></StudyShell>;
 }

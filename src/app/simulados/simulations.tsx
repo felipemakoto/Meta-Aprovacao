@@ -1,4 +1,5 @@
 "use client";
+import StudyShell from "../study-shell";
 import { useEffect,useRef,useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -29,8 +30,8 @@ export default function Simulations({items=[],unavailable=false,preview=false,li
   }catch(e){setError(e instanceof Error&&e.name==="Error"?e.message:"Confira sua conexão e tente novamente.");}finally{void quota.refresh();lock.current=false;setBusy(false);}
  }
  if(demo)return <SimulationSession preview initial={demo} onBack={()=>setDemo(null)}/>;
- return <div className={base.page}>
-  <header className={base.header}><Link href="/" className={base.brand}><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt=""/></span>ETEC / IF</Link><Link className={base.exit} href="/dashboard">Meus estudos</Link></header>
+ return <StudyShell active="simulations" preview={preview}><div className={base.page}>
+
   <main><h1 className={styles.title}>Simulados</h1><p className={styles.intro}>A correção aparece ao finalizar.</p>
    <p className={styles.note}>{preview?`${limitReached?0:1} de 1 novo simulado disponível hoje. Renova à meia-noite de São Paulo.`:quota.limits?dailyLimitMessage(quota.limits,"simulations"):quota.failed?"Não foi possível consultar seu saldo. Ao iniciar, a disponibilidade será verificada.":"Consultando o saldo de hoje…"}</p>
    {unavailable?<section role="status"><p>Não foi possível carregar os simulados.</p><button className={base.back} onClick={()=>window.location.reload()}>Tentar novamente</button></section>:catalog.length===0?<p role="status" className={styles.intro}>Os simulados estão em preparação. Você poderá começar quando as questões estiverem revisadas.</p>:<>
@@ -41,5 +42,5 @@ export default function Simulations({items=[],unavailable=false,preview=false,li
    <div role="status" aria-live="polite">{error&&<p>{error}</p>}</div>
    <Link className={styles.historyLink} href="/historico?kind=simulations">Ver meu histórico</Link>
   </main>{preview&&<footer className={styles.footer}>Dados ilustrativos.</footer>}
- </div>;
+ </div></StudyShell>;
 }

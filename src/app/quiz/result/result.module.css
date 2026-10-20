@@ -44,3 +44,22 @@
 .signin a {display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border:1px solid var(--control-border);border-radius:var(--control-radius);background:var(--control-surface);color:var(--color-action);font-weight:600;text-decoration:none;}
 @media (min-width: 600px) { .summary { padding-top: 38px; } .question { font-size: 26px; } }
 @media (max-width: 359px) { .topics button { gap: 10px; } .score { font-size: 19px; } }
+.summary, .review { padding: 28px; border: 1px solid var(--home-line); border-radius: 20px; background: white; }
+:global([data-study-mode="focus"]) .summary, :global([data-study-mode="focus"]) .review { padding: 0; border: 0; border-radius: 0; }
+.title { font: 600 clamp(30px, 4vw, 40px)/1.25 var(--home-font); letter-spacing: -.03em; }
+.intro, .score, .reviewScore, .explanation p { font-size: 18px; line-height: 1.6; }
+.reviewTitle { font: 600 28px/1.35 var(--home-font); }
+.question { font-size: 25px; line-height: 1.5; }
+.position, .original, .preview, .topic > span, .topic small, .signin { font-size: 16px; line-height: 1.5; }
+.topics button { padding: 18px; box-shadow: none; border-color: var(--home-line); border-radius: 14px; }
+.topic strong { font-size: 21px; }
+.topics { display: grid; gap: 14px; }
+.topics li+li { margin: 0; }
+.answer { padding: 16px; border-color: var(--home-line); border-radius: 12px; font-size: 18px; }
+.correct { background: var(--home-sage); border-color: #a6bea2; }
+.explanation { padding: 22px; border: 0; border-radius: 14px; background: var(--home-sage); }
+.explanation h2 { font-size: 22px; }
+.secondary { font-size: 17px; box-shadow: none; }
+.focusTitle { font-size: 22px; }
+.nextStep>p:not(:first-child), .nextStep .accountHint { font-size: 18px!important; line-height: 1.6; }
+@media (max-width: 599px) { .summary, .review { padding: 22px 18px; } .question { font-size: 23px; } .explanation { padding: 18px; } }

@@ -1,4 +1,5 @@
 "use client";
+import StudyShell from "../study-shell";
 import { useEffect,useRef,useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -51,8 +52,8 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
     }catch(e){setMessage(e instanceof Error && Object.values(messages).includes(e.message)?e.message:"A conexão falhou. Tente novamente; sua resposta não será duplicada.");}
     finally{if(!preview)void quota.refresh();lock.current=false;setBusy(false);setCorrecting(false);requestAnimationFrame(()=>{if(action==="next")heading.current?.focus();else status.current?.focus();});}
   }
-  return <div className={base.page}>
-    <header className={base.header}><Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF</Link><Link className={base.exit} href="/dashboard">Meus estudos</Link></header>
+  return <StudyShell active="questions" preview={preview}><div className={base.page}>
+
     <main><h1 className={styles.title}>Questões</h1>
       <p className={styles.notice}>{preview?`${limitReached?0:10} de 10 novas questões disponíveis hoje. Renova à meia-noite de São Paulo.`:quota.limits?dailyLimitMessage(quota.limits,"practice"):quota.failed?"Não foi possível consultar seu saldo. Tente buscar uma questão para verificar a disponibilidade.":"Consultando o saldo de hoje…"}</p>
       <form onSubmit={e=>{e.preventDefault();void run("next");}}><fieldset className={styles.filters} disabled={busy||unavailable}>
@@ -77,5 +78,5 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
         {feedback&&<button className={base.continue} disabled={busy} onClick={()=>void run("next")}>Próxima questão<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>}
       </section>:loaded&&<p className={styles.notice}>Nenhuma questão encontrada. Tente outros filtros.</p>}
     </main>{preview&&<footer className={styles.footer}>Dados ilustrativos.</footer>}
-  </div>;
+  </div></StudyShell>;
 }

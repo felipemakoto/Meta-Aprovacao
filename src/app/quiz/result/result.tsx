@@ -1,4 +1,6 @@
 "use client";
+import type { ReactNode } from "react";
+import StudyShell from "../../study-shell";
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -13,7 +15,7 @@ import CorrectionLoading from "../correction-loading";
 
 const subjects: Record<string,string> = { matematica: "Matemática", portugues: "Português", ciencias: "Ciências", historia: "História", geografia: "Geografia" };
 type Screen = { kind: "loading" } | { kind: "ready"; result: QuizResult } | { kind: "error"; expired: boolean; login: boolean };
-export default function Result({ preview, initialResult, saved = false, initialReview, intro=false, continueHref }: { preview?: QuizResult; initialResult?: QuizResult; saved?: boolean; initialReview?: "errors" | "all"; intro?:boolean; continueHref?:string }) {
+export default function Result({ preview, initialResult, saved = false, initialReview, intro=false, continueHref, beforeContent }: { preview?: QuizResult; initialResult?: QuizResult; saved?: boolean; initialReview?: "errors" | "all"; intro?:boolean; continueHref?:string; beforeContent?:ReactNode }) {
   const [screen, setScreen] = useState<Screen>(preview || initialResult ? { kind: "ready", result: (preview ?? initialResult)! } : { kind: "loading" });
   const [retry, setRetry] = useState(0);
   useEffect(() => {
@@ -23,12 +25,9 @@ export default function Result({ preview, initialResult, saved = false, initialR
       error => { if (active) setScreen({ kind: "error", expired: error instanceof ResultRequestError && [401,404].includes(error.status), login: saved && error instanceof ResultRequestError && error.status === 401 }); });
     return () => { active = false; };
   }, [preview, initialResult, retry, saved]);
-  return <div className={base.page}>
-    <header className={base.header}>
-      <Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF</Link>
-      <Link className={base.exit} href={saved ? "/dashboard" : "/"}>{saved ? "Meus estudos" : "Início"}</Link>
-    </header>
-    <main>
+  return <StudyShell active="history" preview={!!preview} focus={!saved} exit={<Link href={saved ? (preview ? "/dashboard/preview" : "/dashboard") : "/"}>{saved ? "Meus estudos" : "Início"}</Link>}><div className={base.page}>
+
+    <main>{beforeContent}
       {screen.kind === "loading" && <CorrectionLoading title="Carregando seu resultado…" timed complete />}
       {screen.kind === "error" && <section className={base.message} role="status">
         <h1>{screen.login ? "Entre para ver seu resultado" : screen.expired ? "Resultado indisponível." : "Não foi possível carregar o resultado."}</h1>
@@ -40,7 +39,7 @@ export default function Result({ preview, initialResult, saved = false, initialR
       {screen.kind === "ready" && (intro?<IntroResult result={screen.result} continueHref={continueHref}/>:<ResultContent key={`${screen.result.id}-${initialReview ?? "summary"}`} result={screen.result} preview={!!preview} saved={saved} initialReview={initialReview} />)}
     </main>
     {preview && <p className={styles.preview}>Exemplo de resultado. Dados ilustrativos.</p>}
-  </div>;
+  </div></StudyShell>;
 }
 
 function ResultContent({ result, preview, saved, initialReview }: { result: QuizResult; preview: boolean; saved: boolean; initialReview?: "errors" | "all" }) {

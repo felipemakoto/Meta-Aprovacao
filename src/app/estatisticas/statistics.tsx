@@ -1,4 +1,5 @@
 "use client";
+import StudyShell from "../study-shell";
 import { useEffect,useRef,useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,9 +31,9 @@ export default function Statistics({initial=null,preview=false,initialPeriod="al
   const result=previewCorrection(simulation,simulation.quiz.questions.map((q,i)=>({questionId:q.id,answer:i<item.score?"B":"D"})));
   if("result" in result){setDetail(result.result);window.scrollTo({top:0,behavior:"instant"});}
  }
- if(detail)return <><div className={history.backRow}><button className={history.backLink} onClick={()=>setDetail(null)}><Image className={history.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar às estatísticas</button></div><Result preview={detail} saved/></>;
- return <div className={base.page}>
-  <header className={base.header}><Link className={base.brand} href="/" aria-label="ETEC / IF — início"><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt=""/></span>ETEC / IF</Link></header>
+ if(detail)return <Result beforeContent={<button className={history.backLink} onClick={()=>setDetail(null)}><Image className={history.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar às estatísticas</button>} preview={detail} saved/>;
+ return <StudyShell active="statistics" preview={preview}><div className={base.page}>
+
   <main><h1 className={styles.title}>Estatísticas</h1><label className={styles.label} htmlFor="statistics-period">Período</label><select className={styles.select} id="statistics-period" value={period} onChange={e=>void load(e.target.value as Period)}><option value="all">Todo o período</option><option value="30d">Últimos 30 dias</option></select>
   <div role="status" aria-live="polite" aria-busy={busy}>{busy&&<p className={styles.status}>Carregando estatísticas…</p>}{error&&<p className={styles.status}>{error}</p>}</div>
   {error&&<button className={base.back} onClick={()=>void load(period)}>Tentar novamente</button>}
@@ -43,5 +44,5 @@ export default function Statistics({initial=null,preview=false,initialPeriod="al
   </>}
   <div className={styles.back}><Link className={history.backLink} href="/historico"><Image className={history.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Ver histórico</Link></div>
   </main><footer className={styles.footer}>{preview?"Dados ilustrativos.":"Respostas de testes salvos, questões praticadas e simulados concluídos. Novas tentativas contam novamente."}</footer>
- </div>;
+ </div></StudyShell>;
 }

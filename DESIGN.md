@@ -32,3 +32,19 @@ Uma entrada coordenada dura 600–800ms, com interações de 180ms. Sem animaç�
 ## Validação
 
 Compilação de produção e lint dos componentes alterados aprovados. Os 22 testes de regressão passaram. Layout conferido no navegador em 280, 320, 390, 768, 1024 e 1440px, com fonte carregada, controles de pelo menos 44px e sem rolagem horizontal. Demonstração, navegação móvel, teclado e movimento reduzido conferidos. Os avisos anteriores de pré-carregamento de CSS legado do Next permanecem; sem erros de execução na inicial. Nenhuma publicação realizada.
+
+## Área de estudo — 20/10/2026
+
+O mesmo sistema de cores, fontes locais e marca agora atende painel, questões, simulados, teste inicial, correções, histórico e estatísticas. `study-shell.tsx` concentra cabeçalho, navegação, acesso ao conteúdo e modo de foco; `study-shell.module.css` adapta os tokens existentes apenas enquanto essa estrutura está presente. Login, cadastro e páginas legais mantêm seu tema anterior.
+
+Referências: organização de materiais e atividade do Brilliant (https://brilliant.org/), recuperação ativa e modos de estudo/teste descritos pelo Quizlet (https://help.quizlet.com/hc/en-us/articles/360030841732-Studying-on-Quizlet). O acesso direto à página pública do Quizlet retornou 403; esta é uma adaptação de padrões, sem alegar reprodução de telas privadas.
+
+- Painel: último teste, progresso real de acertos, atividade registrada e acesso às coleções existentes de questões e simulados. Sem sequências, conquistas ou domínio de matérias inventados.
+- Questões: filtros reunidos, opções avançadas recolhidas e uma questão em destaque; alternativas em duas colunas quando há espaço, uma no celular. Correção textual e próxima questão preservadas.
+- Simulados e teste: modo de foco, progresso visível, alternativas grandes e navegação anterior. Conferência das escolhas e envio continuam usando os componentes e ações existentes.
+- Histórico, estatísticas e correções seguem a mesma navegação e hierarquia. As coleções organizam recursos existentes; não introduzem uploads, pastas ou flashcards.
+- Navegação lateral a partir de 960px; menu nativo no celular; barra branca fixa durante a rolagem. Rodapé preto com suporte também na área de estudo. Textos de apoio de 16–20px, controles de pelo menos 44px e foco visível.
+
+Alterações restritas à apresentação. Nenhuma mudança em contratos de API, carregamento de dados, persistência, autenticação, limites, Premium ou pagamentos. As prévias existentes continuam exclusivas do desenvolvimento.
+
+Validação desta etapa: 40 testes de regressão aprovados; lint e TypeScript aprovados; detector Impeccable sem ocorrências nos novos componentes e telas principais. Conferência visual de sete telas em 390 e 1440px, mais painel, questões, simulados e teste em 280, 320, 768 e 1024px, sem rolagem horizontal. Fluxos locais de resposta correta/incorreta, filtros, limites, conclusão, revisão, histórico, estatísticas e menu por teclado aprovados, sem erros de execução ou chamadas de escrita à API. As prévias usam dados ilustrativos e não substituem uma validação autenticada em produção. Nenhuma publicação realizada.

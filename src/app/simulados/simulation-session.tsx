@@ -1,4 +1,5 @@
 "use client";
+import StudyShell from "../study-shell";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -30,12 +31,12 @@ export default function SimulationSession({initial,preview=false,onBack,historyV
  if("result" in state){
   const labels:Record<string,string>={matematica:"Matemática",portugues:"Português",ciencias:"Ciências",historia:"História",geografia:"Geografia"};
   const groups=Object.entries(labels).map(([key,label])=>({label,questions:state.result.questions.filter(q=>q.subject===key)})).filter(g=>g.questions.length>=5);
-  return <><div className={styles.metadata}>{historyView?historyBack:back}<p>{state.result.title} · Duração: {durationText(state.result.durationSeconds)}{preview?" (exemplo)":""}</p>{!historyView&&historyBack}
+  const metadata=<div className={styles.metadata}>{historyView?historyBack:back}<p>{state.result.title} · Duração: {durationText(state.result.durationSeconds)}{preview?" (exemplo)":""}</p>{!historyView&&historyBack}
   {groups.length>0&&<details className={styles.breakdown}><summary>Por matéria</summary><dl>{groups.map(g=>{const score=g.questions.filter(q=>q.correct).length;return <div key={g.label}><dt>{g.label}</dt><dd>{score} de {g.questions.length} acertos · {Math.round(score/g.questions.length*100)}%</dd></div>;})}</dl></details>}
-  </div><Result initialResult={preview?undefined:state.result} preview={preview?state.result:undefined} saved={!preview}/></>;
+  </div>;return <Result beforeContent={metadata} initialResult={preview?undefined:state.result} preview={preview?state.result:undefined} saved={!preview}/>;
  }
- if(login)return <main className={base.page}><h1>Entre novamente para concluir</h1><p>Volte a esta tentativa após entrar na mesma conta. O rascunho permanece nesta aba, quando o navegador permite.</p><Link className={base.returnLink} href="/login">Entrar</Link></main>;
- return <div className={base.page}><header className={base.header}><Link href="/" className={base.brand}><span className={base.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt=""/></span>ETEC / IF</Link>{onBack?<button className={styles.exitControl} onClick={onBack}>Simulados</button>:<Link className={base.exit} href="/simulados">Simulados</Link>}</header><main>
+ if(login)return <StudyShell active="simulations" preview={preview} focus><main className={base.page}><h1>Entre novamente para concluir</h1><p>Volte a esta tentativa após entrar na mesma conta. O rascunho permanece nesta aba, quando o navegador permite.</p><Link className={base.returnLink} href="/login">Entrar</Link></main></StudyShell>;
+ return <StudyShell active="simulations" preview={preview} focus exit={onBack?<button onClick={onBack}>Simulados</button>:<Link href="/simulados">Simulados</Link>}><div className={base.page}><main>
   {expired?<section className={base.message} role="status"><h1>Tentativa indisponível</h1><p>O prazo terminou ou esta tentativa não está disponível.</p>{back}</section>:<><p className={styles.intro}>{state.quiz.title}</p><QuizSession quiz={state.quiz} preview={preview} simulation onExpire={()=>{if(!preview)setExpired(true);}} onFinish={finish}/></>}
- </main>{preview?<p className={styles.footer}>Dados ilustrativos.</p>:<p className={styles.footer}>Você tem 24h para concluir. Rascunho salvo nesta aba.</p>}</div>;
+ </main>{preview?<p className={styles.footer}>Dados ilustrativos.</p>:<p className={styles.footer}>Você tem 24h para concluir. Rascunho salvo nesta aba.</p>}</div></StudyShell>;
 }

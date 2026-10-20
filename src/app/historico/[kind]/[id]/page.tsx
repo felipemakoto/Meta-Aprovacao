@@ -1,3 +1,4 @@
+import StudyShell from "@/app/study-shell";
 import { notFound,redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +23,7 @@ export default async function Detail({params}:{params:Promise<{kind:string;id:st
  if(!value)notFound();
  if(kind==="simulations"){let result;try{result=parseSimulationResult(value);}catch{return <Failure/>;}return <SimulationSession historyView initial={{result}}/>;}
  let result,review;try{if(kind==="tests")result=toQuizResult(value);else review=parsePracticeReview(value);}catch{return <Failure/>;}
- const view=result?<Result key={result.id} initialResult={result} saved/>:<div className={base.page}><PracticeReview review={review!}/></div>;
- return <><div className={styles.backRow}><Link className={styles.backLink} href={"/historico?kind="+kind}><Image className={styles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</Link></div>{view}</>;
+ const back=<Link className={styles.backLink} href={"/historico?kind="+kind}><Image className={styles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</Link>;
+ return result?<Result key={result.id} beforeContent={back} initialResult={result} saved/>:<StudyShell active="history"><main className={base.page}>{back}<PracticeReview review={review!}/></main></StudyShell>;
 }
-function Failure(){return <main className={base.page}><h1>Não foi possível carregar a atividade.</h1><p>Tente novamente em alguns instantes.</p><Link className={styles.backLink} href="/historico"><Image className={styles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</Link></main>;}
+function Failure(){return <StudyShell active="history"><main className={base.page}><h1>Não foi possível carregar a atividade.</h1><p>Tente novamente em alguns instantes.</p><Link className={styles.backLink} href="/historico"><Image className={styles.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Voltar ao histórico</Link></main></StudyShell>;}

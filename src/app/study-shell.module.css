@@ -1,0 +1,72 @@
+.shell, :global(body):has(.shell) {
+  --background: var(--home-canvas);
+  --foreground: var(--home-ink);
+  --color-text-secondary: var(--home-muted);
+  --color-action: var(--home-green);
+  --color-action-hover: var(--home-green-hover);
+  --color-divider: var(--home-line);
+  --control-radius: 12px;
+  --control-surface: #fff;
+  --control-border: #cbd2c6;
+  --control-hover: var(--home-sage);
+  --control-shadow: none;
+  --control-primary-shadow: none;
+  --font-display: "Meta Lora";
+  --font-geist-sans: "Meta Manrope";
+  background: var(--home-canvas);
+  color: var(--home-ink);
+  font-family: var(--home-font);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.shell { min-height: 100svh; }
+.shell :where(a, button, summary, select, input) { scroll-margin-top: 120px; }
+.skip { position: absolute; z-index: 40; top: 8px; left: 24px; padding: 12px 16px; transform: translateY(-200%); background: white; color: var(--home-green); }
+.skip:focus-visible { transform: none; }
+.topbar { position: sticky; top: 0; z-index: 20; padding: 16px 0; pointer-events: none; }
+.topbarInner { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: min(100% - 64px, 1280px); min-height: 72px; margin-inline: auto; padding: 12px 24px; border: 1px solid var(--home-line); border-radius: 40px; background: white; pointer-events: auto; }
+.brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--home-ink); text-decoration: none; font-size: 22px; font-weight: 800; letter-spacing: -.035em; line-height: 1.2; }
+.brand img { width: 36px; height: 36px; }
+.headerActions { display: flex; align-items: center; gap: 16px; }
+.account a, .account button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 16px; border: 1px solid var(--home-line); border-radius: 24px; background: white; color: var(--home-ink); font: 600 16px/1.4 var(--home-font); text-decoration: none; cursor: pointer; box-shadow: none; }
+.account a:hover, .account button:hover { background: var(--home-sage); }
+.workspace { display: grid; grid-template-columns: 208px minmax(0, 1fr); gap: 40px; width: min(100% - 64px, 1280px); margin-inline: auto; padding-block: 32px 64px; }
+.sidebar { align-self: start; position: sticky; top: 128px; }
+.sidebar nav { display: grid; gap: 8px; }
+.sidebar a, .mobileMenu nav a { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 12px 16px; border-radius: 12px; color: var(--home-muted); font-size: 17px; font-weight: 600; text-decoration: none; }
+.sidebar svg, .mobileMenu nav svg { flex-shrink: 0; }
+.sidebar a:hover, .mobileMenu nav a:hover { color: var(--home-green); background: white; }
+.sidebar a[aria-current], .mobileMenu nav a[aria-current] { color: var(--home-green-hover); background: var(--home-mint); }
+.content { min-width: 0; scroll-margin-top: 112px; }
+.content:focus { outline: none; }
+.focusWorkspace { display: block; max-width: 984px; padding-top: 24px; }
+.mobileMenu { display: none; }
+@media (max-width: 1099px) {
+  .workspace { grid-template-columns: 188px minmax(0, 1fr); gap: 24px; }
+  .sidebar a { padding-inline: 12px; }
+}
+@media (max-width: 959px) {
+  .workspace { display: block; padding-top: 24px; }
+  .sidebar { display: none; }
+  .mobileMenu { display: block; }
+  .mobileMenu summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--home-line); border-radius: 24px; font-size: 16px; font-weight: 600; list-style: none; cursor: pointer; }
+  .mobileMenu summary::-webkit-details-marker { display: none; }
+  .mobileMenu nav { position: absolute; top: calc(100% - 8px); right: 32px; width: min(300px, calc(100vw - 48px)); padding: 12px; border: 1px solid var(--home-line); border-radius: 18px; background: white; }
+}
+@media (max-width: 599px) {
+  .topbarInner { width: calc(100% - 24px); padding: 10px 14px; gap: 12px; min-height: 68px; }
+  .brand { gap: 7px; font-size: 18px; }
+  .brand img { width: 30px; height: 30px; }
+  .account { display: none; }
+  .shell[data-study-mode="focus"] .account { display: block; }
+  .headerActions { gap: 8px; }
+  .workspace { width: calc(100% - 32px); padding-block: 16px 40px; }
+  .mobileMenu nav { right: 12px; }
+}
+@media (max-width: 359px) {
+  .brand span { max-width: 7ch; }
+  .account a, .account button { padding-inline: 10px; }
+  .mobileMenu summary { padding-inline: 10px; }
+}
+:global([data-study-mode="focus"]) .content { padding: 32px 36px; border: 1px solid var(--home-line); border-radius: 22px; background: white; }
+@media (max-width: 599px) { :global([data-study-mode="focus"]) .content { padding: 22px 18px; border-radius: 18px; } }

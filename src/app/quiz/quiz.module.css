@@ -51,3 +51,29 @@
 .loadingCompact .loadingBar {margin:12px 0;}
 @keyframes correction-progress {0%,100% {transform:translateX(0);}50% {transform:translateX(138%);}}
 @media(prefers-reduced-motion:reduce) {.loadingBar span {animation:none;margin-inline:auto;}.timedBar span {transition:none;margin-inline:0;}}
+/* O escopo mantém o tema de login, cadastro e páginas legais independente. */
+:global(body:has([data-study])) .page { width: 100%; max-width: 100%; margin: 0; padding: 0; min-height: auto; }
+:global(body:has([data-study])) .question { font: 600 clamp(24px, 2.3vw, 30px)/1.5 var(--home-font); letter-spacing: -.025em; margin-block: 28px; }
+:global(body:has([data-study])) .progressHeading { margin-top: 0; font-size: 17px; line-height: 1.5; }
+:global(body:has([data-study])) .progress { height: 8px; margin-top: 14px; background: var(--home-line); }
+:global(body:has([data-study])) .options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+:global(body:has([data-study])) .option { min-height: 76px; gap: 14px; padding: 18px; border-color: var(--home-line); border-radius: 14px; background: white; font-size: 18px; line-height: 1.5; }
+:global(body:has([data-study])) .option:has(input:checked) { border-color: var(--home-green); background: var(--home-sage); box-shadow: none; }
+:global(body:has([data-study])) .option:hover { border-color: var(--home-green); }
+:global(body:has([data-study])) .letter { flex-basis: 32px; height: 32px; border-radius: 50%; font-size: 16px; }
+:global(body:has([data-study])) .continue { width: fit-content; min-width: min(100%, 240px); margin-left: auto; padding-inline: 24px; font-size: 18px; box-shadow: none; }
+:global(body:has([data-study])) .continue:disabled { background: #e1e4dd; color: #545b52; border-color: #cbd2c6; }
+:global(body:has([data-study])) .back, :global(body:has([data-study])) .returnLink { box-shadow: none; font-size: 17px; }
+:global(body:has([data-study])) .message { padding-top: 12px; }
+:global(body:has([data-study])) .message h1 { font: 600 30px/1.35 var(--home-font); }
+:global(body:has([data-study])) .stepLabel { font-size: 16px!important; letter-spacing: 0; text-transform: none; font-weight: 500; }
+:global(body:has([data-study])) .quizLabel { margin-top: 0!important; }
+:global(body:has([data-study])) .previewNotice { font-size: 16px; text-align: left; }
+:global(body:has([data-study])) .questionActions { justify-content: flex-end; }
+:global(body:has([data-study])) .questionActions .continue { flex: 0 1 auto; }
+@media (max-width: 719px) {
+  :global(body:has([data-study])) .options { grid-template-columns: 1fr; gap: 12px; }
+  :global(body:has([data-study])) .option { padding: 16px; min-height: 68px; }
+  :global(body:has([data-study])) .continue { width: 100%; min-width: 0; }
+  :global(body:has([data-study])) .questionActions .continue { flex: 1; }
+}

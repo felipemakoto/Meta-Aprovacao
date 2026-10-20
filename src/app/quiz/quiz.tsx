@@ -1,4 +1,5 @@
 "use client";
+import StudyShell from "../study-shell";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -53,13 +54,8 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
   }, [preview, retry, router]);
   function restart() { if (preview) { window.location.reload(); return; } setScreen({ kind: "loading" }); setRetry((value) => value + 1); }
   return (
-    <div className={styles.page}>
-      <header className={styles.header}>
-        <Link className={styles.brand} href="/" aria-label="ETEC / IF — início">
-          <span className={styles.brandMark}><Image src="/icons/arrow-up-right.svg" width={22} height={22} alt="" /></span>ETEC / IF
-        </Link>
-        <Link className={styles.exit} href="/">Sair</Link>
-      </header>
+    <StudyShell active="questions" preview={!!preview} focus exit={<Link href="/">Sair</Link>}><div className={styles.page}>
+
       <main>
         {screen.kind === "loading" && <section className={styles.message} aria-busy="true" role="status"><h1>Preparando seu teste…</h1><p>Buscando as questões da sua tentativa.</p></section>}
         {screen.kind === "error" && (
@@ -74,7 +70,7 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
       </main>
       {preview && <p className={styles.previewNotice}>Prévia local de interface. Sem envio de respostas.</p>}
       <noscript><p className={styles.message}>Ative o JavaScript para responder ao quiz.</p></noscript>
-    </div>
+    </div></StudyShell>
   );
 }
 

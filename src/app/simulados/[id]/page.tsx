@@ -1,3 +1,4 @@
+import StudyShell from "@/app/study-shell";
 import { notFound,redirect } from "next/navigation";
 import Link from "next/link";
 import { getVerifiedUser } from "@/lib/auth/user";
@@ -14,4 +15,4 @@ export default async function Page({params}:{params:Promise<{id:string}>}){
  let value;try{value=await simulationRpc("read_simulation",{p_user_id:user.id,p_id:id});}catch{return <Failure/>;}
  if(!value)notFound();let state;try{state=parseSimulationState(value);}catch{return <Failure/>;}return <SimulationSession initial={state}/>;
 }
-function Failure(){return <main className={base.page}><h1>Não foi possível carregar o simulado.</h1><p>Tente novamente em alguns instantes.</p><Link className={base.returnLink} href="/simulados">Voltar aos simulados</Link></main>;}
+function Failure(){return <StudyShell active="simulations"><main className={base.page}><h1>Não foi possível carregar o simulado.</h1><p>Tente novamente em alguns instantes.</p><Link className={base.returnLink} href="/simulados">Voltar aos simulados</Link></main></StudyShell>;}
