@@ -23,15 +23,15 @@ export function StudyIcon({ name }: { name: StudyArea }) {
   </svg>;
 }
 
-export default function StudyShell({ children, active, preview = false, focus = false, exit }: { children: ReactNode; active: StudyArea; preview?: boolean; focus?: boolean; exit?: ReactNode }) {
+export default function StudyShell({ children, active, preview = false, focus = false, menu = false, exit }: { children: ReactNode; active: StudyArea | "account"; preview?: boolean; focus?: boolean; menu?: boolean; exit?: ReactNode }) {
   const navigation = destinations.map(item => <Link key={item.area} href={item.href + (preview ? "/preview" : "")} aria-current={active === item.area ? "page" : undefined}><StudyIcon name={item.area} />{item.label}</Link>);
   return <div className={`${theme.homeTheme} ${styles.shell}`} data-study data-study-mode={focus ? "focus" : active}>
     <a className={styles.skip} href="#estudo">Pular para o conteúdo</a>
     <header className={styles.topbar}><div className={styles.topbarInner}>
       <Link className={styles.brand} href="/" aria-label="Meta Aprovação — início"><MetaMark /><span>Meta Aprovação</span></Link>
       <div className={styles.headerActions}>
-        {!focus && <details className={styles.mobileMenu}><summary>Estudos<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></summary><nav aria-label="Navegação de estudos no celular">{navigation}<Link href="/login">Minha conta</Link></nav></details>}
-        <div className={styles.account}>{exit ?? <Link href="/login">Minha conta</Link>}</div>
+        {(!focus || menu) && <details className={`${styles.mobileMenu} ${menu ? styles.headerMenu : ""}`}><summary>{menu ? "Menu" : "Estudos"}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></summary><nav aria-label={menu ? "Menu principal" : "Navegação de estudos no celular"}>{menu && <Link href="/">Início</Link>}{navigation}<Link href="/login" aria-current={active === "account" ? "page" : undefined}>Minha conta</Link></nav></details>}
+        {!menu && <div className={styles.account}>{exit ?? <Link href="/login">Minha conta</Link>}</div>}
       </div>
     </div></header>
     <div className={`${styles.workspace} ${focus ? styles.focusWorkspace : ""}`}>

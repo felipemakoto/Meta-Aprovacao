@@ -41,6 +41,10 @@
 .content:focus { outline: none; }
 .focusWorkspace { display: block; max-width: 984px; padding-top: 24px; }
 .mobileMenu { display: none; }
+.headerMenu { display: block; }
+.mobileMenu summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--home-line); border-radius: 24px; font-size: 16px; font-weight: 600; list-style: none; cursor: pointer; }
+.mobileMenu summary::-webkit-details-marker { display: none; }
+.mobileMenu nav { position: absolute; top: calc(100% - 8px); right: max(32px, calc((100% - 1280px)/2)); width: min(300px, calc(100vw - 48px)); padding: 12px; border: 1px solid var(--home-line); border-radius: 18px; background: white; }
 @media (max-width: 1099px) {
   .workspace { grid-template-columns: 188px minmax(0, 1fr); gap: 24px; }
   .sidebar a { padding-inline: 12px; }
@@ -49,9 +53,7 @@
   .workspace { display: block; padding-top: 24px; }
   .sidebar { display: none; }
   .mobileMenu { display: block; }
-  .mobileMenu summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--home-line); border-radius: 24px; font-size: 16px; font-weight: 600; list-style: none; cursor: pointer; }
-  .mobileMenu summary::-webkit-details-marker { display: none; }
-  .mobileMenu nav { position: absolute; top: calc(100% - 8px); right: 32px; width: min(300px, calc(100vw - 48px)); padding: 12px; border: 1px solid var(--home-line); border-radius: 18px; background: white; }
+  .mobileMenu nav { right: 32px; }
 }
 @media (max-width: 599px) {
   .topbarInner { width: calc(100% - 24px); padding: 10px 14px; gap: 12px; min-height: 68px; }
