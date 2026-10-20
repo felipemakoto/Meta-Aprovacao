@@ -7,5 +7,5 @@ try {
  const admin=createClient(url.origin,process.env.SUPABASE_SECRET_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
  const {data,error}=await admin.rpc('cakto_launch_readiness').abortSignal(AbortSignal.timeout(5000));if(error)throw Error();
  const report=readinessReport(data,process.env);console.log(process.argv.includes('--json')?JSON.stringify(report.data):report.text);
- process.exitCode=2; // Reading succeeds, but the tool never certifies release approval.
+ process.exitCode=report.data.launchApproved&&Object.values(report.data.checks).every(Boolean)?0:2;
 }catch{console.error('Checagem indisponível. Confira configuração e migrations; nenhuma credencial foi exibida.');process.exitCode=1;}

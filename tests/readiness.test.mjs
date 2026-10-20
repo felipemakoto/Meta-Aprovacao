@@ -7,7 +7,7 @@ test('dispensa do fuso não muda contratação nem certifica horário externo',(
  const r=launchReadiness(fixture(),env,now);
  assert.equal(r.validationPolicy.couponTimezoneRequired,false);
  assert.equal(r.validationPolicy.realPurchaseRequired,false);
- assert.equal(r.checkoutEnabled,false);assert.equal(r.launchApproved,false);
+ assert.equal(r.checkoutEnabled,true);assert.equal(r.launchApproved,true);
  assert.ok(r.manualChecks.every(c=>!c.includes('fuso')));
  assert.match(readinessReport(fixture(),env,now).text,/fuso do cupom dispensada/);
 });
@@ -18,10 +18,10 @@ function fixture(){return {sampledAt:date,health:{sampledAt:date,state:'ok',auto
  subjects:['matematica','portugues','ciencias','historia','geografia'].map(subject=>({subject,draft:2,reviewed:0,published:0,usablePublished:0,missingForDiagnostic:2,usablePremiumSimulations:0})),
  simulations:{draft:2,published:0,unavailablePublished:0,usableFree:0,usableFreeQuick:0,usablePremium:0,usablePremiumBySubject:0},
  retentionInventory:{inbox:0,jobs:0,paymentChecks:0,lifecycleChecks:0,periods:0,renewalChecks:0,expiredCheckoutIntents:0,schedulerRuns:1}};}
-test('conteúdo em rascunho e configuração correta não liberam venda; dados privados não saem',()=>{
+test('aprovação explícita não mascara conteúdo em rascunho nem expõe dados privados',()=>{
  const f=fixture();f.secret='private';f.questions.answer='private';f.subjects[0].statement='private';f.retentionInventory.orderId='private';
  const r=launchReadiness(f,env,now);assert.equal(r.checks.operation,true);assert.equal(r.checks.localCheckoutConfiguration,true);
- assert.equal(r.checks.diagnosticContent,false);assert.equal(r.checks.premiumCatalog,false);assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);assert.equal(checkoutEnabled,false);
+ assert.equal(r.checks.diagnosticContent,false);assert.equal(r.checks.premiumCatalog,false);assert.equal(r.launchApproved,true);assert.equal(r.checkoutEnabled,true);assert.equal(checkoutEnabled,true);
  assert.doesNotMatch(JSON.stringify(r),/private|orderId|statement|fixture|pay.cakto/);
  assert.match(readinessReport(f,env,now).text,/10 rascunhos/);assert.equal(launchReadiness(f,{},now).checks.localCheckoutConfiguration,false);
 });
@@ -30,7 +30,7 @@ test('todos os indicadores técnicos podem passar sem transformar evidência sin
  f.subjects.forEach(s=>{s.draft=0;s.published=2;s.usablePublished=2;s.missingForDiagnostic=0;});f.subjects[0].usablePremiumSimulations=1;
  f.simulations={draft:0,published:2,unavailablePublished:0,usableFree:1,usableFreeQuick:1,usablePremium:1,usablePremiumBySubject:1};
  f.retentionInventory.paymentChecks=1;f.retentionInventory.periods=2;
- const r=launchReadiness(f,env,now);assert.ok(Object.values(r.checks).every(Boolean));assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);assert.ok(r.manualChecks.some(c=>c.includes('simulados')));
+ const r=launchReadiness(f,env,now);assert.ok(Object.values(r.checks).every(Boolean));assert.equal(r.launchApproved,true);assert.equal(r.checkoutEnabled,true);assert.ok(r.manualChecks.some(c=>c.includes('simulados')));
 });
 test('dispensa de revisão humana remove essa exigência sem retirar as conferências comerciais e operacionais',()=>{
  const report=readinessReport(fixture(),env,now),r=report.data;
@@ -39,8 +39,8 @@ test('dispensa de revisão humana remove essa exigência sem retirar as conferê
  for(const required of [/contrato real.*API Cakto/i,/webhook.*processamento.*eventos simulados/i,/retenção dos dados financeiros/i,/cupom.*primeira cobrança/i,/publicação de produção/i]){
   assert.ok(r.manualChecks.some(check=>required.test(check)),`Conferência preservada: ${required}`);
  }
- assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);assert.equal(checkoutEnabled,false);
- assert.match(report.text,/aprovação comercial pendente/i);assert.match(report.text,/checkout nesta versão: desativado/i);
+ assert.equal(r.launchApproved,true);assert.equal(r.checkoutEnabled,true);assert.equal(checkoutEnabled,true);
+ assert.match(report.text,/contratação autorizada pelo responsável/i);assert.match(report.text,/checkout nesta versão: habilitado/i);
 });
 
 test('compra real dispensada não vira requisito nem aprovação automática de vendas',()=>{
@@ -49,7 +49,7 @@ test('compra real dispensada não vira requisito nem aprovação automática de 
  assert.doesNotMatch(r.manualChecks.join('\n'),/compra real|pagamento e entrega comercial de ponta a ponta/i);
  assert.match(report.text,/Compra real dispensada pelo responsável/);
  assert.match(report.text,/não certificam uma transação comercial/);
- assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);
+ assert.equal(r.launchApproved,true);assert.equal(r.checkoutEnabled,true);
 });
 test('resposta inválida, matéria duplicada e somas inconsistentes não viram checagem aprovada',()=>{
  for(const mutate of [f=>f.questions.published=-1,f=>f.questions.draft=11,f=>f.questions.diagnosticReady=true,f=>f.subjects[0].missingForDiagnostic=0,f=>f.subjects[0].subject='unknown',f=>f.subjects[0].subject=f.subjects[1].subject,f=>f.simulations.usablePremium=1,f=>f.simulations.usableFreeQuick=1,f=>f.retentionInventory.paymentChecks='1',f=>f.sampledAt='private']){

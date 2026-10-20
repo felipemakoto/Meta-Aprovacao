@@ -1,5 +1,7 @@
 # Checagem de lançamento — etapa 36
 
+**Habilitação autorizada:** checkoutEnabled=true por pedido explícito do responsável. Retenção definida em POLITICA-RETENCAO.md e privacidade atualizada para versão2026-10-20.1. Checagem administrativa agora distingue aprovação explícita de indicadores técnicos; relatório completo em CHECKLIST-FINAL-ATUAL.md. Afirmações anteriores de contratação false/prazos indefinidos são históricas.
+
 **Atualização vigente:** [CHECKLIST-FINAL-ATUAL.md](CHECKLIST-FINAL-ATUAL.md). Responsável dispensou a confirmação do fuso do cupom; referências anteriores a essa confirmação como pendência estão superadas. Horário configurado preservado. Não equivale a comprovação do fuso externo nem autorização de contratação.
 
 ## Estado mais recente — 20/10/2026 às20:16SP

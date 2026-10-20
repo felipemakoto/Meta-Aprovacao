@@ -9,8 +9,8 @@ test('checkout real exige sessão, recusa destino do cliente e não oferece GET'
  const arbitrary=await fetch(endpoint+'?url=https://evil.example',{method:'POST',headers:{origin:base}});assert.equal(arbitrary.status,400);
  assert.equal((await fetch(endpoint)).status,405);
 });
-test('Premium permanece com contratação indisponível e prévia não inicia cobrança',async()=>{
+test('prévia não inicia cobrança mesmo após liberação comercial',async()=>{
  const response=await fetch(base+'/premium/preview');assert.equal(response.status,200);
- const html=await response.text();assert.match(html,/disabled=""/);assert.match(html,/Premium em breve/);
+ const html=await response.text();assert.match(html,/disabled=""/);assert.match(html,/Contratação indisponível na prévia/);
  assert.ok(!html.includes('https://pay.cakto.com.br/'));assert.ok(!html.includes('action="/api/premium/checkout"'));
 });

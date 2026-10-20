@@ -8,6 +8,7 @@ import path from 'node:path';
 import {createClient} from '@supabase/supabase-js';
 import {checkoutEnabled} from '../src/lib/subscriptions/checkout-launch.ts';
 import {premiumOffer} from '../src/lib/subscriptions/contract.ts';
+import {configuredCheckout} from '../src/lib/subscriptions/checkout-contract.ts';
 const origin='https://meta-aprovacao.vercel.app';
 const tag=randomUUID(),email=`promotion-smoke-${tag}@example.invalid`,password=randomBytes(32).toString('base64url');
 const order=randomUUID(),subscription=randomUUID(),reference=randomBytes(32).toString('hex');
@@ -32,13 +33,22 @@ async function request(route,body){
 async function checkPages(promotional){
  for(const route of ['/premium','/cadastro/confirmado']){
   const html=await(await request(route)).text();
+  assert.match(html,/Assinar Premium/);assert.doesNotMatch(html,/Premium em breve/);
   assert.match(html,/23,98/);
   if(promotional){assert.match(html,/12,49/);assert.match(html,/primeiracompra/);}
   else assert.doesNotMatch(html,/12,49|primeiracompra|no primeiro mês/);
  }
 }
+async function checkCheckout(hasPaidBefore){
+ const response=await fetch(origin+'/api/premium/checkout',{method:'POST',headers:{Origin:origin,Accept:'application/json',Cookie:[...jar].map(([k,v])=>`${k}=${v}`).join('; ')},redirect:'manual',signal:AbortSignal.timeout(15000)});
+ assert.equal(response.status,200);assert.match(response.headers.get('cache-control'),/no-store/);
+ const data=await response.json(),destination=new URL(data.url),expected=configuredCheckout(process.env,new Date(),hasPaidBefore);
+ assert.equal(destination.origin,'https://pay.cakto.com.br');assert.match(destination.searchParams.get('sck')??'',/^[a-f0-9]{64}$/);
+ destination.searchParams.delete('sck');assert.equal(destination.href,expected.url);
+ // Only a saved intent and validated destination. Never visit a payment endpoint or pay.
+}
 try{
- assert.equal(checkoutEnabled,false);
+ assert.equal(checkoutEnabled,true);
  assert.match(process.env.NEXT_PUBLIC_SUPABASE_URL??'',/^https:\/\/[a-z0-9]{20}\.supabase\.co$/);
  assert.equal(new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).hostname,readFileSync('supabase/.temp/project-ref','utf8').trim()+'.supabase.co');
  assert.ok(process.env.SUPABASE_SECRET_KEY?.startsWith('sb_secret_'));
@@ -49,6 +59,7 @@ try{
  assert.equal(created.error,null);user=created.data.user.id;
  phase='new_account';assert.deepEqual(await(await request('/api/auth/login',{email,password})).json(),{status:'signed_in'});
  await checkPages(premiumOffer(new Date()).promotional);
+ phase='first_checkout';await checkCheckout(false);
  phase='expired_payment';
  query(`begin;set local statement_timeout='15s';
  insert into private.checkout_intents(reference,user_id,provider,product_id,offer_id,checkout_url,first_price_cents,monthly_price_cents,created_at,expires_at)
@@ -61,8 +72,9 @@ try{
  if public.read_subscription_pricing('${user}')<>jsonb_build_object('hasPremium',false,'accessUntil',null,'hasPaidBefore',true) then raise exception 'promotion_fixture_failed';end if;
  end$$;select true as promotion_fixture_ready;commit;`,'promotion_fixture_ready');
  await checkPages(false);
+ phase='returning_checkout';await checkCheckout(true);
  phase='returning_login';jar.clear();await request('/api/auth/login',{email,password});await checkPages(false);
- console.log('Produção aprovada: planos em duas telas, histórico pago/expirado e nova entrada com preço normal, sem chamadas à Cakto.');
+ console.log('Produção aprovada: planos, intenção promocional, histórico pago/expirado, intenção normal sem cupom e nova entrada. Sem consulta à Cakto ou cobrança.');
 }catch{
  console.error(`Conferência de produção não concluída na etapa ${phase}. Nenhuma credencial exibida.`);process.exitCode=1;
 }finally{
@@ -73,7 +85,7 @@ try{
    do $$begin if (select count(*) from promotion_fixture)>1 then raise exception 'promotion_cleanup_ambiguous';end if;end$$;
    delete from private.cakto_event_inbox where order_id='${order}' and product_id='promotion-smoke' and fingerprint=encode(extensions.digest('${reference}','sha256'),'hex');
    delete from auth.users where id in(select id from promotion_fixture);
-   do $$begin if exists(select 1 from auth.users where email='${email}') or exists(select 1 from private.checkout_intents where reference='${reference}') or
+   do $$begin if exists(select 1 from auth.users where email='${email}') or exists(select 1 from private.checkout_intents where reference='${reference}' or user_id in(select id from promotion_fixture)) or
    exists(select 1 from private.cakto_event_inbox where order_id='${order}') or exists(select 1 from private.subscriptions where external_subscription_id='${subscription}') then raise exception 'promotion_cleanup_failed';end if;end$$;
    select true as promotion_fixture_removed;commit;`,'promotion_fixture_removed');cleaned=true;
   }catch{console.error('Limpeza da fixture não confirmada; intervenção necessária.');process.exitCode=1;}

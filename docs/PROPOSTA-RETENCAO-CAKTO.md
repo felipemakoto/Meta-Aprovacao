@@ -1,5 +1,7 @@
 # Proposta técnica de retenção — Cakto
 
+**Histórico:** substituída pela [política definida em20/10/2026](POLITICA-RETENCAO.md). Nenhum descarte automático foi criado.
+
 Estado: proposta para avaliação; nenhum descarte, cron ou alteração de banco implementado. Não estabelece prazo legal para documentos financeiros. Checkout permanece desativado.
 
 ## Regra de preservação

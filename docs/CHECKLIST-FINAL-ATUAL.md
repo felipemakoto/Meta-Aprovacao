@@ -12,12 +12,12 @@ Atualizado em20/10/2026. Este arquivo substitui listas históricas de pendência
 | Publicação | Site no commit87dac09; worker Supabase versão5. Execução natural das20:16:05SP concluiu com sucesso, sem pedidos encontrados e com fila vazia. |
 | Compra real | Dispensada por decisão do responsável; não exigir nem propor novamente como requisito. |
 | Fuso do cupom | Confirmação dispensada por decisão expressa do responsável. Preservar painel em31/10/2026 às23:59 e referência internaAmerica/Sao_Paulo; não certificar fuso externo ou mudar a promoção. Não bloqueia conclusão por falta de resposta do suporte. |
-| Retenção | Preservação atual sem descarte automático. Definir prazos finais e condições de limpeza antes de implementar qualquer remoção; proposta em PROPOSTA-RETENCAO-CAKTO.md, ainda não aprovada. |
-| Contratação Premium | Ainda desativada. Pendente decisão explícita de habilitação, seguida de publicação e conferência do fluxo de redirecionamento sem pagar. |
+| Retenção | Definida em POLITICA-RETENCAO.md: revisão de intenções sem vínculos30dias; histórico técnico/backups90dias; registros financeiros5anos após encerramento. Descarte controlado, sem nova automação ou exclusão nesta entrega. |
+| Contratação Premium | Autorizada explicitamente pelo responsável. Habilitada no código, com botão Assinar Premium e estados de carregamento/erro. Publicação e conferência de produção registradas no relatório de lançamento. |
 
 ## Próximas ações
 
-1. Definir os prazos finais de retenção com o responsável. Não aplicar automaticamente os30/90dias sugeridos nem apagar registros enquanto isso.
-2. Após autorização de contratação, habilitar a trava existente, verificar telas/valores e redirecionamento autenticado sem preencher dados financeiros ou concluir compra, e publicar.
+1. Operar o monitoramento existente e atender solicitações de conta/pagamento.
+2. Aplicar a revisão de retenção conforme POLITICA-RETENCAO.md quando os prazos forem atingidos; não executar DELETE por idade nas tabelas relacionadas.
 
-Referências: PRONTIDAO-LANCAMENTO.md, VALIDACAO-CAKTO-SEM-COMPRA-2026-10-20.md, PROPOSTA-RETENCAO-CAKTO.md. O relatório administrativo possui uma lista fixa de conferências; sua presença não significa que todos os itens estejam pendentes. Não confundir launchApproved=false com falha técnica: é ausência de aprovação comercial automática.
+Referências: PRONTIDAO-LANCAMENTO.md, VALIDACAO-CAKTO-SEM-COMPRA-2026-10-20.md, POLITICA-RETENCAO.md. O relatório administrativo possui uma lista fixa de conferências; sua presença não significa que todos os itens estejam pendentes. A aprovação comercial reflete a autorização explícita registrada na configuração, não é inferida de fixtures ou contagens de pagamento.

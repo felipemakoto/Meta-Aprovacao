@@ -53,7 +53,7 @@ async function cleanup(){
 }
 
 try{
- assert.equal(checkoutEnabled,false);
+ assert.equal(checkoutEnabled,true);
  assert.match(process.env.NEXT_PUBLIC_SUPABASE_URL??'',/^https:\/\/[a-z0-9]{20}\.supabase\.co$/);
  assert.equal(new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).hostname,readFileSync('supabase/.temp/project-ref','utf8').trim()+'.supabase.co');
  assert.ok(process.env.SUPABASE_SECRET_KEY?.startsWith('sb_secret_'));

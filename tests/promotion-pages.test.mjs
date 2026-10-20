@@ -18,6 +18,8 @@ function loadTsx(relative,mocks={}){
  return mod.exports.default;
 }
 const PlanOptions=loadTsx('../src/app/premium/plan-options.tsx',{
+ '@/lib/subscriptions/checkout-launch':{checkoutEnabled:true},
+ './checkout-action':{__esModule:true,default:loadTsx('../src/app/premium/checkout-action.tsx',{'next/navigation':{useRouter:()=>({push(){}})}})},
  './continue-study':{__esModule:true,default:()=>createElement('button',null,'Fazer meu simulado grátis')},
 });
 const Premium=loadTsx('../src/app/premium/premium.tsx',{
@@ -46,7 +48,7 @@ for(const route of ['premium','confirmed']){
  test(`${route}: pagamento antigo e Premium inativo mostram somente preço mensal normal`,async()=>{
   const {html}=await render(route,{hasPremium:false,accessUntil:null,hasPaidBefore:true});
   assert.match(html,/23,98/);assert.match(html,/por mês/);assert.doesNotMatch(html,/12,49|no primeiro mês|primeiracompra|Depois,/);
-  assert.match(html,/Premium em breve/);
+  assert.match(html,/Assinar Premium/);
  });
  test(`${route}: falha no histórico não anuncia promoção`,async()=>{
   const {html}=await render(route,{hasPremium:false,accessUntil:null});

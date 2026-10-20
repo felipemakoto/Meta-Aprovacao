@@ -11,10 +11,10 @@ test('pagina privada ignora tentativa de forjar conta/plano pela URL e cookie',a
 test('previa promocional deixa renovacao clara e nao aceita pagamento',async()=>{
  const r=await fetch(origin+'/premium/preview');assert.equal(r.status,process.env.PREMIUM_TEST_PRODUCTION?404:200);if(process.env.PREMIUM_TEST_PRODUCTION)return;
  const html=(await r.text()).replaceAll('<!-- -->','');
- for(const text of ['Gratuito','Premium','no primeiro mês','10 questões por dia','1 simulado rápido por dia','Questões sem limite diário','Premium em breve','primeiracompra','31/10/2026'])assert.ok(html.includes(text),text);
+ for(const text of ['Gratuito','Premium','no primeiro mês','10 questões por dia','1 simulado rápido por dia','Questões sem limite diário','Contratação indisponível na prévia','primeiracompra','31/10/2026'])assert.ok(html.includes(text),text);
  assert.match(html,/R\$\s*12,49/);assert.match(html,/Depois, R\$\s*23,98\/mês/);assert.match(html,/Taxa Cakto de R\$ 0,99 incluída/);
- assert.match(html,/<button[^>]*disabled[^>]*>Premium em breve/);
- assert.ok(html.indexOf('10 questões por dia')<html.indexOf('Premium em breve'));
+ assert.match(html,/<button[^>]*disabled[^>]*>Contratação indisponível na prévia/);
+ assert.ok(html.indexOf('10 questões por dia')<html.indexOf('Contratação indisponível na prévia'));
  assert.doesNotMatch(html,/https:\/\/pay\.kiwify|sb_secret_/);
 });
 test('estados distintos ativo, erro e fim da promocao',async()=>{

@@ -7,7 +7,7 @@ const validationPolicy={realPurchaseRequired:false,couponTimezoneRequired:false}
 const manualChecks=[
  "Confirmar o contrato real de moeda, valores e campos da API Cakto.",
  "Conferir webhook, processamento, assinatura e acesso com eventos simulados, sem cobrança.",
- "Definir retenção dos dados financeiros e do histórico técnico, sem apagar provas por engano.",
+ "Conferir a política de retenção dos dados financeiros e do histórico técnico, sem apagar provas por engano.",
  "Conferir aplicação do cupom somente na primeira cobrança.",
  "Conferir configuração e disponibilidade da publicação de produção.",
 ];
@@ -36,13 +36,13 @@ export function launchReadiness(value:unknown,env:Record<string,string|undefined
  const checks={operation:health.health.automation.enabled&&health.health.automation.lastOk===true&&health.health.automation.lastFinishedAt!==null&&!health.needsAttention,diagnosticContent:diagnosticReady,
   practiceContent:q.usablePublished>0,freeQuickSimulation:s.usableFreeQuick>0,premiumCatalog:s.usablePremium>0,
   premiumBySubject:s.usablePremiumBySubject>0,localCheckoutConfiguration:checkoutConfigured};
- return {sampledAt:r.sampledAt,launchApproved:false as const,checkoutEnabled,checks,questions:{...q,diagnosticReady},subjects:coverage,simulations:s,retentionInventory:inventory,
+ return {sampledAt:r.sampledAt,launchApproved:checkoutEnabled,checkoutEnabled,checks,questions:{...q,diagnosticReady},subjects:coverage,simulations:s,retentionInventory:inventory,
   health:health.health,validationPolicy:{...validationPolicy},manualChecks:[...manualChecks]};
 }
 export function readinessReport(value:unknown,env:Record<string,string|undefined>,now=Date.now()) {
  const r=launchReadiness(value,env,now),labels:Record<keyof typeof r.checks,string>={operation:"Automação e monitoramento",diagnosticContent:"Conteúdo do diagnóstico",practiceContent:"Questões de prática",
   freeQuickSimulation:"Simulado rápido gratuito",premiumCatalog:"Catálogo Premium",premiumBySubject:"Simulados Premium por matéria",localCheckoutConfiguration:"Configuração local do checkout"};
- const lines=["Checagem de lançamento — aprovação comercial pendente.",`Checkout nesta versão: ${r.checkoutEnabled?"habilitado":"desativado"}.`,
+ const lines=[`Checagem de lançamento — ${r.launchApproved?"contratação autorizada pelo responsável":"aprovação comercial pendente"}.`,`Checkout nesta versão: ${r.checkoutEnabled?"habilitado":"desativado"}.`,
   `Questões: ${r.questions.draft} rascunhos · ${r.questions.reviewed} revisadas · ${r.questions.usablePublished} publicadas com gabarito.`];
  for(const [key,ok] of Object.entries(r.checks))lines.push(`${ok?"OK":"PENDENTE"} · ${labels[key as keyof typeof r.checks]}`);
  lines.push("Compra real dispensada pelo responsável; os testes técnicos não certificam uma transação comercial.","Confirmação do fuso do cupom dispensada pelo responsável; horário configurado preservado.","Checklist de conferência (não representa pendências automaticamente):",...r.manualChecks.map(c=>`- ${c}`),"A checagem não publica conteúdo, concede acesso, apaga dados ou libera vendas.");

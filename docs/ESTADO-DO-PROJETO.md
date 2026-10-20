@@ -1,5 +1,7 @@
 # Continuação dos pagamentos — 20/10/2026 às20:16SP
 
+**Autorização posterior:** responsável pediu executar as duas decisões: habilitação comercial e definição dos prazos de retenção. Implementados checkoutEnabled=true, ação Assinar Premium com navegação segura, política de retenção30/90dias e5anos financeiros com revisão controlada e versão pública de privacidade2026-10-20.1. Nenhuma compra ou limpeza automática. CHECKLIST-FINAL-ATUAL.md e POLITICA-RETENCAO.md substituem o estado anterior de contratação e retenção pendentes. Conferência de publicação descrita no relatório de lançamento.
+
 **Decisão mais recente:** responsável dispensou a confirmação do fuso do cupom, sem alterar horário/preço/promoção. [Checklist final vigente](CHECKLIST-FINAL-ATUAL.md) substitui as listas históricas abaixo. Compra real também dispensada. Permanecem decisão de habilitação comercial e definição dos prazos finais de retenção; nenhuma limpeza automática ou venda foi liberada.
 
 Site no commit87dac09 e worker Supabase cakto-reconcile versão5. A publicação do site não atualizava o worker; ambos agora contêm a correção de moeda pela oferta autenticada. Após timeout de autenticação às20:10SP, primeira execução natural da versão5 concluiu às20:16:05SP sem pedidos encontrados, monitor funcionando e fila vazia. É evidência pontual, não garantia contra indisponibilidade externa. Nenhuma compra, mudança de schema, credencial, permissão ou cron. Checkout false; próximos pontos e limites registrados no início de PRONTIDAO-LANCAMENTO.md.

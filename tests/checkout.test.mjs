@@ -14,6 +14,18 @@ const request = (opts={}) => new Request('http://localhost:3000/api/premium/chec
 const deps = { user:async()=>'verified-user', access:async()=>({hasPremium:false,accessUntil:null,hasPaidBefore:false}), offer:()=>offer,
  create:async(user, o)=>{assert.equal(user,'verified-user');assert.deepEqual(o,offer);return intent;}, now:()=>now };
 const handler = (overrides={}, settings={})=>checkoutHandler({...deps,...overrides},{secure:false,enabled:true,...settings});
+
+test('cliente JSON recebe somente URL validada após persistência e preserva as proteções',async()=>{
+ let created=0;
+ const h=handler({create:async()=>{created++;return intent;}});
+ const r=await h(request({headers:{accept:'application/json'}}));
+ assert.equal(r.status,200);assert.equal(created,1);assert.match(r.headers.get('cache-control'),/no-store/);
+ const data=await r.json();assert.deepEqual(Object.keys(data),['url']);
+ const target=new URL(data.url);assert.equal(target.hostname,'pay.cakto.com.br');assert.equal(target.searchParams.get('sck'),intent.reference);
+ assert.equal((await h(request({headers:{accept:'application/json',origin:'https://foreign.invalid'}}))).status,403);assert.equal(created,1);
+ const denied=await handler({user:async()=>null})(request({headers:{accept:'application/json'}}));assert.equal(denied.status,401);
+ const bad=await handler({create:async()=>({...intent,checkoutUrl:'https://foreign.invalid'})})(request({headers:{accept:'application/json'}}));assert.equal(bad.status,503);assert.equal((await bad.json()).url,undefined);
+});
 test('URL permite apenas HTTPS Cakto e cupom; rejeita dados pessoais e redirects',()=>{
  assert.equal(checkoutUrl(offer.url).hostname,'pay.cakto.com.br');
  assert.equal(checkoutUrl('https://pay.cakto.com.br/8wweqjo_1168765?coupon=primeiracompra').pathname,'/8wweqjo_1168765');

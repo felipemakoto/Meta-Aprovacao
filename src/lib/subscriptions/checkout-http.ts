@@ -45,6 +45,10 @@ export function checkoutHandler(deps: Dependencies, settings: Settings) {
       const offer = deps.offer(deps.now(), pricing.hasPaidBefore);
       const intent = await deps.create(user, offer);
       const location = checkoutDestination(intent, offer, deps.now());
+      // Client navigation must not follow a cross-origin 303 inside fetch.
+      if (request.headers.get("accept") === "application/json") return Response.json({url:location},{headers:{
+        "Cache-Control":"private, no-store, max-age=0","Referrer-Policy":"no-referrer","X-Content-Type-Options":"nosniff",
+      }});
       return new Response(null, { status: 303, headers: { Location: location,
         "Cache-Control": "private, no-store, max-age=0", "Referrer-Policy": "no-referrer" } });
     } catch (e) {
