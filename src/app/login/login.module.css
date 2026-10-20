@@ -1,13 +1,25 @@
-.actions { display: grid; gap: 12px; margin-top: 28px; }
-.action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 14px 18px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); box-shadow: var(--control-shadow); color: var(--color-action); font-size: 17px; line-height: 1.4; font-weight: 650; text-decoration: none; }
+.layout { width: min(100%, 520px); margin-inline: auto; padding-block: 12px; }
+.content > h1 { margin: 0; font: 600 clamp(28px, 4vw, 38px)/1.25 var(--home-font); letter-spacing: -.035em; }
+.content > p { color: var(--home-muted); font-size: 18px; line-height: 1.6; }
+.actions { display: grid; gap: 14px; margin-top: 32px; }
+.action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; padding: 16px 20px; border: 1px solid var(--home-line); border-radius: 12px; background: white; color: var(--home-ink); font-size: 18px; line-height: 1.5; font-weight: 600; text-decoration: none; box-shadow: none; }
 .action svg { width: 22px; height: 22px; flex-shrink: 0; }
-.action:hover { background: #edf2ec; border-color: var(--color-action); }
-.action:active { background: #e1e9df; }
-.primary { background: var(--color-action); border-color: var(--color-action); box-shadow: var(--control-primary-shadow); color: white; }
-.primary:hover, .primary:active { background: var(--color-action-hover); }
-.simulation { background: #eef0d5; border-color: #778743; }
-.simulation:hover, .simulation:active { background: #e3e8b9; border-color: #6f7d3d; }
-.upgrade { background: linear-gradient(115deg,#174d38 0%,#25684b 48%,#166b70 100%); border-color: #225c4b; box-shadow: 0 3px 0 #0b3a33; color: white; }
-.upgrade:hover, .upgrade:active { background: linear-gradient(115deg,#113c2b 0%,#1e573e 48%,#11595d 100%); border-color: #174d38; }
-.logout { display: block; width: 100%; min-height: 48px; padding: 12px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); color: var(--color-text-secondary); font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
-.logout:hover { background: #edf2ec; color: var(--color-action); }
+.action:hover { background: var(--home-sage); border-color: var(--home-green); }
+.primary { background: var(--home-green); border-color: var(--home-green); color: white; }
+.primary:hover { background: var(--home-green-hover); }
+.simulation { background: var(--home-sage); border-color: var(--home-sage); color: var(--home-green-hover); }
+.simulation:hover { border-color: var(--home-green); }
+.upgrade { background: white; color: var(--home-green); }
+.content > form { padding: 0; margin-top: 32px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.content > form:has(.logout) { padding-top: 24px; border-top: 1px solid var(--home-line); }
+.content > form label { font-size: 17px; }
+.content > form input { min-height: 54px; font-size: 18px; }
+.content > form button[type="submit"] { box-shadow: none; font-size: 18px; }
+.content > p a { min-height: 44px; font-size: 17px; }
+.content > a { font-size: 17px; box-shadow: none; }
+.logout { display: block; width: 100%; min-height: 52px; padding: 12px; border: 1px solid var(--home-line); border-radius: 12px; background: white; color: var(--home-muted); font: inherit; font-weight: 600; cursor: pointer; }
+.logout:hover { background: var(--home-sage); color: var(--home-green); }
+.google button { box-shadow: none; font-size: 17px; }
+.google dialog { background: white; }
+.google dialog label, .google dialog > p, .google > div > div { font-size: 16px; }
+@media (max-width: 599px) { .layout { padding-block: 4px; } .action { padding-inline: 16px; } }

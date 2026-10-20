@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
-import SignupLayout from "../cadastro/layout";
-export const metadata: Metadata = { title: "Entrar | ETEC / IF", robots: { index: false, follow: false }, referrer: "no-referrer" };
-export default SignupLayout;
+import Link from "next/link";
+import StudyShell from "../study-shell";
+import styles from "./login.module.css";
+export const metadata: Metadata = { title: "Minha conta | Meta Aprovação", robots: { index: false, follow: false }, referrer: "no-referrer" };
+export default function LoginLayout({ children }: { children: React.ReactNode }) {
+  return <StudyShell active="dashboard" focus exit={<Link href="/">Início</Link>}><main className={styles.layout}>{children}</main></StudyShell>;
+}

@@ -19,7 +19,7 @@ A chamada do gratuito tem título e recursos à esquerda, limites diários e cad
 
 `home-demo.tsx` contém um exemplo isolado: 25% de 80. Escolher 10, 20 ou 40 mostra feedback textual e seleção acessível com `aria-pressed`. O estado vive apenas na página, sem API, conta, pontuação, consumo de limite ou gravação. A demonstração não substitui o diagnóstico em `/quiz`.
 
-Rotas e regras existentes foram preservadas. O gratuito continua informado como 10 questões por dia e 1 simulado rápido por dia, com correção, histórico e estatísticas. Backend, autenticação, banco, planos, permissões e pagamentos não foram alterados. Login e outras páginas mantêm seu tema anterior.
+Rotas e regras existentes foram preservadas. O gratuito continua informado como 10 questões por dia e 1 simulado rápido por dia, com correção, histórico e estatísticas. Backend, autenticação, banco, planos, permissões e pagamentos não foram alterados. A tela de conta foi alinhada ao novo tema na revisão abaixo; as demais páginas não abrangidas mantêm seu tema anterior.
 
 ## Marca, imagem e movimento
 
@@ -35,7 +35,7 @@ Compilação de produção e lint dos componentes alterados aprovados. Os 22 tes
 
 ## Área de estudo — 20/10/2026
 
-O mesmo sistema de cores, fontes locais e marca agora atende painel, questões, simulados, teste inicial, correções, histórico e estatísticas. `study-shell.tsx` concentra cabeçalho, navegação, acesso ao conteúdo e modo de foco; `study-shell.module.css` adapta os tokens existentes apenas enquanto essa estrutura está presente. Login, cadastro e páginas legais mantêm seu tema anterior.
+O mesmo sistema de cores, fontes locais e marca agora atende painel, questões, simulados, teste inicial, correções, histórico e estatísticas. `study-shell.tsx` concentra cabeçalho, navegação, acesso ao conteúdo e modo de foco; `study-shell.module.css` adapta os tokens existentes apenas enquanto essa estrutura está presente. Cadastro e páginas legais mantêm seu tema anterior; a tela de conta foi alinhada ao sistema na revisão abaixo.
 
 Referências: organização de materiais e atividade do Brilliant (https://brilliant.org/), recuperação ativa e modos de estudo/teste descritos pelo Quizlet (https://help.quizlet.com/hc/en-us/articles/360030841732-Studying-on-Quizlet). O acesso direto à página pública do Quizlet retornou 403; esta é uma adaptação de padrões, sem alegar reprodução de telas privadas.
 
@@ -48,3 +48,9 @@ Referências: organização de materiais e atividade do Brilliant (https://brill
 Alterações restritas à apresentação. Nenhuma mudança em contratos de API, carregamento de dados, persistência, autenticação, limites, Premium ou pagamentos. As prévias existentes continuam exclusivas do desenvolvimento.
 
 Validação desta etapa: 40 testes de regressão aprovados; lint e TypeScript aprovados; detector Impeccable sem ocorrências nos novos componentes e telas principais. Conferência visual de sete telas em 390 e 1440px, mais painel, questões, simulados e teste em 280, 320, 768 e 1024px, sem rolagem horizontal. Fluxos locais de resposta correta/incorreta, filtros, limites, conclusão, revisão, histórico, estatísticas e menu por teclado aprovados, sem erros de execução ou chamadas de escrita à API. As prévias usam dados ilustrativos e não substituem uma validação autenticada em produção. Nenhuma publicação realizada.
+
+## Tela de conta — 20/10/2026
+
+`/login` agora reutiliza a marca, o cabeçalho branco, os tokens e o rodapé da área de estudo. Formulário central de até 520px, tipografia Manrope legível e ações hierarquizadas: estudos em verde, simulado em sálvia e Premium com contorno. Sem gradiente, sombras ou painel adicional ao redor de sair da conta. Estados autenticado e visitante preservam seus conteúdos, links, condições de oferta e ações; nenhum código de autenticação ou consulta de plano foi modificado.
+
+Validação: lint e 13 testes existentes de login e oferta aprovados. Estados com e sem sessão conferidos em 320, 390, 768 e 1440px, sem overflow ou erros de execução; mostrar/ocultar senha e links de cadastro/recuperação conferidos. A prévia autenticada usou uma composição temporária sem interações, removida após a conferência, sem entrar ou sair de contas reais.
