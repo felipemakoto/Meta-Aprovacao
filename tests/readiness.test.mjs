@@ -3,6 +3,14 @@ import assert from 'node:assert/strict';
 import {launchReadiness,readinessReport} from '../src/lib/subscriptions/readiness.ts';
 import {checkoutEnabled} from '../src/lib/subscriptions/checkout-launch.ts';
 const date='2026-10-10T12:00:00Z',now=Date.parse(date);
+test('dispensa do fuso não muda contratação nem certifica horário externo',()=>{
+ const r=launchReadiness(fixture(),env,now);
+ assert.equal(r.validationPolicy.couponTimezoneRequired,false);
+ assert.equal(r.validationPolicy.realPurchaseRequired,false);
+ assert.equal(r.checkoutEnabled,false);assert.equal(r.launchApproved,false);
+ assert.ok(r.manualChecks.every(c=>!c.includes('fuso')));
+ assert.match(readinessReport(fixture(),env,now).text,/fuso do cupom dispensada/);
+});
 const env={CAKTO_PRODUCT_ID:'fixture',CAKTO_REGULAR_OFFER_ID:'offer',CAKTO_OCTOBER_OFFER_ID:'offer',CAKTO_REGULAR_CHECKOUT_URL:'https://pay.cakto.com.br/fixture',CAKTO_OCTOBER_CHECKOUT_URL:'https://pay.cakto.com.br/fixture?coupon=primeiracompra'};
 function fixture(){return {sampledAt:date,health:{sampledAt:date,state:'ok',automation:{enabled:true,running:false,schedulerActive:true,lastFinishedAt:date,lastOk:true,nextDiscoveryAt:date},
  queue:{pending:0,queued:0,running:0,verified:0,review:0,retry:0,exhausted:0,expiredLeases:0,ready:0,oldestReadyAt:null},alerts:[],monitor:{active:true,lastCheckedAt:date},incidents:[]},
