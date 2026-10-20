@@ -2,6 +2,8 @@
 
 ## Estado atual
 
+**Decisão posterior do responsável, 20/10/2026:** compra real dispensada e removida dos requisitos do projeto. As instruções históricas abaixo que a exigiam foram superadas. Mantêm-se os ensaios técnicos e as outras conferências; não registrar compra/assinatura comercial como validada sem essa evidência. Checkout continua desativado nesta etapa.
+
 **Atualização: entrega do provedor validada em produção em 20/10/2026.** O registro desta rodada está ao final; trechos sobre a correção ainda local descrevem sua implementação anterior à publicação.
 
 Correção local do receptor `POST /api/webhooks/cakto`: autenticação pelo campo `secret` do JSON, sem exigir `X-Cakto-Timestamp` ou `X-Cakto-Signature`. Segue a confirmação direta do suporte enviada pelo responsável nesta conversa em 20/10/2026. A documentação pública ainda contém trechos sobre HMAC que divergem dessa resposta; esses trechos não são o contrato implementado.
@@ -81,3 +83,11 @@ Validação de 20/10/2026: 66 testes isolados/regressões, lint e compilação d
 - Uma prova direta e isolada com produto/oferta fictícios confirmou401 tanto para chave incorreta quanto para a chave do ambiente local. O sucesso posterior da entrega originada na Cakto confirma que a configuração de produção aceita o segredo do provedor. A credencial local está divergente e não foi substituída nesta rodada.
 
 Entrega/autenticação aprovadas; não houve cobrança, ativação de checkout ou mudança no processador. O teste não certifica pagamento, recorrência, vínculo à conta, promoção ou concessão de Premium. A validação comercial real e a reconciliação segura da configuração local permanecem pendentes. Não enfraquecer a autenticação para acomodar a chave local divergente.
+
+## Alinhamento local e dispensa de compra real — 20/10/2026
+
+O responsável dispensou a compra real. A política de prontidão agora declara realPurchaseRequired:false, substitui essa exigência pelos ensaios com eventos simulados e informa expressamente que esses testes não certificam uma transação comercial. Aprovação de lançamento e ativação do checkout continuam independentes e desativadas; não há alteração no processamento, valores, planos, permissões ou automação.
+
+A chave foi conferida somente em memória. O formulário de configuração da Cakto apresentava valor diferente do secret do JSON da entrega confirmada; sua cópia inicial recebeu401 e foi revertida, sem salvar o formulário. O secret efetivamente enviado na entrega de teste e aceito pela produção foi então colocado apenas em CAKTO_WEBHOOK_SECRET do .env.local ignorado pelo Git. As demais variáveis foram preservadas e nenhum valor secreto foi gravado na documentação ou em captura.
+
+Prova final direta no endpoint público em20/10/2026 às19:33:31 de São Paulo: chave incorreta401/received:false; chave local alinhada200/received:true; no-store nas duas respostas. Produto e oferta deliberadamente fictícios, sem persistência comercial, cobrança ou concessão de Premium. Esta prova foi originada localmente, separada do Testar da Cakto já confirmado às19:27:53. Nenhuma configuração de produção ou do provedor foi alterada.

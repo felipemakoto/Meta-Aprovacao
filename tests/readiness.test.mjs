@@ -28,11 +28,20 @@ test('dispensa de revisão humana remove essa exigência sem retirar as conferê
  const report=readinessReport(fixture(),env,now),r=report.data;
  assert.doesNotMatch(r.manualChecks.join('\n'),/revisão humana/i);
  assert.doesNotMatch(report.text,/revisão humana/i);
- for(const required of [/contrato real.*API Cakto/i,/pagamento e entrega comercial de ponta a ponta/i,/retenção dos dados financeiros/i,/cupom.*primeira cobrança/i,/publicação de produção/i]){
+ for(const required of [/contrato real.*API Cakto/i,/webhook.*processamento.*eventos simulados/i,/retenção dos dados financeiros/i,/cupom.*primeira cobrança/i,/publicação de produção/i]){
   assert.ok(r.manualChecks.some(check=>required.test(check)),`Conferência preservada: ${required}`);
  }
  assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);assert.equal(checkoutEnabled,false);
  assert.match(report.text,/aprovação comercial pendente/i);assert.match(report.text,/checkout nesta versão: desativado/i);
+});
+
+test('compra real dispensada não vira requisito nem aprovação automática de vendas',()=>{
+ const report=readinessReport(fixture(),env,now),r=report.data;
+ assert.equal(r.validationPolicy.realPurchaseRequired,false);
+ assert.doesNotMatch(r.manualChecks.join('\n'),/compra real|pagamento e entrega comercial de ponta a ponta/i);
+ assert.match(report.text,/Compra real dispensada pelo responsável/);
+ assert.match(report.text,/não certificam uma transação comercial/);
+ assert.equal(r.launchApproved,false);assert.equal(r.checkoutEnabled,false);
 });
 test('resposta inválida, matéria duplicada e somas inconsistentes não viram checagem aprovada',()=>{
  for(const mutate of [f=>f.questions.published=-1,f=>f.questions.draft=11,f=>f.questions.diagnosticReady=true,f=>f.subjects[0].missingForDiagnostic=0,f=>f.subjects[0].subject='unknown',f=>f.subjects[0].subject=f.subjects[1].subject,f=>f.simulations.usablePremium=1,f=>f.simulations.usableFreeQuick=1,f=>f.retentionInventory.paymentChecks='1',f=>f.sampledAt='private']){

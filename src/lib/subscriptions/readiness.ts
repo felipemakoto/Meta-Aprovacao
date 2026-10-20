@@ -2,9 +2,11 @@ import {healthReport} from "./health.ts";
 import {configuredCheckout} from "./checkout-contract.ts";
 import {checkoutEnabled} from "./checkout-launch.ts";
 const subjects=["matematica","portugues","ciencias","historia","geografia"];
+// Responsável dispensou compra real em 20/10/2026; isso não habilita vendas.
+const validationPolicy={realPurchaseRequired:false} as const;
 const manualChecks=[
  "Confirmar o contrato real de moeda, valores e campos da API Cakto.",
- "Validar pagamento e entrega comercial de ponta a ponta; testes simulados não comprovam uma compra.",
+ "Conferir webhook, processamento, assinatura e acesso com eventos simulados, sem cobrança.",
  "Definir retenção dos dados financeiros e do histórico técnico, sem apagar provas por engano.",
  "Conferir o horário/fuso de vencimento do cupom na Cakto e sua aplicação somente na primeira cobrança.",
  "Conferir configuração e disponibilidade da publicação de produção.",
@@ -35,7 +37,7 @@ export function launchReadiness(value:unknown,env:Record<string,string|undefined
   practiceContent:q.usablePublished>0,freeQuickSimulation:s.usableFreeQuick>0,premiumCatalog:s.usablePremium>0,
   premiumBySubject:s.usablePremiumBySubject>0,localCheckoutConfiguration:checkoutConfigured};
  return {sampledAt:r.sampledAt,launchApproved:false as const,checkoutEnabled,checks,questions:{...q,diagnosticReady},subjects:coverage,simulations:s,retentionInventory:inventory,
-  health:health.health,manualChecks:[...manualChecks]};
+  health:health.health,validationPolicy:{...validationPolicy},manualChecks:[...manualChecks]};
 }
 export function readinessReport(value:unknown,env:Record<string,string|undefined>,now=Date.now()) {
  const r=launchReadiness(value,env,now),labels:Record<keyof typeof r.checks,string>={operation:"Automação e monitoramento",diagnosticContent:"Conteúdo do diagnóstico",practiceContent:"Questões de prática",
@@ -43,6 +45,6 @@ export function readinessReport(value:unknown,env:Record<string,string|undefined
  const lines=["Checagem de lançamento — aprovação comercial pendente.",`Checkout nesta versão: ${r.checkoutEnabled?"habilitado":"desativado"}.`,
   `Questões: ${r.questions.draft} rascunhos · ${r.questions.reviewed} revisadas · ${r.questions.usablePublished} publicadas com gabarito.`];
  for(const [key,ok] of Object.entries(r.checks))lines.push(`${ok?"OK":"PENDENTE"} · ${labels[key as keyof typeof r.checks]}`);
- lines.push("Ainda exige conferência:",...r.manualChecks.map(c=>`- ${c}`),"A checagem não publica conteúdo, concede acesso, apaga dados ou libera vendas.");
+ lines.push("Compra real dispensada pelo responsável; os testes técnicos não certificam uma transação comercial.","Ainda exige conferência:",...r.manualChecks.map(c=>`- ${c}`),"A checagem não publica conteúdo, concede acesso, apaga dados ou libera vendas.");
  return {data:r,text:lines.join("\n")};
 }
