@@ -11,7 +11,6 @@ export default function SupportPage() {
       <a className={styles.contactButton} href="https://mail.google.com/mail/?view=cm&fs=1&to=metaaprovacao720%40gmail.com&su=Ajuda%20com%20a%20Meta%20Aprova%C3%A7%C3%A3o" rel="noreferrer">Falar com o suporte no Gmail</a>
       <p>Abre o Gmail no navegador. Você revisa a mensagem antes de enviar.</p>
       <CopySupportEmail/>
-      <a href="mailto:metaaprovacao720@gmail.com?subject=Ajuda%20com%20a%20Meta%20Aprova%C3%A7%C3%A3o">Usar outro aplicativo de e-mail</a>
     </section>
     <h2>Dúvidas frequentes</h2><div className={styles.faq}>
       <details><summary>Não consigo entrar na minha conta</summary><p>Confira seu e-mail e a confirmação do cadastro. Se esqueceu a senha, use <Link href="/recuperar-senha">a recuperação de senha</Link> e abra o link no mesmo navegador em que fez o pedido.</p></details>
