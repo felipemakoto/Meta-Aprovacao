@@ -20,7 +20,10 @@ function loadTsx(relative,mocks={}){
 const PlanOptions=loadTsx('../src/app/premium/plan-options.tsx',{
  './continue-study':{__esModule:true,default:()=>createElement('button',null,'Fazer meu simulado grátis')},
 });
-const Premium=loadTsx('../src/app/premium/premium.tsx',{'./plan-options':{__esModule:true,default:PlanOptions}});
+const Premium=loadTsx('../src/app/premium/premium.tsx',{
+ './plan-options':{__esModule:true,default:PlanOptions},
+ '../study-shell':{__esModule:true,default:({children})=>createElement('div',null,children)},
+});
 const user={id:'private-verified-owner',email_confirmed_at:'2026-10-01T12:00:00Z'};
 async function render(route,pricing){
  const reads=[];
