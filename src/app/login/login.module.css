@@ -9,7 +9,8 @@
 .primary:hover { background: var(--home-green-hover); }
 .simulation { background: var(--home-sage); border-color: var(--home-sage); color: var(--home-green-hover); }
 .simulation:hover { border-color: var(--home-green); }
-.upgrade { background: white; color: var(--home-green); }
+.upgrade { background: linear-gradient(110deg, #237b38 0%, #08796f 55%, #3155b5 100%); border-color: transparent; color: white; font-weight: 700; }
+.upgrade:hover { background: linear-gradient(110deg, #185d29 0%, #07645d 55%, #264490 100%); border-color: transparent; }
 .content > form { padding: 0; margin-top: 32px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .content > form:has(.logout) { padding-top: 24px; border-top: 1px solid var(--home-line); }
 .content > form label { font-size: 17px; }

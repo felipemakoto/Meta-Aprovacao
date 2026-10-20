@@ -51,7 +51,7 @@ Validação desta etapa: 40 testes de regressão aprovados; lint e TypeScript ap
 
 ## Tela de conta — 20/10/2026
 
-`/login` agora reutiliza a marca, o cabeçalho branco, os tokens e o rodapé da área de estudo. Formulário central de até 520px, tipografia Manrope legível e ações hierarquizadas: estudos em verde, simulado em sálvia e Premium com contorno. Sem gradiente, sombras ou painel adicional ao redor de sair da conta. Estados autenticado e visitante preservam seus conteúdos, links, condições de oferta e ações; nenhum código de autenticação ou consulta de plano foi modificado.
+`/login` agora reutiliza a marca, o cabeçalho branco, os tokens e o rodapé da área de estudo. Formulário central de até 520px, tipografia Manrope legível e ações hierarquizadas: estudos em verde, simulado em sálvia e Premium com gradiente verde, verde-petróleo e azul, solicitado pelo responsável. Sem sombras ou painel adicional ao redor de sair da conta. Estados autenticado e visitante preservam seus conteúdos, links, condições de oferta e ações; nenhum código de autenticação ou consulta de plano foi modificado.
 
 Validação: lint e 13 testes existentes de login e oferta aprovados. Estados com e sem sessão conferidos em 320, 390, 768 e 1440px, sem overflow ou erros de execução; mostrar/ocultar senha e links de cadastro/recuperação conferidos. A prévia autenticada usou uma composição temporária sem interações, removida após a conferência, sem entrar ou sair de contas reais.
 
