@@ -6,7 +6,7 @@ import Dashboard from "./dashboard";
 import { statistics } from "@/lib/data/statistics";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Seus estudos | ETEC / IF", robots: { index: false, follow: false } };
+export const metadata = { title: "Seus estudos | Meta Aprovação", robots: { index: false, follow: false } };
 export default async function DashboardPage() {
   const identity=getVerifiedUser().then(user=>user?.email_confirmed_at?user.id:null);
   const state = await loadDashboard({

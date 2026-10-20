@@ -4,7 +4,7 @@ import { simulationRpc } from "@/lib/data/simulations";
 import { parseCatalog } from "@/lib/quiz/simulation-contract";
 import Simulations from "./simulations";
 export const dynamic="force-dynamic";
-export const metadata={title:"Simulados | ETEC / IF",robots:{index:false,follow:false}};
+export const metadata={title:"Simulados | Meta Aprovação",robots:{index:false,follow:false}};
 export default async function Page(){
  let user;try{user=await getVerifiedUser();}catch{return <Simulations unavailable/>;}
  if(!user?.email_confirmed_at)redirect("/login");

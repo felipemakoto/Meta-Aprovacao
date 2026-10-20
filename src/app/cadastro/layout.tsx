@@ -4,7 +4,7 @@ import Link from "next/link";
 import base from "../quiz/quiz.module.css";
 import styles from "./signup.module.css";
 
-export const metadata: Metadata = { title: "Criar conta | ETEC / IF", robots: { index: false, follow: false }, referrer: "no-referrer" };
+export const metadata: Metadata = { title: "Criar conta | Meta Aprovação", robots: { index: false, follow: false }, referrer: "no-referrer" };
 export default function SignupLayout({ children }: { children: React.ReactNode }) {
   return <div className={`${base.page} ${styles.page}`}>
     <header className={base.header}>

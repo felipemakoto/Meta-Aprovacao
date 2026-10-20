@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { getVerifiedUser } from "@/lib/auth/user";
 import History from "./history";
 export const dynamic="force-dynamic";
-export const metadata={title:"Seu histórico | ETEC / IF",robots:{index:false,follow:false}};
+export const metadata={title:"Seu histórico | Meta Aprovação",robots:{index:false,follow:false}};
 export default async function HistoryPage({searchParams}:{searchParams:Promise<{kind?:string}>}){
  const requested=(await searchParams).kind;
  const initialKind=requested==="practice"||requested==="simulations"?requested:"tests";

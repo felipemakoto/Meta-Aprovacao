@@ -13,7 +13,7 @@ import PracticeReview from "../../practice-review";
 import base from "@/app/quiz/quiz.module.css";
 import styles from "../../history.module.css";
 export const dynamic="force-dynamic";
-export const metadata={title:"Revisar atividade | ETEC / IF",robots:{index:false,follow:false}};
+export const metadata={title:"Revisar atividade | Meta Aprovação",robots:{index:false,follow:false}};
 export default async function Detail({params}:{params:Promise<{kind:string;id:string}>}){
  const {kind,id}=await params;
  let user;try{user=await getVerifiedUser();}catch{return <Failure/>;}

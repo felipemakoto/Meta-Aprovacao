@@ -16,7 +16,7 @@ const displayFont = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "ETEC / IF — Preparação para estudar",
+  title: "Meta Aprovação",
   description:
     "Uma plataforma de preparação para o Vestibulinho da ETEC e processos seletivos de Institutos Federais. Em desenvolvimento.",
 };
