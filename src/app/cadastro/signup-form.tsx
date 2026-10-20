@@ -64,7 +64,6 @@ export default function SignupForm() {
   return <section>
     <p className={styles.eyebrow}>Um espaço para a sua preparação</p>
     <h1 className={styles.title}>Criar conta</h1><p className={styles.subtitle}>Guarde seus resultados e descubra o próximo passo. Comece grátis.</p>
-    <ul className={styles.benefits} aria-label="Vantagens da conta"><li>Histórico salvo</li><li>Progresso por matéria</li></ul>
     <GoogleAuthButton disabled={busy} onPending={setBusy}/>
     <form className={styles.panel} onSubmit={submit} noValidate aria-busy={busy}>
       <fieldset disabled={busy} className={styles.fields}>

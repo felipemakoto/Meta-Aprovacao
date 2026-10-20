@@ -43,3 +43,28 @@
 @media (max-width: 599px) { .panel { padding: 20px 16px; border-radius: 14px; } .benefits { gap: 8px 14px; font-size: 12px; } .agreement { padding: 12px; } }
 @media (max-width: 359px) { .main { padding-top: 28px; } .panel { padding-inline: 12px; } .agreementLabel { gap: 9px; } }
 @media (min-width: 600px) { .main { padding-top: 36px; } }
+
+/* Formulários no tema atual: os componentes e suas validações permanecem os mesmos. */
+:global(body:has([data-study])) .main { padding-top: 12px; }
+:global(body:has([data-study])) .main > section:has(form) { max-width: 520px; }
+:global(body:has([data-study])) .title { font: 600 clamp(28px, 4vw, 38px)/1.25 var(--home-font); letter-spacing: -.035em; }
+:global(body:has([data-study])) .eyebrow { font-size: 17px; font-weight: 500; letter-spacing: 0; text-transform: none; margin-bottom: 16px; }
+:global(body:has([data-study])) .subtitle { font-size: 18px; line-height: 1.6; margin-block: 14px 24px; }
+:global(body:has([data-study])) .benefits { gap: 10px 24px; font-size: 17px; margin-block: 0 28px; }
+:global(body:has([data-study])) .benefits li::before { background: var(--home-green); }
+:global(body:has([data-study])) .panel { margin-top: 28px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+:global(body:has([data-study])) .panel > p { font-size: 18px; }
+:global(body:has([data-study])) .field label { font-size: 17px; }
+:global(body:has([data-study])) .field input { height: 54px; font-size: 18px; border-color: var(--control-border); background: white; }
+:global(body:has([data-study])) .field input[aria-invalid="true"] { border-color: #a33a28; }
+:global(body:has([data-study])) .password button { height: 50px; border-left-color: var(--home-line); border-radius: 0 10px 10px 0; }
+:global(body:has([data-study])) .help, :global(body:has([data-study])) .fieldError { font-size: 16px; line-height: 1.6; }
+:global(body:has([data-study])) .agreement { padding: 18px; background: var(--home-sage); border-color: var(--home-line); border-radius: 12px; }
+:global(body:has([data-study])) .agreementInvalid { border-color: #a33a28; }
+:global(body:has([data-study])) .agreementLabel { font-size: 16px; line-height: 1.65; }
+:global(body:has([data-study])) .error { font-size: 16px; }
+:global(body:has([data-study])) .submit { font-size: 18px; box-shadow: none; }
+:global(body:has([data-study])) .note { font-size: 17px; line-height: 1.6; }
+:global(body:has([data-study])) .note a { min-height: 44px; }
+:global(body:has([data-study])) .skip { font-size: 17px; box-shadow: none; }
+@media (max-width: 599px) { :global(body:has([data-study])) .main { padding-top: 4px; } }

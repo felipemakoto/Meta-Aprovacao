@@ -35,7 +35,7 @@ Compilação de produção e lint dos componentes alterados aprovados. Os 22 tes
 
 ## Área de estudo — 20/10/2026
 
-O mesmo sistema de cores, fontes locais e marca agora atende painel, questões, simulados, teste inicial, correções, histórico e estatísticas. `study-shell.tsx` concentra cabeçalho, navegação, acesso ao conteúdo e modo de foco; `study-shell.module.css` adapta os tokens existentes apenas enquanto essa estrutura está presente. Cadastro e páginas legais mantêm seu tema anterior; a tela de conta foi alinhada ao sistema na revisão abaixo.
+O mesmo sistema de cores, fontes locais e marca agora atende painel, questões, simulados, teste inicial, correções, histórico e estatísticas. `study-shell.tsx` concentra cabeçalho, navegação, acesso ao conteúdo e modo de foco; `study-shell.module.css` adapta os tokens existentes apenas enquanto essa estrutura está presente. Cadastro e entrada usam o tema atual na revisão abaixo; as páginas legais mantêm seu tema anterior.
 
 Referências: organização de materiais e atividade do Brilliant (https://brilliant.org/), recuperação ativa e modos de estudo/teste descritos pelo Quizlet (https://help.quizlet.com/hc/en-us/articles/360030841732-Studying-on-Quizlet). O acesso direto à página pública do Quizlet retornou 403; esta é uma adaptação de padrões, sem alegar reprodução de telas privadas.
 
@@ -51,10 +51,16 @@ Validação desta etapa: 40 testes de regressão aprovados; lint e TypeScript ap
 
 ## Tela de conta — 20/10/2026
 
-`/login` agora reutiliza a marca, o cabeçalho branco, os tokens e o rodapé da área de estudo. Formulário central de até 520px, tipografia Manrope legível e ações hierarquizadas: estudos em verde, simulado em sálvia e Premium com gradiente verde, verde-petróleo e azul, solicitado pelo responsável. Sem sombras ou painel adicional ao redor de sair da conta. Estados autenticado e visitante preservam seus conteúdos, links, condições de oferta e ações; nenhum código de autenticação ou consulta de plano foi modificado.
+`/login` agora reutiliza a marca, o cabeçalho branco, os tokens e o rodapé da área de estudo. Formulário central de até 520px, tipografia Manrope legível e ações hierarquizadas: estudos em verde, simulado em sálvia e Premium com gradiente apenas em tons de verde, solicitado pelo responsável. Sem sombras ou painel adicional ao redor de sair da conta. Estados autenticado e visitante preservam seus conteúdos, links, condições de oferta e ações; nenhum código de autenticação ou consulta de plano foi modificado.
 
 Validação: lint e 13 testes existentes de login e oferta aprovados. Estados com e sem sessão conferidos em 320, 390, 768 e 1440px, sem overflow ou erros de execução; mostrar/ocultar senha e links de cadastro/recuperação conferidos. A prévia autenticada usou uma composição temporária sem interações, removida após a conferência, sem entrar ou sair de contas reais.
 
 O cabeçalho de conta usa Menu em todas as larguras, com Minha conta e os acessos de estudo existentes. A página atual é indicada no menu. Abertura e fechamento por teclado e ponteiro conferidos em 320, 390 e 1440px; sem overflow. O modo de foco do teste e a navegação das demais telas permanecem iguais.
 
 Na área de estudos, Minha conta é o destino do logo e o menu não oferece a página institucional Início. O teste inicial público mantém sua saída anterior. Navegação conferida em celular e desktop e nas cinco telas de estudo; lint e TypeScript aprovados.
+
+## Cadastro e entrada — revisão final de 20/10/2026
+
+Cadastro reutiliza o cabeçalho com marca Meta Aprovação, menu, formulário branco e rodapé do sistema. Formulários de entrada e cadastro usam Manrope, campos de 54px, labels de 17px e ajuda/consentimento de pelo menos 16px. O botão Google e seu diálogo seguem a mesma tipografia e superfícies. Os textos Histórico salvo e Progresso por matéria foram removidos do cadastro a pedido do responsável. O gradiente Premium usa somente verdes (#14532D, #237B38, #3B7A28), com texto branco e hover mais escuro.
+
+O layout compartilhado também mantém recuperação de senha e confirmação coerentes; regras e conteúdos de planos continuam intactos. Não foram alterados handlers, campos enviados, consentimento obrigatório, termos, validações ou autenticação. Conferidos cadastro, entrada e confirmação em 320/390/768/1440px, sem overflow; validação, senha visível/oculta, consentimento, confirmação de envio e erro de login conferidos com respostas interceptadas, sem criar contas nem enviar e-mails. Lint, TypeScript, build e 38 testes existentes aprovados.

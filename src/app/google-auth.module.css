@@ -17,3 +17,11 @@
 .cancel:hover { color: var(--color-action); text-decoration: underline; text-underline-offset: 4px; }
 .error { font-size: 13px; line-height: 1.6; color: #913624; margin-block: 14px; }
 @media(max-width:359px) { .dialog { padding: 26px 18px 16px; } .dialog h2 { font-size: 27px; } }
+
+:global(body:has([data-study])) .googleButton { min-height: 54px; font: 600 17px/1.5 var(--home-font); border-color: var(--control-border); border-radius: 12px; box-shadow: none; }
+:global(body:has([data-study])) .googleButton img { width: 20px; height: 20px; }
+:global(body:has([data-study])) .googleButton:hover:not(:disabled) { background: var(--home-sage); box-shadow: none; }
+:global(body:has([data-study])) .divider { font-size: 16px; line-height: 1.6; margin-top: 24px; }
+:global(body:has([data-study])) .dialog { background: white; border-color: var(--home-line); box-shadow: none; }
+:global(body:has([data-study])) .dialog h2 { font: 600 28px/1.3 var(--home-font); letter-spacing: -.025em; }
+:global(body:has([data-study])) .description, :global(body:has([data-study])) .cancel, :global(body:has([data-study])) .error { font-size: 16px; }

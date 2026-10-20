@@ -23,7 +23,7 @@ export function StudyIcon({ name }: { name: StudyArea }) {
   </svg>;
 }
 
-export default function StudyShell({ children, active, preview = false, focus = false, menu = false, homeHref = "/login", exit }: { children: ReactNode; active: StudyArea | "account"; preview?: boolean; focus?: boolean; menu?: boolean; homeHref?: "/" | "/login"; exit?: ReactNode }) {
+export default function StudyShell({ children, active, preview = false, focus = false, menu = false, homeHref = "/login", exit }: { children: ReactNode; active?: StudyArea | "account"; preview?: boolean; focus?: boolean; menu?: boolean; homeHref?: "/" | "/login"; exit?: ReactNode }) {
   const navigation = destinations.map(item => <Link key={item.area} href={item.href + (preview ? "/preview" : "")} aria-current={active === item.area ? "page" : undefined}><StudyIcon name={item.area} />{item.label}</Link>);
   return <div className={`${theme.homeTheme} ${styles.shell}`} data-study data-study-mode={focus ? "focus" : active}>
     <a className={styles.skip} href="#estudo">Pular para o conteúdo</a>
