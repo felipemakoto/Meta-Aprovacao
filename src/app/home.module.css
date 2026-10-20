@@ -1,10 +1,10 @@
 .page { width: 100%; background: var(--home-paper); }
-.heroInner, .practice, .method, .signupInner, .helpRow { width: min(100% - 64px, var(--home-width)); margin-inline: auto; }
+.heroInner, .practice, .method, .signupInner { width: min(100% - 64px, var(--home-width)); margin-inline: auto; }
 .skipLink { position: absolute; z-index: 30; top: 8px; left: 24px; padding: 12px 16px; transform: translateY(-200%); background: var(--home-paper); color: var(--home-green); font-weight: 700; }
 .skipLink:focus-visible { transform: translateY(0); }
-.header { position: sticky; top: 0; z-index: 20; padding-block: 16px; background: var(--home-canvas); }
+.header { position: sticky; top: 0; z-index: 20; padding-block: 16px; background: transparent; pointer-events: none; }
 .page :where(main, a, button, summary) { scroll-margin-top: 128px; }
-.headerInner { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: min(100% - 64px, 1280px); min-height: 72px; margin-inline: auto; padding: 12px 24px; border: 1px solid var(--home-line); border-radius: 40px; background: var(--home-paper); }
+.headerInner { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: min(100% - 64px, 1280px); min-height: 72px; margin-inline: auto; padding: 12px 24px; border: 1px solid var(--home-line); border-radius: 40px; background: var(--home-paper); pointer-events: auto; }
 .brand { display: inline-flex; align-items: center; flex-shrink: 0; gap: 12px; min-height: 44px; color: var(--home-ink); text-decoration: none; }
 .brand img { width: 36px; height: 36px; }
 .brandName { font-size: 23px; font-weight: 800; letter-spacing: -.035em; line-height: 1.25; }
@@ -62,13 +62,13 @@
 .steps h3 { margin: 0; font-size: 24px; font-weight: 600; line-height: 1.35; letter-spacing: -.025em; }
 .steps p, .freePlan { margin: 12px 0 0; color: var(--home-muted); font-size: 20px; line-height: 1.6; text-wrap: pretty; }
 .signup { background: var(--home-sage); }
-.signupInner { padding-block: 64px; text-align: center; }
-.signup h2 { max-width: 22ch; margin-inline: auto; }
-.freePlan { margin-top: 24px; }
-.signup .primaryButton { margin-top: 28px; }
-.helpRow { display: flex; justify-content: flex-end; padding-block: 16px; }
-.helpRow a { display: inline-flex; align-items: center; min-height: 44px; color: var(--home-muted); font-size: 16px; text-decoration: none; }
-.helpRow a:hover { color: var(--home-green); text-decoration: underline; text-underline-offset: 5px; }
+.signupInner { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 76px; padding-block: 56px; }
+.signupCopy h2 { max-width: 18ch; }
+.freePlan { max-width: 36ch; margin-top: 22px; }
+.signupDetails { padding-left: 40px; border-left: 1px solid #c6d4be; }
+.planLimits { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; font-size: 22px; line-height: 1.5; }
+.planLimits strong { font-weight: 600; }
+.signup .primaryButton { margin-top: 24px; }
 @media (prefers-reduced-motion: no-preference) {
   .heroCopy { animation: settle var(--home-motion-enter) var(--home-ease) both; }
   .demo { animation: settle 800ms var(--home-ease) both; }
@@ -108,7 +108,7 @@
   .methodInner { gap: 32px; }
 }
 @media (max-width: 719px) {
-  .heroInner, .practice, .method, .signupInner, .helpRow { width: calc(100% - 40px); }
+  .heroInner, .practice, .method, .signupInner { width: calc(100% - 40px); }
   .headerInner { width: calc(100% - 32px); min-height: 68px; padding: 10px 16px; gap: 12px; }
   .brand { gap: 8px; }
   .brand img { width: 32px; height: 32px; }
@@ -136,11 +136,11 @@
   .stepNumber { flex-basis: 24px; font-size: 24px; }
   .steps h3 { font-size: 22px; }
   .steps p { margin-top: 8px; }
-  .signupInner { padding-block: 44px; }
-  .helpRow { justify-content: flex-start; }
+  .signupInner { grid-template-columns: 1fr; gap: 28px; padding-block: 40px; }
+  .signupDetails { padding: 24px 0 0; border-left: 0; border-top: 1px solid #c6d4be; }
 }
 @media (max-width: 359px) {
-  .heroInner, .practice, .method, .signupInner, .helpRow { width: calc(100% - 32px); }
+  .heroInner, .practice, .method, .signupInner { width: calc(100% - 32px); }
   .headerInner { padding-inline: 12px; }
   .brandName { max-width: 7ch; font-size: 18px; }
   .brand img { width: 28px; height: 28px; }

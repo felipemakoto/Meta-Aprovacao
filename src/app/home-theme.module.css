@@ -43,7 +43,8 @@
 .homeTheme :focus-visible { outline: 3px solid var(--home-green); outline-offset: 5px; }
 
 :global(body):has(.homeTheme) > :global(footer) {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
@@ -60,12 +61,15 @@
 }
 
 :global(body):has(.homeTheme) > :global(footer) p { font-size: 16px; line-height: 1.6; }
-:global(body):has(.homeTheme) > :global(footer) nav { flex-shrink: 0; gap: 16px; }
+:global(body):has(.homeTheme) > :global(footer) nav { grid-column: 1 / -1; justify-content: flex-start; gap: 16px; }
 :global(body):has(.homeTheme) > :global(footer) a { min-height: 44px; color: #fff; font-size: 16px; }
 :global(body):has(.homeTheme) > :global(footer) a:hover { color: #fff; }
 :global(body):has(.homeTheme) > :global(footer) a:focus-visible { outline-color: #fff; }
 :global(body):has(.homeTheme) > :global(footer) nav > span { display: none; }
+:global(body):has(.homeTheme) > :global(footer) [data-home-support] { display: inline-flex; justify-self: end; justify-content: center; min-height: 52px; padding: 12px 20px; border: 1px solid #777; border-radius: 10px; font-weight: 600; }
+:global(body):has(.homeTheme) > :global(footer) [data-home-support]:hover { border-color: #fff; background: #181818; text-decoration: none; }
 
 @media (max-width: 719px) {
-  :global(body):has(.homeTheme) > :global(footer) { align-items: flex-start; flex-direction: column; gap: 8px; }
+  :global(body):has(.homeTheme) > :global(footer) { grid-template-columns: 1fr; gap: 24px; }
+  :global(body):has(.homeTheme) > :global(footer) [data-home-support] { justify-self: start; }
 }

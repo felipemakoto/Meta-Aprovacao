@@ -63,11 +63,13 @@ export default function Home() {
         </section>
         <section className={styles.signup} aria-labelledby="signup-title">
           <div className={styles.signupInner}>
-            <div><h2 id="signup-title">Sua rotina começa no gratuito.</h2><p className={styles.freePlan}>10 questões por dia e 1 simulado rápido por dia.<br />Correção, histórico e estatísticas incluídos.</p></div>
-            <Link className={styles.primaryButton} href="/cadastro">Criar conta grátis</Link>
+            <div className={styles.signupCopy}><h2 id="signup-title">Comece no gratuito.</h2><p className={styles.freePlan}>Correção com explicações, histórico e estatísticas para acompanhar seus estudos.</p></div>
+            <div className={styles.signupDetails}>
+              <ul className={styles.planLimits}><li><strong>10 questões</strong> por dia</li><li><strong>1 simulado rápido</strong> por dia</li></ul>
+              <Link className={styles.primaryButton} href="/cadastro">Criar conta grátis</Link>
+            </div>
           </div>
         </section>
-        <div className={styles.helpRow}><Link href="/suporte">Falar com o suporte</Link></div>
       </main>
     </div>
   );

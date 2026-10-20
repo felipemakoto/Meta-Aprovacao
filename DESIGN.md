@@ -13,7 +13,9 @@ Revisão de 20/10/2026: a inicial aproxima a linguagem visual do Brilliant obser
 
 Abertura com o destino ETEC/IF; demonstração de porcentagem acima das ações de diagnóstico gratuito e cadastro; acesso a questões e simulados; bloco de correção e revisão com fotografia; etapas de estudo com outra fotografia; recursos do gratuito e cadastro final. A lista de matérias foi removida. Sem depoimentos, credenciais ou resultados inventados.
 
-O cabeçalho usa `position: sticky` com `top: 0`, fundo opaco e camada acima do conteúdo. Margens de rolagem preservam a visibilidade de destinos e controles focados. O rodapé da inicial usa fundo preto e texto, links e foco brancos.
+O cabeçalho usa `position: sticky` com `top: 0`. Somente a barra branca tem fundo e recebe interações; a área externa é transparente e permite clicar no conteúdo abaixo. Margens de rolagem preservam destinos e controles focados. O rodapé da inicial usa fundo preto e texto, links e foco brancos, com o acesso ao suporte dentro dele. Esse acesso adicional permanece oculto nas demais páginas.
+
+A chamada do gratuito tem título e recursos à esquerda, limites diários e cadastro à direita, separados por uma divisória simples. No celular, os dois grupos ficam em sequência e alinhados à esquerda, sem texto pequeno ou cards adicionais.
 
 `home-demo.tsx` contém um exemplo isolado: 25% de 80. Escolher 10, 20 ou 40 mostra feedback textual e seleção acessível com `aria-pressed`. O estado vive apenas na página, sem API, conta, pontuação, consumo de limite ou gravação. A demonstração não substitui o diagnóstico em `/quiz`.
 

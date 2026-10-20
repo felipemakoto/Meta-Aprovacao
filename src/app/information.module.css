@@ -21,5 +21,6 @@
 .footer nav { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 12px; }
 .footer a { display: inline-flex; align-items: center; min-height: 36px; padding: 6px 3px; color: var(--color-text-secondary); font-size: 12px; font-weight: 400; text-decoration: none; border: 0; background: none; box-shadow: none; }
 .footer a:hover { color: var(--color-action); text-decoration: underline; text-underline-offset: 4px; }
+.footer .homeFooterSupport { display: none; }
 .footer p { font-size: 11px; line-height: 1.6; margin: 0; }
 @media(max-width:359px) { .page,.footer { width: calc(100% - 40px); } }
