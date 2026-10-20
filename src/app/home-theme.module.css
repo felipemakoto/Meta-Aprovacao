@@ -21,6 +21,9 @@
   --home-font: "Meta Manrope", var(--font-geist-sans), Arial, sans-serif;
   --home-width: 1200px;
   --home-radius: 12px;
+  --home-motion-fast: 180ms;
+  --home-motion-enter: 600ms;
+  --home-ease: cubic-bezier(.22, 1, .36, 1);
   color: var(--home-ink);
   font-family: var(--home-font);
 }
@@ -46,10 +49,11 @@
   text-align: left;
 }
 
-:global(body):has(.homeTheme) > :global(footer) p { font-size: 13px; line-height: 1.6; }
+:global(body):has(.homeTheme) > :global(footer) p { font-size: 16px; line-height: 1.6; }
 :global(body):has(.homeTheme) > :global(footer) nav { flex-shrink: 0; gap: 16px; }
-:global(body):has(.homeTheme) > :global(footer) a { min-height: 44px; color: var(--home-muted); font-size: 13px; }
+:global(body):has(.homeTheme) > :global(footer) a { min-height: 44px; color: var(--home-muted); font-size: 16px; }
 :global(body):has(.homeTheme) > :global(footer) a:focus-visible { outline-color: var(--home-green); }
+:global(body):has(.homeTheme) > :global(footer) nav > span { display: none; }
 
 @media (max-width: 719px) {
   :global(body):has(.homeTheme) > :global(footer) { align-items: flex-start; flex-direction: column; gap: 8px; }

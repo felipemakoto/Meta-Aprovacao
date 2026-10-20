@@ -1,28 +1,28 @@
 # Meta Aprovação — estudo visual
 
-Direção aprovada em 20/10/2026: homepage educacional clara, verde e orientada a demonstrações visuais, a partir do mockup inspirado no Brilliant. A composição, a marca e os recursos representam a Meta Aprovação; nenhum conteúdo ou identidade do Brilliant foi copiado.
+Direção da inicial: educacional, clara e verde, com Manrope local. Revisão de 20/10/2026: menos elementos e textos de apoio, mantendo uma apresentação completa dos estudos. A identidade não reproduz a marca do Brilliant.
 
 ## Sistema visual
 
-- Tokens: `src/app/home-theme.module.css`; ativação: classe `homeTheme`.
-- Papel `#FCFDFB`; tinta `#19241F`; texto secundário `#515E55`.
-- Ação `#237B38`; ação em interação `#185D29`; sálvia `#F0F4EC`; menta `#E0EFDF`.
-- Divisória `#D9E3D7`; violeta `#6653AD`; amarelo `#F3CF69` nos diagramas.
-- Manrope variável 400–800, hospedada localmente sob SIL OFL. Arquivo e licença em `public/fonts/meta/`.
-- Conteúdo até 1200px, controles com pelo menos 44px, cantos de 10–16px, divisórias e cores sólidas.
+- Tokens em `src/app/home-theme.module.css`, ativados pela classe `homeTheme`.
+- Papel `#FCFDFB`, tinta `#19241F`, texto secundário `#515E55`, verde `#237B38`, interação `#185D29`, sálvia `#F0F4EC` e menta `#E0EFDF`.
+- Manrope variável 400–800, hospedada localmente sob SIL OFL em `public/fonts/meta/`.
+- Conteúdo até 1200px, controles de pelo menos 44px. Textos explicativos de 20px; navegação e informações legais de pelo menos 16px.
 
 ## Página inicial
 
-Abertura com exemplo matemático; benefícios; três etapas reais; cinco matérias; acesso a questões e simulados; cadastro gratuito; suporte e informações legais. O exemplo de desconto é uma demonstração estática, não uma tentativa do usuário nem uma consulta ao banco.
+Abertura com uma única ação principal, acesso a questões e simulados, cinco matérias, três etapas de estudo e cadastro gratuito. Sem legendas, rótulos pequenos, descrições duplicadas ou cards repetitivos. O gratuito continua informado como 10 questões por dia e 1 simulado rápido por dia, com correção, histórico e estatísticas incluídos.
 
-Os estilos responsivos estão em `src/app/home.module.css`. `StartTestButton` conserva `/quiz`; os demais destinos reutilizam as rotas existentes. No celular, a navegação usa `details` nativo e as seções se organizam em coluna, sem nova biblioteca ou JavaScript de estado.
+`StartTestButton` mantém `/quiz`. Links de cadastro, login, questões, simulados, suporte e informações legais usam as rotas existentes. No celular, a navegação usa `details` nativo. O tema e as mudanças do rodapé ficam restritos à inicial; outras páginas mantêm seu visual anterior.
 
-O tema também estiliza o rodapé compartilhado somente enquanto a inicial está presente. Login, cadastro, quiz e demais rotas mantêm o visual anterior. Backend, autenticação, banco, planos, permissões e pagamentos permanecem fora desta alteração.
+Backend, autenticação, banco, planos, permissões e pagamentos não foram alterados.
 
-## Ativos
+## Marca e movimento
 
-`home-art.tsx` contém a marca M e diagramas geométricos originais. `public/images/meta-study-path.png` é a ilustração original gerada para a chamada final: caminho branco entre colinas sálvia, árvores, bandeira verde e sol amarelo, com fundo transparente. O Next otimiza essa imagem e carrega-a sob demanda. Nenhum ativo depende de serviço pago em tempo de execução.
+O símbolo original em `src/app/icon.svg` combina livro aberto, monograma M e um marcador amarelo. O mesmo SVG serve ao cabeçalho e à aba do navegador, substituindo o favicon padrão. `home-art.tsx` contém a ilustração vetorial de estudo e três ícones de navegação.
+
+Uma entrada coordenada do título e do livro dura 600–800ms. Interações usam 180ms. Sem animação contínua, biblioteca adicional ou conteúdo escondido aguardando JavaScript. `prefers-reduced-motion` desativa o movimento. Ativos da versão anterior permanecem disponíveis, mas não são carregados nesta inicial.
 
 ## Validação
 
-Compilação de produção e lint dos arquivos alterados aprovados; 22 testes de regressão passaram. Navegador conferido em 280, 320, 390, 768, 1024 e 1440px: sem rolagem horizontal, fontes carregadas e controles com altura mínima de 44px. Contraste: botões 5,30:1; texto secundário 6,68:1 sobre papel e 6,12:1 sobre sálvia. Console sem erros; o Next mantém avisos de pré-carregamento de CSS legado.
+Compilação de produção e lint dos componentes alterados aprovados; 22 testes de regressão passaram. Verificação no navegador em 280, 320, 390, 768, 1024 e 1440px, incluindo navegação móvel, teclado e movimento reduzido. Console sem erros; persistem avisos anteriores do Next sobre pré-carregamento de CSS legado. Nenhuma publicação foi realizada.
