@@ -18,5 +18,7 @@ test('HTTP real: CSRF, payload e query não chegam à associação',async()=>{
 test('HTTP real: rota salva e prévia disponíveis em desenvolvimento',async()=>{
  const r=await fetch(origin+'/quiz/result/saved');assert.equal(r.status,200);
  const p=await fetch(origin+'/quiz/result/preview');assert.equal(p.status,200);
- const html=await p.text();assert.match(html,/Salvar na minha conta/);assert.match(html,/disabled/);
+ const html=await p.text();assert.match(html,/Seu ponto de partida/);assert.match(html,/Faça um simulado de verdade/);
+ const review=await fetch(origin+'/quiz/result/preview?review=errors');assert.equal(review.status,200);
+ assert.match((await review.text()).replaceAll('<!-- -->',''),/Revisão dos erros/);
 });
