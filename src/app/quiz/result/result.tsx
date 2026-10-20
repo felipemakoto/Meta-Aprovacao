@@ -25,7 +25,7 @@ export default function Result({ preview, initialResult, saved = false, initialR
       error => { if (active) setScreen({ kind: "error", expired: error instanceof ResultRequestError && [401,404].includes(error.status), login: saved && error instanceof ResultRequestError && error.status === 401 }); });
     return () => { active = false; };
   }, [preview, initialResult, retry, saved]);
-  return <StudyShell active="history" preview={!!preview} focus={!saved} exit={<Link href={saved ? (preview ? "/dashboard/preview" : "/dashboard") : "/"}>{saved ? "Meus estudos" : "Início"}</Link>}><div className={base.page}>
+  return <StudyShell active="history" preview={!!preview} focus={!saved} homeHref={saved ? "/login" : "/"} exit={<Link href={saved ? (preview ? "/dashboard/preview" : "/dashboard") : "/"}>{saved ? "Meus estudos" : "Início"}</Link>}><div className={base.page}>
 
     <main>{beforeContent}
       {screen.kind === "loading" && <CorrectionLoading title="Carregando seu resultado…" timed complete />}

@@ -54,7 +54,7 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
   }, [preview, retry, router]);
   function restart() { if (preview) { window.location.reload(); return; } setScreen({ kind: "loading" }); setRetry((value) => value + 1); }
   return (
-    <StudyShell active="questions" preview={!!preview} focus exit={<Link href="/">Sair</Link>}><div className={styles.page}>
+    <StudyShell active="questions" preview={!!preview} focus homeHref="/" exit={<Link href="/">Sair</Link>}><div className={styles.page}>
 
       <main>
         {screen.kind === "loading" && <section className={styles.message} aria-busy="true" role="status"><h1>Preparando seu teste…</h1><p>Buscando as questões da sua tentativa.</p></section>}

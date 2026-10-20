@@ -55,4 +55,6 @@ Validação desta etapa: 40 testes de regressão aprovados; lint e TypeScript ap
 
 Validação: lint e 13 testes existentes de login e oferta aprovados. Estados com e sem sessão conferidos em 320, 390, 768 e 1440px, sem overflow ou erros de execução; mostrar/ocultar senha e links de cadastro/recuperação conferidos. A prévia autenticada usou uma composição temporária sem interações, removida após a conferência, sem entrar ou sair de contas reais.
 
-O cabeçalho de conta usa Menu em todas as larguras, com Início e os acessos de estudo existentes. A página atual é indicada no menu. Abertura e fechamento por teclado e ponteiro conferidos em 320, 390 e 1440px; sem overflow. O modo de foco do teste e a navegação das demais telas permanecem iguais.
+O cabeçalho de conta usa Menu em todas as larguras, com Minha conta e os acessos de estudo existentes. A página atual é indicada no menu. Abertura e fechamento por teclado e ponteiro conferidos em 320, 390 e 1440px; sem overflow. O modo de foco do teste e a navegação das demais telas permanecem iguais.
+
+Na área de estudos, Minha conta é o destino do logo e o menu não oferece a página institucional Início. O teste inicial público mantém sua saída anterior. Navegação conferida em celular e desktop e nas cinco telas de estudo; lint e TypeScript aprovados.
