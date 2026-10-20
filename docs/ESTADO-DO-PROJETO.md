@@ -1,5 +1,7 @@
 # Continuação dos pagamentos — 20/10/2026 às20:16SP
 
+**Conclusão posterior:** commite7213c3publicado comVercelsuccess. Botão Assinar Premium e destinos promocional/normal conferidos em produção; fixture e dependências removidas. Navegador abriu Cakto com totalR$12,49, sem pagar. Privacidade2026-10-20.1publicada e política de retenção definida.43testes relacionados, lint e build/TypeScript aprovados. Evidências e limites em LANCAMENTO-PREMIUM-2026-10-20.md; atividades remanescentes são operação/monitoramento e aplicação controlada da política, não autorização de contratação pendente.
+
 **Autorização posterior:** responsável pediu executar as duas decisões: habilitação comercial e definição dos prazos de retenção. Implementados checkoutEnabled=true, ação Assinar Premium com navegação segura, política de retenção30/90dias e5anos financeiros com revisão controlada e versão pública de privacidade2026-10-20.1. Nenhuma compra ou limpeza automática. CHECKLIST-FINAL-ATUAL.md e POLITICA-RETENCAO.md substituem o estado anterior de contratação e retenção pendentes. Conferência de publicação descrita no relatório de lançamento.
 
 **Decisão mais recente:** responsável dispensou a confirmação do fuso do cupom, sem alterar horário/preço/promoção. [Checklist final vigente](CHECKLIST-FINAL-ATUAL.md) substitui as listas históricas abaixo. Compra real também dispensada. Permanecem decisão de habilitação comercial e definição dos prazos finais de retenção; nenhuma limpeza automática ou venda foi liberada.
