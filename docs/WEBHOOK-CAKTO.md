@@ -1,94 +1,69 @@
-# Etapa 28 — receptor implementado, entrega real pendente
+# Webhook Cakto — contrato confirmado pelo suporte em 20/10/2026
 
-## Entrega de teste autenticada em 06/10/2026
+## Estado atual
 
-Captura do usuário confirma requisição CaktoBot/1.0 no domínio de produção após commit 2bcd2d7, status 400 e diagnóstico `product_or_offer_rejected`. Esse motivo só ocorre depois de assinatura e timestamp válidos. Confirmadas conectividade do provedor e autenticação dessa entrega. O teste usa produto/oferta fictícios, diferentes dos IDs permitidos, e foi corretamente rejeitado antes de persistir. O erro 401 anterior permanece sem causa determinada; não atribuir retroativamente ausência de assinatura. Headers vazio no painel não prova ausência no transporte.
+Correção local do receptor `POST /api/webhooks/cakto`: autenticação pelo campo `secret` do JSON, sem exigir `X-Cakto-Timestamp` ou `X-Cakto-Signature`. Segue a confirmação direta do suporte enviada pelo responsável nesta conversa em 20/10/2026. A documentação pública ainda contém trechos sobre HMAC que divergem dessa resposta; esses trechos não são o contrato implementado.
 
-Não liberar produto fictício nem trocar autenticação por secret no corpo. Persistência de evento real do produto, vínculo à conta e concessão de Premium permanecem pendentes. Segredo não registrado em documentação. Etapa 29 retomada: consultar pedido diretamente na API, sem confiar no status do webhook.
+A contratação continua desativada em `checkout-launch.ts`. Esta correção não publica o site, não muda ofertas/preços, não concede Premium e não substitui a validação comercial de uma compra real. Não houve alteração de schema, RPC, processador, cron, permissões ou chaves.
 
-## Diagnóstico seguro em 06/10/2026
+## Autenticação e privacidade
 
-Site publicado pelo usuário em https://meta-aprovacao.vercel.app; login confirmado por imagem. Webhook cadastrado manualmente com disparo individual. Teste da Cakto recebeu 401; painel exibe Headers vazio e produto/oferta fictícios, o que não comprova ausência de headers no transporte. Segredo permanece fora da documentação.
+- JSON com `secret`, `event` e `data`; V1 usa objeto em `data`, V2 pode usar lista.
+- `secret` deve coincidir exatamente com `CAKTO_WEBHOOK_SECRET` do servidor. Comparação de digests SHA-256 de tamanho fixo com `timingSafeEqual`, sem trim ou normalização. Isso compara a chave; não é assinatura HMAC do corpo.
+- O segredo é o configurado no webhook da Cakto, diferente de `CAKTO_CLIENT_SECRET`. Nunca usar `NEXT_PUBLIC`, query string, navegador ou documentação para guardá-lo.
+- Limite de corpo de 256 KiB e prazo de leitura de três segundos. Apenas POST JSON sem codificação de conteúdo ou query.
+- Headers supostos de assinatura não substituem um `secret` ausente ou incorreto. Login/cookies e e-mail do comprador não autenticam o provedor.
+- Corpo cru, segredo, nome, e-mail, CPF e cartão não vão para a inbox nem para os logs. A normalização comercial existente foi preservada.
 
-Rota agora escreve uma linha `cakto_webhook_diagnostic` por POST nos logs do servidor. Inclui status, motivo fixo e, quando verificada, presença/formato dos dois headers, validade do horário (tolerância de cinco minutos) e resultado booleano da assinatura. Não registra valores de headers, horário original, segredo, corpo, IDs, dados pessoais ou mensagens de exceção. Resposta pública e critérios de autenticação preservados; falha no logger não afeta a resposta.
+## Respostas
 
-Após publicar esta alteração, abrir Vercel → Logs e enviar Compra aprovada pelo botão Testar da Cakto. Procurar `cakto_webhook_diagnostic`. Motivos: `missing_signature_headers` (um header ausente), `invalid_signature_format` (formato incompatível), `timestamp_outside_tolerance` (horário inválido), `signature_mismatch` (HMAC não coincide; não identifica sozinho chave vs bytes), `product_or_offer_rejected` (assinatura válida, IDs não permitidos), `configuration_missing`, `processing_failed` ou `persisted`. Não flexibilizar autenticação nem permitir produto de fixture. Teste do provedor ainda pendente.
+| Situação | HTTP | Efeito |
+| --- | --- | --- |
+| Secret correto, evento e produto/oferta elegíveis, gravação concluída | 200 | Sinal sanitizado salvo na inbox privada |
+| Secret correto, produto/oferta fora da lista (incluindo fixture da Cakto) | 200 | Ignorado, sem gravar nem conceder acesso |
+| Secret correto, evento não utilizado ou payload incompatível | 200 | Ignorado, sem gravar; investigar o diagnóstico se for uma entrega real |
+| Secret ausente, inválido ou incorreto | 401 | Nenhum processamento |
+| JSON/UTF-8 inválido, query, tipo/codificação ou tamanho incompatível | 400/408/413/415 | Nenhum processamento |
+| Configuração ausente ou falha ao gravar evento elegível | 503 | Recebimento não confirmado |
 
-## Retomada e integração local em 05/10/2026
+HTTP 200 e `{received:true}` confirmam a entrega, não a compra ou liberação do plano. Eventos autenticados sem aplicação recebem 200 conforme a orientação do suporte. Não é enviado 200 para uma compra elegível que falhou ao gravar: isso esconderia perda de evento. A Cakto informou que respostas 4xx não são reenviadas; não depender de retentativas automáticas também para erros 5xx. Usar histórico/reenvio do provedor e a reconciliação independente já existente.
 
-Usuário confirmou que o site ainda está somente no computador. Nenhuma URL pública, túnel, deploy ou webhook no painel criado nesta retomada. Entrega real permanece pendente; implementação local pode ser exercitada sem expor o servidor.
+V2 mantém validação atômica do lote: um item inválido/estrangeiro impede salvar parte dele. O lote autenticado é reconhecido e ignorado; compras reais continuam dependendo da reconciliação. Não incluir produto fictício ou ampliar a lista de ofertas para fazer o botão Testar passar.
 
-Teste `scripts/test-webhook-integration.mjs` aprovado usando aplicação Next com `next start` em loopback 127.0.0.1:3101, build existente e segredo aleatório efêmero somente no ambiente do processo filho. IDs de produto/oferta de fixture sobrescrevem apenas esse processo; `.env.local` e dev server da porta 3000 preservados. Tráfego atravessou rota real, DAL e RPC no Supabase ligado, com fixtures removidas no finally. Segredo não gravado nem impresso.
+## Teste fictício e pagamento real
 
-Confirmados HTTP 200 após persistência real, duas requisições simultâneas idênticas com uma entrada, reembolso posterior como segunda entrada, rejeição 401 de adulteração/timestamp antigo, rejeição 400 de lote V2 com produto estrangeiro sem gravação parcial e ausência de dados pessoais/segredo nos registros pending. Script e lint aprovados; processo de teste encerrado e fixtures removidas. Isso resolve os limites anteriores de HTTP positivo integrado e concorrência entre requisições, mas não prova entrega originada na Cakto nem compatibilidade de uma venda real.
+Segundo o suporte, Testar inclui a mesma estrutura e o secret, mas usa dados fictícios como John Doe e Produto Teste. Não existe sandbox de pagamentos. O teste comprova conectividade/autenticação; não comprova compra, recorrência ou concessão de Premium.
 
-Para repetir a partir da pasta do projeto:
+O receptor não procura a conta pelo e-mail. Ele só guarda sinais comerciais sanitizados. O processador existente consulta o pedido na API autenticada da Cakto, resolve a referência de um checkout privado e verifica status, produto, oferta, assinatura, moeda, valores e datas antes de conceder acesso. Deduplicação da inbox, períodos de acesso, reembolsos e reconciliação permanecem iguais. Um secret válido isoladamente nunca é prova de pagamento.
+
+## Diagnóstico seguro
+
+Procurar `cakto_webhook_diagnostic` nos logs do servidor. Campos: status, motivo fixo e `authentication` com presença/formato do secret e resultado booleano da comparação. Nunca registrar valores ou mensagens brutas de exceções.
+
+Motivos esperados: `missing_secret`, `invalid_secret_format`, `secret_mismatch`, `product_or_offer_ignored`, `event_ignored`, `payload_ignored`, `persisted`, `configuration_missing`, `invalid_json`, `body_rejected` ou `processing_failed`. `payload_ignored` em uma entrega real exige conferir o contrato sanitizado; não tratá-lo como pagamento processado.
+
+## Conferência e publicação
+
+1. Rodar os testes locais do receptor, de pagamentos, automação, Premium e checkout; lint e build.
+2. Publicar a versão corrigida quando autorizado. A versão pública anterior continua com o comportamento anterior até esse deploy.
+3. Confirmar que `CAKTO_WEBHOOK_SECRET` do ambiente publicado coincide com o painel, sem expor a chave no chat.
+4. Enviar Compra aprovada pelo Testar da Cakto à URL HTTPS pública terminando em `/api/webhooks/cakto`.
+5. Esperar 200 e `product_or_offer_ignored` para produto/oferta fictícios; nenhum Premium é liberado. Falha de autenticação exige conferir a configuração, não desabilitar a validação.
+6. Antes de ativar contratação, validar pagamento/assinatura real de ponta a ponta e as demais pendências comerciais. A ausência de sandbox não autoriza transformar fixture em venda.
 
 ```powershell
-npm.cmd run build
-npm.cmd run test:webhook:integration
-```
-
-Requer porta 3101 livre, `.env.local` configurado e CLI Supabase autenticada. Teste insere somente eventos sintéticos com IDs aleatórios, confere diretamente o banco por Management API e exclui exclusivamente essas fixtures. Não concede acesso nem cria cobranças. Se a limpeza falhar, o script termina com erro e conserva o arquivo SQL da fixture em `supabase/.temp`; não declarar teste concluído nesse caso.
-
-Próxima etapa local prevista: 29 — verificação independente do pagamento. Teste do provedor será retomado depois de URL HTTPS pública e segredo do webhook, mantendo contratação desabilitada até o lançamento.
-
-## Implementação de 03/10/2026
-
-Endpoint `POST /api/webhooks/cakto` em Node, com corpo de até 256 KiB e leitura limitada a três segundos. Assinatura HMAC dos bytes originais, comparação em tempo constante e tolerância de cinco minutos em ambos os sentidos. Headers ausentes/assinatura errada recebem 401; configuração ausente 503; formatos/eventos/produto/oferta rejeitados antes de persistir. Não usa login/cookies como autenticidade do provedor, nem fallback no secret do corpo. Valores recebidos não liberam plano ou alteram cotas.
-
-V1/V2 tratados em lote de até 25 pedidos; aceita apenas eventos comerciais previstos. Normalização guarda evento, pedido, produto, oferta, status, ID de assinatura, referência opaca válida e datas relevantes. Descarta secret, nome, contato, CPF, endereço, cartão, comissões e demais dados do payload; não registra corpo cru em logs. Referência ausente/inválida fica nula, aguardando verificação posterior sem associação por e-mail.
-
-Migration incremental `20261003190000_cakto_webhook_inbox.sql` cria inbox privada com RLS sem policies, sem acesso direto para anon/authenticated/service_role. Apenas RPC service_role de inserção, com validação de campos permitidos. Lote atômico e fingerprint SHA256 do registro sanitizado: repetição é ignorada, evento/status/datas diferentes do mesmo pedido são preservados. Estado fica pending; não há processador nem concessão de acesso nesta etapa. Processamento, recuperação e política de expurgo pertencem às etapas seguintes antes do lançamento.
-
-Resposta 200 somente após persistência. DAL limita a operação a três segundos; falha recebe 503 genérico sem credenciais. A Cakto não reenvia automaticamente erros HTTP, portanto não tratar 503 como mecanismo de recuperação: histórico e reconciliação precisam ser implementados antes de aceitar pagamentos. Uma tentativa com timeout pode já ter gravado; deduplicação torna repetição segura.
-
-Verificações: quatro testes isolados do receptor, um HTTP real e doze regressões Premium/checkout (17 total) aprovados; lint e build/TypeScript aprovados. SQL cobre repetição, eventos distintos do mesmo pedido, rollback de lote inválido, bloqueio de dados privados e ACL/RLS. Migration ensaiada com rollback e dry-run, aplicada e teste SQL repetido com rollback. Teste positivo HTTP com o segredo real e entrega do provedor ainda não realizados; não declarar integração externa concluída.
-
-## Configurar quando houver endpoint público
-
-Para repetir os testes locais em PowerShell:
-
-```powershell
-Set-Location 'C:\Users\felip\OneDrive\Documentos\projeto_etec-if'
 npm.cmd run test:webhook
-# Com npm.cmd run dev em outro terminal:
-npm.cmd run test:webhook:http
+npm.cmd run test:payment
+npm.cmd run test:promotion
+npm.cmd run build
 ```
 
-Esperado: quatro testes isolados e um HTTP aprovados. O teste HTTP sem segredo real confirma rejeição, não recebimento positivo do provedor. Abrir a URL do webhook no navegador recebe 405 porque o receptor aceita somente POST.
+`test:webhook:http` confere rejeição no endpoint local. `test:webhook:integration` sobe Next em modo produção no loopback 3101 com segredo efêmero, usa o Supabase ligado, insere somente fixtures aleatórias e as remove no finally. Exige build, ambiente e CLI configurados; não executar como um teste sem efeito no banco. Foi atualizado para secret no JSON. Sua execução antiga com HMAC não comprova a nova autenticação.
 
-No painel **Integrações → Webhooks**, cadastrar o produto permitido, URL HTTPS pública terminando em `/api/webhooks/cakto` e eventos comerciais do receptor. Não usar localhost. Salvar o segredo gerado pelo webhook em `CAKTO_WEBHOOK_SECRET`, somente no ambiente do servidor, sem NEXT_PUBLIC ou envio pelo chat. Esse segredo é diferente de CAKTO_CLIENT_SECRET. Preferir configuração manual no painel; chave OAuth atual read + offers permanece intacta.
+## Histórico e fontes
 
-Antes de ativar entrega real: testar assinatura dos headers na versão escolhida, produto/oferta presentes e campos/IDs do fixture. O fixture oficial pode conter IDs genéricos e então deve ser rejeitado; conectividade não equivale à validação de uma compra. Se o teste não enviar assinatura, não enfraquecer o receptor para fazê-lo passar. Pedir contrato/fixture compatível ao provedor. Confirmar recuperação de entregas com falha, retenção e verificação independente de pagamentos. Contratação permanece bloqueada.
+Os registros anteriores de 03–06/10 sobre HMAC, timestamp e o suposto significado de um 400 foram substituídos pela confirmação do suporte. Não inferir autenticidade de entregas antigas apenas por uma captura de status. A inbox privada e sua deduplicação já tinham sido implementadas e verificadas; não foram alteradas nesta correção.
 
-Os tópicos abaixo registram o planejamento original.
+Fontes públicas consultadas: [guia de webhooks](https://docs.cakto.com.br/conceitos/webhooks), [criar webhook](https://docs.cakto.com.br/api-reference/webhooks/create), [testar webhook](https://docs.cakto.com.br/api-reference/webhooks/test-webhook), [central de ajuda](https://ajuda.cakto.com.br/pt-br/articles/1-como-funcionam-os-webhooks-na-cakto-guia-completo). Em caso de divergência sobre a autenticação atual, esta implementação segue a resposta do suporte fornecida pelo responsável.
 
-Auditoria final após rollback das fixtures: zero registros na inbox e zero assinaturas. Nenhum evento real recebido ou direito concedido. Concorrência da deduplicação é garantida pela restrição única/on conflict no PostgreSQL; teste com duas conexões simultâneas e teste HTTP positivo integrado não executados nesta etapa.
-
-Atualização comercial: usuário confirmou validade do cupom até 31/10/2026. Horário/fuso ainda não informado; confirmar antes do lançamento. Isso não impede preparar e testar o receptor local sem aceitar pagamentos.
-
-Fontes oficiais consultadas em 03/10/2026: [guia de webhooks](https://docs.cakto.com.br/conceitos/webhooks), [criação de webhook](https://docs.cakto.com.br/api-reference/webhooks/create).
-
-## Contrato do provedor
-
-Entrega POST JSON com secret, event e data; V2 usa lista em data. Headers X-Cakto-Timestamp e X-Cakto-Signature autenticam HMAC-SHA256 com chave do webhook sobre timestamp + ponto + bytes originais do corpo, formato v1=hex. Exemplo oficial usa tolerância de cinco minutos. Segredo é gerado na criação, separado da chave OAuth. Retentativas automáticas são para falhas de rede/timeout, não respostas HTTP de erro. Limite de resposta: oito segundos. Dados contêm identificação de pedido/produto/oferta, sck e informações pessoais que devem ser descartadas. Teste oficial é fixture e não comprova uma venda real.
-
-Criação exige products e seleção de eventos; painel Integrações → Webhooks ou API com write + webhooks. A chave read + offers atual não autoriza essa operação.
-
-## Implementação proposta para a próxima etapa
-
-- Endpoint Node para receber os bytes originais, com limite de tamanho e tempo de leitura.
-- Verificação em tempo constante da assinatura e timestamp; sem fallback automático para segredo no corpo.
-- Eventos comerciais permitidos, produto permitido e validação do envelope V1/V2 antes de persistir.
-- Caixa de entrada privada e durável, contendo apenas campos necessários, sem secret, CPF, cartão ou contato do comprador. Rejeitar formatos sem identidade comercial quando exigida.
-- Deduplicar entregas sem perder mudanças posteriores do mesmo pedido: deduplicação não pode usar somente ID de pedido para todos os eventos.
-- Confirmar recebimento somente depois de gravar; falhas precisam de recuperação pelo histórico/reconciliação, pois HTTP 500 não garante retentativa do provedor.
-- Não conceder Premium na etapa 28. Evento autenticado entra como sinal para consulta independente de pagamento na etapa 29.
-- Testes de adulteração de bytes, assinatura inválida, timestamp antigo/futuro, payload excessivo, produto errado, repetição, eventos diferentes do mesmo pedido, V2 e falha de persistência.
-
-## Configuração ainda necessária
-
-Endpoint HTTPS público para teste integrado, segredo real do webhook salvo exclusivamente no ambiente e fixture de teste sanitizada. Não registrar localhost como URL no provedor, não publicar servidor com segredos para capturar eventos e não ampliar permissões da chave atual apenas para pesquisa. Preparar e testar endpoint local antes de pedir configuração do painel. Validade/fuso do cupom de outubro permanece uma pendência comercial da etapa 27.
-
-Estado original antes da implementação: documentação preparada. Estado atual descrito acima; webhook remoto, publicação e concessão de acesso não foram realizados. Trava de contratação preservada.
+Validação de 20/10/2026: 66 testes isolados/regressões, lint e compilação de produção/TypeScript aprovados. Rota Next real em produção isolada conferiu secret ausente/incorreto 401, fixture autenticada sem headers 200, evento/payload sem aplicação 200 e armazenamento indisponível 503. Segredo efêmero, sem banco real, chamada à Cakto ou cobrança. Integração com persistência no Supabase e entrega originada no painel ainda não repetidas nesta versão.

@@ -326,7 +326,7 @@ Imagem 3 escolhida para resultado e imagem 2 para revisar erros um a um. Impleme
 Build/lint e 30 testes passaram. Conferência no navegador concluída em 26/09/2026: revisão dos erros e de todas as respostas, zero/dez acertos, finalização da prévia, teclado e larguras 320/390/1280. Evidências em [design-qa.md](design-qa.md). Pausa para seu teste antes da etapa 14; nenhuma questão publicada.
 # Etapa 28 — receptor Cakto
 
-Receptor local implementado em `POST /api/webhooks/cakto`, com assinatura HMAC, inbox privada e deduplicação. [Configuração, testes e limites](docs/WEBHOOK-CAKTO.md). Entrega real depende de URL HTTPS pública e segredo próprio do webhook; pagamentos e concessão de Premium continuam bloqueados até verificação das próximas etapas.
+Receptor local implementado em `POST /api/webhooks/cakto`, com autenticação pelo secret do JSON confirmada pelo suporte, inbox privada e deduplicação. [Configuração, testes e limites](docs/WEBHOOK-CAKTO.md). Entrega real depende de URL HTTPS pública e segredo próprio do webhook; pagamentos e concessão de Premium continuam bloqueados até verificação das próximas etapas.
 # Atualização de pagamentos — 06/10/2026
 
 Consulta independente de pedido/assinatura e processador administrativo ligados à intenção privada e à evidência no banco. Verificação não concede Premium; contratação permanece desabilitada até validação do contrato monetário real, concessão e reconciliação. Testes `npm.cmd run test:payment` e `npm.cmd run test:payment:integration`. Detalhes e limites em [VERIFICACAO-CAKTO](docs/VERIFICACAO-CAKTO.md).
