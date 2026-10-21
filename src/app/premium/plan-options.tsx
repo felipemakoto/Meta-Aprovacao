@@ -14,19 +14,17 @@ export default function PlanOptions({offer,active=false,preview=false,onboarding
     <section className={styles.plan} aria-labelledby="free-plan-title">
       <p className={styles.label}>Para começar</p><h2 id="free-plan-title">Gratuito</h2>
       <p className={styles.price}>R$ 0<span>sem mensalidade</span></p>
-      <ul><li>10 questões por dia</li><li>1 simulado rápido por dia</li></ul>
+      <ul><li>10 questões por dia</li><li>1 simulado rápido por dia</li><li>Correção com explicações</li><li>Histórico de respostas</li><li>Estatísticas de desempenho</li></ul>
       {onboarding&&!preview?<ContinueStudy/>:<Link className={styles.primary} href={study}>{onboarding?"Fazer meu simulado grátis":"Continuar estudando"}<Image src="/icons/arrow-right.svg" width={21} height={21} alt=""/></Link>}
       <p className={styles.note}>Sem cartão.</p>
     </section>
     <section className={`${styles.plan} ${styles.premium}`} aria-labelledby="premium-plan-title">
       <p className={styles.label}>{active?"Seu plano está ativo":"Para ir além"}</p><h2 id="premium-plan-title">Premium</h2>
       <p className={styles.price}>{money(offer.monthlyPrice)}<span>por mês, desde a primeira cobrança</span></p>
-      <ul><li>Questões sem limite diário</li><li>Simulados sem limite diário</li><li>Simulados por matéria</li><li>Todo o catálogo Premium</li><li>Correção com explicações</li><li>Histórico de respostas</li><li>Estatísticas de desempenho</li></ul>
-      <details><summary>9 recursos de estudo e organização incluídos</summary><ul>{Object.values(studyAreas).map(name=><li key={name}>{name}</li>)}</ul></details>
+      <ul><li>Tudo do Gratuito</li><li>Questões sem limite diário</li><li>Simulados sem limite diário</li><li>Simulados por matéria</li><li>Todo o catálogo Premium</li>{Object.values(studyAreas).map(name=><li key={name}>{name}</li>)}</ul>
       {active?<Link className={styles.primary} href="/premium/estudos">Abrir meus recursos Premium<Image src="/icons/arrow-right.svg" width={21} height={21} alt=""/></Link>:checkoutEnabled&&!preview?<CheckoutAction/>:<button className={styles.secondary} disabled aria-describedby="premium-coming">{preview?"Contratação indisponível na prévia":"Premium em breve"}</button>}
       <p className={styles.note}>Taxa Cakto atual de R$ 0,99 por cobrança. Total: {money(offer.monthlyPrice+.99)}/mês.</p>
       {!active&&<p className={styles.note} id="premium-coming">{checkoutEnabled&&!preview?"Assinatura mensal. Pagamento seguro no checkout da Cakto. Nenhuma cobrança será feita nesta página.":preview?"Prévia ilustrativa. Nenhuma cobrança é criada.":"Assinatura mensal. Contratação ainda indisponível."}</p>}
     </section>
-    <p className={styles.shared}>Correção, histórico e estatísticas também estão no gratuito.</p>
   </div>;
 }
