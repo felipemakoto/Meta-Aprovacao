@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <li><strong>Entrada com Google, quando escolhida:</strong> dados básicos de identificação disponibilizados pela conta, como e-mail, nome e foto de perfil. A senha do Google não passa pelo site e a integração não solicita acesso à caixa de e-mails.</li>
       <li><strong>Documentos do cadastro:</strong> confirmação de concordância com os termos, ciência da política de privacidade, versão dos documentos e data do envio registrada pelo servidor.</li>
       <li><strong>Estudos:</strong> respostas, resultados, assuntos praticados, tentativas, datas, duração e consumo dos limites diários.</li>
-      <li><strong>Funcionamento e segurança:</strong> cookies de sessão, identificadores de tentativa e registros técnicos de acesso e falhas. O rascunho de um simulado pode ficar no armazenamento de sessão do navegador.</li>
+      <li><strong>Funcionamento e segurança:</strong> cookies de sessão, identificadores de tentativa e registros técnicos de acesso e falhas. Para limitar abuso no quiz inicial, usamos contadores associados a um identificador criptográfico da rede, sem gravar o endereço IP nesses contadores. Eles vencem em até 24 horas e são removidos gradualmente nas próximas criações de quiz. O rascunho de um simulado pode ficar no armazenamento de sessão do navegador.</li>
       <li><strong>Atendimento:</strong> informações que você enviar voluntariamente ao suporte.</li>
       <li><strong>Assinatura, quando disponível:</strong> identificadores de pedidos e assinatura, estado do pagamento e período de acesso. Dados completos do cartão são tratados no checkout do provedor de pagamento, não nos formulários de estudo.</li>
     </ul>

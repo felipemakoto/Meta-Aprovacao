@@ -12,7 +12,7 @@ import styles from "./quiz.module.css";
 import CorrectionLoading from "./correction-loading";
 import {withResultTransition} from "@/lib/quiz/result-transition";
 
-type Failure = "unavailable" | "network" | "expired";
+type Failure = "unavailable" | "network" | "expired" | "limited";
 type Screen = { kind: "loading" } | { kind: "error"; reason: Failure } | { kind: "ready"; quiz: GuestQuiz };
 const subjects: Record<string, string> = { matematica: "Matemática", portugues: "Português", ciencias: "Ciências", historia: "História", geografia: "Geografia" };
 // Relógio consultado apenas em efeitos e ações, nunca para decidir o HTML inicial.
@@ -32,7 +32,7 @@ function loadQuiz() {
         response = await fetch("/api/quiz/attempt", { ...options, method: "POST" });
       }
       const body = await response.json();
-      if (!response.ok) throw new Error(body.error === "quiz_not_ready" ? "unavailable" : "network");
+      if (!response.ok) throw new Error(body.error === "quiz_not_ready" ? "unavailable" : body.error === "rate_limited" ? "limited" : "network");
       return toPublicQuiz(body);
     })().finally(() => { pending = undefined; });
   }
@@ -48,7 +48,7 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
     let active = true;
     loadQuiz().then(
       (quiz) => { if (active) { if (quiz) setScreen({ kind: "ready", quiz }); else router.replace("/quiz/result"); } },
-      (error) => { if (active) setScreen({ kind: "error", reason: error.message === "unavailable" ? "unavailable" : "network" }); },
+      (error) => { if (active) setScreen({ kind: "error", reason: error.message === "unavailable" ? "unavailable" : error.message === "limited" ? "limited" : "network" }); },
     );
     return () => { active = false; };
   }, [preview, retry, router]);
@@ -60,8 +60,8 @@ export default function Quiz({ preview }: { preview?: GuestQuiz }) {
         {screen.kind === "loading" && <section className={styles.message} aria-busy="true" role="status"><h1>Preparando seu teste…</h1><p>Buscando as questões da sua tentativa.</p></section>}
         {screen.kind === "error" && (
           <section className={styles.message} role="status">
-            <h1>{screen.reason === "expired" ? "O tempo desta tentativa terminou." : screen.reason === "unavailable" ? "O teste está em preparação." : "Não foi possível carregar o teste."}</h1>
-            <p>{screen.reason === "expired" ? "Inicie outra tentativa para continuar." : screen.reason === "unavailable" ? "As questões ainda estão em revisão. Volte em breve." : "Confira sua conexão e tente novamente."}</p>
+            <h1>{screen.reason === "expired" ? "O tempo desta tentativa terminou." : screen.reason === "unavailable" ? "O teste está em preparação." : screen.reason === "limited" ? "Vamos fazer uma pausa." : "Não foi possível carregar o teste."}</h1>
+            <p>{screen.reason === "expired" ? "Inicie outra tentativa para continuar." : screen.reason === "unavailable" ? "As questões ainda estão em revisão. Volte em breve." : screen.reason === "limited" ? "Muitos testes foram iniciados nesta rede. Aguarde dez minutos antes de tentar novamente." : "Confira sua conexão e tente novamente."}</p>
             {screen.reason !== "unavailable" && <button className={styles.continue} onClick={restart}>{screen.reason === "expired" ? "Iniciar outra tentativa" : "Tentar novamente"}</button>}
             <Link className={styles.returnLink} href="/">Voltar ao início</Link>
           </section>

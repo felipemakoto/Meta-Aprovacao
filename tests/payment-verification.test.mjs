@@ -47,6 +47,13 @@ test('divergências, moeda ausente, reversões e datas não são aprovadas',()=>
  assert.equal(decision(order,subscription,{...expected,reference:''}).verified,false);
  assert.equal(cents('22.99'),2299);for(const v of [22.99,'-1','1e3','1.999',null])assert.equal(cents(v),null);
 });
+test('cancelar renovação após pagar preserva prova sem aceitar datas inválidas ou reversão',()=>{
+ const canceled={...subscription,status:'canceled',canceledAt:'2026-10-06T12:10:00Z'};
+ assert.equal(decision(order,canceled).verified,true);
+ for(const canceledAt of [null,'invalid','2026-10-06T12:00:00Z','2027-01-01T00:00:00Z'])assert.equal(decision(order,{...canceled,canceledAt}).verified,false);
+ assert.equal(decision({...order,status:'refunded',refundedAt:'2026-10-06T12:12:00Z'},canceled).verified,false);
+ assert.equal(decision({...order,chargedbackAt:'2026-10-06T12:12:00Z'},canceled).verified,false);
+});
 const env={CAKTO_CLIENT_ID:'private-id',CAKTO_CLIENT_SECRET:'private-secret'};
 const json=value=>Response.json(value);
 test('consulta usa IDs autoritativos, host fixo, limites e não segue redirecionamentos',async()=>{

@@ -24,8 +24,23 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
   const [message,setMessage]=useState(unavailable?"Não foi possível verificar sua conta. Recarregue a página para tentar novamente.":preview&&limitReached?messages.daily_practice_limit:"");
   const heading=useRef<HTMLHeadingElement>(null);const status=useRef<HTMLDivElement>(null);
   const [loaded,setLoaded]=useState(preview);
+  const [restoring,setRestoring]=useState(!preview&&!unavailable);
+  const [restoreError,setRestoreError]=useState(false);
+  const [restoreRetry,setRestoreRetry]=useState(0);
   const quota=useDailyLimits(preview,unavailable);
   const pending=useRef<{requestId:string;previous:string|null}|null>(null);
+  useEffect(()=>{
+    if(preview||unavailable)return;
+    const controller=new AbortController();let active=true;
+    const timeout=setTimeout(()=>controller.abort(),15000);
+    fetch("/api/practice?resume=1",{cache:"no-store",credentials:"same-origin",signal:controller.signal})
+      .then(async r=>{if(!r.ok)throw Error();return r.json();})
+      .then(body=>{if(!active)return;const resumed=body.question?publicQuestion(body.question):null;
+        setQuestion(resumed);if(resumed)setFilters({...initial,subject:resumed.subject,topic:resumed.topic});
+      }).catch(()=>{if(active)setRestoreError(true);})
+      .finally(()=>{clearTimeout(timeout);if(active)setRestoring(false);});
+    return()=>{active=false;clearTimeout(timeout);controller.abort();};
+  },[preview,unavailable,restoreRetry]);
   useEffect(()=>{
     if(preview||unavailable)return;
     const controller=new AbortController();
@@ -34,7 +49,7 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
   },[filters.subject,preview,unavailable]);
   function change(field:keyof Filters,value:string){pending.current=null;setFilters(f=>({...f,[field]:value,...(field==="subject"?{topic:""}:{})}));setQuestion(null);setFeedback(null);setAnswer("");setMessage("");setLoaded(false);if(field==="subject")setTopics([]);}
   async function run(action:"next"|"answer"){
-    if(lock.current||unavailable)return;if(action==="answer"&&(!answer||!question))return;
+    if(lock.current||unavailable||restoring||restoreError)return;if(action==="answer"&&(!answer||!question))return;
     lock.current=true;setBusy(true);setCorrecting(action==="answer");setMessage("");
     try{
       if(preview){
@@ -56,7 +71,9 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
 
     <main><h1 className={styles.title}>Questões</h1>
       <p className={styles.notice}>{preview?`${limitReached?0:10} de 10 novas questões disponíveis hoje. Renova à meia-noite de São Paulo.`:quota.limits?dailyLimitMessage(quota.limits,"practice"):quota.failed?"Não foi possível consultar seu saldo. Tente buscar uma questão para verificar a disponibilidade.":"Consultando o saldo de hoje…"}</p>
-      <form onSubmit={e=>{e.preventDefault();void run("next");}}><fieldset className={styles.filters} disabled={busy||unavailable}>
+      {restoring&&<p className={styles.notice} role="status">Verificando sua questão em andamento…</p>}
+      {restoreError&&<div role="status"><p className={styles.notice}>Não foi possível retomar sua questão. Tente novamente antes de iniciar outra.</p><button className={styles.apply} onClick={()=>{setRestoring(true);setRestoreError(false);setRestoreRetry(n=>n+1);}}>Tentar retomar</button></div>}
+      <form onSubmit={e=>{e.preventDefault();void run("next");}}><fieldset className={styles.filters} disabled={busy||unavailable||restoring||restoreError}>
         <div className={styles.field}><label htmlFor="subject">Matéria</label><select id="subject" value={filters.subject} onChange={e=>change("subject",e.target.value)}>{Object.entries(subjects).map(([v,label])=><option key={v} value={v}>{label}</option>)}</select></div>
         <div className={styles.field}><label htmlFor="topic">Assunto</label><select id="topic" value={filters.topic} onChange={e=>change("topic",e.target.value)}><option value="">Todos</option>{topics.map(t=><option key={t}>{t}</option>)}</select></div>
         <details className={styles.advanced}>

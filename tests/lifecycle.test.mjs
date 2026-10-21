@@ -37,6 +37,16 @@ test('processador vincula pela primeira prova e API, grava antes de concluir e s
  let saved;const deps={signal:async()=>({orderId:origin,productId:'product',offerId:'offer',event:'subscription_canceled'}),provider:async()=>({order,subscription:sub}),binding:async(id,subId,originId)=>{assert.equal(subId,subscription);assert.equal(originId,origin);return binding;},save:async(id,r)=>{saved=r;},product:'product',offers:['offer'],now:()=>now};
  assert.equal((await lifecycleProcessor(deps)(1)).outcome,'verified');assert.equal(saved.snapshot.action,'preserve');
  assert.equal((await lifecycleProcessor({...deps,binding:async()=>null})(1)).reason,'subscription_binding_missing');
+ const waiting=await lifecycleProcessor({...deps,binding:async()=>null})(1);
+ assert.equal(waiting.outcome,'retry');assert.deepEqual(waiting.dependency,{subscriptionId:subscription,originOrderId:origin});
  assert.equal((await lifecycleProcessor({...deps,provider:async()=>{throw new CaktoReadError('unavailable');}})(1)).outcome,'retry');
  await assert.rejects(lifecycleProcessor({...deps,save:async()=>{throw Error('storage unavailable');}})(1));
+});
+test('renovação paga antes do cancelamento é válida; predecessor atrasado aguarda nova tentativa',()=>{
+ const renewal={...order,subscription_period:3,currency:'BRL',baseAmount:'22.99',discount:'0.00',amount:'23.98',couponCode:null,createdAt:'2026-10-01T11:00:00Z',canceledAt:null};
+ const monthly={...sub,status:'canceled',canceledAt:'2026-10-06T11:00:00Z',recurrence_period:30,quantity_recurrences:-1};
+ assert.equal(lifecycleDecision(renewal,monthly,{...binding,expectedPeriod:3},now).renewal.period,3);
+ const waiting=lifecycleDecision(renewal,monthly,{...binding,expectedPeriod:2},now);
+ assert.equal(waiting.outcome,'retry');assert.deepEqual(waiting.dependency,{subscriptionId:subscription,originOrderId:origin});
+ assert.equal(lifecycleDecision({...renewal,status:'refunded',refundedAt:'2026-10-05T12:00:00Z'},monthly,binding,now).snapshot.action,'revoke');
 });

@@ -45,6 +45,19 @@ test("POST com stream vazio inicia tentativa sem aceitar dados do cliente", asyn
   assert.equal(response.status, 201);
 });
 
+test('leitura sem EOF e cancelamento pendente não prendem resposta',async()=>{
+ const body=new ReadableStream({start(){},cancel(){return new Promise(()=>{});}});
+ const r=new NextRequest(origin+'/api/quiz/attempt',{method:'POST',headers:{Origin:origin},duplex:'half',body});
+ const timeout=Symbol('test_timeout');let timer;
+ try {
+  const response=await Promise.race([makeHandlers({start:()=>assert.fail('Não criar com corpo pendente')}).POST(r),new Promise(resolve=>{timer=setTimeout(()=>resolve(timeout),4200);})]);
+  assert.notEqual(response,timeout);assert.equal(response.status,408);
+ }finally{clearTimeout(timer);}
+});
+test('limite de criação informa 429 sem substituir cookie existente',async()=>{
+ const response=await makeHandlers({start:async()=>{throw Error('rate_limited');},isRateLimited:error=>error.message==='rate_limited'}).POST(request('POST'));
+ assert.equal(response.status,429);assert.equal(response.headers.get('retry-after'),'600');assert.equal(response.headers.get('set-cookie'),null);
+});
 test("retomada mantém tentativa e não reinicia prazo", async () => {
   const headers = { Cookie: `__Host-guest_quiz=${token}` };
   const handlers = makeHandlers();

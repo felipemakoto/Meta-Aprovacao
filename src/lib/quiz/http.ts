@@ -5,6 +5,7 @@ type Dependencies = {
   read: (token: string | undefined) => Promise<GuestQuiz | null>;
   start: (token: string | undefined) => Promise<{ quiz: GuestQuiz; token: string; created: boolean }>;
   isNotReady: (error: unknown) => boolean;
+  isRateLimited?: (error: unknown) => boolean;
 };
 
 // Dependências explícitas permitem testar cookies e CSRF sem credenciais reais.
@@ -40,15 +41,22 @@ export function createGuestQuizHandlers(dependencies: Dependencies, settings: { 
       // Verificar os bytes e parar no primeiro conteúdo, sem acumular o corpo.
       if (request.body) {
         const reader = request.body.getReader();
+        let timer: ReturnType<typeof setTimeout> | undefined;
         try {
-          for (;;) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            if (value.byteLength > 0) return json({ error: "unexpected_input" }, 400);
-          }
+          const empty = await Promise.race([
+            (async () => { for (;;) {
+              const { done, value } = await reader.read();
+              if (done) return true;
+              if (value.byteLength > 0) return false;
+            } })(),
+            new Promise<null>(resolve => { timer = setTimeout(() => resolve(null), 3000); }),
+          ]);
+          if (empty === null) return json({ error: "request_timeout" }, 408);
+          if (!empty) return json({ error: "unexpected_input" }, 400);
         } finally {
-          await reader.cancel();
-          reader.releaseLock();
+          clearTimeout(timer);
+          void reader.cancel().catch(() => {});
+          try { reader.releaseLock(); } catch { /* A pending read cannot delay the deadline. */ }
         }
       }
       const result = await dependencies.start(request.cookies.get(cookieName)?.value);
@@ -59,6 +67,11 @@ export function createGuestQuizHandlers(dependencies: Dependencies, settings: { 
       });
       return response;
     } catch (error) {
+      if (dependencies.isRateLimited?.(error)) {
+        const response = json({ error: "rate_limited" }, 429);
+        response.headers.set("Retry-After", "600");
+        return response;
+      }
       return json({ error: dependencies.isNotReady(error) ? "quiz_not_ready" : "quiz_unavailable" }, 503);
     }
   }
