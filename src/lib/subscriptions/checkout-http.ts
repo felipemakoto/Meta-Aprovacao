@@ -29,12 +29,12 @@ export function checkoutHandler(deps: Dependencies, settings: Settings) {
       // Next pode representar POST vazio como stream; aceitar somente EOF sem bytes.
       const reader = request.body.getReader();
       let timedOut = false;
-      const timer = setTimeout(() => { timedOut = true; void reader.cancel(); }, 3000);
+      const timer = setTimeout(() => { timedOut = true; void reader.cancel().catch(() => {}); }, 3000);
       try {
         const chunk = await reader.read();
         if (timedOut || !chunk.done) return json("invalid_input", 400);
       } catch { return json("invalid_input", 400); }
-      finally { clearTimeout(timer); await reader.cancel().catch(() => {}); reader.releaseLock(); }
+      finally { clearTimeout(timer); void reader.cancel().catch(() => {}); try { reader.releaseLock(); } catch {} }
     }
     try {
       const user = await deps.user();

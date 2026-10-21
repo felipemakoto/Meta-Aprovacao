@@ -46,7 +46,7 @@ export function createCorrectionHandlers(deps: Dependencies, settings: { secure:
     const reader = r.body?.getReader();
     if (!reader) return json({ error: "invalid_answers" }, 400);
     let timedOut = false;
-    const timer = setTimeout(() => { timedOut = true; void reader.cancel(); }, 10000);
+    const timer = setTimeout(() => { timedOut = true; void reader.cancel().catch(() => {}); }, 10000);
     try {
       const chunks: Uint8Array[] = [];
       let size = 0;
@@ -60,7 +60,7 @@ export function createCorrectionHandlers(deps: Dependencies, settings: { secure:
       if (timedOut) return json({ error: "request_timeout" }, 408);
       answers = parseAnswers(JSON.parse(Buffer.concat(chunks).toString("utf8")));
     } catch { return json({ error: "invalid_answers" }, 400); }
-    finally { clearTimeout(timer); await reader.cancel().catch(() => {}); reader.releaseLock(); }
+    finally { clearTimeout(timer); void reader.cancel().catch(() => {}); try { reader.releaseLock(); } catch {} }
     try { return json(toQuizResult(await deps.submit(value, answers)), 200); }
     catch (error) { return failure(error); }
   }

@@ -26,7 +26,7 @@ export function createClaimHandlers(deps: Dependencies, settings: { secure: bool
     const reader = r.body?.getReader();
     if (reader) {
       let timeout = false;
-      const timer = setTimeout(() => { timeout = true; void reader.cancel(); }, 5000);
+      const timer = setTimeout(() => { timeout = true; void reader.cancel().catch(() => {}); }, 5000);
       try {
         for (;;) {
           const { done, value } = await reader.read();
@@ -35,7 +35,7 @@ export function createClaimHandlers(deps: Dependencies, settings: { secure: bool
         }
         if (timeout) return json({ error: "request_timeout" }, 408);
       } catch { return json({ error: "unexpected_input" }, 400); }
-      finally { clearTimeout(timer); await reader.cancel().catch(() => {}); reader.releaseLock(); }
+      finally { clearTimeout(timer); void reader.cancel().catch(() => {}); try { reader.releaseLock(); } catch {} }
     }
     try {
       const userId = await deps.user();

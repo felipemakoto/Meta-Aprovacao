@@ -23,7 +23,7 @@ Escopo: achados confirmados sobre o snapshot `c1f0c56`. Sem compra real, mudanç
 
 ## Validação e implantação
 
-- 246 testes Node aprovados; build de produção e TypeScript aprovados.
+- Reverificação em 21/10/2026: 248 testes Node aprovados; build de produção e TypeScript aprovados. Limites e prazos também conferidos em prática, simulados, associação de resultado, correção e checkout: o cancelamento pendente do stream não segura a resposta. A falha foi reproduzida antes da correção; 37 testes focados passaram depois.
 - `node scripts/test-security-remediation.mjs`: ensaio das duas migrations mais regressões existentes, em transação encerrada com ROLLBACK. Repetido com `--applied` depois da implantação: aprovado. Fixtures não permanecem no banco.
 - Ensaio cobre limite por rede/global, retry sem cobrança, retomada sem consumo e sem exposição de resposta, isolamento entre duas identidades, expiração, cancelamento, estorno, replay, fila fora de ordem e privilégios restritos.
 - Migrations `20261021003013` e `20261021003016` aplicadas. Worker `cakto-reconcile` versão 6 ativo. Consulta operacional retornou estado saudável e fila vazia.

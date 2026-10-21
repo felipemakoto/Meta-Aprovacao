@@ -36,13 +36,13 @@ export function createPracticeHandlers(deps: { user:()=>Promise<string|null>; to
     if(r.headers.get("content-type")?.split(";")[0].trim()!=="application/json")return json({error:"unsupported_media_type"},415);
     if(Number(r.headers.get("content-length"))>2048)return json({error:"payload_too_large"},413);
     const reader=r.body?.getReader();if(!reader)return json({error:"invalid_input"},400);
-    let timeout=false; const timer=setTimeout(()=>{timeout=true;void reader.cancel();},5000);
+    let timeout=false; const timer=setTimeout(()=>{timeout=true;void reader.cancel().catch(()=>{});},5000);
     let input:Input;
     try {const chunks:Uint8Array[]=[];let size=0;
       for(;;){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>2048)return json({error:"payload_too_large"},413);chunks.push(value);}
       if(timeout)return json({error:"request_timeout"},408);
       input=parsePracticeInput(JSON.parse(Buffer.concat(chunks).toString("utf8")));
-    }catch{return json({error:"invalid_input"},400);}finally{clearTimeout(timer);await reader.cancel().catch(()=>{});reader.releaseLock();}
+    }catch{return json({error:"invalid_input"},400);}finally{clearTimeout(timer);void reader.cancel().catch(()=>{});try{reader.releaseLock();}catch{}}
     try {const user=await deps.user();if(!user)return json({error:"login_required"},401);
       const value=await deps.run(user,input);
       return json(input.action==="next"?{question:value?publicQuestion(value):null}:{feedback:publicFeedback(value)});

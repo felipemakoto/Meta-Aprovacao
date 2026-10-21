@@ -19,10 +19,10 @@ export function simulationHandlers(deps:{user:()=>Promise<string|null>;catalog:(
   if(Number(r.headers.get("content-length"))>16000)return json({error:"payload_too_large"},413);
   // Limite também para streaming sem Content-Length.
   const reader=r.body?.getReader();if(!reader)return json({error:"invalid_input"},400);
-  let timeout=false;const timer=setTimeout(()=>{timeout=true;void reader.cancel();},5000);
+  let timeout=false;const timer=setTimeout(()=>{timeout=true;void reader.cancel().catch(()=>{});},5000);
   let input:SimulationInput;
   try{const chunks:Uint8Array[]=[];let size=0;for(;;){const {value,done}=await reader.read();if(done)break;size+=value.length;if(size>16000)return json({error:"payload_too_large"},413);chunks.push(value);}if(timeout)return json({error:"request_timeout"},408);input=parseSimulationInput(JSON.parse(Buffer.concat(chunks).toString("utf8")));}
-  catch{return json({error:"invalid_input"},400);}finally{clearTimeout(timer);await reader.cancel().catch(()=>{});reader.releaseLock();}
+  catch{return json({error:"invalid_input"},400);}finally{clearTimeout(timer);void reader.cancel().catch(()=>{});try{reader.releaseLock();}catch{}}
   try{const user=await deps.user();if(!user)return json({error:"login_required"},401);const value=await deps.run(user,input);return json(input.action==="start"?parseSimulationState(value):{result:parseSimulationResult(value)});}catch(e){return failure(e);}
  }
  return {GET,POST};
