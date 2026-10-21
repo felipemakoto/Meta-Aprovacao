@@ -21,7 +21,7 @@ export default function PlanOptions({offer,active=false,preview=false,onboarding
     <section className={`${styles.plan} ${styles.premium}`} aria-labelledby="premium-plan-title">
       <p className={styles.label}>{active?"Seu plano está ativo":"Para ir além"}</p><h2 id="premium-plan-title">Premium</h2>
       <p className={styles.price}>{money(offer.monthlyPrice)}<span>por mês, desde a primeira cobrança</span></p>
-      <ul><li>Tudo do Gratuito</li><li>Questões sem limite diário</li><li>Simulados sem limite diário</li><li>Simulados por matéria</li><li>Todo o catálogo Premium</li>{Object.values(studyAreas).map(name=><li key={name}>{name}</li>)}</ul>
+      <ul><li>Tudo do Gratuito</li><li>Questões sem limite diário</li><li>Simulados sem limite diário</li><li>Simulados por matéria</li>{Object.values(studyAreas).map(name=><li key={name}>{name}</li>)}</ul>
       {active?<Link className={styles.primary} href="/premium/estudos">Abrir meus recursos Premium<Image src="/icons/arrow-right.svg" width={21} height={21} alt=""/></Link>:checkoutEnabled&&!preview?<CheckoutAction/>:<button className={styles.secondary} disabled aria-describedby="premium-coming">{preview?"Contratação indisponível na prévia":"Premium em breve"}</button>}
       <p className={styles.note}>Taxa Cakto atual de R$ 0,99 por cobrança. Total: {money(offer.monthlyPrice+.99)}/mês.</p>
       {!active&&<p className={styles.note} id="premium-coming">{checkoutEnabled&&!preview?"Assinatura mensal. Pagamento seguro no checkout da Cakto. Nenhuma cobrança será feita nesta página.":preview?"Prévia ilustrativa. Nenhuma cobrança é criada.":"Assinatura mensal. Contratação ainda indisponível."}</p>}

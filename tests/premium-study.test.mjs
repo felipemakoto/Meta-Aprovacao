@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseStudyCommand,parseWorkspace} from '../src/lib/premium-study/contract.ts';
+import {parseStudyCommand,parseWorkspace,studyAreas,resolveStudyView,studySessionHref} from '../src/lib/premium-study/contract.ts';
 import {diagnosis,generatePlan,calendarIcs,localStudyDate} from '../src/lib/premium-study/planning.ts';
 import {studyHandlers} from '../src/lib/premium-study/http.ts';
 import {officialUrl,verifyOfficialDocument} from '../src/lib/premium-study/documents.ts';
@@ -12,6 +12,20 @@ const workspace={asOf:'2026-10-21T12:00:00Z',days:30,groups:[],institutions:[{id
 const config={mode:'custom',institution:'etec',subjects:['matematica'],topics:[],difficulty:'all',count:10,minutes:30};
 const session={title:'Minha sessão',date:'2026-11-02',time:'18:00',minutes:30,subject:'matematica',topic:'',kind:'practice',goal:10,reminder:15,completed:false,archived:false};
 const valid=[{action:'save_profile',profile},{action:'sync_plan'},{action:'save_session',id:null,requestId:id,session},{action:'start_exam',config,requestId:id},{action:'save_exam',id,answers:{[id]:'B'},marked:[id],revision:1},{action:'finish_exam',id,answers:[{questionId:id,answer:'-'}]},{action:'rate_card',questionId:id,mode:'review',rating:3,requestId:id},{action:'register_document',document:{institution:'etec',year:2026,selection:'1º semestre',examUrl:'https://fatweb.s3.amazonaws.com/vestibulinhoetec/a.pdf',answerUrl:'https://fatweb.s3.amazonaws.com/vestibulinhoetec/b.pdf',sourceUrl:'https://vestibulinho.etec.sp.gov.br/provas-gabaritos/'}}];
+
+test('revisão e flashcards compartilham uma área, mantendo links antigos e o contexto das sessões',()=>{
+ assert.equal(Object.keys(studyAreas).length,8);assert.equal(Object.hasOwn(studyAreas,'flashcards'),false);
+ assert.deepEqual(resolveStudyView('flashcards','errors'),{area:'reviews',collection:'all'});
+ assert.deepEqual(resolveStudyView('reviews','all'),{area:'reviews',collection:'all'});
+ assert.deepEqual(resolveStudyView('reviews','invalid'),{area:'reviews',collection:'errors'});
+ assert.deepEqual(resolveStudyView('javascript:alert(1)',null),{area:'plan',collection:'errors'});
+ for(const kind of ['review','flashcards']){
+  const u=new URL(studySessionHref({id,kind}),'https://meta-aprovacao.vercel.app');
+  assert.equal(u.searchParams.get('area'),'reviews');assert.equal(u.searchParams.get('session'),id);
+  assert.equal(u.searchParams.get('collection'),kind==='review'?'errors':'all');
+ }
+ assert.equal(new URL(studySessionHref({id,kind:'simulation'}),'https://meta-aprovacao.vercel.app').searchParams.get('area'),'custom');
+});
 test('comandos exatos, sem identidade, autorização, pontuação ou configuração financeira do cliente',()=>{
  for(const command of valid){assert.deepEqual(parseStudyCommand(command),command);for(const key of ['userId','hasPremium','score','price'])assert.throws(()=>parseStudyCommand({...command,[key]:true}));}
  for(const command of [{action:'delete_user'},{...valid[0],profile:{...profile,examDate:'2026-02-30'}},{...valid[0],profile:{...profile,weekdays:[1,1]}},{...valid[0],profile:{...profile,startTime:'25:01'}},{...valid[0],profile:{...profile,minutes:0}},{...valid[3],config:{...config,count:101}},{...valid[4],answers:JSON.parse('{"__proto__":"B"}')},{...valid[4],marked:[id,id]},{...valid[5],answers:[{questionId:id,answer:'B',correct:true}]},{...valid[6],rating:5}])assert.throws(()=>parseStudyCommand(command));

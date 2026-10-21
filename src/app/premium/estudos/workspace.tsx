@@ -3,7 +3,7 @@ import {useEffect,useRef,useState} from "react";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
 import StudyShell from "@/app/study-shell";
-import {parseWorkspace,studyAreas,type StudyArea,type StudyCommand,type Workspace as WorkspaceData} from "@/lib/premium-study/contract";
+import {parseWorkspace,studyAreas,type StudyArea,type ReviewCollection,type StudyCommand,type Workspace as WorkspaceData} from "@/lib/premium-study/contract";
 import {parseSimulationState} from "@/lib/quiz/simulation-contract";
 import {localStudyDate} from "@/lib/premium-study/planning";
 import {PlanPanel,ExamPanel} from "./planning-panels";
@@ -17,7 +17,7 @@ export async function studyRequest(command:StudyCommand){
  const r=await fetch("/api/premium/study",{method:"POST",cache:"no-store",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify(command),signal:AbortSignal.timeout(35000)});
  const body=await r.json();if(!r.ok)throw Error(messages[body.error]??"Não foi possível concluir. Tente novamente.");return body.data;
 }
-export default function Workspace({initial,area,sessionId}:{initial:WorkspaceData;area:StudyArea;sessionId?:string}){
+export default function Workspace({initial,area,collection="errors",sessionId}:{initial:WorkspaceData;area:StudyArea;collection?:ReviewCollection;sessionId?:string}){
  const [data,setData]=useState(initial),[busy,setBusy]=useState(false),[notice,setNotice]=useState(""),[error,setError]=useState(false),[reminders,setReminders]=useState(false);
  const router=useRouter(),lock=useRef(false);const periodRef=useRef(initial.days);const session=data.sessions.find(s=>s.id===sessionId);
  async function reload(days=periodRef.current){const r=await fetch(`/api/premium/study?days=${days}`,{cache:"no-store",credentials:"same-origin",signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error("Não foi possível atualizar os dados.");const w=parseWorkspace(await r.json());periodRef.current=days;setData(w);}
@@ -40,20 +40,21 @@ export default function Workspace({initial,area,sessionId}:{initial:WorkspaceDat
    const result=await studyRequest(command);
    if(command.action==="start_exam"){const state=parseSimulationState(result);router.push(`/simulados/${"quiz" in state?state.quiz.id:state.result.id}`);return result;}
    if(command.action==="save_profile"||command.action==="rate_card")await studyRequest({action:"sync_plan"});
-   await reload();setNotice(command.action==="sync_plan"?"Cronograma atualizado. Edições manuais e atividades concluídas foram preservadas.":"Alteração salva.");return result;
-  }catch(e){setError(true);setNotice(e instanceof Error?e.message:"A conexão falhou. Tente novamente.");throw e;}
+   await reload();if(command.action!=="rate_card")setNotice(command.action==="sync_plan"?"Cronograma atualizado. Edições manuais e atividades concluídas foram preservadas.":"Alteração salva.");return result;
+  }catch(e){if(command.action!=="rate_card"){setError(true);setNotice(e instanceof Error?e.message:"A conexão falhou. Tente novamente.");}throw e;}
   finally{lock.current=false;setBusy(false);}
  }
  const today=localStudyDate(new Date(data.asOf)),todaySessions=data.sessions.filter(s=>s.study_date===today),weekStart=new Date(today+"T12:00:00Z");weekStart.setUTCDate(weekStart.getUTCDate()-((weekStart.getUTCDay()+6)%7));
  const week=weekStart.toISOString().slice(0,10),weekEnd=new Date(weekStart.getTime()+7*86400000).toISOString().slice(0,10),weekSessions=data.sessions.filter(s=>s.study_date>=week&&s.study_date<weekEnd);
  return <StudyShell active="premium"><main className={styles.page}>
-  <header className={styles.heading}><div><p className={styles.kicker}>Seu espaço Premium</p><h1>{studyAreas[area]}</h1></div><Link className={styles.secondary} href="/premium">Meu plano</Link></header>
+  <header className={`${styles.heading} ${styles.workspaceHeading}`}><div><p className={styles.kicker}>Seu espaço Premium</p><h1>{studyAreas[area]}</h1></div><Link className={styles.planLink} href="/premium">Meu plano</Link></header>
+  <label className={styles.resourcePicker}>O que vamos estudar?<select value={area} onChange={e=>{if(Object.hasOwn(studyAreas,e.target.value))router.push(`/premium/estudos?area=${e.target.value}`);}}>{Object.entries(studyAreas).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label>
   <nav className={styles.areas} aria-label="Recursos Premium">{Object.entries(studyAreas).map(([key,label])=><Link key={key} href={`/premium/estudos?area=${key}`} aria-current={area===key?"page":undefined}>{label}</Link>)}</nav>
   <div role={error?"alert":"status"} aria-live="polite">{notice&&<p className={error?styles.error:styles.notice}>{notice}</p>}</div>
   {area==="plan"&&<><div className={styles.summary}><span>Hoje <strong>{todaySessions.filter(s=>s.completed_at).length}/{todaySessions.length}</strong> sessões concluídas</span><span>Esta semana <strong>{weekSessions.filter(s=>s.completed_at).reduce((n,s)=>n+s.goal,0)}/{data.profile?.weeklyGoal??0}</strong> questões/cartões de meta</span></div><PlanPanel data={data} busy={busy} mutate={mutate}/></>}
   {(area==="realistic"||area==="custom")&&<ExamPanel key={area+sessionId} data={data} mode={area==="realistic"?"realistic":"custom"} busy={busy} mutate={mutate} session={session}/>}
   {(area==="diagnosis"||area==="radar")&&<AnalyticsPanel data={data} radar={area==="radar"} reload={reload}/>}
-  {(area==="reviews"||area==="flashcards")&&<CardsPanel key={area+sessionId} data={data} mode={area==="reviews"?"review":"flashcard"} busy={busy} mutate={mutate} session={session}/>}
+  {area==="reviews"&&<CardsPanel key={collection+sessionId} data={data} mode={collection==="all"?"flashcard":"review"} busy={busy} mutate={mutate} session={session}/>}
   {area==="calendar"&&<><div className={styles.actions}><a className={styles.secondary} href="/api/premium/study?view=calendar">Exportar calendário e lembretes (.ics)</a><button className={styles.secondary} onClick={async()=>{if(!("Notification" in window)){setError(true);setNotice("Este navegador não oferece avisos. Exporte o calendário para receber lembretes no celular.");return;}const permission=await Notification.requestPermission();setReminders(permission==="granted");setError(permission!=="granted");setNotice(permission==="granted"?"Avisos ativados enquanto esta aba estiver aberta.":"Avisos não autorizados. Você pode usar os lembretes do calendário exportado.");}}>{reminders?"Avisos desta aba ativados":"Ativar avisos nesta aba"}</button></div><p className={styles.help}>Horários de Brasília. Para receber lembretes com o site fechado, importe o arquivo no calendário do celular ou computador. A importação é uma cópia; exporte novamente após editar o plano.</p><CalendarPanel data={data} busy={busy} mutate={mutate}/></>}
   {area==="library"&&<LibraryPanel data={data} busy={busy} mutate={mutate}/>}
  </main></StudyShell>;

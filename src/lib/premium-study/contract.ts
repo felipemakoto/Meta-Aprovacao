@@ -1,6 +1,15 @@
 import {subjects} from "../quiz/practice-contract.ts";
-export const studyAreas={plan:"Plano de estudos",realistic:"Simulado realista",reviews:"Revisão inteligente",diagnosis:"Diagnóstico",custom:"Simulados personalizados",radar:"Radar de conhecimentos",flashcards:"Flashcards",calendar:"Calendário",library:"Provas anteriores"} as const;
+export const studyAreas={plan:"Plano de estudos",realistic:"Simulado realista",reviews:"Revisão e flashcards",diagnosis:"Diagnóstico",custom:"Simulados personalizados",radar:"Radar de conhecimentos",calendar:"Calendário",library:"Provas anteriores"} as const;
 export type StudyArea=keyof typeof studyAreas;
+export type ReviewCollection="errors"|"all";
+export function resolveStudyView(area:unknown,collection:unknown):{area:StudyArea;collection:ReviewCollection}{
+ return {area:area==="flashcards"?"reviews":typeof area==="string"&&Object.hasOwn(studyAreas,area)?area as StudyArea:"plan",collection:area==="flashcards"||collection==="all"?"all":"errors"};
+}
+export function studySessionHref(session:Pick<Session,"id"|"kind">){
+ const query=new URLSearchParams({area:session.kind==="review"||session.kind==="flashcards"?"reviews":"custom",session:session.id});
+ if(session.kind==="review"||session.kind==="flashcards")query.set("collection",session.kind==="flashcards"?"all":"errors");
+ return "/premium/estudos?"+query;
+}
 export type Group={level:"subject"|"topic"|"difficulty";subject:string;topic:string;difficulty:string;n:number;correct:number};
 export type Institution={id:string;name:string;selection:string;question_count:number;duration_minutes:number;subjects:Record<string,number>;fixed_distribution:boolean;source_url:string;verified_on:string;notes:string};
 export type Profile={institution:string;examDate:string;weekdays:number[];minutes:number;startTime:string;dailyGoal:number;weeklyGoal:number;reminder:number;version?:string;fingerprint?:string|null};

@@ -2,17 +2,16 @@
 
 ## Entrada e reaproveitamento
 
-`/premium/estudos` reúne nove áreas, acessíveis também pela navegação de estudos, painel e plano ativo. O tema verde, fontes locais, StudyShell, banco validado, tentativas, correção, histórico e estatísticas existentes foram reutilizados. Nenhuma dependência nova ou API paga.
+`/premium/estudos` reúne oito áreas, acessíveis também pela navegação de estudos, painel e plano ativo. O tema verde, fontes locais, StudyShell, banco validado, tentativas, correção, histórico e estatísticas existentes foram reutilizados. Nenhuma dependência nova ou API paga.
 
 1. **Plano:** instituição, prova, dias, horário, minutos, metas e lembrete. Horizonte móvel de 28 dias, limitado à data da prova. Distribuição ponderada pelo desempenho, revisões vencidas, flashcards e simulados. Adapta ao abrir o espaço Premium, após salvar preferências/revisões ou por atualização manual. Preserva sessões editadas e concluídas. Calendário permite editar todas as atividades.
 2. **Realista:** ETEC e IFSP integrado cadastrados com formato e fonte. ETEC: 50 questões/240 minutos, cobertura equilibrada sem alegar cotas oficiais de matéria. IFSP: 30 questões, 15 de Português e 15 de Matemática, 180 minutos. São treinos com questões da plataforma, não cópias de provas oficiais. Novas instituições dependem de cadastro administrativo com edital verificado.
-3. **Revisão:** erros reais e dificuldades recorrentes, fila individual e repetição espaçada conforme classificação. Revisão básica do histórico continua gratuita.
+3. **Revisão e flashcards:** área única com as coleções Meus erros e Explorar cartões. Erros reais e dificuldades recorrentes, fila individual e repetição espaçada conforme classificação. Somente questões publicadas com gabarito e explicação validados; frente/verso, quatro classificações e intervalo adaptativo de 1–180 dias. Históricos e agendamentos das duas coleções preservados. Links antigos de flashcards redirecionam para a coleção correspondente. Revisão básica do histórico continua gratuita.
 4. **Diagnóstico:** matérias, assuntos e dificuldade. Última resposta por questão distinta no período, evitando inflar a amostra com repetições. Classificação somente a partir de oito questões distintas; não prevê aprovação.
 5. **Personalizados:** instituição, matérias, assuntos, dificuldade, 5–100 questões e 10–360 minutos. Prioriza questões nunca vistas ou menos recentes, sem duplicar dentro da tentativa; informa reutilizações. Seleção insuficiente é recusada, sem inventar conteúdo.
 6. **Radar:** mesmos cálculos do diagnóstico, filtros de período e assunto; pontos sem amostra suficiente ficam ausentes. Tabela acessível acompanha a visualização.
-7. **Flashcards:** somente questões publicadas com gabarito e explicação validados, giro frente/verso, quatro classificações, histórico e intervalo adaptativo de 1–180 dias. Não há geração de conteúdo por IA.
-8. **Calendário:** mensal/semanal, fontes oficiais separadas das sessões pessoais, criação/edição/remoção lógica, conclusão, metas e lembretes. Horários de Brasília. Avisos do navegador funcionam com a aba aberta; exportação `.ics` permite lembretes no calendário do dispositivo com o site fechado. É uma cópia, não sincronização bidirecional; reexportar após alterações.
-9. **Biblioteca:** três pares iniciais de prova/gabarito de 2026 (ETEC 1º/2º semestres e IFSP integrado Tipo 1). O gabarito IFSP está identificado como preliminar. Filtros, visualizador nativo e links de download oficial. Cadastro privado verifica domínio, página com ambos os links, tipo PDF e assinatura do arquivo. Não copia/republica documentos nem inclui resoluções interativas. Bloqueios da fonte ou ausência de suporte a PDF no navegador exigem abrir o link oficial; não são contornados.
+7. **Calendário:** mensal/semanal, fontes oficiais separadas das sessões pessoais, criação/edição/remoção lógica, conclusão, metas e lembretes. Horários de Brasília. Avisos do navegador funcionam com a aba aberta; exportação `.ics` permite lembretes no calendário do dispositivo com o site fechado. É uma cópia, não sincronização bidirecional; reexportar após alterações.
+8. **Biblioteca:** três pares iniciais de prova/gabarito de 2026 (ETEC 1º/2º semestres e IFSP integrado Tipo 1). O gabarito IFSP está identificado como preliminar. Filtros, visualizador nativo e links de download oficial. Cadastro privado verifica domínio, página com ambos os links, tipo PDF e assinatura do arquivo. Não copia/republica documentos nem inclui resoluções interativas. Bloqueios da fonte ou ausência de suporte a PDF no navegador exigem abrir o link oficial; não são contornados.
 
 ## Segurança e persistência
 
@@ -43,7 +42,7 @@ As datas e formatos não são descobertos automaticamente. Retificações, novos
 
 - `npm run test:premium:study`: contratos, autorização, origem, amostra, planejamento, calendário, fontes PDF e resultados em branco.
 - `npm run test:premium:study:sql -- --applied`: regressões SQL antigas e novas, isolamento, expiração, rascunho, revisões, histórico e preço regular. Fixtures e regressões dentro de transação com rollback.
-- `npm run test:premium:study:http`: servidor local de desenvolvimento em `127.0.0.1:3085`, com `APP_ORIGIN` correspondente. Testa conta descartável identificada, antes/depois do direito Premium, as nove páginas, plano, sessões, cartões e simulados. Não chama a Cakto. Limpeza específica da conta no bloco final.
+- `npm run test:premium:study:http`: servidor local de desenvolvimento em `127.0.0.1:3085`, com `APP_ORIGIN` correspondente. Testa conta descartável identificada, antes/depois do direito Premium, as oito áreas e os links antigos, plano, sessões, cartões e simulados. Não chama a Cakto. Limpeza específica da conta no bloco final.
 - Para repetir no publicado: `STUDY_TEST_ORIGIN=https://meta-aprovacao.vercel.app` no ambiente do mesmo script. Não usa contas de alunos nem compra real.
 - `test:promotion:sql` permanece como alias de compatibilidade para os testes atuais; `test:promotion:production` agora valida o preço regular e preservação dos comprovantes promocionais antigos.
 

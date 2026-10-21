@@ -7,7 +7,7 @@ import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {setTimeout as delay} from 'node:timers/promises';
 import {createClient} from '@supabase/supabase-js';
-import {parseWorkspace} from '../src/lib/premium-study/contract.ts';
+import {parseWorkspace,studyAreas} from '../src/lib/premium-study/contract.ts';
 import {parseSimulationState} from '../src/lib/quiz/simulation-contract.ts';
 const origin=process.env.STUDY_TEST_ORIGIN??'http://127.0.0.1:3085';
 assert.ok(['http://127.0.0.1:3085','http://localhost:3085','https://meta-aprovacao.vercel.app'].includes(origin));
@@ -39,8 +39,9 @@ try{
  insert into private.cakto_event_inbox(fingerprint,event,order_id,product_id,offer_id,details) values(encode(extensions.digest('${reference}','sha256'),'hex'),'purchase_approved','${order}','study-workspace-smoke','offer','{}') returning id into ev;
  perform public.record_cakto_payment_check(ev,jsonb_build_object('outcome','verified','reason','payment_verified','reference','${reference}','evidence',jsonb_build_object('orderId','${order}','subscriptionId','${subscription}','productId','study-workspace-smoke','offerId','offer','orderCreatedAt',t-interval '90 seconds','paidAt',t-interval '1 minute','paidPriceCents',2299,'currency','BRL')));
  end$$;select true as study_fixture_ready;commit;`,'study_fixture_ready');
- phase='nine_pages';let w=await workspace();assert.ok(w.institutions.length>=2);assert.ok(w.documents.length>=3);
- for(const area of ['plan','realistic','reviews','diagnosis','custom','radar','flashcards','calendar','library']){const html=await(await request('/premium/estudos?area='+area)).text();assert.match(html,/Seu espaço Premium/);assert.doesNotMatch(html,/Não foi possível carregar seus estudos/);}
+ phase='study_pages';let w=await workspace();assert.ok(w.institutions.length>=2);assert.ok(w.documents.length>=3);
+ for(const area of Object.keys(studyAreas)){const html=await(await request('/premium/estudos?area='+area)).text();assert.match(html,/Seu espaço Premium/);assert.doesNotMatch(html,/Não foi possível carregar seus estudos/);}
+ phase='legacy_flashcards';const legacy=await request('/premium/estudos?area=flashcards',{status:307});assert.match(legacy.headers.get('location'),/area=reviews&collection=all/);
  phase='plan_calendar';const examDate=new Date(Date.now()+30*86400000).toISOString().slice(0,10);
  await command({action:'save_profile',profile:{institution:'etec',examDate,weekdays:[1,2,3,4,5],minutes:60,startTime:'18:00',dailyGoal:20,weeklyGoal:100,reminder:15}});await command({action:'sync_plan'});w=await workspace();assert.ok(w.sessions.length>0);
  const first=w.sessions[0],manual={title:'Sessão manual de conferência',date:first.study_date,time:'20:00',minutes:30,subject:'matematica',topic:'',kind:'practice',goal:10,reminder:5,completed:false,archived:false};
@@ -61,7 +62,7 @@ try{
   for(let i=0;i<450&&!existsSync(done);i++)await delay(2000);
  }
  phase='expired_access';sql(`begin;update private.cakto_access_periods set revoked_at=clock_timestamp() where subscription_id in(select id from private.subscriptions where user_id='${user}');select true as study_fixture_revoked;commit;`,'study_fixture_revoked');await request('/api/premium/study',{status:403});await request('/api/simulations?id='+realistic.quiz.id,{status:403});
- console.log('HTTP aprovado: nove páginas, Premium/Gratuito, planejamento, calendário, flashcards, simulados, rascunho, relatório, dados compartilhados e proteção de origem. Sem compra real.');
+ console.log('HTTP aprovado: oito áreas e compatibilidade dos links antigos, Premium/Gratuito, planejamento, calendário, flashcards, simulados, rascunho, relatório, dados compartilhados e proteção de origem. Sem compra real.');
 }catch(e){console.error('Teste não concluído:',phase,e instanceof assert.AssertionError?e.message:'falha operacional sem exibir credenciais');process.exitCode=1;}
 finally{
  if(attempted)try{
