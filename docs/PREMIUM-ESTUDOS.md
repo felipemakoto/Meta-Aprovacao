@@ -48,3 +48,11 @@ As datas e formatos não são descobertos automaticamente. Retificações, novos
 - `test:promotion:sql` permanece como alias de compatibilidade para os testes atuais; `test:promotion:production` agora valida o preço regular e preservação dos comprovantes promocionais antigos.
 
 Não há promessa de suporte nativo a notificações com o site fechado, atualização automática de editais ou PDFs e sincronização com Google Calendar. Essas limitações estão informadas na interface correspondente.
+
+## Cortesia administrativa para testes
+
+`private.complimentary_premium` permite uma liberação temporária independente de compra, com início/fim finitos, motivo e revogação. Cada período tem no máximo 31 dias. A conta precisa ter e-mail confirmado; a expiração é verificada pelo relógio do banco em todas as leituras de acesso, sem depender de cron ou de claims editáveis do usuário.
+
+Não há endpoint público de concessão nem acesso direto de `anon`, `authenticated` ou `service_role` à tabela. Somente administração do banco pode conceder/revogar. O acesso pago continua sendo calculado pela regra anterior; considera-se o maior prazo vigente entre pagamento e cortesia. A concessão não cria comprovante, intenção de checkout, assinatura, cobrança ou histórico de compra.
+
+Regressão: `node scripts/test-complimentary-premium.mjs --applied`. Testa também revogação, período futuro/expirado, isolamento, RLS/ACL e compatibilidade com os fluxos pagos e gratuitos; todas as fixtures são revertidas.
