@@ -16,6 +16,10 @@ begin
  deny:=false;begin perform public.premium_study_workspace(gen_random_uuid(),30);exception when raise_exception then deny:=sqlerrm='login_required';end;
  if not deny then raise exception 'premium_anonymous_access';end if;
  config:=jsonb_build_object('institution','etec','examDate',current_date+45,'weekdays',jsonb_build_array(1,2,3,4,5),'minutes',60,'startTime','18:00','dailyGoal',20,'weeklyGoal',100,'reminder',15);
+ -- A database timezone already on the next civil day must accept today's Brasilia exam date.
+ perform set_config('TimeZone','Pacific/Kiritimati',true);
+ perform public.premium_study_profile(u,jsonb_set(config,'{examDate}',to_jsonb((statement_timestamp() at time zone 'America/Sao_Paulo')::date)));
+ perform set_config('TimeZone','UTC',true);
  perform public.premium_study_profile(u,config);w:=public.premium_study_workspace(u,30);
  perform public.premium_study_sync_plan(u,(w->'profile'->>'version')::timestamptz,repeat('a',64),jsonb_build_array(jsonb_build_object('key',current_date||':0','title','Praticar','date',current_date,'time','18:00','minutes',30,'subject','matematica','topic','','kind','practice','goal',10,'reminder',15)));
  select id into sid from private.study_sessions where user_id=u and source='plan';

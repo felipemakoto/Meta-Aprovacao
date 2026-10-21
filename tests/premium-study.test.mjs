@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {parseStudyCommand,parseWorkspace} from '../src/lib/premium-study/contract.ts';
-import {diagnosis,generatePlan,calendarIcs} from '../src/lib/premium-study/planning.ts';
+import {diagnosis,generatePlan,calendarIcs,localStudyDate} from '../src/lib/premium-study/planning.ts';
 import {studyHandlers} from '../src/lib/premium-study/http.ts';
 import {officialUrl,verifyOfficialDocument} from '../src/lib/premium-study/documents.ts';
 import {parseSimulationResult} from '../src/lib/quiz/simulation-contract.ts';
@@ -66,4 +66,10 @@ test('metas diárias não são ultrapassadas pelo arredondamento das sessões',(
  const plan=generatePlan(w,new Date(workspace.asOf)),days=new Map();
  for(const item of plan)days.set(item.date,(days.get(item.date)??0)+item.goal);
  assert.ok(days.size>0);for(const goal of days.values())assert.ok(goal<=17);
+});
+
+
+test('dia de estudo acompanha Brasília na virada da data UTC',()=>{
+ assert.equal(localStudyDate(new Date('2026-10-22T01:30:00Z')),'2026-10-21');
+ assert.equal(localStudyDate(new Date('2026-10-22T03:30:00Z')),'2026-10-22');
 });

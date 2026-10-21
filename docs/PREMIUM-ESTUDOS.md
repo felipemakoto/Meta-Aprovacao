@@ -21,7 +21,7 @@
 - Origem/CSRF, corpo limitado, validação de campos, limites e deduplicação. Links oficiais HTTPS restritos, sem redirecionamento de busca; respostas limitadas e com prazo.
 - Tentativas Premium reutilizam `simulation_attempts`; snapshots/rascunho/marcações/revisão ficam persistidos. Rascunhos antigos de outra aba são recusados. Correção é transacional e idempotente; prazo é definido pelo servidor e respostas tardias não substituem o último rascunho salvo.
 - Job separado `meta-grade-study-exams`, a cada minuto, corrige até 100 tentativas vencidas com Premium vigente. Abrir uma tentativa vencida também recupera sua correção. Cron financeiro da Cakto não foi modificado.
-- Migrações aditivas: `20261021090102_premium_study_workspace.sql` e `20261021090105_remove_first_purchase_promotion.sql`. Não há reescrita de assinaturas, comprovantes ou tentativas anteriores.
+- Migrações aditivas: `20261021090102_premium_study_workspace.sql` `20261021090105_remove_first_purchase_promotion.sql` e `20261021101107_premium_study_brasilia_dates.sql`. Não há reescrita de assinaturas, comprovantes ou tentativas anteriores.
 - Em eventual rollback do frontend, preservar tabelas e dados. Não remover colunas/funções enquanto existirem tentativas novas; as rotas antigas foram protegidas para também exigir Premium nessas tentativas.
 
 ## Preço e Cakto
