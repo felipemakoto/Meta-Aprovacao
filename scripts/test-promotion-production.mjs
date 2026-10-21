@@ -7,7 +7,6 @@ import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {createClient} from '@supabase/supabase-js';
 import {checkoutEnabled} from '../src/lib/subscriptions/checkout-launch.ts';
-import {premiumOffer} from '../src/lib/subscriptions/contract.ts';
 import {configuredCheckout} from '../src/lib/subscriptions/checkout-contract.ts';
 const origin='https://meta-aprovacao.vercel.app';
 const tag=randomUUID(),email=`promotion-smoke-${tag}@example.invalid`,password=randomBytes(32).toString('base64url');
@@ -30,13 +29,12 @@ async function request(route,body){
  }
  assert.equal(r.status,200);return r;
 }
-async function checkPages(promotional){
+async function checkPages(){
  for(const route of ['/premium','/cadastro/confirmado']){
   const html=await(await request(route)).text();
   assert.match(html,/Assinar Premium/);assert.doesNotMatch(html,/Premium em breve/);
   assert.match(html,/23,98/);
-  if(promotional){assert.match(html,/12,49/);assert.match(html,/primeiracompra/);}
-  else assert.doesNotMatch(html,/12,49|primeiracompra|no primeiro mês/);
+  assert.match(html,/22,99/);assert.doesNotMatch(html,/12,49|primeiracompra|no primeiro mês/);
  }
 }
 async function checkCheckout(hasPaidBefore){
@@ -58,7 +56,7 @@ try{
  const created=await admin.auth.admin.createUser({email,password,email_confirm:true,app_metadata:{fixture:tag}});
  assert.equal(created.error,null);user=created.data.user.id;
  phase='new_account';assert.deepEqual(await(await request('/api/auth/login',{email,password})).json(),{status:'signed_in'});
- await checkPages(premiumOffer(new Date()).promotional);
+ await checkPages();
  phase='first_checkout';await checkCheckout(false);
  phase='expired_payment';
  query(`begin;set local statement_timeout='15s';
@@ -71,10 +69,10 @@ try{
  'orderId','${order}','subscriptionId','${subscription}','productId','promotion-smoke','offerId','offer','orderCreatedAt',t-interval '30 seconds','paidAt',t,'paidPriceCents',1150,'currency','BRL')));
  if public.read_subscription_pricing('${user}')<>jsonb_build_object('hasPremium',false,'accessUntil',null,'hasPaidBefore',true) then raise exception 'promotion_fixture_failed';end if;
  end$$;select true as promotion_fixture_ready;commit;`,'promotion_fixture_ready');
- await checkPages(false);
+ await checkPages();
  phase='returning_checkout';await checkCheckout(true);
- phase='returning_login';jar.clear();await request('/api/auth/login',{email,password});await checkPages(false);
- console.log('Produção aprovada: planos, intenção promocional, histórico pago/expirado, intenção normal sem cupom e nova entrada. Sem consulta à Cakto ou cobrança.');
+ phase='returning_login';jar.clear();await request('/api/auth/login',{email,password});await checkPages();
+ console.log('Produção aprovada: preço regular desde a primeira cobrança, histórico promocional preservado, checkout sem cupom e nova entrada. Sem consulta à Cakto ou cobrança.');
 }catch{
  console.error(`Conferência de produção não concluída na etapa ${phase}. Nenhuma credencial exibida.`);process.exitCode=1;
 }finally{

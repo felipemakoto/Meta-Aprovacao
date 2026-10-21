@@ -12,7 +12,7 @@ export const metadata={title:"Responder simulado | Meta Aprovação",robots:{ind
 export default async function Page({params}:{params:Promise<{id:string}>}){
  const {id}=await params;let user;try{user=await getVerifiedUser();}catch{return <Failure/>;}
  if(!user?.email_confirmed_at)redirect("/login");if(!isHistoryId(id))notFound();
- let value;try{value=await simulationRpc("read_simulation",{p_user_id:user.id,p_id:id});}catch{return <Failure/>;}
+ let value;try{value=await simulationRpc("read_simulation",{p_user_id:user.id,p_id:id});}catch(e){if(e instanceof Error&&e.message==="premium_required")redirect("/premium/estudos");return <Failure/>;}
  if(!value)notFound();let state;try{state=parseSimulationState(value);}catch{return <Failure/>;}return <SimulationSession initial={state}/>;
 }
 function Failure(){return <StudyShell active="simulations"><main className={base.page}><h1>Não foi possível carregar o simulado.</h1><p>Tente novamente em alguns instantes.</p><Link className={base.returnLink} href="/simulados">Voltar aos simulados</Link></main></StudyShell>;}

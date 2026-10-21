@@ -12,6 +12,7 @@ export default function Dashboard({ summary, preview = false, activity = null }:
     <main className={styles.page}>
       <h1 className={styles.title}>Seus estudos</h1>
       <p className={styles.intro}>Questões, simulados e respostas para revisar.</p>
+      {!preview&&<p><Link className={styles.textLink} href="/premium/estudos">Abrir plano, revisões e recursos Premium</Link></p>}
       {summary === null ? <section className={styles.card} aria-labelledby="dashboard-error">
         <h2 id="dashboard-error" className={styles.cardTitle}>Não foi possível carregar seus estudos</h2>
         <p className={styles.message}>Seus resultados continuam salvos. Tente novamente em alguns instantes.</p>

@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       "style-src 'self' 'unsafe-inline'", "img-src 'self' data: blob:", "font-src 'self'",
       "connect-src 'self' https://clxnqrkdalimrqcnhegr.supabase.co wss://clxnqrkdalimrqcnhegr.supabase.co" + (development ? " ws://localhost:* ws://127.0.0.1:*" : ""),
       "object-src 'none'", "base-uri 'self'", "form-action 'self'", "frame-ancestors 'none'",
+      "frame-src https://fatweb.s3.amazonaws.com https://assets.fatvestibulares.com.br https://concurso30.fundacaocefetminas.org.br https://ifsp.edu.br https://*.ifsp.edu.br",
       ...(development ? [] : ["upgrade-insecure-requests"]),
     ].join("; ");
     return [{source: "/:path*", headers: [

@@ -18,6 +18,7 @@ function loadTsx(relative,mocks={}){
  return mod.exports.default;
 }
 const PlanOptions=loadTsx('../src/app/premium/plan-options.tsx',{
+ '@/lib/premium-study/contract':{studyAreas:{plan:'Plano de estudos',calendar:'Calendário'}},
  '@/lib/subscriptions/checkout-launch':{checkoutEnabled:true},
  './checkout-action':{__esModule:true,default:loadTsx('../src/app/premium/checkout-action.tsx',{'next/navigation':{useRouter:()=>({push(){}})}})},
  './continue-study':{__esModule:true,default:()=>createElement('button',null,'Fazer meu simulado grátis')},
@@ -40,9 +41,9 @@ async function render(route,pricing){
  return {html:renderToStaticMarkup(await Page()).replaceAll('\u00a0',' '),reads};
 }
 for(const route of ['premium','confirmed']){
- test(`${route}: conta que nunca pagou vê oferta inicial`,async()=>{
+ test(`${route}: conta que nunca pagou vê preço regular, taxa e ausência de promoção`,async()=>{
   const {html,reads}=await render(route,{hasPremium:false,accessUntil:null,hasPaidBefore:false});
-  assert.deepEqual(reads,[user.id]);assert.match(html,/12,49/);assert.match(html,/no primeiro mês/);assert.match(html,/primeiracompra/);
+  assert.deepEqual(reads,[user.id]);assert.match(html,/22,99/);assert.match(html,/desde a primeira cobrança/);assert.match(html,/0,99/);assert.match(html,/23,98/);assert.doesNotMatch(html,/12,49|primeiracompra|31\/10|no primeiro mês/);
   assert.doesNotMatch(html,/private-verified-owner|order_id/);
  });
  test(`${route}: pagamento antigo e Premium inativo mostram somente preço mensal normal`,async()=>{
@@ -56,6 +57,6 @@ for(const route of ['premium','confirmed']){
  });
  test(`${route}: Premium ativo mantém ação de estudo e preço mensal`,async()=>{
   const {html}=await render(route,{hasPremium:true,accessUntil:'2026-11-17T12:00:00Z',hasPaidBefore:true});
-  assert.match(html,/Continuar no Premium/);assert.match(html,/23,98/);assert.doesNotMatch(html,/12,49|primeiracompra|Premium em breve/);
+  assert.match(html,/Abrir meus recursos Premium/);assert.match(html,/23,98/);assert.doesNotMatch(html,/12,49|primeiracompra|Premium em breve/);
  });
 }

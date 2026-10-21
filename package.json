@@ -103,7 +103,10 @@
     "test:recovery:http": "node --test tests/recovery-http.test.mjs",
     "test:login:http": "node --test tests/login-http.test.mjs",
     "test:signup": "node --test tests/signup.test.mjs",
-    "test:signup:http": "node --test tests/signup-http.test.mjs"
+    "test:signup:http": "node --test tests/signup-http.test.mjs",
+    "test:premium:study": "node --test tests/premium-study.test.mjs",
+    "test:premium:study:sql": "node scripts/test-premium-study.mjs",
+    "test:premium:study:http": "node --env-file=.env.local scripts/test-premium-workspace-http.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

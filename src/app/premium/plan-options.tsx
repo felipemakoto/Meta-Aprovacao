@@ -5,6 +5,7 @@ import styles from "./plan-options.module.css";
 import ContinueStudy from "./continue-study";
 import CheckoutAction from "./checkout-action";
 import {checkoutEnabled} from "@/lib/subscriptions/checkout-launch";
+import {studyAreas} from "@/lib/premium-study/contract";
 
 export default function PlanOptions({offer,active=false,preview=false,onboarding=false}:{offer:ReturnType<typeof premiumOffer>;active?:boolean;preview?:boolean;onboarding?:boolean}) {
   const money=(value:number)=>value.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
@@ -19,11 +20,11 @@ export default function PlanOptions({offer,active=false,preview=false,onboarding
     </section>
     <section className={`${styles.plan} ${styles.premium}`} aria-labelledby="premium-plan-title">
       <p className={styles.label}>{active?"Seu plano está ativo":"Para ir além"}</p><h2 id="premium-plan-title">Premium</h2>
-      <p className={styles.price}>{money(active?offer.monthlyPrice+.99:offer.firstPrice+.99)}<span>{!active&&offer.promotional?"no primeiro mês":"por mês"}</span></p>
-      {!active&&offer.promotional&&<p className={styles.renewal}>Depois, {money(offer.monthlyPrice+.99)}/mês.</p>}
+      <p className={styles.price}>{money(offer.monthlyPrice)}<span>por mês, desde a primeira cobrança</span></p>
       <ul><li>Questões sem limite diário</li><li>Simulados sem limite diário</li><li>Simulados por matéria</li><li>Todo o catálogo Premium</li><li>Correção com explicações</li><li>Histórico de respostas</li><li>Estatísticas de desempenho</li></ul>
-      {active?<Link className={styles.primary} href={study}>Continuar no Premium<Image src="/icons/arrow-right.svg" width={21} height={21} alt=""/></Link>:checkoutEnabled&&!preview?<CheckoutAction/>:<button className={styles.secondary} disabled aria-describedby="premium-coming">{preview?"Contratação indisponível na prévia":"Premium em breve"}</button>}
-      <p className={styles.note}>{active?"Taxa Cakto incluída.":<>Taxa Cakto de R$ 0,99 incluída.{offer.promotional&&<> Cupom <strong>primeiracompra</strong> até 31/10/2026.</>}</>}</p>
+      <details><summary>9 recursos de estudo e organização incluídos</summary><ul>{Object.values(studyAreas).map(name=><li key={name}>{name}</li>)}</ul></details>
+      {active?<Link className={styles.primary} href="/premium/estudos">Abrir meus recursos Premium<Image src="/icons/arrow-right.svg" width={21} height={21} alt=""/></Link>:checkoutEnabled&&!preview?<CheckoutAction/>:<button className={styles.secondary} disabled aria-describedby="premium-coming">{preview?"Contratação indisponível na prévia":"Premium em breve"}</button>}
+      <p className={styles.note}>Taxa Cakto atual de R$ 0,99 por cobrança. Total: {money(offer.monthlyPrice+.99)}/mês.</p>
       {!active&&<p className={styles.note} id="premium-coming">{checkoutEnabled&&!preview?"Assinatura mensal. Pagamento seguro no checkout da Cakto. Nenhuma cobrança será feita nesta página.":preview?"Prévia ilustrativa. Nenhuma cobrança é criada.":"Assinatura mensal. Contratação ainda indisponível."}</p>}
     </section>
     <p className={styles.shared}>Correção, histórico e estatísticas também estão no gratuito.</p>

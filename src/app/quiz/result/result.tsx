@@ -57,7 +57,7 @@ function ResultContent({ result, preview, saved, initialReview }: { result: Quiz
     <progress className={base.progress} value={review.index + 1} max={items.length} aria-label={`Revisão: ${review.index + 1} de ${items.length}`} />
     <h2 className={styles.question}>{question.statement}</h2>
     <p className={styles.original}>Questão {question.position} do teste · {question.correct ? "Você acertou" : "Você errou"}</p>
-    <div className={styles.answer}><span>Sua resposta:</span><b className={base.letter}>{question.answer}</b><span>{question.options["ABCDE".indexOf(question.answer)]}</span></div>
+    <div className={styles.answer}><span>Sua resposta:</span><b className={base.letter}>{question.answer}</b><span>{question.answer==="-"?"Não respondida":question.options["ABCDE".indexOf(question.answer)]}</span></div>
     <div className={`${styles.answer} ${styles.correct}`}><span>Correta:</span><b className={base.letter}>{question.correctAnswer}</b><span>{question.options["ABCDE".indexOf(question.correctAnswer)]}</span></div>
     <div className={styles.explanation}><h2>Entenda</h2><p>{question.explanation}</p></div>
     <button className={base.continue} onClick={() => setReview(review.index + 1 < items.length ? { ...review, index: review.index + 1 } : null)}>{review.index + 1 < items.length ? "Próxima explicação" : "Concluir revisão"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>

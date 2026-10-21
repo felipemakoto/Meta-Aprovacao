@@ -28,7 +28,7 @@ export function parseAnswers(value: unknown): Answers {
 }
 
 // Allowlist de feedback: somente usado depois de a RPC confirmar a finalizaÃ§Ã£o.
-export function toQuizResult(value: unknown, count = 10): QuizResult {
+export function toQuizResult(value: unknown, count = 10, allowBlank = false): QuizResult {
   const r = object(value);
   if (!Number.isInteger(count) || count < 5 || count > 100 || r.total !== count || !Number.isInteger(r.score) || Number(r.score) < 0 || Number(r.score) > count ||
       !Array.isArray(r.questions) || r.questions.length !== count) throw new Error("invalid_result");
@@ -37,7 +37,7 @@ export function toQuizResult(value: unknown, count = 10): QuizResult {
   const questions = r.questions.map((value, index) => {
     const q = object(value);
     if (q.position !== index + 1 || !Array.isArray(q.options) || q.options.length !== 5 ||
-        typeof q.correct !== "boolean" || !letter.test(text(q.answer)) || !letter.test(text(q.correctAnswer)) ||
+        typeof q.correct !== "boolean" || !(letter.test(text(q.answer)) || allowBlank && q.answer === "-") || !letter.test(text(q.correctAnswer)) ||
         q.correct !== (q.answer === q.correctAnswer)) throw new Error("invalid_result");
     return { id: text(q.id), position: index + 1, subject: text(q.subject), topic: text(q.topic),
       statement: text(q.statement), options: q.options.map(text), answer: text(q.answer),

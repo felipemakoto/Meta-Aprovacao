@@ -9,7 +9,7 @@ test('dispensa do fuso não muda contratação nem certifica horário externo',(
  assert.equal(r.validationPolicy.realPurchaseRequired,false);
  assert.equal(r.checkoutEnabled,true);assert.equal(r.launchApproved,true);
  assert.ok(r.manualChecks.every(c=>!c.includes('fuso')));
- assert.match(readinessReport(fixture(),env,now).text,/fuso do cupom dispensada/);
+ assert.match(readinessReport(fixture(),env,now).text,/preço regular desde a primeira cobrança/);
 });
 const env={CAKTO_PRODUCT_ID:'fixture',CAKTO_REGULAR_OFFER_ID:'offer',CAKTO_OCTOBER_OFFER_ID:'offer',CAKTO_REGULAR_CHECKOUT_URL:'https://pay.cakto.com.br/fixture',CAKTO_OCTOBER_CHECKOUT_URL:'https://pay.cakto.com.br/fixture?coupon=primeiracompra'};
 function fixture(){return {sampledAt:date,health:{sampledAt:date,state:'ok',automation:{enabled:true,running:false,schedulerActive:true,lastFinishedAt:date,lastOk:true,nextDiscoveryAt:date},
@@ -36,7 +36,7 @@ test('dispensa de revisão humana remove essa exigência sem retirar as conferê
  const report=readinessReport(fixture(),env,now),r=report.data;
  assert.doesNotMatch(r.manualChecks.join('\n'),/revisão humana/i);
  assert.doesNotMatch(report.text,/revisão humana/i);
- for(const required of [/contrato real.*API Cakto/i,/webhook.*processamento.*eventos simulados/i,/retenção dos dados financeiros/i,/cupom.*primeira cobrança/i,/publicação de produção/i]){
+ for(const required of [/contrato real.*API Cakto/i,/webhook.*processamento.*eventos simulados/i,/retenção dos dados financeiros/i,/preço regular.*primeira cobrança/i,/publicação de produção/i]){
   assert.ok(r.manualChecks.some(check=>required.test(check)),`Conferência preservada: ${required}`);
  }
  assert.equal(r.launchApproved,true);assert.equal(r.checkoutEnabled,true);assert.equal(checkoutEnabled,true);

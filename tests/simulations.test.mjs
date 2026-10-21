@@ -37,7 +37,7 @@ test('HTTP valida origem e sessão antes da operação, usa identidade verificad
 });
 test('HTTP não confunde erro com vazio, não vaza mensagens internas e mantém conflitos',async()=>{
  const make=run=>simulationHandlers({user:async()=>'verified',catalog:async()=>[],read:async()=>null,run},{secure:false});
- for(const [msg,status,expected] of [['database secret',503,'simulation_unavailable'],['already_submitted',409,'already_submitted'],['rate_limited',429,'rate_limited']]){const r=await make(async()=>{throw Error(msg);}).POST(req({action:'start',id:id(31)}));assert.equal(r.status,status);assert.deepEqual(await r.json(),{error:expected});}
+ for(const [msg,status,expected] of [['premium_required',403,'premium_required'],['database secret',503,'simulation_unavailable'],['already_submitted',409,'already_submitted'],['rate_limited',429,'rate_limited']]){const r=await make(async()=>{throw Error(msg);}).POST(req({action:'start',id:id(31)}));assert.equal(r.status,status);assert.deepEqual(await r.json(),{error:expected});}
  const h=make(async()=>({result}));assert.deepEqual(await (await h.GET(new Request('http://localhost:3000/api/simulations'))).json(),{items:[]});assert.equal((await h.GET(new Request('http://localhost:3000/api/simulations?id='+id(30)))).status,404);
 });
 test('histórico de simulados aceita total variável e só lista metadados',()=>{
