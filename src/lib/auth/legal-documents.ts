@@ -1,7 +1,7 @@
 // Bump this version when changing the documents presented at registration.
 export const legalDocuments = {
-  version: "2026-10-21.1",
-  updatedLabel: "21 de outubro de 2026",
+  version: "2026-10-22.1",
+  updatedLabel: "22 de outubro de 2026",
 } as const;
 
 export type SignupAgreement = {

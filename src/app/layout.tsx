@@ -4,6 +4,7 @@ import { DM_Serif_Display, Geist } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "./site-footer";
 import PageMotion from "./page-motion";
+import Analytics from "./analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${geistSans.variable} ${displayFont.variable} antialiased`}
     >
-      <body>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/></Suspense></body>
+      <body>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/><Analytics/></Suspense></body>
     </html>
   );
 }
