@@ -1,9 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validCard,tokenizeCard} from '../src/app/premium/pagamento/card-sdk.ts';
+import {validCard,tokenizeCard,retainRisk} from '../src/app/premium/pagamento/card-sdk.ts';
+import {setTimeout as delay} from 'node:timers/promises';
 test('cartão valida Luhn, validade e código sem depender da rede',()=>{
  const at=new Date('2026-10-21T15:00:00Z');assert.equal(validCard('4242424242424242','10','26','123',at),true);
  for(const args of [['4242424242424241','10','26','123'],['4242424242424242','09','26','123'],['4242424242424242','13','28','123'],['0000000000000000','10','28','123'],['4242424242424242','10','28','12']])assert.equal(validCard(...args,at),false);
+});
+test('antifraude inicia uma vez durante replay de montagem e é encerrado ao sair do formulário',async()=>{
+ const previous=globalThis.window;let starts=0,ends=0;
+ globalThis.window={Cakto:{CaktoSDK:class{async initAntifraud(){starts++;}cleanupAntifraud(){ends++;}}}};
+ try{
+  const first=retainRisk('public-fixture');first.release();
+  const replay=retainRisk('public-fixture');await replay.ready;await delay(10);
+  assert.equal(starts,1);assert.equal(ends,0);
+  replay.release();replay.release();await delay(10);assert.equal(ends,1);
+  const next=retainRisk('public-fixture');await next.ready;assert.equal(starts,2);next.release();await delay(10);assert.equal(ends,2);
+ }finally{if(previous===undefined)delete globalThis.window;else globalThis.window=previous;}
 });
 test('tokenização segue direto para Cakto, sem cookies, segredo ou dados de cartão no backend',async()=>{
  const original=globalThis.fetch;const card={holderName:'Fixture Test',number:'4242424242424242',expMonth:'12',expYear:'2030',cvv:'123'};

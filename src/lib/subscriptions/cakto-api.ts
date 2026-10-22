@@ -1,6 +1,6 @@
 // Server transport shared with local administrative scripts. No client imports.
 import {Buffer} from "node:buffer";
-export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription"|"offer"|"product"|"payment";
+export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription"|"offer"|"product"|"fees"|"payment";
 export type CaktoAuthenticationRetry={operation:"authentication";status:500|502|503|504};
 type CaktoReason="configuration_missing"|"invalid_id"|"unavailable"|"unauthorized"|"not_found"|"rate_limited"|"invalid_response";
 export class CaktoReadError extends Error {

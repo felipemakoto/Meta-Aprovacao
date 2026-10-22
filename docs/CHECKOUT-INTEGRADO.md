@@ -11,8 +11,10 @@ Permissões verificadas com a chave existente após ajuste pelo responsável: le
 ## Limites ainda não comprovados
 
 - Não foi criada nem paga transação real, conforme instrução do responsável. Não há sandbox oficial da Cakto.
-- O processamento de Pix/mandato e cartão, a elegibilidade financeira da conta para pagamentos diretos, CORS/tokenização/antifraude em produção e a composição efetiva da taxa na API ainda não foram comprovados ponta a ponta. Permissão HTTP não prova esses requisitos.
-- O total atual de R$ 23,98 (R$ 22,99 + R$ 0,99) foi observado no checkout hospedado. O código recusa respostas diretas com total, moeda ou oferta divergentes, mas essa checagem ocorre **depois** da solicitação financeira: não substitui confirmar previamente a precificação da API antes de habilitar o formulário.
+- O processamento de Pix/mandato e cartão, a elegibilidade financeira da conta para pagamentos diretos, o antifraude e o processamento de cartão ainda não foram comprovados ponta a ponta. A composição do total foi agora confirmada por leitura autenticada para Pix e Pix Automático, mas há divergência nos juros do cartão. Permissão HTTP não prova esses requisitos.
+- `GET /public_api/fees/` retornou HTTP 200 e confirmou taxa de serviço do comprador de R$ 0,99, sem percentual, para todos os métodos. O total Pix/Pix Automático de R$ 23,98 é validado agora **antes** de criar a intenção e enviar a cobrança. Uma falha, alteração ou resposta incompleta bloqueia a tentativa; a tabela de custos do vendedor não é somada ao comprador.
+- A mesma resposta trouxe `creditCardInstallments` com `interestPercentage: 4.99` em uma parcela, enquanto o checkout público continua mostrando 1x R$ 22,99 e total R$ 23,98. Não foi assumido um total alternativo, alterada configuração financeira nem realizado pagamento. O cartão direto é bloqueado antes do envio financeiro enquanto essa divergência existir.
+- Após o responsável salvar Tokenização de Cartão e Pagamentos, o POST de tokenização com corpo vazio passou de HTTP 403 para HTTP 422 (validação dos campos ausentes). O preflight CORS aceitou a origem de produção e o cabeçalho. A permissão e a configuração CORS estão confirmadas; isso **não** prova a tokenização de um cartão válido nem seu processamento. Nenhum número de cartão, CPF ou dado pessoal foi enviado nesses probes.
 - O SDK oficial contém um fallback simulado em `authenticate3DS`. Este projeto **não chama esse método e não anuncia autenticação 3DS**. Se o adquirente exigir 3DS, manter cartão desabilitado até uma integração real, verificável e sem esse fallback. Não remover proteções para liberar a contratação.
 - Uma URL hospedada obtida anteriormente pode continuar válida na Cakto. A trava local impede novas intenções enquanto há pagamento direto pendente; não é uma garantia de que o provedor recusará duas compras independentes.
 
@@ -24,7 +26,7 @@ Permissões verificadas com a chave existente após ajuste pelo responsável: le
 - O corpo financeiro é persistido **antes** do POST, com UUID de idempotência. Retomada reutiliza corpo e chave. Criptografia AES-256-GCM, chave derivada via HKDF do segredo Cakto já existente. Nenhum segredo adicional é exposto. Rotacionar esse segredo pode impedir a retomada de tentativas incertas; resolver pagamentos pendentes antes da rotação.
 - Dados de pagador e token temporário ficam criptografados, são eliminados ao concluir a tentativa ou pela rotina horária quando completam 24 h (janela normal de até 25 h). O job novo remove apenas esse material cifrado, preservando auditoria e cron financeiro existentes. Não registrar payloads, erros brutos do provedor, tokens, QR ou dados pessoais em logs.
 - PAN e CVV ficam apenas no formulário não controlado e são enviados diretamente do navegador à Cakto. Após a tokenização os campos são limpos. O servidor recebe somente token e referência antifraude. A tokenização usa `fetch` direto para evitar logging de payloads em erros Axios do SDK.
-- SDK com SRI; CSP permite origens adicionais somente na rota de pagamento e quando o recurso está habilitado. Campos sensíveis usam os nomes `number` e `cvc` esperados pelo mascaramento do antifraude. Não chamar `initAntifraud` em testes com dados reais.
+- SDK com SRI (hash público reconferido, sem mudança). O perfil começa ao selecionar cartão, antes de preencher os dados, e é encerrado ao sair do formulário; testes de ciclo de vida cobrem replay de montagem sem duplicar o perfil. CSP permite origens adicionais somente na rota de pagamento e quando o recurso está habilitado. Campos sensíveis usam os nomes `number` e `cvc` esperados pelo mascaramento do antifraude. Não chamar `initAntifraud` em testes com dados reais.
 - `paid`, QR gerado e autorização Pix não concedem Premium. Os webhooks e o verificador financeiro existentes continuam responsáveis por comprovação, vínculo e período de acesso.
 
 ## Operação e rollback
@@ -35,7 +37,7 @@ Para desabilitar novas compras diretas, remover a flag ou usar `false` e publica
 
 ## Validação reproduzível
 
-- `node --test tests/direct-checkout.test.mjs tests/direct-card.test.mjs` — contratos, criptografia, estado, retomada, identidade, HTTP, transporte, tokenização sem rede financeira.
+- `node --test tests/direct-checkout.test.mjs tests/direct-card.test.mjs tests/direct-fees.test.mjs` — contratos, criptografia, estado, retomada, identidade, HTTP, transporte, tokenização sem rede financeira.
 - `node scripts/test-direct-checkout-sql.mjs` — ACL/RLS, isolamento, lease, retenção, idempotência e bloqueio do checkout hospedado. Fixtures isoladas, transação revertida.
 - Testes existentes de planos, checkout, processamento, moeda e autenticação Cakto; TypeScript, ESLint e build.
 - Navegador isolado, conta descartável, 320/390/768/1280 px: sem overflow ou erro de execução. Cartão aberto sem tokenizar. Requisições financeiras do navegador bloqueadas durante a conferência; nenhuma foi disparada.
@@ -49,3 +51,5 @@ Para desabilitar novas compras diretas, remover a flag ou usar `false` e publica
 - [Pix Automático](https://docs.cakto.com.br/api-reference/payments/create-pix-auto)
 - [Cartão](https://docs.cakto.com.br/api-reference/payments/create-card)
 - [Tokenização](https://docs.cakto.com.br/sdk/tokenizacao) e [antifraude](https://docs.cakto.com.br/sdk/antifraude)
+
+- [Taxas e prazos, incluindo taxas do comprador](https://docs.cakto.com.br/api-reference/fees/retrieve)

@@ -1,6 +1,7 @@
 import {caktoTransport,CaktoReadError,record} from "./cakto-api.ts";
 import type {CheckoutOffer} from "./checkout-contract.ts";
 import type {DirectMethod} from "./direct-contract.ts";
+import {validateDirectFees} from "./direct-fees.ts";
 export function caktoDirectApi(env:Record<string,string|undefined>,transport:typeof fetch=fetch){
  const {json,token}=caktoTransport(env,transport);
  return {
@@ -10,6 +11,7 @@ export function caktoDirectApi(env:Record<string,string|undefined>,transport:typ
    if(o.id!==offer.offerId||o.product!==offer.productId||o.status!=="active"||o.currency!=="BRL"||Number(o.price)!==22.99||o.type!=="subscription"||o.recurrence_period!==30||o.quantity_recurrences!==-1)throw Error("direct_offer_changed");
    const p=await json(`products/${offer.productId}/`,options,262144,"product");
    if(p.id!==offer.productId||!Array.isArray(p.paymentMethods)||!p.paymentMethods.includes(method))throw Error("direct_method_unavailable");
+   validateDirectFees(await json("fees/",options,65536,"fees"),method);
   },
   async create(payload:unknown,idempotency:string){
    if(!/^[a-f0-9-]{36}$/i.test(idempotency))throw Error("invalid_input");

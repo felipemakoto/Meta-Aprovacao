@@ -4,13 +4,19 @@ import Link from "next/link";
 import {useRouter} from "next/navigation";
 import {validCpf,type DirectMethod,type DirectState} from "@/lib/subscriptions/direct-contract";
 import CheckoutAction from "../checkout-action";
-import {prepareRisk,tokenizeCard,validCard} from "./card-sdk";
+import {prepareRisk,retainRisk,tokenizeCard,validCard} from "./card-sdk";
 import styles from "./payment.module.css";
 
 const labels:Record<DirectMethod,string>={pix_auto:"Pix Automático",pix:"Pix",credit_card:"Cartão"};
 export default function PaymentForm({enabled,email,clientId}:{enabled:boolean;email:string;clientId:string}){
  const router=useRouter(),lock=useRef(false),clock=useRef({server:0,local:0}),form=useRef<HTMLFormElement>(null);
  const [state,setState]=useState<DirectState|null>(null),[method,setMethod]=useState<DirectMethod>("pix_auto"),[busy,setBusy]=useState(false),[error,setError]=useState(""),[remaining,setRemaining]=useState(0),[copied,setCopied]=useState(false);
+ const cardActive=enabled&&method==="credit_card"&&(state?.status==="empty"||state?.status==="failed");
+ useEffect(()=>{
+  if(!cardActive)return;let active=true;const risk=retainRisk(clientId);
+  void risk.ready.catch(()=>{if(active)setError("Não foi possível iniciar a proteção do cartão. Escolha Pix ou tente novamente.");});
+  return()=>{active=false;risk.release();};
+ },[cardActive,clientId]);
  const accept=useCallback((value:DirectState)=>{
   if(!value||!["empty","processing","unknown","awaiting","paid","failed","complete"].includes(value.status)||typeof value.hasPremium!=="boolean"||!Number.isFinite(Date.parse(value.serverNow)))throw Error("unavailable");
   clock.current={server:Date.parse(value.serverNow),local:performance.now()};setState(value);
@@ -34,7 +40,7 @@ export default function PaymentForm({enabled,email,clientId}:{enabled:boolean;em
  async function send(command:unknown){
   const r=await fetch("/api/premium/payment",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(command),cache:"no-store",redirect:"error",signal:AbortSignal.timeout(55000)});
   if(r.status===401){router.replace("/login");return;}
-  const value=await r.json();if(!r.ok)throw Error(value.error==="checkout_rate_limited"?"Aguarde antes de tentar novamente.":value.error==="invalid_input"?"Confira os dados preenchidos.":"Não foi possível concluir. Consulte o status antes de tentar novamente.");accept(value);
+  const value=await r.json();if(!r.ok)throw Error(["direct_fees_changed","direct_card_interest_unconfirmed","direct_method_unavailable"].includes(value.error)?"Esta forma de pagamento está indisponível nas condições anunciadas. Não foi enviada nova cobrança. Consulte o status ou fale com o suporte.":value.error==="checkout_rate_limited"?"Aguarde antes de tentar novamente.":value.error==="invalid_input"?"Confira os dados preenchidos.":"Não foi possível concluir. Consulte o status antes de tentar novamente.");accept(value);
  }
  async function action(kind:"resume"|"refresh"){
   if(lock.current)return;lock.current=true;setBusy(true);setError("");

@@ -107,7 +107,7 @@
     "test:premium:study": "node --test tests/premium-study.test.mjs",
     "test:premium:study:sql": "node scripts/test-premium-study.mjs",
     "test:premium:study:http": "node --env-file=.env.local scripts/test-premium-workspace-http.mjs",
-    "test:direct": "node --test tests/direct-checkout.test.mjs tests/direct-card.test.mjs",
+    "test:direct": "node --test tests/direct-checkout.test.mjs tests/direct-card.test.mjs tests/direct-fees.test.mjs",
     "test:direct:sql": "node scripts/test-direct-checkout-sql.mjs"
   },
   "dependencies": {

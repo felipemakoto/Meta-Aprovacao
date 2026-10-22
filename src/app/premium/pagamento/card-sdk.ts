@@ -2,8 +2,10 @@
 type RiskSdk={initAntifraud:()=>Promise<unknown>;completeAntifraudProfile:()=>Promise<void>;getAntifraudReference:()=>string;cleanupAntifraud:()=>void};
 declare global {interface Window {Cakto?:{CaktoSDK:new(config:{client_id:string;environment:"production"})=>RiskSdk}}}
 let pending:Promise<RiskSdk>|undefined;
+let cleanup:Promise<void>=Promise.resolve(),users=0,cleanupTimer:ReturnType<typeof setTimeout>|undefined;
 export function prepareRisk(clientId:string){
- if(!pending)pending=(async()=>{
+ if(!pending){const current=(async()=>{
+  await cleanup;
   if(!window.Cakto)await new Promise<void>((resolve,reject)=>{
    const script=document.createElement("script");script.src="https://cakto-sdk.pages.dev/cakto-sdk.min.js";
    script.integrity="sha384-qcgP2dyzgsIoXaJ1XUg1hE2dTlwfEv24MgMEA3Bsc6YwWEQIRb7ntFnF+kMcg2Ko";script.crossOrigin="anonymous";script.async=true;
@@ -11,8 +13,19 @@ export function prepareRisk(clientId:string){
    script.onload=()=>{clearTimeout(timer);resolve();};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error("card_unavailable"));};document.head.append(script);
   });
   if(!window.Cakto)throw Error("card_unavailable");const sdk=new window.Cakto.CaktoSDK({client_id:clientId,environment:"production"});await sdk.initAntifraud();return sdk;
- })().catch(error=>{pending=undefined;throw error;});
+ })();pending=current;void current.catch(()=>{if(pending===current)pending=undefined;});}
  return pending;
+}
+export function retainRisk(clientId:string){
+ users++;clearTimeout(cleanupTimer);const ready=prepareRisk(clientId);let released=false;
+ return {ready,release(){
+  if(released)return;released=true;users--;
+  // React's development mount replay must not create two profiles.
+  if(users===0)cleanupTimer=setTimeout(()=>{
+   if(users!==0)return;const previous=pending;pending=undefined;
+   cleanup=previous?previous.then(sdk=>{sdk.cleanupAntifraud();}).catch(()=>{}):Promise.resolve();
+  },0);
+ }};
 }
 export function validCard(number:string,month:string,year:string,cvv:string,at=new Date()){
  if(!/^\d{13,19}$/.test(number)||/^(\d)\1+$/.test(number)||!/^(0[1-9]|1[0-2])$/.test(month)||!/^\d{2}$/.test(year)||!/^\d{3,4}$/.test(cvv))return false;

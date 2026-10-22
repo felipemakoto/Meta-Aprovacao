@@ -29,9 +29,9 @@ test('resposta financeira divergente nunca é aprovada e QR não libera acesso',
  for(const changed of [{amount:'22.99'},{amount:23.98},{currency:'USD'},{product:{id:'other'}},{offer:{id:'other',price:'22.99'}},{paymentMethod:'credit_card'},{status:'unknown'},{pix:{...response.pix,expirationDate:'bad'}}])assert.throws(()=>providerDirectResult({...response,...changed},expected));
  assert.equal(providerDirectResult({...response,status:'paid'},expected).status,'paid');
 });
-function fixture({reject,hasPremium=false}={}){
+function fixture({reject,hasPremium=false,validateError}={}){
  let row=null,calls=0,body,keys=[],writes=[],reads=0;
- const deps={now:()=>now,secret,offer:()=>offer,access:async()=>({hasPremium}),validate:async()=>{},intent:async()=>({reference}),qr:async()=> 'data:image/png;base64,fixture',order:async()=>{reads++;return {id:order,sck:reference,product:{id:'product'},status:'paid'};},
+ const deps={now:()=>now,secret,offer:()=>offer,access:async()=>({hasPremium}),validate:async()=>{if(validateError)throw Error(validateError);},intent:async()=>({reference}),qr:async()=> 'data:image/png;base64,fixture',order:async()=>{reads++;return {id:order,sck:reference,product:{id:'product'},status:'paid'};},
   rpc:async(name,args)=>{
    writes.push(name);
    if(name==='read_direct_checkout')return row;
@@ -57,6 +57,10 @@ test('timeout mantém tentativa bloqueada; retomada usa exatamente o mesmo corpo
 });
 test('Premium já ativo bloqueia compra antes de acessar a API financeira',async()=>{
  const f=fixture({hasPremium:true});await assert.rejects(f.api.execute(f.user,command),/already_premium/);assert.equal(f.calls,0);assert.equal((await f.api.view(f.user.id)).status,'complete');
+});
+test('taxas divergentes bloqueiam antes da intenção, reserva e envio financeiro',async()=>{
+ const f=fixture({validateError:'direct_fees_changed'});await assert.rejects(f.api.execute(f.user,command),/direct_fees_changed/);
+ assert.equal(f.calls,0);assert.ok(!f.writes.includes('begin_direct_checkout'));assert.ok(!f.writes.includes('finish_direct_checkout'));
 });
 test('HTTP exige sessão, origem exata, JSON limitado e nunca aceita identificação do navegador',async()=>{
  let count=0;const empty={status:'empty',hasPremium:false,serverNow:new Date(now).toISOString()};
