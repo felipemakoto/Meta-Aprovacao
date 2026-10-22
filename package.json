@@ -5,7 +5,7 @@
   "scripts": {
     "test:signup:delivery:guards": "node --test tests/signup-delivery.test.mjs",
     "test:signup:delivery": "node --env-file=.env.local scripts/test-signup-delivery.mjs",
-    "test:promotion": "node --test tests/premium.test.mjs tests/checkout.test.mjs tests/promotion-pages.test.mjs tests/checkout-action.test.mjs",
+    "test:promotion": "node --test tests/premium.test.mjs tests/checkout.test.mjs tests/promotion-pages.test.mjs tests/checkout-action.test.mjs tests/checkout-events.test.mjs",
     "test:promotion:sql": "node scripts/test-first-purchase-promotion.mjs",
     "test:promotion:production": "node --env-file=.env.local scripts/test-promotion-production.mjs",
     "test:google": "node --test tests/google-auth.test.mjs tests/google-server.test.mjs",

@@ -20,11 +20,18 @@ function loadTsx(relative,mocks={}){
 const PlanOptions=loadTsx('../src/app/premium/plan-options.tsx',{
  '@/lib/premium-study/contract':{studyAreas:{plan:'Plano de estudos',calendar:'Calendário'}},
  '@/lib/subscriptions/checkout-launch':{checkoutEnabled:true},
- './checkout-action':{__esModule:true,default:loadTsx('../src/app/premium/checkout-action.tsx',{'next/navigation':{useRouter:()=>({push(){}})}})},
+ './checkout-action':{__esModule:true,default:loadTsx('../src/app/premium/checkout-action.tsx',{'next/navigation':{useRouter:()=>({push(){}})},'./checkout-events':{trackCheckout(){}}})},
  './continue-study':{__esModule:true,default:()=>createElement('button',null,'Fazer meu simulado grátis')},
 });
 const Premium=loadTsx('../src/app/premium/premium.tsx',{
  './plan-options':{__esModule:true,default:PlanOptions},
+ './checkout-offer':{__esModule:true,default:loadTsx('../src/app/premium/checkout-offer.tsx',{
+  '@/lib/subscriptions/checkout-launch':{checkoutEnabled:true},
+  '@/lib/premium-study/contract':{studyAreas:{plan:'Plano de estudos',reviews:'Revisão e flashcards',calendar:'Calendário'}},
+  './checkout-action':{__esModule:true,default:loadTsx('../src/app/premium/checkout-action.tsx',{'next/navigation':{useRouter:()=>({push(){}})},'./checkout-events':{trackCheckout(){}}})},
+  './checkout-observer':{__esModule:true,default:()=>null},
+  './checkout-events':{checkoutVariant:'clarity-v1'},
+ })},
  '../study-shell':{__esModule:true,default:({children})=>createElement('div',null,children)},
 });
 const user={id:'private-verified-owner',email_confirmed_at:'2026-10-01T12:00:00Z'};
@@ -60,3 +67,16 @@ for(const route of ['premium','confirmed']){
   assert.match(html,/Abrir meus recursos Premium/);assert.match(html,/23,98/);assert.doesNotMatch(html,/12,49|primeiracompra|Premium em breve/);
  });
 }
+
+test('checkout deixa total, recorrência, cancelamento, responsável e acesso gratuito explícitos',async()=>{
+ const {html}=await render('premium',{hasPremium:false,accessUntil:null,hasPaidBefore:false});
+ for(const text of ['Total por mês','Renovação mensal até o cancelamento','Como cancelo a assinatura','responsável','Continuar no Gratuito','Interface real da Meta Aprovação'])assert.ok(html.includes(text),text);
+ assert.match(html,/data-checkout-variant="clarity-v1"/);assert.match(html,/premium-review-card\.png/);
+ assert.doesNotMatch(html,/depoimento|últimas vagas|oferta termina|50%|<del|countdown|expiresAt/);
+});
+
+test('assinante ativo não recebe CTA de nova compra nem o funil de aquisição',async()=>{
+ const {html}=await render('premium',{hasPremium:true,accessUntil:'2026-11-17T12:00:00Z',hasPaidBefore:true});
+ assert.doesNotMatch(html,/Assinar Premium|data-checkout-variant/);
+ assert.match(html,/Abrir meus recursos Premium/);
+});

@@ -2,13 +2,16 @@
 import assert from 'node:assert/strict';
 import {randomUUID,randomBytes} from 'node:crypto';
 import {createRequire} from 'node:module';
-import {readFileSync,writeFileSync,mkdirSync,rmSync} from 'node:fs';
+import {readFileSync,writeFileSync,mkdirSync,rmSync,existsSync} from 'node:fs';
+import {setTimeout as delay} from 'node:timers/promises';
 import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {createClient} from '@supabase/supabase-js';
 import {checkoutEnabled} from '../src/lib/subscriptions/checkout-launch.ts';
 import {configuredCheckout} from '../src/lib/subscriptions/checkout-contract.ts';
-const origin='https://meta-aprovacao.vercel.app';
+const origin=process.env.CHECKOUT_TEST_ORIGIN??'https://meta-aprovacao.vercel.app';
+assert.ok(['http://127.0.0.1:3085','https://meta-aprovacao.vercel.app'].includes(origin));
+const handoff=path.join(process.env.TEMP,'meta-checkout-browser-fixture.json'),done=handoff+'.done';
 const tag=randomUUID(),email=`promotion-smoke-${tag}@example.invalid`,password=randomBytes(32).toString('base64url');
 const order=randomUUID(),subscription=randomUUID(),reference=randomBytes(32).toString('hex');
 const require=createRequire(import.meta.url),pkg=require.resolve('supabase/package.json'),cli=path.resolve(path.dirname(pkg),require(pkg).bin.supabase);
@@ -43,6 +46,7 @@ async function checkCheckout(hasPaidBefore){
  const data=await response.json(),destination=new URL(data.url),expected=configuredCheckout(process.env,new Date(),hasPaidBefore);
  assert.equal(destination.origin,'https://pay.cakto.com.br');assert.match(destination.searchParams.get('sck')??'',/^[a-f0-9]{64}$/);
  destination.searchParams.delete('sck');assert.equal(destination.href,expected.url);
+ return data.url;
  // Only a saved intent and validated destination. Never visit a payment endpoint or pay.
 }
 try{
@@ -57,7 +61,13 @@ try{
  assert.equal(created.error,null);user=created.data.user.id;
  phase='new_account';assert.deepEqual(await(await request('/api/auth/login',{email,password})).json(),{status:'signed_in'});
  await checkPages();
- phase='first_checkout';await checkCheckout(false);
+ phase='first_checkout';const initialCheckout=await checkCheckout(false);
+ assert.equal(await checkCheckout(false),initialCheckout,'repeated checkout reuses the saved intent');
+ if(process.argv.includes('--browser')){
+  rmSync(done,{force:true});writeFileSync(handoff,JSON.stringify({email,password,origin}));
+  console.log('Checkout HTTP aprovado. Conta descartável disponível para conferência visual por até 15 minutos.');
+  for(let i=0;i<450&&!existsSync(done);i++)await delay(2000);
+ }
  phase='expired_payment';
  query(`begin;set local statement_timeout='15s';
  insert into private.checkout_intents(reference,user_id,provider,product_id,offer_id,checkout_url,first_price_cents,monthly_price_cents,created_at,expires_at)
@@ -72,7 +82,7 @@ try{
  await checkPages();
  phase='returning_checkout';await checkCheckout(true);
  phase='returning_login';jar.clear();await request('/api/auth/login',{email,password});await checkPages();
- console.log('Produção aprovada: preço regular desde a primeira cobrança, histórico promocional preservado, checkout sem cupom e nova entrada. Sem consulta à Cakto ou cobrança.');
+ console.log('Checkout aprovado: preço regular desde a primeira cobrança, intenção reutilizada, histórico promocional preservado, sem cupom e nova entrada. Sem compra ou cobrança.');
 }catch{
  console.error(`Conferência de produção não concluída na etapa ${phase}. Nenhuma credencial exibida.`);process.exitCode=1;
 }finally{
@@ -90,4 +100,5 @@ try{
  }
  if(cleaned)console.log('Conta e registros temporários removidos e ausência conferida.');
  rmSync(file,{force:true});
+ if(process.argv.includes('--browser')){rmSync(handoff,{force:true});rmSync(done,{force:true});}
 }
