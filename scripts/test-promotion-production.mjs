@@ -64,7 +64,7 @@ try{
  if(process.argv.includes('--direct-disabled')){
   phase='direct_disabled';
   const state=await(await request('/api/premium/payment')).json();assert.equal(state.status,'empty');assert.equal(state.hasPremium,false);assert.equal(state.payload,undefined);
-  const page=await(await request('/premium/pagamento')).text();assert.match(page,/checkout seguro da Cakto/);assert.doesNotMatch(page,/Gerar Pix/);
+  const page=await(await request('/premium/pagamento')).text();assert.match(page,/Pagamento Premium/);assert.doesNotMatch(page,/Gerar Pix/);
   const disabled=await fetch(origin+'/api/premium/payment',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json',Cookie:[...jar].map(([k,v])=>`${k}=${v}`).join('; ')},body:JSON.stringify({action:'resume'}),redirect:'error',signal:AbortSignal.timeout(15000)});
   assert.equal(disabled.status,503);assert.deepEqual(await disabled.json(),{error:'direct_unavailable'});
  }
