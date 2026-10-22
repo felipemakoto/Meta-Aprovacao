@@ -8,7 +8,7 @@ import CheckoutObserver from "./checkout-observer";
 import {checkoutVariant} from "./checkout-events";
 import styles from "./checkout.module.css";
 
-export default function CheckoutOffer({offer,preview=false}:{offer:ReturnType<typeof premiumOffer>;preview?:boolean}) {
+export default function CheckoutOffer({offer,preview=false,integrated=false}:{offer:ReturnType<typeof premiumOffer>;preview?:boolean;integrated?:boolean}) {
   const money=(value:number)=>value.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
   return <main className={styles.checkout} data-checkout-variant={checkoutVariant}>
     {!preview&&<CheckoutObserver/>}
@@ -19,8 +19,8 @@ export default function CheckoutOffer({offer,preview=false}:{offer:ReturnType<ty
         <p className={styles.price}>{money(offer.monthlyPrice)}<span>por mês, desde a primeira cobrança</span></p>
         <dl className={styles.breakdown}><div><dt>Assinatura mensal</dt><dd>{money(offer.monthlyPrice)}</dd></div><div><dt>Taxa de serviço Cakto</dt><dd>R$ 0,99</dd></div><div className={styles.total}><dt>Total por mês</dt><dd>{money(offer.monthlyPrice+.99)}</dd></div></dl>
         <p className={styles.renewal}>Renovação mensal até o cancelamento. Confira e autorize a forma de pagamento na Cakto.</p>
-        {checkoutEnabled&&!preview?<CheckoutAction mobileSummary total={money(offer.monthlyPrice+.99)}/>:<button className={styles.disabled} disabled>{preview?"Contratação indisponível na prévia":"Premium em breve"}</button>}
-        <p className={styles.handoff}>Você continua no checkout da Cakto para escolher Pix ou cartão e concluir. Nenhuma cobrança é feita nesta página.</p>
+        {checkoutEnabled&&!preview?<CheckoutAction mobileSummary total={money(offer.monthlyPrice+.99)} integrated={integrated}/>:<button className={styles.disabled} disabled>{preview?"Contratação indisponível na prévia":"Premium em breve"}</button>}
+        <p className={styles.handoff}>{integrated?"Escolha Pix ou cartão na próxima etapa. O pagamento é processado pela Cakto.":"Você continua no checkout da Cakto para escolher Pix ou cartão e concluir. Nenhuma cobrança é feita nesta página."}</p>
         <div className={styles.trust}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Dados do cartão tratados pela Cakto.</span></div>
         <div className={styles.faq} aria-label="Dúvidas sobre a assinatura">
           <details data-checkout-faq="renewal"><summary>Como funciona a renovação?</summary><p>O plano é mensal. Cartão e Pix Automático permitem cobranças recorrentes conforme a autorização no checkout. No Pix comum, siga as instruções de renovação da Cakto. O acesso acompanha os pagamentos confirmados.</p></details>

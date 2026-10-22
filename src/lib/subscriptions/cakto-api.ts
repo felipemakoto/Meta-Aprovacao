@@ -1,6 +1,6 @@
 // Server transport shared with local administrative scripts. No client imports.
 import {Buffer} from "node:buffer";
-export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription"|"offer";
+export type CaktoOperation="authentication"|"orders_list"|"order"|"subscription"|"offer"|"product"|"payment";
 export type CaktoAuthenticationRetry={operation:"authentication";status:500|502|503|504};
 type CaktoReason="configuration_missing"|"invalid_id"|"unavailable"|"unauthorized"|"not_found"|"rate_limited"|"invalid_response";
 export class CaktoReadError extends Error {
@@ -21,8 +21,8 @@ export function record(value: unknown): Record<string, unknown> {
   if (!value || typeof value !== "object" || Array.isArray(value)) throw new CaktoReadError("invalid_response");
   return value as Record<string, unknown>;
 }
-export function caktoReader(env: Record<string, string | undefined>, transport: typeof fetch = fetch, onAuthenticationRetry?:(event:CaktoAuthenticationRetry)=>void) {
-  async function json(path: string, options: RequestInit, limit: number,operation:CaktoOperation) {
+export function caktoTransport(env: Record<string, string | undefined>, transport: typeof fetch = fetch, onAuthenticationRetry?:(event:CaktoAuthenticationRetry)=>void) {
+  async function json(path: string, options: RequestInit, limit: number,operation:CaktoOperation,deadline=8000) {
     const controller = new AbortController();
     let timer: ReturnType<typeof setTimeout> | undefined;
     let reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
@@ -66,7 +66,7 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
           try { return record(JSON.parse(new TextDecoder("utf-8", {fatal:true}).decode(Buffer.concat(chunks)))); }
           catch { throw new CaktoReadError("invalid_response"); }
         })(),
-        new Promise<never>((_, reject) => { timer = setTimeout(() => {reject(new CaktoReadError("unavailable",operation,status,true));controller.abort();}, 8000); }),
+        new Promise<never>((_, reject) => { timer = setTimeout(() => {reject(new CaktoReadError("unavailable",operation,status,true));controller.abort();}, deadline); }),
       ]);
     } catch (error) { throw error instanceof CaktoReadError ? new CaktoReadError(error.reason,operation,status,error.timedOut) : new CaktoReadError("unavailable",operation,status); }
     finally { clearTimeout(timer); controller.abort(); void reader?.cancel().catch(() => {}); }
@@ -78,6 +78,10 @@ export function caktoReader(env: Record<string, string | undefined>, transport: 
     if (typeof result.access_token !== "string" || !result.access_token || result.token_type !== "Bearer") throw new CaktoReadError("invalid_response","authentication",200);
     return result.access_token;
   }
+  return {json,token};
+}
+export function caktoReader(env: Record<string, string | undefined>, transport: typeof fetch = fetch, onAuthenticationRetry?:(event:CaktoAuthenticationRetry)=>void) {
+  const {json,token}=caktoTransport(env,transport,onAuthenticationRetry);
   return {
     async recentOrderIds(product:string,since:string,until:string,page=1) {
       if (!/^[A-Za-z0-9_-]{1,200}$/.test(product) || !Number.isInteger(page) || page<1 || page>100 ||

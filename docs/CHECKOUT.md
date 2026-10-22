@@ -2,6 +2,8 @@
 
 `/premium` apresenta a contratação para contas verificadas sem Premium. Assinantes ativos continuam com seu plano e acesso aos estudos, sem botão de compra. O botão do cadastro confirmado passa por essa página antes da Cakto. Os recursos gratuitos continuam funcionando.
 
+O checkout hospedado descrito abaixo continua ativo. A implementação integrada, suas proteções e as condições pendentes para ativação estão em [CHECKOUT-INTEGRADO.md](CHECKOUT-INTEGRADO.md). Há agora migrações aditivas e uma RPC de intenção que bloqueia pagamentos diretos pendentes; o contrato financeiro anterior foi preservado.
+
 ## Preço e fluxo
 
 - Assinatura regular R$ 22,99/mês desde a primeira cobrança; taxa Cakto atual de R$ 0,99; total R$ 23,98/mês. Não há cupom automático, preço anterior ou urgência promocional.
@@ -18,7 +20,7 @@ Benefícios agrupados, lista completa compartilhada de recursos, comparação co
 
 `POST /api/premium/checkout` não aceita payload, preço, destino, proprietário ou parâmetros do cliente. Conta com e-mail confirmado, origem permitida e ausência de Premium vigente são verificadas antes de criar a intenção; GET não inicia compra. Respostas privadas têm `no-store`. O cliente agora também recusa caminho arbitrário, cupom, parâmetros extras e referência fora do formato esperado na resposta de navegação.
 
-`private.checkout_intents` continua com RLS e sem leitura direta pública. A RPC autorizada recebe exclusivamente o proprietário verificado no servidor; mantém lock por conta, reutilização elegível por 15 minutos, até quatro intenções novas por hora e prazo interno de uma hora. A referência aleatória não prova pagamento. Concessão, renovações, deduplicação e comprovação financeira permanecem no fluxo existente; nenhuma migração nesta alteração.
+`private.checkout_intents` continua com RLS e sem leitura direta pública. A RPC autorizada recebe exclusivamente o proprietário verificado no servidor; mantém lock por conta, reutilização elegível por 15 minutos, até quatro intenções novas por hora e prazo interno de uma hora. A referência aleatória não prova pagamento. Concessão, renovações, deduplicação e comprovação financeira permanecem no fluxo existente; as migrações aditivas do checkout integrado não reescrevem esses contratos.
 
 Configuração regular existente, somente no servidor: `CAKTO_PRODUCT_ID`, `CAKTO_REGULAR_OFFER_ID`, `CAKTO_REGULAR_CHECKOUT_URL` e `APP_ORIGIN`. Não versionar valores, expor em `NEXT_PUBLIC` ou substituir a autorização por parâmetros do navegador. Registros históricos antigos continuam necessários para verificar comprovantes anteriores.
 

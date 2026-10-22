@@ -52,3 +52,10 @@ test('sessão expirada volta ao login; erro, destino externo e limite exibem err
   }finally{h.restore();}
  }
 });
+
+test('checkout integrado abre formulário sem criar pagamento; pendência abre o status e não um segundo checkout',async()=>{
+ const h=setup(()=>assert.fail('Unexpected financial handoff'),{integrated:true,mobileSummary:true});
+ try{await h.mobileClick();await h.click();assert.deepEqual(h.destinations,['/premium/pagamento']);assert.equal(h.requests.length,0);}finally{h.restore();}
+ const pending=setup(()=>Response.json({error:'payment_pending'},{status:409}));
+ try{await pending.click();assert.deepEqual(pending.destinations,['/premium/pagamento']);assert.equal(pending.requests.length,1);}finally{pending.restore();}
+});

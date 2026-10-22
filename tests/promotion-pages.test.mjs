@@ -39,6 +39,7 @@ async function render(route,pricing){
  const reads=[];
  const Page=loadTsx(route==='premium'?'../src/app/premium/page.tsx':'../src/app/cadastro/confirmado/page.tsx',{
   '@/lib/auth/user':{getVerifiedUser:async()=>user},
+  '@/lib/subscriptions/direct-config':{directCheckoutEnabled:()=>false},
   '@/lib/data/subscriptions':{readSubscriptionPricing:async id=>{reads.push(id);return pricing;}},
   '@/lib/subscriptions/contract':{...contract,premiumOffer:(date,history)=>contract.premiumOffer(new Date('2026-10-17T12:00:00-03:00'),history)},
   'next/navigation':{redirect:()=>assert.fail('Unexpected redirect')},

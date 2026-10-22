@@ -52,6 +52,7 @@ export function checkoutHandler(deps: Dependencies, settings: Settings) {
       return new Response(null, { status: 303, headers: { Location: location,
         "Cache-Control": "private, no-store, max-age=0", "Referrer-Policy": "no-referrer" } });
     } catch (e) {
+      if(e instanceof Error&&e.message==="payment_pending")return json("payment_pending",409);
       return e instanceof Error && e.message === "checkout_rate_limited"
         ? json("rate_limited", 429) : json("checkout_unavailable", 503);
     }

@@ -15,6 +15,11 @@ const deps = { user:async()=>'verified-user', access:async()=>({hasPremium:false
  create:async(user, o)=>{assert.equal(user,'verified-user');assert.deepEqual(o,offer);return intent;}, now:()=>now };
 const handler = (overrides={}, settings={})=>checkoutHandler({...deps,...overrides},{secure:false,enabled:true,...settings});
 
+test('pagamento pendente retorna conflito explícito sem novo destino de cobrança',async()=>{
+ const r=await handler({create:async()=>{throw Error('payment_pending');}})(request({headers:{accept:'application/json'}}));
+ assert.equal(r.status,409);assert.deepEqual(await r.json(),{error:'payment_pending'});
+});
+
 test('cliente JSON recebe somente URL validada após persistência e preserva as proteções',async()=>{
  let created=0;
  const h=handler({create:async()=>{created++;return intent;}});

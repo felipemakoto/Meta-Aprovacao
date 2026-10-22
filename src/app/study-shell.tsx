@@ -25,7 +25,7 @@ export function StudyIcon({ name }: { name: StudyArea }) {
   </svg>;
 }
 
-export default function StudyShell({ children, active, preview = false, focus = false, menu = false, homeHref = "/login", exit }: { children: ReactNode; active?: StudyArea | "account"; preview?: boolean; focus?: boolean; menu?: boolean; homeHref?: "/" | "/login"; exit?: ReactNode }) {
+export default function StudyShell({ children, active, preview = false, focus = false, menu = false, plain = false, homeHref = "/login", exit }: { children: ReactNode; active?: StudyArea | "account"; preview?: boolean; focus?: boolean; menu?: boolean; plain?: boolean; homeHref?: "/" | "/login"; exit?: ReactNode }) {
   const navigation = destinations.map(item => <Link key={item.area} href={item.href + (preview && item.area!=="premium" ? "/preview" : "")} aria-current={active === item.area ? "page" : undefined}><StudyIcon name={item.area} />{item.label}</Link>);
   return <div className={`${theme.homeTheme} ${styles.shell}`} data-study data-study-mode={focus ? "focus" : active}>
     <a className={styles.skip} href="#estudo">Pular para o conteúdo</a>
@@ -38,7 +38,7 @@ export default function StudyShell({ children, active, preview = false, focus = 
     </div></header>
     <div className={`${styles.workspace} ${focus ? styles.focusWorkspace : ""}`}>
       {!focus && <aside className={styles.sidebar}><nav aria-label="Navegação de estudos">{navigation}</nav></aside>}
-      <div className={styles.content} id="estudo" tabIndex={-1}>{children}</div>
+      <div className={`${styles.content} ${plain ? styles.plain : ""}`} id="estudo" tabIndex={-1}>{children}</div>
     </div>
   </div>;
 }

@@ -72,3 +72,4 @@
 }
 :global([data-study-mode="focus"]) .content { padding: 32px 36px; border: 1px solid var(--home-line); border-radius: 22px; background: white; }
 @media (max-width: 599px) { :global([data-study-mode="focus"]) .content { padding: 22px 18px; border-radius: 18px; } }
+:global([data-study-mode="focus"]) .content.plain { padding: 0; border: 0; background: transparent; }
