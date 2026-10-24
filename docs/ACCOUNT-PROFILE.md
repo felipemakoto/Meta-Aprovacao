@@ -11,3 +11,9 @@ The reduced-motion preference is stored in the account and synchronized to the b
 Apply `20261024160000_private_account_profiles.sql` before publishing. To roll back, deploy the previous application first and leave additive profile data/RPCs intact while any newer instance may still use them. No existing auth, study or payment data is migrated.
 
 Validation: `node --test tests/account.test.mjs tests/login-offer.test.mjs`; `node scripts/test-account-profiles-sql.mjs --candidate` before applying, without `--candidate` after. SQL fixtures are rolled back. `node --env-file=.env.local scripts/test-account-profiles-http.mjs --browser` uses disposable marked accounts, no email or payment calls, with automatic cleanup.
+
+## Settings menu and appearance
+
+A circular gear opens a native modal with keyboard/focus handling, read-only server-confirmed plan, nickname, light/dark/system theme, reduced motion, password reset and cookie preferences. A failed plan lookup never implies Premium.
+
+Theme is saved privately in the account; its browser copy applies before hydration and follows OS changes in system mode. Existing profile clients remain compatible and preserve saved theme. Apply 20261024180000_account_theme.sql before the new app; rollback app first and retain additive data/RPCs. Validate with tests/theme.test.mjs and SQL --candidate-theme before applying, without flags afterward.

@@ -43,6 +43,30 @@
 .homeTheme ::selection { background: var(--home-mint); color: var(--home-ink); }
 .homeTheme :focus-visible { outline: 3px solid var(--home-green); outline-offset: 5px; }
 
+:global(html[data-theme="dark"]) .homeTheme,
+:global(html[data-theme="dark"] body):has(.homeTheme) {
+  --home-paper: #1d2620;
+  --home-canvas: #111813;
+  --home-ink: #eff4ed;
+  --home-muted: #b6c4b7;
+  --home-line: #415045;
+  --home-sage: #283c2c;
+  --home-mint: #35533a;
+  --home-accent: #97dda3;
+  --home-accent-strong: #b2e8ba;
+  --home-example-muted: #38334b;
+  --home-example-active: #426b38;
+  --home-error-bg: #402a25;
+  --home-error: #ffb8a8;
+  --home-nav-shadow: 0 0 20px rgb(0 0 0 / 30%), 0 4px 12px rgb(0 0 0 / 20%);
+  --background: var(--home-canvas);
+  --foreground: var(--home-ink);
+  --color-text-secondary: var(--home-muted);
+  --control-surface: var(--home-paper);
+  --control-border: var(--home-line);
+  --control-hover: var(--home-sage);
+}
+
 :global(body):has(.homeTheme) > :global(footer) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

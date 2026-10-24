@@ -5,6 +5,9 @@ import "./globals.css";
 import SiteFooter from "./site-footer";
 import PageMotion from "./page-motion";
 import Analytics from "./analytics";
+import Script from "next/script";
+import SiteTheme from "./site-theme";
+import {themeBootstrap} from "@/lib/account/theme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +32,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       className={`${geistSans.variable} ${displayFont.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/><Analytics/></Suspense></body>
+      <body><Script id="meta-theme" strategy="beforeInteractive">{themeBootstrap}</Script><SiteTheme/>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/><Analytics/></Suspense></body>
     </html>
   );
 }

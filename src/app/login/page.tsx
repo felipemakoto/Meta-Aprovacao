@@ -10,9 +10,10 @@ export default async function LoginPage() {
     return <section><h1 className={styles.title}>Tente novamente</h1><p className={styles.subtitle}>Não foi possível verificar sua sessão agora.</p><a className={styles.skip} href="/login">Tentar novamente</a></section>;
   }
   let showPremiumOffer = false;
+  let plan:"normal"|"premium"|"unknown"="unknown";
   if (user?.email_confirmed_at) {
-    try { showPremiumOffer = !parseSubscriptionAccess(await readSubscriptionAccess(user.id)).hasPremium; }
+    try { const premium=parseSubscriptionAccess(await readSubscriptionAccess(user.id)).hasPremium;showPremiumOffer=!premium;plan=premium?"premium":"normal"; }
     catch { /* Keep account actions available without assuming a free plan. */ }
   }
-  return <LoginForm signedIn={!!user} showPremiumOffer={showPremiumOffer} email={user?.email??""} />;
+  return <LoginForm signedIn={!!user} showPremiumOffer={showPremiumOffer} email={user?.email??""} plan={plan} />;
 }

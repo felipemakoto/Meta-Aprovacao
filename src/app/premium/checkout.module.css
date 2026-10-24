@@ -1,4 +1,4 @@
-.checkout {padding-bottom:28px;--checkout-green:#237b38;--checkout-line:#dedfd8;}
+.checkout {padding-bottom:28px;--checkout-green:#237b38;--checkout-line:var(--home-line);}
 .heading {max-width:680px;margin-bottom:32px;}
 .heading h1 {font:750 clamp(30px,4.2vw,44px)/1.15 var(--home-font),Arial,sans-serif;letter-spacing:-1.3px;margin:0 0 16px;text-wrap:balance;}
 .heading p {font-size:19px;line-height:1.65;color:var(--color-text-secondary);margin:0;max-width:50ch;}
@@ -10,9 +10,9 @@
 .benefits li:first-child {padding-top:0;}
 .benefits strong {font-size:19px;line-height:1.5;}
 .benefits p,.preview>p {font-size:17px;line-height:1.65;color:var(--color-text-secondary);margin:7px 0 0;}
-.summary {grid-column:2;grid-row:1;position:sticky;top:112px;border:1px solid #b8cdb5;background:#f2f7ed;border-radius:18px;padding:26px;min-width:0;scroll-margin-top:110px;}
+.summary {grid-column:2;grid-row:1;position:sticky;top:112px;border:1px solid #b8cdb5;background:var(--home-sage, #f2f7ed);border-radius:18px;padding:26px;min-width:0;scroll-margin-top:110px;}
 .summary h2 {margin-bottom:14px;}
-.price {font-size:42px;font-weight:750;line-height:1.1;letter-spacing:-1px;margin:0 0 24px;color:var(--checkout-green);font-variant-numeric:tabular-nums;}
+.price {font-size:42px;font-weight:750;line-height:1.1;letter-spacing:-1px;margin:0 0 24px;color:var(--home-accent, var(--checkout-green));font-variant-numeric:tabular-nums;}
 .price span {display:block;font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0;margin-top:10px;color:var(--color-text-secondary);}
 .breakdown {margin:0;}
 .breakdown>div {display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0;font-size:16px;line-height:1.5;}
@@ -21,11 +21,11 @@
 .renewal,.handoff,.responsible {font-size:16px;line-height:1.6;color:var(--color-text-secondary);margin:16px 0;}
 .handoff {margin:14px 0 20px;}
 .trust {display:flex;gap:9px;align-items:flex-start;font-size:16px;line-height:1.5;padding:16px 0;border-top:1px solid #bfd1ba;}
-.trust svg {flex-shrink:0;margin-top:3px;color:var(--checkout-green);}
+.trust svg {flex-shrink:0;margin-top:3px;color:var(--home-accent, var(--checkout-green));}
 .faq details {border-top:1px solid #bfd1ba;}
 .faq summary,.resources summary,.extraFaq summary {cursor:pointer;padding:16px 0;font-size:17px;line-height:1.5;font-weight:650;min-height:52px;}
 .faq p,.extraFaq p {font-size:16px;line-height:1.65;margin:0 0 18px;color:var(--color-text-secondary);}
-.checkout a {color:var(--checkout-green);text-underline-offset:4px;}
+.checkout a {color:var(--home-accent, var(--checkout-green));text-underline-offset:4px;}
 .legal {display:flex;flex-wrap:wrap;gap:12px 18px;margin:18px 0 0;font-size:16px;line-height:1.6;}
 .legal a {min-height:32px;}
 .responsible {border-top:1px solid #bfd1ba;padding-top:18px;margin-bottom:0;}
@@ -44,7 +44,7 @@
 .compare dt {font-size:18px;font-weight:700;line-height:1.5;}
 .compare dd {margin:8px 0 0;font-size:17px;line-height:1.65;color:var(--color-text-secondary);}
 .extraFaq {border-top:1px solid var(--checkout-line);margin-top:24px;}
-.disabled {width:100%;min-height:56px;background:#e1e5dc;border:1px solid #bac5b5;border-radius:14px;padding:14px;font:650 17px/1.5 var(--home-font),Arial,sans-serif;color:#4e594b;cursor:not-allowed;}
+.disabled {width:100%;min-height:56px;background:var(--home-sage, #e1e5dc);border:1px solid #bac5b5;border-radius:14px;padding:14px;font:650 17px/1.5 var(--home-font),Arial,sans-serif;color:var(--home-muted, #4e594b);cursor:not-allowed;}
 .checkout :is(a,button,summary):focus-visible {outline:3px solid #237b38;outline-offset:4px;}
 @media(max-width:959px) {.layout {grid-template-columns:minmax(0,1fr);gap:34px;}.summary {grid-column:1;grid-row:1;position:static;}.story {grid-row:2;}.heading {margin-bottom:24px;}.summary {padding:24px;}}
 @media(max-width:599px) {.checkout {padding-bottom:122px;}.heading h1 {letter-spacing:-.8px;}.heading p {font-size:18px;}.summary {padding:22px 18px;}.story h2 {font-size:24px;}.price {font-size:40px;}.layout {gap:34px;}.breakdown .total {font-size:19px;}}

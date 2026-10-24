@@ -5,8 +5,8 @@
 .article p { margin: 16px 0; text-wrap: pretty; }
 .article ul { padding-left: 22px; }
 .article li { margin-block: 8px; }
-.article a { color: var(--color-action); text-underline-offset: 4px; overflow-wrap: anywhere; }
-.eyebrow { color: var(--color-action); font-size: 16px; font-weight: 600; margin-bottom: 16px!important; }
+.article a { color: var(--home-accent, var(--color-action)); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.eyebrow { color: var(--home-accent, var(--color-action)); font-size: 16px; font-weight: 600; margin-bottom: 16px!important; }
 .documentSummary { color: var(--color-text-secondary); font-size: 18px; line-height: 1.6; max-width: 560px; }
 .updated { color: var(--color-text-secondary); font-size: 16px; line-height: 1.7; margin-bottom: 28px!important; }
 .contact { padding: 28px; border: 1px solid var(--color-divider); border-radius: 16px; background: var(--control-hover); margin: 28px 0; }
@@ -14,15 +14,15 @@
 .contact a { display: block; overflow-wrap: anywhere; }
 .contact .contactButton { display: flex; align-items: center; justify-content: center; min-height: 56px; margin-top: 22px; padding: 14px; border-radius: var(--control-radius); background: var(--color-action); color: white; font-weight: 650; text-decoration: none; }
 .contactButton:hover { background: var(--color-action-hover); }
-.copyButton {min-height:44px;padding:10px 16px;border:1px solid var(--color-action);border-radius:var(--control-radius);background:var(--control-surface);color:var(--color-action);font:inherit;font-weight:600;cursor:pointer;}
+.copyButton {min-height:44px;padding:10px 16px;border:1px solid var(--color-action);border-radius:var(--control-radius);background:var(--control-surface);color: var(--home-accent, var(--color-action));font:inherit;font-weight:600;cursor:pointer;}
 .copyButton:hover {background:var(--control-hover);}
 .faq { border-top: 1px solid var(--color-divider); margin-top: 14px; }
 .faq details { border-bottom: 1px solid var(--color-divider); padding-block: 8px; }
-.faq summary { min-height: 48px; padding: 12px 4px; color: var(--color-action); font-weight: 600; cursor: pointer; }
+.faq summary { min-height: 48px; padding: 12px 4px; color: var(--home-accent, var(--color-action)); font-weight: 600; cursor: pointer; }
 .footer { width: min(100% - 48px,860px); margin: 30px auto 24px; padding-top: 18px; border-top: 1px solid var(--color-divider); color: var(--color-text-secondary); text-align: center; }
 .footer nav { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 12px; }
 .footer a { display: inline-flex; align-items: center; min-height: 36px; padding: 6px 3px; color: var(--color-text-secondary); font-size: 12px; font-weight: 400; text-decoration: none; border: 0; background: none; box-shadow: none; }
-.footer a:hover { color: var(--color-action); text-decoration: underline; text-underline-offset: 4px; }
+.footer a:hover { color: var(--home-accent, var(--color-action)); text-decoration: underline; text-underline-offset: 4px; }
 .footer .homeFooterSupport { display: none; }
 .footer p { font-size: 11px; line-height: 1.6; margin: 0; }
 @media(max-width:599px) { .article { font-size: 17px; }.contact { padding: 22px 18px; } }

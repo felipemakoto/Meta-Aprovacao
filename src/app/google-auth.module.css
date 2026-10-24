@@ -1,7 +1,7 @@
 .section { margin-top: 24px; }
 .googleButton { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 52px; padding: 12px 16px; border: 1px solid #747775; border-radius: 10px; background: #fff; color: #1f1f1f; font: 500 15px/1.4 var(--font-geist-sans),Arial,sans-serif; cursor: pointer; }
 .googleButton img { flex-shrink: 0; }
-.googleButton:hover:not(:disabled) { background: #f8faf8; border-color: #454b47; box-shadow: 0 1px 3px #1f1f1f20; }
+.googleButton:hover:not(:disabled) { background: var(--home-sage, #f8faf8); border-color: #454b47; box-shadow: 0 1px 3px #1f1f1f20; }
 .googleButton:disabled { opacity: .65; cursor: wait; }
 .divider { display: flex; align-items: center; gap: 14px; color: var(--color-text-secondary); font-size: 12px; margin-top: 22px; }
 .divider::before,.divider::after { content: ""; height: 1px; flex: 1; background: var(--color-divider); }
@@ -11,17 +11,17 @@
 .description { font-size: 15px; color: var(--color-text-secondary); line-height: 1.6; }
 .dialog form { margin-top: 22px; }
 .dialog form > .googleButton { margin-top: 22px; }
-.close { display: grid; place-items: center; margin: -14px -8px 4px auto; width: 44px; min-height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--color-action); cursor: pointer; }
+.close { display: grid; place-items: center; margin: -14px -8px 4px auto; width: 44px; min-height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--home-accent, var(--color-action)); cursor: pointer; }
 .close:hover { background: var(--control-hover); }
 .cancel { display: block; min-height: 44px; margin: 10px auto 0; border: 0; padding: 8px 16px; background: none; color: var(--color-text-secondary); font: inherit; font-size: 14px; cursor: pointer; }
-.cancel:hover { color: var(--color-action); text-decoration: underline; text-underline-offset: 4px; }
-.error { font-size: 13px; line-height: 1.6; color: #913624; margin-block: 14px; }
+.cancel:hover { color: var(--home-accent, var(--color-action)); text-decoration: underline; text-underline-offset: 4px; }
+.error { font-size: 13px; line-height: 1.6; color: var(--home-error, #913624); margin-block: 14px; }
 @media(max-width:359px) { .dialog { padding: 26px 18px 16px; } .dialog h2 { font-size: 27px; } }
 
 :global(body:has([data-study])) .googleButton { min-height: 54px; font: 600 17px/1.5 var(--home-font); border-color: var(--control-border); border-radius: 12px; box-shadow: none; }
 :global(body:has([data-study])) .googleButton img { width: 20px; height: 20px; }
 :global(body:has([data-study])) .googleButton:hover:not(:disabled) { background: var(--home-sage); box-shadow: none; }
 :global(body:has([data-study])) .divider { font-size: 16px; line-height: 1.6; margin-top: 24px; }
-:global(body:has([data-study])) .dialog { background: white; border-color: var(--home-line); box-shadow: none; }
+:global(body:has([data-study])) .dialog { background: var(--home-paper, #fff); border-color: var(--home-line); box-shadow: none; }
 :global(body:has([data-study])) .dialog h2 { font: 600 28px/1.3 var(--home-font); letter-spacing: -.025em; }
 :global(body:has([data-study])) .description, :global(body:has([data-study])) .cancel, :global(body:has([data-study])) .error { font-size: 16px; }

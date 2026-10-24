@@ -59,4 +59,4 @@ export default function Analytics(){
   {(choice===null||open)&&<section className={styles.notice} aria-label="Preferências de cookies do site"><div><h2>Cookies do site</h2><p>Usamos cookies necessários para o site funcionar. Ao aceitar, você também permite cookies do Google Analytics para melhorar a plataforma. <Link href="/privacidade">Privacidade</Link></p></div><div className={styles.actions}><button type="button" onClick={()=>choose("rejected")}>Só necessários</button><button type="button" onClick={()=>choose("accepted")}>Aceitar cookies</button></div></section>}
  </>;
 }
-export function AnalyticsPreferences(){return <button className={styles.preferences} type="button" onClick={()=>window.dispatchEvent(new Event(preferences))}>Cookies de análise</button>;}
+export function AnalyticsPreferences({onOpen}:{onOpen?:()=>void}={}){return <button className={styles.preferences} type="button" onClick={()=>{onOpen?.();window.dispatchEvent(new Event(preferences));}}>Cookies de análise</button>;}

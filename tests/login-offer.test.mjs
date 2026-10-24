@@ -18,7 +18,7 @@ function loadTsx(relative,dependencies={}) {
  mod._compile(ts.transpileModule(readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText,filename);
  return mod.exports.default;
 }
-const AccountPanel=loadTsx('../src/app/login/account-profile.tsx',{'@/lib/account/contract':{parseAccountProfile},'@/lib/account/preferences':{applyMotionPreference:()=>{}},'../analytics':{AnalyticsPreferences:()=>null}});
+const AccountPanel=loadTsx('../src/app/login/account-profile.tsx',{'@/lib/account/contract':{parseAccountProfile},'@/lib/account/preferences':{applyMotionPreference:()=>{}},'@/lib/account/theme':{applyThemePreference:()=>{}},'../analytics':{AnalyticsPreferences:()=>null}});
 const LoginForm=loadTsx('../src/app/login/login-form.tsx',{'../google-auth-button':{__esModule:true,default:()=>null},'./account-profile':{__esModule:true,default:AccountPanel}});
 const verified={id:'verified-owner',email_confirmed_at:'2026-10-01T12:00:00Z'};
 async function render({user=verified,access={hasPremium:false,accessUntil:null},authFailure=false,readFailure=false}={}) {
@@ -39,7 +39,7 @@ test('oferta aparece para conta gratuita verificada e usa a identidade do servid
 });
 test('conta Premium mantém estudos e simulado sem botão de compra',async()=>{
  const {html}=await render({access:{hasPremium:true,accessUntil:'2026-11-02T15:00:00Z'}});
- assert.doesNotMatch(html,/href="\/premium"|Desbloquear Premium/);
+ assert.doesNotMatch(html,/Desbloquear Premium/);assert.match(html,/>Premium</);
  for(const label of ['Meus estudos','Fazer um simulado','Sair da conta'])assert.ok(html.includes(label));
 });
 test('visitante não consulta assinatura nem recebe oferta de conta autenticada',async()=>{
@@ -67,7 +67,14 @@ test('props ausentes ou visitante não exibem oferta por padrão',()=>{
 
 test('minha conta oferece perfil e configurações sem o aviso antigo de sessão',async()=>{
  const {html}=await render();assert.match(html,/Minha conta/);
- for(const label of ['Alterar foto','Nickname','Configurações do perfil','Reduzir animações','Histórico de estudos','Minhas estatísticas'])assert.ok(html.includes(label));
+ for(const label of ['Alterar foto','Nickname','Abrir configurações','Reduzir animações','Histórico de estudos','Minhas estatísticas'])assert.ok(html.includes(label));
  assert.doesNotMatch(html,/Sua sessão está ativa neste navegador/);
- const guest=await render({user:null});assert.doesNotMatch(guest.html,/Configurações do perfil|Alterar foto/);
+ const guest=await render({user:null});assert.doesNotMatch(guest.html,/Abrir configurações|Alterar foto/);
+});
+
+
+test('menu exibe o plano confirmado e não presume Premium quando a consulta falha',async()=>{
+ assert.match((await render()).html,/Normal \(Gratuito\)/);
+ assert.match((await render({access:{hasPremium:true,accessUntil:'2026-11-02T15:00:00Z'}})).html,/>Premium</);
+ assert.match((await render({readFailure:true})).html,/Não foi possível consultar/);
 });

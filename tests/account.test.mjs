@@ -4,7 +4,7 @@ import sharp from 'sharp';
 import {parseAccountCommand,parseAccountProfile} from '../src/lib/account/contract.ts';
 import {prepareAvatar} from '../src/lib/account/avatar.ts';
 import {accountHandlers} from '../src/lib/account/http.ts';
-const origin='https://account.example',profile={nickname:'Felipe',reduceMotion:false,avatarVersion:null};
+const origin='https://account.example',profile={nickname:'Felipe',reduceMotion:false,avatarVersion:null,theme:'light'};
 const request=(body,headers={},query='')=>new Request(origin+'/api/account/profile'+query,{method:'POST',headers:{origin,'content-type':'application/json',...headers},body:JSON.stringify(body)});
 const fail=async()=>assert.fail('Operação indevida');
 const handlers=(overrides={})=>accountHandlers({user:async()=>'owner-a',read:async()=>profile,avatar:async()=>null,reserve:async()=>{},execute:async()=>profile,...overrides},{origin,secure:true});
@@ -38,4 +38,13 @@ test('avatar é privado, não aceita selecionar outro usuário e erros não vaza
  const r=await handlers({avatar:async()=>Buffer.from('RIFFxxxxWEBP').toString('base64')}).AVATAR(new Request(origin+'/api/account/avatar'));
  assert.equal(r.headers.get('content-type'),'image/webp');assert.equal(r.headers.get('x-content-type-options'),'nosniff');assert.match(r.headers.get('cache-control'),/private.*no-store/);
  const error=await handlers({read:async()=>{throw Error('private-secret');}}).GET(new Request(origin+'/api/account/profile'));assert.equal(error.status,503);assert.doesNotMatch(await error.text(),/secret/);
+});
+
+
+test('tema aceita somente claro, escuro ou sistema sem tornar o plano editável',()=>{
+ const saved={action:'save',nickname:'Aluno',reduceMotion:false,theme:'dark'};assert.deepEqual(parseAccountCommand(saved),saved);
+ for(const theme of ['light','dark','system'])assert.equal(parseAccountProfile({...profile,theme}).theme,theme);
+ for(const theme of ['admin','javascript:alert(1)',null])assert.throws(()=>parseAccountCommand({...saved,theme}));
+ assert.throws(()=>parseAccountCommand({...saved,plan:'premium'}));
+ assert.equal(parseAccountProfile({nickname:'Aluno',reduceMotion:false,avatarVersion:null}).theme,'light');
 });

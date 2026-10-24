@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "../cadastro/signup.module.css";
 import accountStyles from "./login.module.css";
 import GoogleAuthButton from "../google-auth-button";
+import type {AccountPlan} from "@/lib/account/contract";
 import AccountProfilePanel from "./account-profile";
 
 const messages: Record<string, string> = {
@@ -14,7 +15,7 @@ const messages: Record<string, string> = {
   invalid_input: "Confira o e-mail e a senha antes de enviar.",
   auth_unavailable: "Não foi possível concluir agora. Tente novamente em alguns minutos.",
 };
-export default function LoginForm({ signedIn, showPremiumOffer=false,email="" }: { signedIn: boolean; showPremiumOffer?: boolean;email?:string }) {
+export default function LoginForm({ signedIn, showPremiumOffer=false,email="",plan="unknown" }: { signedIn: boolean; showPremiumOffer?: boolean;email?:string;plan?:AccountPlan }) {
   const [visible, setVisible] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -40,8 +41,8 @@ export default function LoginForm({ signedIn, showPremiumOffer=false,email="" }:
     finally { lock.current = false; setBusy(false); requestAnimationFrame(() => alert.current?.focus()); }
   }
   return <section className={accountStyles.content}>
-    <h1 className={styles.title}>{signedIn ? "Minha conta" : "Entrar"}</h1>
-    {signedIn && <AccountProfilePanel email={email}/>}
+    {!signedIn&&<h1 className={styles.title}>Entrar</h1>}
+    {signedIn && <AccountProfilePanel email={email} plan={plan}/>}
     {signedIn && <nav className={accountStyles.actions} aria-label="Continuar na plataforma">
       <Link className={`${accountStyles.action} ${accountStyles.primary}`} href="/dashboard">Meus estudos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
       <Link className={`${accountStyles.action} ${accountStyles.simulation}`} href="/simulados"><span>Fazer um simulado</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
