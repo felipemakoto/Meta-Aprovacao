@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import HomeHeader from "./home-header";
 import { MetaMark } from "./home-art";
 import theme from "./home-theme.module.css";
 import styles from "./study-shell.module.css";
@@ -29,13 +30,13 @@ export default function StudyShell({ children, active, preview = false, focus = 
   const navigation = destinations.map(item => <Link key={item.area} href={item.href + (preview && item.area!=="premium" ? "/preview" : "")} aria-current={active === item.area ? "page" : undefined}><StudyIcon name={item.area} />{item.label}</Link>);
   return <div className={`${theme.homeTheme} ${styles.shell}`} data-study data-study-mode={focus ? "focus" : active}>
     <a className={styles.skip} href="#estudo">Pular para o conteúdo</a>
-    <header className={styles.topbar}><div className={styles.topbarInner}>
+    <HomeHeader className={styles.topbar}><div className={styles.topbarInner}>
       <Link className={styles.brand} href={homeHref} aria-label={homeHref === "/login" ? "Meta Aprovação — minha conta" : "Meta Aprovação — início"}><MetaMark /><span>Meta Aprovação</span></Link>
       <div className={styles.headerActions}>
         {(!focus || menu) && <details className={`${styles.mobileMenu} ${menu ? styles.headerMenu : ""}`}><summary>{menu ? "Menu" : "Estudos"}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></summary><nav aria-label={menu ? "Menu principal" : "Navegação de estudos no celular"}>{navigation}<Link href="/login" aria-current={active === "account" ? "page" : undefined}>Minha conta</Link></nav></details>}
         {!menu && <div className={styles.account}>{exit ?? <Link href="/login">Minha conta</Link>}</div>}
       </div>
-    </div></header>
+    </div></HomeHeader>
     <div className={`${styles.workspace} ${focus ? styles.focusWorkspace : ""}`}>
       {!focus && <aside className={styles.sidebar}><nav aria-label="Navegação de estudos">{navigation}</nav></aside>}
       <div className={`${styles.content} ${plain ? styles.plain : ""}`} id="estudo" tabIndex={-1}>{children}</div>

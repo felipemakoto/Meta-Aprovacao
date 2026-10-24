@@ -10,7 +10,7 @@ function subscribe(notify:()=>void){
 const snapshot=()=>window.scrollY>0;
 const serverSnapshot=()=>false;
 
-export default function HomeHeader({children}:{children:ReactNode}){
+export default function HomeHeader({children,className=styles.header}:{children:ReactNode;className?:string}){
  const scrolled=useSyncExternalStore(subscribe,snapshot,serverSnapshot);
- return <header className={styles.header} data-scrolled={scrolled}>{children}</header>;
+ return <header className={className} data-scrolled={scrolled}>{children}</header>;
 }
