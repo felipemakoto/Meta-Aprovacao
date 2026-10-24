@@ -5,7 +5,7 @@
 .skipLink:focus-visible { transform: translateY(0); }
 .header { position: sticky; top: 0; z-index: 20; padding-block: 16px; background: transparent; pointer-events: none; }
 .page :where(main, a, button, summary) { scroll-margin-top: 128px; }
-.headerInner { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: min(100% - 64px, 1280px); min-height: 72px; margin-inline: auto; padding: 12px 24px; border: 1px solid var(--home-line); border-radius: 40px; background: var(--home-paper); pointer-events: auto; }
+.headerInner { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: min(100% - 64px, 1280px); min-height: 72px; margin-inline: auto; padding: 12px 24px; border: 1px solid var(--home-line); border-radius: 40px; background: var(--home-paper); box-shadow: 0 3px 14px rgb(32 37 31 / 7%); pointer-events: auto; }
 .brand { display: inline-flex; align-items: center; flex-shrink: 0; gap: 12px; min-height: 44px; color: var(--home-ink); text-decoration: none; }
 .brand img { width: 36px; height: 36px; }
 .brandName { font-size: 23px; font-weight: 800; letter-spacing: -.035em; line-height: 1.25; }
