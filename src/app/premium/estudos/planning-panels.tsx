@@ -1,18 +1,21 @@
 "use client";
-import {useRef,useState} from "react";
+import {useEffect,useRef,useState} from "react";
 import Link from "next/link";
 import {subjects} from "@/lib/quiz/practice-contract";
 import {localStudyDate} from "@/lib/premium-study/planning";
 import {studySessionHref,type Workspace,type Profile,type ExamConfig,type Session} from "@/lib/premium-study/contract";
 import type {Mutate} from "./workspace";
 import styles from "./study.module.css";
+import {devicePreferences,preferenceEvent} from "@/lib/account/settings-device";
 const weekdays=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
 export function PlanPanel({data,busy,mutate}:{data:Workspace;busy:boolean;mutate:Mutate}){
  const [profile,setProfile]=useState<Profile>(()=>data.profile?{institution:data.profile.institution,examDate:data.profile.examDate,weekdays:data.profile.weekdays,minutes:data.profile.minutes,startTime:data.profile.startTime,dailyGoal:data.profile.dailyGoal,weeklyGoal:data.profile.weeklyGoal,reminder:data.profile.reminder}:{institution:data.institutions[0]?.id??"",examDate:data.officialEvents.find(e=>e.institution===data.institutions[0]?.id&&e.kind==="exam"&&e.event_date>=localStudyDate(new Date(data.asOf)))?.event_date??"",weekdays:[1,2,3,4,5],minutes:60,startTime:"18:00",dailyGoal:20,weeklyGoal:100,reminder:15});
- const p=profile;function field<K extends keyof Profile>(key:K,value:Profile[K]){setProfile(v=>({...v,[key]:value}));}
+ const profileEdited=useRef(false);
+ useEffect(()=>{const update=()=>{const pref=devicePreferences();if(data.profile||!pref||profileEdited.current)return;const institution=pref.institution==="both"?null:data.institutions.find(i=>i.id.startsWith(pref.institution));setProfile(p=>({...p,institution:institution?.id??p.institution,examDate:pref.examDate||p.examDate,weekdays:pref.weekdays,minutes:pref.minutes,dailyGoal:pref.dailyGoal,weeklyGoal:pref.dailyGoal*pref.weekdays.length}));};update();window.addEventListener(preferenceEvent,update);return()=>window.removeEventListener(preferenceEvent,update);},[data.profile,data.institutions]);
+ const p=profile;function field<K extends keyof Profile>(key:K,value:Profile[K]){profileEdited.current=true;setProfile(v=>({...v,[key]:value}));}
  return <section><p className={styles.intro}>Um cronograma adaptado ao seu tempo e às respostas registradas. Prioridades usam o desempenho; sem amostra suficiente, as matérias recebem atenção equilibrada.</p>
   <form onSubmit={e=>{e.preventDefault();void mutate({action:"save_profile",profile:p}).catch(()=>{});}}><fieldset className={styles.formGrid} disabled={busy}><legend>Preferências do seu plano</legend>
-   <label>Instituição<select value={p.institution} onChange={e=>setProfile(v=>({...v,institution:e.target.value,examDate:data.officialEvents.find(x=>x.institution===e.target.value&&x.kind==="exam"&&x.event_date>=localStudyDate(new Date(data.asOf)))?.event_date??""}))}>{data.institutions.map(i=><option value={i.id} key={i.id}>{i.name} · {i.selection}</option>)}</select></label>
+   <label>Instituição<select value={p.institution} onChange={e=>{profileEdited.current=true;setProfile(v=>({...v,institution:e.target.value,examDate:data.officialEvents.find(x=>x.institution===e.target.value&&x.kind==="exam"&&x.event_date>=localStudyDate(new Date(data.asOf)))?.event_date??""}));}}>{data.institutions.map(i=><option value={i.id} key={i.id}>{i.name} · {i.selection}</option>)}</select></label>
    <label>Data da prova<input type="date" required min={localStudyDate(new Date(data.asOf))} value={p.examDate} onChange={e=>field("examDate",e.target.value)}/></label>
    <fieldset className={styles.dayOptions}><legend>Dias disponíveis</legend>{weekdays.map((label,i)=><label key={label}><input type="checkbox" checked={p.weekdays.includes(i)} onChange={e=>field("weekdays",e.target.checked?[...p.weekdays,i]:p.weekdays.filter(d=>d!==i))}/>{label}</label>)}</fieldset>
    <label>Minutos por dia<input type="number" required min={15} max={240} value={p.minutes} onChange={e=>field("minutes",Number(e.target.value))}/></label><label>Horário de início<input type="time" required value={p.startTime} onChange={e=>field("startTime",e.target.value)}/></label>
@@ -27,8 +30,10 @@ export function PlanPanel({data,busy,mutate}:{data:Workspace;busy:boolean;mutate
 }
 export function ExamPanel({data,mode,busy,mutate,session}:{data:Workspace;mode:"realistic"|"custom";busy:boolean;mutate:Mutate;session?:Session}){
  const [config,setConfig]=useState<ExamConfig>(()=>({mode,institution:data.profile?.institution??data.institutions[0]?.id??"",subjects:session?.subject?[session.subject]:Object.keys(data.institutions.find(i=>i.id===data.profile?.institution)?.subjects??data.institutions[0]?.subjects??{}),topics:session?.topic?[session.topic]:[],difficulty:"all",count:session?Math.max(5,session.goal):20,minutes:session?.minutes??60}));
+ const preferenceApplied=useRef(false);
+ useEffect(()=>{const update=()=>{const p=devicePreferences();if(mode!=="custom"||session||!p||preferenceApplied.current)return;setConfig(c=>({...c,count:p.customCount,minutes:p.customMinutes,difficulty:p.difficulty}));preferenceApplied.current=true;};update();window.addEventListener(preferenceEvent,update);return()=>window.removeEventListener(preferenceEvent,update);},[mode,session]);
  const request=useRef<string|null>(null),institution=data.institutions.find(i=>i.id===config.institution)!;
- function update(patch:Partial<ExamConfig>){request.current=null;setConfig(v=>({...v,...patch}));}
+ function update(patch:Partial<ExamConfig>){preferenceApplied.current=true;request.current=null;setConfig(v=>({...v,...patch}));}
  return <section><p className={styles.intro}>{mode==="realistic"?"Treine o formato e o tempo de prova com questões validadas da plataforma.":"Monte um treino com o banco existente. Questões inéditas para você são priorizadas; não há repetição dentro da mesma tentativa."}</p>
   <form onSubmit={e=>{e.preventDefault();request.current??=crypto.randomUUID();void mutate({action:"start_exam",config,requestId:request.current}).catch(()=>{});}}><fieldset className={styles.formGrid} disabled={busy}><legend>{mode==="realistic"?"Formato da prova":"Personalizar simulado"}</legend>
    <label>Instituição<select value={config.institution} onChange={e=>{const i=data.institutions.find(i=>i.id===e.target.value)!;update({institution:i.id,subjects:Object.keys(i.subjects),topics:[]});}}>{data.institutions.map(i=><option key={i.id} value={i.id}>{i.name} · {i.selection}</option>)}</select></label>

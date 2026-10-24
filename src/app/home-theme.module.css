@@ -41,7 +41,7 @@
 
 :global(body):has(.homeTheme) { background: var(--home-paper); }
 .homeTheme ::selection { background: var(--home-mint); color: var(--home-ink); }
-.homeTheme :focus-visible { outline: 3px solid var(--home-green); outline-offset: 5px; }
+.homeTheme :focus-visible { outline: 3px solid var(--home-accent, var(--home-green)); outline-offset: 5px; }
 
 :global(html[data-theme="dark"]) .homeTheme,
 :global(html[data-theme="dark"] body):has(.homeTheme) {
@@ -98,3 +98,8 @@
   :global(body):has(.homeTheme) > :global(footer) { grid-template-columns: 1fr; gap: 24px; }
   :global(body):has(.homeTheme) > :global(footer) [data-home-support] { justify-self: start; }
 }
+
+:global(html[data-contrast="high"]) .homeTheme,
+:global(html[data-contrast="high"] body):has(.homeTheme) {--home-muted:var(--home-ink);--home-line:#637568;}
+:global(html[data-theme="dark"][data-contrast="high"]) .homeTheme,
+:global(html[data-theme="dark"][data-contrast="high"] body):has(.homeTheme) {--home-line:#a5b8a7;}

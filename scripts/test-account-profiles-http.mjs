@@ -6,8 +6,9 @@ import path from 'node:path';
 import {setTimeout as delay} from 'node:timers/promises';
 import {createClient} from '@supabase/supabase-js';
 import sharp from 'sharp';
+import {preferenceDefaults} from '../src/lib/account/settings-contract.ts';
 const origin=process.env.ACCOUNT_TEST_ORIGIN??'https://meta-aprovacao.vercel.app';
-assert.ok(['https://meta-aprovacao.vercel.app','http://127.0.0.1:3085'].includes(origin));
+assert.ok(['https://meta-aprovacao.vercel.app','http://127.0.0.1:3085','http://127.0.0.1:3000'].includes(origin));
 const tag=randomUUID(),admin=createClient(process.env.NEXT_PUBLIC_SUPABASE_URL,process.env.SUPABASE_SECRET_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
 const fixtures=[],handoff=path.join(process.env.TEMP,'meta-account-browser-fixture.json'),done=handoff+'.done';
 async function request(account,route,body,status=200){
@@ -37,9 +38,27 @@ try{
  await request(a,'/api/account/profile',{action:'remove_avatar'});await request(a,'/api/account/avatar',undefined,404);
  await request(a,'/api/account/profile',{action:'save',nickname:'Perfil de teste',reduceMotion:false});
  await request(a,'/api/account/profile',{action:'avatar',image:image.toString('base64')});
+ if(process.argv.includes('--settings')){
+  const initialSettings=await(await request(a,'/api/account/settings')).json();assert.equal(initialSettings.preferences.institution,'both');
+  const preferences={...preferenceDefaults,institution:'etec',dailyGoal:15,fontSize:'large'};
+  await request(a,'/api/account/settings',{action:'save',preferences});
+  assert.equal((await(await request(a,'/api/account/settings')).json()).preferences.dailyGoal,15);
+  assert.equal((await(await request(b,'/api/account/settings')).json()).preferences.dailyGoal,10);
+  await request(b,'/api/account/settings',{action:'save',preferences,userId:a.id},400);
+  const appearance=await(await request(a,'/api/account/settings',{action:'appearance',theme:'dark',reduceMotion:true})).json();assert.equal(appearance.profile.nickname,'Perfil de teste');assert.equal(appearance.profile.theme,'dark');
+  const exported=await(await request(a,'/api/account/settings',{action:'export'})).json();assert.ok(exported.avatarWebpBase64);assert.ok(!JSON.stringify(exported).includes('encrypted_password'));
+  const second={email:a.email,password:a.password,jar:new Map()};await request(second,'/api/auth/login',{email:a.email,password:a.password});
+  await request(a,'/api/account/settings',{action:'revoke_others'});
+  assert.equal((await(await request(a,'/api/account/settings')).json()).security.sessions.length,1);
+  await request(a,'/api/account/settings',{action:'delete',confirmation:'EXCLUIR',password:'wrong-test-only'},403);
+  const result=await(await request(a,'/api/account/settings',{action:'delete',confirmation:'EXCLUIR',password:a.password})).json();assert.equal(result.status,'deleted');
+  await request(a,'/api/account/profile',undefined,401);
+  const absent=await admin.auth.admin.getUserById(a.id);assert.equal(absent.error?.status,404);assert.equal(absent.data.user,null);
+  console.log('Configurações HTTP aprovadas: persistência, isolamento, aparência sem sobrescrever nome, exportação, revogação e exclusão real somente da conta temporária.');
+ }
  console.log('HTTP aprovado: perfil gratuito, foto real reencodificada, preferências, remoção, isolamento e validação.');
  if(process.argv.includes('--browser')){
-  rmSync(done,{force:true});writeFileSync(handoff,JSON.stringify({email:a.email,password:a.password,origin}));
+  rmSync(done,{force:true});writeFileSync(handoff,JSON.stringify({email:a.email,password:a.password,origin,id:a.id,fixtureTag:tag}));
   console.log('Conta temporária pronta para conferência visual; limpeza automática em até 15 minutos.');
   for(let n=0;n<450&&!existsSync(done);n++)await delay(2000);
  }
@@ -48,6 +67,7 @@ try{
 }finally{
  for(const item of fixtures){
   const check=await admin.auth.admin.getUserById(item.id);
+  if(check.error?.status===404&&!check.data.user)continue;
   if(check.data.user?.app_metadata?.account_profile_fixture!==tag){console.error('Limpeza bloqueada: identificação da conta não confere.');process.exitCode=1;continue;}
   const removed=await admin.auth.admin.deleteUser(item.id);if(removed.error){console.error('Não foi possível remover uma conta temporária.');process.exitCode=1;continue;}
   if((await admin.auth.admin.getUserById(item.id)).data.user){console.error('Ausência de conta temporária não confirmada.');process.exitCode=1;}

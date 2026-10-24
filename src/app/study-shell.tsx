@@ -12,7 +12,7 @@ const destinations: { area: StudyArea; href: string; label: string }[] = [
   { area: "simulations", href: "/simulados", label: "Simulados" },
   { area: "history", href: "/historico", label: "Histórico" },
   { area: "statistics", href: "/estatisticas", label: "Estatísticas" },
-  { area: "premium", href: "/premium/estudos", label: "Estudos Premium" },
+  { area: "premium", href: "/premium/estudos", label: "Estudos · Premium" },
 ];
 
 export function StudyIcon({ name }: { name: StudyArea }) {
@@ -33,7 +33,7 @@ export default function StudyShell({ children, active, preview = false, focus = 
     <HomeHeader className={styles.topbar}><div className={styles.topbarInner}>
       <Link className={styles.brand} href={homeHref} aria-label={homeHref === "/login" ? "Meta Aprovação — minha conta" : "Meta Aprovação — início"}><MetaMark /><span>Meta Aprovação</span></Link>
       <div className={styles.headerActions}>
-        {(!focus || menu) && <details className={`${styles.mobileMenu} ${menu ? styles.headerMenu : ""}`}><summary>{menu ? "Menu" : "Estudos"}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></summary><nav aria-label={menu ? "Menu principal" : "Navegação de estudos no celular"}>{navigation}<Link href="/login" aria-current={active === "account" ? "page" : undefined}>Minha conta</Link></nav></details>}
+        {(!focus || menu) && <details className={`${styles.mobileMenu} ${menu ? styles.headerMenu : ""}`}><summary>{menu ? "Menu" : "Estudos"}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></summary><nav aria-label={menu ? "Menu principal" : "Navegação de estudos no celular"}>{navigation}<Link href="/login" aria-current={active === "account" ? "page" : undefined}>Minha conta</Link><Link href="/configuracoes">Configurações</Link></nav></details>}
         {!menu && <div className={styles.account}>{exit ?? <Link href="/login">Minha conta</Link>}</div>}
       </div>
     </div></HomeHeader>

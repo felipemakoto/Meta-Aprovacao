@@ -12,6 +12,9 @@ import AnalyticsPanel from "./analytics-panel";
 import CardsPanel from "./cards-panel";
 import LibraryPanel from "./library-panel";
 import styles from "./study.module.css";
+import {useDailyLimits} from "@/lib/quiz/use-daily-limits";
+import {devicePreferences,preferenceEvent} from "@/lib/account/settings-device";
+import {sessionReminderAllowed} from "@/lib/account/reminders";
 const messages:Record<string,string>={premium_required:"Seu Premium não está ativo. O Gratuito continua disponível.",login_required:"Entre novamente na sua conta.",invalid_input:"Confira os campos informados.",activity_unavailable:"Essa atividade não está disponível para sua conta.",activity_limit:"O limite de atividades foi atingido.",content_insufficient:"Não há questões validadas suficientes para essa seleção. Reduza a quantidade ou amplie os filtros.",plan_changed:"O plano foi alterado em outra aba. Atualize a página.",review_not_due:"Este cartão já foi revisado. Atualize a lista para ver os próximos.",rate_limited:"Muitas solicitações. Aguarde alguns minutos e tente novamente.",invalid_document:"Informe dois PDFs diferentes hospedados em fontes oficiais permitidas.",source_links_missing:"A página oficial precisa conter links para os dois PDFs informados.",source_unavailable:"A fonte oficial não respondeu à verificação. Nenhum documento foi cadastrado.",draft_conflict:"O rascunho mudou em outra aba. Reabra a tentativa."};
 export async function studyRequest(command:StudyCommand){
  const r=await fetch("/api/premium/study",{method:"POST",cache:"no-store",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify(command),signal:AbortSignal.timeout(35000),keepalive:command.action==="save_exam"});
@@ -19,7 +22,11 @@ export async function studyRequest(command:StudyCommand){
 }
 export default function Workspace({initial,area,collection="errors",sessionId}:{initial:WorkspaceData;area:StudyArea;collection?:ReviewCollection;sessionId?:string}){
  const [data,setData]=useState(initial),[busy,setBusy]=useState(false),[notice,setNotice]=useState(""),[error,setError]=useState(false),[reminders,setReminders]=useState(false);
- const router=useRouter(),lock=useRef(false);const periodRef=useRef(initial.days);const session=data.sessions.find(s=>s.id===sessionId);
+ const [reminderPreferences,setReminderPreferences]=useState(devicePreferences());
+ useEffect(()=>{const update=()=>{setReminderPreferences(devicePreferences());if("Notification" in window&&Notification.permission==="granted")setReminders(true);};update();window.addEventListener(preferenceEvent,update);return()=>window.removeEventListener(preferenceEvent,update);},[]);
+ const router=useRouter(),lock=useRef(false);
+ const quota=useDailyLimits(false,false);
+ useEffect(()=>{if(quota.limits?.hasPremium===false)router.refresh();},[quota.limits?.hasPremium,router]);const periodRef=useRef(initial.days);const session=data.sessions.find(s=>s.id===sessionId);
  async function reload(days=periodRef.current){const r=await fetch(`/api/premium/study?days=${days}`,{cache:"no-store",credentials:"same-origin",signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error("Não foi possível atualizar os dados.");const w=parseWorkspace(await r.json());periodRef.current=days;setData(w);}
  useEffect(()=>{
   let active=true;
@@ -31,9 +38,9 @@ export default function Workspace({initial,area,collection="errors",sessionId}:{
   if(!reminders||!("Notification" in window)||Notification.permission!=="granted")return;
   const timers=data.sessions.filter(s=>!s.completed_at&&s.reminder_minutes>0).map(s=>{
    const target=new Date(`${s.study_date}T${s.start_time.slice(0,5)}:00-03:00`).getTime()-s.reminder_minutes*60000,delay=target-Date.now();
-   if(delay<0||delay>86400000)return null;return setTimeout(()=>{new Notification("Meta Aprovação",{body:s.title+" · "+s.start_time.slice(0,5),tag:s.id});},delay);
+   if(delay<0||delay>86400000||(reminderPreferences&&!sessionReminderAllowed(s.kind,new Date(target),reminderPreferences)))return null;return setTimeout(()=>{new Notification("Meta Aprovação",{body:s.title+" · "+s.start_time.slice(0,5),tag:s.id});},delay);
   });return()=>{timers.forEach(t=>{if(t!==null)clearTimeout(t);});};
- },[data.sessions,reminders]);
+ },[data.sessions,reminders,reminderPreferences]);
  async function mutate(command:StudyCommand){
   if(lock.current)return;lock.current=true;setBusy(true);setNotice("");setError(false);
   try{

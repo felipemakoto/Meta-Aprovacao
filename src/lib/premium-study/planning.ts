@@ -9,7 +9,7 @@ export function diagnosis(groups:Group[]){
 }
 export type PlannedSession={key:string;title:string;date:string;time:string;minutes:number;subject:string;topic:string;kind:string;goal:number;reminder:number};
 export function localStudyDate(at:Date){return new Intl.DateTimeFormat("en-CA",{timeZone:"America/Sao_Paulo",year:"numeric",month:"2-digit",day:"2-digit"}).format(at);}
-export function generatePlan(workspace:Workspace,at=new Date()):PlannedSession[]{
+export function generatePlan(workspace:Workspace,at=new Date(),priorities:readonly string[]=[]):PlannedSession[]{
  const p=workspace.profile;if(!p)return [];
  const institution=workspace.institutions.find(x=>x.id===p.institution);if(!institution)throw Error("institution_unavailable");
  const eligible=Object.keys(institution.subjects),ranked=diagnosis(workspace.groups.filter(g=>g.level==="subject"));
@@ -28,7 +28,7 @@ export function generatePlan(workspace:Workspace,at=new Date()):PlannedSession[]
   if(budget<10||dayUsed>=p.dailyGoal)continue;
   const slots=Math.min(keys.length,Math.max(1,Math.floor(budget/30)));
   for(let slot=0;slot<slots;slot++){
-   weights.sort((a,b)=>a.assigned/a.weight-b.assigned/b.weight||a.subject.localeCompare(b.subject));const target=weights[0];target.assigned++;
+   weights.sort((a,b)=>a.assigned/(a.weight*(priorities.includes(a.subject)?1.5:1))-b.assigned/(b.weight*(priorities.includes(b.subject)?1.5:1))||a.subject.localeCompare(b.subject));const target=weights[0];target.assigned++;
    const length=Math.floor(budget/(slots-slot));budget-=length;
    const topic=diagnosis(workspace.groups.filter(g=>g.level==="topic"&&g.subject===target.subject)).find(g=>g.enough&&g.state==="Priorizar")?.topic??"";
    const kind=d%7===6&&slot===0?"simulation":(workspace.due.review>0&&slot===0?"review":slot===1&&d%2===0?"flashcards":"practice");

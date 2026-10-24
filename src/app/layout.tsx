@@ -7,6 +7,8 @@ import PageMotion from "./page-motion";
 import Analytics from "./analytics";
 import Script from "next/script";
 import SiteTheme from "./site-theme";
+import PremiumGate from "./premium-gate";
+import AccountPreferences from "./account-preferences";
 import {themeBootstrap} from "@/lib/account/theme";
 
 const geistSans = Geist({
@@ -34,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${displayFont.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body><Script id="meta-theme" strategy="beforeInteractive">{themeBootstrap}</Script><SiteTheme/>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/><Analytics/></Suspense></body>
+      <body><Script id="meta-theme" strategy="beforeInteractive">{themeBootstrap}</Script><SiteTheme/>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/><Analytics/><PremiumGate/><AccountPreferences/></Suspense></body>
     </html>
   );
 }

@@ -105,3 +105,10 @@ test('plano desconta sessões manuais e concluídas dos limites diários e seman
  assert.equal(generatePlan({...workspace,sessions:[earlier]},at).filter(s=>s.date<'2026-10-26').length,0);
  assert.deepEqual(generatePlan({...workspace,sessions:[fixed({archived:true,plan_key:null})]},at),generatePlan(workspace,at));
 });
+
+test('prioridades pessoais ampliam a presença da matéria sem mudar instituição, prazo ou orçamento',()=>{
+ const at=new Date('2026-10-21T12:00:00Z'),w={...workspace,profile:{...profile,weeklyGoal:700,dailyGoal:100,minutes:180}},base=generatePlan(w,at),focused=generatePlan(w,at,['matematica']);
+ assert.ok(focused.filter(s=>s.subject==='matematica').length>base.filter(s=>s.subject==='matematica').length);
+ assert.ok(focused.every(s=>s.date<=profile.examDate&&Object.hasOwn(workspace.institutions[0].subjects,s.subject)));
+ const days=new Map();for(const s of focused)days.set(s.date,(days.get(s.date)??0)+s.minutes);assert.ok([...days.values()].every(n=>n<=180));
+});

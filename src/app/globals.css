@@ -98,3 +98,12 @@ input, select, textarea, label:has(input[type="radio"]) { transition: background
   background: var(--color-highlight);
   color: var(--foreground);
 }
+/* User-controlled reading preferences; never entitlement or official exam rules. */
+html[data-font-size="large"] main p { font-size:22px;line-height:1.7; }
+html[data-contrast="high"] [data-study],html[data-contrast="high"] body:has([data-study]) {--home-muted:var(--home-ink);--home-line:#637568;}
+html[data-theme="dark"][data-contrast="high"] [data-study] {--home-line:#a5b8a7;}
+html[data-density="compact"] [data-study] main > section {margin-block:12px;}
+[data-goal-priority="true"] {padding:20px;border:1px solid var(--home-line);border-radius:16px;background:var(--home-sage);}
+
+html[data-density="compact"] main :where(ul,ol){gap:8px;}
+html[data-density="compact"] main :where(li){padding-block:8px;}

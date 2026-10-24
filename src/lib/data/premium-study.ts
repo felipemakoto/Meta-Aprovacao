@@ -1,5 +1,6 @@
 import "server-only";
 import {createHash} from "node:crypto";
+import {readPreferences} from "./account-settings";
 import {createAdminClient} from "../supabase/admin";
 import {readSubscriptionAccess} from "./subscriptions";
 import {parseSubscriptionAccess} from "../subscriptions/contract";
@@ -21,7 +22,8 @@ export async function executeStudyCommand(user:string,command:StudyCommand){
   case "save_session":return studyRpc("premium_study_session",{...p,p_id:command.id,p_request_id:command.requestId,p_session:command.session});
   case "sync_plan":{
    const w=await readStudyWorkspace(user,30);if(!w.profile)return {changed:false};
-   const items=generatePlan(w),fingerprint=createHash("sha256").update(JSON.stringify([w.profile.version,localStudyDate(new Date()),w.groups,w.due,items])).digest("hex");
+   const preferences=await readPreferences(user);
+   const items=generatePlan(w,new Date(),preferences.priorities),fingerprint=createHash("sha256").update(JSON.stringify([w.profile.version,localStudyDate(new Date()),w.groups,w.due,items])).digest("hex");
    if(w.profile.fingerprint===fingerprint)return {changed:false};
    await studyRpc("premium_study_sync_plan",{...p,p_version:w.profile.version,p_fingerprint:fingerprint,p_sessions:items});return {changed:true};
   }

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import {PremiumCatalog} from "../premium-gate";
+import StudyGoals from "../study-goals";
 import type { DashboardSummary } from "@/lib/quiz/dashboard-contract";
 import StudyShell, { StudyIcon } from "../study-shell";
 import styles from "./dashboard.module.css";
@@ -12,6 +14,7 @@ export default function Dashboard({ summary, preview = false, activity = null }:
     <main className={styles.page}>
       <h1 className={styles.title}>Seus estudos</h1>
       <p className={styles.intro}>Questões, simulados e respostas para revisar.</p>
+      {!preview&&<StudyGoals/>}
       {!preview&&<p><Link className={styles.textLink} href="/premium/estudos">Abrir plano, revisões e recursos Premium</Link></p>}
       {summary === null ? <section className={styles.card} aria-labelledby="dashboard-error">
         <h2 id="dashboard-error" className={styles.cardTitle}>Não foi possível carregar seus estudos</h2>
@@ -49,6 +52,7 @@ export default function Dashboard({ summary, preview = false, activity = null }:
           <Link className={styles.material} href={route("/simulados")}><span className={`${styles.materialArt} ${styles.simulationArt}`}><StudyIcon name="simulations" /></span><h3>Simulados</h3><p>Responda no seu ritmo e confira o resultado ao finalizar.</p><span className={styles.materialAction}>Ver simulados</span></Link>
         </div>
       </section>
+      {!preview&&<><h2>Ferramentas Premium</h2><PremiumCatalog/></>}
       <p className={styles.footer}>{preview ? "Dados ilustrativos." : "Testes salvos, questões praticadas e simulados concluídos."}</p>
     </main>
   </StudyShell>;
