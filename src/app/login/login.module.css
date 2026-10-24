@@ -2,6 +2,8 @@
 .content > h1 { margin: 0; font: 600 clamp(28px, 4vw, 38px)/1.25 var(--home-font); letter-spacing: -.035em; }
 .content > p { color: var(--home-muted); font-size: 18px; line-height: 1.6; }
 .actions { display: grid; gap: 14px; margin-top: 32px; }
+.quickLinks { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px; }
+.quickLinks .action { font-size: 16px; }
 .action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; padding: 16px 20px; border: 1px solid var(--home-line); border-radius: 12px; background: white; color: var(--home-ink); font-size: 18px; line-height: 1.5; font-weight: 600; text-decoration: none; box-shadow: none; }
 .action svg { width: 22px; height: 22px; flex-shrink: 0; }
 .action:hover { background: var(--home-sage); border-color: var(--home-green); }

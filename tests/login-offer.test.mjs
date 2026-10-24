@@ -6,6 +6,7 @@ import Module,{createRequire} from 'node:module';
 import ts from 'typescript';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
+import {parseAccountProfile} from '../src/lib/account/contract.ts';
 import {parseSubscriptionAccess} from '../src/lib/subscriptions/contract.ts';
 
 // Render the actual page and client component, replacing only server services and CSS.
@@ -17,7 +18,8 @@ function loadTsx(relative,dependencies={}) {
  mod._compile(ts.transpileModule(readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText,filename);
  return mod.exports.default;
 }
-const LoginForm=loadTsx('../src/app/login/login-form.tsx',{'../google-auth-button':{__esModule:true,default:()=>null}});
+const AccountPanel=loadTsx('../src/app/login/account-profile.tsx',{'@/lib/account/contract':{parseAccountProfile},'@/lib/account/preferences':{applyMotionPreference:()=>{}},'../analytics':{AnalyticsPreferences:()=>null}});
+const LoginForm=loadTsx('../src/app/login/login-form.tsx',{'../google-auth-button':{__esModule:true,default:()=>null},'./account-profile':{__esModule:true,default:AccountPanel}});
 const verified={id:'verified-owner',email_confirmed_at:'2026-10-01T12:00:00Z'};
 async function render({user=verified,access={hasPremium:false,accessUntil:null},authFailure=false,readFailure=false}={}) {
  const reads=[];
@@ -60,4 +62,12 @@ test('falha de autenticação mantém recuperação da tela, sem consultar plano
 });
 test('props ausentes ou visitante não exibem oferta por padrão',()=>{
  for(const props of [{signedIn:true},{signedIn:false,showPremiumOffer:true}])assert.doesNotMatch(renderToStaticMarkup(createElement(LoginForm,props)),/Desbloquear Premium/);
+});
+
+
+test('minha conta oferece perfil e configurações sem o aviso antigo de sessão',async()=>{
+ const {html}=await render();assert.match(html,/Minha conta/);
+ for(const label of ['Alterar foto','Nickname','Configurações do perfil','Reduzir animações','Histórico de estudos','Minhas estatísticas'])assert.ok(html.includes(label));
+ assert.doesNotMatch(html,/Sua sessão está ativa neste navegador/);
+ const guest=await render({user:null});assert.doesNotMatch(guest.html,/Configurações do perfil|Alterar foto/);
 });

@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "../cadastro/signup.module.css";
 import accountStyles from "./login.module.css";
 import GoogleAuthButton from "../google-auth-button";
+import AccountProfilePanel from "./account-profile";
 
 const messages: Record<string, string> = {
   request_timeout: "O envio demorou demais. Confira sua conexão e tente novamente.",
@@ -13,7 +14,7 @@ const messages: Record<string, string> = {
   invalid_input: "Confira o e-mail e a senha antes de enviar.",
   auth_unavailable: "Não foi possível concluir agora. Tente novamente em alguns minutos.",
 };
-export default function LoginForm({ signedIn, showPremiumOffer=false }: { signedIn: boolean; showPremiumOffer?: boolean }) {
+export default function LoginForm({ signedIn, showPremiumOffer=false,email="" }: { signedIn: boolean; showPremiumOffer?: boolean;email?:string }) {
   const [visible, setVisible] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -39,11 +40,12 @@ export default function LoginForm({ signedIn, showPremiumOffer=false }: { signed
     finally { lock.current = false; setBusy(false); requestAnimationFrame(() => alert.current?.focus()); }
   }
   return <section className={accountStyles.content}>
-    <h1 className={styles.title}>{signedIn ? "Você está na sua conta" : "Entrar"}</h1>
-    {signedIn && <p className={styles.subtitle}>Sua sessão está ativa neste navegador.</p>}
+    <h1 className={styles.title}>{signedIn ? "Minha conta" : "Entrar"}</h1>
+    {signedIn && <AccountProfilePanel email={email}/>}
     {signedIn && <nav className={accountStyles.actions} aria-label="Continuar na plataforma">
       <Link className={`${accountStyles.action} ${accountStyles.primary}`} href="/dashboard">Meus estudos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
       <Link className={`${accountStyles.action} ${accountStyles.simulation}`} href="/simulados"><span>Fazer um simulado</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></Link>
+      <div className={accountStyles.quickLinks}><Link className={accountStyles.action} href="/historico">Histórico de estudos</Link><Link className={accountStyles.action} href="/estatisticas">Minhas estatísticas</Link></div>
       {showPremiumOffer && <Link className={`${accountStyles.action} ${accountStyles.upgrade}`} href="/premium"><span>Desbloquear Premium</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m7 17 10-10M7 7h10v10"/></svg></Link>}
     </nav>}
     {!signedIn && <div className={accountStyles.google}><GoogleAuthButton disabled={busy} onPending={setBusy}/></div>}

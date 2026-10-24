@@ -14,5 +14,5 @@ export default async function LoginPage() {
     try { showPremiumOffer = !parseSubscriptionAccess(await readSubscriptionAccess(user.id)).hasPremium; }
     catch { /* Keep account actions available without assuming a free plan. */ }
   }
-  return <LoginForm signedIn={!!user} showPremiumOffer={showPremiumOffer} />;
+  return <LoginForm signedIn={!!user} showPremiumOffer={showPremiumOffer} email={user?.email??""} />;
 }

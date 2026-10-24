@@ -8,6 +8,7 @@ export default function PrivacyPage() {
     <h2>Quem é responsável</h2><p>A Meta Aprovação é responsável pela operação desta plataforma. O contato para questões sobre dados pessoais é <a href="mailto:metaaprovacao720@gmail.com">metaaprovacao720@gmail.com</a>.</p>
     <h2>Dados que utilizamos</h2><ul>
       <li><strong>Conta:</strong> e-mail, identificador de usuário e informações de autenticação necessárias ao cadastro, confirmação, entrada e recuperação de senha.</li>
+      <li><strong>Perfil opcional:</strong> nickname, foto enviada por você e preferência para reduzir animações. A foto é convertida em uma miniatura sem os metadados originais e fica acessível somente na sua conta. Você pode alterar ou remover a foto em Minha conta. A preferência de animações também é guardada neste navegador.</li>
       <li><strong>Entrada com Google, quando escolhida:</strong> dados básicos de identificação disponibilizados pela conta, como e-mail, nome e foto de perfil. A senha do Google não passa pelo site e a integração não solicita acesso à caixa de e-mails.</li>
       <li><strong>Documentos do cadastro:</strong> confirmação de concordância com os termos, ciência da política de privacidade, versão dos documentos e data do envio registrada pelo servidor.</li>
       <li><strong>Estudos:</strong> respostas, resultados, assuntos praticados, tentativas, datas, duração e consumo dos limites diários.</li>
