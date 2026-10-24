@@ -16,11 +16,11 @@
 .outlineButton:hover { background: var(--home-sage); }
 .mobileMenu { display: none; }
 .hero { background: var(--home-canvas); }
-.heroInner { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; gap: 40px; padding-block: 72px 88px; }
-.heroCopy { min-width: 0; text-align: center; }
-.title { margin: 0 auto; font: 500 clamp(48px, 4.8vw, 68px)/1.12 var(--home-display); letter-spacing: -.04em; text-wrap: balance; }
-.intro { max-width: 42ch; margin: 28px auto 0; color: var(--home-muted); font-size: 21px; line-height: 1.65; }
-.heroExperience { min-width: 0; width: 100%; max-width: 480px; justify-self: center; }
+.heroInner { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 76px; padding-block: 72px 88px; }
+.heroCopy { min-width: 0; }
+.title { margin: 0; font: 500 clamp(48px, 4.8vw, 68px)/1.12 var(--home-display); letter-spacing: -.04em; text-wrap: balance; }
+.intro { max-width: 42ch; margin: 28px 0 0; color: var(--home-muted); font-size: 21px; line-height: 1.65; }
+.heroExperience { position: relative; top: -16px; min-width: 0; width: 100%; max-width: 480px; justify-self: end; }
 .heroActions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .heroActions > a { flex: 1 1 auto; padding-inline: 20px; }
 .primaryButton, .startButton, .secondaryButton { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 16px 28px; border: 1px solid transparent; border-radius: 32px; background: var(--home-green); color: white; font: 700 17px/1.35 var(--home-font); text-decoration: none; text-align: center; transition: transform var(--home-motion-fast) var(--home-ease), background-color var(--home-motion-fast) ease; }
@@ -113,7 +113,7 @@
   .title { max-width: 16ch; font-size: clamp(42px, 9.6vw, 60px); }
   .intro { margin-top: 24px; }
   .intro br { display: none; }
-  .heroExperience { display: flex; flex-direction: column; gap: 24px; justify-self: center; }
+  .heroExperience { top: 0; display: flex; flex-direction: column; gap: 24px; justify-self: center; }
   .heroActions { order: -1; margin-top: 0; }
   .demo { max-width: 480px; justify-self: center; padding: 28px; border-radius: 24px; }
   .demo h2 { font-size: 28px; }
