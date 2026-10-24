@@ -15,10 +15,15 @@
 .edit:hover { background:var(--home-sage);color:var(--home-ink); }
 .who h2 { margin: 0; font-size: 24px; line-height: 1.35; overflow-wrap: anywhere; }
 .who p { margin: 4px 0; font-size: 16px; color: var(--home-muted); overflow-wrap: anywhere; }
-.photoActions { display: flex; flex-wrap: wrap; column-gap: 18px; }
+.photoActions { display: flex;align-items:center;flex-wrap:wrap;gap:12px 18px; }
 .photoSettings { margin-block:20px;padding-bottom:16px;border-bottom:1px solid var(--home-line); }
 .photoSettings h3 { margin:0 0 4px;font-size:18px;font-weight:600; }
 .photoActions button { min-height: 44px; padding: 4px 0; border: 0; background: transparent; color: var(--home-accent, var(--home-green)); font: inherit; font-size: 16px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.photoActions .photoEdit { position:relative;flex:0 0 76px;width:76px;height:76px;padding:6px 12px 6px 0;text-decoration:none;border-radius:50%; }
+.photoEdit .avatar { width:64px;height:64px;font-size:26px; }
+.photoPencil { position:absolute;right:0;bottom:2px;display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--home-line);border-radius:50%;background:var(--home-paper); }
+.photoPencil svg { width:15px;height:15px; }
+.photoEdit:hover .photoPencil { background:var(--home-sage); }
 .file { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
 .settings { width:min(520px,calc(100% - 24px));max-height:calc(100dvh - 40px);margin:auto;padding:24px;border:1px solid var(--home-line);border-radius:20px;background:var(--home-paper);color:var(--home-ink);box-shadow:var(--home-nav-shadow);font-family:var(--home-font);overflow:auto;overscroll-behavior:contain; }
 .settings::backdrop { background:rgb(0 0 0 / 40%); }
