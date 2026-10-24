@@ -109,7 +109,7 @@
   .brand { gap: 8px; }
   .brand img { width: 32px; height: 32px; }
   .brandName { font-size: 19px; }
-  .heroInner { grid-template-columns: 1fr; gap: 36px; padding-block: 40px 48px; }
+  .heroInner { grid-template-columns: 1fr; gap: 36px; padding-block: 24px 48px; }
   .title { max-width: 16ch; font-size: clamp(42px, 9.6vw, 60px); }
   .intro { margin-top: 24px; }
   .intro br { display: none; }
