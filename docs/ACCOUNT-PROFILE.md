@@ -21,3 +21,5 @@ Theme is saved privately in the account; its browser copy applies before hydrati
 ## Registration name
 
 The UI calls the existing private nickname field Nome (no duplicate column). Email registration validates and stores the name as Auth display metadata. On the first profile read, a verified user with name/full_name metadata initializes a private profile once; existing profile edits are never overwritten. Google supplies its display name through the existing OAuth scope. Metadata never controls entitlements. Apply 20261024190000_account_signup_name.sql before publishing; SQL --candidate-name tests initialization from email/Google metadata and preservation of edits. Names remain editable in account settings. Photo actions are grouped in the settings menu, without an upload success notice. Cookie preferences remain available in the footer.
+
+A small pencil beside the display name opens the name/photo editor. The gear also retains the photo section; both entry points reuse the same photo controls and private API.

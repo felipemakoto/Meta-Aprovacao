@@ -9,6 +9,10 @@
 .avatar { display: grid; place-items: center; flex: 0 0 88px; width: 88px; height: 88px; overflow: hidden; border-radius: 50%; background: var(--home-sage); color: var(--home-accent, var(--home-green)); font-size: 34px; font-weight: 700; }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
 .who { min-width: 0; }
+.nameRow { display:flex;align-items:center;gap:4px; }
+.edit { display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;padding:11px;border:0;border-radius:50%;background:transparent;color:var(--home-muted);cursor:pointer; }
+.edit svg { width:18px;height:18px; }
+.edit:hover { background:var(--home-sage);color:var(--home-ink); }
 .who h2 { margin: 0; font-size: 24px; line-height: 1.35; overflow-wrap: anywhere; }
 .who p { margin: 4px 0; font-size: 16px; color: var(--home-muted); overflow-wrap: anywhere; }
 .photoActions { display: flex; flex-wrap: wrap; column-gap: 18px; }
