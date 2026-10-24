@@ -112,7 +112,8 @@
   .title { max-width: 16ch; font-size: clamp(42px, 9.6vw, 60px); }
   .intro { margin-top: 24px; }
   .intro br { display: none; }
-  .heroExperience { justify-self: center; }
+  .heroExperience { display: flex; flex-direction: column; gap: 24px; justify-self: center; }
+  .heroActions { order: -1; margin-top: 0; }
   .demo { max-width: 480px; justify-self: center; padding: 28px; border-radius: 24px; }
   .demo h2 { font-size: 28px; }
   .demoQuestion { font-size: 23px; }
