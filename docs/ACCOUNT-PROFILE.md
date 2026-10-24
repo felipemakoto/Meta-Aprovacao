@@ -17,3 +17,7 @@ Validation: `node --test tests/account.test.mjs tests/login-offer.test.mjs`; `no
 A circular gear opens a native modal with keyboard/focus handling, read-only server-confirmed plan, nickname, light/dark/system theme, reduced motion, password reset and cookie preferences. A failed plan lookup never implies Premium.
 
 Theme is saved privately in the account; its browser copy applies before hydration and follows OS changes in system mode. Existing profile clients remain compatible and preserve saved theme. Apply 20261024180000_account_theme.sql before the new app; rollback app first and retain additive data/RPCs. Validate with tests/theme.test.mjs and SQL --candidate-theme before applying, without flags afterward.
+
+## Registration name
+
+The UI calls the existing private nickname field Nome (no duplicate column). Email registration validates and stores the name as Auth display metadata. On the first profile read, a verified user with name/full_name metadata initializes a private profile once; existing profile edits are never overwritten. Google supplies its display name through the existing OAuth scope. Metadata never controls entitlements. Apply 20261024190000_account_signup_name.sql before publishing; SQL --candidate-name tests initialization from email/Google metadata and preservation of edits. Names remain editable in account settings. Photo actions are grouped in the settings menu, without an upload success notice. Cookie preferences remain available in the footer.

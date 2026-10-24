@@ -7,7 +7,7 @@ export function parseAccountCommand(value:unknown):AccountCommand{
  const v=value as Record<string,unknown>,keys=Object.keys(v).sort().join();
  if(v.action==="save"&&["action,nickname,reduceMotion","action,nickname,reduceMotion,theme"].includes(keys)&&typeof v.nickname==="string"&&typeof v.reduceMotion==="boolean"){
   const nickname=v.nickname.normalize("NFC").trim();
-  if(nickname.length>32||(nickname!==""&&!/^[\p{L}\p{M}\p{N}_. -]{2,32}$/u.test(nickname)))throw Error("invalid_input");
+  if(nickname.length>32||(nickname!==""&&!/^[\p{L}\p{M}\p{N}_. '-]{2,32}$/u.test(nickname)))throw Error("invalid_input");
   if("theme" in v&&!themes.includes(v.theme as Theme))throw Error("invalid_input");
   return {action:"save",nickname,reduceMotion:v.reduceMotion,...("theme" in v?{theme:v.theme as Theme}:{})};
  }

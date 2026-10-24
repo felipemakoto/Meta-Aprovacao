@@ -5,7 +5,7 @@ import { parseSignup } from '../src/lib/auth/signup-contract.ts';
 import { createSignupHandlers } from '../src/lib/auth/signup-http.ts';
 import {legalDocuments} from '../src/lib/auth/legal-documents.ts';
 const origin = 'https://estudos.example';
-const input = {email:'aluno@example.test', password:'apenas-teste-123',confirmPassword:'apenas-teste-123',acceptedLegal:true,legalVersion:legalDocuments.version};
+const input = {name:'Aluno Teste',email:'aluno@example.test', password:'apenas-teste-123',confirmPassword:'apenas-teste-123',acceptedLegal:true,legalVersion:legalDocuments.version};
 const req = (body=input,headers={},query='') => new NextRequest(origin+'/api/auth/signup'+query,{method:'POST',headers:{origin,'content-type':'application/json',...headers},body:typeof body==='string'?body:JSON.stringify(body)});
 const handlers = (overrides={},settings={secure:true,origin}) => createSignupHandlers({signedIn:async()=>false,signup:async()=>({error:null,confirmed:false}),exchange:async()=>true,...overrides},settings);
 
@@ -17,7 +17,7 @@ test('cadastro não devolve identidade, senha ou sessão e destino é fixo',asyn
  let received;
  const r=await handlers({signup:async value=>{received=value;return {error:null,confirmed:false,user:{id:'private'},session:{access_token:'secret'}};}}).POST(req());
  assert.equal(r.status,202); assert.deepEqual(await r.json(),{status:'check_email'});
- assert.deepEqual(received,{email:input.email,password:input.password,redirectTo:origin+'/auth/confirm',agreement:{version:legalDocuments.version,terms_accepted:true,privacy_acknowledged:true,accepted_at:received.agreement.accepted_at}});
+ assert.deepEqual(received,{name:input.name,email:input.email,password:input.password,redirectTo:origin+'/auth/confirm',agreement:{version:legalDocuments.version,terms_accepted:true,privacy_acknowledged:true,accepted_at:received.agreement.accepted_at}});
  assert.ok(Math.abs(Date.now()-Date.parse(received.agreement.accepted_at))<5000);
  assert.match(r.headers.get('cache-control'),/private.*no-store/);
 });
@@ -74,4 +74,9 @@ test('callback local preserva host do cookie e rejeita host arbitrário',async()
  const make=host=>new NextRequest('http://localhost:3000/auth/confirm?code=abcdefghijklmnop',{headers:{host}});
  assert.equal((await h.GET(make('127.0.0.1:3000'))).headers.get('location'),'http://127.0.0.1:3000/cadastro/confirmado');
  assert.equal((await h.GET(make('evil.example'))).status,503);
+});
+
+test('nome é normalizado e obrigatório, sem aceitar HTML ou campos de permissão',()=>{
+ assert.equal(parseSignup({...input,name:"  João D'Ávila  "}).name,"João D'Ávila");
+ for(const name of [undefined,null,'','A','A'.repeat(33),'<script>','Ana\nMaria'])assert.equal(parseSignup({...input,name}),null);
 });

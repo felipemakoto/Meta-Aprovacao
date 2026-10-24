@@ -90,7 +90,7 @@ try {
     select true as signup_delivery_preflight;`, 'signup_delivery_preflight');
   phase = 'public_signup'; attempted = true;
   assert.deepEqual(await json('/api/auth/signup', {expected: 202, body: {
-    email, password, confirmPassword: password, acceptedLegal: true, legalVersion: legalDocuments.version,
+    name: 'Aluno Teste', email, password, confirmPassword: password, acceptedLegal: true, legalVersion: legalDocuments.version,
   }}), {status: 'check_email'});
   query(`begin;set local statement_timeout='15s';
     do $$begin if (select count(*) from auth.users where ${fixtureScope()} and email_confirmed_at is null)<>1

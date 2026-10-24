@@ -67,8 +67,10 @@ test('props ausentes ou visitante não exibem oferta por padrão',()=>{
 
 test('minha conta oferece perfil e configurações sem o aviso antigo de sessão',async()=>{
  const {html}=await render();assert.match(html,/Minha conta/);
- for(const label of ['Alterar foto','Nickname','Abrir configurações','Reduzir animações','Histórico de estudos','Minhas estatísticas'])assert.ok(html.includes(label));
+ for(const label of ['Alterar foto','Nome','Abrir configurações','Reduzir animações','Histórico de estudos','Minhas estatísticas'])assert.ok(html.includes(label));
  assert.doesNotMatch(html,/Sua sessão está ativa neste navegador/);
+ assert.doesNotMatch(html,/Nickname|JPG, PNG ou WebP de até 2 MB|Foto atualizada/);
+ assert.match(html,/<h3 id="account-photo-title">Foto de perfil<\/h3>/);
  const guest=await render({user:null});assert.doesNotMatch(guest.html,/Abrir configurações|Alterar foto/);
 });
 

@@ -1,8 +1,14 @@
 do $$
-declare a uuid:=gen_random_uuid();b uuid:=gen_random_uuid();unverified uuid:=gen_random_uuid();image text:='__AVATAR__';version uuid;n int;denied boolean;role_name text;f text;
+declare a uuid:=gen_random_uuid();b uuid:=gen_random_uuid();unverified uuid:=gen_random_uuid();named uuid:=gen_random_uuid();google_user uuid:=gen_random_uuid();image text:='__AVATAR__';version uuid;n int;denied boolean;role_name text;f text;
 begin
  insert into auth.users(id,email_confirmed_at) values(a,clock_timestamp()),(b,clock_timestamp()),(unverified,null);
  if public.read_account_profile(a)<>jsonb_build_object('nickname','','reduceMotion',false,'avatarVersion',null,'theme','light') then raise exception 'account_default';end if;
+ insert into auth.users(id,email_confirmed_at,raw_user_meta_data) values
+ (named,clock_timestamp(),' {"name":"João Teste"}'::jsonb),
+ (google_user,clock_timestamp(),'{"full_name":"Maria Google"}'::jsonb);
+ if public.read_account_profile(named)->>'nickname'<>'João Teste' or public.read_account_profile(google_user)->>'nickname'<>'Maria Google' then raise exception 'account_signup_name';end if;
+ perform public.save_account_settings(named,'Nome editado',true,'dark');
+ if public.read_account_profile(named)->>'nickname'<>'Nome editado' or public.read_account_profile(named)->>'theme'<>'dark' then raise exception 'account_name_overwrite';end if;
  if public.read_account_avatar(a) is not null then raise exception 'account_default_avatar';end if;
  perform public.save_account_settings(a,'Aluno A',true,'dark');
  if public.read_account_profile(a)->>'theme'<>'dark' or public.read_account_profile(b)->>'theme'<>'light' then raise exception 'account_theme_isolation';end if;

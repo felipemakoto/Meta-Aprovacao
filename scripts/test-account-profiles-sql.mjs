@@ -5,7 +5,7 @@ import {randomUUID} from 'node:crypto';
 import path from 'node:path';
 import sharp from 'sharp';
 const require=createRequire(import.meta.url),pkg=require.resolve('supabase/package.json'),cli=path.resolve(path.dirname(pkg),require(pkg).bin.supabase);
-const migrations=process.argv.includes('--candidate-theme')?['20261024180000_account_theme.sql']:process.argv.includes('--candidate')?['20261024160000_private_account_profiles.sql','20261024180000_account_theme.sql']:[];
+const migrations=process.argv.includes('--candidate-name')?['20261024190000_account_signup_name.sql']:process.argv.includes('--candidate-theme')?['20261024180000_account_theme.sql']:process.argv.includes('--candidate')?['20261024160000_private_account_profiles.sql','20261024180000_account_theme.sql']:[];
 const candidate=migrations.map(file=>readFileSync('supabase/migrations/'+file,'utf8')).join('\n');
 const image=(await sharp({create:{width:16,height:16,channels:3,background:'#237b38'}}).webp().toBuffer()).toString('base64');
 const file=path.resolve('supabase/.temp/account-profiles-'+randomUUID()+'.sql');

@@ -14,7 +14,7 @@ test('HTTP rejeita cadastro inválido e CSRF sem criar usuário ou enviar e-mail
  }
 });
 test('HTTP exige concordância sem chegar ao envio de confirmação',async()=>{
- const input={email:'somente-teste@example.test',password:'teste-concordancia-59',confirmPassword:'teste-concordancia-59',legalVersion:legalDocuments.version};
+ const input={name:'Aluno Teste',email:'somente-teste@example.test',password:'teste-concordancia-59',confirmPassword:'teste-concordancia-59',legalVersion:legalDocuments.version};
  for(const acceptedLegal of [undefined,false,'true']){
   const response=await fetch(origin+'/api/auth/signup',{method:'POST',headers:{origin,'content-type':'application/json'},body:JSON.stringify({...input,acceptedLegal})});
   assert.equal(response.status,400);assert.deepEqual(await response.json(),{error:'invalid_input'});
