@@ -3,6 +3,7 @@ import Image from "next/image";
 import StartTestButton from "./start-test-button";
 import { HomeIcon, MetaMark } from "./home-art";
 import HomeDemo from "./home-demo";
+import HomeHeader from "./home-header";
 import theme from "./home-theme.module.css";
 import styles from "./home.module.css";
 
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <div className={`${theme.homeTheme} ${styles.page}`}>
       <a className={styles.skipLink} href="#conteudo">Pular para o conteúdo</a>
-      <header className={styles.header}>
+      <HomeHeader>
         <div className={styles.headerInner}>
           <Link className={styles.brand} href="/" aria-label="Meta Aprovação — início">
             <MetaMark /><span className={styles.brandName}>Meta Aprovação</span>
@@ -27,7 +28,7 @@ export default function Home() {
             </nav>
           </details>
         </div>
-      </header>
+      </HomeHeader>
       <main id="conteudo" tabIndex={-1}>
         <section className={styles.hero} aria-labelledby="home-title"><div className={styles.heroInner}>
           <div className={styles.heroCopy}>
