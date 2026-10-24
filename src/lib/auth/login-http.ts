@@ -7,6 +7,7 @@ type Dependencies = {
   signedIn: () => Promise<boolean>;
   login: (input: LoginInput) => Promise<{ error: AuthError }>;
   logout: () => Promise<{ error: AuthError }>;
+  allowLogin?: (request:NextRequest,input:LoginInput)=>Promise<boolean>;
 };
 export function createLoginHandlers(deps: Dependencies, settings: { secure: boolean; origin?: string }) {
   const json = (data: unknown, status = 200) => NextResponse.json(data, { status, headers: authHeaders });
@@ -26,6 +27,9 @@ export function createLoginHandlers(deps: Dependencies, settings: { secure: bool
       const input = parseLogin(body);
       if (!input) return json({ error: "invalid_input" }, 400);
       if (await deps.signedIn()) return json({ status: "signed_in" });
+      if(deps.allowLogin&&!await deps.allowLogin(request,input)){
+        const response=json({error:"rate_limited"},429);response.headers.set("Retry-After","300");return response;
+      }
       const { error } = await deps.login(input);
       if (error) {
         if (error.status === 429 || error.code === "over_request_rate_limit") return json({ error: "rate_limited" }, 429);

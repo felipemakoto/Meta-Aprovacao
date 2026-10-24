@@ -6,6 +6,7 @@ import {parseSubscriptionAccess} from "../subscriptions/contract";
 import {parseWorkspace,type StudyCommand} from "../premium-study/contract";
 import {generatePlan,localStudyDate} from "../premium-study/planning";
 import {verifyOfficialDocument} from "../premium-study/documents";
+import {registerStudyDocument} from "../premium-study/document-registration";
 const errors=new Set(["login_required","premium_required","invalid_input","invalid_answers","activity_unavailable","activity_limit","institution_unavailable","content_insufficient","plan_changed","rate_limited","review_not_due","attempt_unavailable","draft_conflict"]);
 export async function requireStudyPremium(user:string){if(!parseSubscriptionAccess(await readSubscriptionAccess(user)).hasPremium)throw Error("premium_required");}
 export async function studyRpc(name:string,args:Record<string,unknown>){
@@ -28,6 +29,11 @@ export async function executeStudyCommand(user:string,command:StudyCommand){
   case "save_exam":return studyRpc("premium_study_save_exam",{...p,p_id:command.id,p_answers:command.answers,p_marked:command.marked,p_revision:command.revision});
   case "finish_exam":return studyRpc("premium_study_finish_exam",{...p,p_id:command.id,p_answers:command.answers});
   case "rate_card":return studyRpc("premium_study_rate",{...p,p_question_id:command.questionId,p_mode:command.mode,p_rating:command.rating,p_request_id:command.requestId});
-  case "register_document":await verifyOfficialDocument(command.document);return studyRpc("premium_study_document",{...p,p_document:command.document});
+  case "register_document":return registerStudyDocument(command.document,{
+   reserve:async()=>{const lease=await studyRpc("reserve_document_verification",p);if(typeof lease!=="string"||!/^[a-f0-9-]{36}$/.test(lease))throw Error("study_unavailable");return lease;},
+   verify:verifyOfficialDocument,
+   save:document=>studyRpc("premium_study_document",{...p,p_document:document}),
+   release:async lease=>{await studyRpc("release_document_verification",{...p,p_lease:lease});},
+  });
  }
 }

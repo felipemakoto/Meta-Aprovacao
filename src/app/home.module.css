@@ -1,4 +1,5 @@
-.page { width: 100%; background: var(--home-paper); }
+.page { width: 100%; background: var(--home-canvas); }
+.page > main { background: var(--home-paper); }
 .heroInner, .practice, .method, .signupInner { width: min(100% - 64px, var(--home-width)); margin-inline: auto; }
 .skipLink { position: absolute; z-index: 30; top: 8px; left: 24px; padding: 12px 16px; transform: translateY(-200%); background: var(--home-paper); color: var(--home-green); font-weight: 700; }
 .skipLink:focus-visible { transform: translateY(0); }
