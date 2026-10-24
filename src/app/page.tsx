@@ -6,6 +6,7 @@ import HomeDemo from "./home-demo";
 import HomeHeader from "./home-header";
 import theme from "./home-theme.module.css";
 import styles from "./home.module.css";
+import {InstallLink} from "./pwa/provider";
 
 export default function Home() {
   return (
@@ -17,12 +18,14 @@ export default function Home() {
             <MetaMark /><span className={styles.brandName}>Meta Aprovação</span>
           </Link>
           <nav className={styles.desktopNav} aria-label="Navegação principal">
+            <InstallLink/>
             <Link href="/questoes">Questões</Link><Link href="/simulados">Simulados</Link>
             <Link href="/login">Entrar</Link><Link className={styles.outlineButton} href="/cadastro">Criar conta</Link>
           </nav>
           <details className={styles.mobileMenu}>
             <summary>Menu<span aria-hidden="true"><span /><span /></span></summary>
             <nav aria-label="Navegação principal no celular">
+              <InstallLink/>
               <Link href="/questoes">Questões</Link><Link href="/simulados">Simulados</Link>
               <Link href="/login">Entrar</Link><Link href="/cadastro">Criar conta</Link>
             </nav>

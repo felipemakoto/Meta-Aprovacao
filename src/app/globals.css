@@ -107,3 +107,8 @@ html[data-density="compact"] [data-study] main > section {margin-block:12px;}
 
 html[data-density="compact"] main :where(ul,ol){gap:8px;}
 html[data-density="compact"] main :where(li){padding-block:8px;}
+body{padding-inline:env(safe-area-inset-left) env(safe-area-inset-right);padding-top:env(safe-area-inset-top);}
+body>footer{padding-bottom:max(24px,env(safe-area-inset-bottom));}
+.pwa-update{position:fixed;z-index:240;bottom:calc(12px + env(safe-area-inset-bottom));left:16px;right:16px;margin:auto;max-width:680px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border:1px solid var(--control-border);border-radius:16px;background:var(--control-surface);color:var(--foreground);font-size:16px;line-height:1.5;box-shadow:0 4px 20px #0001;}
+.pwa-update a{display:inline-flex;align-items:center;min-height:44px;color:var(--home-accent,var(--color-action));text-decoration:underline;text-underline-offset:4px;}
+@media(max-width:500px){.pwa-update{flex-direction:column;align-items:flex-start;gap:4px;}}

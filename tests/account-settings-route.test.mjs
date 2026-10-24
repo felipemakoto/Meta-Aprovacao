@@ -7,9 +7,9 @@ import ts from 'typescript';
 import {NextRequest} from 'next/server.js';
 import {trustedAuthOrigin,authHeaders} from '../src/lib/auth/signup-http.ts';
 import {readAuthJson,AuthBodyError} from '../src/lib/auth/request-body.ts';
-import {parsePreferences,preferenceDefaults} from '../src/lib/account/settings-contract.ts';
+import {parsePreferences,preferenceDefaults,changesPremiumPreferences} from '../src/lib/account/settings-contract.ts';
 const origin='https://settings.example';process.env.APP_ORIGIN=origin;
-function load({authenticated=true,provider='email',passwordOK=true,financial=false,amr=[{method:'oauth',timestamp:Math.floor(Date.now()/1000)}]}={}){
+function load({authenticated=true,provider='email',passwordOK=true,financial=false,premium=false,subscriptionFailure=false,currentPreferences=preferenceDefaults,amr=[{method:'oauth',timestamp:Math.floor(Date.now()/1000)}]}={}){
  const calls=[];const user={id:'owner',email:'owner@example.test',email_confirmed_at:'2026-10-24',app_metadata:{provider},user_metadata:{}};
  const client={auth:{getClaims:async()=>({data:{claims:{sub:'owner',amr}},error:null}),getSession:async()=>({data:{session:{access_token:'opaque'}}}),signOut:async()=>{calls.push('signout');return {error:null};}}};
  const stubs={
@@ -21,9 +21,11 @@ function load({authenticated=true,provider='email',passwordOK=true,financial=fal
  '@/lib/auth/user':{getVerifiedUser:async()=>authenticated?user:null},
  '@/lib/auth/signup-http':{trustedAuthOrigin,authHeaders},
  '@/lib/auth/request-body':{readAuthJson,AuthBodyError},
- '@/lib/data/account-settings':{readPreferences:async()=>preferenceDefaults,accountSettingsRpc:async(name,args)=>{calls.push([name,args]);if(name==='delete_unbilled_account'){if(financial)throw Error('subscription_review_required');return true;}return name==='account_security_summary'?{sessions:[]}:{};}},
+ '@/lib/data/account-settings':{readPreferences:async()=>currentPreferences,accountSettingsRpc:async(name,args)=>{calls.push([name,args]);if(name==='delete_unbilled_account'){if(financial)throw Error('subscription_review_required');return true;}return name==='account_security_summary'?{sessions:[]}:{};}},
  '@/lib/data/account':{readAccountAvatar:async()=>null,reserveAccountUpdate:async id=>calls.push(['reserve',id])},
- '@/lib/account/settings-contract':{parsePreferences},
+ '@/lib/account/settings-contract':{parsePreferences,changesPremiumPreferences},
+ '@/lib/data/subscriptions':{readSubscriptionAccess:async()=>{if(subscriptionFailure)throw Error('subscription_unavailable');return {hasPremium:premium,accessUntil:premium?'2099-01-01T00:00:00Z':null};}},
+ '@/lib/subscriptions/contract':{parseSubscriptionAccess:v=>v},
  };
  const filename=fileURLToPath(new URL('../src/app/api/account/settings/route.ts',import.meta.url)),require=createRequire(filename),mod=new Module(filename);mod.filename=filename;mod.require=name=>Object.hasOwn(stubs,name)?stubs[name]:require(name);mod._compile(ts.transpileModule(readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,esModuleInterop:true}}).outputText,filename);return {...mod.exports,calls};
 }
@@ -47,4 +49,11 @@ test('Google requer OAuth recente, não aceita recuperação nem relógio futuro
  const now=Math.floor(Date.now()/1000);
  for(const amr of [[{method:'oauth',timestamp:now-301}],[{method:'oauth',timestamp:now+60}],[{method:'recovery',timestamp:now}],['oauth']])assert.equal((await load({provider:'google',amr}).POST(req({...deletion,password:''}))).status,403);
  const google=load({provider:'google'});assert.equal((await google.POST(req({...deletion,password:''}))).status,200);assert.ok(!google.calls.some(c=>c[0]==='password'));
+});
+
+test('preferências exclusivas exigem Premium no servidor, sem bloquear o Gratuito ou apagar dados no downgrade',async()=>{
+ for(const patch of [{customCount:30},{customMinutes:90},{notifyStudy:false},{notifyReview:false},{quietStart:'22:00',quietEnd:'08:00'}]){const app=load();const r=await app.POST(req({action:'save',preferences:{...preferenceDefaults,...patch}}));assert.equal(r.status,403);assert.equal((await r.json()).error,'premium_required');assert.ok(!app.calls.some(c=>c[0]==='save_account_preferences'));}
+ const paid=load({premium:true});assert.equal((await paid.POST(req({action:'save',preferences:{...preferenceDefaults,customCount:30}}))).status,200);
+ const offline=load({premium:true,subscriptionFailure:true});assert.equal((await offline.POST(req({action:'save',preferences:{...preferenceDefaults,customCount:30}}))).status,503);assert.ok(!offline.calls.some(c=>c[0]==='save_account_preferences'));
+ const previous={...preferenceDefaults,customCount:40,quietStart:'22:00',quietEnd:'08:00'};const downgraded=load({currentPreferences:previous});assert.equal((await downgraded.POST(req({action:'save',preferences:{...previous,dailyGoal:15,difficulty:'hard'}}))).status,200);
 });

@@ -1,6 +1,18 @@
 import type { NextConfig } from "next";
+import {execFileSync} from "node:child_process";
+import {readFileSync} from "node:fs";
+import {createHash} from "node:crypto";
+import {version} from "./package.json";
+
+let releaseBuild=process.env.VERCEL_GIT_COMMIT_SHA ?? "";
+if(!releaseBuild){try{
+  // A local build may contain uncommitted changes: fingerprint its actual sources.
+  const files=execFileSync("git",["ls-files","-co","--exclude-standard","--","src","public","next.config.ts","package.json","package-lock.json","tsconfig.json","postcss.config.mjs"],{encoding:"utf8",stdio:["ignore","pipe","ignore"]}).trim().split(/\r?\n/);
+  const hash=createHash("sha256");for(const file of [...new Set(files)].sort())hash.update(file).update(readFileSync(file));releaseBuild=hash.digest("hex");
+}catch{}}
 
 const nextConfig: NextConfig = {
+  env:{NEXT_PUBLIC_APP_VERSION:version,NEXT_PUBLIC_APP_BUILD:releaseBuild},
   async headers() {
     const development = process.env.NODE_ENV === "development";
     // Keep remote resources limited to the named analytics and payment services.
@@ -12,7 +24,7 @@ const nextConfig: NextConfig = {
       "frame-src https://fatweb.s3.amazonaws.com https://assets.fatvestibulares.com.br https://concurso30.fundacaocefetminas.org.br https://ifsp.edu.br https://*.ifsp.edu.br",
       ...(development ? [] : ["upgrade-insecure-requests"]),
     ].join("; ");
-    return [{source: "/:path*", headers: [
+    return [{source:"/sw.js",headers:[{key:"Cache-Control",value:"no-cache, no-store, must-revalidate"},{key:"Service-Worker-Allowed",value:"/"}]},{source:"/app-version.json",headers:[{key:"Cache-Control",value:"no-store, max-age=0"}]},{source: "/:path*", headers: [
       {key: "Content-Security-Policy", value: policy},
       {key: "X-Frame-Options", value: "DENY"},
       {key: "X-Content-Type-Options", value: "nosniff"},
