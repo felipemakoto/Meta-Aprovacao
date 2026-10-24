@@ -40,7 +40,7 @@ test('plano respeita disponibilidade, data, orçamento diário/semanal e não so
  const at=new Date('2026-10-21T12:00:00Z'),items=generatePlan(workspace,at),weekly=new Map(),daily=new Map();assert.ok(items.length>0&&items.length<=84);assert.deepEqual(generatePlan(workspace,at),items);
  for(const item of items){const d=new Date(item.date+'T12:00:00Z');assert.ok(profile.weekdays.includes(d.getUTCDay()));assert.ok(item.date<=profile.examDate);d.setUTCDate(d.getUTCDate()-((d.getUTCDay()+6)%7));const w=d.toISOString().slice(0,10);weekly.set(w,(weekly.get(w)??0)+item.goal);daily.set(item.date,(daily.get(item.date)??0)+item.minutes);}
  assert.ok([...weekly.values()].every(n=>n<=profile.weeklyGoal));assert.ok([...daily.values()].every(n=>n<=profile.minutes));
- const first=items[0],manual={id,title:'Manual',study_date:first.date,start_time:first.time,minutes:first.minutes,source:'manual',archived:false};
+ const first=items[0],manual={id,title:'Manual',study_date:first.date,start_time:first.time,minutes:first.minutes,goal:10,source:'manual',archived:false};
  assert.ok(!generatePlan({...workspace,sessions:[manual]},at).some(s=>s.date===first.date&&s.time===first.time));
  assert.deepEqual(generatePlan({...workspace,profile:null},at),[]);
 });
@@ -86,4 +86,22 @@ test('metas diárias não são ultrapassadas pelo arredondamento das sessões',(
 test('dia de estudo acompanha Brasília na virada da data UTC',()=>{
  assert.equal(localStudyDate(new Date('2026-10-22T01:30:00Z')),'2026-10-21');
  assert.equal(localStudyDate(new Date('2026-10-22T03:30:00Z')),'2026-10-22');
+});
+
+
+test('plano desconta sessões manuais e concluídas dos limites diários e semanais',()=>{
+ const at=new Date('2026-10-21T12:00:00Z');
+ const fixed=(overrides={})=>({id,title:'Manual',study_date:'2026-10-21',start_time:'20:00',minutes:60,goal:20,source:'manual',plan_key:'2026-10-21:0',archived:false,completed_at:null,...overrides});
+ for(const preserved of [fixed(),fixed({source:'plan',completed_at:'2026-10-21T11:00:00Z'}),fixed({minutes:90,goal:30})]){
+  const items=generatePlan({...workspace,sessions:[preserved]},at);
+  assert.equal(items.filter(s=>s.date===preserved.study_date).length,0);
+ }
+ const manual=fixed({minutes:30,goal:10});
+ const items=generatePlan({...workspace,sessions:[manual]},at),day=items.filter(s=>s.date===manual.study_date);
+ assert.equal(day.reduce((n,s)=>n+s.minutes,manual.minutes),60);
+ assert.equal(day.reduce((n,s)=>n+s.goal,manual.goal),20);
+ assert.ok(day.every(s=>s.key!==manual.plan_key));
+ const earlier=fixed({study_date:'2026-10-19',goal:81});
+ assert.equal(generatePlan({...workspace,sessions:[earlier]},at).filter(s=>s.date<'2026-10-26').length,0);
+ assert.deepEqual(generatePlan({...workspace,sessions:[fixed({archived:true,plan_key:null})]},at),generatePlan(workspace,at));
 });

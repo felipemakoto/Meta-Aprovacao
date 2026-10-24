@@ -16,12 +16,17 @@ export function generatePlan(workspace:Workspace,at=new Date()):PlannedSession[]
  const weights=eligible.map(key=>({subject:key,weight:ranked.find(g=>g.subject===key)?.enough?1+3*ranked.find(g=>g.subject===key)!.priority:1.7,assigned:0}));
  const today=localStudyDate(at),start=new Date(today+"T12:00:00Z"),items:PlannedSession[]=[];
  const weekUsed=new Map<string,number>();
- const manual=workspace.sessions.filter(s=>s.source==="manual"&&!s.archived);
+ const manual=workspace.sessions.filter(s=>(s.source==="manual"||s.completed_at)&&!s.archived);
+ const weekOf=(day:Date)=>{const monday=new Date(day);monday.setUTCDate(monday.getUTCDate()-((monday.getUTCDay()+6)%7));return monday.toISOString().slice(0,10);};
+ for(const s of manual){const week=weekOf(new Date(s.study_date+"T12:00:00Z"));weekUsed.set(week,(weekUsed.get(week)??0)+s.goal);}
  for(let d=0;d<28;d++){
   const day=new Date(start.getTime()+d*86400000),date=day.toISOString().slice(0,10);
   if(date>p.examDate||!p.weekdays.includes(day.getUTCDay()))continue;
-  let minute=Number(p.startTime.slice(0,2))*60+Number(p.startTime.slice(3)),budget=p.minutes,dayUsed=0;
-  const slots=Math.min(3,Math.max(1,Math.floor(budget/30)));
+  const fixed=manual.filter(s=>s.study_date===date);
+  let minute=Number(p.startTime.slice(0,2))*60+Number(p.startTime.slice(3)),budget=p.minutes-fixed.reduce((n,s)=>n+s.minutes,0),dayUsed=fixed.reduce((n,s)=>n+s.goal,0);
+  const keys=[0,1,2].filter(slot=>!workspace.sessions.some(s=>s.plan_key===`${date}:${slot}`&&(s.source==="manual"||s.completed_at)));
+  if(budget<10||dayUsed>=p.dailyGoal)continue;
+  const slots=Math.min(keys.length,Math.max(1,Math.floor(budget/30)));
   for(let slot=0;slot<slots;slot++){
    weights.sort((a,b)=>a.assigned/a.weight-b.assigned/b.weight||a.subject.localeCompare(b.subject));const target=weights[0];target.assigned++;
    const length=Math.floor(budget/(slots-slot));budget-=length;
@@ -29,9 +34,9 @@ export function generatePlan(workspace:Workspace,at=new Date()):PlannedSession[]
    const kind=d%7===6&&slot===0?"simulation":(workspace.due.review>0&&slot===0?"review":slot===1&&d%2===0?"flashcards":"practice");
    const time=String(Math.floor(minute/60)).padStart(2,"0")+":"+String(minute%60).padStart(2,"0");
    const overlaps=manual.some(s=>{const m=Number(s.start_time.slice(0,2))*60+Number(s.start_time.slice(3,5));return s.study_date===date&&m<minute+length&&m+s.minutes>minute;});
-   const monday=new Date(day);monday.setUTCDate(monday.getUTCDate()-((monday.getUTCDay()+6)%7));const week=monday.toISOString().slice(0,10),available=p.weeklyGoal-(weekUsed.get(week)??0);
+   const week=weekOf(day),available=p.weeklyGoal-(weekUsed.get(week)??0);
    const goal=Math.min(available,p.dailyGoal-dayUsed,Math.max(1,Math.min(100,Math.ceil(p.dailyGoal/slots))));
-   if(goal>0&&minute+length<=1440&&!overlaps&&!(date===today&&new Date(`${date}T${time}:00-03:00`).getTime()<=at.getTime())){items.push({key:`${date}:${slot}`,title:kind==="simulation"?`Simulado personalizado · ${institution.name}`:`${kind==="review"?"Revisar":kind==="flashcards"?"Flashcards":"Praticar"} ${subjects[target.subject as keyof typeof subjects]}`,date,time,minutes:length,subject:target.subject,topic,kind,goal,reminder:p.reminder});weekUsed.set(week,(weekUsed.get(week)??0)+goal);dayUsed+=goal;}
+   if(goal>0&&minute+length<=1440&&!overlaps&&!(date===today&&new Date(`${date}T${time}:00-03:00`).getTime()<=at.getTime())){items.push({key:`${date}:${keys[slot]}`,title:kind==="simulation"?`Simulado personalizado · ${institution.name}`:`${kind==="review"?"Revisar":kind==="flashcards"?"Flashcards":"Praticar"} ${subjects[target.subject as keyof typeof subjects]}`,date,time,minutes:length,subject:target.subject,topic,kind,goal,reminder:p.reminder});weekUsed.set(week,(weekUsed.get(week)??0)+goal);dayUsed+=goal;}
    minute+=length;
   }
  }

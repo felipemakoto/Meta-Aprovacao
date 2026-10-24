@@ -14,7 +14,7 @@ import LibraryPanel from "./library-panel";
 import styles from "./study.module.css";
 const messages:Record<string,string>={premium_required:"Seu Premium não está ativo. O Gratuito continua disponível.",login_required:"Entre novamente na sua conta.",invalid_input:"Confira os campos informados.",activity_unavailable:"Essa atividade não está disponível para sua conta.",activity_limit:"O limite de atividades foi atingido.",content_insufficient:"Não há questões validadas suficientes para essa seleção. Reduza a quantidade ou amplie os filtros.",plan_changed:"O plano foi alterado em outra aba. Atualize a página.",review_not_due:"Este cartão já foi revisado. Atualize a lista para ver os próximos.",rate_limited:"Aguarde um minuto antes de iniciar outro simulado.",invalid_document:"Informe dois PDFs diferentes hospedados em fontes oficiais permitidas.",source_links_missing:"A página oficial precisa conter links para os dois PDFs informados.",source_unavailable:"A fonte oficial não respondeu à verificação. Nenhum documento foi cadastrado.",draft_conflict:"O rascunho mudou em outra aba. Reabra a tentativa."};
 export async function studyRequest(command:StudyCommand){
- const r=await fetch("/api/premium/study",{method:"POST",cache:"no-store",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify(command),signal:AbortSignal.timeout(35000)});
+ const r=await fetch("/api/premium/study",{method:"POST",cache:"no-store",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify(command),signal:AbortSignal.timeout(35000),keepalive:command.action==="save_exam"});
  const body=await r.json();if(!r.ok)throw Error(messages[body.error]??"Não foi possível concluir. Tente novamente.");return body.data;
 }
 export default function Workspace({initial,area,collection="errors",sessionId}:{initial:WorkspaceData;area:StudyArea;collection?:ReviewCollection;sessionId?:string}){
@@ -39,7 +39,7 @@ export default function Workspace({initial,area,collection="errors",sessionId}:{
   try{
    const result=await studyRequest(command);
    if(command.action==="start_exam"){const state=parseSimulationState(result);router.push(`/simulados/${"quiz" in state?state.quiz.id:state.result.id}`);return result;}
-   if(command.action==="save_profile"||command.action==="rate_card")await studyRequest({action:"sync_plan"});
+   if(command.action==="save_profile"||command.action==="save_session"||command.action==="rate_card")await studyRequest({action:"sync_plan"});
    await reload();if(command.action!=="rate_card")setNotice(command.action==="sync_plan"?"Cronograma atualizado. Edições manuais e atividades concluídas foram preservadas.":"Alteração salva.");return result;
   }catch(e){if(command.action!=="rate_card"){setError(true);setNotice(e instanceof Error?e.message:"A conexão falhou. Tente novamente.");}throw e;}
   finally{lock.current=false;setBusy(false);}
