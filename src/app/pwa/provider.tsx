@@ -48,7 +48,7 @@ export default function PwaProvider({children}:{children:ReactNode}){
   if(worker){navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});worker.postMessage({type:'ACTIVATE_UPDATE'});}else location.reload();
  }
  const newer=available?.build&&appRelease.build&&available.build!==appRelease.build;
- return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError}}>{children}{(waiting||newer)&&<UpdateNotice/>}</Context.Provider>;
+ return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError}}>{children}{standalone===true&&(waiting||newer)&&<UpdateNotice/>}</Context.Provider>;
 }
 export function InstallLink({className}:{className?:string}){const {standalone}=usePwa();return standalone===false?<Link href="/baixar" className={className}>Instalar</Link>:null;}
 export {appRelease,releaseLabel};
