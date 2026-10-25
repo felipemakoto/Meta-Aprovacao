@@ -52,7 +52,8 @@ test('Google requer OAuth recente, não aceita recuperação nem relógio futuro
 });
 
 test('preferências exclusivas exigem Premium no servidor, sem bloquear o Gratuito ou apagar dados no downgrade',async()=>{
- for(const patch of [{customCount:30},{customMinutes:90},{notifyStudy:false},{notifyReview:false},{quietStart:'22:00',quietEnd:'08:00'}]){const app=load();const r=await app.POST(req({action:'save',preferences:{...preferenceDefaults,...patch}}));assert.equal(r.status,403);assert.equal((await r.json()).error,'premium_required');assert.ok(!app.calls.some(c=>c[0]==='save_account_preferences'));}
+ for(const patch of [{customCount:30},{customMinutes:90},{notifyReview:false}]){const app=load();const r=await app.POST(req({action:'save',preferences:{...preferenceDefaults,...patch}}));assert.equal(r.status,403);assert.equal((await r.json()).error,'premium_required');assert.ok(!app.calls.some(c=>c[0]==='save_account_preferences'));}
+ for(const patch of [{notifyStudy:false},{quietStart:'22:00',quietEnd:'08:00'}]){const free=load();assert.equal((await free.POST(req({action:'save',preferences:{...preferenceDefaults,...patch}}))).status,200);}
  const paid=load({premium:true});assert.equal((await paid.POST(req({action:'save',preferences:{...preferenceDefaults,customCount:30}}))).status,200);
  const offline=load({premium:true,subscriptionFailure:true});assert.equal((await offline.POST(req({action:'save',preferences:{...preferenceDefaults,customCount:30}}))).status,503);assert.ok(!offline.calls.some(c=>c[0]==='save_account_preferences'));
  const previous={...preferenceDefaults,customCount:40,quietStart:'22:00',quietEnd:'08:00'};const downgraded=load({currentPreferences:previous});assert.equal((await downgraded.POST(req({action:'save',preferences:{...previous,dailyGoal:15,difficulty:'hard'}}))).status,200);

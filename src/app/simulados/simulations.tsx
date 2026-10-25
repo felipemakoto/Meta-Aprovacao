@@ -11,7 +11,7 @@ import base from "../quiz/quiz.module.css";
 import styles from "./simulations.module.css";
 import {useDailyLimits} from "@/lib/quiz/use-daily-limits";
 import {dailyLimitMessage} from "@/lib/quiz/limits-contract";
-export default function Simulations({items=[],premiumPreviews=[],unavailable=false,preview=false,limitReached=false}:{items?:Simulation[];premiumPreviews?:Simulation[];unavailable?:boolean;preview?:boolean;limitReached?:boolean}){
+export default function Simulations({items=[],unavailable=false,preview=false,limitReached=false}:{items?:Simulation[];unavailable?:boolean;preview?:boolean;limitReached?:boolean}){
  const catalog=preview?demoSimulations.filter(item=>item.count===10&&!item.subject):items;
  const quota=useDailyLimits(preview,unavailable);
  const [id,setId]=useState(catalog[0]?.id??""),[busy,setBusy]=useState(false),[error,setError]=useState("");
@@ -39,7 +39,6 @@ export default function Simulations({items=[],premiumPreviews=[],unavailable=fal
     <p className={styles.note}>Você pode revisar suas escolhas antes de enviar.</p>
     <button className={`${base.continue} ${styles.start}`} disabled={busy||!selectedId} onClick={()=>void start()}>{busy?"Preparando…":"Iniciar simulado"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt=""/></button>
    </>}
-   {premiumPreviews.length>0&&<section aria-label="Simulados Premium"><h2>Mais simulados</h2>{premiumPreviews.map(item=><p key={item.id}><Link href="/premium/estudos?area=realistic" data-premium-benefit={`Treine com ${item.title}, ${item.count} questões.`}>Premium · {item.title} · {item.count} questões</Link></p>)}</section>}
    <div role="status" aria-live="polite">{error&&<p>{error}</p>}</div>
    <Link className={styles.historyLink} href="/historico?kind=simulations">Ver meu histórico</Link>
   </main>{preview&&<footer className={styles.footer}>Dados ilustrativos.</footer>}

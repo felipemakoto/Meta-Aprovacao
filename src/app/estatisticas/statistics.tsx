@@ -43,6 +43,6 @@ export default function Statistics({initial=null,preview=false,initialPeriod="al
    <section className={styles.section} aria-labelledby="recent-simulations"><h2 id="recent-simulations">Simulados recentes</h2>{data.recent.length===0?<p className={styles.muted}>Ainda não há simulados concluídos neste período.</p>:<ol className={styles.list}>{data.recent.map(item=>{const contents=<><span><strong>{item.title}</strong><time dateTime={item.at}>{new Intl.DateTimeFormat("pt-BR",{day:"numeric",month:"short",year:"numeric",timeZone:"America/Sao_Paulo"}).format(new Date(item.at)).replaceAll(" de "," ")}</time></span><span>{item.score} de {item.total} acertos</span></>;return <li key={item.id}>{preview?<button className={styles.recent} onClick={()=>openDemo(item)} aria-label={`Ver resultado de ${item.title}`}>{contents}</button>:<Link className={styles.recent} href={"/historico/simulations/"+item.id} aria-label={`Ver resultado de ${item.title}`}>{contents}</Link>}</li>;})}</ol>}</section>
   </>}
   <div className={styles.back}><Link className={history.backLink} href="/historico"><Image className={history.backIcon} src="/icons/arrow-right.svg" width={20} height={20} alt=""/>Ver histórico</Link></div>
-  </main><footer className={styles.footer}>{preview?"Dados ilustrativos.":"Respostas de testes salvos, questões praticadas e simulados concluídos. Novas tentativas contam novamente."}</footer>
+  </main>{preview&&<footer className={styles.footer}>Dados ilustrativos.</footer>}
  </div></StudyShell>;
 }

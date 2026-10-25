@@ -1,6 +1,6 @@
 export const preferenceDefaults={institution:"both",course:"",school:"",examDate:"",dailyGoal:10,weekdays:[1,2,3,4,5],minutes:30,priorities:[] as string[],difficulty:"all",explanations:"expanded",fontSize:"normal",contrast:"normal",density:"comfortable",dashboard:"overview",customCount:20,customMinutes:60,notifyStudy:true,notifyReview:true,quietStart:"",quietEnd:""};
 export type Preferences=typeof preferenceDefaults;
-export const premiumPreferenceKeys=["customCount","customMinutes","notifyStudy","notifyReview","quietStart","quietEnd"] as const;
+export const premiumPreferenceKeys=["customCount","customMinutes","notifyReview"] as const;
 export function changesPremiumPreferences(current:Preferences,next:Preferences){return premiumPreferenceKeys.some(key=>current[key]!==next[key]);}
 const subjects=["matematica","portugues","ciencias","historia","geografia"];
 export function parsePreferences(value:unknown):Preferences{
