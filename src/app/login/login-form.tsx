@@ -69,6 +69,5 @@ export default function LoginForm({ signedIn, showPremiumOffer=false,email="",pl
       <noscript>Ative o JavaScript para entrar na conta.</noscript>
     </form>}
     {!signedIn && <><p className={styles.note}><Link href="/recuperar-senha">Esqueci minha senha</Link></p><p className={styles.note}>Ainda não tem conta? <Link href="/cadastro">Criar conta</Link></p></>}
-    {!signedIn && <Link className={styles.skip} href="/">Continuar sem conta</Link>}
   </section>;
 }

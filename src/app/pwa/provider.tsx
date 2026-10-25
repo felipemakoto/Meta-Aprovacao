@@ -9,6 +9,12 @@ type Release={version:string;build:string};
 type PwaState={standalone:boolean|null;os:Platform|null;instructions:string;canInstall:boolean;install:()=>Promise<void>;message:string;available:Release|null;waiting:boolean;update:()=>void;workerError:boolean};
 const Context=createContext<PwaState|null>(null);
 export function usePwa(){const state=useContext(Context);if(!state)throw Error("Missing PwaProvider");return state;}
+function UpdateNotice(){
+ const [visible,setVisible]=useState(true);
+ useEffect(()=>{const timer=setTimeout(()=>setVisible(false),5000);return()=>clearTimeout(timer);},[]);
+ if(!visible)return null;
+ return <aside className="pwa-update" aria-label="Atualização do aplicativo"><span>Uma atualização está disponível.</span><Link href="/configuracoes?secao=app" onClick={()=>setVisible(false)}>Ver em Aplicativo</Link><button type="button" aria-label="Fechar aviso de atualização" onClick={()=>setVisible(false)}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></aside>;
+}
 export default function PwaProvider({children}:{children:ReactNode}){
  const [standalone,setStandalone]=useState<boolean|null>(null),[os,setOs]=useState<Platform|null>(null),[instructions,setInstructions]=useState(''),[canInstall,setCanInstall]=useState(false),[message,setMessage]=useState(''),[available,setAvailable]=useState<Release|null>(null),[waiting,setWaiting]=useState(false),[workerError,setWorkerError]=useState(false);
  const prompt=useRef<InstallEvent|null>(null),registration=useRef<ServiceWorkerRegistration|null>(null),installBusy=useRef(false);
@@ -42,7 +48,7 @@ export default function PwaProvider({children}:{children:ReactNode}){
   if(worker){navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});worker.postMessage({type:'ACTIVATE_UPDATE'});}else location.reload();
  }
  const newer=available?.build&&appRelease.build&&available.build!==appRelease.build;
- return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError}}>{children}{(waiting||newer)&&<aside className="pwa-update" aria-label="Atualização do aplicativo"><span>Uma atualização está disponível.</span><Link href="/configuracoes?secao=app">Ver em Aplicativo</Link></aside>}</Context.Provider>;
+ return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError}}>{children}{(waiting||newer)&&<UpdateNotice/>}</Context.Provider>;
 }
 export function InstallLink({className}:{className?:string}){const {standalone}=usePwa();return standalone===false?<Link href="/baixar" className={className}>Instalar</Link>:null;}
 export {appRelease,releaseLabel};

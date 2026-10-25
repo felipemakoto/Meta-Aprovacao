@@ -92,7 +92,6 @@ export default function SignupForm() {
       <noscript>Ative o JavaScript para usar o formulário de cadastro.</noscript>
     </form>
     <p className={styles.note}>Já tem conta? <Link href="/login">Entrar</Link></p>
-    <Link className={styles.skip} href="/">Continuar sem conta</Link>
   </section>;
 }
 
