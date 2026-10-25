@@ -18,7 +18,7 @@ frames.forEach((png,index)=>{
 writeFileSync(new URL('../public/favicon.ico',import.meta.url),Buffer.concat([directory,...frames]));
 
 mkdirSync(new URL('../public/pwa/',import.meta.url),{recursive:true});
-for(const [name,size,padding] of [['icon-192',192,.16],['icon-512',512,.16],['maskable-512',512,.23],['apple-180',180,.18]]){
+for(const [name,size,padding] of [['icon-192',192,.10],['icon-512',512,.10],['maskable-512',512,.18],['apple-180',180,.12]]){
  const mark=await render(Math.round(size*(1-padding*2)));
  await sharp({create:{width:size,height:size,channels:4,background:'#ffffff'}})
   .composite([{input:mark,gravity:'center'}]).png()
