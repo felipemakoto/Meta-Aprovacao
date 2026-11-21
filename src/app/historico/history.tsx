@@ -17,14 +17,17 @@ const failureMessage=(error:unknown,more=false)=>error instanceof Error&&error.m
 const simulationDemo=previewSimulation(demoSimulations[0]);
 const simulationResult=previewCorrection(simulationDemo,"quiz" in simulationDemo?simulationDemo.quiz.questions.map((q,i)=>({questionId:q.id,answer:i<7?"B":"D"})):[]);
 const simulationItems:HistoryItem[]="result" in simulationResult?[{id:simulationResult.result.id,at:simulationResult.result.completedAt,title:simulationResult.result.title,total:10,score:7,durationSeconds:240}]:[];
-export default function History({preview=false,unavailable=false,initialKind="tests"}:{preview?:boolean;unavailable?:boolean;initialKind?:HistoryKind}){
+export default function History({preview=false,unavailable=false,initialKind="tests",initial=null}:{preview?:boolean;unavailable?:boolean;initialKind?:HistoryKind;initial?:HistoryPage|null}){
  const [kind,setKind]=useState<HistoryKind>(initialKind);
- const [page,setPage]=useState<HistoryPage>({items:preview?(initialKind==="simulations"?simulationItems:initialKind==="practice"?[demoReview]:demoTests.slice(0,2)):[],next:preview&&initialKind==="tests"?demoTests[1]:null});
- const [busy,setBusy]=useState(!preview&&!unavailable),[error,setError]=useState(unavailable?"Não foi possível carregar seu histórico.":""),[retry,setRetry]=useState(0);
+ const [page,setPage]=useState<HistoryPage>(preview?(initialKind==="simulations"?{items:simulationItems,next:null}:initialKind==="practice"?{items:[demoReview],next:null}:{items:demoTests.slice(0,2),next:demoTests[1]}):(initial??{items:[],next:null}));
+ const [busy,setBusy]=useState(!preview&&!unavailable&&!initial),[error,setError]=useState(unavailable?"Não foi possível carregar seu histórico.":""),[retry,setRetry]=useState(0);
  const [detail,setDetail]=useState<HistoryItem|null>(null);
  const controller=useRef<AbortController|null>(null),lock=useRef(false);
+ // skipInitialFetch: evita re-fetch no primeiro render quando os dados já vieram do servidor
+ const skipInitialFetch=useRef(!!initial);
  useEffect(()=>{
   if(preview||unavailable)return;
+  if(skipInitialFetch.current){skipInitialFetch.current=false;return;}
   const ac=new AbortController();controller.current=ac;lock.current=true;
   const timeout=setTimeout(()=>ac.abort(),15000);
   fetch("/api/history?kind="+kind,{cache:"no-store",credentials:"same-origin",signal:ac.signal})

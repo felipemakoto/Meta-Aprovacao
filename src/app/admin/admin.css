@@ -1,0 +1,43 @@
+/* Variáveis de estilo exclusivas do Painel Administrativo */
+.admin-theme {
+  --bg: #F7F6F0;
+  --surface: #FFFFFF;
+  --border: #D8DED7;
+  --text: #172B25;
+  --text-secondary: #53645D;
+  --primary: #174D38;
+  --primary-hover: #113B2B;
+  --primary-subtle: #EBF2EE;
+  --primary-text: #FFFFFF;
+  --error-bg: #FEF3F2;
+  --error-border: #FECDCA;
+  --error-text: #B42318;
+  --warn-bg: #FFFBEB;
+  --warn-border: #FDE68A;
+  --warn-text: #92400E;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.admin-theme.dark,
+.dark .admin-theme {
+  --bg: #111C17;
+  --surface: #17241E;
+  --border: #2A3A32;
+  --text: #E8EEEA;
+  --text-secondary: #9FB0A7;
+  --primary: #2E7050;
+  --primary-hover: #388560;
+  --primary-subtle: #1D3127;
+  --primary-text: #FFFFFF;
+  --error-bg: #2C1615;
+  --error-border: #6E2B26;
+  --error-text: #FDA29B;
+  --warn-bg: #2B2112;
+  --warn-border: #6B4D18;
+  --warn-text: #FCD34D;
+}
+
+.font-serif-display {
+  font-family: var(--font-display, var(--font-heading, serif));
+}
