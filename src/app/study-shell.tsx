@@ -1,16 +1,19 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import HomeHeader from "./home-header";
 import { MetaMark } from "./home-art";
 import theme from "./home-theme.module.css";
 import styles from "./study-shell.module.css";
+import {InstallLink} from "./pwa/provider";
 
-type StudyArea = "dashboard" | "questions" | "simulations" | "history" | "statistics";
+type StudyArea = "dashboard" | "questions" | "simulations" | "history" | "statistics" | "premium";
 const destinations: { area: StudyArea; href: string; label: string }[] = [
   { area: "dashboard", href: "/dashboard", label: "Meus estudos" },
   { area: "questions", href: "/questoes", label: "Questões" },
   { area: "simulations", href: "/simulados", label: "Simulados" },
   { area: "history", href: "/historico", label: "Histórico" },
   { area: "statistics", href: "/estatisticas", label: "Estatísticas" },
+  { area: "premium", href: "/premium/estudos", label: "Estudos · Premium" },
 ];
 
 export function StudyIcon({ name }: { name: StudyArea }) {
@@ -20,23 +23,24 @@ export function StudyIcon({ name }: { name: StudyArea }) {
     {name === "simulations" && <><circle cx="12" cy="14" r="8" /><path d="M9 2h6m-3 0v4m6 0 2-2m-8 6v5l3 2" /></>}
     {name === "history" && <><path d="M3 11a9 9 0 1 1 2 7M3 5v6h6" /><path d="M12 7v6l4 2" /></>}
     {name === "statistics" && <><path d="M4 20V4m0 16h17M8 16v-5m5 5V7m5 9V3" /></>}
+    {name === "premium" && <><path d="m12 3 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z" /></>}
   </svg>;
 }
 
-export default function StudyShell({ children, active, preview = false, focus = false, menu = false, homeHref = "/login", exit }: { children: ReactNode; active?: StudyArea | "account"; preview?: boolean; focus?: boolean; menu?: boolean; homeHref?: "/" | "/login"; exit?: ReactNode }) {
-  const navigation = destinations.map(item => <Link key={item.area} href={item.href + (preview ? "/preview" : "")} aria-current={active === item.area ? "page" : undefined}><StudyIcon name={item.area} />{item.label}</Link>);
+export default function StudyShell({ children, active, preview = false, focus = false, menu = false, plain = false, homeHref = "/login", exit }: { children: ReactNode; active?: StudyArea | "account"; preview?: boolean; focus?: boolean; menu?: boolean; plain?: boolean; homeHref?: "/" | "/login"; exit?: ReactNode }) {
+  const navigation = destinations.map(item => <Link key={item.area} href={item.href + (preview && item.area!=="premium" ? "/preview" : "")} aria-current={active === item.area ? "page" : undefined}><StudyIcon name={item.area} />{item.label}</Link>);
   return <div className={`${theme.homeTheme} ${styles.shell}`} data-study data-study-mode={focus ? "focus" : active}>
     <a className={styles.skip} href="#estudo">Pular para o conteúdo</a>
-    <header className={styles.topbar}><div className={styles.topbarInner}>
+    <HomeHeader className={styles.topbar}><div className={styles.topbarInner}>
       <Link className={styles.brand} href={homeHref} aria-label={homeHref === "/login" ? "Meta Aprovação — minha conta" : "Meta Aprovação — início"}><MetaMark /><span>Meta Aprovação</span></Link>
       <div className={styles.headerActions}>
-        {(!focus || menu) && <details className={`${styles.mobileMenu} ${menu ? styles.headerMenu : ""}`}><summary>{menu ? "Menu" : "Estudos"}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></summary><nav aria-label={menu ? "Menu principal" : "Navegação de estudos no celular"}>{navigation}<Link href="/login" aria-current={active === "account" ? "page" : undefined}>Minha conta</Link></nav></details>}
+        {(!focus || menu) && <details className={`${styles.mobileMenu} ${menu ? styles.headerMenu : ""}`}><summary>{menu ? "Menu" : "Estudos"}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></summary><nav aria-label={menu ? "Menu principal" : "Navegação de estudos no celular"}>{navigation}<Link href="/login" aria-current={active === "account" ? "page" : undefined}>Minha conta</Link><Link href="/configuracoes">Configurações</Link><InstallLink/></nav></details>}
         {!menu && <div className={styles.account}>{exit ?? <Link href="/login">Minha conta</Link>}</div>}
       </div>
-    </div></header>
+    </div></HomeHeader>
     <div className={`${styles.workspace} ${focus ? styles.focusWorkspace : ""}`}>
       {!focus && <aside className={styles.sidebar}><nav aria-label="Navegação de estudos">{navigation}</nav></aside>}
-      <div className={styles.content} id="estudo" tabIndex={-1}>{children}</div>
+      <div className={`${styles.content} ${plain ? styles.plain : ""}`} id="estudo" tabIndex={-1}>{children}</div>
     </div>
   </div>;
 }

@@ -1,11 +1,11 @@
 import { CaktoReadError, orderUuid, record } from "./cakto-api.ts";
-import { cents } from "./payment-verification.ts";
+import { cents, paidSubscriptionState } from "./payment-verification.ts";
 
 export const lifecycleEvents = ["purchase_refused", "refund", "refund_requested", "chargeback", "subscription_canceled", "subscription_renewed", "subscription_renewal_refused", "subscription_paused", "subscription_resumed", "subscription_late", "subscription_late_recovered"];
 export type LifecycleBinding = {subscriptionId:string; originOrderId:string; productId:string; offerId:string; expectedPeriod?:number};
 export type RenewalEvidence = {orderId:string;period:number;orderCreatedAt:string;paidAt:string;paidPriceCents:2299;currency:"BRL"};
 export type LifecycleSnapshot = LifecycleBinding & {providerStatus:string; providerUpdatedAt:string; orderStatus:string; action:"preserve"|"revoke"; occurredAt:string|null};
-export type LifecycleCheck = {outcome:"verified"|"review"|"retry";reason:string;snapshot?:LifecycleSnapshot;renewal?:RenewalEvidence};
+export type LifecycleCheck = {outcome:"verified"|"review"|"retry";reason:string;snapshot?:LifecycleSnapshot;renewal?:RenewalEvidence;dependency?:{subscriptionId:string;originOrderId:string}};
 const statuses = ["active", "inactive", "canceled", "expired", "paused", "late", "trial"];
 const orders = ["processing", "authorized", "paid", "refund_requested", "in_settlement", "acquirer_error", "refunded", "waiting_payment", "refused", "blocked", "chargedback", "canceled", "in_protest", "partially_paid", "prechargeback", "scheduled", "retrying", "MED"];
 function instant(value:unknown) {
@@ -37,8 +37,11 @@ export function lifecycleDecision(orderValue:unknown,subValue:unknown,binding:Li
         if(order.currency!=="BRL")return review("currency_unconfirmed");
         if(cents(order.baseAmount)!==2299 || cents(order.discount)!==0 || cents(order.amount)!==2398 || cents(sub.amount)!==2299 || order.couponCode!==null) return review("amount_or_coupon_mismatch");
         const created=instant(order.createdAt),paid=instant(order.paidAt);
-        if(created===null || paid===null || paid<created || paid>now || order.canceledAt!==null || sub.status!=="active" || sub.recurrence_period!==30 || sub.quantity_recurrences!==-1) return review("lifecycle_response_incomplete");
-        if(binding.expectedPeriod!==order.subscription_period)return review("subscription_binding_missing");
+        if(created===null || paid===null || paid<created || paid>now || order.canceledAt!==null || !paidSubscriptionState(sub.status,sub.canceledAt,paid,now) || sub.recurrence_period!==30 || sub.quantity_recurrences!==-1) return review("lifecycle_response_incomplete");
+        if(binding.expectedPeriod!==order.subscription_period)return {
+          outcome:Number.isInteger(binding.expectedPeriod)&&order.subscription_period>Number(binding.expectedPeriod)?"retry":"review",
+          reason:"subscription_binding_missing",dependency:{subscriptionId:binding.subscriptionId,originOrderId:binding.originOrderId},
+        };
         renewal={orderId:order.id,period:order.subscription_period,orderCreatedAt:new Date(created).toISOString(),paidAt:new Date(paid).toISOString(),paidPriceCents:2299,currency:"BRL"};
       }
     }
@@ -59,7 +62,7 @@ export function lifecycleProcessor(deps:{signal:(id:number)=>Promise<Signal|null
         if(order.id!==signal.orderId || !sub || typeof sub.id!=="string" || typeof sub.parent_order!=="string")throw new CaktoReadError("invalid_response");
         orderUuid(sub.id);orderUuid(sub.parent_order);
         const binding=await deps.binding(eventId,sub.id,sub.parent_order);
-        result=!binding?{outcome:"review",reason:"subscription_binding_missing"}
+        result=!binding?{outcome:"retry",reason:"subscription_binding_missing",dependency:{subscriptionId:sub.id,originOrderId:sub.parent_order}}
           :binding.productId!==signal.productId || binding.offerId!==signal.offerId?{outcome:"review",reason:"identity_mismatch"}
           :lifecycleDecision(order,sub,binding,deps.now());
       }catch(error) {

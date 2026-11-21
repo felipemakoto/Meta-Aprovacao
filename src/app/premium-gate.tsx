@@ -1,0 +1,19 @@
+"use client";
+import {useEffect,useRef,useState} from "react";
+import Link from "next/link";
+import theme from "./home-theme.module.css";
+import styles from "./premium-gate.module.css";
+import {useDailyLimits} from "@/lib/quiz/use-daily-limits";
+import {studyAreas,type StudyArea} from "@/lib/premium-study/contract";
+import {parseDailyLimits} from "@/lib/quiz/limits-contract";
+const benefits:Record<StudyArea,string>={plan:'Organize metas e sessões com seu desempenho.',realistic:'Treine com o formato verificado da instituição.',reviews:'Retome erros e pratique revisões espaçadas.',diagnosis:'Identifique dificuldades com amostras suficientes.',custom:'Escolha matérias, assuntos e duração.',radar:'Explore seu desempenho por matéria e assunto.',calendar:'Organize sessões e datas verificadas.',library:'Consulte provas e gabaritos de fontes oficiais.'};
+export const premiumFeatures=(Object.keys(studyAreas) as StudyArea[]).map(area=>[area,studyAreas[area],benefits[area]] as const);
+export function PremiumCatalog(){const {limits}=useDailyLimits(false,false);return <section className={styles.catalog} aria-label="Recursos Premium">{premiumFeatures.map(([area,name,description])=><Link key={area} href={'/premium/estudos?area='+area} className={styles.feature} data-premium-benefit={description}><span className={styles.badge}>{limits?.hasPremium===false&&<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>} Premium</span><strong>{name}</strong><span>{description}</span></Link>)}</section>;}
+export default function PremiumGate(){const dialog=useRef<HTMLDialogElement>(null),pending=useRef(false);const [text,setText]=useState('Organize sua preparação com os recursos Premium.'),[error,setError]=useState('');
+ useEffect(()=>{const click=async(event:MouseEvent)=>{if(event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.defaultPrevented)return;const target=event.target instanceof Element?event.target.closest('a'):null;if(!target||target.hasAttribute('download')||target.target==='_blank')return;const url=new URL(target.href,location.href);if(url.origin!==location.origin||!/^\/premium\/estudos(?:\/|$)/.test(url.pathname))return;
+ if(target.closest('[data-settings-dirty="true"]')&&!window.confirm('Há preferências não salvas. Sair mesmo assim?')){event.preventDefault();event.stopPropagation();return;}
+ event.preventDefault();event.stopPropagation();if(pending.current)return;pending.current=true;target.setAttribute('aria-busy','true');setError('');
+ try{const r=await fetch('/api/limits',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(r.ok&&parseDailyLimits(await r.json()).hasPremium){location.assign(url.href);return;}if(!r.ok&&r.status!==401)throw Error();setText(target.getAttribute('data-premium-benefit')??premiumFeatures.find(([area])=>area===url.searchParams.get('area'))?.[2]??'Tenha planejamento, revisões e organização em um só lugar.');dialog.current?.showModal();}catch{setError('Não foi possível confirmar seu plano. Tente novamente; nenhum pagamento foi iniciado.');dialog.current?.showModal();}finally{pending.current=false;target.removeAttribute('aria-busy');}};
+ document.addEventListener('click',click,true);return()=>document.removeEventListener('click',click,true);},[]);
+ return <dialog ref={dialog} className={`${theme.homeTheme} ${styles.modal}`} aria-labelledby="premium-lock-title"><h2 id="premium-lock-title">Recurso Premium</h2><p>{error||text}</p><p>Seus estudos gratuitos continuam disponíveis.</p><div className={styles.actions}><Link href="/premium" onClick={()=>dialog.current?.close()}>Conhecer Premium</Link><button type="button" onClick={()=>dialog.current?.close()}>Voltar</button></div></dialog>;
+}

@@ -1,14 +1,17 @@
-import { QuizNotReadyError, readGuestQuiz, startGuestQuiz } from "@/lib/data/quizzes";
+import { GuestRateLimitedError, QuizNotReadyError, readGuestQuiz, startGuestQuiz } from "@/lib/data/quizzes";
 import { createGuestQuizHandlers } from "@/lib/quiz/http";
+import { guestClientHash } from "@/lib/quiz/guest-rate-limit";
+import type { NextRequest } from "next/server";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const handlers = createGuestQuizHandlers({
+function handlers(request?: Request) { return createGuestQuizHandlers({
   read: readGuestQuiz,
-  start: startGuestQuiz,
+  start: token => startGuestQuiz(token, guestClientHash(request!, process.env.SUPABASE_SECRET_KEY ?? "", process.env.VERCEL === "1")),
   isNotReady: (error) => error instanceof QuizNotReadyError,
-}, { secure: process.env.NODE_ENV === "production", origin: process.env.APP_ORIGIN });
+  isRateLimited: (error) => error instanceof GuestRateLimitedError,
+}, { secure: process.env.NODE_ENV === "production", origin: process.env.APP_ORIGIN }); }
 
-export const GET = handlers.GET;
-export const POST = handlers.POST;
+export const GET = (request: NextRequest) => handlers().GET(request);
+export const POST = (request: NextRequest) => handlers(request).POST(request);

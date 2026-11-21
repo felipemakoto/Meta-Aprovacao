@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./information.module.css";
+import {AnalyticsPreferences} from "./analytics";
 
 export default function SiteFooter() {
   const pathname = usePathname();
@@ -18,6 +19,8 @@ export default function SiteFooter() {
         <Link href="/termos">Termos de uso</Link>
         <span aria-hidden="true">·</span>
         <Link href="/privacidade">Privacidade</Link>
+        <span aria-hidden="true">·</span>
+        <AnalyticsPreferences />
       </nav>
     </footer>
   );

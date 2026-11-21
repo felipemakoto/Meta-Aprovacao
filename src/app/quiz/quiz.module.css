@@ -3,7 +3,7 @@
 .brand { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; letter-spacing: -.4px; text-decoration: none; }
 .brandMark { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 4px; background: var(--color-action); }
 .brandMark img { filter: brightness(0) invert(1); }
-.exit { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-height: 44px; padding: 10px 12px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); box-shadow: var(--control-shadow); font-size: 14px; font-weight: 600; color: var(--color-action); text-decoration: none; }
+.exit { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-height: 44px; padding: 10px 12px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); box-shadow: var(--control-shadow); font-size: 14px; font-weight: 600; color: var(--home-accent, var(--color-action)); text-decoration: none; }
 .exit:hover, .returnLink:hover, .back:hover:not(:disabled) { background: var(--control-hover); border-color: var(--color-action); }
 .progressHeading { display: flex; justify-content: space-between; gap: 12px; margin-top: 23px; font-size: 14px; color: var(--color-text-secondary); }
 .progress { display: block; appearance: none; width: 100%; height: 7px; margin-top: 10px; border: 0; border-radius: 8px; overflow: hidden; background: var(--color-divider); }
@@ -16,22 +16,22 @@
 .option { display: flex; gap: 16px; align-items: center; padding: 13px 14px; min-height: 60px; border: 1px solid var(--control-border); border-radius: var(--control-radius); background: var(--control-surface); font-size: 18px; cursor: pointer; position: relative; overflow-wrap: anywhere; }
 .option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
 .option:has(input:focus-visible) { outline: 3px solid var(--color-action); outline-offset: 3px; }
-.option:has(input:checked) { border-color: var(--color-action); background: #f0f1d8; box-shadow: inset 3px 0 var(--color-action); }
+.option:has(input:checked) { border-color: var(--color-action); background: var(--home-sage, #f0f1d8); box-shadow: inset 3px 0 var(--color-action); }
 .option:has(input:checked) .letter { background: var(--color-action); color: white; border-color: var(--color-action); }
 .option:hover { border-color: var(--color-action); }
 .letter { display: grid; place-items: center; flex: 0 0 31px; height: 32px; border: 1px solid #b6c1b8; border-radius: 4px; font-weight: 650; }
 .continue { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 56px; padding: 14px 12px; margin-top: 29px; border: 1px solid var(--color-action); border-radius: var(--control-radius); background: var(--color-action); box-shadow: var(--control-primary-shadow); color: white; font: inherit; font-size: 18px; font-weight: 650; cursor: pointer; }
 .continue img { filter: brightness(0) invert(1); }
 .continue:hover:not(:disabled) { background: var(--color-action-hover); }
-.continue:disabled { background: #d8ddd6; border-color: #bdc8bf; box-shadow: none; color: #59685f; cursor: not-allowed; }
+.continue:disabled { background: var(--home-sage, #d8ddd6); border-color: #bdc8bf; box-shadow: none; color: var(--home-muted, #59685f); cursor: not-allowed; }
 .continue:disabled img { filter: none; opacity: .6; }
-.back, .returnLink { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 52px; margin: 16px auto 0; padding: 12px 16px; color: var(--color-action); font: inherit; font-weight: 600; text-align: center; text-decoration: none; background: var(--control-surface); border: 1px solid var(--control-border); border-radius: var(--control-radius); box-shadow: var(--control-shadow); cursor: pointer; }
+.back, .returnLink { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 52px; margin: 16px auto 0; padding: 12px 16px; color: var(--home-accent, var(--color-action)); font: inherit; font-weight: 600; text-align: center; text-decoration: none; background: var(--control-surface); border: 1px solid var(--control-border); border-radius: var(--control-radius); box-shadow: var(--control-shadow); cursor: pointer; }
 .back:disabled { opacity: .6; cursor: not-allowed; text-decoration: none; }
 .questionActions { display: flex; align-items: center; gap: 12px; margin-top: 29px; }
 .questionActions .continue { flex: 1; min-width: 0; margin-top: 0; }
-.previousQuestion { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; margin: 0; padding: 0; border: 1px solid var(--control-border); border-radius: 50%; background: var(--control-surface); box-shadow: var(--control-shadow); color: var(--color-action); cursor: pointer; }
-.previousQuestion:hover { background: #edf2ec; border-color: var(--color-action); }
-.previousQuestion:active { background: #e1e9df; }
+.previousQuestion { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; margin: 0; padding: 0; border: 1px solid var(--control-border); border-radius: 50%; background: var(--control-surface); box-shadow: var(--control-shadow); color: var(--home-accent, var(--color-action)); cursor: pointer; }
+.previousQuestion:hover { background: var(--home-sage, #edf2ec); border-color: var(--color-action); }
+.previousQuestion:active { background: var(--home-sage, #e1e9df); }
 .message { padding-top: 38px; }
 .message h1 { font-family: var(--font-display), Georgia, serif; font-size: 32px; line-height: 1.2; font-weight: 400; margin: 0; }
 .message p { color: var(--color-text-secondary); font-size: 18px; line-height: 1.5; margin-top: 20px; }
@@ -41,7 +41,7 @@
 @media (max-width: 359px) { .page { width: calc(100% - 40px); } .brand { font-size: 18px; } .question { font-size: 25px; } .progressHeading { font-size: 13px; } }
 .reviewChoices { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
 .reviewChoices button { flex: 0 0 auto; width: auto; min-width: 56px; min-height: 48px; padding: 10px; margin: 0; }
-.stepLabel {font-size:12px!important;font-weight:650;letter-spacing:.07em;text-transform:uppercase;color:var(--color-action)!important;margin:0 0 12px!important;}
+.stepLabel {font-size:12px!important;font-weight:650;letter-spacing:.07em;text-transform:uppercase;color: var(--home-accent, var(--color-action))!important;margin:0 0 12px!important;}
 .quizLabel {margin-top:24px!important;}
 .loadingBar {height:8px;overflow:hidden;border-radius:4px;background:var(--color-divider);margin:28px 0;}
 .loadingBar span {display:block;width:42%;height:100%;background:var(--color-action);border-radius:4px;animation:correction-progress 1.35s ease-in-out infinite;}
@@ -57,12 +57,12 @@
 :global(body:has([data-study])) .progressHeading { margin-top: 0; font-size: 17px; line-height: 1.5; }
 :global(body:has([data-study])) .progress { height: 8px; margin-top: 14px; background: var(--home-line); }
 :global(body:has([data-study])) .options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-:global(body:has([data-study])) .option { min-height: 76px; gap: 14px; padding: 18px; border-color: var(--home-line); border-radius: 14px; background: white; font-size: 18px; line-height: 1.5; }
+:global(body:has([data-study])) .option { min-height: 76px; gap: 14px; padding: 18px; border-color: var(--home-line); border-radius: 14px; background: var(--home-paper, #fff); font-size: 18px; line-height: 1.5; }
 :global(body:has([data-study])) .option:has(input:checked) { border-color: var(--home-green); background: var(--home-sage); box-shadow: none; }
 :global(body:has([data-study])) .option:hover { border-color: var(--home-green); }
 :global(body:has([data-study])) .letter { flex-basis: 32px; height: 32px; border-radius: 50%; font-size: 16px; }
 :global(body:has([data-study])) .continue { width: fit-content; min-width: min(100%, 240px); margin-left: auto; padding-inline: 24px; font-size: 18px; box-shadow: none; }
-:global(body:has([data-study])) .continue:disabled { background: #e1e4dd; color: #545b52; border-color: #cbd2c6; }
+:global(body:has([data-study])) .continue:disabled { background: var(--home-sage, #e1e4dd); color: var(--home-muted, #545b52); border-color: #cbd2c6; }
 :global(body:has([data-study])) .back, :global(body:has([data-study])) .returnLink { box-shadow: none; font-size: 17px; }
 :global(body:has([data-study])) .message { padding-top: 12px; }
 :global(body:has([data-study])) .message h1 { font: 600 30px/1.35 var(--home-font); }

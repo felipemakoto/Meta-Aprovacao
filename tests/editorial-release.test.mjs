@@ -53,5 +53,6 @@ test('carga de publicação preserva isolamento comercial e confere hashes antes
  assert.match(sql,/stage47_content_diverged/);assert.match(sql,/stage47_model_diverged/);assert.match(sql,/stage47_after_mismatch/);
  assert.doesNotMatch(sql,/\bgrant\b|\btruncate\b|\bdelete from\b|\bcreate table\b/i);
  assert.doesNotMatch(sql,/update\s+(?:private\.)?(?:subscriptions|subscription_periods|cakto_)/i);
- assert.match(readFileSync(new URL('src/lib/subscriptions/checkout-launch.ts',root),'utf8'),/checkoutEnabled=false/);
+ // Publishing content must not itself mutate the separate commercial launch flag.
+ assert.doesNotMatch(sql,/checkoutEnabled/);
 });

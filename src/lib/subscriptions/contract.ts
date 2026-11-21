@@ -22,10 +22,8 @@ export async function loadPremium(deps: { user: () => Promise<string | null>; re
     return { kind: "ready", access: parseSubscriptionPricing(await deps.read(id)) };
   } catch { return { kind: "error" }; }
 }
-// A campanha é restrita a outubro de 2026 no fuso comercial, não ao relógio do navegador.
+// New checkouts use the regular price. Historical paid intents keep their evidence.
 export function premiumOffer(at: Date, hasPaidBefore = false) {
   if (!Number.isFinite(at.getTime()) || typeof hasPaidBefore !== "boolean") throw Error("invalid_offer_date");
-  const parts = new Intl.DateTimeFormat("en", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit" }).formatToParts(at);
-  const promotional = !hasPaidBefore && parts.find(p => p.type === "year")?.value === "2026" && parts.find(p => p.type === "month")?.value === "10";
-  return { promotional, firstPrice: promotional ? 11.50 : 22.99, monthlyPrice: 22.99 };
+  return { promotional: false as const, firstPrice: 22.99, monthlyPrice: 22.99 };
 }

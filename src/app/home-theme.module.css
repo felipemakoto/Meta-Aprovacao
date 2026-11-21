@@ -31,6 +31,7 @@
   --home-display: "Meta Lora", Georgia, serif;
   --home-width: 1200px;
   --home-radius: 12px;
+  --home-nav-shadow: 0 0 20px rgb(0 0 0 / 9%), 0 4px 12px rgb(0 0 0 / 4%);
   --home-motion-fast: 180ms;
   --home-motion-enter: 600ms;
   --home-ease: cubic-bezier(.22, 1, .36, 1);
@@ -40,7 +41,31 @@
 
 :global(body):has(.homeTheme) { background: var(--home-paper); }
 .homeTheme ::selection { background: var(--home-mint); color: var(--home-ink); }
-.homeTheme :focus-visible { outline: 3px solid var(--home-green); outline-offset: 5px; }
+.homeTheme :focus-visible { outline: 3px solid var(--home-accent, var(--home-green)); outline-offset: 5px; }
+
+:global(html[data-theme="dark"]) .homeTheme,
+:global(html[data-theme="dark"] body):has(.homeTheme) {
+  --home-paper: #1d2620;
+  --home-canvas: #111813;
+  --home-ink: #eff4ed;
+  --home-muted: #b6c4b7;
+  --home-line: #415045;
+  --home-sage: #283c2c;
+  --home-mint: #35533a;
+  --home-accent: #97dda3;
+  --home-accent-strong: #b2e8ba;
+  --home-example-muted: #38334b;
+  --home-example-active: #426b38;
+  --home-error-bg: #402a25;
+  --home-error: #ffb8a8;
+  --home-nav-shadow: 0 0 20px rgb(0 0 0 / 30%), 0 4px 12px rgb(0 0 0 / 20%);
+  --background: var(--home-canvas);
+  --foreground: var(--home-ink);
+  --color-text-secondary: var(--home-muted);
+  --control-surface: var(--home-paper);
+  --control-border: var(--home-line);
+  --control-hover: var(--home-sage);
+}
 
 :global(body):has(.homeTheme) > :global(footer) {
   display: grid;
@@ -73,3 +98,8 @@
   :global(body):has(.homeTheme) > :global(footer) { grid-template-columns: 1fr; gap: 24px; }
   :global(body):has(.homeTheme) > :global(footer) [data-home-support] { justify-self: start; }
 }
+
+:global(html[data-contrast="high"]) .homeTheme,
+:global(html[data-contrast="high"] body):has(.homeTheme) {--home-muted:var(--home-ink);--home-line:#637568;}
+:global(html[data-theme="dark"][data-contrast="high"]) .homeTheme,
+:global(html[data-theme="dark"][data-contrast="high"] body):has(.homeTheme) {--home-line:#a5b8a7;}

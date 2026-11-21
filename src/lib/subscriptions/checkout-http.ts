@@ -29,12 +29,12 @@ export function checkoutHandler(deps: Dependencies, settings: Settings) {
       // Next pode representar POST vazio como stream; aceitar somente EOF sem bytes.
       const reader = request.body.getReader();
       let timedOut = false;
-      const timer = setTimeout(() => { timedOut = true; void reader.cancel(); }, 3000);
+      const timer = setTimeout(() => { timedOut = true; void reader.cancel().catch(() => {}); }, 3000);
       try {
         const chunk = await reader.read();
         if (timedOut || !chunk.done) return json("invalid_input", 400);
       } catch { return json("invalid_input", 400); }
-      finally { clearTimeout(timer); await reader.cancel().catch(() => {}); reader.releaseLock(); }
+      finally { clearTimeout(timer); void reader.cancel().catch(() => {}); try { reader.releaseLock(); } catch {} }
     }
     try {
       const user = await deps.user();
@@ -45,9 +45,14 @@ export function checkoutHandler(deps: Dependencies, settings: Settings) {
       const offer = deps.offer(deps.now(), pricing.hasPaidBefore);
       const intent = await deps.create(user, offer);
       const location = checkoutDestination(intent, offer, deps.now());
+      // Client navigation must not follow a cross-origin 303 inside fetch.
+      if (request.headers.get("accept") === "application/json") return Response.json({url:location},{headers:{
+        "Cache-Control":"private, no-store, max-age=0","Referrer-Policy":"no-referrer","X-Content-Type-Options":"nosniff",
+      }});
       return new Response(null, { status: 303, headers: { Location: location,
         "Cache-Control": "private, no-store, max-age=0", "Referrer-Policy": "no-referrer" } });
     } catch (e) {
+      if(e instanceof Error&&e.message==="payment_pending")return json("payment_pending",409);
       return e instanceof Error && e.message === "checkout_rate_limited"
         ? json("rate_limited", 429) : json("checkout_unavailable", 503);
     }

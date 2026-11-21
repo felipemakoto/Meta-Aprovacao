@@ -31,7 +31,7 @@ export default function SignupForm() {
     if (lock.current) return;
     const form = event.currentTarget;
     const data = new FormData(form);
-    const input: SignupInput = { email: String(data.get("email") ?? ""), password: String(data.get("password") ?? ""), confirmPassword: String(data.get("confirmPassword") ?? ""), acceptedLegal: data.get("acceptedLegal") === "on", legalVersion: legalDocuments.version };
+    const input: SignupInput = { name: String(data.get("name") ?? ""), email: String(data.get("email") ?? ""), password: String(data.get("password") ?? ""), confirmPassword: String(data.get("confirmPassword") ?? ""), acceptedLegal: data.get("acceptedLegal") === "on", legalVersion: legalDocuments.version };
     const invalid = validateSignup(input);
     setFields(invalid); setError("");
     const first = Object.keys(invalid)[0];
@@ -68,6 +68,11 @@ export default function SignupForm() {
     <form className={styles.panel} onSubmit={submit} noValidate aria-busy={busy}>
       <fieldset disabled={busy} className={styles.fields}>
         <div className={styles.field}>
+          <label htmlFor="signup-name">Nome</label>
+          <input id="signup-name" name="name" autoComplete="name" required minLength={2} maxLength={32} placeholder="Como quer ser chamado?" aria-invalid={!!fields.name} aria-describedby={fields.name ? "name-error" : undefined}/>
+          {fields.name && <p id="name-error" className={styles.fieldError}>{fields.name}</p>}
+        </div>
+        <div className={styles.field}>
           <label htmlFor="signup-email">E-mail</label>
           <input id="signup-email" name="email" type="email" autoComplete="email" inputMode="email" autoCapitalize="none" spellCheck={false} required maxLength={254} placeholder="voce@exemplo.com" aria-invalid={!!fields.email} aria-describedby={fields.email ? "email-error" : undefined} />
           {fields.email && <p id="email-error" className={styles.fieldError}>{fields.email}</p>}
@@ -87,7 +92,6 @@ export default function SignupForm() {
       <noscript>Ative o JavaScript para usar o formulário de cadastro.</noscript>
     </form>
     <p className={styles.note}>Já tem conta? <Link href="/login">Entrar</Link></p>
-    <Link className={styles.skip} href="/">Continuar sem conta</Link>
   </section>;
 }
 

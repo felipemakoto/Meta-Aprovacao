@@ -3,6 +3,7 @@ import { getVerifiedUser } from "@/lib/auth/user";
 import { readSubscriptionPricing } from "@/lib/data/subscriptions";
 import { loadPremium, premiumOffer } from "@/lib/subscriptions/contract";
 import Premium from "./premium";
+import {directCheckoutEnabled} from "@/lib/subscriptions/direct-config";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Premium | Meta Aprovação", robots: { index: false, follow: false } };
 export default async function Page() {
@@ -11,5 +12,5 @@ export default async function Page() {
     read: readSubscriptionPricing,
   });
   if (state.kind === "login") redirect("/login");
-  return <Premium state={state} offer={premiumOffer(new Date(), state.kind === "ready" ? state.access.hasPaidBefore : true)} />;
+  return <Premium state={state} offer={premiumOffer(new Date(), state.kind === "ready" ? state.access.hasPaidBefore : true)} integrated={directCheckoutEnabled()}/>;
 }

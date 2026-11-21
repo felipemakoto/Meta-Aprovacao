@@ -32,17 +32,19 @@ export function inboxEvents(value: unknown, product: string, offers: string[]): 
   if (typeof envelope.event !== "string" || !events.has(envelope.event)) throw Error("unsupported_event");
   const records = Array.isArray(envelope.data) ? envelope.data : [envelope.data];
   if (!records.length || records.length > 25) throw Error("invalid_payload");
-  return records.map(value => {
+  const applicable = records.flatMap(value => {
     const data = object(value);
     const productId = id(object(data.product).id), offerId = id(object(data.offer).id);
-    if (productId !== product || !offers.includes(offerId)) throw Error("foreign_offer");
+    if (productId !== product || !offers.includes(offerId)) return [];
     const status = id(data.status);
     const subscriptionId = data.subscription == null ? null : id(object(data.subscription).id);
     // Rastreamento é candidato ao vínculo, nunca prova de identidade ou pagamento.
     const reference = typeof data.sck === "string" && /^[a-f0-9]{64}$/.test(data.sck) ? data.sck : null;
-    return { event: envelope.event as string, orderId: id(data.id), productId, offerId, status, subscriptionId, reference,
-      paidAt: date(data.paidAt), refundedAt: date(data.refundedAt), chargedbackAt: date(data.chargedbackAt), canceledAt: date(data.canceledAt) };
+    return [{ event: envelope.event as string, orderId: id(data.id), productId, offerId, status, subscriptionId, reference,
+      paidAt: date(data.paidAt), refundedAt: date(data.refundedAt), chargedbackAt: date(data.chargedbackAt), canceledAt: date(data.canceledAt) }];
   });
+  if (!applicable.length) throw Error("foreign_offer");
+  return applicable;
 }
 class HttpError extends Error { status: number; constructor(status: number) { super("webhook_rejected"); this.status = status; } }
 async function readBody(request: Request): Promise<Uint8Array> {
@@ -88,7 +90,7 @@ export function webhookHandler(deps: { config: () => { secret: string; product: 
       let records: InboxEvent[];
       try { records = inboxEvents(parsed, config.product, config.offers); } catch (error) {
         // Acknowledge authenticated, inapplicable deliveries (including provider fixtures)
-        // without persisting them or granting access. Invalid mixed batches stay atomic.
+        // without persisting them or granting access. Malformed applicable items stay atomic.
         if (error instanceof Error && error.message === "foreign_offer") return reply(200, "product_or_offer_ignored");
         if (error instanceof Error && error.message === "unsupported_event") return reply(200, "event_ignored");
         if (error instanceof Error && error.message === "invalid_payload") return reply(200, "payload_ignored");

@@ -3,31 +3,35 @@ import Image from "next/image";
 import StartTestButton from "./start-test-button";
 import { HomeIcon, MetaMark } from "./home-art";
 import HomeDemo from "./home-demo";
+import HomeHeader from "./home-header";
 import theme from "./home-theme.module.css";
 import styles from "./home.module.css";
+import {InstallLink} from "./pwa/provider";
 
 export default function Home() {
   return (
     <div className={`${theme.homeTheme} ${styles.page}`}>
       <a className={styles.skipLink} href="#conteudo">Pular para o conteúdo</a>
-      <header className={styles.header}>
+      <HomeHeader>
         <div className={styles.headerInner}>
           <Link className={styles.brand} href="/" aria-label="Meta Aprovação — início">
             <MetaMark /><span className={styles.brandName}>Meta Aprovação</span>
           </Link>
           <nav className={styles.desktopNav} aria-label="Navegação principal">
+            <InstallLink/>
             <Link href="/questoes">Questões</Link><Link href="/simulados">Simulados</Link>
             <Link href="/login">Entrar</Link><Link className={styles.outlineButton} href="/cadastro">Criar conta</Link>
           </nav>
           <details className={styles.mobileMenu}>
             <summary>Menu<span aria-hidden="true"><span /><span /></span></summary>
             <nav aria-label="Navegação principal no celular">
+              <InstallLink/>
               <Link href="/questoes">Questões</Link><Link href="/simulados">Simulados</Link>
               <Link href="/login">Entrar</Link><Link href="/cadastro">Criar conta</Link>
             </nav>
           </details>
         </div>
-      </header>
+      </HomeHeader>
       <main id="conteudo" tabIndex={-1}>
         <section className={styles.hero} aria-labelledby="home-title"><div className={styles.heroInner}>
           <div className={styles.heroCopy}>

@@ -9,6 +9,7 @@ import styles from "./practice.module.css";
 import {useDailyLimits} from "@/lib/quiz/use-daily-limits";
 import {dailyLimitMessage} from "@/lib/quiz/limits-contract";
 import CorrectionLoading from "../quiz/correction-loading";
+import {devicePreferences,preferenceEvent} from "@/lib/account/settings-device";
 const initial:Filters={subject:"matematica",topic:"",difficulty:"all",exam:"all"};
 const sample:PracticeQuestion={id:"00000000-0000-4000-8000-000000000019",questionId:"00000000-0000-4000-8000-000000000001",expiresAt:"2030-01-01T00:00:00Z",subject:"matematica",topic:"Porcentagem",statement:"Uma mochila custa R$ 80,00. Com 15% de desconto, qual é o preço final?",options:["R$ 12,00","R$ 68,00","R$ 65,00","R$ 72,00","R$ 92,00"]};
 const messages:Record<string,string>={login_required:"Entre na sua conta para continuar.",attempt_unavailable:"O prazo desta questão terminou. Aplique os filtros para começar outra.",already_answered:"Esta questão já foi respondida. Continue com uma nova questão.",rate_limited:"Muitas solicitações. Aguarde um minuto antes de tentar novamente.",daily_practice_limit:"Você usou as 10 questões de hoje. Novas questões ficam disponíveis à meia-noite de São Paulo. Você ainda pode conferir a questão aberta e revisar seu histórico."};
@@ -24,17 +25,35 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
   const [message,setMessage]=useState(unavailable?"Não foi possível verificar sua conta. Recarregue a página para tentar novamente.":preview&&limitReached?messages.daily_practice_limit:"");
   const heading=useRef<HTMLHeadingElement>(null);const status=useRef<HTMLDivElement>(null);
   const [loaded,setLoaded]=useState(preview);
+  const [restoring,setRestoring]=useState(!preview&&!unavailable);
+  const [restoreError,setRestoreError]=useState(false);
+  const [restoreRetry,setRestoreRetry]=useState(0);
   const quota=useDailyLimits(preview,unavailable);
+  const preferenceApplied=useRef(false);
+  const [explanations,setExplanations]=useState("expanded");
+  useEffect(()=>{const update=()=>{const p=devicePreferences();if(preview||!p)return;setExplanations(p.explanations);if(!preferenceApplied.current&&!question&&!loaded&&!restoring){setFilters(f=>({...f,exam:p.institution==="both"?"all":p.institution,difficulty:p.difficulty,subject:p.priorities[0]??f.subject}));preferenceApplied.current=true;}};update();window.addEventListener(preferenceEvent,update);return()=>window.removeEventListener(preferenceEvent,update);},[preview,question,loaded,restoring]);
   const pending=useRef<{requestId:string;previous:string|null}|null>(null);
+  useEffect(()=>{
+    if(preview||unavailable)return;
+    const controller=new AbortController();let active=true;
+    const timeout=setTimeout(()=>controller.abort(),15000);
+    fetch("/api/practice?resume=1",{cache:"no-store",credentials:"same-origin",signal:controller.signal})
+      .then(async r=>{if(!r.ok)throw Error();return r.json();})
+      .then(body=>{if(!active)return;const resumed=body.question?publicQuestion(body.question):null;
+        setQuestion(resumed);if(resumed)setFilters({...initial,subject:resumed.subject,topic:resumed.topic});
+      }).catch(()=>{if(active)setRestoreError(true);})
+      .finally(()=>{clearTimeout(timeout);if(active)setRestoring(false);});
+    return()=>{active=false;clearTimeout(timeout);controller.abort();};
+  },[preview,unavailable,restoreRetry]);
   useEffect(()=>{
     if(preview||unavailable)return;
     const controller=new AbortController();
     fetch(`/api/practice?subject=${encodeURIComponent(filters.subject)}`,{cache:"no-store",signal:controller.signal}).then(async r=>{if(!r.ok)throw new Error();return r.json();}).then(b=>{if(!Array.isArray(b.topics)||b.topics.some((t:unknown)=>typeof t!=="string"))throw new Error();setTopics(b.topics);setTopicsError(false);}).catch(()=>{if(!controller.signal.aborted){setTopics([]);setTopicsError(true);}});
     return()=>controller.abort();
   },[filters.subject,preview,unavailable]);
-  function change(field:keyof Filters,value:string){pending.current=null;setFilters(f=>({...f,[field]:value,...(field==="subject"?{topic:""}:{})}));setQuestion(null);setFeedback(null);setAnswer("");setMessage("");setLoaded(false);if(field==="subject")setTopics([]);}
+  function change(field:keyof Filters,value:string){preferenceApplied.current=true;pending.current=null;setFilters(f=>({...f,[field]:value,...(field==="subject"?{topic:""}:{})}));setQuestion(null);setFeedback(null);setAnswer("");setMessage("");setLoaded(false);if(field==="subject")setTopics([]);}
   async function run(action:"next"|"answer"){
-    if(lock.current||unavailable)return;if(action==="answer"&&(!answer||!question))return;
+    if(lock.current||unavailable||restoring||restoreError)return;if(action==="answer"&&(!answer||!question))return;
     lock.current=true;setBusy(true);setCorrecting(action==="answer");setMessage("");
     try{
       if(preview){
@@ -56,7 +75,9 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
 
     <main><h1 className={styles.title}>Questões</h1>
       <p className={styles.notice}>{preview?`${limitReached?0:10} de 10 novas questões disponíveis hoje. Renova à meia-noite de São Paulo.`:quota.limits?dailyLimitMessage(quota.limits,"practice"):quota.failed?"Não foi possível consultar seu saldo. Tente buscar uma questão para verificar a disponibilidade.":"Consultando o saldo de hoje…"}</p>
-      <form onSubmit={e=>{e.preventDefault();void run("next");}}><fieldset className={styles.filters} disabled={busy||unavailable}>
+      {restoring&&<p className={styles.notice} role="status">Verificando sua questão em andamento…</p>}
+      {restoreError&&<div role="status"><p className={styles.notice}>Não foi possível retomar sua questão. Tente novamente antes de iniciar outra.</p><button className={styles.apply} onClick={()=>{setRestoring(true);setRestoreError(false);setRestoreRetry(n=>n+1);}}>Tentar retomar</button></div>}
+      <form onSubmit={e=>{e.preventDefault();void run("next");}}><fieldset className={styles.filters} disabled={busy||unavailable||restoring||restoreError}>
         <div className={styles.field}><label htmlFor="subject">Matéria</label><select id="subject" value={filters.subject} onChange={e=>change("subject",e.target.value)}>{Object.entries(subjects).map(([v,label])=><option key={v} value={v}>{label}</option>)}</select></div>
         <div className={styles.field}><label htmlFor="topic">Assunto</label><select id="topic" value={filters.topic} onChange={e=>change("topic",e.target.value)}><option value="">Todos</option>{topics.map(t=><option key={t}>{t}</option>)}</select></div>
         <details className={styles.advanced}>
@@ -74,7 +95,7 @@ export default function Practice({preview=false,unavailable=false,limitReached=f
         <form onSubmit={e=>{e.preventDefault();void run("answer");}}><fieldset className={base.options} disabled={busy||!!feedback}><legend className={base.srOnly}>Escolha uma alternativa</legend>{question.options.map((option,i)=>{const letter="ABCDE"[i];return <label className={base.option} key={letter}><input type="radio" name="answer" value={letter} required checked={answer===letter} onChange={()=>setAnswer(letter)} /><span className={base.letter}>{letter}</span><span>{option}</span></label>;})}</fieldset>
         {!feedback&&<button className={base.continue} disabled={busy||!answer}>{busy?"Conferindo…":"Conferir resposta"}<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>}</form>
         {correcting&&<CorrectionLoading compact title="Conferindo sua resposta…"/>}
-        {feedback&&<div ref={status} tabIndex={-1} role="status" aria-live="polite"><section className={styles.feedback}><h3>{feedback.correct?"Você acertou":"Vamos revisar"}</h3><p>Resposta correta: {feedback.correctAnswer} — {question.options["ABCDE".indexOf(feedback.correctAnswer)]}</p><p>{feedback.explanation}</p></section></div>}
+        {feedback&&<div ref={status} tabIndex={-1} role="status" aria-live="polite"><section className={styles.feedback}><h3>{feedback.correct?"Você acertou":"Vamos revisar"}</h3><p>Resposta correta: {feedback.correctAnswer} — {question.options["ABCDE".indexOf(feedback.correctAnswer)]}</p>{explanations==="on_demand"?<details><summary>Ver explicação</summary><p>{feedback.explanation}</p></details>:<p>{feedback.explanation}</p>}</section></div>}
         {feedback&&<button className={base.continue} disabled={busy} onClick={()=>void run("next")}>Próxima questão<Image src="/icons/arrow-right.svg" width={23} height={23} alt="" /></button>}
       </section>:loaded&&<p className={styles.notice}>Nenhuma questão encontrada. Tente outros filtros.</p>}
     </main>{preview&&<footer className={styles.footer}>Dados ilustrativos.</footer>}

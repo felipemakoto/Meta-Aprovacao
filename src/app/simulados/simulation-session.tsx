@@ -11,8 +11,10 @@ import { previewCorrection } from "./simulation-preview";
 import base from "../quiz/quiz.module.css";
 import styles from "./simulations.module.css";
 import historyStyles from "../historico/history.module.css";
+import PremiumExamSession from "../premium/estudos/exam-session";
 export default function SimulationSession({initial,preview=false,onBack,historyView=false}:{initial:SimulationState;preview?:boolean;onBack?:()=>void;historyView?:boolean}){
  const [state,setState]=useState(initial),[expired,setExpired]=useState(false),[login,setLogin]=useState(false);
+ if("quiz" in state&&state.quiz.premium)return <PremiumExamSession initial={state}/>;
  async function finish(answers:Answers){
   const next=await (async()=>{
    if(preview)return previewCorrection(state,answers);

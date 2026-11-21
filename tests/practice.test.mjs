@@ -45,3 +45,11 @@ test('GET aceita uma matéria válida, exige sessão e retorna só assuntos',asy
  assert.equal((await h({user:async()=>null}).GET(get('?subject=matematica'))).status,401);
  assert.deepEqual(await (await h().GET(get('?subject=matematica'))).json(),{topics:[]});
 });
+test('retomar usa identidade verificada, não consome questão nem revela gabarito',async()=>{
+ let seen;const handlers=h({resume:async user=>{seen=user;return {...q,correctAnswer:'B',explanation:'private'};},run:()=>assert.fail('Não criar na retomada')});
+ const request=new NextRequest(origin+'/api/practice?resume=1');
+ const r=await handlers.GET(request);assert.equal(r.status,200);assert.equal(seen,'verified-user');assert.deepEqual(await r.json(),{question:q});
+ assert.equal((await h({user:async()=>null,resume:()=>assert.fail('sem sessão')}).GET(request)).status,401);
+ for(const search of ['?resume=1&user=other','?resume=1&resume=1','?resume=2'])assert.equal((await handlers.GET(new NextRequest(origin+'/api/practice'+search))).status,400);
+ assert.deepEqual(await (await h({resume:async()=>null}).GET(request)).json(),{question:null});
+});

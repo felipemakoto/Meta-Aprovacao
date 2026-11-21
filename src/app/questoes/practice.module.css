@@ -1,9 +1,9 @@
 .title { margin: 0 0 18px; font: 700 clamp(32px, 4vw, 40px)/1.2 var(--home-font); letter-spacing: -.035em; }
 .notice { max-width: 65ch; margin: 16px 0 24px; color: var(--home-muted); font-size: 18px; line-height: 1.6; }
-.filters { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 18px; margin: 0; padding: 24px; border: 1px solid var(--home-line); border-radius: 18px; background: white; }
+.filters { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 18px; margin: 0; padding: 24px; border: 1px solid var(--home-line); border-radius: 18px; background: var(--home-paper, #fff); }
 .field { min-width: 0; font-size: 17px; }
 .field label { display: block; margin-bottom: 8px; font-weight: 600; }
-.field select { width: 100%; min-width: 0; min-height: 52px; padding: 12px; border: 1px solid var(--control-border); border-radius: 10px; background: white; font: inherit; color: var(--home-ink); }
+.field select { width: 100%; min-width: 0; min-height: 52px; padding: 12px; border: 1px solid var(--control-border); border-radius: 10px; background: var(--home-paper, #fff); font: inherit; color: var(--home-ink); }
 .advanced { min-width: 0; }
 .advanced summary { display: flex; align-items: center; min-height: 52px; padding: 12px 14px; border: 1px solid var(--home-line); border-radius: 10px; color: var(--home-ink); cursor: pointer; font-size: 17px; font-weight: 600; }
 .advanced summary::before { content: '+'; margin-right: 10px; font-size: 22px; font-weight: 400; }
@@ -12,7 +12,7 @@
 .apply { min-height: 52px; padding: 12px 20px; border: 1px solid var(--home-green); border-radius: 10px; font: 600 17px/1.5 var(--home-font); color: white; background: var(--home-green); cursor: pointer; }
 .apply:hover:not(:disabled) { background: var(--home-green-hover); }
 .apply:disabled { opacity: .6; cursor: not-allowed; }
-.content { margin-top: 28px; padding: 30px; border: 1px solid var(--home-line); border-radius: 20px; background: white; }
+.content { margin-top: 28px; padding: 30px; border: 1px solid var(--home-line); border-radius: 20px; background: var(--home-paper, #fff); }
 .metadata { margin: 0; color: var(--home-muted); font-size: 17px; line-height: 1.5; }
 .question { margin-block: 20px 26px; }
 .feedback { margin-top: 28px; padding: 22px; border: 1px solid var(--home-line); border-radius: 14px; background: var(--home-canvas); font-size: 18px; line-height: 1.6; }

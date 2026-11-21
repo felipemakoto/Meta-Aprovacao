@@ -6,9 +6,9 @@ import { classifyConfirmation } from "./recovery-contract";
 
 export const signupHandlers = createSignupHandlers({
   signedIn: async () => !!(await getVerifiedUser()),
-  signup: async ({ email, password, redirectTo, agreement }) => {
+  signup: async ({ name, email, password, redirectTo, agreement }) => {
     const supabase = await createClient();
-    const { data, error } = await supabase.auth.signUp({ email, password, options: { emailRedirectTo: redirectTo, data: {legal_acceptance: agreement} } });
+    const { data, error } = await supabase.auth.signUp({ email, password, options: { emailRedirectTo: redirectTo, data: {name, legal_acceptance: agreement} } });
     return { error, confirmed: !!data.session && !!data.user?.email_confirmed_at };
   },
   exchange: async code => {

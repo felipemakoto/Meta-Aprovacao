@@ -67,9 +67,12 @@ test('eventos não utilizados e payloads autenticados inválidos são reconhecid
  }
 });
 
-test('lote V2 inválido ou de oferta estrangeira não salva parcialmente',async()=>{
- const handler=webhookHandler({config,save:()=>assert.fail('Não salvar parte de lote inválido')});
- for(const second of [{...data,product:{id:'foreign'}},{...data,id:null}])assert.equal((await handler(request(JSON.stringify({...payload,data:[data,second]})))).status,200);
+test('lote V2 mantém o produto próprio e ignora adicionais estrangeiros',async()=>{
+ let saved;const handler=webhookHandler({config,save:async events=>{saved=events;}});
+ assert.equal((await handler(request(JSON.stringify({...payload,data:[data,{...data,product:{id:'foreign'}}]})))).status,200);
+ assert.deepEqual(saved,inboxEvents(payload,'product',['offer']));
+ const atomic=webhookHandler({config,save:()=>assert.fail('Não salvar lote com item próprio malformado')});
+ assert.equal((await atomic(request(JSON.stringify({...payload,data:[data,{...data,id:null}]})))).status,200);
 });
 
 test('diagnóstico não expõe valores e falha de logger não muda a entrega',async()=>{
@@ -96,7 +99,7 @@ test('V1/V2 normalizam somente campos comerciais e descartam segredos e dados pe
  assert.deepEqual(inboxEvents({...payload,data:[data]},'product',['offer']),records);
  for(const bad of [{...payload,event:'checkout_abandonment'},{...payload,data:[]},{...payload,data:Array(26).fill(data)},{...payload,data:{...data,id:null}}])assert.throws(()=>inboxEvents(bad,'product',['offer']));
  assert.throws(()=>inboxEvents(payload,'other',['offer']));
- assert.throws(()=>inboxEvents({...payload,data:[data,{...data,offer:{id:'other'}}]},'product',['offer']));
+ assert.deepEqual(inboxEvents({...payload,data:[data,{...data,offer:{id:'other'}}]},'product',['offer']),records);
  assert.equal(inboxEvents({...payload,data:{...data,sck:'forged'}},'product',['offer'])[0].reference,null);
 });
 

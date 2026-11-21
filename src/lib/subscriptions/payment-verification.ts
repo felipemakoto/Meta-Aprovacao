@@ -21,11 +21,12 @@ export function firstPaymentDecision(orderValue: unknown, subscriptionValue: unk
       sub.offer !== expected.offerId || order.subscription !== sub.id || sub.parent_order !== expected.orderId ||
       !Array.isArray(sub.orders) || !sub.orders.includes(expected.orderId)) return reject("identity_mismatch");
     if (order.type !== "subscription" || order.offer_type !== "main" || order.subscription_period !== 1 || sub.recurrence_period !== 30 || sub.quantity_recurrences !== -1) return reject("not_first_subscription_payment");
-    if (order.status !== "paid" || sub.status !== "active" || order.refundedAt !== null || order.chargedbackAt !== null ||
-      order.canceledAt !== null || sub.canceledAt !== null) return reject("not_paid_or_reversed");
+    if (order.status !== "paid" || order.refundedAt !== null || order.chargedbackAt !== null ||
+      order.canceledAt !== null) return reject("not_paid_or_reversed");
     if (order.sck !== expected.reference) return reject("reference_mismatch");
     const orderedAt = instant(order.createdAt), paidAt = instant(order.paidAt);
     if (orderedAt === null || paidAt === null || orderedAt < created || orderedAt > expires || paidAt < orderedAt || paidAt > now) return reject("invalid_payment_dates");
+    if (!paidSubscriptionState(sub.status, sub.canceledAt, paidAt, now)) return reject("not_paid_or_reversed");
     // No implicit currency or guessed amount. Missing authoritative fields require review.
     if (order.currency !== "BRL") return reject("currency_unconfirmed");
     const base = cents(order.baseAmount), discount = cents(order.discount), total = cents(order.amount), monthly = cents(sub.amount);
@@ -35,6 +36,12 @@ export function firstPaymentDecision(orderValue: unknown, subscriptionValue: unk
     return {verified:true as const, reason:"payment_verified", evidence:{orderId:expected.orderId, subscriptionId:sub.id as string,
       productId:expected.productId, offerId:expected.offerId, orderCreatedAt:new Date(orderedAt).toISOString(), paidAt:new Date(paidAt).toISOString(), paidPriceCents:expected.firstPriceCents, currency:"BRL" as const}};
   } catch { return reject("incomplete_provider_response"); }
+}
+// Cancelling future billing does not reverse an independently confirmed payment.
+export function paidSubscriptionState(status: unknown, canceledAt: unknown, paidAt: number, now: number) {
+  if (status === "active") return canceledAt === null;
+  const canceled = instant(canceledAt);
+  return status === "canceled" && canceled !== null && canceled >= paidAt && canceled <= now;
 }
 function instant(value: unknown): number | null {
   return typeof value === "string" && value.length <= 64 && /^\d{4}-\d{2}-\d{2}T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value) && Number.isFinite(Date.parse(value)) ? Date.parse(value) : null;
