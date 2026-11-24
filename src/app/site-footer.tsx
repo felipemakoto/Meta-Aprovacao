@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./information.module.css";
 import {AnalyticsPreferences} from "./analytics";
+import {usePwa} from "./pwa/provider";
 
 export default function SiteFooter() {
   const pathname = usePathname();
-  if (pathname?.startsWith("/admin")) return null;
+  const { standalone } = usePwa();
+  if (standalone === true || pathname?.startsWith("/admin")) return null;
 
   return (
     <footer className={styles.footer}>
