@@ -5,6 +5,7 @@ import { MetaMark } from "./home-art";
 import theme from "./home-theme.module.css";
 import styles from "./study-shell.module.css";
 import {InstallLink} from "./pwa/provider";
+import PwaPillNav from "./pwa/pill-nav";
 
 type StudyArea = "dashboard" | "questions" | "simulations" | "history" | "statistics" | "premium";
 const destinations: { area: StudyArea; href: string; label: string }[] = [
@@ -42,5 +43,6 @@ export default function StudyShell({ children, active, preview = false, focus = 
       {!focus && <aside className={styles.sidebar}><nav aria-label="Navegação de estudos">{navigation}</nav></aside>}
       <div className={`${styles.content} ${plain ? styles.plain : ""}`} id="estudo" tabIndex={-1}>{children}</div>
     </div>
+    <PwaPillNav active={active} preview={preview} hidden={focus} />
   </div>;
 }
