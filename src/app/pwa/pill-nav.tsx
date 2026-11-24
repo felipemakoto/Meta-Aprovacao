@@ -100,22 +100,20 @@ function NavIcon({ name }: { name: IconName }) {
   );
 }
 
-export default function PwaPillNav({
-  active,
-  preview = false,
-  hidden = false,
-}: {
-  active?: string;
-  preview?: boolean;
-  hidden?: boolean;
-}) {
+export default function PwaPillNav() {
   const { standalone } = usePwa();
   const pathname = usePathname();
   const [moreOpen, setMoreOpen] = useState(false);
+  const [isExamMode, setIsExamMode] = useState(false);
   const dockRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMoreOpen(false);
+    const checkExam = () => {
+      setIsExamMode(Boolean(document.querySelector('[data-study-exam="true"]')));
+    };
+    const frame = requestAnimationFrame(checkExam);
+    return () => cancelAnimationFrame(frame);
   }, [pathname]);
 
   useEffect(() => {
@@ -136,10 +134,11 @@ export default function PwaPillNav({
     };
   }, [moreOpen]);
 
-  if (standalone !== true || hidden) return null;
+  if (standalone !== true || pathname?.startsWith("/admin") || isExamMode) return null;
+
+  const preview = pathname?.endsWith("/preview") ?? false;
 
   function isCurrent(item: NavItem) {
-    if (active === item.key) return true;
     return pathname === item.href || pathname?.startsWith(`${item.href}/`);
   }
 

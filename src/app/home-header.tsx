@@ -12,5 +12,5 @@ const serverSnapshot=()=>false;
 
 export default function HomeHeader({children,className=styles.header}:{children:ReactNode;className?:string}){
  const scrolled=useSyncExternalStore(subscribe,snapshot,serverSnapshot);
- return <header className={className} data-scrolled={scrolled}>{children}</header>;
+ return <header className={className} data-scrolled={scrolled} data-app-header="true">{children}</header>;
 }

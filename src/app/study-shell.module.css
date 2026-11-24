@@ -75,18 +75,18 @@
 @media (max-width: 599px) { :global([data-study-mode="focus"]) .content { padding: 22px 18px; border-radius: 18px; } }
 :global([data-study-mode="focus"]) .content.plain { padding: 0; border: 0; background: transparent; }
 
-:global(html[data-pwa="standalone"]) .shell:not([data-study-mode="focus"]) .topbar { display: none; }
-:global(html[data-pwa="standalone"]) .shell:not([data-study-mode="focus"]) .sidebar { display: none; }
-:global(html[data-pwa="standalone"]) .shell:not([data-study-mode="focus"]) .workspace {
+:global(html[data-pwa="standalone"]) .shell:not([data-study-exam="true"]) .topbar { display: none; }
+:global(html[data-pwa="standalone"]) .shell:not([data-study-exam="true"]) .sidebar { display: none; }
+:global(html[data-pwa="standalone"]) .shell:not([data-study-exam="true"]) .workspace {
   display: block;
   max-width: 960px;
   padding-block: 20px 104px;
 }
 
 @media (display-mode: standalone) {
-  .shell:not([data-study-mode="focus"]) .topbar { display: none; }
-  .shell:not([data-study-mode="focus"]) .sidebar { display: none; }
-  .shell:not([data-study-mode="focus"]) .workspace {
+  .shell:not([data-study-exam="true"]) .topbar { display: none; }
+  .shell:not([data-study-exam="true"]) .sidebar { display: none; }
+  .shell:not([data-study-exam="true"]) .workspace {
     display: block;
     max-width: 960px;
     padding-block: 20px 104px;

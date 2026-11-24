@@ -3,6 +3,7 @@ import {createContext,useContext,useEffect,useRef,useState,type ReactNode} from 
 import Link from "next/link";
 import {appRelease,releaseLabel} from "@/lib/pwa/release";
 import {installationContext,isAppContext,type Platform} from "@/lib/pwa/platform";
+import PwaPillNav from "./pill-nav";
 
 type InstallEvent=Event & {prompt:()=>Promise<void>;userChoice:Promise<{outcome:string}>};
 type Release={version:string;build:string};
@@ -52,7 +53,7 @@ export default function PwaProvider({children}:{children:ReactNode}){
   if(standalone===true){document.documentElement.dataset.pwa="standalone";}
   else{delete document.documentElement.dataset.pwa;}
  },[standalone]);
- return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError}}>{children}{standalone===true&&(waiting||newer)&&<UpdateNotice/>}</Context.Provider>;
+ return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError}}>{children}{standalone===true&&(waiting||newer)&&<UpdateNotice/>}<PwaPillNav/></Context.Provider>;
 }
 export function InstallLink({className}:{className?:string}){const {standalone}=usePwa();return standalone===false?<Link href="/baixar" className={className}>Instalar</Link>:null;}
 export {appRelease,releaseLabel};
