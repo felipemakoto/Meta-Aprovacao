@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { NextRequest } from "next/server.js";
-import { middleware } from "../middleware.ts";
+import { handleAdminProxy as middleware } from "../src/lib/admin/auth/proxy.ts";
 import { signSessionToken } from "../src/lib/admin/auth/session.ts";
 
 describe("Middleware e Proteção de Rotas Administrativas", () => {

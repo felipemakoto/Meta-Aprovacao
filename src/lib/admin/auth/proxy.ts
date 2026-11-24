@@ -1,14 +1,14 @@
 import { NextResponse, type NextRequest } from "next/server.js";
-import { SESSION_COOKIE_NAME, verifySessionToken } from "./src/lib/admin/auth/session.ts";
-import { can } from "./src/lib/admin/rbac.ts";
+import { SESSION_COOKIE_NAME, verifySessionToken } from "./session.ts";
+import { can } from "../rbac.ts";
 
 /**
- * Middleware de proteção das rotas administrativas /admin/* e /api/admin/*
- * 
+ * Proteção das rotas administrativas /admin/* e /api/admin/*
+ *
  * Esconder botões na interface não conta como proteção:
- * O middleware intercepta toda requisição de página e API administrativa no servidor.
+ * O proxy intercepta toda requisição de página e API administrativa no servidor.
  */
-export async function middleware(request: NextRequest) {
+export async function handleAdminProxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const isLoginPage = pathname === "/admin/login";
@@ -53,7 +53,3 @@ export async function middleware(request: NextRequest) {
 
   return NextResponse.next();
 }
-
-export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
-};
