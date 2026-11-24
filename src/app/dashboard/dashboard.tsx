@@ -52,7 +52,14 @@ export default function Dashboard({ summary, preview = false, activity = null }:
           <Link className={styles.material} href={route("/simulados")}><span className={`${styles.materialArt} ${styles.simulationArt}`}><StudyIcon name="simulations" /></span><h3>Simulados</h3><p>Responda no seu ritmo e confira o resultado ao finalizar.</p><span className={styles.materialAction}>Ver simulados</span></Link>
         </div>
       </section>
-      {!preview&&<><h2>Ferramentas Premium</h2><PremiumCatalog/></>}
+      {!preview && (
+        <section className={styles.materials} aria-labelledby="premium-tools-title">
+          <div className={styles.sectionHeading}>
+            <h2 id="premium-tools-title">Ferramentas Premium</h2>
+          </div>
+          <PremiumCatalog />
+        </section>
+      )}
       <p className={styles.footer}>{preview ? "Dados ilustrativos." : "Testes salvos, questões praticadas e simulados concluídos."}</p>
     </main>
   </StudyShell>;
