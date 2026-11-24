@@ -1,30 +1,31 @@
 .dock {
   position: fixed;
   left: 50%;
-  bottom: max(12px, env(safe-area-inset-bottom));
+  bottom: max(14px, env(safe-area-inset-bottom));
   z-index: 60;
   transform: translateX(-50%);
-  width: min(calc(100% - 20px), 520px);
+  width: min(calc(100% - 32px), 340px);
   pointer-events: none;
 }
 
 .pill {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
-  gap: 2px;
-  padding: 6px;
+  gap: 4px;
+  padding: 5px;
   border: 1px solid var(--home-line, #dedfd8);
   border-radius: 9999px;
-  background: color-mix(in srgb, var(--home-paper, #ffffff) 88%, transparent);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  box-shadow: 0 10px 30px rgb(0 0 0 / 12%), 0 2px 8px rgb(0 0 0 / 6%);
+  background: color-mix(in srgb, var(--home-paper, #ffffff) 96%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 16%), 0 2px 8px rgb(0 0 0 / 8%);
   pointer-events: auto;
 }
 
 :global(html[data-theme="dark"]) .pill {
-  box-shadow: 0 12px 34px rgb(0 0 0 / 42%), 0 2px 10px rgb(0 0 0 / 24%);
+  background: color-mix(in srgb, var(--home-paper, #1d2620) 97%, transparent);
+  box-shadow: 0 14px 36px rgb(0 0 0 / 50%), 0 2px 10px rgb(0 0 0 / 28%);
 }
 
 .item {
@@ -32,17 +33,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 2px;
   min-width: 0;
-  min-height: 52px;
-  padding: 6px 4px;
+  min-height: 44px;
+  padding: 5px 6px;
+  border: 0;
   border-radius: 9999px;
+  background: transparent;
   color: var(--home-muted, #545b52);
-  font-size: 11px;
+  font-family: inherit;
+  font-size: 10.5px;
   font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
   text-decoration: none;
+  cursor: pointer;
   transition: background-color 160ms ease, color 160ms ease, transform 120ms ease;
 }
 
@@ -55,8 +60,8 @@
 }
 
 .item svg {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   flex-shrink: 0;
 }
 
@@ -67,26 +72,73 @@
   white-space: nowrap;
 }
 
-.item[aria-current="page"] {
+.item[aria-current="page"],
+.item[data-active="true"] {
   background: var(--home-mint, #d8efc6);
   color: var(--home-accent-strong, var(--home-green-hover, #185d29));
   font-weight: 700;
 }
 
-@media (max-width: 390px) {
-  .dock {
-    width: calc(100% - 16px);
+.menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  width: min(100%, 248px);
+  padding: 8px;
+  border: 1px solid var(--home-line, #dedfd8);
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--home-paper, #ffffff) 98%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 18%), 0 4px 12px rgb(0 0 0 / 8%);
+  display: grid;
+  gap: 4px;
+  pointer-events: auto;
+  animation: menuIn 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:global(html[data-theme="dark"]) .menu {
+  background: color-mix(in srgb, var(--home-paper, #1d2620) 98%, transparent);
+  box-shadow: 0 18px 44px rgb(0 0 0 / 55%), 0 4px 14px rgb(0 0 0 / 30%);
+}
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
   }
-  .pill {
-    padding: 5px;
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
-  .item {
-    min-height: 48px;
-    padding: 5px 2px;
-    font-size: 10px;
-  }
-  .item svg {
-    width: 19px;
-    height: 19px;
-  }
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  color: var(--home-ink, #20251f);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.menuItem:hover {
+  background: var(--home-sage, #edf4e8);
+  color: var(--home-accent-strong, var(--home-green-hover, #185d29));
+}
+
+.menuItem[aria-current="page"] {
+  background: var(--home-mint, #d8efc6);
+  color: var(--home-accent-strong, var(--home-green-hover, #185d29));
+}
+
+.menuItem svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
 }
