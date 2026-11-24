@@ -19,7 +19,7 @@ export default async function Page({searchParams}:{searchParams:Promise<{area?:s
  }
  let workspace;let locked=false;
  try{workspace=await readStudyWorkspace(user.id);}catch(e){locked=e instanceof Error&&e.message==="premium_required";}
- if(workspace)return <Workspace initial={workspace} area={selected.area} collection={selected.collection} sessionId={typeof session==="string"&&workspace.sessions.some(s=>s.id===session)?session:undefined}/>;
+ if(workspace)return <Workspace initial={workspace} area={selected.area} collection={selected.collection} sessionId={typeof session==="string"&&workspace.sessions.some(s=>s.id===session)?session:undefined} hasExplicitArea={Boolean(area||session)}/>;
  return <StudyShell active="premium"><main className={styles.page}><h1>{locked?"Amplie sua preparação":"Não foi possível carregar seus estudos"}</h1>
    <p>{locked?"Plano de estudos, revisões adaptativas, simulados personalizados e organização em um só lugar. Seus recursos gratuitos continuam disponíveis.":"Seus dados foram preservados. Tente novamente em instantes."}</p>
    {locked?<><PremiumCatalog/><Link className={styles.primary} href="/premium">Conhecer o Premium</Link><Link className={styles.secondary} href="/dashboard">Continuar no Gratuito</Link></>:<Link className={styles.primary} href="/premium/estudos">Tentar novamente</Link>}

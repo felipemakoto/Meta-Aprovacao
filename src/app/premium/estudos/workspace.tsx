@@ -20,13 +20,36 @@ export async function studyRequest(command:StudyCommand){
  const r=await fetch("/api/premium/study",{method:"POST",cache:"no-store",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify(command),signal:AbortSignal.timeout(35000),keepalive:command.action==="save_exam"});
  const body=await r.json();if(!r.ok)throw Error(messages[body.error]??"Não foi possível concluir. Tente novamente.");return body.data;
 }
-export default function Workspace({initial,area,collection="errors",sessionId}:{initial:WorkspaceData;area:StudyArea;collection?:ReviewCollection;sessionId?:string}){
- const [data,setData]=useState(initial),[busy,setBusy]=useState(false),[notice,setNotice]=useState(""),[error,setError]=useState(false),[reminders,setReminders]=useState(false);
+const areaDescriptions:Record<StudyArea,string>={
+  plan:"Cronograma adaptado à sua rotina e metas",
+  realistic:"Provas completas no formato oficial",
+  reviews:"Cartões e revisão espaçada dos seus erros",
+  diagnosis:"Pontos fortes e matérias para reforçar",
+  custom:"Monte treinos por matéria e dificuldade",
+  radar:"Mapa visual de desempenho por disciplina",
+  calendar:"Datas oficiais e sessões agendadas",
+  library:"Editais e provas anteriores oficiais",
+};
+function AreaIcon({name}:{name:StudyArea}){
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {name==="plan"&&<><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></>}
+    {name==="realistic"&&<><circle cx="12" cy="14" r="8"/><path d="M9 2h6m-3 0v4m6 0 2-2m-8 6v5l3 2"/></>}
+    {name==="reviews"&&<><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M7 3h11a2 2 0 0 1 2 2v11"/></>}
+    {name==="diagnosis"&&<path d="M4 20V4m0 16h17M8 16v-5m5 5V7m5 9V3"/>}
+    {name==="custom"&&<><path d="M4 21v-7m0-4V3m8 18v-9m0-4V3m8 18v-5m0-4V3M1 14h6m2-6h6m2 8h6"/></>}
+    {name==="radar"&&<><polygon points="12 2 21 8.5 17.5 19.5 6.5 19.5 3 8.5"/><circle cx="12" cy="12" r="2"/></>}
+    {name==="calendar"&&<><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></>}
+    {name==="library"&&<><path d="M12 5C8 3 5 3 2 4v16c4-1 7-1 10 1 3-2 6-2 10-1V4c-3-1-6-1-10 1ZM12 5v16"/></>}
+  </svg>;
+}
+export default function Workspace({initial,area,collection="errors",sessionId,hasExplicitArea=false}:{initial:WorkspaceData;area:StudyArea;collection?:ReviewCollection;sessionId?:string;hasExplicitArea?:boolean}){
+ const [data,setData]=useState(initial),[busy,setBusy]=useState(false),[notice,setNotice]=useState(""),[error,setError]=useState(false),[reminders,setReminders]=useState(false),[mobileOpen,setMobileOpen]=useState(hasExplicitArea);
  const [reminderPreferences,setReminderPreferences]=useState(devicePreferences());
  useEffect(()=>{const update=()=>{setReminderPreferences(devicePreferences());if("Notification" in window&&Notification.permission==="granted")setReminders(true);};update();window.addEventListener(preferenceEvent,update);return()=>window.removeEventListener(preferenceEvent,update);},[]);
  const router=useRouter(),lock=useRef(false);
  const quota=useDailyLimits(false,false);
- useEffect(()=>{if(quota.limits?.hasPremium===false)router.refresh();},[quota.limits?.hasPremium,router]);const periodRef=useRef(initial.days);const session=data.sessions.find(s=>s.id===sessionId);
+ useEffect(()=>{if(quota.limits?.hasPremium===false)router.refresh();},[quota.limits?.hasPremium,router]); const periodRef=useRef(initial.days);const session=data.sessions.find(s=>s.id===sessionId);
+ useEffect(()=>{setMobileOpen(hasExplicitArea);},[area,sessionId,hasExplicitArea]);
  async function reload(days=periodRef.current){const r=await fetch(`/api/premium/study?days=${days}`,{cache:"no-store",credentials:"same-origin",signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error("Não foi possível atualizar os dados.");const w=parseWorkspace(await r.json());periodRef.current=days;setData(w);}
  useEffect(()=>{
   let active=true;
@@ -53,10 +76,12 @@ export default function Workspace({initial,area,collection="errors",sessionId}:{
  }
  const today=localStudyDate(new Date(data.asOf)),todaySessions=data.sessions.filter(s=>s.study_date===today),weekStart=new Date(today+"T12:00:00Z");weekStart.setUTCDate(weekStart.getUTCDate()-((weekStart.getUTCDay()+6)%7));
  const week=weekStart.toISOString().slice(0,10),weekEnd=new Date(weekStart.getTime()+7*86400000).toISOString().slice(0,10),weekSessions=data.sessions.filter(s=>s.study_date>=week&&s.study_date<weekEnd);
- return <StudyShell active="premium"><main className={styles.page}>
-  <header className={`${styles.heading} ${styles.workspaceHeading}`}><div><p className={styles.kicker}>Seu espaço Premium</p><h1>{studyAreas[area]}</h1></div><Link className={styles.planLink} href="/premium">Meu plano</Link></header>
-  <label className={styles.resourcePicker}>O que vamos estudar?<select value={area} onChange={e=>{if(Object.hasOwn(studyAreas,e.target.value))router.push(`/premium/estudos?area=${e.target.value}`);}}>{Object.entries(studyAreas).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label>
+ return <StudyShell active="premium"><main className={styles.page} data-mobile-view={mobileOpen?"detail":"list"}>
+  {mobileOpen&&<button type="button" className={styles.mobileBack} onClick={()=>setMobileOpen(false)}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Recursos Premium</button>}
+  <header className={`${styles.heading} ${styles.workspaceHeading}`}><div><p className={styles.kicker}>Seu espaço Premium</p><h1>{mobileOpen?studyAreas[area]:"Recursos Premium"}</h1></div><Link className={styles.planLink} href="/premium">Meu plano</Link></header>
+  <nav className={styles.mobileResourceList} aria-label="Recursos Premium">{Object.entries(studyAreas).map(([key,label])=>{const k=key as StudyArea;return <Link key={key} href={`/premium/estudos?area=${key}`} className={styles.mobileResourceItem} onClick={()=>setMobileOpen(true)}><span className={styles.mobileResourceIcon}><AreaIcon name={k}/></span><span className={styles.mobileResourceText}><strong>{label}</strong><span>{areaDescriptions[k]}</span></span><span className={styles.mobileResourceChevron} aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></Link>;})}</nav>
   <nav className={styles.areas} aria-label="Recursos Premium">{Object.entries(studyAreas).map(([key,label])=><Link key={key} href={`/premium/estudos?area=${key}`} aria-current={area===key?"page":undefined}>{label}</Link>)}</nav>
+  <div className={styles.resourceBody}>
   <div role={error?"alert":"status"} aria-live="polite">{notice&&<p className={error?styles.error:styles.notice}>{notice}</p>}</div>
   {area==="plan"&&<><div className={styles.summary}><span>Hoje <strong>{todaySessions.filter(s=>s.completed_at).length}/{todaySessions.length}</strong> sessões concluídas</span><span>Esta semana <strong>{weekSessions.filter(s=>s.completed_at).reduce((n,s)=>n+s.goal,0)}/{data.profile?.weeklyGoal??0}</strong> questões/cartões de meta</span></div><PlanPanel data={data} busy={busy} mutate={mutate}/></>}
   {(area==="realistic"||area==="custom")&&<ExamPanel key={area+sessionId} data={data} mode={area==="realistic"?"realistic":"custom"} busy={busy} mutate={mutate} session={session}/>}
@@ -64,6 +89,7 @@ export default function Workspace({initial,area,collection="errors",sessionId}:{
   {area==="reviews"&&<CardsPanel key={collection+sessionId} data={data} mode={collection==="all"?"flashcard":"review"} busy={busy} mutate={mutate} session={session}/>}
   {area==="calendar"&&<><div className={styles.actions}><a className={styles.secondary} href="/api/premium/study?view=calendar">Exportar calendário e lembretes (.ics)</a><button className={styles.secondary} onClick={async()=>{if(!("Notification" in window)){setError(true);setNotice("Este navegador não oferece avisos. Exporte o calendário para receber lembretes no celular.");return;}const permission=await Notification.requestPermission();setReminders(permission==="granted");setError(permission!=="granted");setNotice(permission==="granted"?"Avisos ativados enquanto esta aba estiver aberta.":"Avisos não autorizados. Você pode usar os lembretes do calendário exportado.");}}>{reminders?"Avisos desta aba ativados":"Ativar avisos nesta aba"}</button></div><p className={styles.help}>Horários de Brasília. Para receber lembretes com o site fechado, importe o arquivo no calendário do celular ou computador. A importação é uma cópia; exporte novamente após editar o plano.</p><CalendarPanel data={data} busy={busy} mutate={mutate}/></>}
   {area==="library"&&<LibraryPanel data={data} busy={busy} mutate={mutate}/>}
+  </div>
  </main></StudyShell>;
 }
 export type Mutate=(command:StudyCommand)=>Promise<unknown>;
