@@ -71,10 +71,11 @@ const ROLE_PERMISSIONS: Record<AdminRole, ReadonlySet<PermissionAction>> = {
  * tanto nas Route Handlers / Server Actions quanto em políticas RLS no Postgres.
  */
 export function can(role: AdminRole | null | undefined, action: PermissionAction): boolean {
-  if (!role) return false;
-  const permissions = ROLE_PERMISSIONS[role];
-  if (!permissions) return false;
-  return permissions.has(action);
+  return isAdminRole(role) && ROLE_PERMISSIONS[role].has(action);
+}
+
+export function isAdminRole(role: unknown): role is AdminRole {
+  return typeof role === "string" && Object.hasOwn(ROLE_PERMISSIONS, role);
 }
 
 export function assertCan(role: AdminRole | null | undefined, action: PermissionAction): void {

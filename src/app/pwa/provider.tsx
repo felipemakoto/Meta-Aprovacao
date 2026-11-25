@@ -52,7 +52,7 @@ export default function PwaProvider({children}:{children:ReactNode}){
  }
  const newer=available?.build&&appRelease.build&&available.build!==appRelease.build;
  useEffect(()=>{
-  if(standalone!==true){setIsAdmin(false);return;}
+  if(standalone!==true)return;
   const controller=new AbortController();
   fetch('/api/auth/admin-access',{cache:'no-store',signal:controller.signal})
    .then(r=>r.ok?r.json():{isAdmin:false})
@@ -64,7 +64,7 @@ export default function PwaProvider({children}:{children:ReactNode}){
   if(standalone===true){document.documentElement.dataset.pwa="standalone";}
   else{delete document.documentElement.dataset.pwa;}
  },[standalone]);
- return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError,isAdmin}}>{children}{standalone===true&&(waiting||newer)&&<UpdateNotice/>}<PwaPillNav/></Context.Provider>;
+ return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError,isAdmin:standalone===true&&isAdmin}}>{children}{standalone===true&&(waiting||newer)&&<UpdateNotice/>}<PwaPillNav/></Context.Provider>;
 }
 export function InstallLink({className}:{className?:string}){const {standalone}=usePwa();return standalone===false?<Link href="/baixar" className={className}>Instalar</Link>:null;}
 export {appRelease,releaseLabel};

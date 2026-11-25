@@ -1,5 +1,5 @@
 import { getVerifiedUser } from "@/lib/auth/user";
-import { isEmailAdmin } from "@/lib/admin/auth/admin-check";
+import { readActiveAdmin } from "@/lib/admin/auth/admin-check";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -13,10 +13,10 @@ const headers = {
 export async function GET() {
   try {
     const user = await getVerifiedUser();
-    if (!user?.email) {
+    if (!user?.email_confirmed_at) {
       return Response.json({ isAdmin: false }, { status: 200, headers });
     }
-    const isAdmin = await isEmailAdmin(user.email);
+    const isAdmin = Boolean(await readActiveAdmin(user.id));
     return Response.json({ isAdmin }, { status: 200, headers });
   } catch {
     return Response.json({ isAdmin: false }, { status: 200, headers });

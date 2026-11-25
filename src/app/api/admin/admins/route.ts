@@ -22,7 +22,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const auth = await requireApiSession();
+  const auth = await requireApiSession(request);
   if (auth.errorResponse) return auth.errorResponse;
 
   try {
@@ -50,7 +50,7 @@ export async function POST(request: Request) {
 }
 
 export async function PATCH(request: Request) {
-  const auth = await requireApiSession();
+  const auth = await requireApiSession(request);
   if (auth.errorResponse) return auth.errorResponse;
 
   try {

@@ -17,7 +17,7 @@ export async function GET() {
 }
 
 export async function PUT(request: Request) {
-  const auth = await requireApiSession();
+  const auth = await requireApiSession(request);
   if (auth.errorResponse) return auth.errorResponse;
 
   try {

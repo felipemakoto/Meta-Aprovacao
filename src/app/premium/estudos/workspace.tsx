@@ -49,7 +49,12 @@ export default function Workspace({initial,area,collection="errors",sessionId,ha
  const router=useRouter(),lock=useRef(false);
  const quota=useDailyLimits(false,false);
  useEffect(()=>{if(quota.limits?.hasPremium===false)router.refresh();},[quota.limits?.hasPremium,router]); const periodRef=useRef(initial.days);const session=data.sessions.find(s=>s.id===sessionId);
- useEffect(()=>{setMobileOpen(hasExplicitArea);},[area,sessionId,hasExplicitArea]);
+ const mobileRoute = JSON.stringify([area, sessionId, hasExplicitArea]);
+ const [previousMobileRoute, setPreviousMobileRoute] = useState(mobileRoute);
+ if (previousMobileRoute !== mobileRoute) {
+  setPreviousMobileRoute(mobileRoute);
+  setMobileOpen(hasExplicitArea);
+ }
  async function reload(days=periodRef.current){const r=await fetch(`/api/premium/study?days=${days}`,{cache:"no-store",credentials:"same-origin",signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error("Não foi possível atualizar os dados.");const w=parseWorkspace(await r.json());periodRef.current=days;setData(w);}
  useEffect(()=>{
   let active=true;

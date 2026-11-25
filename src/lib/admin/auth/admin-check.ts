@@ -1,37 +1,28 @@
+import "server-only";
+
 import { createAdminClient } from "@/lib/supabase/admin";
+import { isAdminRole } from "../rbac";
+import type { AdminAccount } from "../types";
 
-/**
- * Verifica no servidor se o e-mail pertence a um administrador ativo.
- * Nunca expõe a lista de administradores ao cliente.
- */
-export async function isEmailAdmin(email: string | null | undefined): Promise<boolean> {
-  if (!email) return false;
-  const normalized = email.trim().toLowerCase();
-  if (!normalized) return false;
+export async function readActiveAdmin(id: string): Promise<AdminAccount | null> {
+  const { data, error } = await createAdminClient()
+    .from("admin_users")
+    .select("id, email, name, role, is_active, created_at")
+    .eq("id", id)
+    .eq("is_active", true)
+    .abortSignal(AbortSignal.timeout(5000))
+    .maybeSingle();
 
-  try {
-    const adminClient = createAdminClient();
-    const { data, error } = await adminClient
-      .from("admin_users")
-      .select("id")
-      .eq("email", normalized)
-      .eq("is_active", true)
-      .maybeSingle();
+  if (error) throw new Error("Não foi possível verificar o acesso administrativo.");
+  if (!data || !isAdminRole(data.role)) return null;
 
-    if (!error && data) {
-      return true;
-    }
-  } catch {
-    // Fallback para variáveis de ambiente caso Supabase Admin não esteja configurado
-  }
-
-  const demoEmails = [
-    process.env.DEMO_SUPER_ADMIN_EMAIL,
-    process.env.DEMO_SUPORTE_EMAIL,
-    process.env.DEMO_FINANCEIRO_EMAIL,
-  ]
-    .filter((v): v is string => Boolean(v))
-    .map((v) => v.trim().toLowerCase());
-
-  return demoEmails.includes(normalized);
+  return {
+    id: data.id,
+    email: data.email,
+    nome: data.name,
+    papel: data.role,
+    ativo: data.is_active,
+    criadoEm: data.created_at,
+    ultimoAcessoEm: null,
+  };
 }

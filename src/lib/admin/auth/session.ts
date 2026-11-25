@@ -1,10 +1,23 @@
-import type { SessionPayload } from "../types";
+import type { AdminAccount, SessionPayload } from "../types";
+import { isAdminRole } from "../rbac.ts";
 
 export const SESSION_COOKIE_NAME = "meta_admin_session";
 export const SESSION_TTL_SECONDS = 60 * 60 * 2; // Expiração curta: 2 horas
 
+export function adminSessionCookieOptions() {
+  return {
+    httpOnly: true,
+    sameSite: "strict" as const,
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+  };
+}
+
 function getSessionSecret(): string {
   const secret = process.env.SESSION_SECRET;
+  if (process.env.NODE_ENV === "production" && (!secret || secret.length < 32)) {
+    throw new Error("Configuração indisponível para sessões administrativas.");
+  }
   if (!secret || secret.length < 16) {
     // Em ambiente local sem .env.local configurado, gera um segredo efêmero em memória
     // para evitar falha de inicialização, mas em produção SESSION_SECRET é obrigatório.
@@ -46,11 +59,7 @@ async function importHmacKey(secret: string): Promise<CryptoKey> {
   );
 }
 
-/**
- * Assina o payload da sessão com HMAC-SHA256 (compatível com Edge Middleware e Node).
- * IMPORTANTE: Em produção, a autenticação e emissão de tokens devem ser feitas
- * pelo Supabase Auth (JWT assinado + verificação server-side em cada requisição).
- */
+/** Assina o cookie do painel após a autenticação e autorização da conta no Supabase. */
 export async function signSessionToken(
   payload: Omit<SessionPayload, "exp">
 ): Promise<string> {
@@ -74,9 +83,10 @@ export async function signSessionToken(
 export async function verifySessionToken(
   token: string | undefined | null
 ): Promise<SessionPayload | null> {
-  if (!token || !token.includes(".")) return null;
-  const [dataB64, sigB64] = token.split(".");
-  if (!dataB64 || !sigB64) return null;
+  if (!token || token.length > 4096) return null;
+  const parts = /^([\w-]+)\.([\w-]{43})$/.exec(token);
+  if (!parts) return null;
+  const [, dataB64, sigB64] = parts;
 
   try {
     const key = await importHmacKey(getSessionSecret());
@@ -90,12 +100,27 @@ export async function verifySessionToken(
     if (!valid) return null;
 
     const json = new TextDecoder().decode(fromBase64Url(dataB64));
-    const parsed = JSON.parse(json) as SessionPayload;
-    if (!parsed.exp || parsed.exp < Math.floor(Date.now() / 1000)) {
+    const parsed = JSON.parse(json) as Partial<SessionPayload> | null;
+    if (
+      !parsed || typeof parsed.adminId !== "string" || !parsed.adminId ||
+      typeof parsed.nome !== "string" || typeof parsed.email !== "string" ||
+      !isAdminRole(parsed.papel) || typeof parsed.exp !== "number" ||
+      !Number.isSafeInteger(parsed.exp) || parsed.exp <= Math.floor(Date.now() / 1000)
+    ) {
       return null;
     }
-    return parsed;
+    return { adminId: parsed.adminId, nome: parsed.nome, email: parsed.email, papel: parsed.papel, exp: parsed.exp };
   } catch {
     return null;
   }
+}
+
+export async function revalidateAdminSession(
+  session: SessionPayload | null,
+  readAdmin: (id: string) => Promise<Pick<AdminAccount, "id" | "ativo" | "papel" | "nome" | "email"> | null>
+): Promise<SessionPayload | null> {
+  if (!session) return null;
+  const admin = await readAdmin(session.adminId);
+  if (!admin?.ativo || admin.id !== session.adminId || admin.papel !== session.papel) return null;
+  return { ...session, nome: admin.nome, email: admin.email };
 }

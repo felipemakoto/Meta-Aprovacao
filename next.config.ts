@@ -29,7 +29,10 @@ const nextConfig: NextConfig = {
       {key: "X-Frame-Options", value: "DENY"},
       {key: "X-Content-Type-Options", value: "nosniff"},
       {key: "Referrer-Policy", value: "no-referrer"},
-    ]}, ...(process.env.CAKTO_DIRECT_CHECKOUT_ENABLED==="true"?[{source:"/premium/pagamento",headers:[{key:"Content-Security-Policy",value:policy
+    ]}, ...["/admin/:path*", "/api/admin/:path*"].map(source => ({
+      source,
+      headers: [{key: "Cache-Control", value: "private, no-store, max-age=0"}],
+    })), ...(process.env.CAKTO_DIRECT_CHECKOUT_ENABLED==="true"?[{source:"/premium/pagamento",headers:[{key:"Content-Security-Policy",value:policy
       .replace("script-src 'self'", "script-src https://cakto-sdk.pages.dev https://d354c9v5bptm0r.cloudfront.net 'self'")
       .replace("connect-src 'self'", "connect-src https://api.cakto.com.br https://kvnpji2t.jjysjnuego.com 'self'")
     }]}]:[])];

@@ -186,6 +186,8 @@ A etapa 6 usa NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY em
 
 Uma variável de ambiente é uma configuração fornecida ao programa fora do código. Reinicie o servidor após alterar .env.local e gere novo build ao mudar valores públicos para produção. Nunca use secret key ou service_role em NEXT_PUBLIC_.
 
+O painel `/admin` usa uma conta com e-mail confirmado no Supabase Auth e um cadastro ativo em `admin_users` para o mesmo ID. Configure `SESSION_SECRET` com um segredo aleatório de pelo menos 32 caracteres, igual em todas as instâncias, e `APP_ORIGIN` com a origem exata do aplicativo, em HTTPS em produção. O servidor usa `SUPABASE_SECRET_KEY` ou `SUPABASE_SERVICE_ROLE_KEY` para consultar a conta administrativa e a função `reserve_login_attempt`, da migração `20261024143000_security_request_budgets.sql`.
+
 ## Arquivos
 - src/app/page.tsx: página inicial, rota /.
 - src/app/layout.tsx: estrutura compartilhada.

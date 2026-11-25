@@ -105,12 +105,13 @@ function NavIcon({ name }: { name: IconName }) {
 export default function PwaPillNav() {
   const { standalone, isAdmin } = usePwa();
   const pathname = usePathname();
-  const [moreOpen, setMoreOpen] = useState(false);
+  const [menu, setMenu] = useState({ pathname, open: false });
+  if (menu.pathname !== pathname) setMenu({ pathname, open: false });
+  const moreOpen = menu.pathname === pathname && menu.open;
   const [isExamMode, setIsExamMode] = useState(false);
   const dockRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setMoreOpen(false);
     const checkExam = () => {
       setIsExamMode(Boolean(document.querySelector('[data-study-exam="true"]')));
     };
@@ -122,11 +123,11 @@ export default function PwaPillNav() {
     if (!moreOpen) return;
     function onPointerDown(event: PointerEvent) {
       if (dockRef.current && !dockRef.current.contains(event.target as Node)) {
-        setMoreOpen(false);
+        setMenu({ pathname, open: false });
       }
     }
     function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") setMoreOpen(false);
+      if (event.key === "Escape") setMenu({ pathname, open: false });
     }
     document.addEventListener("pointerdown", onPointerDown);
     document.addEventListener("keydown", onKeyDown);
@@ -134,7 +135,7 @@ export default function PwaPillNav() {
       document.removeEventListener("pointerdown", onPointerDown);
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, [moreOpen]);
+  }, [moreOpen, pathname]);
 
   if (standalone !== true || pathname?.startsWith("/admin") || isExamMode) return null;
 
@@ -164,7 +165,7 @@ export default function PwaPillNav() {
                 role="menuitem"
                 className={styles.menuItem}
                 aria-current={current ? "page" : undefined}
-                onClick={() => setMoreOpen(false)}
+                onClick={() => setMenu({ pathname, open: false })}
               >
                 <NavIcon name={item.icon} />
                 <span>{item.label}</span>
@@ -199,7 +200,7 @@ export default function PwaPillNav() {
           aria-haspopup="menu"
           aria-label="Mais opções"
           data-active={moreOpen || moreActive ? "true" : undefined}
-          onClick={() => setMoreOpen((open) => !open)}
+          onClick={() => setMenu({ pathname, open: !moreOpen })}
         >
           <NavIcon name="more" />
           <span>Mais</span>

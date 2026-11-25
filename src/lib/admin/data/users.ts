@@ -51,7 +51,7 @@ export async function listUsers(
       perPage: 1000,
     });
 
-    if (!authError && authList?.users && authList.users.length > 0) {
+    if (!authError && authList?.users) {
       const page = params.page ?? 1;
       const pageSize = params.pageSize ?? 15;
 
@@ -66,7 +66,7 @@ export async function listUsers(
           let plano: UserPlan = "gratis";
           let premiumExpiraEm: string | null = null;
           let origemPremium: PlatformUser["origemPremium"] = null;
-          let status: UserStatus = u.user_metadata?.is_suspended ? "suspenso" : "ativo";
+          const status: UserStatus = u.user_metadata?.is_suspended ? "suspenso" : "ativo";
 
           try {
             const { data: subAccess } = await adminClient.rpc("read_subscription_access", {
@@ -128,6 +128,10 @@ export async function listUsers(
         filtered = filtered.filter((u) => u.plano === params.plan);
       }
 
+      if (params.status && params.status !== "all") {
+        filtered = filtered.filter((u) => u.status === params.status);
+      }
+
       const total = filtered.length;
       const totalPages = Math.ceil(total / pageSize) || 1;
       const start = (page - 1) * pageSize;
@@ -143,41 +147,7 @@ export async function listUsers(
     }
   } catch {}
 
-  const store = getStore();
-  let filtered = [...store.users];
-
-  if (params.search?.trim()) {
-    const q = params.search.trim().toLowerCase();
-    filtered = filtered.filter(
-      (u) =>
-        u.nome.toLowerCase().includes(q) ||
-        u.email.toLowerCase().includes(q) ||
-        u.id.toLowerCase().includes(q)
-    );
-  }
-
-  if (params.plan && params.plan !== "all") {
-    filtered = filtered.filter((u) => u.plano === params.plan);
-  }
-
-  if (params.status && params.status !== "all") {
-    filtered = filtered.filter((u) => u.status === params.status);
-  }
-
-  const page = params.page ?? 1;
-  const pageSize = params.pageSize ?? 15;
-  const total = filtered.length;
-  const totalPages = Math.ceil(total / pageSize) || 1;
-  const start = (page - 1) * pageSize;
-  const items = filtered.slice(start, start + pageSize);
-
-  return {
-    items,
-    total,
-    page,
-    pageSize,
-    totalPages,
-  };
+  throw new Error("Não foi possível consultar os usuários. Tente novamente.");
 }
 
 export async function getUser(
@@ -200,7 +170,7 @@ export async function getUser(
       let plano: UserPlan = "gratis";
       let premiumExpiraEm: string | null = null;
       let origemPremium: PlatformUser["origemPremium"] = null;
-      let status: UserStatus = user.user_metadata?.is_suspended ? "suspenso" : "ativo";
+      const status: UserStatus = user.user_metadata?.is_suspended ? "suspenso" : "ativo";
 
       const [subAccess, stats, hist, notesRes] = await Promise.all([
         (async () => { try { return await adminClient.rpc("read_subscription_access", { p_user_id: user.id }); } catch { return { data: null }; } })(),
@@ -617,17 +587,19 @@ export async function deleteUserAnonymize(
 
   // 1. Validar a senha do administrador logado antes de prosseguir
   const credentialCheck = await verifyAdminCredentials(session.email, parsed.adminPassword);
-  if (!credentialCheck.ok) {
+  if (
+    !credentialCheck.ok ||
+    credentialCheck.admin.id !== session.adminId ||
+    credentialCheck.admin.papel !== session.papel
+  ) {
     throw new Error("Senha de administrador incorreta. A exclusão foi cancelada.");
   }
 
   const target = await getUser(session.papel, userId);
   if (!target) throw new Error("Usuário não encontrado.");
 
-  try {
-    const adminClient = createAdminClient();
-    await adminClient.auth.admin.deleteUser(userId);
-  } catch {}
+  const { error } = await createAdminClient().auth.admin.deleteUser(userId);
+  if (error) throw new Error("Não foi possível excluir o usuário.");
 
   await recordAuditLog({
     adminId: session.adminId,

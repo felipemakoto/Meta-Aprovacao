@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { getClientIpFromHeaders, requireApiSession } from "@/lib/admin/auth/server";
-import { signSessionToken, SESSION_COOKIE_NAME, SESSION_TTL_SECONDS } from "@/lib/admin/auth/session";
 import { recordAuditLog } from "@/lib/admin/data/audit";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { z } from "zod";
@@ -10,7 +9,7 @@ const updateProfileSchema = z.object({
 });
 
 export async function PUT(request: Request) {
-  const auth = await requireApiSession();
+  const auth = await requireApiSession(request);
   if (auth.errorResponse) return auth.errorResponse;
   const { session } = auth;
 
@@ -58,31 +57,12 @@ export async function PUT(request: Request) {
       usuarioAfetadoNome: nextName,
     });
 
-    // 4. Renovar token de sessão com o novo nome
-    const updatedToken = await signSessionToken({
-      adminId: session.adminId,
-      nome: nextName,
-      email: session.email,
-      papel: session.papel,
-    });
-
-    const response = NextResponse.json({
+    return NextResponse.json({
       ok: true,
       name: nextName,
       message: "Nome atualizado com sucesso!",
     });
 
-    response.cookies.set({
-      name: SESSION_COOKIE_NAME,
-      value: updatedToken,
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      path: "/",
-      maxAge: SESSION_TTL_SECONDS,
-    });
-
-    return response;
   } catch {
     return NextResponse.json(
       { error: "Erro inesperado ao atualizar nome." },

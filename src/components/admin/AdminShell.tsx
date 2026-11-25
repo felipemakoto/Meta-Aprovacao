@@ -1,6 +1,6 @@
 "use client";
 
-import { LogOut, Menu, PanelLeftClose, PanelLeftOpen, User, X, Check } from "lucide-react";
+import { ArrowLeft, LogOut, Menu, PanelLeftClose, PanelLeftOpen, User, X, Check } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -35,6 +35,7 @@ export function AdminShell({
   const [mobileOpen, setMobileOpen] = useState(false);
   const [tabletCollapsed, setTabletCollapsed] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
+  const [logoutError, setLogoutError] = useState(false);
 
   // Edição de Nome do Admin
   const [currentName, setCurrentName] = useState(session.nome);
@@ -76,10 +77,14 @@ export function AdminShell({
 
   async function handleLogout() {
     setLoggingOut(true);
+    setLogoutError(false);
     try {
-      await fetch("/api/admin/auth/logout", { method: "POST" });
-      router.push("/admin/login");
+      const response = await fetch("/api/admin/auth/logout", { method: "POST" });
+      if (!response.ok) throw new Error("logout_failed");
+      router.replace("/admin/login");
       router.refresh();
+    } catch {
+      setLogoutError(true);
     } finally {
       setLoggingOut(false);
     }
@@ -185,8 +190,8 @@ export function AdminShell({
       )}
 
       <div className="flex-1 min-w-0 flex flex-col">
-        <header className="sticky top-0 z-30 bg-[var(--surface)] border-b border-[var(--border)] px-4 md:px-6 py-3 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 min-w-0">
+        <header className={`sticky top-0 z-30 bg-[var(--surface)] border-b border-[var(--border)] px-4 md:px-6 py-3 flex items-center justify-between gap-3 ${isEditingName ? "flex-wrap sm:flex-nowrap" : ""}`}>
+          <div className={`flex items-center gap-2 min-w-0 ${isEditingName ? "w-full sm:w-auto" : ""}`}>
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
@@ -218,7 +223,7 @@ export function AdminShell({
                     onChange={(e) => setEditNameValue(e.target.value)}
                     disabled={savingName}
                     autoFocus
-                    className="text-sm font-semibold px-2 py-1 rounded-lg border border-[var(--primary)] bg-[var(--surface)] text-[var(--text)] focus:outline-none w-36 sm:w-48"
+                    className="text-sm font-semibold px-2 py-1 rounded-lg border border-[var(--primary)] bg-[var(--surface)] text-[var(--text)] focus:outline-none min-w-0 w-36 sm:w-48"
                   />
                   <button
                     type="submit"
@@ -261,20 +266,37 @@ export function AdminShell({
             </div>
           </div>
 
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="ml-auto flex items-center gap-2 shrink-0">
+            <Link
+              href="/"
+              aria-label="Voltar ao site"
+              title="Voltar ao site"
+              className="min-h-[44px] inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] hover:bg-[var(--primary-subtle)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--text)] text-sm font-medium transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" aria-hidden="true" />
+              <span className="hidden sm:inline">Voltar ao site</span>
+              <span className="sm:hidden">Site</span>
+            </Link>
             <ThemeToggle />
             <button
               type="button"
               onClick={handleLogout}
               disabled={loggingOut}
-              aria-label="Sair do painel"
+              aria-label="Encerrar sessão administrativa"
+              title="Encerrar sessão administrativa"
               className="min-h-[44px] px-3.5 inline-flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] hover:bg-[var(--primary-subtle)] text-sm font-medium cursor-pointer disabled:opacity-50"
             >
-              <LogOut className="w-4 h-4" />
+              <LogOut className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline">Sair</span>
             </button>
           </div>
         </header>
+
+        {logoutError && (
+          <p role="alert" className="px-4 md:px-6 py-3 border-b border-[var(--error-border)] bg-[var(--error-bg)] text-sm text-[var(--error-text)]">
+            Não foi possível encerrar a sessão. Tente novamente.
+          </p>
+        )}
 
         <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-7xl w-full mx-auto">
           {children}

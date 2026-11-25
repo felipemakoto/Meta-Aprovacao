@@ -220,10 +220,14 @@ export function DashboardView() {
                   borderRadius: "12px",
                   color: "var(--text)",
                 }}
-                formatter={(value: any, _name: any, item: any) => [
-                  `${value} erros (${item.payload.taxaErroPercent}% de taxa de erro em ${item.payload.totalRespondidas ?? value} respostas)`,
-                  "Erros registrados",
-                ]}
+                formatter={(value, _name, item) => {
+                  const topic = item.payload as DashboardMetrics["errorsByTopic"][number] | undefined;
+                  if (!topic) return [value, "Erros registrados"];
+                  return [
+                    `${value} erros (${topic.taxaErroPercent}% de taxa de erro em ${topic.totalRespondidas ?? value} respostas)`,
+                    "Erros registrados",
+                  ];
+                }}
               />
               <Bar dataKey="erros" name="Erros registrados" fill="var(--primary)" radius={[0, 8, 8, 0]} />
             </BarChart>

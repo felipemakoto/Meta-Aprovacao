@@ -83,7 +83,7 @@ export async function POST(
   request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
-  const auth = await requireApiSession();
+  const auth = await requireApiSession(request);
   if (auth.errorResponse) return auth.errorResponse;
 
   try {

@@ -15,19 +15,13 @@ export async function handleAdminProxy(request: NextRequest) {
   const isLoginApi = pathname === "/api/admin/auth/login";
   const isLogoutApi = pathname === "/api/admin/auth/logout";
 
-  if (isLoginApi || isLogoutApi) {
+  // The login layout checks current access in the database before redirecting.
+  if (isLoginPage || isLoginApi || isLogoutApi) {
     return NextResponse.next();
   }
 
   const token = request.cookies.get(SESSION_COOKIE_NAME)?.value;
   const session = await verifySessionToken(token);
-
-  if (isLoginPage) {
-    if (session) {
-      return NextResponse.redirect(new URL("/admin", request.url));
-    }
-    return NextResponse.next();
-  }
 
   if (!session) {
     if (pathname.startsWith("/api/")) {

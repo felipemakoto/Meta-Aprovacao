@@ -1,11 +1,15 @@
 import { NextResponse } from "next/server";
 import { requireApiSession } from "@/lib/admin/auth/server";
 import { listUsers } from "@/lib/admin/data/users";
+import { can } from "@/lib/admin/rbac";
 import type { UserPlan, UserStatus } from "@/lib/admin/types";
 
 export async function GET(request: Request) {
   const auth = await requireApiSession();
   if (auth.errorResponse) return auth.errorResponse;
+  if (!can(auth.session.papel, "users:view")) {
+    return NextResponse.json({ error: "Acesso negado." }, { status: 403 });
+  }
 
   try {
     const { searchParams } = new URL(request.url);
@@ -28,8 +32,10 @@ export async function GET(request: Request) {
       pageSize: Number(searchParams.get("pageSize") ?? "20"),
     });
     return NextResponse.json(result);
-  } catch (err) {
-    const message = err instanceof Error ? err.message : "Erro ao listar usuários.";
-    return NextResponse.json({ error: message }, { status: 403 });
+  } catch {
+    return NextResponse.json(
+      { error: "Não foi possível consultar os usuários. Tente novamente." },
+      { status: 503 }
+    );
   }
 }
