@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpDown, Download } from "lucide-react";
+import { ArrowUpDown, Download, SlidersHorizontal, X } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { downloadCsv, formatDateBR } from "@/lib/admin/format";
@@ -30,6 +30,27 @@ export function UsersTableView() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [exportMsg, setExportMsg] = useState<string | null>(null);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+
+  const activeFiltersCount = [
+    plan !== "all",
+    status !== "all",
+    Boolean(createdFrom),
+    Boolean(createdTo),
+    Boolean(activeFrom),
+    Boolean(activeTo),
+  ].filter(Boolean).length;
+
+  function clearFilters() {
+    setSearch("");
+    setPlan("all");
+    setStatus("all");
+    setCreatedFrom("");
+    setCreatedTo("");
+    setActiveFrom("");
+    setActiveTo("");
+    setPage(1);
+  }
 
   const buildQuery = useCallback(
     (targetPage: number, pageSize = 15) => {
@@ -139,7 +160,7 @@ export function UsersTableView() {
         <button
           type="button"
           onClick={handleExportCsv}
-          className="min-h-[44px] px-4 inline-flex items-center gap-2 rounded-xl bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--primary-text)] text-sm font-semibold cursor-pointer"
+          className="w-full sm:w-auto justify-center min-h-[44px] px-4 inline-flex items-center gap-2 rounded-xl bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--primary-text)] text-sm font-semibold cursor-pointer"
         >
           <Download className="w-4 h-4" />
           Exportar CSV
@@ -152,8 +173,8 @@ export function UsersTableView() {
 
       {/* Filtros */}
       <section className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-4 space-y-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+          <div className="md:col-span-2 lg:col-span-1">
             <label htmlFor="u-search" className="block text-xs font-medium text-[var(--text-secondary)] mb-1">
               Buscar (nome, e-mail ou ID)
             </label>
@@ -170,7 +191,43 @@ export function UsersTableView() {
             />
           </div>
 
-          <div>
+          {/* Barra compacta mobile: Filtros avançados + Ordenação */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setFiltersOpen((o) => !o)}
+              aria-expanded={filtersOpen}
+              className="flex-1 min-h-[44px] px-3 inline-flex items-center justify-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-sm font-medium text-[var(--text)] cursor-pointer"
+            >
+              <SlidersHorizontal className="w-4 h-4" />
+              <span>Filtros</span>
+              {activeFiltersCount > 0 && (
+                <span className="px-1.5 py-0.5 text-xs rounded-full bg-[var(--primary)] text-[var(--primary-text)] font-semibold">
+                  {activeFiltersCount}
+                </span>
+              )}
+            </button>
+
+            <select
+              aria-label="Ordenar usuários"
+              value={`${sortBy}:${sortDir}`}
+              onChange={(e) => {
+                const [col, dir] = e.target.value.split(":") as [typeof sortBy, typeof sortDir];
+                setSortBy(col);
+                setSortDir(dir);
+                setPage(1);
+              }}
+              className="flex-1 min-h-[44px] px-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-sm font-medium"
+            >
+              <option value="criadoEm:desc">Mais recentes</option>
+              <option value="criadoEm:asc">Mais antigos</option>
+              <option value="ultimaAtividadeEm:desc">Atividade recente</option>
+              <option value="nome:asc">Nome (A–Z)</option>
+              <option value="plano:asc">Plano</option>
+            </select>
+          </div>
+
+          <div className={`${filtersOpen ? "block" : "hidden"} md:block`}>
             <label htmlFor="u-plan" className="block text-xs font-medium text-[var(--text-secondary)] mb-1">
               Plano
             </label>
@@ -189,7 +246,7 @@ export function UsersTableView() {
             </select>
           </div>
 
-          <div>
+          <div className={`${filtersOpen ? "block" : "hidden"} md:block`}>
             <label htmlFor="u-status" className="block text-xs font-medium text-[var(--text-secondary)] mb-1">
               Status
             </label>
@@ -209,7 +266,7 @@ export function UsersTableView() {
             </select>
           </div>
 
-          <div>
+          <div className={`${filtersOpen ? "block" : "hidden"} md:block`}>
             <label htmlFor="u-created-from" className="block text-xs font-medium text-[var(--text-secondary)] mb-1">
               Cadastro a partir de
             </label>
@@ -226,7 +283,7 @@ export function UsersTableView() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className={`${filtersOpen ? "grid" : "hidden"} md:grid grid-cols-1 sm:grid-cols-3 gap-3`}>
           <div>
             <label htmlFor="u-created-to" className="block text-xs font-medium text-[var(--text-secondary)] mb-1">
               Cadastro até
@@ -273,6 +330,19 @@ export function UsersTableView() {
             />
           </div>
         </div>
+
+        {(activeFiltersCount > 0 || search.trim() !== "") && (
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="min-h-[36px] px-3 inline-flex items-center gap-1.5 rounded-lg text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--text)] hover:bg-[var(--bg)] cursor-pointer"
+            >
+              <X className="w-3.5 h-3.5" />
+              Limpar filtros
+            </button>
+          </div>
+        )}
       </section>
 
       {loading && <TableSkeleton rows={8} />}
@@ -385,41 +455,65 @@ export function UsersTableView() {
             {data.items.map((u) => (
               <div
                 key={u.id}
-                className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-4 space-y-2"
+                className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-4 space-y-3"
               >
-                <div className="flex items-start justify-between gap-2">
-                  <div className="min-w-0">
-                    <p className="font-semibold text-base text-[var(--text)] truncate">{u.nome}</p>
-                    <p className="text-sm text-[var(--text-secondary)] truncate">{u.email}</p>
+                <div className="min-w-0">
+                  <p className="font-semibold text-base text-[var(--text)] truncate">{u.nome}</p>
+                  <p className="text-sm text-[var(--text-secondary)] truncate">{u.email}</p>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span
+                      className={`px-2.5 py-1 rounded-full font-medium ${
+                        u.plano === "premium"
+                          ? "bg-[var(--primary-subtle)] text-[var(--primary)]"
+                          : "bg-[var(--bg)] text-[var(--text-secondary)] border border-[var(--border)]"
+                      }`}
+                    >
+                      {u.plano === "premium" ? "Premium" : "Grátis"}
+                    </span>
+                    <span
+                      className={`px-2.5 py-1 rounded-full font-medium ${
+                        u.status === "ativo"
+                          ? "bg-[var(--primary-subtle)] text-[var(--primary)]"
+                          : u.status === "suspenso"
+                            ? "bg-[var(--warn-bg)] text-[var(--warn-text)]"
+                            : "bg-[var(--error-bg)] text-[var(--error-text)]"
+                      }`}
+                    >
+                      {u.status}
+                    </span>
                   </div>
-                  <span className="text-xs font-mono text-[var(--text-secondary)] shrink-0">{u.id}</span>
-                </div>
-                <div className="flex flex-wrap gap-2 text-xs">
-                  <span className="px-2.5 py-1 rounded-full bg-[var(--primary-subtle)] text-[var(--primary)] font-medium">
-                    {u.plano === "premium" ? "Premium" : "Grátis"}
-                  </span>
-                  <span className="px-2.5 py-1 rounded-full border border-[var(--border)] text-[var(--text-secondary)]">
-                    {u.status}
+                  <span className="font-mono text-[11px] text-[var(--text-secondary)]">
+                    #{u.id.slice(0, 8)}
                   </span>
                 </div>
-                <div className="flex items-center justify-between pt-2 border-t border-[var(--border)]">
-                  <span className="text-xs text-[var(--text-secondary)]">
-                    Cadastro: {formatDateBR(u.criadoEm)}
-                  </span>
-                  <Link
-                    href={`/admin/usuarios/${u.id}`}
-                    className="min-h-[44px] px-4 inline-flex items-center rounded-xl bg-[var(--primary)] text-[var(--primary-text)] text-sm font-medium"
-                  >
-                    Gerenciar
-                  </Link>
+
+                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[var(--border)] text-xs text-[var(--text-secondary)]">
+                  <div>
+                    <span className="block opacity-75">Cadastro</span>
+                    <span className="font-medium text-[var(--text)]">{formatDateBR(u.criadoEm)}</span>
+                  </div>
+                  <div>
+                    <span className="block opacity-75">Última atividade</span>
+                    <span className="font-medium text-[var(--text)]">{formatDateBR(u.ultimaAtividadeEm)}</span>
+                  </div>
                 </div>
+
+                <Link
+                  href={`/admin/usuarios/${u.id}`}
+                  className="w-full min-h-[44px] px-4 inline-flex items-center justify-center rounded-xl bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--primary-text)] text-sm font-semibold"
+                >
+                  Gerenciar usuário
+                </Link>
               </div>
             ))}
           </div>
 
           {/* Paginação */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-            <p className="text-sm text-[var(--text-secondary)]">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">
+            <p className="text-sm text-[var(--text-secondary)] text-center sm:text-left">
               Página {data.page} de {data.totalPages} ({data.total} usuários)
             </p>
             <div className="flex gap-2">
@@ -427,7 +521,7 @@ export function UsersTableView() {
                 type="button"
                 disabled={page <= 1}
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
-                className="min-h-[44px] px-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-sm font-medium disabled:opacity-40 cursor-pointer"
+                className="flex-1 sm:flex-initial min-h-[44px] px-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-sm font-medium disabled:opacity-40 cursor-pointer"
               >
                 Anterior
               </button>
@@ -435,7 +529,7 @@ export function UsersTableView() {
                 type="button"
                 disabled={page >= data.totalPages}
                 onClick={() => setPage((p) => p + 1)}
-                className="min-h-[44px] px-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-sm font-medium disabled:opacity-40 cursor-pointer"
+                className="flex-1 sm:flex-initial min-h-[44px] px-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-sm font-medium disabled:opacity-40 cursor-pointer"
               >
                 Próxima
               </button>

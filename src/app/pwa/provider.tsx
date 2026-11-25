@@ -1,13 +1,14 @@
 "use client";
 import {createContext,useContext,useEffect,useRef,useState,type ReactNode} from "react";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 import {appRelease,releaseLabel} from "@/lib/pwa/release";
 import {installationContext,isAppContext,type Platform} from "@/lib/pwa/platform";
 import PwaPillNav from "./pill-nav";
 
 type InstallEvent=Event & {prompt:()=>Promise<void>;userChoice:Promise<{outcome:string}>};
 type Release={version:string;build:string};
-type PwaState={standalone:boolean|null;os:Platform|null;instructions:string;canInstall:boolean;install:()=>Promise<void>;message:string;available:Release|null;waiting:boolean;update:()=>void;workerError:boolean};
+type PwaState={standalone:boolean|null;os:Platform|null;instructions:string;canInstall:boolean;install:()=>Promise<void>;message:string;available:Release|null;waiting:boolean;update:()=>void;workerError:boolean;isAdmin:boolean};
 const Context=createContext<PwaState|null>(null);
 export function usePwa(){const state=useContext(Context);if(!state)throw Error("Missing PwaProvider");return state;}
 function UpdateNotice(){
@@ -17,7 +18,8 @@ function UpdateNotice(){
  return <aside className="pwa-update" aria-label="Atualização do aplicativo"><span>Uma atualização está disponível.</span><Link href="/configuracoes?secao=app" onClick={()=>setVisible(false)}>Ver em Aplicativo</Link><button type="button" aria-label="Fechar aviso de atualização" onClick={()=>setVisible(false)}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></aside>;
 }
 export default function PwaProvider({children}:{children:ReactNode}){
- const [standalone,setStandalone]=useState<boolean|null>(null),[os,setOs]=useState<Platform|null>(null),[instructions,setInstructions]=useState(''),[canInstall,setCanInstall]=useState(false),[message,setMessage]=useState(''),[available,setAvailable]=useState<Release|null>(null),[waiting,setWaiting]=useState(false),[workerError,setWorkerError]=useState(false);
+ const pathname=usePathname();
+ const [standalone,setStandalone]=useState<boolean|null>(null),[os,setOs]=useState<Platform|null>(null),[instructions,setInstructions]=useState(''),[canInstall,setCanInstall]=useState(false),[message,setMessage]=useState(''),[available,setAvailable]=useState<Release|null>(null),[waiting,setWaiting]=useState(false),[workerError,setWorkerError]=useState(false),[isAdmin,setIsAdmin]=useState(false);
  const prompt=useRef<InstallEvent|null>(null),registration=useRef<ServiceWorkerRegistration|null>(null),installBusy=useRef(false);
  useEffect(()=>{
   const display=matchMedia('(display-mode: standalone)');
@@ -50,10 +52,19 @@ export default function PwaProvider({children}:{children:ReactNode}){
  }
  const newer=available?.build&&appRelease.build&&available.build!==appRelease.build;
  useEffect(()=>{
+  if(standalone!==true){setIsAdmin(false);return;}
+  const controller=new AbortController();
+  fetch('/api/auth/admin-access',{cache:'no-store',signal:controller.signal})
+   .then(r=>r.ok?r.json():{isAdmin:false})
+   .then(data=>{if(!controller.signal.aborted)setIsAdmin(Boolean(data?.isAdmin));})
+   .catch(()=>{if(!controller.signal.aborted)setIsAdmin(false);});
+  return()=>controller.abort();
+ },[standalone,pathname]);
+ useEffect(()=>{
   if(standalone===true){document.documentElement.dataset.pwa="standalone";}
   else{delete document.documentElement.dataset.pwa;}
  },[standalone]);
- return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError}}>{children}{standalone===true&&(waiting||newer)&&<UpdateNotice/>}<PwaPillNav/></Context.Provider>;
+ return <Context.Provider value={{standalone,os,instructions,canInstall,install,message,available,waiting,update,workerError,isAdmin}}>{children}{standalone===true&&(waiting||newer)&&<UpdateNotice/>}<PwaPillNav/></Context.Provider>;
 }
 export function InstallLink({className}:{className?:string}){const {standalone}=usePwa();return standalone===false?<Link href="/baixar" className={className}>Instalar</Link>:null;}
 export {appRelease,releaseLabel};

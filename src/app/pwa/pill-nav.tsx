@@ -15,7 +15,8 @@ type IconName =
   | "statistics"
   | "premium"
   | "account"
-  | "settings";
+  | "settings"
+  | "admin";
 
 type NavItem = {
   key: string;
@@ -96,12 +97,13 @@ function NavIcon({ name }: { name: IconName }) {
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.08a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.08a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" />
         </>
       )}
+      {name === "admin" && <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />}
     </svg>
   );
 }
 
 export default function PwaPillNav() {
-  const { standalone } = usePwa();
+  const { standalone, isAdmin } = usePwa();
   const pathname = usePathname();
   const [moreOpen, setMoreOpen] = useState(false);
   const [isExamMode, setIsExamMode] = useState(false);
@@ -142,13 +144,17 @@ export default function PwaPillNav() {
     return pathname === item.href || pathname?.startsWith(`${item.href}/`);
   }
 
-  const moreActive = MORE_ITEMS.some((item) => isCurrent(item));
+  const moreItems: NavItem[] = isAdmin
+    ? [...MORE_ITEMS, { key: "admin", href: "/admin", label: "Painel Admin", icon: "admin" }]
+    : MORE_ITEMS;
+
+  const moreActive = moreItems.some((item) => isCurrent(item));
 
   return (
     <div ref={dockRef} className={styles.dock}>
       {moreOpen && (
         <div className={styles.menu} role="menu" aria-label="Mais seções">
-          {MORE_ITEMS.map((item) => {
+          {moreItems.map((item) => {
             const href = preview && item.previewable ? `${item.href}/preview` : item.href;
             const current = isCurrent(item);
             return (
