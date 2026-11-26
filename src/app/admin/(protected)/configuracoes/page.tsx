@@ -1,9 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { SiteStatusSettings } from "@/components/admin/SiteStatusSettings";
 
 export default function ConfiguracoesPage() {
-  return <SettingsForm />;
+  return (
+    <div className="max-w-2xl space-y-6">
+      <h1 className="text-2xl font-semibold text-[var(--text)]">Configurações</h1>
+      <SiteStatusSettings />
+      <SettingsForm />
+    </div>
+  );
 }
 
 function SettingsForm() {
@@ -40,14 +47,6 @@ function SettingsForm() {
   }
 
   return (
-    <div className="p-6 max-w-lg space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold text-[var(--text)]">Configurações</h1>
-        <p className="text-sm text-[var(--text-secondary)] mt-1">
-          Altere seu nome de exibição no painel administrativo.
-        </p>
-      </div>
-
       <form
         onSubmit={handleSubmit}
         className="border border-[var(--border)] rounded-2xl p-5 bg-[var(--surface)] space-y-4"
@@ -85,6 +84,5 @@ function SettingsForm() {
           </p>
         )}
       </form>
-    </div>
   );
 }

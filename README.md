@@ -188,6 +188,8 @@ Uma variável de ambiente é uma configuração fornecida ao programa fora do c�
 
 O painel `/admin` usa uma conta com e-mail confirmado no Supabase Auth e um cadastro ativo em `admin_users` para o mesmo ID. Configure `SESSION_SECRET` com um segredo aleatório de pelo menos 32 caracteres, igual em todas as instâncias, e `APP_ORIGIN` com a origem exata do aplicativo, em HTTPS em produção. O servidor usa `SUPABASE_SECRET_KEY` ou `SUPABASE_SERVICE_ROLE_KEY` para consultar a conta administrativa e a função `reserve_login_attempt`, da migração `20261024143000_security_request_budgets.sql`.
 
+Os controles de aviso público e manutenção em `/admin/configuracoes` dependem das migrações `20261126215754_public_site_status.sql` e `20261126222252_site_maintenance_message.sql`. O site começa aberto e sem aviso. A mensagem opcional da manutenção pode ser salva antes de fechar o site. Em manutenção, o painel continua disponível e o webhook da Cakto continua recebendo eventos de pagamento.
+
 ## Arquivos
 - src/app/page.tsx: página inicial, rota /.
 - src/app/layout.tsx: estrutura compartilhada.

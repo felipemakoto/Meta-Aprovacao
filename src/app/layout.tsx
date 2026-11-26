@@ -10,6 +10,7 @@ import SiteTheme from "./site-theme";
 import PremiumGate from "./premium-gate";
 import AccountPreferences from "./account-preferences";
 import PwaProvider from "./pwa/provider";
+import SiteAnnouncement from "./site-announcement";
 import {themeBootstrap} from "@/lib/account/theme";
 
 const geistSans = Geist({
@@ -41,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${displayFont.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body><Script id="meta-theme" strategy="beforeInteractive">{themeBootstrap}</Script><PwaProvider><SiteTheme/>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/><Analytics/><PremiumGate/><AccountPreferences/></Suspense></PwaProvider></body>
+      <body><Script id="meta-theme" strategy="beforeInteractive">{themeBootstrap}</Script><PwaProvider><SiteTheme/><SiteAnnouncement/>{children}<SiteFooter/><Suspense fallback={null}><PageMotion/><Analytics/><PremiumGate/><AccountPreferences/></Suspense></PwaProvider></body>
     </html>
   );
 }
